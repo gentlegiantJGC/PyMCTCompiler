@@ -1,0 +1,28 @@
+{
+	"remove": [
+		"minecraft:anvil",
+		"minecraft:chipped_anvil",
+		"minecraft:damaged_anvil"
+	],
+	"add": {
+		"minecraft:anvil": {
+			"properties": {
+				"damage": [
+					"normal",
+					"chipped",
+					"damaged"
+				],
+				"facing": [
+					"north",
+					"south",
+					"west",
+					"east"
+				]
+			},
+			"defaults": {
+				"damage": "normal",
+				"facing": "north"
+			}
+		}
+	}
+}
