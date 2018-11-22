@@ -5,8 +5,7 @@
 		"minecraft:birch_fence_gate",
 		"minecraft:jungle_fence_gate",
 		"minecraft:acacia_fence_gate",
-		"minecraft:dark_oak_fence_gate",
-		"minecraft:nether_brick_fence_gate"
+		"minecraft:dark_oak_fence_gate"
 	],
 	"add": {
 		"minecraft:fence_gate": {
@@ -17,8 +16,7 @@
 					"birch",
 					"jungle",
 					"acacia",
-					"dark_oak",
-					"nether_brick"
+					"dark_oak"
 				],
 				"facing": [
 					"north",
