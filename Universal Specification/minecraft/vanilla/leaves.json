@@ -1,5 +1,13 @@
 {
     "properties": {
+        "block": [
+            "oak",
+            "spruce",
+            "birch",
+            "jungle",
+            "acacia",
+            "dark_oak"
+        ],
         "distance": [
             "1",
             "2",
@@ -15,6 +23,7 @@
         ]
     },
     "defaults": {
+        "block": "oak",
         "distance": "7",
         "persistent": "false"
     }
