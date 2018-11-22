@@ -45,9 +45,13 @@ if os.path.isfile('./generated/reports/blocks.json'):
 		os.remove(f'../Universal Specification/minecraft/vanilla/{file_name}')
 
 	blocks = json.load(open('./generated/reports/blocks.json'), object_pairs_hook=OrderedDict)
+	for block_string in modifications["remove"]:
+		if block_string in blocks:
+			del blocks[block_string]
+		else:
+			print(f'"{block_string}" either does not exist or was deleted more than once')
+
 	for block_string, block_data in blocks.items():
-		if block_string in modifications["remove"]:
-			continue
 		namespace, block_name = block_string.split(':')
 		default_state = next(s for s in block_data['states'] if s.get('default', False))
 		if 'properties' in default_state:
@@ -58,5 +62,8 @@ if os.path.isfile('./generated/reports/blocks.json'):
 
 	for block_string, block_data in modifications["add"].items():
 		namespace, block_name = block_string.split(':')
-		with open(f'../Universal Specification/{namespace}/vanilla/{block_name}.json', 'w') as block_out:
-			json.dump(block_data, block_out, indent=4)
+		if os.path.isfile(f'../Universal Specification/{namespace}/vanilla/{block_name}.json'):
+			print(f'"{block_string}" is already present.')
+		else:
+			with open(f'../Universal Specification/{namespace}/vanilla/{block_name}.json', 'w') as block_out:
+				json.dump(block_data, block_out, indent=4)
