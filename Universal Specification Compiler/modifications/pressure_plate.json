@@ -1,0 +1,34 @@
+{
+	"remove": [
+		"minecraft:oak_pressure_plate",
+		"minecraft:spruce_pressure_plate",
+		"minecraft:birch_pressure_plate",
+		"minecraft:jungle_pressure_plate",
+		"minecraft:acacia_pressure_plate",
+		"minecraft:dark_oak_pressure_plate",
+		"minecraft:stone_pressure_plate"
+	],
+	"add": {
+		"minecraft:pressure_plate": {
+			"properties": {
+				"block": [
+					"oak",
+					"spruce",
+					"birch",
+					"jungle",
+					"acacia",
+					"dark_oak",
+					"stone"
+				],
+				"powered": [
+					"true",
+					"false"
+				]
+			},
+			"defaults": {
+				"block": "oak",
+				"powered": "false"
+			}
+		}
+	}
+}

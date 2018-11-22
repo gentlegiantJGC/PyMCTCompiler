@@ -1,0 +1,21 @@
+{
+    "properties": {
+        "block": [
+            "oak",
+            "spruce",
+            "birch",
+            "jungle",
+            "acacia",
+            "dark_oak",
+            "stone"
+        ],
+        "powered": [
+            "true",
+            "false"
+        ]
+    },
+    "defaults": {
+        "block": "oak",
+        "powered": "false"
+    }
+}
