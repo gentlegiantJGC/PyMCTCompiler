@@ -1,5 +1,14 @@
 {
     "properties": {
+        "block": [
+            "oak",
+            "spruce",
+            "birch",
+            "jungle",
+            "acacia",
+            "dark_oak",
+            "iron"
+        ],
         "facing": [
             "north",
             "south",
@@ -17,17 +26,13 @@
         "powered": [
             "true",
             "false"
-        ],
-        "waterlogged": [
-            "true",
-            "false"
         ]
     },
     "defaults": {
+        "block": "oak",
         "facing": "north",
         "half": "bottom",
         "open": "false",
-        "powered": "false",
-        "waterlogged": "false"
+        "powered": "false"
     }
 }

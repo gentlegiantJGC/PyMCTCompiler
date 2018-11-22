@@ -1,0 +1,51 @@
+{
+	"remove": [
+		"minecraft:oak_trapdoor",
+		"minecraft:spruce_trapdoor",
+		"minecraft:birch_trapdoor",
+		"minecraft:jungle_trapdoor",
+		"minecraft:acacia_trapdoor",
+		"minecraft:dark_oak_trapdoor",
+		"minecraft:iron_trapdoor"
+	],
+	"add": {
+		"minecraft:trapdoor": {
+			"properties": {
+				"block": [
+					"oak",
+					"spruce",
+					"birch",
+					"jungle",
+					"acacia",
+					"dark_oak",
+					"iron"
+				],
+				"facing": [
+					"north",
+					"south",
+					"west",
+					"east"
+				],
+				"half": [
+					"top",
+					"bottom"
+				],
+				"open": [
+					"true",
+					"false"
+				],
+				"powered": [
+					"true",
+					"false"
+				]
+			},
+			"defaults": {
+				"block": "oak",
+				"facing": "north",
+				"half": "bottom",
+				"open": "false",
+				"powered": "false"
+			}
+		}
+	}
+}
