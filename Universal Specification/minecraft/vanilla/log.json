@@ -1,0 +1,21 @@
+{
+    "properties": {
+        "block": [
+            "oak",
+            "spruce",
+            "birch",
+            "jungle",
+            "acacia",
+            "dark_oak"
+        ],
+        "axis": [
+            "x",
+            "y",
+            "z"
+        ]
+    },
+    "defaults": {
+        "block": "oak",
+        "axis": "y"
+    }
+}
