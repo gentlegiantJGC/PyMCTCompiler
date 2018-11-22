@@ -1,0 +1,64 @@
+{
+	"remove": [
+		"minecraft:white_bed",
+		"minecraft:orange_bed",
+		"minecraft:magenta_bed",
+		"minecraft:light_blue_bed",
+		"minecraft:yellow_bed",
+		"minecraft:lime_bed",
+		"minecraft:pink_bed",
+		"minecraft:gray_bed",
+		"minecraft:light_gray_bed",
+		"minecraft:cyan_bed",
+		"minecraft:purple_bed",
+		"minecraft:blue_bed",
+		"minecraft:brown_bed",
+		"minecraft:green_bed",
+		"minecraft:red_bed",
+		"minecraft:black_bed"
+	],
+	"add": {
+		"minecraft:bed": {
+			"properties": {
+				"color": [
+					"white",
+					"orange",
+					"magenta",
+					"light_blue",
+					"yellow",
+					"lime",
+					"pink",
+					"gray",
+					"light_gray",
+					"cyan",
+					"purple",
+					"blue",
+					"brown",
+					"green",
+					"red",
+					"black"
+				],
+				"facing": [
+					"north",
+					"south",
+					"west",
+					"east"
+				],
+				"occupied": [
+					"true",
+					"false"
+				],
+				"part": [
+					"head",
+					"foot"
+				]
+			},
+			"defaults": {
+				"color": "white",
+				"facing": "north",
+				"occupied": "false",
+				"part": "foot"
+			}
+		}
+	}
+}
