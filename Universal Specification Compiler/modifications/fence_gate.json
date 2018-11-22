@@ -1,0 +1,51 @@
+{
+	"remove": [
+		"minecraft:oak_fence_gate",
+		"minecraft:spruce_fence_gate",
+		"minecraft:birch_fence_gate",
+		"minecraft:jungle_fence_gate",
+		"minecraft:acacia_fence_gate",
+		"minecraft:dark_oak_fence_gate",
+		"minecraft:nether_brick_fence_gate"
+	],
+	"add": {
+		"minecraft:fence_gate": {
+			"properties": {
+				"block": [
+					"oak",
+					"spruce",
+					"birch",
+					"jungle",
+					"acacia",
+					"dark_oak",
+					"nether_brick"
+				],
+				"facing": [
+					"north",
+					"south",
+					"west",
+					"east"
+				],
+				"in_wall": [
+					"true",
+					"false"
+				],
+				"open": [
+					"true",
+					"false"
+				],
+				"powered": [
+					"true",
+					"false"
+				]
+			},
+			"defaults": {
+				"block": "oak",
+				"facing": "north",
+				"in_wall": "false",
+				"open": "false",
+				"powered": "false"
+			}
+		}
+	}
+}

@@ -1,5 +1,14 @@
 {
     "properties": {
+        "block": [
+            "oak",
+            "spruce",
+            "birch",
+            "jungle",
+            "acacia",
+            "dark_oak",
+            "nether_brick"
+        ],
         "facing": [
             "north",
             "south",
@@ -20,6 +29,7 @@
         ]
     },
     "defaults": {
+        "block": "oak",
         "facing": "north",
         "in_wall": "false",
         "open": "false",
