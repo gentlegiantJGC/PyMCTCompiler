@@ -20,19 +20,16 @@
 					"dark_oak",
 					"stone"
 				],
+				"face": [
+					"floor",
+					"wall",
+					"ceiling"
+				],
 				"facing": [
 					"north",
 					"south",
 					"west",
 					"east"
-				],
-				"half": [
-					"top",
-					"bottom"
-				],
-				"open": [
-					"true",
-					"false"
 				],
 				"powered": [
 					"true",
@@ -41,9 +38,8 @@
 			},
 			"defaults": {
 				"block": "oak",
+				"face": "wall",
 				"facing": "north",
-				"half": "bottom",
-				"open": "false",
 				"powered": "false"
 			}
 		}
