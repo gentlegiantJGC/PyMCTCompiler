@@ -1,0 +1,51 @@
+{
+	"remove": [
+		"minecraft:oak_button",
+		"minecraft:spruce_button",
+		"minecraft:birch_button",
+		"minecraft:jungle_button",
+		"minecraft:acacia_button",
+		"minecraft:dark_oak_button",
+		"minecraft:stone_button"
+	],
+	"add": {
+		"minecraft:button": {
+			"properties": {
+				"block": [
+					"oak",
+					"spruce",
+					"birch",
+					"jungle",
+					"acacia",
+					"dark_oak",
+					"stone"
+				],
+				"facing": [
+					"north",
+					"south",
+					"west",
+					"east"
+				],
+				"half": [
+					"top",
+					"bottom"
+				],
+				"open": [
+					"true",
+					"false"
+				],
+				"powered": [
+					"true",
+					"false"
+				]
+			},
+			"defaults": {
+				"block": "oak",
+				"facing": "north",
+				"half": "bottom",
+				"open": "false",
+				"powered": "false"
+			}
+		}
+	}
+}
