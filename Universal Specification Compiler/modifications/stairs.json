@@ -1,0 +1,69 @@
+{
+	"remove": [
+		"minecraft:oak_stairs",
+		"minecraft:spruce_stairs",
+		"minecraft:birch_stairs",
+		"minecraft:jungle_stairs",
+		"minecraft:acacia_stairs",
+		"minecraft:dark_oak_stairs",
+		"minecraft:brick_stairs",
+		"minecraft:cobblestone_stairs",
+		"minecraft:stone_brick_stairs",
+		"minecraft:sandstone_stairs",
+		"minecraft:red_sandstone_stairs",
+		"minecraft:nether_brick_stairs",
+		"minecraft:quartz_stairs",
+		"minecraft:purpur_stairs",
+		"minecraft:prismarine_stairs",
+		"minecraft:prismarine_brick_stairs",
+		"minecraft:dark_prismarine"
+	],
+	"add": {
+		"minecraft:stairs": {
+			"properties": {
+				"block": [
+					"oak",
+					"spruce",
+					"birch",
+					"jungle",
+					"acacia",
+					"dark_oak",
+					"brick",
+					"cobblestone",
+					"stone_brick",
+					"sandstone",
+					"red_sandstone",
+					"nether_brick",
+					"quartz",
+					"purpur",
+					"prismarine",
+					"prismarine_brick",
+					"dark_prismarine"
+				],
+				"facing": [
+					"north",
+					"south",
+					"west",
+					"east"
+				],
+				"half": [
+					"top",
+					"bottom"
+				],
+				"shape": [
+					"straight",
+					"inner_left",
+					"inner_right",
+					"outer_left",
+					"outer_right"
+				]
+			},
+			"defaults": {
+				"block": "oak",
+				"facing": "north",
+				"half": "bottom",
+				"shape": "straight"
+			}
+		}
+	}
+}
