@@ -1,0 +1,66 @@
+{
+	"remove": [
+		"minecraft:white_banner",
+		"minecraft:orange_banner",
+		"minecraft:magenta_banner",
+		"minecraft:light_blue_banner",
+		"minecraft:yellow_banner",
+		"minecraft:lime_banner",
+		"minecraft:pink_banner",
+		"minecraft:gray_banner",
+		"minecraft:light_gray_banner",
+		"minecraft:cyan_banner",
+		"minecraft:purple_banner",
+		"minecraft:blue_banner",
+		"minecraft:brown_banner",
+		"minecraft:green_banner",
+		"minecraft:red_banner",
+		"minecraft:black_banner"
+	],
+	"add": {
+		"minecraft:banner": {
+			"properties": {
+				"color": [
+					"white",
+					"orange",
+					"magenta",
+					"light_blue",
+					"yellow",
+					"lime",
+					"pink",
+					"gray",
+					"light_gray",
+					"cyan",
+					"purple",
+					"blue",
+					"brown",
+					"green",
+					"red",
+					"black"
+				],
+				"rotation": [
+					"0",
+					"1",
+					"2",
+					"3",
+					"4",
+					"5",
+					"6",
+					"7",
+					"8",
+					"9",
+					"10",
+					"11",
+					"12",
+					"13",
+					"14",
+					"15"
+				]
+			},
+			"defaults": {
+				"color": "white",
+				"rotation": "0"
+			}
+		}
+	}
+}
