@@ -16,7 +16,7 @@
 		"minecraft:purpur_stairs",
 		"minecraft:prismarine_stairs",
 		"minecraft:prismarine_brick_stairs",
-		"minecraft:dark_prismarine"
+		"minecraft:dark_prismarine_stairs"
 	],
 	"add": {
 		"minecraft:stairs": {
