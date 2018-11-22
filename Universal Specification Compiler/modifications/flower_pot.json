@@ -1,0 +1,59 @@
+{
+	"remove": [
+		"minecraft:flower_pot",
+		"minecraft:potted_dandelion",
+		"minecraft:potted_poppy",
+		"minecraft:potted_blue_orchid",
+		"minecraft:potted_allium",
+		"minecraft:potted_azure_bluet",
+		"minecraft:potted_red_tulip",
+		"minecraft:potted_orange_tulip",
+		"minecraft:potted_white_tulip",
+		"minecraft:potted_pink_tulip",
+		"minecraft:potted_oxeye_daisy",
+		"minecraft:potted_oak_sapling",
+		"minecraft:potted_spruce_sapling",
+		"minecraft:potted_birch_sapling",
+		"minecraft:potted_jungle_sapling",
+		"minecraft:potted_acacia_sapling",
+		"minecraft:potted_dark_oak_sapling",
+		"minecraft:potted_red_mushroom",
+		"minecraft:potted_brown_mushroom",
+		"minecraft:potted_fern",
+		"minecraft:potted_dead_bush",
+		"minecraft:potted_cactus"
+	],
+	"add": {
+		"minecraft:flower_pot": {
+			"properties": {
+				"plant": [
+					"none",
+					"dandelion",
+					"poppy",
+					"blue_orchid",
+					"allium",
+					"azure_bluet",
+					"red_tulip",
+					"orange_tulip",
+					"white_tulip",
+					"pink_tulip",
+					"oxeye_daisy",
+					"oak_sapling",
+					"spruce_sapling",
+					"birch_sapling",
+					"jungle_sapling",
+					"acacia_sapling",
+					"dark_oak_sapling",
+					"red_mushroom",
+					"brown_mushroom",
+					"fern",
+					"dead_bush",
+					"cactus"
+				]
+			},
+			"defaults": {
+				"plant": "none"
+			}
+		}
+	}
+}
