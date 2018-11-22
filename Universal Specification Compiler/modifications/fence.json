@@ -1,0 +1,55 @@
+{
+	"remove": [
+		"minecraft:oak_fence",
+		"minecraft:spruce_fence",
+		"minecraft:birch_fence",
+		"minecraft:jungle_fence",
+		"minecraft:acacia_fence",
+		"minecraft:dark_oak_fence",
+        "minecraft:nether_brick_fence"
+	],
+	"add": {
+        "minecraft:fence": {
+            "properties": {
+                "block": [
+					"oak",
+					"spruce",
+					"birch",
+					"jungle",
+					"acacia",
+					"dark_oak",
+					"nether_brick"
+
+				],
+                "east": [
+                    "true",
+                    "false"
+                ],
+                "north": [
+                    "true",
+                    "false"
+                ],
+                "south": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ],
+                "west": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "block": "oak",
+                "east": "false",
+                "north": "false",
+                "south": "false",
+                "waterlogged": "false",
+                "west": "false"
+            }
+        }
+    }
+}

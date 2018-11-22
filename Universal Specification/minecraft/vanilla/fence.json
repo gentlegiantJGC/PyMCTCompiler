@@ -1,5 +1,14 @@
 {
     "properties": {
+        "block": [
+            "oak",
+            "spruce",
+            "birch",
+            "jungle",
+            "acacia",
+            "dark_oak",
+            "nether_brick"
+        ],
         "east": [
             "true",
             "false"
@@ -22,6 +31,7 @@
         ]
     },
     "defaults": {
+        "block": "oak",
         "east": "false",
         "north": "false",
         "south": "false",
