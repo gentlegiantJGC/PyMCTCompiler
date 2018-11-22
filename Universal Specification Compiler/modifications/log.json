@@ -1,0 +1,33 @@
+{
+	"remove": [
+		"minecraft:oak_log",
+		"minecraft:spruce_log",
+		"minecraft:birch_log",
+		"minecraft:jungle_log",
+		"minecraft:acacia_log",
+		"minecraft:dark_oak_log"
+	],
+	"add": {
+		"minecraft:log": {
+			"properties": {
+				"block": [
+					"oak",
+					"spruce",
+					"birch",
+					"jungle",
+					"acacia",
+					"dark_oak"
+				],
+				"axis": [
+					"x",
+					"y",
+					"z"
+				]
+			},
+			"defaults": {
+				"block": "oak",
+				"axis": "y"
+			}
+		}
+	}
+}

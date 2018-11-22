@@ -1,0 +1,33 @@
+{
+	"remove": [
+		"minecraft:stripped_oak_wood",
+		"minecraft:stripped_spruce_wood",
+		"minecraft:stripped_birch_wood",
+		"minecraft:stripped_jungle_wood",
+		"minecraft:stripped_acacia_wood",
+		"minecraft:stripped_dark_oak_wood"
+	],
+	"add": {
+		"minecraft:stripped_wood": {
+			"properties": {
+				"block": [
+					"oak",
+					"spruce",
+					"birch",
+					"jungle",
+					"acacia",
+					"dark_oak"
+				],
+				"axis": [
+					"x",
+					"y",
+					"z"
+				]
+			},
+			"defaults": {
+				"block": "oak",
+				"axis": "y"
+			}
+		}
+	}
+}

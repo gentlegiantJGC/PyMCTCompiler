@@ -1,0 +1,33 @@
+{
+	"remove": [
+		"minecraft:oak_wood",
+		"minecraft:spruce_wood",
+		"minecraft:birch_wood",
+		"minecraft:jungle_wood",
+		"minecraft:acacia_wood",
+		"minecraft:dark_oak_wood"
+	],
+	"add": {
+		"minecraft:wood": {
+			"properties": {
+				"block": [
+					"oak",
+					"spruce",
+					"birch",
+					"jungle",
+					"acacia",
+					"dark_oak"
+				],
+				"axis": [
+					"x",
+					"y",
+					"z"
+				]
+			},
+			"defaults": {
+				"block": "oak",
+				"axis": "y"
+			}
+		}
+	}
+}
