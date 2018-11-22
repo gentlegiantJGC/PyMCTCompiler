@@ -28,12 +28,35 @@ if 'from_jar' in sys.argv:
 				raise Exception('This failed for some reason')
 
 if os.path.isfile('./generated/reports/blocks.json'):
+	modifications = {"remove":[], "add":{}}
+	for file_name in os.listdir('./modifications'):
+		if file_name.endswith('.json'):
+			with open(f'./modifications/{file_name}') as file_object:
+				json_object = json.load(file_object)
+			if "remove" in json_object:
+				modifications["remove"] += json_object["remove"]
+			if "add" in json_object:
+				for key, val in json_object["add"].items():
+					if key in modifications["add"]:
+						print(f'Key "{key}" specified for addition more than once')
+					modifications["add"][key] = val
+
+	for file_name in os.listdir('../Universal Specification/minecraft/vanilla'):
+		os.remove(f'../Universal Specification/minecraft/vanilla/{file_name}')
+
 	blocks = json.load(open('./generated/reports/blocks.json'), object_pairs_hook=OrderedDict)
 	for block_string, block_data in blocks.items():
+		if block_string in modifications["remove"]:
+			continue
 		namespace, block_name = block_string.split(':')
 		default_state = next(s for s in block_data['states'] if s.get('default', False))
 		if 'properties' in default_state:
 			block_data['defaults'] = default_state['properties']
 		del block_data['states']
+		with open(f'../Universal Specification/{namespace}/vanilla/{block_name}.json', 'w') as block_out:
+			json.dump(block_data, block_out, indent=4)
+
+	for block_string, block_data in modifications["add"].items():
+		namespace, block_name = block_string.split(':')
 		with open(f'../Universal Specification/{namespace}/vanilla/{block_name}.json', 'w') as block_out:
 			json.dump(block_data, block_out, indent=4)
