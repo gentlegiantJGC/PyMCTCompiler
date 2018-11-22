@@ -1,5 +1,13 @@
 {
     "properties": {
+        "mob": [
+            "skeleton",
+            "wither",
+            "zombie",
+            "player",
+            "creeper",
+            "dragon"
+        ],
         "rotation": [
             "0",
             "1",
@@ -20,6 +28,7 @@
         ]
     },
     "defaults": {
+        "mob": "skeleton",
         "rotation": "0"
     }
 }
