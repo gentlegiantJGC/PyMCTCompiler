@@ -1,5 +1,14 @@
 {
     "properties": {
+        "block": [
+            "oak",
+            "spruce",
+            "birch",
+            "jungle",
+            "acacia",
+            "dark_oak",
+            "iron"
+        ],
         "facing": [
             "north",
             "south",
@@ -24,6 +33,7 @@
         ]
     },
     "defaults": {
+        "block": "oak",
         "facing": "north",
         "half": "lower",
         "hinge": "left",
