@@ -1,0 +1,33 @@
+{
+	"remove": [
+		"minecraft:glass_pane"
+	],
+	"add": {
+		"minecraft:glass_pane": {
+			"properties": {
+				"east": [
+					"true",
+					"false"
+				],
+				"north": [
+					"true",
+					"false"
+				],
+				"south": [
+					"true",
+					"false"
+				],
+				"west": [
+					"true",
+					"false"
+				]
+			},
+			"defaults": {
+				"east": "false",
+				"north": "false",
+				"south": "false",
+				"west": "false"
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"remove": [
+		"minecraft:sea_pickle"
+	],
+	"add": {
+		"minecraft:sea_pickle": {
+			"properties": {
+				"pickles": [
+					"1",
+					"2",
+					"3",
+					"4"
+				]
+			},
+			"defaults": {
+				"pickles": "1"
+			}
+		}
+	}
+}

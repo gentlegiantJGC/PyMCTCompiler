@@ -1,0 +1,20 @@
+{
+	"remove": [
+		"minecraft:wall_sign"
+	],
+	"add": {
+		"minecraft:wall_sign": {
+			"properties": {
+				"facing": [
+					"north",
+					"south",
+					"west",
+					"east"
+				]
+			},
+			"defaults": {
+				"facing": "north"
+			}
+		}
+	}
+}
