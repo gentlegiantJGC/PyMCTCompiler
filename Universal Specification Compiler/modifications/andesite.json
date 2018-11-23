@@ -1,0 +1,19 @@
+{
+	"remove": [
+		"minecraft:andesite",
+		"minecraft:polished_andesite"
+	],
+	"add": {
+		"minecraft:andesite": {
+			"properties": {
+				"polished": [
+					"false",
+					"true"
+				]
+			},
+			"defaults": {
+				"polished": "false"
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"remove": [
+		"minecraft:diorite",
+		"minecraft:polished_diorite"
+	],
+	"add": {
+		"minecraft:diorite": {
+			"properties": {
+				"polished": [
+					"false",
+					"true"
+				]
+			},
+			"defaults": {
+				"polished": "false"
+			}
+		}
+	}
+}

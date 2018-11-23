@@ -1,0 +1,19 @@
+{
+	"remove": [
+		"minecraft:granite",
+		"minecraft:polished_granite"
+	],
+	"add": {
+		"minecraft:granite": {
+			"properties": {
+				"polished": [
+					"false",
+					"true"
+				]
+			},
+			"defaults": {
+				"polished": "false"
+			}
+		}
+	}
+}

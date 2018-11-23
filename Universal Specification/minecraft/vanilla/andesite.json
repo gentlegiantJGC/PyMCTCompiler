@@ -1,1 +1,11 @@
-{}
+{
+    "properties": {
+        "polished": [
+            "false",
+            "true"
+        ]
+    },
+    "defaults": {
+        "polished": "false"
+    }
+}
