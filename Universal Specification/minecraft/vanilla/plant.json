@@ -1,6 +1,6 @@
 {
     "properties": {
-        "flower": [
+        "type": [
             "dandelion",
             "poppy",
             "blue_orchid",
@@ -10,10 +10,12 @@
             "orange_tulip",
             "white_tulip",
             "pink_tulip",
-            "oxeye_daisy"
+            "oxeye_daisy",
+            "grass",
+            "fern"
         ]
     },
     "defaults": {
-        "flower": "dandelion"
+        "type": "dandelion"
     }
 }

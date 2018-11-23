@@ -9,12 +9,14 @@
 		"minecraft:orange_tulip",
 		"minecraft:white_tulip",
 		"minecraft:pink_tulip",
-		"minecraft:oxeye_daisy"
+		"minecraft:oxeye_daisy",
+		"minecraft:grass",
+		"minecraft:fern"
 	],
 	"add": {
-		"minecraft:flower": {
+		"minecraft:plant": {
 			"properties": {
-				"flower": [
+				"type": [
 					"dandelion",
 					"poppy",
 					"blue_orchid",
@@ -24,11 +26,13 @@
 					"orange_tulip",
 					"white_tulip",
 					"pink_tulip",
-					"oxeye_daisy"
+					"oxeye_daisy",
+					"grass",
+					"fern"
 				]
 			},
 			"defaults": {
-				"flower": "dandelion"
+				"type": "dandelion"
 			}
 		}
 	}
