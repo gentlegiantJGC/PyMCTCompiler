@@ -11,7 +11,8 @@
 		"minecraft:pink_tulip",
 		"minecraft:oxeye_daisy",
 		"minecraft:grass",
-		"minecraft:fern"
+		"minecraft:fern",
+		"minecraft:dead_bush"
 	],
 	"add": {
 		"minecraft:plant": {
@@ -28,7 +29,8 @@
 					"pink_tulip",
 					"oxeye_daisy",
 					"grass",
-					"fern"
+					"fern",
+					"dead_bush"
 				]
 			},
 			"defaults": {
