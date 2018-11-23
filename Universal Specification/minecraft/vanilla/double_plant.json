@@ -1,0 +1,15 @@
+{
+    "properties": {
+        "flower": [
+            "sunflower",
+            "lilac",
+            "rose_bush",
+            "peony",
+            "tall_grass",
+            "large_fern"
+        ]
+    },
+    "defaults": {
+        "flower": "sunflower"
+    }
+}
