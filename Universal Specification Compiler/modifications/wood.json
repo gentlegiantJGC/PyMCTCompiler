@@ -5,7 +5,13 @@
 		"minecraft:birch_wood",
 		"minecraft:jungle_wood",
 		"minecraft:acacia_wood",
-		"minecraft:dark_oak_wood"
+		"minecraft:dark_oak_wood",
+		"minecraft:stripped_oak_wood",
+		"minecraft:stripped_spruce_wood",
+		"minecraft:stripped_birch_wood",
+		"minecraft:stripped_jungle_wood",
+		"minecraft:stripped_acacia_wood",
+		"minecraft:stripped_dark_oak_wood"
 	],
 	"add": {
 		"minecraft:wood": {
@@ -22,11 +28,16 @@
 					"x",
 					"y",
 					"z"
+				],
+				"stripped": [
+					"false",
+					"true"
 				]
 			},
 			"defaults": {
 				"block": "oak",
-				"axis": "y"
+				"axis": "y",
+				"stripped": "false"
 			}
 		}
 	}

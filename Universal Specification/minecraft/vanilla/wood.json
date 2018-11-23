@@ -12,10 +12,15 @@
             "x",
             "y",
             "z"
+        ],
+        "stripped": [
+            "false",
+            "true"
         ]
     },
     "defaults": {
         "block": "oak",
-        "axis": "y"
+        "axis": "y",
+        "stripped": "false"
     }
 }
