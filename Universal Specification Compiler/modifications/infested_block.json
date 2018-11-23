@@ -1,0 +1,27 @@
+{
+	"remove": [
+		"minecraft:infested_cobblestone",
+		"minecraft:infested_stone",
+		"minecraft:infested_stone_bricks",
+		"minecraft:infested_cracked_stone_bricks",
+		"minecraft:infested_mossy_stone_bricks",
+		"minecraft:infested_chiseled_stone_bricks"
+	],
+	"add": {
+		"minecraft:infested_block": {
+			"properties": {
+				"block": [
+					"cobblestone",
+					"stone",
+					"stone_bricks",
+					"cracked_stone_bricks",
+					"mossy_stone_bricks",
+					"chiseled_stone_bricks"
+				]
+			},
+			"defaults": {
+				"block": "cobblestone"
+			}
+		}
+	}
+}
