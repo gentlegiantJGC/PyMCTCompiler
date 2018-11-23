@@ -1,0 +1,27 @@
+{
+	"remove": [
+		"minecraft:redstone_torch",
+		"minecraft:redstone_wall_torch"
+	],
+	"add": {
+		"minecraft:redstone_torch": {
+			"properties": {
+				"facing": [
+					"up",
+					"north",
+					"south",
+					"west",
+					"east"
+				],
+				"lit": [
+					"true",
+					"false"
+				]
+			},
+			"defaults": {
+				"facing": "up",
+				"lit": "true"
+			}
+		}
+	}
+}

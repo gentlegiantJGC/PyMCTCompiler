@@ -1,0 +1,22 @@
+{
+	"remove": [
+		"minecraft:torch",
+		"minecraft:wall_torch"
+	],
+	"add": {
+		"minecraft:torch": {
+			"properties": {
+				"facing": [
+					"up",
+					"north",
+					"south",
+					"west",
+					"east"
+				]
+			},
+			"defaults": {
+				"facing": "up"
+			}
+		}
+	}
+}
