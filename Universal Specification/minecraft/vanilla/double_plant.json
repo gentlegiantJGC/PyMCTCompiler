@@ -7,9 +7,14 @@
             "peony",
             "tall_grass",
             "large_fern"
+        ],
+        "half": [
+            "upper",
+            "lower"
         ]
     },
     "defaults": {
-        "flower": "sunflower"
+        "flower": "sunflower",
+        "half": "lower"
     }
 }
