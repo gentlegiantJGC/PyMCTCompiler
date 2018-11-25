@@ -1,8 +1,8 @@
 {
 	"remove": [
-		"minecraft:conduit"
+		"conduit"
 	],
 	"add": {
-		"minecraft:conduit": {}
+		"conduit": {}
 	}
 }

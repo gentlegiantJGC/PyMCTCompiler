@@ -1,9 +1,9 @@
 {
 	"remove": [
-		"minecraft:glass_pane"
+		"glass_pane"
 	],
 	"add": {
-		"minecraft:glass_pane": {
+		"glass_pane": {
 			"properties": {
 				"east": [
 					"true",

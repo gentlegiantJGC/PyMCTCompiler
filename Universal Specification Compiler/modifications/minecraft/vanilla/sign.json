@@ -1,9 +1,9 @@
 {
 	"remove": [
-		"minecraft:sign"
+		"sign"
 	],
 	"add": {
-		"minecraft:sign": {
+		"sign": {
 			"properties": {
 				"rotation": [
 					"0",

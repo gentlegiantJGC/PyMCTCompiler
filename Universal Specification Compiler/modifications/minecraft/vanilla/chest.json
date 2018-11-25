@@ -1,9 +1,9 @@
 {
 	"remove": [
-		"minecraft:chest"
+		"chest"
 	],
 	"add": {
-		"minecraft:chest": {
+		"chest": {
 			"properties": {
 				"facing": [
 					"north",

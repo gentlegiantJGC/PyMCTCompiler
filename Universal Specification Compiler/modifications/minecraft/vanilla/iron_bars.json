@@ -1,9 +1,9 @@
 {
 	"remove": [
-		"minecraft:iron_bars"
+		"iron_bars"
 	],
 	"add": {
-		"minecraft:iron_bars": {
+		"iron_bars": {
 			"properties": {
 				"east": [
 					"true",

@@ -1,10 +1,10 @@
 {
 	"remove": [
-		"minecraft:sponge",
-		"minecraft:wet_sponge"
+		"sponge",
+		"wet_sponge"
 	],
 	"add": {
-		"minecraft:sponge": {
+		"sponge": {
 			"properties": {
 				"wet": [
 					"false",

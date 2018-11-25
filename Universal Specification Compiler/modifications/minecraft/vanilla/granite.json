@@ -1,10 +1,10 @@
 {
 	"remove": [
-		"minecraft:granite",
-		"minecraft:polished_granite"
+		"granite",
+		"polished_granite"
 	],
 	"add": {
-		"minecraft:granite": {
+		"granite": {
 			"properties": {
 				"polished": [
 					"false",

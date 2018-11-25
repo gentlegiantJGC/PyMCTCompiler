@@ -1,15 +1,15 @@
 {
 	"remove": [
-		"minecraft:oak_fence",
-		"minecraft:spruce_fence",
-		"minecraft:birch_fence",
-		"minecraft:jungle_fence",
-		"minecraft:acacia_fence",
-		"minecraft:dark_oak_fence",
-        "minecraft:nether_brick_fence"
+		"oak_fence",
+		"spruce_fence",
+		"birch_fence",
+		"jungle_fence",
+		"acacia_fence",
+		"dark_oak_fence",
+        "nether_brick_fence"
 	],
 	"add": {
-        "minecraft:fence": {
+        "fence": {
             "properties": {
                 "block": [
 					"oak",

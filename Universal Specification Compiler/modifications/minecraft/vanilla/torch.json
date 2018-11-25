@@ -1,10 +1,10 @@
 {
 	"remove": [
-		"minecraft:torch",
-		"minecraft:wall_torch"
+		"torch",
+		"wall_torch"
 	],
 	"add": {
-		"minecraft:torch": {
+		"torch": {
 			"properties": {
 				"facing": [
 					"up",

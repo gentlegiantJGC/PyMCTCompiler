@@ -1,11 +1,11 @@
 {
 	"remove": [
-		"minecraft:anvil",
-		"minecraft:chipped_anvil",
-		"minecraft:damaged_anvil"
+		"anvil",
+		"chipped_anvil",
+		"damaged_anvil"
 	],
 	"add": {
-		"minecraft:anvil": {
+		"anvil": {
 			"properties": {
 				"damage": [
 					"normal",

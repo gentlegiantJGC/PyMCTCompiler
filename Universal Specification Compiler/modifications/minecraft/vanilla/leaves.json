@@ -1,14 +1,14 @@
 {
 	"remove": [
-		"minecraft:oak_leaves",
-		"minecraft:spruce_leaves",
-		"minecraft:birch_leaves",
-		"minecraft:jungle_leaves",
-		"minecraft:acacia_leaves",
-		"minecraft:dark_oak_leaves"
+		"oak_leaves",
+		"spruce_leaves",
+		"birch_leaves",
+		"jungle_leaves",
+		"acacia_leaves",
+		"dark_oak_leaves"
 	],
 	"add": {
-		"minecraft:leaves": {
+		"leaves": {
 			"properties": {
 				"block": [
 					"oak",

@@ -1,9 +1,9 @@
 {
 	"remove": [
-		"minecraft:ender_chest"
+		"ender_chest"
 	],
 	"add": {
-		"minecraft:ender_chest": {
+		"ender_chest": {
 			"properties": {
 				"facing": [
 					"north",

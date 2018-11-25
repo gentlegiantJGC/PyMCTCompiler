@@ -1,9 +1,9 @@
 {
 	"remove": [
-		"minecraft:cobblestone_wall"
+		"cobblestone_wall"
 	],
 	"add": {
-		"minecraft:cobblestone_wall": {
+		"cobblestone_wall": {
 			"properties": {
 				"east": [
 					"true",

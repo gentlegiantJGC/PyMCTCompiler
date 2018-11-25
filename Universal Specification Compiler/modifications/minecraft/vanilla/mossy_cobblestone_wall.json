@@ -1,9 +1,9 @@
 {
 	"remove": [
-		"minecraft:mossy_cobblestone_wall"
+		"mossy_cobblestone_wall"
 	],
 	"add": {
-		"minecraft:mossy_cobblestone_wall": {
+		"mossy_cobblestone_wall": {
 			"properties": {
 				"east": [
 					"true",

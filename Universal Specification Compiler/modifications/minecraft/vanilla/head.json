@@ -1,14 +1,14 @@
 {
 	"remove": [
-		"minecraft:skeleton_skull",
-		"minecraft:wither_skeleton_skull",
-		"minecraft:zombie_head",
-		"minecraft:player_head",
-		"minecraft:creeper_head",
-		"minecraft:dragon_head"
+		"skeleton_skull",
+		"wither_skeleton_skull",
+		"zombie_head",
+		"player_head",
+		"creeper_head",
+		"dragon_head"
 	],
 	"add": {
-		"minecraft:head": {
+		"head": {
 			"properties": {
 				"mob": [
 					"skeleton",

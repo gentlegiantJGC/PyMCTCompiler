@@ -1,9 +1,9 @@
 {
 	"remove": [
-		"minecraft:ladder"
+		"ladder"
 	],
 	"add": {
-		"minecraft:ladder": {
+		"ladder": {
 			"properties": {
 				"facing": [
 					"north",

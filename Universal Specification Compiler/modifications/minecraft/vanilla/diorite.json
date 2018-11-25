@@ -1,10 +1,10 @@
 {
 	"remove": [
-		"minecraft:diorite",
-		"minecraft:polished_diorite"
+		"diorite",
+		"polished_diorite"
 	],
 	"add": {
-		"minecraft:diorite": {
+		"diorite": {
 			"properties": {
 				"polished": [
 					"false",

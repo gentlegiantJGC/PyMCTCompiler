@@ -1,6 +1,6 @@
 {
 	"add": {
-		"minecraft:numerical": {
+		"numerical": {
 			"properties": {
 				"block_id": [
 					"0",

@@ -1,25 +1,25 @@
 {
 	"remove": [
-		"minecraft:oak_stairs",
-		"minecraft:spruce_stairs",
-		"minecraft:birch_stairs",
-		"minecraft:jungle_stairs",
-		"minecraft:acacia_stairs",
-		"minecraft:dark_oak_stairs",
-		"minecraft:brick_stairs",
-		"minecraft:cobblestone_stairs",
-		"minecraft:stone_brick_stairs",
-		"minecraft:sandstone_stairs",
-		"minecraft:red_sandstone_stairs",
-		"minecraft:nether_brick_stairs",
-		"minecraft:quartz_stairs",
-		"minecraft:purpur_stairs",
-		"minecraft:prismarine_stairs",
-		"minecraft:prismarine_brick_stairs",
-		"minecraft:dark_prismarine_stairs"
+		"oak_stairs",
+		"spruce_stairs",
+		"birch_stairs",
+		"jungle_stairs",
+		"acacia_stairs",
+		"dark_oak_stairs",
+		"brick_stairs",
+		"cobblestone_stairs",
+		"stone_brick_stairs",
+		"sandstone_stairs",
+		"red_sandstone_stairs",
+		"nether_brick_stairs",
+		"quartz_stairs",
+		"purpur_stairs",
+		"prismarine_stairs",
+		"prismarine_brick_stairs",
+		"dark_prismarine_stairs"
 	],
 	"add": {
-		"minecraft:stairs": {
+		"stairs": {
 			"properties": {
 				"block": [
 					"oak",

@@ -1,20 +1,20 @@
 {
 	"remove": [
-		"minecraft:oak_log",
-		"minecraft:spruce_log",
-		"minecraft:birch_log",
-		"minecraft:jungle_log",
-		"minecraft:acacia_log",
-		"minecraft:dark_oak_log",
-		"minecraft:stripped_oak_log",
-		"minecraft:stripped_spruce_log",
-		"minecraft:stripped_birch_log",
-		"minecraft:stripped_jungle_log",
-		"minecraft:stripped_acacia_log",
-		"minecraft:stripped_dark_oak_log"
+		"oak_log",
+		"spruce_log",
+		"birch_log",
+		"jungle_log",
+		"acacia_log",
+		"dark_oak_log",
+		"stripped_oak_log",
+		"stripped_spruce_log",
+		"stripped_birch_log",
+		"stripped_jungle_log",
+		"stripped_acacia_log",
+		"stripped_dark_oak_log"
 	],
 	"add": {
-		"minecraft:log": {
+		"log": {
 			"properties": {
 				"block": [
 					"oak",

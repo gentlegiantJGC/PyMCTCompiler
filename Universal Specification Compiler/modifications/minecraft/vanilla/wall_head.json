@@ -1,14 +1,14 @@
 {
 	"remove": [
-		"minecraft:skeleton_wall_skull",
-		"minecraft:wither_skeleton_wall_skull",
-		"minecraft:zombie_wall_head",
-		"minecraft:player_wall_head",
-		"minecraft:creeper_wall_head",
-		"minecraft:dragon_wall_head"
+		"skeleton_wall_skull",
+		"wither_skeleton_wall_skull",
+		"zombie_wall_head",
+		"player_wall_head",
+		"creeper_wall_head",
+		"dragon_wall_head"
 	],
 	"add": {
-		"minecraft:wall_head": {
+		"wall_head": {
 			"properties": {
 				"mob": [
 					"skeleton",

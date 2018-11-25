@@ -1,10 +1,10 @@
 {
 	"remove": [
-		"minecraft:andesite",
-		"minecraft:polished_andesite"
+		"andesite",
+		"polished_andesite"
 	],
 	"add": {
-		"minecraft:andesite": {
+		"andesite": {
 			"properties": {
 				"polished": [
 					"false",

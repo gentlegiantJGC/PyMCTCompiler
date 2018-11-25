@@ -1,30 +1,30 @@
 {
 	"remove": [
-		"minecraft:flower_pot",
-		"minecraft:potted_dandelion",
-		"minecraft:potted_poppy",
-		"minecraft:potted_blue_orchid",
-		"minecraft:potted_allium",
-		"minecraft:potted_azure_bluet",
-		"minecraft:potted_red_tulip",
-		"minecraft:potted_orange_tulip",
-		"minecraft:potted_white_tulip",
-		"minecraft:potted_pink_tulip",
-		"minecraft:potted_oxeye_daisy",
-		"minecraft:potted_oak_sapling",
-		"minecraft:potted_spruce_sapling",
-		"minecraft:potted_birch_sapling",
-		"minecraft:potted_jungle_sapling",
-		"minecraft:potted_acacia_sapling",
-		"minecraft:potted_dark_oak_sapling",
-		"minecraft:potted_red_mushroom",
-		"minecraft:potted_brown_mushroom",
-		"minecraft:potted_fern",
-		"minecraft:potted_dead_bush",
-		"minecraft:potted_cactus"
+		"flower_pot",
+		"potted_dandelion",
+		"potted_poppy",
+		"potted_blue_orchid",
+		"potted_allium",
+		"potted_azure_bluet",
+		"potted_red_tulip",
+		"potted_orange_tulip",
+		"potted_white_tulip",
+		"potted_pink_tulip",
+		"potted_oxeye_daisy",
+		"potted_oak_sapling",
+		"potted_spruce_sapling",
+		"potted_birch_sapling",
+		"potted_jungle_sapling",
+		"potted_acacia_sapling",
+		"potted_dark_oak_sapling",
+		"potted_red_mushroom",
+		"potted_brown_mushroom",
+		"potted_fern",
+		"potted_dead_bush",
+		"potted_cactus"
 	],
 	"add": {
-		"minecraft:flower_pot": {
+		"flower_pot": {
 			"properties": {
 				"plant": [
 					"none",

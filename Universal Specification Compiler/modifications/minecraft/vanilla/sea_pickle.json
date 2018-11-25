@@ -1,9 +1,9 @@
 {
 	"remove": [
-		"minecraft:sea_pickle"
+		"sea_pickle"
 	],
 	"add": {
-		"minecraft:sea_pickle": {
+		"sea_pickle": {
 			"properties": {
 				"pickles": [
 					"1",

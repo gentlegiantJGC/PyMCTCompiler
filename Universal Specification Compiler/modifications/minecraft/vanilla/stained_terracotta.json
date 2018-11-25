@@ -1,24 +1,24 @@
 {
 	"remove": [
-		"minecraft:white_terracotta",
-		"minecraft:orange_terracotta",
-		"minecraft:magenta_terracotta",
-		"minecraft:light_blue_terracotta",
-		"minecraft:yellow_terracotta",
-		"minecraft:lime_terracotta",
-		"minecraft:pink_terracotta",
-		"minecraft:gray_terracotta",
-		"minecraft:light_gray_terracotta",
-		"minecraft:cyan_terracotta",
-		"minecraft:purple_terracotta",
-		"minecraft:blue_terracotta",
-		"minecraft:brown_terracotta",
-		"minecraft:green_terracotta",
-		"minecraft:red_terracotta",
-		"minecraft:black_terracotta"
+		"white_terracotta",
+		"orange_terracotta",
+		"magenta_terracotta",
+		"light_blue_terracotta",
+		"yellow_terracotta",
+		"lime_terracotta",
+		"pink_terracotta",
+		"gray_terracotta",
+		"light_gray_terracotta",
+		"cyan_terracotta",
+		"purple_terracotta",
+		"blue_terracotta",
+		"brown_terracotta",
+		"green_terracotta",
+		"red_terracotta",
+		"black_terracotta"
 	],
 	"add": {
-		"minecraft:stained_terracotta": {
+		"stained_terracotta": {
 			"properties": {
 				"color": [
 					"white",

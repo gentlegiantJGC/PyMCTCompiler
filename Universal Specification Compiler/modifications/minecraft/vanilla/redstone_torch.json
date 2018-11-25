@@ -1,10 +1,10 @@
 {
 	"remove": [
-		"minecraft:redstone_torch",
-		"minecraft:redstone_wall_torch"
+		"redstone_torch",
+		"redstone_wall_torch"
 	],
 	"add": {
-		"minecraft:redstone_torch": {
+		"redstone_torch": {
 			"properties": {
 				"facing": [
 					"up",

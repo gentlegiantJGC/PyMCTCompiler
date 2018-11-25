@@ -1,14 +1,14 @@
 {
 	"remove": [
-		"minecraft:oak_planks",
-		"minecraft:spruce_planks",
-		"minecraft:birch_planks",
-		"minecraft:jungle_planks",
-		"minecraft:acacia_planks",
-		"minecraft:dark_oak_planks"
+		"oak_planks",
+		"spruce_planks",
+		"birch_planks",
+		"jungle_planks",
+		"acacia_planks",
+		"dark_oak_planks"
 	],
 	"add": {
-		"minecraft:planks": {
+		"planks": {
 			"properties": {
 				"block": [
 					"oak",

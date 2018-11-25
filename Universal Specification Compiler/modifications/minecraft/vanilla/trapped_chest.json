@@ -1,9 +1,9 @@
 {
 	"remove": [
-		"minecraft:trapped_chest"
+		"trapped_chest"
 	],
 	"add": {
-		"minecraft:trapped_chest": {
+		"trapped_chest": {
 			"properties": {
 				"facing": [
 					"north",

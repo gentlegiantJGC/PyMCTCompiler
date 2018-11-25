@@ -1,15 +1,15 @@
 {
 	"remove": [
-		"minecraft:oak_button",
-		"minecraft:spruce_button",
-		"minecraft:birch_button",
-		"minecraft:jungle_button",
-		"minecraft:acacia_button",
-		"minecraft:dark_oak_button",
-		"minecraft:stone_button"
+		"oak_button",
+		"spruce_button",
+		"birch_button",
+		"jungle_button",
+		"acacia_button",
+		"dark_oak_button",
+		"stone_button"
 	],
 	"add": {
-		"minecraft:button": {
+		"button": {
 			"properties": {
 				"block": [
 					"oak",
