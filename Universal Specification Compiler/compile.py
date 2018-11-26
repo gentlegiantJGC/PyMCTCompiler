@@ -35,49 +35,57 @@ def main():
 					raise Exception('This failed for some reason')
 
 	if os.path.isfile('./generated/reports/blocks.json'):
-		modifications = {"remove":[], "add":{}}
-		for file_name in os.listdir('./modifications'):
-			if file_name.endswith('.json'):
-				with open(f'./modifications/{file_name}') as file_object:
-					json_object = json.load(file_object)
-				if "remove" in json_object:
-					modifications["remove"] += json_object["remove"]
-				if "add" in json_object:
-					for key, val in json_object["add"].items():
-						if key in modifications["add"]:
-							print(f'Key "{key}" specified for addition more than once')
-						modifications["add"][key] = val
+		for namespace in os.listdir('./modifications'):
+			if os.path.isdir(f'./modifications/{namespace}'):
+				modifications = {"remove": [], "add": {}}
+				if namespace == 'minecraft':
+					blocks = json.load(open('./generated/reports/blocks.json'), object_pairs_hook=OrderedDict)
+				else:
+					blocks = {}
+				for group_name in os.listdir(f'./modifications/{namespace}'):
+					if os.path.isdir(f'./modifications/{namespace}/{group_name}'):
+						for file_name in os.listdir(f'./modifications/{namespace}/{group_name}'):
+							if file_name.endswith('.json'):
+								with open(f'./modifications/{namespace}/{group_name}/{file_name}') as file_object:
+									json_object = json.load(file_object)
+								if "remove" in json_object:
+									modifications["remove"] += json_object["remove"]
+								if "add" in json_object:
+									for key, val in json_object["add"].items():
+										if key in modifications["add"]:
+											print(f'Key "{key}" specified for addition more than once')
+										modifications["add"][key] = val
 
-		for file_name in os.listdir('../Universal Specification/minecraft/vanilla'):
-			os.remove(f'../Universal Specification/minecraft/vanilla/{file_name}')
+						for file_name in os.listdir(f'../Universal Specification/{namespace}/{group_name}'):
+							os.remove(f'../Universal Specification/{namespace}/{group_name}/{file_name}')
 
-		blocks = json.load(open('./generated/reports/blocks.json'), object_pairs_hook=OrderedDict)
-		for block_string in modifications["remove"]:
-			if block_string in blocks:
-				del blocks[block_string]
-			else:
-				print(f'"{block_string}" either does not exist or was deleted more than once')
+						for block_name in modifications["remove"]:
+							if f'{namespace}:{block_name}' in blocks:
+								del blocks[f'{namespace}:{block_name}']
+							else:
+								print(f'"{namespace}:{block_name}" either does not exist or was deleted more than once')
+		
+						for block_string, block_data in blocks.items():
+							namespace_, block_name = block_string.split(':')
+							default_state = next(s for s in block_data['states'] if s.get('default', False))
+							if 'properties' in default_state:
+								block_data['defaults'] = default_state['properties']
+							del block_data['states']
+							if not debug(block_data):
+								print(f'Error in "{block_string}"')
+							with open(f'../Universal Specification/{namespace_}/{group_name}/{block_name}.json', 'w') as block_out:
+								json.dump(block_data, block_out, indent=4)
 
-		for block_string, block_data in blocks.items():
-			namespace, block_name = block_string.split(':')
-			default_state = next(s for s in block_data['states'] if s.get('default', False))
-			if 'properties' in default_state:
-				block_data['defaults'] = default_state['properties']
-			del block_data['states']
-			if not debug(block_data):
-				print(f'Error in "{block_string}"')
-			with open(f'../Universal Specification/{namespace}/vanilla/{block_name}.json', 'w') as block_out:
-				json.dump(block_data, block_out, indent=4)
-
-		for block_string, block_data in modifications["add"].items():
-			namespace, block_name = block_string.split(':')
-			if os.path.isfile(f'../Universal Specification/{namespace}/vanilla/{block_name}.json'):
-				print(f'"{block_string}" is already present.')
-			else:
-				if not debug(block_data):
-					print(f'Error in "{block_string}"')
-				with open(f'../Universal Specification/{namespace}/vanilla/{block_name}.json', 'w') as block_out:
-					json.dump(block_data, block_out, indent=4)
+						for block_name, block_data in modifications["add"].items():
+							if os.path.isfile(f'../Universal Specification/{namespace}/{group_name}/{block_name}.json'):
+								print(f'"{block_string}" is already present.')
+							else:
+								if not debug(block_data):
+									print(f'Error in "{block_string}"')
+								with open(f'../Universal Specification/{namespace}/{group_name}/{block_name}.json', 'w') as block_out:
+									json.dump(block_data, block_out, indent=4)
+	else:
+		raise Exception('Cound not find ./generated/reports/blocks.json')
 
 if __name__ == "__main__":
 	main()
