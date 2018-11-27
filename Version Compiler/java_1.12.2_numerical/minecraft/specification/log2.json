@@ -1,0 +1,62 @@
+{
+	"to_universal" :{
+		"map_properties": {
+			"data": {
+				"0": {
+					"new_block": "minecraft:log",
+					"new_properties": {
+						"block": "acacia",
+						"axis": "y"
+					}
+				},
+				"1": {
+					"new_block": "minecraft:log",
+					"new_properties": {
+						"block": "dark_oak",
+						"axis": "y"
+					}
+				},
+				"4": {
+					"new_block": "minecraft:log",
+					"new_properties": {
+						"block": "acacia",
+						"axis": "x"
+					}
+				},
+				"5": {
+					"new_block": "minecraft:log",
+					"new_properties": {
+						"block": "dark_oak",
+						"axis": "x"
+					}
+				},
+				"8": {
+					"new_block": "minecraft:log",
+					"new_properties": {
+						"block": "acacia",
+						"axis": "z"
+					}
+				},
+				"9": {
+					"new_block": "minecraft:log",
+					"new_properties": {
+						"block": "dark_oak",
+						"axis": "z"
+					}
+				},
+				"12": {
+					"new_block": "minecraft:wood",
+					"new_properties": {
+						"block": "acacia"
+					}
+				},
+				"13": {
+					"new_block": "minecraft:wood",
+					"new_properties": {
+						"block": "dark_oak"
+					}
+				}
+			}
+		}
+	}
+}
