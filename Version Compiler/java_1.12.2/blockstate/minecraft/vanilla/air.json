@@ -1,0 +1,10 @@
+{
+	"to_universal" :{
+		"new_block": "minecraft:air"
+	},
+	"from_universal" :{
+		"minecraft:air": {
+			"new_block": "minecraft:air"
+		}
+	}
+}
