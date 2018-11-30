@@ -1,7 +1,7 @@
 {
 	"numerical/air.json": "air.json",
-	"numerical/leaves_java.pyjson": "leaves.json",
-	"numerical/leaves2_java.pyjson": "leaves2.json",
+	"numerical/leaves_bedrock.pyjson": "leaves.json",
+	"numerical/leaves2_bedrock.pyjson": "leaves2.json",
 	"numerical/log.pyjson": "log.json",
 	"numerical/log2.pyjson": "log2.json"
 }
