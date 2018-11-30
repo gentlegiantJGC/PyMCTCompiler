@@ -1,0 +1,68 @@
+{
+	"specification": {
+		"properties": {
+			"block": [
+				"acacia",
+		        "dark_oak"
+			],
+			"decayable": [
+				"true",
+				"false"
+			],
+			"check_decay": [
+				"true",
+				"false"
+			]
+		},
+		"defaults": {
+			"block": "acacia",
+			"decayable": "true",
+			"check_decay": "true"
+		}
+	},
+	"to_universal" :{
+		"new_block": "minecraft:leaves",
+		"carry_properties": {
+			"block": [
+	            "acacia",
+		        "dark_oak"
+	        ],
+			"decayable": [
+				"true",
+				"false"
+			],
+			"check_decay": [
+				"true",
+				"false"
+			]
+		}
+	},
+	"from_universal": {
+		"minecraft:leaves": {
+			"carry_properties": {
+				"block": [
+					"acacia",
+		       		"dark_oak"
+				],
+				"decayable": [
+					"true",
+					"false"
+				],
+				"check_decay": [
+					"true",
+					"false"
+				]
+			},
+			"map_properties": {
+				"block": {
+					"acacia": {
+						"new_block": "minecraft:leaves2"
+					},
+					"dark_oak": {
+						"new_block": "minecraft:leaves2"
+					}
+				}
+			}
+		}
+	}
+}
