@@ -1,0 +1,52 @@
+{
+	"to_universal" :{
+		"map_properties": {
+			"data": {
+				str(data): {
+					"new_block": "minecraft:log",
+					"new_properties": {
+						"block": {0: "oak", 1: "spruce", 2: "birch", 3: "jungle"}[data & 3],
+						"axis": {0: "y", 4: "x", 8: "z"}[data & 12],
+					}
+				} if data <= 11 else {
+					"new_block": "minecraft:wood",
+					"new_properties": {
+						"block": {0: "oak", 1: "spruce", 2: "birch", 3: "jungle"}[data & 3]
+					}
+				} for data in range(16)
+			}
+		}
+	},
+	"from_universal": {
+		"minecraft:log": {
+			"map_properties": {
+				"axis": {
+					axis: {
+						"map_properties": {
+							"block": {
+								block: {
+									"new_block": "minecraft:log",
+									"new_properties": {
+										"block_data": str(data12 + data3)
+									}
+								} for data3, block in {0: "oak", 1: "spruce", 2: "birch", 3: "jungle"}.items()
+							}
+						}
+					} for data12, axis in {0: "y", 4: "x", 8: "z"}.items()
+				}
+			}
+		},
+		"minecraft:wood": {
+			"map_properties": {
+				"block": {
+					block: {
+						"new_block": "minecraft:log",
+						"new_properties": {
+							"block_data": str(12 + data3)
+						}
+					} for data3, block in {0: "oak", 1: "spruce", 2: "birch", 3: "jungle"}.items()
+				}
+			}
+		}
+	}
+}
