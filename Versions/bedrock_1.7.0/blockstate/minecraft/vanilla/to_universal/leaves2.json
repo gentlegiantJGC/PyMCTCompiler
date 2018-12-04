@@ -1,0 +1,17 @@
+{
+    "new_block": "minecraft:leaves",
+    "carry_properties": {
+        "block": [
+            "acacia",
+            "dark_oak"
+        ],
+        "decayable": [
+            "true",
+            "false"
+        ],
+        "check_decay": [
+            "true",
+            "false"
+        ]
+    }
+}

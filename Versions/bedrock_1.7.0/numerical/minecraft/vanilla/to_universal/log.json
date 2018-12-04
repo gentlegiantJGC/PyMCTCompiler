@@ -1,0 +1,114 @@
+{
+    "map_properties": {
+        "data": {
+            "0": {
+                "new_block": "minecraft:log",
+                "new_properties": {
+                    "block": "oak",
+                    "axis": "y"
+                }
+            },
+            "1": {
+                "new_block": "minecraft:log",
+                "new_properties": {
+                    "block": "spruce",
+                    "axis": "y"
+                }
+            },
+            "2": {
+                "new_block": "minecraft:log",
+                "new_properties": {
+                    "block": "birch",
+                    "axis": "y"
+                }
+            },
+            "3": {
+                "new_block": "minecraft:log",
+                "new_properties": {
+                    "block": "jungle",
+                    "axis": "y"
+                }
+            },
+            "4": {
+                "new_block": "minecraft:log",
+                "new_properties": {
+                    "block": "oak",
+                    "axis": "x"
+                }
+            },
+            "5": {
+                "new_block": "minecraft:log",
+                "new_properties": {
+                    "block": "spruce",
+                    "axis": "x"
+                }
+            },
+            "6": {
+                "new_block": "minecraft:log",
+                "new_properties": {
+                    "block": "birch",
+                    "axis": "x"
+                }
+            },
+            "7": {
+                "new_block": "minecraft:log",
+                "new_properties": {
+                    "block": "jungle",
+                    "axis": "x"
+                }
+            },
+            "8": {
+                "new_block": "minecraft:log",
+                "new_properties": {
+                    "block": "oak",
+                    "axis": "z"
+                }
+            },
+            "9": {
+                "new_block": "minecraft:log",
+                "new_properties": {
+                    "block": "spruce",
+                    "axis": "z"
+                }
+            },
+            "10": {
+                "new_block": "minecraft:log",
+                "new_properties": {
+                    "block": "birch",
+                    "axis": "z"
+                }
+            },
+            "11": {
+                "new_block": "minecraft:log",
+                "new_properties": {
+                    "block": "jungle",
+                    "axis": "z"
+                }
+            },
+            "12": {
+                "new_block": "minecraft:wood",
+                "new_properties": {
+                    "block": "oak"
+                }
+            },
+            "13": {
+                "new_block": "minecraft:wood",
+                "new_properties": {
+                    "block": "spruce"
+                }
+            },
+            "14": {
+                "new_block": "minecraft:wood",
+                "new_properties": {
+                    "block": "birch"
+                }
+            },
+            "15": {
+                "new_block": "minecraft:wood",
+                "new_properties": {
+                    "block": "jungle"
+                }
+            }
+        }
+    }
+}

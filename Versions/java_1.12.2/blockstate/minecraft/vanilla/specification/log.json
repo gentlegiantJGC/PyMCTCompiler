@@ -1,0 +1,20 @@
+{
+    "properties": {
+        "block": [
+            "oak",
+            "spruce",
+            "birch",
+            "jungle"
+        ],
+        "axis": [
+            "x",
+            "y",
+            "z",
+            "all"
+        ]
+    },
+    "defaults": {
+        "block": "oak",
+        "axis": "y"
+    }
+}

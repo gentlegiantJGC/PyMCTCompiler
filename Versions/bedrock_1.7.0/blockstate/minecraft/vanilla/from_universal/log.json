@@ -1,0 +1,39 @@
+{
+    "carry_properties": {
+        "block": [
+            "oak",
+            "spruce",
+            "birch",
+            "jungle",
+            "acacia",
+            "dark_oak"
+        ],
+        "axis": [
+            "x",
+            "y",
+            "z"
+        ]
+    },
+    "map_properties": {
+        "block": {
+            "oak": {
+                "new_block": "minecraft:log"
+            },
+            "spruce": {
+                "new_block": "minecraft:log"
+            },
+            "birch": {
+                "new_block": "minecraft:log"
+            },
+            "jungle": {
+                "new_block": "minecraft:log"
+            },
+            "acacia": {
+                "new_block": "minecraft:log2"
+            },
+            "dark_oak": {
+                "new_block": "minecraft:log2"
+            }
+        }
+    }
+}

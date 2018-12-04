@@ -1,0 +1,18 @@
+{
+    "properties": {
+        "block": [
+            "acacia",
+            "dark_oak"
+        ],
+        "axis": [
+            "x",
+            "y",
+            "z",
+            "all"
+        ]
+    },
+    "defaults": {
+        "block": "acacia",
+        "axis": "y"
+    }
+}

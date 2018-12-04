@@ -1,0 +1,42 @@
+{
+    "map_properties": {
+        "block": {
+            "oak": {
+                "new_block": "minecraft:log",
+                "new_properties": {
+                    "block_data": "12"
+                }
+            },
+            "spruce": {
+                "new_block": "minecraft:log",
+                "new_properties": {
+                    "block_data": "13"
+                }
+            },
+            "birch": {
+                "new_block": "minecraft:log",
+                "new_properties": {
+                    "block_data": "14"
+                }
+            },
+            "jungle": {
+                "new_block": "minecraft:log",
+                "new_properties": {
+                    "block_data": "15"
+                }
+            },
+            "acacia": {
+                "new_block": "minecraft:log2",
+                "new_properties": {
+                    "block_data": "12"
+                }
+            },
+            "dark_oak": {
+                "new_block": "minecraft:log2",
+                "new_properties": {
+                    "block_data": "13"
+                }
+            }
+        }
+    }
+}
