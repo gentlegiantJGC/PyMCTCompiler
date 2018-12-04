@@ -24,7 +24,7 @@
 									"map_properties": {
 										"block": {
 											block: {
-												"new_block": "minecraft:leaves",
+												"new_block": "minecraft:leaves2",
 												"new_properties": {
 													"block_data": str(data3 + data4 + data8)
 												}
