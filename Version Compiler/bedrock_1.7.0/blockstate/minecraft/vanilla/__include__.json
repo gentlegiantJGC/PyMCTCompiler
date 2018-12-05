@@ -4,6 +4,7 @@
 	"numerical_blockstate/grass_block.json": "grass_block.json",
 	"numerical_blockstate/dirt+coarse.json": "dirt.json",
 	"numerical_blockstate/cobblestone.json": "cobblestone.json",
+	"numerical_blockstate/sapling.json": "sapling.json",
 
 	"numerical_blockstate/leaves.json": "leaves.json",
 	"numerical_blockstate/leaves2.json": "leaves2.json",

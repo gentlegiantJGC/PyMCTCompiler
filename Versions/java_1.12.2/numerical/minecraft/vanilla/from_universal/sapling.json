@@ -1,0 +1,90 @@
+{
+    "map_properties": {
+        "stage": {
+            "0": {
+                "map_properties": {
+                    "block": {
+                        "oak": {
+                            "new_block": "minecraft:sapling",
+                            "new_properties": {
+                                "block_data": "0"
+                            }
+                        },
+                        "spruce": {
+                            "new_block": "minecraft:sapling",
+                            "new_properties": {
+                                "block_data": "1"
+                            }
+                        },
+                        "birch": {
+                            "new_block": "minecraft:sapling",
+                            "new_properties": {
+                                "block_data": "2"
+                            }
+                        },
+                        "jungle": {
+                            "new_block": "minecraft:sapling",
+                            "new_properties": {
+                                "block_data": "3"
+                            }
+                        },
+                        "acacia": {
+                            "new_block": "minecraft:sapling",
+                            "new_properties": {
+                                "block_data": "4"
+                            }
+                        },
+                        "dark_oak": {
+                            "new_block": "minecraft:sapling",
+                            "new_properties": {
+                                "block_data": "5"
+                            }
+                        }
+                    }
+                }
+            },
+            "1": {
+                "map_properties": {
+                    "block": {
+                        "oak": {
+                            "new_block": "minecraft:sapling",
+                            "new_properties": {
+                                "block_data": "8"
+                            }
+                        },
+                        "spruce": {
+                            "new_block": "minecraft:sapling",
+                            "new_properties": {
+                                "block_data": "9"
+                            }
+                        },
+                        "birch": {
+                            "new_block": "minecraft:sapling",
+                            "new_properties": {
+                                "block_data": "10"
+                            }
+                        },
+                        "jungle": {
+                            "new_block": "minecraft:sapling",
+                            "new_properties": {
+                                "block_data": "11"
+                            }
+                        },
+                        "acacia": {
+                            "new_block": "minecraft:sapling",
+                            "new_properties": {
+                                "block_data": "12"
+                            }
+                        },
+                        "dark_oak": {
+                            "new_block": "minecraft:sapling",
+                            "new_properties": {
+                                "block_data": "13"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
