@@ -1,7 +1,7 @@
 {
 	"to_universal": {
 		"map_properties": {
-			"data": {
+			"block_data": {
 				str(data): {
 					"new_block": "minecraft:leaves",
 					"new_properties": {

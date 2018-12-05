@@ -46,7 +46,7 @@ def read(input_blockstate, mappings, output_dir):
 if __name__ == "__main__":
 	for data in range(16):
 		print(data, read(
-			{"block_name": "minecraft:log", "properties": {"data": str(data)}},
+			{"block_name": "minecraft:log", "properties": {"block_data": str(data)}},
 			json.load(open('../Version Compiler/java_1.12.2_numerical/minecraft/specification/log.json'))["to_universal"],
 			'../Universal Specification'
 		))
@@ -54,7 +54,7 @@ if __name__ == "__main__":
 	for data in range(16):
 		try:
 			print(data, read(
-				{"block_name": "minecraft:log2", "properties": {"data": str(data)}},
+				{"block_name": "minecraft:log2", "properties": {"block_data": str(data)}},
 				json.load(open('../Version Compiler/java_1.12.2_numerical/minecraft/specification/log2.json'))["to_universal"],
 				'../Universal Specification'
 			))

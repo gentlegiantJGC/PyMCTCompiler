@@ -1,6 +1,6 @@
 {
     "properties": {
-        "data": [
+        "block_data": [
             "0",
             "1",
             "2",
@@ -20,6 +20,6 @@
         ]
     },
     "defaults": {
-        "data": "0"
+        "block_data": "0"
     }
 }

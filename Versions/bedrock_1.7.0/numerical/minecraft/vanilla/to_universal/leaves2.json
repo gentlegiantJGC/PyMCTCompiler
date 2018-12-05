@@ -1,6 +1,6 @@
 {
     "map_properties": {
-        "data": {
+        "block_data": {
             "0": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
