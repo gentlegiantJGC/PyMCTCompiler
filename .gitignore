@@ -107,6 +107,7 @@ venv.bak/
 .mypy_cache/
 
 # Temporary file locations
-Universal Specification Compiler/server.jar
-Universal Specification Compiler/logs/
-Universal Specification Compiler/generated/
+*.jar
+log.txt
+Version Compiler/Universal/logs/
+Version Compiler/Universal/generated/
