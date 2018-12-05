@@ -3,6 +3,8 @@
 	"numerical/stone+.json": "stone.json",
 	"numerical/grass_block.json": "grass_block.json",
 	"numerical/dirt+coarse+podzol.json": "dirt.json",
+	"numerical/cobblestone.json": "cobblestone.json",
+
 	"numerical/leaves_java.pyjson": "leaves.json",
 	"numerical/leaves2_java.pyjson": "leaves2.json",
 	"numerical/log.pyjson": "log.json",
