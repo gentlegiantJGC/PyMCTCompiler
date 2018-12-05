@@ -2,7 +2,7 @@
 	"numerical_blockstate/air.json": "air.json",
 	"numerical_blockstate/stone+.json": "stone.json",
 	"numerical_blockstate/grass_block.json": "grass_block.json",
-	"numerical_blockstate/dirt_java.json": "dirt.json",
+	"numerical_blockstate/dirt+coarse+podzol.json": "dirt.json",
 	"numerical_blockstate/leaves.json": "leaves.json",
 	"numerical_blockstate/leaves2.json": "leaves2.json",
 	"numerical_blockstate/log.json": "log.json",
