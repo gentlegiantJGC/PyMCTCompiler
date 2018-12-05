@@ -1,0 +1,37 @@
+{
+	"descriptions": {
+		"description": "looks for the following keys and does things",
+		"new_block": "the new block string to use. If not defined use the existing block string",
+		"new_properties": "add these properties with these values",
+		"map_properties": "look up the property value for each of the keys listed and follow the further instructions",
+		"carry_properties": "copy the property and value to the new blockstate"
+	},
+	"usage": {
+		"new_block": "minecraft:air",
+		"new_properties": {
+			"key": "val"
+		},
+		"map_properties": {
+			"key1": {
+				"val1": {},
+				"val2": {},
+				"...": {}
+			},
+			"key2": {
+				"val1": {},
+				"val2": {},
+				"...": {}
+			},
+			"...": {
+				"val1": {},
+				"val2": {},
+				"...": {}
+			}
+		},
+		"carry_properties": {
+			"key1": ["val1", "val2", "..."],
+			"key2": ["val1", "val2", "..."],
+			"...": ["val1", "val2", "..."]
+		}
+	}
+}
