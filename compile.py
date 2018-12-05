@@ -95,7 +95,7 @@ def process_file(path_prefix: str, namespace: str, sub_name: str, block_name: st
 	elif file_format == 'numerical':
 		save_json(f'{containing_dir}/specification/{file_name}', {"properties": {"data": [str(data) for data in range(16)]}, "defaults": {"data": "0"}})
 	elif file_format == 'blockstate':
-		save_json(f'{containing_dir}/specification/{file_name}', {"properties": {}, "defaults": {}})
+		save_json(f'{containing_dir}/specification/{file_name}', {})
 	else:
 		raise Exception()
 
