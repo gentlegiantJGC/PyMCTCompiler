@@ -1,0 +1,45 @@
+{
+    "map_properties": {
+        "block": {
+            "stone": {
+                "new_block": "minecraft:stone"
+            },
+            "granite": {
+                "new_block": "minecraft:granite",
+                "new_properties": {
+                    "polished": "false"
+                }
+            },
+            "polished_granite": {
+                "new_block": "minecraft:granite",
+                "new_properties": {
+                    "polished": "true"
+                }
+            },
+            "diorite": {
+                "new_block": "minecraft:diorite",
+                "new_properties": {
+                    "polished": "false"
+                }
+            },
+            "polished_diorite": {
+                "new_block": "minecraft:diorite",
+                "new_properties": {
+                    "polished": "true"
+                }
+            },
+            "andesite": {
+                "new_block": "minecraft:andesite",
+                "new_properties": {
+                    "polished": "false"
+                }
+            },
+            "polished_andesite": {
+                "new_block": "minecraft:andesite",
+                "new_properties": {
+                    "polished": "true"
+                }
+            }
+        }
+    }
+}
