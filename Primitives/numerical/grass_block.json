@@ -1,0 +1,19 @@
+{
+	"to_universal" :{
+		"map_properties": {
+			"block_data": {
+				"0": {
+					"new_block": "minecraft:grass_block"
+				}
+			}
+		}
+	},
+	"from_universal" :{
+		"minecraft:air": {
+			"new_block": "minecraft:grass_block",
+			"new_properties": {
+				"block_data": "0"
+			}
+		}
+	}
+}

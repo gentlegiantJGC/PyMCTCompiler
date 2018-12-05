@@ -1,0 +1,10 @@
+{
+	"to_universal" :{
+		"new_block": "minecraft:grass_block"
+	},
+	"from_universal" :{
+		"minecraft:grass_block": {
+			"new_block": "minecraft:grass_block"
+		}
+	}
+}
