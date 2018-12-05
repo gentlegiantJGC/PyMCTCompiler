@@ -4,6 +4,7 @@
 	"numerical/grass_block.json": "grass_block.json",
 	"numerical/dirt+coarse.json": "dirt.json",
 	"numerical/cobblestone.json": "cobblestone.json",
+	"numerical/planks.pyjson": "planks.json",
 	"numerical/sapling.pyjson": "sapling.json",
 
 	"numerical/leaves_bedrock.pyjson": "leaves.json",
