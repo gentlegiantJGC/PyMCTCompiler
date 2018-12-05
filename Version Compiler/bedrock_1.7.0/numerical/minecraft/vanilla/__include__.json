@@ -1,7 +1,11 @@
 {
 	"numerical/air.json": "air.json",
+	"numerical/stone+.json": "stone.json",
+	"numerical/grass_block.json": "grass_block.json",
+	"numerical/dirt_bedrock.json": "dirt.json",
 	"numerical/leaves_bedrock.pyjson": "leaves.json",
 	"numerical/leaves2_bedrock.pyjson": "leaves2.json",
 	"numerical/log.pyjson": "log.json",
-	"numerical/log2.pyjson": "log2.json"
+	"numerical/log2.pyjson": "log2.json",
+	"numerical/podzol.json": "podzol.json"
 }

@@ -1,7 +1,8 @@
 {
 	"numerical/air.json": "air.json",
 	"numerical/stone+.json": "stone.json",
-	"numerical_blockstate/grass_block.json": "grass_block.json",
+	"numerical/grass_block.json": "grass_block.json",
+	"numerical/dirt_java.json": "dirt.json",
 	"numerical/leaves_java.pyjson": "leaves.json",
 	"numerical/leaves2_java.pyjson": "leaves2.json",
 	"numerical/log.pyjson": "log.json",

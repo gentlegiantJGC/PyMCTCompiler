@@ -1,0 +1,39 @@
+{
+	"specification": {
+		"properties": {
+			"block": [
+				"dirt",
+				"coarse_dirt"
+			]
+		},
+		"defaults": {
+			"block": "dirt"
+		}
+	},
+	"to_universal" :{
+		"map_properties": {
+			"block": {
+				"dirt": {
+					"new_block": "minecraft:dirt"
+				},
+				"coarse_dirt": {
+					"new_block": "minecraft:coarse_dirt"
+				}
+			}
+		}
+	},
+	"from_universal" :{
+		"minecraft:dirt": {
+			"new_block": "minecraft:dirt",
+			"new_properties": {
+				"block": "dirt"
+			}
+		},
+		"minecraft:coarse_dirt": {
+			"new_block": "minecraft:dirt",
+			"new_properties": {
+				"block": "coarse_dirt"
+			}
+		}
+	}
+}

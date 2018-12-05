@@ -1,0 +1,28 @@
+{
+	"to_universal" :{
+		"map_properties": {
+			"block_data": {
+				"0": {
+					"new_block": "minecraft:dirt"
+				},
+				"1": {
+					"new_block": "minecraft:coarse_dirt"
+				}
+			}
+		}
+	},
+	"from_universal" :{
+		"minecraft:dirt": {
+			"new_block": "minecraft:dirt",
+			"new_properties": {
+				"block_data": "0"
+			}
+		},
+		"minecraft:coarse_dirt": {
+			"new_block": "minecraft:dirt",
+			"new_properties": {
+				"block_data": "1"
+			}
+		}
+	}
+}

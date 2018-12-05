@@ -1,0 +1,12 @@
+{
+    "properties": {
+        "block": [
+            "dirt",
+            "coarse_dirt",
+            "podzol"
+        ]
+    },
+    "defaults": {
+        "block": "dirt"
+    }
+}

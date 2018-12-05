@@ -1,0 +1,12 @@
+{
+    "map_properties": {
+        "block": {
+            "dirt": {
+                "new_block": "minecraft:dirt"
+            },
+            "coarse_dirt": {
+                "new_block": "minecraft:coarse_dirt"
+            }
+        }
+    }
+}

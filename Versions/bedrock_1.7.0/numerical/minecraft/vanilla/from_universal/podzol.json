@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:grass_block",
+    "new_block": "minecraft:podzol",
     "new_properties": {
         "block_data": "0"
     }
