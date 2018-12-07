@@ -1,0 +1,10 @@
+{
+	"to_universal" :{
+		"new_block": "minecraft:glass"
+	},
+	"from_universal" :{
+		"minecraft:glass": {
+			"new_block": "minecraft:glass"
+		}
+	}
+}

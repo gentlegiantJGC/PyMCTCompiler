@@ -19,6 +19,9 @@
 	"numerical/log.pyjson": "log.json",
 	"numerical/leaves/leaves_java.pyjson": "leaves.json",
 	"numerical/sponge/sponge+wet.json": "sponge.json",
+	"numerical/glass.json": "glass.json",
+	"numerical/lapis_ore.json": "lapis_ore.json",
+	"numerical/lapis_block.json": "lapis_block.json",
 
 	"numerical/log2.pyjson": "log2.json",
 	"numerical/leaves2/leaves2_java.pyjson": "leaves2.json"

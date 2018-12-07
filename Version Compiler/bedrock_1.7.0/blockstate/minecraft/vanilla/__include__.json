@@ -19,6 +19,10 @@
 	"numerical_blockstate/log.json": "log.json",
 	"numerical_blockstate/leaves.json": "leaves.json",
 	"numerical_blockstate/sponge/sponge+wet.json": "sponge.json",
+	"numerical_blockstate/glass.json": "glass.json",
+	"numerical_blockstate/lapis_ore.json": "lapis_ore.json",
+	"numerical_blockstate/lapis_block.json": "lapis_block.json",
+
 
 	"numerical_blockstate/log2.json": "log2.json",
 	"numerical_blockstate/leaves2.json": "leaves2.json",
