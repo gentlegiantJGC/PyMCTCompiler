@@ -18,6 +18,7 @@
 	"numerical/coal_ore.json": "coal_ore.json",
 	"numerical/log.pyjson": "log.json",
 	"numerical/leaves/leaves_bedrock.pyjson": "leaves.json",
+	"numerical/sponge/sponge+wet.json": "sponge.json",
 
 	"numerical/log2.pyjson": "log2.json",
 	"numerical/leaves2/leaves2_bedrock.pyjson": "leaves2.json",

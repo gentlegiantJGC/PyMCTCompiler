@@ -1,0 +1,10 @@
+{
+	"to_universal" :{
+		"new_block": "minecraft:sponge"
+	},
+	"from_universal" :{
+		"minecraft:sponge": {
+			"new_block": "minecraft:sponge"
+		}
+	}
+}
