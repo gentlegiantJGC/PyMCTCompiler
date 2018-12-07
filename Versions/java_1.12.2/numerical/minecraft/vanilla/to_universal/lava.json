@@ -1,0 +1,134 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "minecraft:lava",
+                "new_properties": {
+                    "level": "0",
+                    "falling": "false",
+                    "flowing": "false"
+                }
+            },
+            "1": {
+                "new_block": "minecraft:lava",
+                "new_properties": {
+                    "level": "1",
+                    "falling": "false",
+                    "flowing": "false"
+                }
+            },
+            "2": {
+                "new_block": "minecraft:lava",
+                "new_properties": {
+                    "level": "2",
+                    "falling": "false",
+                    "flowing": "false"
+                }
+            },
+            "3": {
+                "new_block": "minecraft:lava",
+                "new_properties": {
+                    "level": "3",
+                    "falling": "false",
+                    "flowing": "false"
+                }
+            },
+            "4": {
+                "new_block": "minecraft:lava",
+                "new_properties": {
+                    "level": "4",
+                    "falling": "false",
+                    "flowing": "false"
+                }
+            },
+            "5": {
+                "new_block": "minecraft:lava",
+                "new_properties": {
+                    "level": "5",
+                    "falling": "false",
+                    "flowing": "false"
+                }
+            },
+            "6": {
+                "new_block": "minecraft:lava",
+                "new_properties": {
+                    "level": "6",
+                    "falling": "false",
+                    "flowing": "false"
+                }
+            },
+            "7": {
+                "new_block": "minecraft:lava",
+                "new_properties": {
+                    "level": "7",
+                    "falling": "false",
+                    "flowing": "false"
+                }
+            },
+            "8": {
+                "new_block": "minecraft:lava",
+                "new_properties": {
+                    "level": "0",
+                    "falling": "true",
+                    "flowing": "false"
+                }
+            },
+            "9": {
+                "new_block": "minecraft:lava",
+                "new_properties": {
+                    "level": "1",
+                    "falling": "true",
+                    "flowing": "false"
+                }
+            },
+            "10": {
+                "new_block": "minecraft:lava",
+                "new_properties": {
+                    "level": "2",
+                    "falling": "true",
+                    "flowing": "false"
+                }
+            },
+            "11": {
+                "new_block": "minecraft:lava",
+                "new_properties": {
+                    "level": "3",
+                    "falling": "true",
+                    "flowing": "false"
+                }
+            },
+            "12": {
+                "new_block": "minecraft:lava",
+                "new_properties": {
+                    "level": "4",
+                    "falling": "true",
+                    "flowing": "false"
+                }
+            },
+            "13": {
+                "new_block": "minecraft:lava",
+                "new_properties": {
+                    "level": "5",
+                    "falling": "true",
+                    "flowing": "false"
+                }
+            },
+            "14": {
+                "new_block": "minecraft:lava",
+                "new_properties": {
+                    "level": "6",
+                    "falling": "true",
+                    "flowing": "false"
+                }
+            },
+            "15": {
+                "new_block": "minecraft:lava",
+                "new_properties": {
+                    "level": "7",
+                    "falling": "true",
+                    "flowing": "false"
+                }
+            }
+        }
+    }
+}

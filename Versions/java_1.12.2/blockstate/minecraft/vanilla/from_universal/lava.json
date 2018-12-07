@@ -1,0 +1,28 @@
+{
+    "carry_properties": {
+        "level": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+        ],
+        "falling": [
+            "false",
+            "true"
+        ]
+    },
+    "map_properties": {
+        "flowing": {
+            "false": {
+                "new_block": "minecraft:lava"
+            },
+            "true": {
+                "new_block": "minecraft:flowing_lava"
+            }
+        }
+    }
+}
