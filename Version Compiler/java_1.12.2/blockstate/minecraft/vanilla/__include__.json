@@ -12,6 +12,10 @@
 	"numerical_blockstate/lava.json": "lava.json",
 	"numerical_blockstate/flowing_lava.json": "flowing_lava.json",
 	"numerical_blockstate/sand/sand+red.json": "sand.json",
+	"numerical_blockstate/gravel.json": "gravel.json",
+	"numerical_blockstate/gold_ore.json": "gold_ore.json",
+	"numerical_blockstate/iron_ore.json": "iron_ore.json",
+	"numerical_blockstate/coal_ore.json": "coal_ore.json",
 
 	"numerical_blockstate/leaves.json": "leaves.json",
 	"numerical_blockstate/leaves2.json": "leaves2.json",

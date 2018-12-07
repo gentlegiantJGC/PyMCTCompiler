@@ -1,0 +1,10 @@
+{
+	"to_universal" :{
+		"new_block": "minecraft:gold_ore"
+	},
+	"from_universal" :{
+		"minecraft:gold_ore": {
+			"new_block": "minecraft:gold_ore"
+		}
+	}
+}

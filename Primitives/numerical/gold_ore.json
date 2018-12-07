@@ -1,0 +1,19 @@
+{
+	"to_universal" :{
+		"map_properties": {
+			"block_data": {
+				"0": {
+					"new_block": "minecraft:gold_ore"
+				}
+			}
+		}
+	},
+	"from_universal" :{
+		"minecraft:gold_ore": {
+			"new_block": "minecraft:gold_ore",
+			"new_properties": {
+				"block_data": "0"
+			}
+		}
+	}
+}

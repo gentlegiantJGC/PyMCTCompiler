@@ -1,0 +1,10 @@
+{
+	"to_universal" :{
+		"new_block": "minecraft:iron_ore"
+	},
+	"from_universal" :{
+		"minecraft:iron_ore": {
+			"new_block": "minecraft:iron_ore"
+		}
+	}
+}

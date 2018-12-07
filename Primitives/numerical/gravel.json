@@ -1,0 +1,19 @@
+{
+	"to_universal" :{
+		"map_properties": {
+			"block_data": {
+				"0": {
+					"new_block": "minecraft:gravel"
+				}
+			}
+		}
+	},
+	"from_universal" :{
+		"minecraft:gravel": {
+			"new_block": "minecraft:gravel",
+			"new_properties": {
+				"block_data": "0"
+			}
+		}
+	}
+}

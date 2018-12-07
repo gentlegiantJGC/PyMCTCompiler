@@ -12,6 +12,10 @@
 	"numerical/lava.pyjson": "lava.json",
 	"numerical/flowing_lava.pyjson": "flowing_lava.json",
 	"numerical/sand/sand+red.json": "sand.json",
+	"numerical/gravel.json": "gravel.json",
+	"numerical/gold_ore.json": "gold_ore.json",
+	"numerical/iron_ore.json": "iron_ore.json",
+	"numerical/coal_ore.json": "coal_ore.json",
 
 	"numerical/leaves/leaves_java.pyjson": "leaves.json",
 	"numerical/leaves2/leaves2_java.pyjson": "leaves2.json",
