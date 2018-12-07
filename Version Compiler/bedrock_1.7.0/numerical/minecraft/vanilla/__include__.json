@@ -1,8 +1,8 @@
 {
 	"numerical/air.json": "air.json",
-	"numerical/stone+.json": "stone.json",
+	"numerical/stone/stone+.json": "stone.json",
 	"numerical/grass_block.json": "grass_block.json",
-	"numerical/dirt+coarse.json": "dirt.json",
+	"numerical/dirt/dirt+coarse.json": "dirt.json",
 	"numerical/cobblestone.json": "cobblestone.json",
 	"numerical/planks.pyjson": "planks.json",
 	"numerical/sapling.pyjson": "sapling.json",
@@ -12,8 +12,8 @@
 	"numerical/lava.pyjson": "lava.json",
 	"numerical/flowing_lava.pyjson": "flowing_lava.json",
 
-	"numerical/leaves_bedrock.pyjson": "leaves.json",
-	"numerical/leaves2_bedrock.pyjson": "leaves2.json",
+	"numerical/leaves/leaves_bedrock.pyjson": "leaves.json",
+	"numerical/leaves2/leaves2_bedrock.pyjson": "leaves2.json",
 	"numerical/log.pyjson": "log.json",
 	"numerical/log2.pyjson": "log2.json",
 	"numerical/podzol.json": "podzol.json"

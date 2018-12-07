@@ -1,8 +1,8 @@
 {
 	"numerical_blockstate/air.json": "air.json",
-	"numerical_blockstate/stone+.json": "stone.json",
+	"numerical_blockstate/stone/stone+.json": "stone.json",
 	"numerical_blockstate/grass_block.json": "grass_block.json",
-	"numerical_blockstate/dirt+coarse+podzol.json": "dirt.json",
+	"numerical_blockstate/dirt/dirt+coarse+podzol.json": "dirt.json",
 	"numerical_blockstate/cobblestone.json": "cobblestone.json",
 	"numerical_blockstate/planks.json": "planks.json",
 	"numerical_blockstate/sapling.json": "sapling.json",
