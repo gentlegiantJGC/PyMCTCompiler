@@ -7,6 +7,8 @@
 	"numerical_blockstate/planks.json": "planks.json",
 	"numerical_blockstate/sapling.json": "sapling.json",
 	"numerical_blockstate/bedrock.json": "bedrock.json",
+	"numerical_blockstate/water.json": "water.json",
+	"numerical_blockstate/flowing_water.json": "flowing_water.json",
 
 	"numerical_blockstate/leaves.json": "leaves.json",
 	"numerical_blockstate/leaves2.json": "leaves2.json",
