@@ -1,0 +1,10 @@
+{
+	"to_universal" :{
+		"new_block": "minecraft:sand"
+	},
+	"from_universal" :{
+		"minecraft:sand": {
+			"new_block": "minecraft:sand"
+		}
+	}
+}

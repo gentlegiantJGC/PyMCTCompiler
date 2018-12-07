@@ -1,0 +1,11 @@
+{
+    "properties": {
+        "block": [
+            "sand",
+            "red_sand"
+        ]
+    },
+    "defaults": {
+        "block": "sand"
+    }
+}

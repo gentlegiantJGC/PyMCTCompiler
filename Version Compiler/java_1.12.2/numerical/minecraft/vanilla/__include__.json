@@ -11,6 +11,7 @@
 	"numerical/flowing_water.pyjson": "flowing_water.json",
 	"numerical/lava.pyjson": "lava.json",
 	"numerical/flowing_lava.pyjson": "flowing_lava.json",
+	"numerical/sand/sand+red.json": "sand.json",
 
 	"numerical/leaves/leaves_java.pyjson": "leaves.json",
 	"numerical/leaves2/leaves2_java.pyjson": "leaves2.json",

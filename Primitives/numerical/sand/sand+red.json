@@ -1,0 +1,28 @@
+{
+	"to_universal" :{
+		"map_properties": {
+			"block_data": {
+				"0": {
+					"new_block": "minecraft:sand"
+				},
+				"1": {
+					"new_block": "minecraft:red_sand"
+				}
+			}
+		}
+	},
+	"from_universal" :{
+		"minecraft:sand": {
+			"new_block": "minecraft:sand",
+			"new_properties": {
+				"block_data": "0"
+			}
+		},
+		"minecraft:red_sand": {
+			"new_block": "minecraft:sand",
+			"new_properties": {
+				"block_data": "1"
+			}
+		}
+	}
+}

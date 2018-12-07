@@ -1,0 +1,39 @@
+{
+	"specification": {
+		"properties": {
+	        "block": [
+	            "sand",
+	            "red_sand"
+	        ]
+	    },
+	    "defaults": {
+	        "block": "sand"
+	    }
+	},
+	"to_universal" :{
+		"map_properties": {
+			"block": {
+				"sand": {
+					"new_block": "minecraft:sand"
+				},
+				"red_sand": {
+					"new_block": "minecraft:red_sand"
+				}
+			}
+		}
+	},
+	"from_universal": {
+		"minecraft:sand": {
+			"new_block": "minecraft:sand",
+			"new_properties": {
+				"block": "sand"
+			}
+		},
+		"minecraft:red_sand": {
+			"new_block": "minecraft:sand",
+			"new_properties": {
+				"block": "red_sand"
+			}
+		}
+	}
+}

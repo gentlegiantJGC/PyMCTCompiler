@@ -1,0 +1,12 @@
+{
+    "map_properties": {
+        "block": {
+            "sand": {
+                "new_block": "minecraft:sand"
+            },
+            "red_sand": {
+                "new_block": "minecraft:red_sand"
+            }
+        }
+    }
+}
