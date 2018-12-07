@@ -16,9 +16,9 @@
 	"numerical/gold_ore.json": "gold_ore.json",
 	"numerical/iron_ore.json": "iron_ore.json",
 	"numerical/coal_ore.json": "coal_ore.json",
-
-	"numerical/leaves/leaves_java.pyjson": "leaves.json",
-	"numerical/leaves2/leaves2_java.pyjson": "leaves2.json",
 	"numerical/log.pyjson": "log.json",
-	"numerical/log2.pyjson": "log2.json"
+	"numerical/leaves/leaves_java.pyjson": "leaves.json",
+
+	"numerical/log2.pyjson": "log2.json",
+	"numerical/leaves2/leaves2_java.pyjson": "leaves2.json"
 }

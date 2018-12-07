@@ -16,10 +16,11 @@
 	"numerical_blockstate/gold_ore.json": "gold_ore.json",
 	"numerical_blockstate/iron_ore.json": "iron_ore.json",
 	"numerical_blockstate/coal_ore.json": "coal_ore.json",
-
-	"numerical_blockstate/leaves.json": "leaves.json",
-	"numerical_blockstate/leaves2.json": "leaves2.json",
 	"numerical_blockstate/log.json": "log.json",
+	"numerical_blockstate/leaves.json": "leaves.json",
+
 	"numerical_blockstate/log2.json": "log2.json",
+	"numerical_blockstate/leaves2.json": "leaves2.json",
+
 	"numerical_blockstate/podzol.json": "podzol.json"
 }
