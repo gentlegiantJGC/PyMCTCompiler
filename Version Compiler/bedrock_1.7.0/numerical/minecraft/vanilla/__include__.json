@@ -9,6 +9,8 @@
 	"numerical/bedrock.json": "bedrock.json",
 	"numerical/water.pyjson": "water.json",
 	"numerical/flowing_water.pyjson": "flowing_water.json",
+	"numerical/lava.pyjson": "lava.json",
+	"numerical/flowing_lava.pyjson": "flowing_lava.json",
 
 	"numerical/leaves_bedrock.pyjson": "leaves.json",
 	"numerical/leaves2_bedrock.pyjson": "leaves2.json",
