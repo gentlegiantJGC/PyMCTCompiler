@@ -22,6 +22,7 @@
 	"numerical/glass.json": "glass.json",
 	"numerical/lapis_ore.json": "lapis_ore.json",
 	"numerical/lapis_block.json": "lapis_block.json",
+	"numerical/dispenser.pyjson": "dispenser.json",
 
 	"numerical/log2.pyjson": "log2.json",
 	"numerical/leaves2/leaves2_java.pyjson": "leaves2.json"
