@@ -22,7 +22,7 @@
 							"falling": {
 								falling: {
 									"map_properties": {
-										"block": {
+										"level": {
 											level: {
 												"new_block": "minecraft:flowing_lava",
 												"new_properties": {
