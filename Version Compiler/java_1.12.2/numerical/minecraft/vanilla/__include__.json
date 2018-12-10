@@ -1,5 +1,5 @@
 {
-	"numerical/air.json": "air.json",
+	"numerical/air.pyjson": "air.json",
 	"numerical/stone/stone+.json": "stone.json",
 	"numerical/grass_block.json": "grass_block.json",
 	"numerical/dirt/dirt+coarse+podzol.json": "dirt.json",

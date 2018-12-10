@@ -1,6 +1,7 @@
 import json
 import os
 import shutil
+from Primitives.scripts import *
 
 compile_file_dir = './Version Compiler'
 compile_dir = './Versions'
