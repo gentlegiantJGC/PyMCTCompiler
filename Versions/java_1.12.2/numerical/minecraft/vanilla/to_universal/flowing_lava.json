@@ -6,7 +6,7 @@
                 "new_properties": {
                     "level": "0",
                     "falling": "false",
-                    "flowing": "flowing"
+                    "flowing": "true"
                 }
             },
             "1": {
@@ -14,7 +14,7 @@
                 "new_properties": {
                     "level": "1",
                     "falling": "false",
-                    "flowing": "flowing"
+                    "flowing": "true"
                 }
             },
             "2": {
@@ -22,7 +22,7 @@
                 "new_properties": {
                     "level": "2",
                     "falling": "false",
-                    "flowing": "flowing"
+                    "flowing": "true"
                 }
             },
             "3": {
@@ -30,7 +30,7 @@
                 "new_properties": {
                     "level": "3",
                     "falling": "false",
-                    "flowing": "flowing"
+                    "flowing": "true"
                 }
             },
             "4": {
@@ -38,7 +38,7 @@
                 "new_properties": {
                     "level": "4",
                     "falling": "false",
-                    "flowing": "flowing"
+                    "flowing": "true"
                 }
             },
             "5": {
@@ -46,7 +46,7 @@
                 "new_properties": {
                     "level": "5",
                     "falling": "false",
-                    "flowing": "flowing"
+                    "flowing": "true"
                 }
             },
             "6": {
@@ -54,7 +54,7 @@
                 "new_properties": {
                     "level": "6",
                     "falling": "false",
-                    "flowing": "flowing"
+                    "flowing": "true"
                 }
             },
             "7": {
@@ -62,7 +62,7 @@
                 "new_properties": {
                     "level": "7",
                     "falling": "false",
-                    "flowing": "flowing"
+                    "flowing": "true"
                 }
             },
             "8": {
@@ -70,7 +70,7 @@
                 "new_properties": {
                     "level": "0",
                     "falling": "true",
-                    "flowing": "flowing"
+                    "flowing": "true"
                 }
             },
             "9": {
@@ -78,7 +78,7 @@
                 "new_properties": {
                     "level": "1",
                     "falling": "true",
-                    "flowing": "flowing"
+                    "flowing": "true"
                 }
             },
             "10": {
@@ -86,7 +86,7 @@
                 "new_properties": {
                     "level": "2",
                     "falling": "true",
-                    "flowing": "flowing"
+                    "flowing": "true"
                 }
             },
             "11": {
@@ -94,7 +94,7 @@
                 "new_properties": {
                     "level": "3",
                     "falling": "true",
-                    "flowing": "flowing"
+                    "flowing": "true"
                 }
             },
             "12": {
@@ -102,7 +102,7 @@
                 "new_properties": {
                     "level": "4",
                     "falling": "true",
-                    "flowing": "flowing"
+                    "flowing": "true"
                 }
             },
             "13": {
@@ -110,7 +110,7 @@
                 "new_properties": {
                     "level": "5",
                     "falling": "true",
-                    "flowing": "flowing"
+                    "flowing": "true"
                 }
             },
             "14": {
@@ -118,7 +118,7 @@
                 "new_properties": {
                     "level": "6",
                     "falling": "true",
-                    "flowing": "flowing"
+                    "flowing": "true"
                 }
             },
             "15": {
@@ -126,7 +126,7 @@
                 "new_properties": {
                     "level": "7",
                     "falling": "true",
-                    "flowing": "flowing"
+                    "flowing": "true"
                 }
             }
         }

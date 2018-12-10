@@ -6,7 +6,7 @@
                     "falling": {
                         "false": {
                             "map_properties": {
-                                "water": {
+                                "level": {
                                     "0": {
                                         "new_block": "minecraft:lava",
                                         "new_properties": {
@@ -60,7 +60,7 @@
                         },
                         "true": {
                             "map_properties": {
-                                "water": {
+                                "level": {
                                     "0": {
                                         "new_block": "minecraft:lava",
                                         "new_properties": {
