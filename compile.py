@@ -10,7 +10,7 @@ primitive_dir = './Primitives'
 log_file = open('log.txt', 'w')
 
 
-def log(msg):
+def log_to_file(msg):
 	print(msg)
 	log_file.write(f'{msg}\n')
 
@@ -54,7 +54,7 @@ def copy_file(path: str):
 			os.makedirs(os.path.dirname(f'{compile_dir}/{path}'))
 		shutil.copy(f'{compile_file_dir}/{path}', f'{compile_dir}/{path}')
 	else:
-		log(f'Could not find file {compile_file_dir}/{path} to copy')
+		log_to_file(f'Could not find file {compile_file_dir}/{path} to copy')
 
 
 def process_version(path: str, file_format: str):
@@ -67,7 +67,7 @@ def process_version(path: str, file_format: str):
 							try:
 								process_file(path, namespace, sub_name, block_path, file_format, primitive_path)
 							except Exception as e:
-								log(f'Failed to process {path}/{namespace}/{sub_name}/{block_path}\n{e}')
+								log_to_file(f'Failed to process {path}/{namespace}/{sub_name}/{block_path}\n{e}')
 					for block_name in listdir(f'{path}/{namespace}/{sub_name}'):
 						if block_name == '__include__.json':
 							continue
@@ -75,7 +75,7 @@ def process_version(path: str, file_format: str):
 							try:
 								process_file(path, namespace, sub_name, block_name, file_format)
 							except Exception as e:
-								log(f'Failed to process {path}/{namespace}/{sub_name}/{block_name}\n{e}')
+								log_to_file(f'Failed to process {path}/{namespace}/{sub_name}/{block_name}\n{e}')
 
 
 def process_file(path_prefix: str, namespace: str, sub_name: str, block_name: str, file_format: str, primitive_path: str = ''):
@@ -85,7 +85,7 @@ def process_file(path_prefix: str, namespace: str, sub_name: str, block_name: st
 	elif isfile(primitive_path, primitive_dir):
 		block_json = load_file(primitive_path, primitive_dir)
 	else:
-		log(f'Could not find {compile_file_dir}/{path} or {primitive_dir}/{primitive_path}')
+		log_to_file(f'Could not find {compile_file_dir}/{path} or {primitive_dir}/{primitive_path}')
 		return
 
 	containing_dir = os.path.dirname(path)
@@ -189,7 +189,7 @@ def check_formatting(data):
 
 	for key in data.keys():
 		if key not in ['new_block', 'new_properties', 'map_properties', 'carry_properties']:
-			log(f'Extra key "{key}" found')
+			log_to_file(f'Extra key "{key}" found')
 
 
 def unique_merge_lists(list_a, list_b):
@@ -208,7 +208,7 @@ def main():
 			try:
 				shutil.rmtree(f'{compile_dir}/{version}')
 			except Exception as e:
-				log(e)
+				log_to_file(e)
 		if isdir(version, compile_dir):
 			raise Exception(f'Failed to delete "{compile_dir}/{version}" for some reason')
 		if isfile(f'{version}/__init__.json'):
@@ -227,9 +227,9 @@ def main():
 				elif init['format'] == 'blockstate':
 					process_version(version, 'blockstate')
 			else:
-				log(f'"format" in __init__.json for {version} is either not defined or not a valid value. This version has been skipped')
+				log_to_file(f'"format" in __init__.json for {version} is either not defined or not a valid value. This version has been skipped')
 		else:
-			log(f'Cound not find __init__.json file for {version}. This version has been skipped')
+			log_to_file(f'Cound not find __init__.json file for {version}. This version has been skipped')
 
 
 if __name__ == '__main__':
