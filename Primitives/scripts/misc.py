@@ -62,3 +62,64 @@ def liquid(namespace: str, block_name: str, flowing: bool) -> dict:
 			}
 		}
 	}
+
+def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "minecraft", to_block_name: str = "leaves"):
+	block_str = f"{namespace}:{block_name}"
+	if platform == 'bedrock':
+		property8 = "decayable"
+		property4 = "check_decay"
+	elif platform == 'java':
+		property8 = "check_decay"
+		property4 = "decayable"
+	else:
+		raise Exception(f'Platform "{platform}" is not known')
+
+	if block_name == "leaves":
+		block_pallet = {0: "oak", 1: "spruce", 2: "birch", 3: "jungle"}
+	elif block_name == "leaves2":
+		block_pallet = {0: "acacia", 1: "dark_oak"}
+	else:
+		raise Exception(f'Block name "{block_name}" is not known')
+
+	return {
+		"to_universal": {
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_block": f"{to_namespace}:{to_block_name}",
+						"new_properties": {
+							"block": block_pallet[data & 3],
+							property4: {0: "true", 4: "false"}[data & 4],
+							property8: {0: "false", 8: "true"}[data & 8]
+						}
+					} for data in range(16) if data & 3 in block_pallet
+				}
+			}
+		},
+		"from_universal": {
+			f"{to_namespace}:{to_block_name}": {
+				"map_properties": {
+					property8: {
+						val8: {
+							"map_properties": {
+								property4: {
+									val4: {
+										"map_properties": {
+											"block": {
+												block: {
+													"new_block": f"{namespace}:{block_name}",
+													"new_properties": {
+														"block_data": str(data3 + data4 + data8)
+													}
+												} for data3, block in block_pallet.items()
+											}
+										}
+									} for data4, val4 in {0: "true", 4: "false"}.items()
+								}
+							}
+						} for data8, val8 in {0: "false", 8: "true"}.items()
+					}
+				}
+			}
+		}
+	}
