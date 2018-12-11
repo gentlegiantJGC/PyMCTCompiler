@@ -1,4 +1,4 @@
-def standard(block_str: str) -> dict:
+def default(block_str: str) -> dict:
 	return {
 		"to_universal" :{
 			"map_properties": {
