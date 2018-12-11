@@ -63,7 +63,7 @@ def liquid(namespace: str, block_name: str, flowing: bool) -> dict:
 		}
 	}
 
-def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "minecraft", to_block_name: str = "leaves"):
+def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "minecraft", to_block_name: str = "leaves") -> dict:
 	block_str = f"{namespace}:{block_name}"
 	if platform == 'bedrock':
 		property8 = "decayable"
@@ -118,6 +118,67 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 								}
 							}
 						} for data8, val8 in {0: "false", 8: "true"}.items()
+					}
+				}
+			}
+		}
+	}
+
+def log(namespace: str, block_name: str, to_namespace: str = "minecraft", to_block_name: str = "log") -> dict:
+	if block_name == "log":
+		block_pallet = {0: "oak", 1: "spruce", 2: "birch", 3: "jungle"}
+	elif block_name == "log2":
+		block_pallet = {0: "acacia", 1: "dark_oak"}
+	else:
+		raise Exception(f'Block name "{block_name}" is not known')
+
+	return {
+		"to_universal" :{
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_block": f"{to_namespace}:{to_block_name}",
+						"new_properties": {
+							"block": block_pallet[data & 3],
+							"axis": {0: "y", 4: "x", 8: "z"}[data & 12],
+						}
+					} if data <= 11 else {
+						"new_block": "minecraft:wood",
+						"new_properties": {
+							"block": block_pallet[data & 3]
+						}
+					} for data in range(16) if data & 3 in block_pallet
+				}
+			}
+		},
+		"from_universal": {
+			f"{to_namespace}:{to_block_name}": {
+				"map_properties": {
+					"axis": {
+						axis: {
+							"map_properties": {
+								"block": {
+									block: {
+										"new_block": f"{namespace}:{block_name}",
+										"new_properties": {
+											"block_data": str(data12 + data3)
+										}
+									} for data3, block in block_pallet.items()
+								}
+							}
+						} for data12, axis in {0: "y", 4: "x", 8: "z"}.items()
+					}
+				}
+			},
+			"minecraft:wood": {
+				"map_properties": {
+					"block": {
+						block: {
+							"new_block": f"{namespace}:{block_name}",
+							"new_properties": {
+								"block_data": str(12 + data3)
+							}
+						} for data3, block in block_pallet.items()
 					}
 				}
 			}
