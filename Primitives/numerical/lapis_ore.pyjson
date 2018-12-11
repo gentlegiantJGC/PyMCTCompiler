@@ -1,1 +1,1 @@
-default("minecraft:lapis_ore")
+default("minecraft", "lapis_ore")

@@ -1,17 +1,17 @@
-def default(block_str: str) -> dict:
+def default(namespace: str, block_name: str) -> dict:
 	return {
 		"to_universal" :{
 			"map_properties": {
 				"block_data": {
 					"0": {
-						"new_block": block_str
+						"new_block": f"{namespace}:{block_name}"
 					}
 				}
 			}
 		},
 		"from_universal" :{
-			block_str: {
-				"new_block": block_str,
+			f"{namespace}:{block_name}": {
+				"new_block": f"{namespace}:{block_name}",
 				"new_properties": {
 					"block_data": "0"
 				}

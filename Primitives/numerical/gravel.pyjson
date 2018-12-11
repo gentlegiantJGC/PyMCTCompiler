@@ -1,1 +1,1 @@
-default("minecraft:gravel")
+default("minecraft", "gravel")

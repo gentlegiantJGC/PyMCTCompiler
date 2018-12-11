@@ -1,1 +1,1 @@
-default("minecraft:gold_ore")
+default("minecraft", "gold_ore")
