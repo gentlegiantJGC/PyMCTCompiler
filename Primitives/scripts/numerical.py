@@ -64,7 +64,6 @@ def liquid(namespace: str, block_name: str, flowing: bool) -> dict:
 	}
 
 def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "minecraft", to_block_name: str = "leaves") -> dict:
-	block_str = f"{namespace}:{block_name}"
 	if platform == 'bedrock':
 		property8 = "decayable"
 		property4 = "check_decay"
