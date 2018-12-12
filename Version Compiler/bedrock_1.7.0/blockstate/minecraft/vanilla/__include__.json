@@ -16,7 +16,7 @@
 	"numerical_blockstate/gold_ore.pyjson": "gold_ore.json",
 	"numerical_blockstate/iron_ore.pyjson": "iron_ore.json",
 	"numerical_blockstate/coal_ore.pyjson": "coal_ore.json",
-	"numerical_blockstate/log.json": "log.json",
+	"numerical_blockstate/log.pyjson": "log.json",
 	"numerical_blockstate/leaves.pyjson": "leaves.json",
 	"numerical_blockstate/sponge/sponge+wet.json": "sponge.json",
 	"numerical_blockstate/glass.pyjson": "glass.json",
@@ -25,7 +25,7 @@
 	"numerical_blockstate/dispenser.json": "dispenser.json",
 
 
-	"numerical_blockstate/log2.json": "log2.json",
+	"numerical_blockstate/log2.pyjson": "log2.json",
 	"numerical_blockstate/leaves2.pyjson": "leaves2.json",
 
 	"numerical_blockstate/podzol.pyjson": "podzol.json"

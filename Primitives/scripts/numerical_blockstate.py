@@ -151,15 +151,91 @@ def leaves(namespace: str, block_name: str, to_namespace: str = "minecraft", to_
 		}
 	}
 
-def log(namespace: str, block_name: str, to_namespace: str = "minecraft", to_block_name: str = "log") -> dict:
+def log(namespace: str, block_name: str) -> dict:
 	if block_name == "log":
-		block_pallet = {0: "oak", 1: "spruce", 2: "birch", 3: "jungle"}
+		block_pallet = ["oak", "spruce", "birch", "jungle"]
 	elif block_name == "log2":
-		block_pallet = {0: "acacia", 1: "dark_oak"}
+		block_pallet = ["acacia", "dark_oak"]
 	else:
 		raise Exception(f'Block name "{block_name}" is not known')
 
-	return
+	return {
+		"specification": {
+			"properties": {
+				"block": block_pallet,
+				"axis": [
+					"x",
+					"y",
+					"z",
+					"all"
+				]
+			},
+			"defaults": {
+				"block": block_pallet[0],
+				"axis": "y"
+			}
+		},
+		"to_universal": {
+			"carry_properties": {
+				"block": block_pallet,
+				"axis": [
+					"x",
+					"y",
+					"z"
+				]
+			},
+			"map_properties": {
+				"axis": {
+					"x": {
+						"new_block": "minecraft:log"
+					},
+					"y": {
+						"new_block": "minecraft:log"
+					},
+					"z": {
+						"new_block": "minecraft:log"
+					},
+					"all": {
+						"new_block": "minecraft:wood",
+						"new_properties": {
+							"axis": "y"
+						}
+					}
+				}
+			}
+		},
+		"from_universal": {
+			"minecraft:log": {
+				"carry_properties": {
+					"block": block_pallet,
+					"axis": [
+						"x",
+						"y",
+						"z"
+					]
+				},
+				"map_properties": {
+					"block": {
+						block: {
+							"new_block": f"{namespace}:{block_name}"
+						} for block in block_pallet
+					}
+				}
+			},
+			"minecraft:wood": {
+				"carry_properties": {
+					"block": block_pallet
+				},
+				"map_properties": {
+					"block": {
+						block: {
+							"new_block": f"{namespace}:{block_name}"
+						} for block in block_pallet
+					}
+				}
+			}
+		}
+	}
 
 def dispenser(namespace: str, block_name: str, to_namespace: str, to_block_name: str) -> dict:
 	return
