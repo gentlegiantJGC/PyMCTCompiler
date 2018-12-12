@@ -1,1 +1,1 @@
-default("minecraft", "lapis_ore")
+numerical.default("minecraft", "lapis_ore")

@@ -1,1 +1,1 @@
-log("minecraft", "log")
+numerical.log("minecraft", "log")

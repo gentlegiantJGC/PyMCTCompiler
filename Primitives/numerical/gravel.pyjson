@@ -1,1 +1,1 @@
-default("minecraft", "gravel")
+numerical.default("minecraft", "gravel")

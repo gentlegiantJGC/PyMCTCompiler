@@ -1,1 +1,1 @@
-liquid('minecraft', 'lava', False)
+numerical.liquid('minecraft', 'lava', False)
