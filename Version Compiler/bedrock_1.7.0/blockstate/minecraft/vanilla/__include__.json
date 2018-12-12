@@ -22,7 +22,7 @@
 	"numerical_blockstate/glass.pyjson": "glass.json",
 	"numerical_blockstate/lapis_ore.pyjson": "lapis_ore.json",
 	"numerical_blockstate/lapis_block.pyjson": "lapis_block.json",
-	"numerical_blockstate/dispenser.json": "dispenser.json",
+	"numerical_blockstate/dispenser.pyjson": "dispenser.json",
 
 
 	"numerical_blockstate/log2.pyjson": "log2.json",

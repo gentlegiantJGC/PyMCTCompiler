@@ -184,13 +184,13 @@ def log(namespace: str, block_name: str, to_namespace: str = "minecraft", to_blo
 		}
 	}
 
-def dispenser(namespace: str, block_name: str, to_namespace: str, to_block_name: str) -> dict:
+def dispenser(namespace: str, block_name: str) -> dict:
 	return {
 		"to_universal": {
 			"map_properties": {
 				"block_data": {
 					str(data): {
-						"new_block": f"{to_namespace}:{to_block_name}",
+						"new_block": f"{namespace}:{block_name}",
 						"new_properties": {
 							"facing": {0: "down", 1: "up", 2: "north", 3: "south", 4: "west", 5: "east"}[data & 7],
 							"triggered": {0: "false", 8: "true"}[data & 8]
@@ -200,7 +200,7 @@ def dispenser(namespace: str, block_name: str, to_namespace: str, to_block_name:
 			}
 		},
 		"from_universal": {
-			f"{to_namespace}:{to_block_name}": {
+			f"{namespace}:{block_name}": {
 				"map_properties": {
 					"triggered": {
 						triggered: {

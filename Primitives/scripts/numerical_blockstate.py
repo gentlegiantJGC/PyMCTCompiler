@@ -237,5 +237,62 @@ def log(namespace: str, block_name: str) -> dict:
 		}
 	}
 
-def dispenser(namespace: str, block_name: str, to_namespace: str, to_block_name: str) -> dict:
-	return
+def dispenser(namespace: str, block_name: str) -> dict:
+	return {
+		"specification": {
+			"properties": {
+				"facing": [
+					"north",
+					"east",
+					"south",
+					"west",
+					"up",
+					"down"
+				],
+				"triggered": [
+					"true",
+					"false"
+				]
+			},
+			"defaults": {
+				"facing": "north",
+				"triggered": "false"
+			}
+		},
+		"to_universal": {
+			"new_block": f"{namespace}:{block_name}",
+			"carry_properties": {
+				"facing": [
+					"north",
+					"east",
+					"south",
+					"west",
+					"up",
+					"down"
+				],
+				"triggered": [
+					"true",
+					"false"
+				]
+			}
+		},
+		"from_universal": {
+			f"{namespace}:{block_name}": {
+				"new_block": f"{namespace}:{block_name}",
+				"carry_properties": {
+					"facing": [
+						"north",
+						"east",
+						"south",
+						"west",
+						"up",
+						"down"
+					],
+					"triggered": [
+						"true",
+						"false"
+					]
+				}
+			}
+		}
+	}
