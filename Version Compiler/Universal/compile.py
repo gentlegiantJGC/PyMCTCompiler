@@ -1,7 +1,10 @@
 import os
 import sys
 import json
+import shutil
 from collections import OrderedDict
+
+universal_spec_dir = '../../Versions/Universal'
 
 def debug(block_data):
 	if "properties" in block_data and "defaults" in block_data:
@@ -34,56 +37,66 @@ def main():
 				except:
 					raise Exception('This failed for some reason')
 
+	if os.path.isdir(universal_spec_dir):
+		shutil.rmtree(universal_spec_dir)
 	if os.path.isfile('./generated/reports/blocks.json'):
-		for namespace in os.listdir('./modifications'):
-			if os.path.isdir(f'./modifications/{namespace}'):
-				modifications = {"remove": [], "add": {}}
-				if namespace == 'minecraft':
-					blocks = json.load(open('./generated/reports/blocks.json'), object_pairs_hook=OrderedDict)
-				else:
-					blocks = {}
-				for group_name in os.listdir(f'./modifications/{namespace}'):
-					if os.path.isdir(f'./modifications/{namespace}/{group_name}'):
-						for file_name in os.listdir(f'./modifications/{namespace}/{group_name}'):
-							if file_name.endswith('.json'):
-								with open(f'./modifications/{namespace}/{group_name}/{file_name}') as file_object:
-									json_object = json.load(file_object)
-								if "remove" in json_object:
-									modifications["remove"] += json_object["remove"]
-								if "add" in json_object:
-									for key, val in json_object["add"].items():
-										if key in modifications["add"]:
-											print(f'Key "{key}" specified for addition more than once')
-										modifications["add"][key] = val
+		# Iterate through all namespaces
+		for namespace in (namespace for namespace in os.listdir('./modifications') if os.path.isdir(f'./modifications/{namespace}')):
+			if not os.path.isdir(f'{universal_spec_dir}/{namespace}'):
+				os.makedirs(f'{universal_spec_dir}/{namespace}')
+			modifications = {"remove": [], "add": {}}
+			if namespace == 'minecraft':
+				blocks = json.load(open('./generated/reports/blocks.json'), object_pairs_hook=OrderedDict)
+			else:
+				blocks = {}
+			# Iterate through each group name (these are arbitrary names that are just used to format the data better)
+			# EG 'chemistry' will be a separate group name from 'vanilla' but is just a visual split
+			for group_name in (group_name for group_name in os.listdir(f'./modifications/{namespace}') if os.path.isdir(f'./modifications/{namespace}/{group_name}')):
+				if not os.path.isdir(f'{universal_spec_dir}/{namespace}/{group_name}'):
+					os.makedirs(f'{universal_spec_dir}/{namespace}/{group_name}')
 
-						for file_name in os.listdir(f'../Universal Specification/{namespace}/{group_name}'):
-							os.remove(f'../Universal Specification/{namespace}/{group_name}/{file_name}')
+				# load the modifications for that namespace and group name
+				for file_name in os.listdir(f'./modifications/{namespace}/{group_name}'):
+					if file_name.endswith('.json'):
+						with open(f'./modifications/{namespace}/{group_name}/{file_name}') as file_object:
+							json_object = json.load(file_object)
+						if "remove" in json_object:
+							modifications["remove"] += json_object["remove"]
+						if "add" in json_object:
+							for key, val in json_object["add"].items():
+								if key in modifications["add"]:
+									print(f'Key "{key}" specified for addition more than once')
+								modifications["add"][key] = val
 
-						for block_name in modifications["remove"]:
-							if f'{namespace}:{block_name}' in blocks:
-								del blocks[f'{namespace}:{block_name}']
-							else:
-								print(f'"{namespace}:{block_name}" either does not exist or was deleted more than once')
-		
-						for block_string, block_data in blocks.items():
-							namespace_, block_name = block_string.split(':')
-							default_state = next(s for s in block_data['states'] if s.get('default', False))
-							if 'properties' in default_state:
-								block_data['defaults'] = default_state['properties']
-							del block_data['states']
-							if not debug(block_data):
-								print(f'Error in "{block_string}"')
-							with open(f'../Universal Specification/{namespace_}/{group_name}/{block_name}.json', 'w') as block_out:
-								json.dump(block_data, block_out, indent=4)
+				# remove all the blocks marked for removal from the vanilla java files
+				for block_name in modifications["remove"]:
+					if f'{namespace}:{block_name}' in blocks:
+						del blocks[f'{namespace}:{block_name}']
+					else:
+						print(f'"{namespace}:{block_name}" either does not exist or was deleted more than once')
 
-						for block_name, block_data in modifications["add"].items():
-							if os.path.isfile(f'../Universal Specification/{namespace}/{group_name}/{block_name}.json'):
-								print(f'"{block_string}" is already present.')
-							else:
-								if not debug(block_data):
-									print(f'Error in "{block_string}"')
-								with open(f'../Universal Specification/{namespace}/{group_name}/{block_name}.json', 'w') as block_out:
-									json.dump(block_data, block_out, indent=4)
+				# if the group name is vanilla go through all the vanilla java blocks remaining and add them
+				if group_name == 'vanilla':
+					for block_string, block_data in blocks.items():
+						namespace_, block_name = block_string.split(':')
+						default_state = next(s for s in block_data['states'] if s.get('default', False))
+						if 'properties' in default_state:
+							block_data['defaults'] = default_state['properties']
+						del block_data['states']
+						if not debug(block_data):
+							print(f'Error in "{block_string}"')
+						with open(f'{universal_spec_dir}/{namespace_}/{group_name}/{block_name}.json', 'w') as block_out:
+							json.dump(block_data, block_out, indent=4)
+
+				# add the new files
+				for block_name, block_data in modifications["add"].items():
+					if os.path.isfile(f'{universal_spec_dir}/{namespace}/{group_name}/{block_name}.json'):
+						print(f'"{block_string}" is already present.')
+					else:
+						if not debug(block_data):
+							print(f'Error in "{block_string}"')
+						with open(f'{universal_spec_dir}/{namespace}/{group_name}/{block_name}.json', 'w') as block_out:
+							json.dump(block_data, block_out, indent=4)
 	else:
 		raise Exception('Cound not find ./generated/reports/blocks.json')
 

@@ -27,7 +27,11 @@
 					"6",
 					"7"
 				],
-				"persistent": [
+				"decayable": [
+					"true",
+					"false"
+				],
+				"check_decay": [
 					"true",
 					"false"
 				]
@@ -35,7 +39,8 @@
 			"defaults": {
 				"block": "oak",
 				"distance": "7",
-				"persistent": "false"
+				"decayable": "true",
+				"check_decay": "true"
 			}
 		}
 	}
