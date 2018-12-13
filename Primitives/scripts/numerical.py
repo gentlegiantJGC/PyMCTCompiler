@@ -221,3 +221,34 @@ def dispenser(namespace: str, block_name: str) -> dict:
 			}
 		}
 	}
+
+def sandstone(namespace: str, block_name: str, level=1) -> dict:
+	variants = {var:{0: "normal", 1: "chiseled", 2: "cut", 3: "smooth"}[var] for var in range(level)}
+	return {
+		"to_universal": {
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_block": f"{namespace}:{block_name}",
+						"new_properties": {
+							"variant": var
+						}
+					} for data, var in variants.items()
+				}
+			}
+		},
+		"from_universal": {
+			f"{namespace}:{block_name}": {
+				"map_properties": {
+					"variant": {
+						variant: {
+							"new_block": f"{namespace}:{block_name}",
+							"new_properties": {
+								"block_data": str(data)
+							}
+						} for data, variant in variants.items()
+					}
+				}
+			}
+		}
+	}

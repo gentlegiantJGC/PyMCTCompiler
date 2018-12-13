@@ -296,3 +296,30 @@ def dispenser(namespace: str, block_name: str) -> dict:
 			}
 		}
 	}
+
+def sandstone(namespace: str, block_name: str, level=1) -> dict:
+	variants = ["normal", "chiseled", "cut", "smooth"][:level]
+	return {
+		"specification": {
+			"properties": {
+				"variant": variants
+			},
+			"defaults": {
+				"variant": variants[0]
+			}
+		},
+		"to_universal": {
+			"new_block": f"{namespace}:{block_name}",
+			"carry_properties": {
+				"variant": variants
+			}
+		},
+		"from_universal": {
+			f"{namespace}:{block_name}": {
+				"new_block": f"{namespace}:{block_name}",
+				"carry_properties": {
+					"variant": variants
+				}
+			}
+		}
+	}

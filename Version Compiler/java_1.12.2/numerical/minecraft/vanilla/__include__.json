@@ -23,6 +23,7 @@
 	"numerical/lapis_ore.pyjson": "lapis_ore.json",
 	"numerical/lapis_block.pyjson": "lapis_block.json",
 	"numerical/dispenser.pyjson": "dispenser.json",
+	"numerical/sandstone/sandstone+chiseled+cut.pyjson": "sandstone.json",
 
 	"numerical/log2.pyjson": "log2.json",
 	"numerical/leaves2/leaves2_java.pyjson": "leaves2.json"
