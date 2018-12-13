@@ -1,0 +1,22 @@
+{
+    "properties": {
+        "mob": [
+            "skeleton",
+            "wither",
+            "zombie",
+            "player",
+            "creeper",
+            "dragon"
+        ],
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ]
+    },
+    "defaults": {
+        "mob": "skeleton",
+        "facing": "north"
+    }
+}
