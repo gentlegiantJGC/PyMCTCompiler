@@ -109,5 +109,5 @@ venv.bak/
 # Temporary file locations
 *.jar
 log.txt
-Version Compiler/Universal/logs/
-Version Compiler/Universal/generated/
+*.log.gz
+**/generated/reports/
