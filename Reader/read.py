@@ -1,7 +1,17 @@
 import json
 
 
-def read(input_blockstate, mappings, output_dir):
+def read(input_blockstate: dict, mappings: dict, output_dir):
+	"""
+	A demonstration function on how to read the json files to convert into or out of the numerical format
+	You should implement something along these lines into you own code if you want to read them.
+
+	:param input_blockstate: the blockstate put into the converter eg {"block_name": "minecraft:log", "properties": {"block_data": "0"}}
+	:param mappings: the mapping file for that block
+	:param output_dir: The directory where the specification files are found for the format being converted to (used to load default properties)
+	:return: The conerterd blockstate
+	"""
+	
 	output_blockstate = {"block_name": None, "properties": {}}
 	if "new_block" in mappings:
 		if isinstance(mappings["new_block"], str):
@@ -47,16 +57,6 @@ if __name__ == "__main__":
 	for data in range(16):
 		print(data, read(
 			{"block_name": "minecraft:log", "properties": {"block_data": str(data)}},
-			json.load(open('../Version Compiler/java_1.12.2_numerical/minecraft/specification/log.json'))["to_universal"],
-			'../Universal Specification'
+			json.load(open('../Versions/java_1.12.2/numerical/minecraft/vanilla/to_universal/log.json')),
+			'../Versions/Universal'
 		))
-
-	for data in range(16):
-		try:
-			print(data, read(
-				{"block_name": "minecraft:log2", "properties": {"block_data": str(data)}},
-				json.load(open('../Version Compiler/java_1.12.2_numerical/minecraft/specification/log2.json'))["to_universal"],
-				'../Universal Specification'
-			))
-		except:
-			continue
