@@ -1,0 +1,23 @@
+{
+	"remove": [
+		"red_sandstone",
+		"chiseled_red_sandstone",
+		"cut_red_sandstone",
+		"smooth_red_sandstone"
+	],
+	"add": {
+		"red_sandstone": {
+			"properties": {
+				"variant": [
+					"normal",
+					"chiseled",
+					"cut",
+					"smooth"
+				]
+			},
+			"defaults": {
+				"variant": "normal"
+			}
+		}
+	}
+}
