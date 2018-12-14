@@ -222,7 +222,7 @@ def dispenser(namespace: str, block_name: str) -> dict:
 		}
 	}
 
-def sandstone(namespace: str, block_name: str, level=1) -> dict:
+def sandstone(namespace: str, block_name: str, level: int = 1) -> dict:
 	variants = {var:{0: "normal", 1: "chiseled", 2: "cut", 3: "smooth"}[var] for var in range(level)}
 	return {
 		"to_universal": {
@@ -247,6 +247,77 @@ def sandstone(namespace: str, block_name: str, level=1) -> dict:
 								"block_data": str(data)
 							}
 						} for data, variant in variants.items()
+					}
+				}
+			}
+		}
+	}
+
+def rail(namespace: str, block_name: str) -> dict:
+	return {
+		"to_universal": {
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_block": f"{namespace}:{block_name}",
+						"new_properties": {
+							"shape": {
+								0: "north_south", 1: "east_west", 2: "ascending_east", 3: "ascending_west", 4: "ascending_north", 5: "ascending_south", 6: "south_east", 7: "south_west", 8: "north_west", 9: "north_east"
+							}[data]
+						}
+					} for data in range(10)
+				}
+			}
+		},
+		"from_universal": {
+			f"{namespace}:{block_name}": {
+				"map_properties": {
+					"shape": {
+						shape: {
+							"new_block": f"{namespace}:{block_name}",
+							"new_properties": {
+								"block_data": str(data)
+							}
+						} for data, shape in {0: "north_south", 1: "east_west", 2: "ascending_east", 3: "ascending_west", 4: "ascending_north", 5: "ascending_south", 6: "south_east", 7: "south_west", 8: "north_west", 9: "north_east"}.items()
+					}
+				}
+			}
+		}
+	}
+
+def rail2(namespace: str, block_name: str) -> dict:
+	return {
+		"to_universal": {
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_block": f"{namespace}:{block_name}",
+						"new_properties": {
+							"shape": {
+								0: "north_south", 1: "east_west", 2: "ascending_east", 3: "ascending_west", 4: "ascending_north", 5: "ascending_south"
+							}[data & 5],
+							"powered": {0: "false", 8: "true"}[data & 8]
+						}
+					} for data in range(16) if data & 7 <= 5
+				}
+			}
+		},
+		"from_universal": {
+			f"{namespace}:{block_name}": {
+				"map_properties": {
+					"powered": {
+						powered: {
+							"map_properties": {
+								"shape": {
+									shape: {
+										"new_block": f"{namespace}:{block_name}",
+										"new_properties": {
+											"block_data": str(data8 + data7)
+										}
+									} for data7, shape in {0: "north_south", 1: "east_west", 2: "ascending_east", 3: "ascending_west", 4: "ascending_north", 5: "ascending_south"}.items()
+								}
+							}
+						} for data8, powered in {0: "false", 8: "true"}.items()
 					}
 				}
 			}

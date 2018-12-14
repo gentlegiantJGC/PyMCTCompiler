@@ -25,6 +25,18 @@
 	"numerical/dispenser.pyjson": "dispenser.json",
 	"numerical/sandstone/sandstone+chiseled+cut.pyjson": "sandstone.json",
 
+
+	"numerical/golden_rail.pyjson": "golden_rail.json",
+	"numerical/detector_rail.pyjson": "detector_rail.json",
+
+
+
+	"numerical/rail.pyjson": "rail.json",
+
+
+
+	"numerical/activator_rail.pyjson": "activator_rail.json",
+
 	"numerical/log2.pyjson": "log2.json",
 	"numerical/leaves2/leaves2_bedrock.pyjson": "leaves2.json",
 

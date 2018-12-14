@@ -323,3 +323,122 @@ def sandstone(namespace: str, block_name: str, level=1) -> dict:
 			}
 		}
 	}
+
+def rail(namespace: str, block_name: str) -> dict:
+	return {
+		"specification": {
+			"properties": {
+				"shape": [
+					"north_south",
+					"east_west",
+					"ascending_east",
+					"ascending_west",
+					"ascending_north",
+					"ascending_south",
+					"south_east",
+					"south_west",
+					"north_west",
+					"north_east"
+				]
+			},
+			"defaults": {
+				"shape": "north_south"
+			}
+		},
+		"to_universal": {
+			"new_block": f"{namespace}:{block_name}",
+			"carry_properties": {
+				"shape": [
+					"north_south",
+					"east_west",
+					"ascending_east",
+					"ascending_west",
+					"ascending_north",
+					"ascending_south",
+					"south_east",
+					"south_west",
+					"north_west",
+					"north_east"
+				]
+			}
+		},
+		"from_universal": {
+			f"{namespace}:{block_name}": {
+				"new_block": f"{namespace}:{block_name}",
+				"carry_properties": {
+					"shape": [
+						"north_south",
+						"east_west",
+						"ascending_east",
+						"ascending_west",
+						"ascending_north",
+						"ascending_south",
+						"south_east",
+						"south_west",
+						"north_west",
+						"north_east"
+					]
+				}
+			}
+		}
+	}
+
+def rail2(namespace: str, block_name: str) -> dict:
+	return {
+		"specification": {
+			"properties": {
+				"powered": [
+					"true",
+					"false"
+				],
+				"shape": [
+					"north_south",
+					"east_west",
+					"ascending_east",
+					"ascending_west",
+					"ascending_north",
+					"ascending_south"
+				]
+			},
+			"defaults": {
+				"powered": "false",
+				"shape": "north_south"
+			}
+		},
+		"to_universal": {
+			"new_block": f"{namespace}:{block_name}",
+			"carry_properties": {
+				"powered": [
+					"true",
+					"false"
+				],
+				"shape": [
+					"north_south",
+					"east_west",
+					"ascending_east",
+					"ascending_west",
+					"ascending_north",
+					"ascending_south"
+				]
+			}
+		},
+		"from_universal": {
+			f"{namespace}:{block_name}": {
+				"new_block": f"{namespace}:{block_name}",
+				"carry_properties": {
+					"powered": [
+						"true",
+						"false"
+					],
+					"shape": [
+						"north_south",
+						"east_west",
+						"ascending_east",
+						"ascending_west",
+						"ascending_north",
+						"ascending_south"
+					]
+				}
+			}
+		}
+	}

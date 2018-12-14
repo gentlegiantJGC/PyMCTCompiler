@@ -26,6 +26,17 @@
 	"numerical_blockstate/sandstone/sandstone+chiseled+cut.pyjson": "sandstone.json",
 
 
+	"numerical_blockstate/golden_rail.pyjson": "golden_rail.json",
+	"numerical_blockstate/detector_rail.pyjson": "detector_rail.json",
+
+
+
+	"numerical_blockstate/rail.pyjson": "rail.json",
+
+
+
+	"numerical_blockstate/activator_rail.pyjson": "activator_rail.json",
+
 	"numerical_blockstate/log2.pyjson": "log2.json",
 	"numerical_blockstate/leaves2.pyjson": "leaves2.json",
 
