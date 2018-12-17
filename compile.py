@@ -69,16 +69,16 @@ def process_version(version_name: str, file_format: str):
 
 def process_file(file_format: str, block_json: dict, version_name: str, namespace: str, sub_name: str, block_file_name: str):
 	if file_format == 'numerical':
-		save_json(f'{version_name}/numerical/{namespace}/{sub_name}/specification/{block_file_name}', {"properties": {"block_data": [str(data) for data in range(16)]}, "defaults": {"block_data": "0"}})
+		save_json(f'{version_name}/numerical/{namespace}/{sub_name}/specification/{block_file_name}.json', {"properties": {"block_data": [str(data) for data in range(16)]}, "defaults": {"block_data": "0"}})
 
 		if 'blockstate_specification' in block_json:
-			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/specification/{block_file_name}', block_json['blockstate_specification'])
+			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/specification/{block_file_name}.json', block_json['blockstate_specification'])
 		else:
-			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/specification/{block_file_name}', {})
+			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/specification/{block_file_name}.json', {})
 
 		for prefix, file_format_2 in [['', 'numerical'], ['blockstate_', 'blockstate']]:
 			if f'{prefix}to_universal' in block_json:
-				save_json(f'{version_name}/{file_format_2}/{namespace}/{sub_name}/to_universal/{block_file_name}', block_json[f'{prefix}to_universal'])
+				save_json(f'{version_name}/{file_format_2}/{namespace}/{sub_name}/to_universal/{block_file_name}.json', block_json[f'{prefix}to_universal'])
 			else:
 				raise Exception(f'"{prefix}to_universal" must be defined')
 
@@ -91,12 +91,12 @@ def process_file(file_format: str, block_json: dict, version_name: str, namespac
 
 	elif file_format == 'blockstate':
 		if 'specification' in block_json:
-			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/specification/{block_file_name}', block_json['specification'])
+			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/specification/{block_file_name}.json', block_json['specification'])
 		else:
-			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/specification/{block_file_name}', {})
+			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/specification/{block_file_name}.json', {})
 
 		if 'to_universal' in block_json:
-			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/to_universal/{block_file_name}', block_json['to_universal'])
+			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/to_universal/{block_file_name}.json', block_json['to_universal'])
 		else:
 			raise Exception('"to_universal" must be defined')
 
