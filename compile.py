@@ -202,18 +202,18 @@ def unique_merge_lists(list_a, list_b):
 
 
 def main():
+	counter = 0
+	while isdir('', compile_dir) and counter < 10:
+		counter += 1
+		try:
+			shutil.rmtree(f'{compile_dir}')
+		except Exception as e:
+			log_to_file(e)
+	if isdir('', compile_dir):
+		raise Exception(f'Failed to delete "{compile_dir}" for some reason')
 	for version in listdir(''):
 		if not isdir(f'./{version}'):
 			continue
-		counter = 0
-		while isdir(version, compile_dir) and counter < 10:
-			counter += 1
-			try:
-				shutil.rmtree(f'{compile_dir}/{version}')
-			except Exception as e:
-				log_to_file(e)
-		if isdir(version, compile_dir):
-			raise Exception(f'Failed to delete "{compile_dir}/{version}" for some reason')
 		if hasattr(version_compiler, version) and hasattr(getattr(version_compiler, version), 'init'):
 			init = getattr(version_compiler, version).init
 			assert isinstance(init, dict)
