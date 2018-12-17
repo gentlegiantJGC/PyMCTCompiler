@@ -12,12 +12,10 @@ def debug(block_data):
 		return True
 
 
-def main(uncompiled_path: str, compiled_path: str, from_jar: bool = False):
-	if from_jar:
-		if not os.path.isfile(f'{uncompiled_path}/server.jar'):
-			raise Exception('There should be a server.jar file next to this compiler')
+def main(uncompiled_path: str, compiled_path: str):
+	if not os.path.isfile(f'{uncompiled_path}/generated/reports/blocks.json') and os.path.isfile(f'{uncompiled_path}/server.jar'):
 		try:
-			os.system('java -cp server.jar net.minecraft.data.Main --reports')
+			os.system(f'java -cp {uncompiled_path}/server.jar net.minecraft.data.Main --reports --output {uncompiled_path}/generated')
 		except:
 			print('Cound not find global Java. Trying to find the one packaged with Minecraft')
 			if os.path.isdir(r'C:\Program Files (x86)\Minecraft\runtime'):
@@ -33,7 +31,7 @@ def main(uncompiled_path: str, compiled_path: str, from_jar: bool = False):
 					break
 			if java_path is not None:
 				try:
-					os.system('{java_path} -cp server.jar net.minecraft.data.Main --reports')
+					os.system(f'{java_path} -cp {uncompiled_path}/server.jar net.minecraft.data.Main --reports --output {uncompiled_path}/generated')
 				except:
 					raise Exception('This failed for some reason')
 
@@ -102,4 +100,4 @@ def main(uncompiled_path: str, compiled_path: str, from_jar: bool = False):
 
 
 if __name__ == "__main__":
-	main('../../versions/universal', '.', 'from_jar' in sys.argv)
+	main('../../versions/universal', '.')
