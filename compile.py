@@ -1,7 +1,7 @@
 import json
 import os
 import shutil
-from Primitives.scripts import *
+import Primitives
 import version_compiler
 
 compile_file_dir = './version_compiler'
@@ -28,16 +28,12 @@ def listdir(path: str, prefix: str = compile_file_dir):
 	return os.listdir(f'{prefix}/{path}')
 
 
-def _load_file(path: str):
-	with open(path) as f:
-		if path.endswith('.json'):
-			return json.load(f)
-		elif path.endswith('.pyjson'):
-			return eval(f.read())
-
-
 def load_file(path: str, prefix: str = compile_file_dir):
-	return _load_file(f'{prefix}/{path}')
+	if path.endswith('.json'):
+		with open(f'{prefix}/{path}') as f:
+			return json.load(f)
+	else:
+		raise Exception('Could not load "{prefix}/{path}"')
 
 
 def save_json(path: str, data: dict, overwrite: bool = False):
@@ -58,60 +54,61 @@ def copy_file(path: str):
 		log_to_file(f'Could not find file {compile_file_dir}/{path} to copy')
 
 
-def process_version(path: str, file_format: str):
-	for namespace in listdir(path):
-		if isdir(f'{path}/{namespace}'):
-			for sub_name in listdir(f'{path}/{namespace}'):
-				if isdir(f'{path}/{namespace}/{sub_name}'):
-					if '__include__.json' in listdir(f'{path}/{namespace}/{sub_name}'):
-						for primitive_path, block_path in load_file(f'{path}/{namespace}/{sub_name}/__include__.json').items():
+def process_version(version_name: str, file_format: str):
+	for namespace in listdir(f'{version_name}/{file_format}'):
+		if isdir(f'{version_name}/{file_format}/{namespace}'):
+			for sub_name in listdir(f'{version_name}/{file_format}/{namespace}'):
+				if isdir(f'{version_name}/{file_format}/{namespace}/{sub_name}'):
+					if '__include__.json' in listdir(f'{version_name}/{file_format}/{namespace}/{sub_name}'):
+						for block_file_name, primitive_block_name in load_file(f'{version_name}/{file_format}/{namespace}/{sub_name}/__include__.json').items():
 							try:
-								process_file(path, namespace, sub_name, block_path, file_format, primitive_path)
+								process_file(file_format, Primitives.get_block(file_format, primitive_block_name), version_name, namespace, sub_name, block_file_name)
 							except Exception as e:
-								log_to_file(f'Failed to process {path}/{namespace}/{sub_name}/{block_path}\n{e}')
-					for block_name in listdir(f'{path}/{namespace}/{sub_name}'):
-						if block_name == '__include__.json':
-							continue
-						else:
-							try:
-								process_file(path, namespace, sub_name, block_name, file_format)
-							except Exception as e:
-								log_to_file(f'Failed to process {path}/{namespace}/{sub_name}/{block_name}\n{e}')
+								log_to_file(f'Failed to process {version_name}/{namespace}/{sub_name}/{block_file_name}\n{e}')
 
 
-def process_file(path_prefix: str, namespace: str, sub_name: str, block_name: str, file_format: str, primitive_path: str = ''):
-	path = f'{path_prefix}/{namespace}/{sub_name}/{block_name}'
-	if isfile(path):
-		block_json = load_file(path)
-	elif isfile(primitive_path, primitive_dir):
-		block_json = load_file(primitive_path, primitive_dir)
-	else:
-		log_to_file(f'Could not find {compile_file_dir}/{path} or {primitive_dir}/{primitive_path}')
-		return
+def process_file(file_format: str, block_json: dict, version_name: str, namespace: str, sub_name: str, block_file_name: str):
+	if file_format == 'numerical':
+		save_json(f'{version_name}/numerical/{namespace}/{sub_name}/specification/{block_file_name}', {"properties": {"block_data": [str(data) for data in range(16)]}, "defaults": {"block_data": "0"}})
 
-	containing_dir = os.path.dirname(path)
-	file_name = os.path.basename(path)
+		if 'blockstate_specification' in block_json:
+			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/specification/{block_file_name}', block_json['blockstate_specification'])
+		else:
+			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/specification/{block_file_name}', {})
 
-	if 'specification' in block_json:
-		save_json(f'{containing_dir}/specification/{file_name}', block_json['specification'])
-	elif file_format == 'numerical':
-		save_json(f'{containing_dir}/specification/{file_name}', {"properties": {"block_data": [str(data) for data in range(16)]}, "defaults": {"block_data": "0"}})
+		for prefix, file_format_2 in [['', 'numerical'], ['blockstate_', 'blockstate']]:
+			if f'{prefix}to_universal' in block_json:
+				save_json(f'{version_name}/{file_format_2}/{namespace}/{sub_name}/to_universal/{block_file_name}', block_json[f'{prefix}to_universal'])
+			else:
+				raise Exception(f'"{prefix}to_universal" must be defined')
+
+			if f'{prefix}from_universal' in block_json:
+				for block_str, block_data in block_json[f'{prefix}from_universal'].items():
+					namespace_, block_name = block_str.split(':')
+					merge_map(block_data, f'{version_name}/{file_format_2}/{namespace_}/{sub_name}/from_universal/{block_name}.json')
+			else:
+				raise Exception(f'"{prefix}from_universal" must be defined')
+
 	elif file_format == 'blockstate':
-		save_json(f'{containing_dir}/specification/{file_name}', {})
+		if 'specification' in block_json:
+			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/specification/{block_file_name}', block_json['specification'])
+		else:
+			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/specification/{block_file_name}', {})
+
+		if 'to_universal' in block_json:
+			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/to_universal/{block_file_name}', block_json['to_universal'])
+		else:
+			raise Exception('"to_universal" must be defined')
+
+		if 'from_universal' in block_json:
+			for block_str, block_data in block_json['from_universal'].items():
+				namespace_, block_name = block_str.split(':')
+				merge_map(block_data, f'{version_name}/blockstate/{namespace_}/{sub_name}/from_universal/{block_name}.json')
+		else:
+			raise Exception('"from_universal" must be defined')
+
 	else:
 		raise Exception()
-
-	if 'to_universal' in block_json:
-		save_json(f'{containing_dir}/to_universal/{file_name}', block_json['to_universal'])
-	else:
-		raise Exception('"to_universal" must be defined')
-
-	if 'from_universal' in block_json:
-		for block_str, block_data in block_json['from_universal'].items():
-			namespace_, block_name = block_str.split(':')
-			merge_map(block_data, f'{path_prefix}/{namespace_}/{sub_name}/from_universal/{block_name}.json')
-	else:
-		raise Exception('"from_universal" must be defined')
 
 
 def merge_map(data, path):
@@ -227,8 +224,7 @@ def main():
 					getattr(version_compiler, version).compiler(f'./version_compiler/{version}', f'./versions/{version}')
 				else:
 					if init['format'] in ['numerical', 'pseudo-numerical']:
-						process_version(f'{version}/numerical', 'numerical')
-						process_version(f'{version}/blockstate', 'blockstate')
+						process_version(version, 'numerical')
 
 					elif init['format'] == 'blockstate':
 						process_version(version, 'blockstate')
