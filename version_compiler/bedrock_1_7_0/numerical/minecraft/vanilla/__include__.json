@@ -1,44 +1,44 @@
 {
-	"numerical/air.pyjson": "air.json",
-	"numerical/stone/stone+.json": "stone.json",
-	"numerical/grass_block.pyjson": "grass_block.json",
-	"numerical/dirt/dirt+coarse.json": "dirt.json",
-	"numerical/cobblestone.pyjson": "cobblestone.json",
-	"numerical/planks.pyjson": "planks.json",
-	"numerical/sapling.pyjson": "sapling.json",
-	"numerical/bedrock.pyjson": "bedrock.json",
-	"numerical/water.pyjson": "water.json",
-	"numerical/flowing_water.pyjson": "flowing_water.json",
-	"numerical/lava.pyjson": "lava.json",
-	"numerical/flowing_lava.pyjson": "flowing_lava.json",
-	"numerical/sand/sand+red.json": "sand.json",
-	"numerical/gravel.pyjson": "gravel.json",
-	"numerical/gold_ore.pyjson": "gold_ore.json",
-	"numerical/iron_ore.pyjson": "iron_ore.json",
-	"numerical/coal_ore.pyjson": "coal_ore.json",
-	"numerical/log.pyjson": "log.json",
-	"numerical/leaves/leaves_bedrock.pyjson": "leaves.json",
-	"numerical/sponge/sponge+wet.json": "sponge.json",
-	"numerical/glass.pyjson": "glass.json",
-	"numerical/lapis_ore.pyjson": "lapis_ore.json",
-	"numerical/lapis_block.pyjson": "lapis_block.json",
-	"numerical/dispenser.pyjson": "dispenser.json",
-	"numerical/sandstone/sandstone+chiseled+cut.pyjson": "sandstone.json",
-
-
-	"numerical/golden_rail.pyjson": "golden_rail.json",
-	"numerical/detector_rail.pyjson": "detector_rail.json",
-
-
-
-	"numerical/rail.pyjson": "rail.json",
-
-
-
-	"numerical/activator_rail.pyjson": "activator_rail.json",
-
-	"numerical/log2.pyjson": "log2.json",
-	"numerical/leaves2/leaves2_bedrock.pyjson": "leaves2.json",
-
-	"numerical/podzol.pyjson": "podzol.json"
+	"air.json": "air",
+	"stone.json": "stone+",
+	"grass_block.json": "grass_block",
+	"dirt.json": "dirt+coarse",
+	"cobblestone.json": "cobblestone",
+	"planks.json": "planks",
+	"sapling.json": "sapling",
+	"bedrock.json": "bedrock",
+	"water.json": "water",
+	"flowing_water.json": "flowing_water",
+	"lava.json": "lava",
+	"flowing_lava.json": "flowing_lava",
+	"sand.json": "sand+red",
+	"gravel.json": "gravel",
+	"gold_ore.json": "gold_ore",
+	"iron_ore.json": "iron_ore",
+	"coal_ore.json": "coal_ore",
+	"log.json": "log",
+	"leaves.json": "leaves_bedrock",
+	"sponge.json": "sponge+wet",
+	"glass.json": "glass",
+	"lapis_ore.json": "lapis_ore",
+	"lapis_block.json": "lapis_block",
+	"dispenser.json": "dispenser",
+	"sandstone.json": "sandstone+chiseled+cut",
+	
+	
+	"golden_rail.json": "golden_rail",
+	"detector_rail.json": "detector_rail",
+	
+	
+	
+	"rail.json": "rail",
+	
+	
+	
+	"activator_rail.json": "activator_rail",
+	
+	"log2.json": "log2",
+	"leaves2.json": "leaves2_bedrock",
+	
+	"podzol.json": "podzol"
 }
