@@ -24,5 +24,48 @@
 				}
 			}
 		}
+	},
+	"blockstate_specification": {
+		"properties": {
+			"block": [
+				"oak",
+				"spruce",
+				"birch",
+				"jungle",
+				"acacia",
+				"dark_oak"
+			]
+		},
+		"defaults": {
+			"block": "oak"
+		}
+	},
+	"blockstate_to_universal": {
+		"new_block": "minecraft:planks",
+		"carry_properties": {
+			"block": [
+				"oak",
+				"spruce",
+				"birch",
+				"jungle",
+				"acacia",
+				"dark_oak"
+			]
+		}
+	},
+	"blockstate_from_universal": {
+		"minecraft:planks": {
+			"new_block": "minecraft:planks",
+			"carry_properties": {
+				"block": [
+					"oak",
+					"spruce",
+					"birch",
+					"jungle",
+					"acacia",
+					"dark_oak"
+				]
+			}
+		}
 	}
 }

@@ -35,5 +35,36 @@
 				}
 			}
 		}
+	},
+	"blockstate_specification": {
+		"properties": {
+			"wet": [
+				"false",
+				"true"
+			]
+		},
+		"defaults": {
+			"wet": "false"
+		}
+	},
+	"blockstate_to_universal": {
+		"new_block": "minecraft:sponge",
+		"carry_properties": {
+			"wet": [
+				"false",
+				"true"
+			]
+		}
+	},
+	"blockstate_from_universal": {
+		"minecraft:sponge": {
+			"new_block": "minecraft:sponge",
+			"carry_properties": {
+				"wet": [
+					"false",
+					"true"
+				]
+			}
+		}
 	}
 }

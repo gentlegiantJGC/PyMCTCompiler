@@ -31,5 +31,61 @@
 				}
 			}
 		}
+	},
+	"blockstate_specification": {
+		"properties": {
+			"block": [
+				"oak",
+				"spruce",
+				"birch",
+				"jungle",
+				"acacia",
+				"dark_oak"
+			],
+			"stage": [
+				"0",
+				"1"
+			]
+		},
+		"defaults": {
+			"block": "oak",
+			"stage": "0"
+		}
+	},
+	"blockstate_to_universal": {
+		"new_block": "minecraft:sapling",
+		"carry_properties": {
+			"block": [
+				"oak",
+				"spruce",
+				"birch",
+				"jungle",
+				"acacia",
+				"dark_oak"
+			],
+			"stage": [
+				"0",
+				"1"
+			]
+		}
+	},
+	"blockstate_from_universal": {
+		"minecraft:sapling": {
+			"new_block": "minecraft:sapling",
+			"carry_properties": {
+				"block": [
+					"oak",
+					"spruce",
+					"birch",
+					"jungle",
+					"acacia",
+					"dark_oak"
+				],
+				"stage": [
+					"0",
+					"1"
+				]
+			}
+		}
 	}
 }

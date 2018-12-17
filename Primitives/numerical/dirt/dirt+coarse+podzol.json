@@ -33,5 +33,52 @@
 				"block_data": "2"
 			}
 		}
+	},
+	"blockstate_specification": {
+		"properties": {
+			"block": [
+				"dirt",
+				"coarse_dirt",
+				"podzol"
+			]
+		},
+		"defaults": {
+			"block": "dirt"
+		}
+	},
+	"blockstate_to_universal" :{
+		"map_properties": {
+			"block": {
+				"dirt": {
+					"new_block": "minecraft:dirt"
+				},
+				"coarse_dirt": {
+					"new_block": "minecraft:coarse_dirt"
+				},
+				"podzol": {
+					"new_block": "minecraft:podzol"
+				}
+			}
+		}
+	},
+	"blockstate_from_universal" :{
+		"minecraft:dirt": {
+			"new_block": "minecraft:dirt",
+			"new_properties": {
+				"block": "dirt"
+			}
+		},
+		"minecraft:coarse_dirt": {
+			"new_block": "minecraft:dirt",
+			"new_properties": {
+				"block": "coarse_dirt"
+			}
+		},
+		"minecraft:podzol": {
+			"new_block": "minecraft:dirt",
+			"new_properties": {
+				"block": "podzol"
+			}
+		}
 	}
 }

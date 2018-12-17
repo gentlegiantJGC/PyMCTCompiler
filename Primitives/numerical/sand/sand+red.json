@@ -24,5 +24,42 @@
 				"block_data": "1"
 			}
 		}
+	},
+	"blockstate_specification": {
+		"properties": {
+	        "block": [
+	            "sand",
+	            "red_sand"
+	        ]
+	    },
+	    "defaults": {
+	        "block": "sand"
+	    }
+	},
+	"blockstate_to_universal" :{
+		"map_properties": {
+			"block": {
+				"sand": {
+					"new_block": "minecraft:sand"
+				},
+				"red_sand": {
+					"new_block": "minecraft:red_sand"
+				}
+			}
+		}
+	},
+	"blockstate_from_universal": {
+		"minecraft:sand": {
+			"new_block": "minecraft:sand",
+			"new_properties": {
+				"block": "sand"
+			}
+		},
+		"minecraft:red_sand": {
+			"new_block": "minecraft:sand",
+			"new_properties": {
+				"block": "red_sand"
+			}
+		}
 	}
 }
