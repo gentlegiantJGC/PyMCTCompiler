@@ -2,9 +2,10 @@ import json
 import os
 import shutil
 from Primitives.scripts import *
+import version_compiler
 
-compile_file_dir = './Version Compiler'
-compile_dir = './Versions'
+compile_file_dir = './version_compiler'
+compile_dir = './versions'
 primitive_dir = './Primitives'
 
 log_file = open('log.txt', 'w')
@@ -202,6 +203,8 @@ def unique_merge_lists(list_a, list_b):
 
 def main():
 	for version in listdir(''):
+		if not isdir(f'./{version}'):
+			continue
 		counter = 0
 		while isdir(version, compile_dir) and counter < 10:
 			counter += 1
@@ -211,21 +214,24 @@ def main():
 				log_to_file(e)
 		if isdir(version, compile_dir):
 			raise Exception(f'Failed to delete "{compile_dir}/{version}" for some reason')
-		if isfile(f'{version}/__init__.json'):
-			init = load_file(f'{version}/__init__.json')
+		if hasattr(version_compiler, version) and hasattr(getattr(version_compiler, version), 'init'):
+			init = getattr(version_compiler, version).init
 			assert isinstance(init, dict)
 			if 'format' in init and init['format'] in ['numerical', 'pseudo-numerical', 'blockstate']:
 				if init['format'] == 'numerical':
 					copy_file(f'{version}/__numerical_map__.json')
 
-				copy_file(f'{version}/__init__.json')
+				save_json(f'{version}/__init__.json', init)
 
-				if init['format'] in ['numerical', 'pseudo-numerical']:
-					process_version(f'{version}/numerical', 'numerical')
-					process_version(f'{version}/blockstate', 'blockstate')
+				if getattr(version_compiler, version).compiler is not None:
+					getattr(version_compiler, version).compiler(f'./version_compiler/{version}', f'./versions/{version}')
+				else:
+					if init['format'] in ['numerical', 'pseudo-numerical']:
+						process_version(f'{version}/numerical', 'numerical')
+						process_version(f'{version}/blockstate', 'blockstate')
 
-				elif init['format'] == 'blockstate':
-					process_version(version, 'blockstate')
+					elif init['format'] == 'blockstate':
+						process_version(version, 'blockstate')
 			else:
 				log_to_file(f'"format" in __init__.json for {version} is either not defined or not a valid value. This version has been skipped')
 		else:
