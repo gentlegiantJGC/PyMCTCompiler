@@ -7,10 +7,10 @@
 	"planks": "planks",
 	"sapling": "sapling",
 	"bedrock": "bedrock",
-	"water": "water",
 	"flowing_water": "flowing_water",
-	"lava": "lava",
+	"water": "water",
 	"flowing_lava": "flowing_lava",
+	"lava": "lava",
 	"sand": "sand+red",
 	"gravel": "gravel",
 	"gold_ore": "gold_ore",
@@ -29,7 +29,23 @@
 	"golden_rail": "golden_rail",
 	"detector_rail": "detector_rail",
 	
-	
+	"web": "web",
+
+	"deadbush": "deadbush",
+
+	"yellow_flower": "yellow_flower",
+
+	"brown_mushroom": "brown_mushroom",
+	"red_mushroom": "red_mushroom",
+	"gold_block": "gold_block",
+	"iron_block": "iron_block",
+
+
+	"brick_block": "brick_block",
+
+	"bookshelf": "bookshelf",
+	"mossy_cobblestone": "mossy_cobblestone",
+	"obsidian": "obsidian",
 	
 	"rail": "rail",
 	
