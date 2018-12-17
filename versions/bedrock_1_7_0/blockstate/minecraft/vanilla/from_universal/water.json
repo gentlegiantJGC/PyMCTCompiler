@@ -17,11 +17,11 @@
     },
     "map_properties": {
         "flowing": {
-            "false": {
-                "new_block": "minecraft:water"
-            },
             "true": {
                 "new_block": "minecraft:flowing_water"
+            },
+            "false": {
+                "new_block": "minecraft:water"
             }
         }
     }

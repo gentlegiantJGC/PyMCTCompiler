@@ -17,11 +17,11 @@
     },
     "map_properties": {
         "flowing": {
-            "false": {
-                "new_block": "minecraft:lava"
-            },
             "true": {
                 "new_block": "minecraft:flowing_lava"
+            },
+            "false": {
+                "new_block": "minecraft:lava"
             }
         }
     }

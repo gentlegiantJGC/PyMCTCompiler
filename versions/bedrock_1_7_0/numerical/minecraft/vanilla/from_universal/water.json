@@ -1,120 +1,6 @@
 {
     "map_properties": {
         "flowing": {
-            "false": {
-                "map_properties": {
-                    "falling": {
-                        "false": {
-                            "map_properties": {
-                                "level": {
-                                    "0": {
-                                        "new_block": "minecraft:water",
-                                        "new_properties": {
-                                            "block_data": "0"
-                                        }
-                                    },
-                                    "1": {
-                                        "new_block": "minecraft:water",
-                                        "new_properties": {
-                                            "block_data": "1"
-                                        }
-                                    },
-                                    "2": {
-                                        "new_block": "minecraft:water",
-                                        "new_properties": {
-                                            "block_data": "2"
-                                        }
-                                    },
-                                    "3": {
-                                        "new_block": "minecraft:water",
-                                        "new_properties": {
-                                            "block_data": "3"
-                                        }
-                                    },
-                                    "4": {
-                                        "new_block": "minecraft:water",
-                                        "new_properties": {
-                                            "block_data": "4"
-                                        }
-                                    },
-                                    "5": {
-                                        "new_block": "minecraft:water",
-                                        "new_properties": {
-                                            "block_data": "5"
-                                        }
-                                    },
-                                    "6": {
-                                        "new_block": "minecraft:water",
-                                        "new_properties": {
-                                            "block_data": "6"
-                                        }
-                                    },
-                                    "7": {
-                                        "new_block": "minecraft:water",
-                                        "new_properties": {
-                                            "block_data": "7"
-                                        }
-                                    }
-                                }
-                            }
-                        },
-                        "true": {
-                            "map_properties": {
-                                "level": {
-                                    "0": {
-                                        "new_block": "minecraft:water",
-                                        "new_properties": {
-                                            "block_data": "8"
-                                        }
-                                    },
-                                    "1": {
-                                        "new_block": "minecraft:water",
-                                        "new_properties": {
-                                            "block_data": "9"
-                                        }
-                                    },
-                                    "2": {
-                                        "new_block": "minecraft:water",
-                                        "new_properties": {
-                                            "block_data": "10"
-                                        }
-                                    },
-                                    "3": {
-                                        "new_block": "minecraft:water",
-                                        "new_properties": {
-                                            "block_data": "11"
-                                        }
-                                    },
-                                    "4": {
-                                        "new_block": "minecraft:water",
-                                        "new_properties": {
-                                            "block_data": "12"
-                                        }
-                                    },
-                                    "5": {
-                                        "new_block": "minecraft:water",
-                                        "new_properties": {
-                                            "block_data": "13"
-                                        }
-                                    },
-                                    "6": {
-                                        "new_block": "minecraft:water",
-                                        "new_properties": {
-                                            "block_data": "14"
-                                        }
-                                    },
-                                    "7": {
-                                        "new_block": "minecraft:water",
-                                        "new_properties": {
-                                            "block_data": "15"
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            },
             "true": {
                 "map_properties": {
                     "falling": {
@@ -219,6 +105,120 @@
                                     },
                                     "7": {
                                         "new_block": "minecraft:flowing_water",
+                                        "new_properties": {
+                                            "block_data": "15"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "false": {
+                "map_properties": {
+                    "falling": {
+                        "false": {
+                            "map_properties": {
+                                "level": {
+                                    "0": {
+                                        "new_block": "minecraft:water",
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "1": {
+                                        "new_block": "minecraft:water",
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "2": {
+                                        "new_block": "minecraft:water",
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "3": {
+                                        "new_block": "minecraft:water",
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    },
+                                    "4": {
+                                        "new_block": "minecraft:water",
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "5": {
+                                        "new_block": "minecraft:water",
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "6": {
+                                        "new_block": "minecraft:water",
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "7": {
+                                        "new_block": "minecraft:water",
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "map_properties": {
+                                "level": {
+                                    "0": {
+                                        "new_block": "minecraft:water",
+                                        "new_properties": {
+                                            "block_data": "8"
+                                        }
+                                    },
+                                    "1": {
+                                        "new_block": "minecraft:water",
+                                        "new_properties": {
+                                            "block_data": "9"
+                                        }
+                                    },
+                                    "2": {
+                                        "new_block": "minecraft:water",
+                                        "new_properties": {
+                                            "block_data": "10"
+                                        }
+                                    },
+                                    "3": {
+                                        "new_block": "minecraft:water",
+                                        "new_properties": {
+                                            "block_data": "11"
+                                        }
+                                    },
+                                    "4": {
+                                        "new_block": "minecraft:water",
+                                        "new_properties": {
+                                            "block_data": "12"
+                                        }
+                                    },
+                                    "5": {
+                                        "new_block": "minecraft:water",
+                                        "new_properties": {
+                                            "block_data": "13"
+                                        }
+                                    },
+                                    "6": {
+                                        "new_block": "minecraft:water",
+                                        "new_properties": {
+                                            "block_data": "14"
+                                        }
+                                    },
+                                    "7": {
+                                        "new_block": "minecraft:water",
                                         "new_properties": {
                                             "block_data": "15"
                                         }
