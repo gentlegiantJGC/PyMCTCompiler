@@ -57,6 +57,6 @@ if __name__ == "__main__":
 	for data in range(16):
 		print(data, read(
 			{"block_name": "minecraft:log", "properties": {"block_data": str(data)}},
-			json.load(open('../Versions/java_1.12.2/numerical/minecraft/vanilla/to_universal/log.json')),
-			'../Versions/Universal'
+			json.load(open('../versions/java_1.12.2/numerical/minecraft/vanilla/to_universal/log.json')),
+			'../versions/universal'
 		))

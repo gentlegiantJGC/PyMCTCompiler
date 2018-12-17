@@ -1,0 +1,1 @@
+from version_compiler import java_1_12_2, bedrock_1_7_0, universal
