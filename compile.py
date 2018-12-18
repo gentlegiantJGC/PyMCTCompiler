@@ -4,57 +4,115 @@ import shutil
 import Primitives
 import version_compiler
 
-compile_file_dir = './version_compiler'
-compile_dir = './versions'
+uncompiled_dir = './version_compiler'
+compiled_dir = './versions'
 primitive_dir = './Primitives'
 
 log_file = open('log.txt', 'w')
 
 
-def log_to_file(msg):
+def log_to_file(msg: str):
+	"""Will log the message to the console and the log file.
+
+	:param msg: The message to log
+	:type msg: str
+	"""
 	print(msg)
 	log_file.write(f'{msg}\n')
 
 
-def isfile(path: str, prefix: str = compile_file_dir):
+def isfile(path: str, prefix: str = uncompiled_dir) -> bool:
+	"""Return if the "path" at "prefix" exists and is a file. Defaults to the uncompiled directory.
+
+	:param path: The path to look for within prefix
+	:type path: str
+	:param prefix: The directory to look in
+	:type prefix: str
+	:return: bool
+	"""
 	return os.path.isfile(f'{prefix}/{path}')
 
 
-def isdir(path: str, prefix: str = compile_file_dir):
+def isdir(path: str, prefix: str = uncompiled_dir) -> bool:
+	"""Return if the "path" at "prefix" exists and is a directory. Defaults to the uncompiled directory.
+
+	:param path: The path to look for within prefix
+	:type path: str
+	:param prefix: The directory to look in
+	:type prefix: str
+	:return: bool
+	"""
 	return os.path.isdir(f'{prefix}/{path}')
 
 
-def listdir(path: str, prefix: str = compile_file_dir):
+def listdir(path: str, prefix: str = uncompiled_dir) -> list:
+	"""Returns the listdir of prefix/path.
+
+	:param path: The path to look for within prefix
+	:type path: str
+	:param prefix: The directory to look in
+	:type prefix: str
+	:return: bool
+	"""
 	return os.listdir(f'{prefix}/{path}')
 
 
-def load_file(path: str, prefix: str = compile_file_dir):
+def load_file(path: str, prefix: str = uncompiled_dir) -> dict:
+	"""Loads and returns the data from the file at prefix/path if it is a json file.
+
+	:param path: The path to look for within prefix
+	:type path: str
+	:param prefix: The directory to look in
+	:type prefix: str
+	:return: bool
+	"""
 	if path.endswith('.json'):
 		with open(f'{prefix}/{path}') as f:
 			return json.load(f)
 	else:
-		raise Exception('Could not load "{prefix}/{path}"')
+		raise Exception(f'Could not load "{prefix}/{path}"')
 
 
 def save_json(path: str, data: dict, overwrite: bool = False):
-	if not isdir(os.path.dirname(path), compile_dir):
-		os.makedirs(os.path.dirname(f'{compile_dir}/{path}'))
-	if not overwrite and os.path.isfile(f'{compile_dir}/{path}'):
+	"""Will save "data" to a json file at compiled_dir/path.
+
+	:param path: The path to look for within prefix
+	:type path: str
+	:param data: The object to write to the file
+	:type data: dict
+	:param overwrite: Whether to overwrite the file or error if it exists
+	:type overwrite: bool
+	"""
+	if not isdir(os.path.dirname(path), compiled_dir):
+		os.makedirs(os.path.dirname(f'{compiled_dir}/{path}'))
+	if not overwrite and os.path.isfile(f'{compiled_dir}/{path}'):
 		raise Exception(f'File "{path}" already exists. Doing this will overwrite the data')
-	with open(f'{compile_dir}/{path}', 'w') as f:
+	with open(f'{compiled_dir}/{path}', 'w') as f:
 		json.dump(data, f, indent=4)
 
 
 def copy_file(path: str):
+	"""Will copy uncompiled_dir/path to compiled_dir/path.
+
+	:param path: Path relative to uncompiled_dir to copy
+	:type path: str
+	"""
 	if isfile(path):
-		if not isdir(os.path.dirname(path), compile_dir):
-			os.makedirs(os.path.dirname(f'{compile_dir}/{path}'))
-		shutil.copy(f'{compile_file_dir}/{path}', f'{compile_dir}/{path}')
+		if not isdir(os.path.dirname(path), compiled_dir):
+			os.makedirs(os.path.dirname(f'{compiled_dir}/{path}'))
+		shutil.copy(f'{uncompiled_dir}/{path}', f'{compiled_dir}/{path}')
 	else:
-		log_to_file(f'Could not find file {compile_file_dir}/{path} to copy')
+		log_to_file(f'Could not find file {uncompiled_dir}/{path} to copy')
 
 
 def process_version(version_name: str, file_format: str):
+	"""Will bake out the files in uncompiled_dir/version_name into compiled_dir/version_name
+
+	:param version_name: A version name found in uncompiled_dir
+	:type version_name: str
+	:param file_format: The format of the blocks. Either "numerical" or "blockstate"
+	:type file_format: str
+	"""
 	for namespace in listdir(f'{version_name}/{file_format}'):
 		if isdir(f'{version_name}/{file_format}/{namespace}'):
 			for sub_name in listdir(f'{version_name}/{file_format}/{namespace}'):
@@ -68,6 +126,15 @@ def process_version(version_name: str, file_format: str):
 
 
 def process_file(file_format: str, block_json: dict, version_name: str, namespace: str, sub_name: str, block_file_name: str):
+	"""Will create json files based on block_json.
+
+	:param file_format: The format of the blocks. Either "numerical" or "blockstate"
+	:param block_json: The data that will be split up and saved out
+	:param version_name: The version name for use in the file path
+	:param namespace: The namespace for use in the file path
+	:param sub_name: The sub_name for use in the file path
+	:param block_file_name: The name of the block for use in the file path
+	"""
 	if file_format == 'numerical':
 		save_json(f'{version_name}/numerical/{namespace}/{sub_name}/specification/{block_file_name}.json', {"properties": {"block_data": [str(data) for data in range(16)]}, "defaults": {"block_data": "0"}})
 
@@ -111,16 +178,31 @@ def process_file(file_format: str, block_json: dict, version_name: str, namespac
 		raise Exception()
 
 
-def merge_map(data, path):
-	if isfile(path, compile_dir):
-		with open(f'{compile_dir}/{path}') as f:
+def merge_map(data: dict, path: str):
+	"""Will save "data" to compiled_dir/path and merge with any data present.
+
+	:param data: The data to save
+	:type data: dict
+	:param path: The path to save it to relative to compiled_dir
+	:type path: str
+	"""
+	if isfile(path, compiled_dir):
+		with open(f'{compiled_dir}/{path}') as f:
 			data_ = json.load(f)
 		save_json(path, _merge_map(data_, data), True)
 	else:
 		save_json(path, data)
 
 
-def _merge_map(data_, data):
+def _merge_map(data_: dict, data: dict) -> dict:
+	"""Merge new "data" object into "data_" (data loaded from disk) and return the result.
+
+	:param data_: Dict to merge with data_
+	:type data_: dict
+	:param data: Dict loaded from file
+	:type data: dict
+	:return: data_ after "data" has been merged into it
+	"""
 	check_formatting(data_)
 	check_formatting(data)
 	if 'new_block' in data and 'new_block' in data_:
@@ -159,7 +241,12 @@ def _merge_map(data_, data):
 	return data_
 
 
-def check_formatting(data):
+def check_formatting(data: dict):
+	"""Will verify that "data" fits the required format.
+
+	:param data: The data to verify the formatting of
+	:type data: dict
+	"""
 	if 'new_block' in data:
 		assert isinstance(data['new_block'], str)
 
@@ -190,7 +277,15 @@ def check_formatting(data):
 			log_to_file(f'Extra key "{key}" found')
 
 
-def unique_merge_lists(list_a, list_b):
+def unique_merge_lists(list_a: list, list_b: list) -> list:
+	"""Will return a list of the unique values from the two given lists.
+
+	:param list_a: List of values
+	:type list_a: list
+	:param list_b: List of values
+	:type list_b: list
+	:return: List of unique entries from a and b
+	"""
 	merged_list = []
 	for entry in list_a+list_b:
 		if entry not in merged_list:
@@ -199,15 +294,16 @@ def unique_merge_lists(list_a, list_b):
 
 
 def main():
+	"""Will remove all files from compiled_dir and generate them from uncompiled_dir"""
 	counter = 0
-	while isdir('', compile_dir) and counter < 10:
+	while isdir('', compiled_dir) and counter < 10:
 		counter += 1
 		try:
-			shutil.rmtree(f'{compile_dir}')
+			shutil.rmtree(f'{compiled_dir}')
 		except Exception as e:
-			log_to_file(e)
-	if isdir('', compile_dir):
-		raise Exception(f'Failed to delete "{compile_dir}" for some reason')
+			log_to_file(str(e))
+	if isdir('', compiled_dir):
+		raise Exception(f'Failed to delete "{compiled_dir}" for some reason')
 	for version in listdir(''):
 		if not isdir(f'./{version}'):
 			continue
