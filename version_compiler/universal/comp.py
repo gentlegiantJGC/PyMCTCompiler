@@ -1,11 +1,16 @@
 import os
-import sys
 import json
 import shutil
 from collections import OrderedDict
 
 
-def debug(block_data):
+def debug(block_data: dict) -> bool:
+	"""Confirm that all the properties defined have a default set and the default is in list of values.
+
+	:param block_data: The data to test
+	:type block_data: dict
+	:return: bool
+	"""
 	if "properties" in block_data and "defaults" in block_data:
 		return sorted(block_data["properties"].keys()) == sorted(block_data["defaults"].keys()) and all([val in block_data["properties"][key] for key, val in block_data["defaults"].items()])
 	else:
@@ -13,6 +18,13 @@ def debug(block_data):
 
 
 def main(uncompiled_path: str, compiled_path: str):
+	"""Custom compiler for the universal version.
+
+	:param uncompiled_path: The path where the uncompiled files are found
+	:type uncompiled_path: str
+	:param compiled_path: The path to create the compiled files
+	:type compiled_path: str
+	"""
 	if not os.path.isfile(f'{uncompiled_path}/generated/reports/blocks.json') and os.path.isfile(f'{uncompiled_path}/server.jar'):
 		try:
 			os.system(f'java -cp {uncompiled_path}/server.jar net.minecraft.data.Main --reports --output {uncompiled_path}/generated')
@@ -32,8 +44,8 @@ def main(uncompiled_path: str, compiled_path: str):
 			if java_path is not None:
 				try:
 					os.system(f'{java_path} -cp {uncompiled_path}/server.jar net.minecraft.data.Main --reports --output {uncompiled_path}/generated')
-				except:
-					raise Exception('This failed for some reason')
+				except Exception as e:
+					raise Exception(f'This failed for some reason\n{e}')
 
 	if os.path.isdir(compiled_path):
 		shutil.rmtree(compiled_path)
