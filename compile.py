@@ -1,6 +1,7 @@
 import json
 import os
 import shutil
+import traceback
 import Primitives
 import version_compiler
 
@@ -122,7 +123,7 @@ def process_version(version_name: str, file_format: str):
 							try:
 								process_file(file_format, Primitives.get_block(file_format, primitive_block_name), version_name, namespace, sub_name, block_file_name)
 							except Exception as e:
-								log_to_file(f'Failed to process {version_name}/{namespace}/{sub_name}/{block_file_name}\n{e}')
+								log_to_file(f'Failed to process {version_name}/{namespace}/{sub_name}/{block_file_name}\n{e}\n{traceback.print_tb()}')
 
 
 def process_file(file_format: str, block_json: dict, version_name: str, namespace: str, sub_name: str, block_file_name: str):

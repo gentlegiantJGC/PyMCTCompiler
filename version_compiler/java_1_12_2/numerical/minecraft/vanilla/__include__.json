@@ -24,7 +24,7 @@
 	"lapis_block": "lapis_block",
 	"dispenser": "dispenser",
 	"sandstone": "sandstone+chiseled+cut",
-
+	"noteblock": "noteblock_java",
 
 	"golden_rail": "golden_rail",
 	"detector_rail": "detector_rail",
