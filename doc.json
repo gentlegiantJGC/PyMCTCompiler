@@ -1,37 +1,98 @@
 {
-	"descriptions": {
-		"description": "looks for the following keys and does things",
-		"new_block": "the new block string to use. If not defined use the existing block string",
-		"new_properties": "add these properties with these values",
-		"map_properties": "look up the property value for each of the keys listed and follow the further instructions",
-		"carry_properties": "copy the property and value to the new blockstate"
-	},
-	"usage": {
-		"new_block": "minecraft:air",
-		"new_properties": {
-			"key": "val"
+	"specification": {
+		"properties": {
+			"key1": [
+				"val1",
+				"val2",
+				"..."
+			],
+			"key2": [
+				"val1",
+				"val2",
+				"..."
+			]
 		},
-		"map_properties": {
+		"defaults": {
+			"key1": "def_val1",
+			"key2": "def_val2"
+		},
+		"nbt": {
 			"key1": {
-				"val1": {},
-				"val2": {},
-				"...": {}
+				"name": "key1_nbt_name (these can be the same)",
+				"type": "datatype ('byte', 'short', 'int', 'long', 'float', 'double', 'string')",
+				"options": [
+					"val1",
+					"val2",
+					"..."
+				],  // a list of possible values (to not have a limited input either don't define or define as null)
+				"default": "def_val"
 			},
-			"key2": {
-				"val1": {},
-				"val2": {},
-				"...": {}
-			},
-			"...": {
-				"val1": {},
-				"val2": {},
-				"...": {}
+			"powered": {
+				"name": "powered",
+				"type": "byte",
+				"options": ["0", "1"],
+				"default": "0"
 			}
+		}
+	},
+	"mapping": {
+		"descriptions": {
+			"description": "looks for the following keys and does things",
+			"new_block": "the new block string to use. If not defined use the existing block string",
+			"new_properties": "add these properties with these values",
+			"map_properties": "look up the property value for each of the keys listed and follow the further instructions",
+			"carry_properties": "copy the property and value to the new blockstate",
+			"map_nbt": "look up the nbt value for each of the keys listed and follow the further instructions.",
+			//map_nbt note: json is limited to strings as keys so the value you will need converting to a string before comparason
+			"new_nbt": "The same as new properties but will add the value to the nbt rather than properties"
 		},
-		"carry_properties": {
-			"key1": ["val1", "val2", "..."],
-			"key2": ["val1", "val2", "..."],
-			"...": ["val1", "val2", "..."]
+		"usage": {
+			"new_block": "minecraft:air",
+			"new_properties": {
+				"key": "val"
+			},
+			"map_properties": {
+				"key1": {
+					"val1": {},
+					"val2": {},
+					"...": {}
+				},
+				"key2": {
+					"val1": {},
+					"val2": {},
+					"...": {}
+				},
+				"...": {
+					"val1": {},
+					"val2": {},
+					"...": {}
+				}
+			},
+			"carry_properties": {
+				"key1": ["val1", "val2", "..."],
+				"key2": ["val1", "val2", "..."],
+				"...": ["val1", "val2", "..."]
+			},
+			"map_nbt": {
+				"key1": {
+					"val1": {},
+					"val2": {},
+					"...": {}
+				},
+				"key2": {
+					"val1": {},
+					"val2": {},
+					"...": {}
+				},
+				"...": {
+					"val1": {},
+					"val2": {},
+					"...": {}
+				}
+			},
+			"new_nbt": {
+				"key": "val"
+			}
 		}
 	}
 }
