@@ -136,7 +136,10 @@ def process_file(file_format: str, block_json: dict, version_name: str, namespac
 	:param block_file_name: The name of the block for use in the file path
 	"""
 	if file_format == 'numerical':
-		save_json(f'{version_name}/numerical/{namespace}/{sub_name}/specification/{block_file_name}.json', {"properties": {"block_data": [str(data) for data in range(16)]}, "defaults": {"block_data": "0"}})
+		if 'specification' in block_json:
+			save_json(f'{version_name}/numerical/{namespace}/{sub_name}/specification/{block_file_name}.json', block_json['specification'])
+		else:
+			save_json(f'{version_name}/numerical/{namespace}/{sub_name}/specification/{block_file_name}.json', {"properties": {"block_data": [str(data) for data in range(16)]}, "defaults": {"block_data": "0"}})
 
 		if 'blockstate_specification' in block_json:
 			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/specification/{block_file_name}.json', block_json['blockstate_specification'])
