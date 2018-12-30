@@ -727,3 +727,232 @@ def rail2(namespace: str, block_name: str) -> dict:
 			}
 		}
 	}
+
+
+def bed_color(platform: str) -> dict:
+	return {
+		"specification": {
+			"properties": {
+				"block_data": [str(data) for data in range(16)]
+			},
+			"defaults": {
+				"block_data": "0"
+			},
+			"nbt": {
+				"color": {
+					"name": "color",
+					"type": {"bedrock": "byte", "java": "int"}[platform],
+					"options": [str(data) for data in range(16)],
+					"default": "14"
+				}
+			},
+		},
+		"to_universal": {
+			"new_block": "minecraft:bed",
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_properties": {
+							"facing": {0: "south", 1: "west", 2: "north", 3: "east"}[data & 3],
+							"occupied": {0: "false", 4: "true"}[data & 4],
+							"part": {0: "foot", 8: "head"}[data & 8]
+						}
+					} for data in range(16)
+				}
+			},
+			"map_nbt": {
+				"color": {
+					num: {
+						"new_properties": {
+							"color": color
+						}
+					} for num, color in {
+						"0": "white",
+						"1": "orange",
+						"2": "magenta",
+						"3": "light_blue",
+						"4": "yellow",
+						"5": "lime",
+						"6": "pink",
+						"7": "gray",
+						"8": "light_gray",
+						"9": "cyan",
+						"10": "purple",
+						"11": "blue",
+						"12": "brown",
+						"13": "green",
+						"14": "red",
+						"15": "black"
+					}.items()
+				}
+			}
+		},
+		"from_universal": {
+			"minecraft:bed": {
+				"new_block": "minecraft:bed",
+				"map_properties": {
+					"part": {
+						part: {
+							"map_properties": {
+								"occupied": {
+									occupied: {
+										"map_properties": {
+											"facing": {
+												facing: {
+													"new_properties": {
+														"block_data": str(data8 + data4 + data3)
+													}
+												} for data3, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
+											}
+										}
+									} for data4, occupied in {0: "false", 4: "true"}.items()
+								}
+							}
+						} for data8, part in {0: "foot", 8: "head"}.items()
+					},
+					"color": {
+						color: {
+							"new_nbt": {
+								"color": num
+							}
+						} for num, color in {
+							"0": "white",
+							"1": "orange",
+							"2": "magenta",
+							"3": "light_blue",
+							"4": "yellow",
+							"5": "lime",
+							"6": "pink",
+							"7": "gray",
+							"8": "light_gray",
+							"9": "cyan",
+							"10": "purple",
+							"11": "blue",
+							"12": "brown",
+							"13": "green",
+							"14": "red",
+							"15": "black"
+						}.items()
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"facing": [
+					"east",
+					"north",
+					"south",
+					"west"
+				],
+				"occupied": [
+					"true",
+					"false"
+				],
+				"part": [
+					"foot",
+					"head"
+				],
+				"color": [
+					"white",
+					"orange",
+					"magenta",
+					"light_blue",
+					"yellow",
+					"lime",
+					"pink",
+					"gray",
+					"light_gray",
+					"cyan",
+					"purple",
+					"blue",
+					"brown",
+					"green",
+					"red",
+					"black"
+				]
+			},
+			"defaults": {
+				"facing": "north",
+				"occupied": "false",
+				"part": "foot",
+				"color": "red"
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": "minecraft:bed",
+			"carry_properties": {
+				"facing": [
+					"east",
+					"north",
+					"south",
+					"west"
+				],
+				"occupied": [
+					"true",
+					"false"
+				],
+				"part": [
+					"foot",
+					"head"
+				],
+				"color": [
+					"white",
+					"orange",
+					"magenta",
+					"light_blue",
+					"yellow",
+					"lime",
+					"pink",
+					"gray",
+					"light_gray",
+					"cyan",
+					"purple",
+					"blue",
+					"brown",
+					"green",
+					"red",
+					"black"
+				]
+			}
+		},
+		"blockstate_from_universal": {
+			"minecraft:bed": {
+				"new_block": "minecraft:bed",
+				"carry_properties": {
+					"facing": [
+						"east",
+						"north",
+						"south",
+						"west"
+					],
+					"occupied": [
+						"true",
+						"false"
+					],
+					"part": [
+						"foot",
+						"head"
+					],
+					"color": [
+						"white",
+						"orange",
+						"magenta",
+						"light_blue",
+						"yellow",
+						"lime",
+						"pink",
+						"gray",
+						"light_gray",
+						"cyan",
+						"purple",
+						"blue",
+						"brown",
+						"green",
+						"red",
+						"black"
+					]
+				}
+			}
+		}
+	}

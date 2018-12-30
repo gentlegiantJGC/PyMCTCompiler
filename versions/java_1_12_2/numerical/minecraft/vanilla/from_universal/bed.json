@@ -1,0 +1,205 @@
+{
+    "new_block": "minecraft:bed",
+    "map_properties": {
+        "part": {
+            "foot": {
+                "map_properties": {
+                    "occupied": {
+                        "false": {
+                            "map_properties": {
+                                "facing": {
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "map_properties": {
+                                "facing": {
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "head": {
+                "map_properties": {
+                    "occupied": {
+                        "false": {
+                            "map_properties": {
+                                "facing": {
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "8"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "9"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "10"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "11"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "map_properties": {
+                                "facing": {
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "12"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "13"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "14"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "15"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "color": {
+            "white": {
+                "new_nbt": {
+                    "color": "0"
+                }
+            },
+            "orange": {
+                "new_nbt": {
+                    "color": "1"
+                }
+            },
+            "magenta": {
+                "new_nbt": {
+                    "color": "2"
+                }
+            },
+            "light_blue": {
+                "new_nbt": {
+                    "color": "3"
+                }
+            },
+            "yellow": {
+                "new_nbt": {
+                    "color": "4"
+                }
+            },
+            "lime": {
+                "new_nbt": {
+                    "color": "5"
+                }
+            },
+            "pink": {
+                "new_nbt": {
+                    "color": "6"
+                }
+            },
+            "gray": {
+                "new_nbt": {
+                    "color": "7"
+                }
+            },
+            "light_gray": {
+                "new_nbt": {
+                    "color": "8"
+                }
+            },
+            "cyan": {
+                "new_nbt": {
+                    "color": "9"
+                }
+            },
+            "purple": {
+                "new_nbt": {
+                    "color": "10"
+                }
+            },
+            "blue": {
+                "new_nbt": {
+                    "color": "11"
+                }
+            },
+            "brown": {
+                "new_nbt": {
+                    "color": "12"
+                }
+            },
+            "green": {
+                "new_nbt": {
+                    "color": "13"
+                }
+            },
+            "red": {
+                "new_nbt": {
+                    "color": "14"
+                }
+            },
+            "black": {
+                "new_nbt": {
+                    "color": "15"
+                }
+            }
+        }
+    }
+}

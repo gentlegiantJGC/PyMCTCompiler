@@ -1,0 +1,37 @@
+{
+    "new_block": "minecraft:bed",
+    "carry_properties": {
+        "facing": [
+            "east",
+            "north",
+            "south",
+            "west"
+        ],
+        "occupied": [
+            "true",
+            "false"
+        ],
+        "part": [
+            "foot",
+            "head"
+        ],
+        "color": [
+            "white",
+            "orange",
+            "magenta",
+            "light_blue",
+            "yellow",
+            "lime",
+            "pink",
+            "gray",
+            "light_gray",
+            "cyan",
+            "purple",
+            "blue",
+            "brown",
+            "green",
+            "red",
+            "black"
+        ]
+    }
+}

@@ -54,7 +54,7 @@
 				]
 			},
 			"defaults": {
-				"color": "white",
+				"color": "red",
 				"facing": "north",
 				"occupied": "false",
 				"part": "foot"

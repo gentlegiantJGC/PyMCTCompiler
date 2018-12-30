@@ -1,5 +1,19 @@
 {
     "properties": {
+        "facing": [
+            "east",
+            "north",
+            "south",
+            "west"
+        ],
+        "occupied": [
+            "true",
+            "false"
+        ],
+        "part": [
+            "foot",
+            "head"
+        ],
         "color": [
             "white",
             "orange",
@@ -17,26 +31,12 @@
             "green",
             "red",
             "black"
-        ],
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ],
-        "occupied": [
-            "true",
-            "false"
-        ],
-        "part": [
-            "head",
-            "foot"
         ]
     },
     "defaults": {
-        "color": "red",
         "facing": "north",
         "occupied": "false",
-        "part": "foot"
+        "part": "foot",
+        "color": "red"
     }
 }
