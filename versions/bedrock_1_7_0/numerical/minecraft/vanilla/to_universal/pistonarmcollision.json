@@ -1,0 +1,127 @@
+{
+    "new_block": "minecraft:piston_head",
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_properties": {
+                    "facing": "down"
+                },
+                "multiblock": {
+                    "coords": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "map_block_name": {
+                        "minecraft:piston": {
+                            "new_block": "minecraft:piston_head"
+                        },
+                        "minecraft:sticky_piston": {
+                            "new_block": "minecraft:sticky_piston_head"
+                        }
+                    }
+                }
+            },
+            "1": {
+                "new_properties": {
+                    "facing": "up"
+                },
+                "multiblock": {
+                    "coords": [
+                        0,
+                        -1,
+                        0
+                    ],
+                    "map_block_name": {
+                        "minecraft:piston": {
+                            "new_block": "minecraft:piston_head"
+                        },
+                        "minecraft:sticky_piston": {
+                            "new_block": "minecraft:sticky_piston_head"
+                        }
+                    }
+                }
+            },
+            "2": {
+                "new_properties": {
+                    "facing": "south"
+                },
+                "multiblock": {
+                    "coords": [
+                        0,
+                        0,
+                        -1
+                    ],
+                    "map_block_name": {
+                        "minecraft:piston": {
+                            "new_block": "minecraft:piston_head"
+                        },
+                        "minecraft:sticky_piston": {
+                            "new_block": "minecraft:sticky_piston_head"
+                        }
+                    }
+                }
+            },
+            "3": {
+                "new_properties": {
+                    "facing": "north"
+                },
+                "multiblock": {
+                    "coords": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "map_block_name": {
+                        "minecraft:piston": {
+                            "new_block": "minecraft:piston_head"
+                        },
+                        "minecraft:sticky_piston": {
+                            "new_block": "minecraft:sticky_piston_head"
+                        }
+                    }
+                }
+            },
+            "4": {
+                "new_properties": {
+                    "facing": "east"
+                },
+                "multiblock": {
+                    "coords": [
+                        -1,
+                        0,
+                        0
+                    ],
+                    "map_block_name": {
+                        "minecraft:piston": {
+                            "new_block": "minecraft:piston_head"
+                        },
+                        "minecraft:sticky_piston": {
+                            "new_block": "minecraft:sticky_piston_head"
+                        }
+                    }
+                }
+            },
+            "5": {
+                "new_properties": {
+                    "facing": "west"
+                },
+                "multiblock": {
+                    "coords": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "map_block_name": {
+                        "minecraft:piston": {
+                            "new_block": "minecraft:piston_head"
+                        },
+                        "minecraft:sticky_piston": {
+                            "new_block": "minecraft:sticky_piston_head"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

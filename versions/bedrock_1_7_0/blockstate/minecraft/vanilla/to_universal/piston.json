@@ -1,0 +1,13 @@
+{
+    "new_block": "minecraft:piston",
+    "carry_properties": {
+        "facing": [
+            "north",
+            "east",
+            "south",
+            "west",
+            "up",
+            "down"
+        ]
+    }
+}

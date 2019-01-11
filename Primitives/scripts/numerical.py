@@ -956,3 +956,78 @@ def bed_color(platform: str) -> dict:
 			}
 		}
 	}
+
+
+def piston_bedrock(namespace: str, block_name: str) -> dict:
+	return {
+		"comment": "There is also a tile entity here that contains more data",
+		"to_universal": {
+			"new_block": f"{namespace}:{block_name}",
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_properties": {
+							"facing": {0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}[data]
+						}
+					} for data in range(6)
+				}
+			}
+		},
+		"from_universal": {
+			f"{namespace}:{block_name}": {
+				"new_block": f"{namespace}:{block_name}",
+				"map_properties": {
+					"facing": {
+						facing: {
+							"new_properties": {
+								"block_data": str(data)
+							}
+						} for data, facing in {0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}.items()
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"facing": [
+					"north",
+					"east",
+					"south",
+					"west",
+					"up",
+					"down"
+				]
+			},
+			"defaults": {
+				"facing": "north"
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": f"{namespace}:{block_name}",
+			"carry_properties": {
+				"facing": [
+					"north",
+					"east",
+					"south",
+					"west",
+					"up",
+					"down"
+				]
+			}
+		},
+		"blockstate_from_universal": {
+			f"{namespace}:{block_name}": {
+				"new_block": f"{namespace}:{block_name}",
+				"carry_properties": {
+					"facing": [
+						"north",
+						"east",
+						"south",
+						"west",
+						"up",
+						"down"
+					]
+				}
+			}
+		}
+	}

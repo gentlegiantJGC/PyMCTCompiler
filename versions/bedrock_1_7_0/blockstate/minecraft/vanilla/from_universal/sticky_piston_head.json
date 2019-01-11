@@ -1,0 +1,16 @@
+{
+    "new_block": "minecraft:piston_head",
+    "new_properties": {
+        "type": "sticky"
+    },
+    "carry_properties": {
+        "facing": [
+            "north",
+            "east",
+            "south",
+            "west",
+            "up",
+            "down"
+        ]
+    }
+}

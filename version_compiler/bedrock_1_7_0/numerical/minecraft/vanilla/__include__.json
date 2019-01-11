@@ -28,10 +28,13 @@
 	"bed": "bed_color_bedrock",
 	"golden_rail": "golden_rail",
 	"detector_rail": "detector_rail",
-	
+	"sticky_piston": "sticky_piston_bedrock",
 	"web": "web",
 
 	"deadbush": "deadbush",
+	"piston": "piston_bedrock",
+	"pistonarmcollision": "piston_head_bedrock",
+
 
 	"yellow_flower": "yellow_flower",
 
