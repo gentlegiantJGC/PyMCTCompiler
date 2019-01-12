@@ -64,6 +64,8 @@ def main(uncompiled_path: str, compiled_path: str):
 			for group_name in (group_name for group_name in os.listdir(f'{uncompiled_path}/modifications/{namespace}') if os.path.isdir(f'{uncompiled_path}/modifications/{namespace}/{group_name}')):
 				if not os.path.isdir(f'{compiled_path}/{namespace}/{group_name}'):
 					os.makedirs(f'{compiled_path}/{namespace}/{group_name}')
+				if not os.path.isdir(f'{compiled_path}/{namespace}/{group_name}/specification'):
+					os.makedirs(f'{compiled_path}/{namespace}/{group_name}/specification')
 
 				# load the modifications for that namespace and group name
 				for file_name in os.listdir(f'{uncompiled_path}/modifications/{namespace}/{group_name}'):
@@ -95,17 +97,17 @@ def main(uncompiled_path: str, compiled_path: str):
 						del block_data['states']
 						if not debug(block_data):
 							print(f'Error in "{block_string}"')
-						with open(f'{compiled_path}/{namespace_}/{group_name}/{block_name}.json', 'w') as block_out:
+						with open(f'{compiled_path}/{namespace_}/{group_name}/specification/{block_name}.json', 'w') as block_out:
 							json.dump(block_data, block_out, indent=4)
 
 				# add the new files
 				for block_name, block_data in modifications["add"].items():
-					if os.path.isfile(f'{compiled_path}/{namespace}/{group_name}/{block_name}.json'):
+					if os.path.isfile(f'{compiled_path}/{namespace}/{group_name}/specification/{block_name}.json'):
 						print(f'"{block_name}" is already present.')
 					else:
 						if not debug(block_data):
 							print(f'Error in "{block_name}"')
-						with open(f'{compiled_path}/{namespace}/{group_name}/{block_name}.json', 'w') as block_out:
+						with open(f'{compiled_path}/{namespace}/{group_name}/specification/{block_name}.json', 'w') as block_out:
 							json.dump(block_data, block_out, indent=4)
 	else:
 		raise Exception(f'Cound not find {uncompiled_path}/generated/reports/blocks.json')
