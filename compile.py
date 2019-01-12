@@ -318,8 +318,6 @@ def main():
 				if init['format'] == 'numerical':
 					copy_file(f'{version}/__numerical_map__.json')
 
-				save_json(f'{version}/__init__.json', init)
-
 				if getattr(version_compiler, version).compiler is not None:
 					getattr(version_compiler, version).compiler(f'./version_compiler/{version}', f'./versions/{version}')
 				else:
@@ -328,6 +326,9 @@ def main():
 
 					elif init['format'] == 'blockstate':
 						process_version(version, 'blockstate')
+
+				save_json(f'{version}/__init__.json', init)
+
 			else:
 				log_to_file(f'"format" in __init__.json for {version} is either not defined or not a valid value. This version has been skipped')
 		else:
