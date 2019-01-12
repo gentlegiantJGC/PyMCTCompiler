@@ -44,7 +44,9 @@
 			"carry_properties": "copy the property and value to the new blockstate",
 			"map_nbt": "look up the nbt value for each of the keys listed and follow the further instructions.",
 			//map_nbt note: json is limited to strings as keys so the value you will need converting to a string before comparason
-			"new_nbt": "The same as new properties but will add the value to the nbt rather than properties"
+			"new_nbt": "The same as new properties but will add the value to the nbt rather than properties",
+			"multiblock": "This is useful for things like pistons and doors where the data is spread across multiple blocks",
+			"map_block_name": "dictionary lookup of the current block name (eg 'minecraft:air') Only really useful for multiblocks"
 		},
 		"usage": {
 			"new_block": "minecraft:air",
@@ -92,7 +94,18 @@
 			},
 			"new_nbt": {
 				"key": "val"
-			}
+			},
+			"multiblock": {
+                "coords": [0, 1, 0],  // coords relative to the current block. Loads this block and continues with it for all contained functions
+				// be careful with how this is implemented as it can lead to infinate loops
+                "other": {},
+				"functions": {},
+				"here": {}
+            },
+			"map_block_name": {
+                "val1": {},
+                "val2": {}
+            }
 		}
 	}
 }
