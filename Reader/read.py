@@ -1,14 +1,58 @@
 import json
 import os
-from typing import Tuple, Dict
+from typing import Tuple, Dict, Generator
 
 
-def directories(path):
-	return (dir_name for dir_name in os.listdir(path) if os.path.isdir(f'{path}/{dir_name}'))
+"""
+Structure:
+
+VersionContainer
+	Version : bedrock_1_7_0
+		SubVersion : numerical
+			Namespace : minecraft
+			Namespace : other_namespace
+		SubVersion : blockstate
+			Namespace : minecraft
+			Namespace : other_namespace
+			
+	Version : java_1_12_0
+		SubVersion : numerical
+			Namespace : minecraft
+			Namespace : other_namespace
+		SubVersion : blockstate
+			Namespace : minecraft
+			Namespace : other_namespace
+			
+	Version : java_1_13_0
+		SubVersion : blockstate
+			Namespace : minecraft
+			Namespace : other_namespace
+			
+	Version : universal
+		SubVersion : blockstate
+			Namespace : minecraft
+			Namespace : other_namespace
+"""
 
 
-def files(path):
-	return (dir_name for dir_name in os.listdir(path) if os.path.isfile(f'{path}/{dir_name}'))
+def directories(path: str) -> Generator[str, None, None]:
+	"""
+	A generator of only directories in the given directory
+	:param path: str: the path to an existing directory on the current system
+	"""
+	for dir_name in os.listdir(path):
+		if os.path.isdir(f'{path}/{dir_name}'):
+			yield dir_name
+
+
+def files(path: str) -> Generator[str, None, None]:
+	"""
+	A generator of only files in the given directory
+	:param path: str: the path to an existing directory on the current system
+	"""
+	for file_name in os.listdir(path):
+		if os.path.isfile(f'{path}/{file_name}'):
+			yield file_name
 
 
 class VersionContainer:
@@ -42,6 +86,9 @@ class VersionContainer:
 
 
 class Version:
+	"""
+	Container for the data from each game and platform version. Not to be mistaken with SubVersion
+	"""
 	def __init__(self, version_path: str, version_container: VersionContainer):
 		if os.path.isfile(f'{version_path}/__init__.json'):
 			with open(f'{version_path}/__init__.json') as f:
@@ -98,6 +145,11 @@ class Version:
 
 
 class SubVersion:
+	"""
+	Within each unique game version there may be more than one format
+	(if it is numerical or pseudo-numerical it will have both a numerical and blockstate format)
+	This is the container where that data will be stored.
+	"""
 	def __init__(self, sub_version_path: str, version_container: VersionContainer):
 		self.namespaces = {}
 		for namespace in directories(sub_version_path):
@@ -123,6 +175,9 @@ class SubVersion:
 
 
 class Namespace:
+	"""
+	Container for each namespace
+	"""
 	def __init__(self, namespace_path: str, namespace: str, version_container: VersionContainer, current_version: SubVersion):
 		self._namespace = namespace
 		self.version_container = version_container
@@ -160,7 +215,7 @@ class Namespace:
 			print(f'Failed converting blockstate to universal\n{e}')
 			return blockstate
 
-	def from_universal(self, block_name, properties):
+	def from_universal(self, block_name: str, properties: Dict[str, str]):
 		blockstate = {"block_name": f"{self.namespace}/{block_name}", "properties": properties}
 		try:
 			return self.convert(
