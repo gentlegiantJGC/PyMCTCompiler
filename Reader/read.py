@@ -74,15 +74,15 @@ class VersionContainer:
 	def versions(self) -> dict:
 		return self._versions
 
-	def get_version(self, platform: str, version_number: Tuple[int, int, int]) -> 'Version':
+	def get(self, platform: str, version_number: Tuple[int, int, int]) -> 'Version':
 		assert platform in self.versions and version_number in self.versions[platform]
 		return self.versions[platform][version_number]
 
 	def to_universal(self, level, platform: str, version_number: Tuple[int, int, int], namespace: str, block_id: str, properties: Dict[str, str], force_blockstate: bool = False):
-		return self.get_version(platform, version_number).to_universal(level, namespace, block_id, properties, force_blockstate)
+		return self.get(platform, version_number).to_universal(level, namespace, block_id, properties, force_blockstate)
 
 	def from_universal(self, level, platform: str, version_number: Tuple[int, int, int], namespace: str, block_id: str, properties: Dict[str, str], force_blockstate: bool = False):
-		return self.get_version(platform, version_number).from_universal(level, namespace, block_id, properties, force_blockstate)
+		return self.get(platform, version_number).from_universal(level, namespace, block_id, properties, force_blockstate)
 
 
 class Version:
@@ -130,7 +130,7 @@ class Version:
 	def version_number(self) -> Tuple[int, int, int]:
 		return self._version_number
 
-	def get_format(self, force_blockstate: bool = False) -> 'SubVersion':
+	def get(self, force_blockstate: bool = False) -> 'SubVersion':
 		if force_blockstate:
 			return self._subversions["blockstate"]
 		else:
@@ -142,11 +142,11 @@ class Version:
 	def to_universal(self, level, namespace: str, block_name: str, properties: Dict[str, str], force_blockstate: bool = False):
 		if self.format == "numerical" and not force_blockstate:
 			namespace, block_name = self._numerical_map[block_name].split(':')
-		blockstate = self.get_format(force_blockstate).to_universal(level, namespace, block_name, properties)
+		blockstate = self.get(force_blockstate).to_universal(level, namespace, block_name, properties)
 		return blockstate
 
 	def from_universal(self, level, namespace: str, block_name: str, properties: Dict[str, str], force_blockstate: bool = False):
-		blockstate = self.get_format(force_blockstate).from_universal(level, namespace, block_name, properties)
+		blockstate = self.get(force_blockstate).from_universal(level, namespace, block_name, properties)
 		if self.format == "numerical":
 			blockstate["block_name"] = self._numerical_map_inverse[blockstate["block_name"]]
 		return blockstate
@@ -165,19 +165,19 @@ class SubVersion:
 
 	def to_universal(self, level, namespace: str, block_name: str, properties: Dict[str, str]):
 		try:
-			return self.get_namespace(namespace).to_universal(level, block_name, properties)
+			return self.get(namespace).to_universal(level, block_name, properties)
 		except Exception as e:
 			print(f'Failed getting namespace. It may not exist.\n{e}')
 			return {"block_name": f"{namespace}/{block_name}", "properties": properties}
 
 	def from_universal(self, level, namespace: str, block_name: str, properties: Dict[str, str]):
 		try:
-			return self.get_namespace(namespace).from_universal(level, block_name, properties)
+			return self.get(namespace).from_universal(level, block_name, properties)
 		except Exception as e:
 			print(f'Failed getting namespace. It may not exist.\n{e}')
 			return {"block_name": f"{namespace}/{block_name}", "properties": properties}
 
-	def get_namespace(self, namespace: str) -> 'Namespace':
+	def get(self, namespace: str) -> 'Namespace':
 		assert namespace in self.namespaces
 		return self.namespaces[namespace]
 
@@ -218,7 +218,7 @@ class Namespace:
 				level,
 				blockstate,
 				self._blocks["to_universal"][block_name],
-				self.version_container.get_version('universal', (1, 0, 0)).get_format()
+				self.version_container.get('universal', (1, 0, 0)).get()
 			)
 			if blockstate["nbt"] != {}:
 				print(f'universal mappings should not have nbt: {blockstate}')
@@ -265,7 +265,7 @@ class Namespace:
 			assert isinstance(mappings["new_block"], str)
 			output_blockstate["block_name"] = mappings["new_block"]
 			namespace, block_name = output_blockstate["block_name"].split(':')
-			output_blockstate["properties"] = output_version.get_namespace(namespace).get_specification(block_name).get("defaults", {})
+			output_blockstate["properties"] = output_version.get(namespace).get_specification(block_name).get("defaults", {})
 
 		"multiblock"
 
