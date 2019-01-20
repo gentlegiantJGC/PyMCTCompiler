@@ -1,7 +1,7 @@
 {
 	"air": "air",
 	"stone": "stone+",
-	"grass_block": "grass_block",
+	"grass_block": "grass_block_java",
 	"dirt": "dirt+coarse+podzol",
 	"cobblestone": "cobblestone",
 	"planks": "planks",

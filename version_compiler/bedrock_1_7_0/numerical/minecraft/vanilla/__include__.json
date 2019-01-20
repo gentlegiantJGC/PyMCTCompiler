@@ -1,7 +1,7 @@
 {
 	"air": "air",
 	"stone": "stone+",
-	"grass_block": "grass_block",
+	"grass_block": "grass_block_bedrock",
 	"dirt": "dirt+coarse",
 	"cobblestone": "cobblestone",
 	"planks": "planks",
