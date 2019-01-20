@@ -216,7 +216,7 @@ class Namespace:
 		return self._blocks['from_universal'][block_name]
 
 	def to_universal(self, level, block_name: str, properties: Dict[str, str], location: Tuple[int, int, int] = None):
-		blockstate = {'block_name': f'{self.namespace}/{block_name}', 'properties': properties}
+		blockstate = {'block_name': f'{self.namespace}:{block_name}', 'properties': properties}
 		extra = False
 		try:
 			blockstate, extra = self.convert(
@@ -235,7 +235,7 @@ class Namespace:
 		return blockstate, extra
 
 	def from_universal(self, level, block_name: str, properties: Dict[str, str]):
-		blockstate = {'block_name': f'{self.namespace}/{block_name}', 'properties': properties}
+		blockstate = {'block_name': f'{self.namespace}:{block_name}', 'properties': properties}
 		try:
 			return self.convert(
 				level,
@@ -259,7 +259,7 @@ class Namespace:
 			:param location: (x, y, z) only used if data beyond the blockstate is needed
 			:return: The converted blockstate
 		"""
-		spec = self.get_specification(input_blockstate['block_name'])
+		spec = self.get_specification(input_blockstate['block_name'].split(':')[-1])
 		if 'nbt' in spec:
 			if location is None:
 				return input_blockstate, True
@@ -284,7 +284,7 @@ class Namespace:
 								'double': 'TAG_Double',
 								'string': 'TAG_String'
 							}[dtype]
-						input_blockstate['nbt'][key] = _nbt.value
+						input_blockstate['nbt'][key] = str(_nbt.value)
 					except:
 						input_blockstate['nbt'][key] = spec['nbt'][key]['default']
 
