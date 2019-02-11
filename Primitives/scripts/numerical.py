@@ -1031,3 +1031,107 @@ def piston_bedrock(namespace: str, block_name: str) -> dict:
 			}
 		}
 	}
+
+
+def colour(namespace: str, block_name: str) -> dict:
+	return {
+		"to_universal": {
+			"new_block": f"{namespace}:{block_name}",
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_properties": {
+							"color": ["white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"][data]
+						}
+					} for data in range(16)
+				}
+			}
+		},
+		"from_universal": {
+			f"{namespace}:{block_name}": {
+				"new_block": f"{namespace}:{block_name}",
+				"map_properties": {
+					"color": {
+						color: {
+							"new_properties": {
+								"block_data": str(data)
+							}
+						} for data, color in enumerate(["white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"])
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"color": [
+					"white",
+					"orange",
+					"magenta",
+					"light_blue",
+					"yellow",
+					"lime",
+					"pink",
+					"gray",
+					"light_gray",
+					"cyan",
+					"purple",
+					"blue",
+					"brown",
+					"green",
+					"red",
+					"black"
+				]
+			},
+			"defaults": {
+				"color": "white"
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": f"{namespace}:{block_name}",
+			"carry_properties": {
+				"color": [
+					"white",
+					"orange",
+					"magenta",
+					"light_blue",
+					"yellow",
+					"lime",
+					"pink",
+					"gray",
+					"light_gray",
+					"cyan",
+					"purple",
+					"blue",
+					"brown",
+					"green",
+					"red",
+					"black"
+				]
+			}
+		},
+		"blockstate_from_universal": {
+			f"{namespace}:{block_name}": {
+				"new_block": f"{namespace}:{block_name}",
+				"carry_properties": {
+					"color": [
+						"white",
+						"orange",
+						"magenta",
+						"light_blue",
+						"yellow",
+						"lime",
+						"pink",
+						"gray",
+						"light_gray",
+						"cyan",
+						"purple",
+						"blue",
+						"brown",
+						"green",
+						"red",
+						"black"
+					]
+				}
+			}
+		}
+	}
