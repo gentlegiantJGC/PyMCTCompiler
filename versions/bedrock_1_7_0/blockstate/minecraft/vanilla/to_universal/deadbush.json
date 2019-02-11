@@ -1,3 +1,6 @@
 {
-    "new_block": "minecraft:deadbush"
+    "new_block": "minecraft:plant",
+    "new_properties": {
+        "type": "dead_bush"
+    }
 }

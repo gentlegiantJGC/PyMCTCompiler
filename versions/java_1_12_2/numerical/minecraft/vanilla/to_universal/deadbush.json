@@ -2,7 +2,10 @@
     "map_properties": {
         "block_data": {
             "0": {
-                "new_block": "minecraft:deadbush"
+                "new_block": "minecraft:plant",
+                "new_properties": {
+                    "type": "dead_bush"
+                }
             }
         }
     }

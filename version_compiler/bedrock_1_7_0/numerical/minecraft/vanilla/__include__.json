@@ -30,7 +30,7 @@
 	"detector_rail": "detector_rail",
 	"sticky_piston": "sticky_piston_bedrock",
 	"web": "web",
-
+	"tallgrass": "grass_bedrock",
 	"deadbush": "deadbush",
 	"piston": "piston_bedrock",
 	"pistonarmcollision": "piston_head_bedrock",

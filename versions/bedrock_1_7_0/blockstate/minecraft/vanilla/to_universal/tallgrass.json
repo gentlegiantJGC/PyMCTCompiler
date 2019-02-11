@@ -1,0 +1,18 @@
+{
+    "map_properties": {
+        "type": {
+            "grass": {
+                "new_block": "minecraft:plant",
+                "new_properties": {
+                    "type": "grass"
+                }
+            },
+            "fern": {
+                "new_block": "minecraft:plant",
+                "new_properties": {
+                    "type": "fern"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "map_properties": {
+        "type": {
+            "dead_bush": {
+                "new_block": "minecraft:deadbush",
+                "new_properties": {
+                    "block_data": "0"
+                }
+            }
+        }
+    }
+}
