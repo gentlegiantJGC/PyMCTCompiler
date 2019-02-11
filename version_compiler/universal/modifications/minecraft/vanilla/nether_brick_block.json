@@ -1,0 +1,8 @@
+{
+	"remove": [
+		"nether_bricks"
+	],
+	"add": {
+		"nether_brick_block": {}
+	}
+}
