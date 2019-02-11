@@ -120,6 +120,8 @@ def process_version(version_name: str, file_format: str):
 				if isdir(f'{version_name}/{file_format}/{namespace}/{sub_name}'):
 					if '__include__.json' in listdir(f'{version_name}/{file_format}/{namespace}/{sub_name}'):
 						for block_file_name, primitive_block_name in load_file(f'{version_name}/{file_format}/{namespace}/{sub_name}/__include__.json').items():
+							if primitive_block_name is None:
+								continue
 							try:
 								process_file(file_format, Primitives.get_block(file_format, primitive_block_name), version_name, namespace, sub_name, block_file_name)
 							except Exception as e:
