@@ -3,6 +3,9 @@
         "type": {
             "dead_bush": {
                 "new_block": "minecraft:deadbush"
+            },
+            "dandelion": {
+                "new_block": "minecraft:yellow_flower"
             }
         }
     }

@@ -1,3 +1,6 @@
 {
-    "new_block": "minecraft:yellow_flower"
+    "new_block": "minecraft:plant",
+    "new_properties": {
+        "type": "dandelion"
+    }
 }

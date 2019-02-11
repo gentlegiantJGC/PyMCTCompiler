@@ -1,0 +1,60 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "minecraft:plant",
+                "new_properties": {
+                    "type": "poppy"
+                }
+            },
+            "1": {
+                "new_block": "minecraft:plant",
+                "new_properties": {
+                    "type": "blue_orchid"
+                }
+            },
+            "2": {
+                "new_block": "minecraft:plant",
+                "new_properties": {
+                    "type": "allium"
+                }
+            },
+            "3": {
+                "new_block": "minecraft:plant",
+                "new_properties": {
+                    "type": "azure_bluet"
+                }
+            },
+            "4": {
+                "new_block": "minecraft:plant",
+                "new_properties": {
+                    "type": "red_tulip"
+                }
+            },
+            "5": {
+                "new_block": "minecraft:plant",
+                "new_properties": {
+                    "type": "orange_tulip"
+                }
+            },
+            "6": {
+                "new_block": "minecraft:plant",
+                "new_properties": {
+                    "type": "white_tulip"
+                }
+            },
+            "7": {
+                "new_block": "minecraft:plant",
+                "new_properties": {
+                    "type": "pink_tulip"
+                }
+            },
+            "8": {
+                "new_block": "minecraft:plant",
+                "new_properties": {
+                    "type": "oxeye_daisy"
+                }
+            }
+        }
+    }
+}

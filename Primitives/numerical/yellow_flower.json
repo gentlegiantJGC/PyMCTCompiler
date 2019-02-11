@@ -1,0 +1,45 @@
+{
+	"to_universal": {
+		"map_properties": {
+			"block_data": {
+				"0": {
+					"new_block": "minecraft:plant",
+					"new_properties": {
+						"type": "dandelion"
+					}
+				}
+			}
+		}
+	},
+	"from_universal": {
+		"minecraft:plant": {
+			"map_properties": {
+				"type": {
+					"dandelion": {
+						"new_block": "minecraft:yellow_flower",
+						"new_properties": {
+							"block_data": "0"
+						}
+					}
+				}
+			}
+		}
+	},
+	"blockstate_to_universal": {
+		"new_block": "minecraft:plant",
+		"new_properties": {
+			"type": "dandelion"
+		}
+	},
+	"blockstate_from_universal": {
+		"minecraft:plant": {
+			"map_properties": {
+				"type": {
+					"dandelion": {
+						"new_block": "minecraft:yellow_flower"
+					}
+				}
+			}
+		}
+	}
+}
