@@ -1,0 +1,15 @@
+{
+    "new_block": "minecraft:slab",
+    "carry_properties": {
+        "block": [
+            "red_sandstone",
+            "purpur",
+            "prismarine",
+            "prismarine_brick",
+            "dark_prismarine"
+        ]
+    },
+    "new_properties": {
+        "type": "double"
+    }
+}

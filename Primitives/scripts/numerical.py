@@ -1139,3 +1139,82 @@ def colour(input_namespace: str, input_block_name: str, universal_namespace: str
 			}
 		}
 	}
+
+
+def double_slab(input_namespace: str, input_block_name: str, block_types: list, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	return {
+		"to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_properties": {
+							"block": block,
+							"type": "double"
+						}
+					} for data, block in enumerate(block_types)
+				}
+			}
+		},
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"map_properties": {
+					"type": {
+						"double": {
+							"map_properties": {
+								"block": {
+									block: {
+										"new_block": f"{input_namespace}:{input_block_name}",
+										"new_properties": {
+											"block_data": str(data)
+										}
+									} for data, block in enumerate(block_types)
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"block": block_types
+			},
+			"defaults": {
+				"block": block_types[0]
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"carry_properties": {
+				"block": block_types
+			},
+			"new_properties": {
+				"type": "double"
+			}
+		},
+		"blockstate_from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"map_properties": {
+					"type": {
+						"double": {
+							"map_properties": {
+								"block": {
+									block: {
+										"new_block": f"{input_namespace}:{input_block_name}",
+										"new_properties": {
+											"type": block
+										}
+									} for block in block_types
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}

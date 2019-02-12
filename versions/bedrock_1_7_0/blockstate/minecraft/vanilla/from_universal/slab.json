@@ -1,0 +1,126 @@
+{
+    "map_properties": {
+        "type": {
+            "double": {
+                "map_properties": {
+                    "block": {
+                        "stone": {
+                            "new_block": "minecraft:double_stone_slab",
+                            "new_properties": {
+                                "type": "stone"
+                            }
+                        },
+                        "sandstone": {
+                            "new_block": "minecraft:double_stone_slab",
+                            "new_properties": {
+                                "type": "sandstone"
+                            }
+                        },
+                        "petrified_oak_slab": {
+                            "new_block": "minecraft:double_stone_slab",
+                            "new_properties": {
+                                "type": "petrified_oak_slab"
+                            }
+                        },
+                        "cobblestone": {
+                            "new_block": "minecraft:double_stone_slab",
+                            "new_properties": {
+                                "type": "cobblestone"
+                            }
+                        },
+                        "brick": {
+                            "new_block": "minecraft:double_stone_slab",
+                            "new_properties": {
+                                "type": "brick"
+                            }
+                        },
+                        "stone_brick": {
+                            "new_block": "minecraft:double_stone_slab",
+                            "new_properties": {
+                                "type": "stone_brick"
+                            }
+                        },
+                        "quartz": {
+                            "new_block": "minecraft:double_stone_slab",
+                            "new_properties": {
+                                "type": "quartz"
+                            }
+                        },
+                        "nether_brick": {
+                            "new_block": "minecraft:double_stone_slab",
+                            "new_properties": {
+                                "type": "nether_brick"
+                            }
+                        },
+                        "oak": {
+                            "new_block": "minecraft:double_wooden_slab",
+                            "new_properties": {
+                                "type": "oak"
+                            }
+                        },
+                        "spruce": {
+                            "new_block": "minecraft:double_wooden_slab",
+                            "new_properties": {
+                                "type": "spruce"
+                            }
+                        },
+                        "birch": {
+                            "new_block": "minecraft:double_wooden_slab",
+                            "new_properties": {
+                                "type": "birch"
+                            }
+                        },
+                        "jungle": {
+                            "new_block": "minecraft:double_wooden_slab",
+                            "new_properties": {
+                                "type": "jungle"
+                            }
+                        },
+                        "acacia": {
+                            "new_block": "minecraft:double_wooden_slab",
+                            "new_properties": {
+                                "type": "acacia"
+                            }
+                        },
+                        "dark_oak": {
+                            "new_block": "minecraft:double_wooden_slab",
+                            "new_properties": {
+                                "type": "dark_oak"
+                            }
+                        },
+                        "red_sandstone": {
+                            "new_block": "minecraft:double_stone_slab2",
+                            "new_properties": {
+                                "type": "red_sandstone"
+                            }
+                        },
+                        "purpur": {
+                            "new_block": "minecraft:double_stone_slab2",
+                            "new_properties": {
+                                "type": "purpur"
+                            }
+                        },
+                        "prismarine": {
+                            "new_block": "minecraft:double_stone_slab2",
+                            "new_properties": {
+                                "type": "prismarine"
+                            }
+                        },
+                        "prismarine_brick": {
+                            "new_block": "minecraft:double_stone_slab2",
+                            "new_properties": {
+                                "type": "prismarine_brick"
+                            }
+                        },
+                        "dark_prismarine": {
+                            "new_block": "minecraft:double_stone_slab2",
+                            "new_properties": {
+                                "type": "dark_prismarine"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

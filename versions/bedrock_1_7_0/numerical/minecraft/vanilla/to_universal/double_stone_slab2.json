@@ -1,0 +1,37 @@
+{
+    "new_block": "minecraft:slab",
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_properties": {
+                    "block": "red_sandstone",
+                    "type": "double"
+                }
+            },
+            "1": {
+                "new_properties": {
+                    "block": "purpur",
+                    "type": "double"
+                }
+            },
+            "2": {
+                "new_properties": {
+                    "block": "prismarine",
+                    "type": "double"
+                }
+            },
+            "3": {
+                "new_properties": {
+                    "block": "prismarine_brick",
+                    "type": "double"
+                }
+            },
+            "4": {
+                "new_properties": {
+                    "block": "dark_prismarine",
+                    "type": "double"
+                }
+            }
+        }
+    }
+}

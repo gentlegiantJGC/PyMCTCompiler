@@ -1,0 +1,18 @@
+{
+    "new_block": "minecraft:slab",
+    "carry_properties": {
+        "block": [
+            "stone",
+            "sandstone",
+            "petrified_oak_slab",
+            "cobblestone",
+            "brick",
+            "stone_brick",
+            "quartz",
+            "nether_brick"
+        ]
+    },
+    "new_properties": {
+        "type": "double"
+    }
+}
