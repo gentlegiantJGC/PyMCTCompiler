@@ -1,0 +1,16 @@
+{
+    "new_block": "minecraft:stairs",
+    "carry_properties": {
+        "material": "purpur",
+        "facing": [
+            "north",
+            "east",
+            "south",
+            "west"
+        ],
+        "half": [
+            "bottom",
+            "top"
+        ]
+    }
+}

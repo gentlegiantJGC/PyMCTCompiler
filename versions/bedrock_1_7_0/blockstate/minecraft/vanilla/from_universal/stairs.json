@@ -1,0 +1,261 @@
+{
+    "map_properties": {
+        "material": {
+            "oak": {
+                "new_block": "minecraft:oak_stairs",
+                "carry_properties": {
+                    "facing": [
+                        "north",
+                        "east",
+                        "south",
+                        "west"
+                    ],
+                    "half": [
+                        "bottom",
+                        "top"
+                    ]
+                }
+            },
+            "cobblestone": {
+                "new_block": "minecraft:stone_stairs",
+                "carry_properties": {
+                    "facing": [
+                        "north",
+                        "east",
+                        "south",
+                        "west"
+                    ],
+                    "half": [
+                        "bottom",
+                        "top"
+                    ]
+                }
+            },
+            "brick": {
+                "new_block": "minecraft:brick_stairs",
+                "carry_properties": {
+                    "facing": [
+                        "north",
+                        "east",
+                        "south",
+                        "west"
+                    ],
+                    "half": [
+                        "bottom",
+                        "top"
+                    ]
+                }
+            },
+            "stone_brick": {
+                "new_block": "minecraft:stone_brick_stairs",
+                "carry_properties": {
+                    "facing": [
+                        "north",
+                        "east",
+                        "south",
+                        "west"
+                    ],
+                    "half": [
+                        "bottom",
+                        "top"
+                    ]
+                }
+            },
+            "nether_brick": {
+                "new_block": "minecraft:nether_brick_stairs",
+                "carry_properties": {
+                    "facing": [
+                        "north",
+                        "east",
+                        "south",
+                        "west"
+                    ],
+                    "half": [
+                        "bottom",
+                        "top"
+                    ]
+                }
+            },
+            "sandstone": {
+                "new_block": "minecraft:sandstone_stairs",
+                "carry_properties": {
+                    "facing": [
+                        "north",
+                        "east",
+                        "south",
+                        "west"
+                    ],
+                    "half": [
+                        "bottom",
+                        "top"
+                    ]
+                }
+            },
+            "spruce": {
+                "new_block": "minecraft:spruce_stairs",
+                "carry_properties": {
+                    "facing": [
+                        "north",
+                        "east",
+                        "south",
+                        "west"
+                    ],
+                    "half": [
+                        "bottom",
+                        "top"
+                    ]
+                }
+            },
+            "birch": {
+                "new_block": "minecraft:birch_stairs",
+                "carry_properties": {
+                    "facing": [
+                        "north",
+                        "east",
+                        "south",
+                        "west"
+                    ],
+                    "half": [
+                        "bottom",
+                        "top"
+                    ]
+                }
+            },
+            "jungle": {
+                "new_block": "minecraft:jungle_stairs",
+                "carry_properties": {
+                    "facing": [
+                        "north",
+                        "east",
+                        "south",
+                        "west"
+                    ],
+                    "half": [
+                        "bottom",
+                        "top"
+                    ]
+                }
+            },
+            "quartz": {
+                "new_block": "minecraft:quartz_stairs",
+                "carry_properties": {
+                    "facing": [
+                        "north",
+                        "east",
+                        "south",
+                        "west"
+                    ],
+                    "half": [
+                        "bottom",
+                        "top"
+                    ]
+                }
+            },
+            "acacia": {
+                "new_block": "minecraft:acacia_stairs",
+                "carry_properties": {
+                    "facing": [
+                        "north",
+                        "east",
+                        "south",
+                        "west"
+                    ],
+                    "half": [
+                        "bottom",
+                        "top"
+                    ]
+                }
+            },
+            "dark_oak": {
+                "new_block": "minecraft:dark_oak_stairs",
+                "carry_properties": {
+                    "facing": [
+                        "north",
+                        "east",
+                        "south",
+                        "west"
+                    ],
+                    "half": [
+                        "bottom",
+                        "top"
+                    ]
+                }
+            },
+            "red_sandstone": {
+                "new_block": "minecraft:red_sandstone_stairs",
+                "carry_properties": {
+                    "facing": [
+                        "north",
+                        "east",
+                        "south",
+                        "west"
+                    ],
+                    "half": [
+                        "bottom",
+                        "top"
+                    ]
+                }
+            },
+            "purpur": {
+                "new_block": "minecraft:purpur_stairs",
+                "carry_properties": {
+                    "facing": [
+                        "north",
+                        "east",
+                        "south",
+                        "west"
+                    ],
+                    "half": [
+                        "bottom",
+                        "top"
+                    ]
+                }
+            },
+            "prismarine": {
+                "new_block": "minecraft:prismarine_stairs",
+                "carry_properties": {
+                    "facing": [
+                        "north",
+                        "east",
+                        "south",
+                        "west"
+                    ],
+                    "half": [
+                        "bottom",
+                        "top"
+                    ]
+                }
+            },
+            "dark_prismarine": {
+                "new_block": "minecraft:dark_prismarine_stairs",
+                "carry_properties": {
+                    "facing": [
+                        "north",
+                        "east",
+                        "south",
+                        "west"
+                    ],
+                    "half": [
+                        "bottom",
+                        "top"
+                    ]
+                }
+            },
+            "prismarine_brick": {
+                "new_block": "minecraft:prismarine_bricks_stairs",
+                "carry_properties": {
+                    "facing": [
+                        "north",
+                        "east",
+                        "south",
+                        "west"
+                    ],
+                    "half": [
+                        "bottom",
+                        "top"
+                    ]
+                }
+            }
+        }
+    }
+}

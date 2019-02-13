@@ -1298,3 +1298,85 @@ def slab(input_namespace: str, input_block_name: str, block_types: list, univers
 			}
 		}
 	}
+
+
+def stairs(input_namespace: str, input_block_name: str, material, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	return {
+		"to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_properties": {
+							"material": material,
+							"facing": ["east", "west", "south", "north"][data % 4],
+							"half": {0: "bottom", 4: "top"}[data & 4]
+						}
+					} for data in range(8)
+				}
+			}
+		},
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"map_properties": {
+					"material": {
+						material: {
+							"map_properties": {
+								"half": {
+									half: {
+										"map_properties": {
+											"facing": {
+												facing: {
+													"new_block": f"{input_namespace}:{input_block_name}",
+													"new_properties": {
+														"block_data": str(data3 + data4 * 4)
+													}
+												} for data3, facing in enumerate(["east", "west", "south", "north"])
+											}
+										}
+									} for data4, half in enumerate(["bottom", "top"])
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"facing": ["north", "east", "south", "west"],
+				"half": ["bottom", "top"]
+			},
+			"defaults": {
+				"facing": "north",
+				"half": "bottom"
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"carry_properties": {
+				"material": material,
+				"facing": ["north", "east", "south", "west"],
+				"half": ["bottom", "top"]
+			}
+		},
+		"blockstate_from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"map_properties": {
+					"material": {
+						material: {
+							"new_block": f"{input_namespace}:{input_block_name}",
+							"carry_properties": {
+								"facing": ["north", "east", "south", "west"],
+								"half": ["bottom", "top"]
+							}
+						}
+					}
+				}
+			}
+		}
+	}

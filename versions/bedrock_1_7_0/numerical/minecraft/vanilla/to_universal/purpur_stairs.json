@@ -1,0 +1,63 @@
+{
+    "new_block": "minecraft:stairs",
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_properties": {
+                    "material": "purpur",
+                    "facing": "east",
+                    "half": "bottom"
+                }
+            },
+            "1": {
+                "new_properties": {
+                    "material": "purpur",
+                    "facing": "west",
+                    "half": "bottom"
+                }
+            },
+            "2": {
+                "new_properties": {
+                    "material": "purpur",
+                    "facing": "south",
+                    "half": "bottom"
+                }
+            },
+            "3": {
+                "new_properties": {
+                    "material": "purpur",
+                    "facing": "north",
+                    "half": "bottom"
+                }
+            },
+            "4": {
+                "new_properties": {
+                    "material": "purpur",
+                    "facing": "east",
+                    "half": "top"
+                }
+            },
+            "5": {
+                "new_properties": {
+                    "material": "purpur",
+                    "facing": "west",
+                    "half": "top"
+                }
+            },
+            "6": {
+                "new_properties": {
+                    "material": "purpur",
+                    "facing": "south",
+                    "half": "top"
+                }
+            },
+            "7": {
+                "new_properties": {
+                    "material": "purpur",
+                    "facing": "north",
+                    "half": "top"
+                }
+            }
+        }
+    }
+}
