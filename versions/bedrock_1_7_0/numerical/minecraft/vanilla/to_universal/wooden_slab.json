@@ -1,0 +1,79 @@
+{
+    "new_block": "minecraft:slab",
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_properties": {
+                    "block": "oak",
+                    "type": "bottom"
+                }
+            },
+            "1": {
+                "new_properties": {
+                    "block": "spruce",
+                    "type": "bottom"
+                }
+            },
+            "2": {
+                "new_properties": {
+                    "block": "birch",
+                    "type": "bottom"
+                }
+            },
+            "3": {
+                "new_properties": {
+                    "block": "jungle",
+                    "type": "bottom"
+                }
+            },
+            "4": {
+                "new_properties": {
+                    "block": "acacia",
+                    "type": "bottom"
+                }
+            },
+            "5": {
+                "new_properties": {
+                    "block": "dark_oak",
+                    "type": "bottom"
+                }
+            },
+            "8": {
+                "new_properties": {
+                    "block": "oak",
+                    "type": "top"
+                }
+            },
+            "9": {
+                "new_properties": {
+                    "block": "spruce",
+                    "type": "top"
+                }
+            },
+            "10": {
+                "new_properties": {
+                    "block": "birch",
+                    "type": "top"
+                }
+            },
+            "11": {
+                "new_properties": {
+                    "block": "jungle",
+                    "type": "top"
+                }
+            },
+            "12": {
+                "new_properties": {
+                    "block": "acacia",
+                    "type": "top"
+                }
+            },
+            "13": {
+                "new_properties": {
+                    "block": "dark_oak",
+                    "type": "top"
+                }
+            }
+        }
+    }
+}

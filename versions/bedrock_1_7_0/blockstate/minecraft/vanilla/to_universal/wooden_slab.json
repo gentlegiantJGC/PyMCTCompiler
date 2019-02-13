@@ -1,0 +1,17 @@
+{
+    "new_block": "minecraft:slab",
+    "carry_properties": {
+        "block": [
+            "oak",
+            "spruce",
+            "birch",
+            "jungle",
+            "acacia",
+            "dark_oak"
+        ],
+        "type": [
+            "bottom",
+            "top"
+        ]
+    }
+}

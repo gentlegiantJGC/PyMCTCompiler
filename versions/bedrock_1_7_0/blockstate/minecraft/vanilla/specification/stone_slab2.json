@@ -1,0 +1,19 @@
+{
+    "properties": {
+        "block": [
+            "red_sandstone",
+            "purpur",
+            "prismarine",
+            "prismarine_brick",
+            "dark_prismarine"
+        ],
+        "type": [
+            "bottom",
+            "top"
+        ]
+    },
+    "defaults": {
+        "block": "red_sandstone",
+        "type": "bottom"
+    }
+}

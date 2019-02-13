@@ -1,0 +1,103 @@
+{
+    "new_block": "minecraft:slab",
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_properties": {
+                    "block": "stone",
+                    "type": "bottom"
+                }
+            },
+            "1": {
+                "new_properties": {
+                    "block": "sandstone",
+                    "type": "bottom"
+                }
+            },
+            "2": {
+                "new_properties": {
+                    "block": "petrified_oak_slab",
+                    "type": "bottom"
+                }
+            },
+            "3": {
+                "new_properties": {
+                    "block": "cobblestone",
+                    "type": "bottom"
+                }
+            },
+            "4": {
+                "new_properties": {
+                    "block": "brick",
+                    "type": "bottom"
+                }
+            },
+            "5": {
+                "new_properties": {
+                    "block": "stone_brick",
+                    "type": "bottom"
+                }
+            },
+            "6": {
+                "new_properties": {
+                    "block": "quartz",
+                    "type": "bottom"
+                }
+            },
+            "7": {
+                "new_properties": {
+                    "block": "nether_brick",
+                    "type": "bottom"
+                }
+            },
+            "8": {
+                "new_properties": {
+                    "block": "stone",
+                    "type": "top"
+                }
+            },
+            "9": {
+                "new_properties": {
+                    "block": "sandstone",
+                    "type": "top"
+                }
+            },
+            "10": {
+                "new_properties": {
+                    "block": "petrified_oak_slab",
+                    "type": "top"
+                }
+            },
+            "11": {
+                "new_properties": {
+                    "block": "cobblestone",
+                    "type": "top"
+                }
+            },
+            "12": {
+                "new_properties": {
+                    "block": "brick",
+                    "type": "top"
+                }
+            },
+            "13": {
+                "new_properties": {
+                    "block": "stone_brick",
+                    "type": "top"
+                }
+            },
+            "14": {
+                "new_properties": {
+                    "block": "quartz",
+                    "type": "top"
+                }
+            },
+            "15": {
+                "new_properties": {
+                    "block": "nether_brick",
+                    "type": "top"
+                }
+            }
+        }
+    }
+}
