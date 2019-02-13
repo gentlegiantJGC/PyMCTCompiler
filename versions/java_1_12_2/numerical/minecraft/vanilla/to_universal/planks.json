@@ -4,37 +4,37 @@
             "0": {
                 "new_block": "minecraft:planks",
                 "new_properties": {
-                    "block": "oak"
+                    "material": "oak"
                 }
             },
             "1": {
                 "new_block": "minecraft:planks",
                 "new_properties": {
-                    "block": "spruce"
+                    "material": "spruce"
                 }
             },
             "2": {
                 "new_block": "minecraft:planks",
                 "new_properties": {
-                    "block": "birch"
+                    "material": "birch"
                 }
             },
             "3": {
                 "new_block": "minecraft:planks",
                 "new_properties": {
-                    "block": "jungle"
+                    "material": "jungle"
                 }
             },
             "4": {
                 "new_block": "minecraft:planks",
                 "new_properties": {
-                    "block": "acacia"
+                    "material": "acacia"
                 }
             },
             "5": {
                 "new_block": "minecraft:planks",
                 "new_properties": {
-                    "block": "dark_oak"
+                    "material": "dark_oak"
                 }
             }
         }

@@ -1,6 +1,6 @@
 {
     "properties": {
-        "block": [
+        "material": [
             "oak",
             "spruce",
             "birch",
@@ -19,7 +19,7 @@
         ]
     },
     "defaults": {
-        "block": "oak",
+        "material": "oak",
         "axis": "y",
         "stripped": "false"
     }

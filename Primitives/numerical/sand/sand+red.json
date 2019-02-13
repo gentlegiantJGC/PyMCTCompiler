@@ -27,18 +27,18 @@
 	},
 	"blockstate_specification": {
 		"properties": {
-	        "block": [
+	        "material": [
 	            "sand",
 	            "red_sand"
 	        ]
 	    },
 	    "defaults": {
-	        "block": "sand"
+	        "material": "sand"
 	    }
 	},
 	"blockstate_to_universal" :{
 		"map_properties": {
-			"block": {
+			"material": {
 				"sand": {
 					"new_block": "minecraft:sand"
 				},
@@ -52,13 +52,13 @@
 		"minecraft:sand": {
 			"new_block": "minecraft:sand",
 			"new_properties": {
-				"block": "sand"
+				"material": "sand"
 			}
 		},
 		"minecraft:red_sand": {
 			"new_block": "minecraft:sand",
 			"new_properties": {
-				"block": "red_sand"
+				"material": "red_sand"
 			}
 		}
 	}

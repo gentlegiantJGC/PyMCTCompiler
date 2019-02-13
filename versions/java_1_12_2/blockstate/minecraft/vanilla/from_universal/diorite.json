@@ -4,13 +4,13 @@
             "false": {
                 "new_block": "minecraft:stone",
                 "new_properties": {
-                    "block": "diorite"
+                    "material": "diorite"
                 }
             },
             "true": {
                 "new_block": "minecraft:stone",
                 "new_properties": {
-                    "block": "polished_diorite"
+                    "material": "polished_diorite"
                 }
             }
         }

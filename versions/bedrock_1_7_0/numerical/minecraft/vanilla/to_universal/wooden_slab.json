@@ -4,73 +4,73 @@
         "block_data": {
             "0": {
                 "new_properties": {
-                    "block": "oak",
+                    "material": "oak",
                     "type": "bottom"
                 }
             },
             "1": {
                 "new_properties": {
-                    "block": "spruce",
+                    "material": "spruce",
                     "type": "bottom"
                 }
             },
             "2": {
                 "new_properties": {
-                    "block": "birch",
+                    "material": "birch",
                     "type": "bottom"
                 }
             },
             "3": {
                 "new_properties": {
-                    "block": "jungle",
+                    "material": "jungle",
                     "type": "bottom"
                 }
             },
             "4": {
                 "new_properties": {
-                    "block": "acacia",
+                    "material": "acacia",
                     "type": "bottom"
                 }
             },
             "5": {
                 "new_properties": {
-                    "block": "dark_oak",
+                    "material": "dark_oak",
                     "type": "bottom"
                 }
             },
             "8": {
                 "new_properties": {
-                    "block": "oak",
+                    "material": "oak",
                     "type": "top"
                 }
             },
             "9": {
                 "new_properties": {
-                    "block": "spruce",
+                    "material": "spruce",
                     "type": "top"
                 }
             },
             "10": {
                 "new_properties": {
-                    "block": "birch",
+                    "material": "birch",
                     "type": "top"
                 }
             },
             "11": {
                 "new_properties": {
-                    "block": "jungle",
+                    "material": "jungle",
                     "type": "top"
                 }
             },
             "12": {
                 "new_properties": {
-                    "block": "acacia",
+                    "material": "acacia",
                     "type": "top"
                 }
             },
             "13": {
                 "new_properties": {
-                    "block": "dark_oak",
+                    "material": "dark_oak",
                     "type": "top"
                 }
             }

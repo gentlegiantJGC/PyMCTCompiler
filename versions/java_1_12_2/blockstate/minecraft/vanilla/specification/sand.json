@@ -1,11 +1,11 @@
 {
     "properties": {
-        "block": [
+        "material": [
             "sand",
             "red_sand"
         ]
     },
     "defaults": {
-        "block": "sand"
+        "material": "sand"
     }
 }

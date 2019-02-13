@@ -27,18 +27,18 @@
 	},
 	"blockstate_specification": {
 		"properties": {
-			"block": [
+			"material": [
 				"dirt",
 				"coarse_dirt"
 			]
 		},
 		"defaults": {
-			"block": "dirt"
+			"material": "dirt"
 		}
 	},
 	"blockstate_to_universal" :{
 		"map_properties": {
-			"block": {
+			"material": {
 				"dirt": {
 					"new_block": "minecraft:dirt"
 				},
@@ -52,13 +52,13 @@
 		"minecraft:dirt": {
 			"new_block": "minecraft:dirt",
 			"new_properties": {
-				"block": "dirt"
+				"material": "dirt"
 			}
 		},
 		"minecraft:coarse_dirt": {
 			"new_block": "minecraft:dirt",
 			"new_properties": {
-				"block": "coarse_dirt"
+				"material": "coarse_dirt"
 			}
 		}
 	}

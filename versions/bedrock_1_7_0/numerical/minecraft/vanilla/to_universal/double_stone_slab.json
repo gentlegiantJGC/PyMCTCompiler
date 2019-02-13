@@ -4,49 +4,49 @@
         "block_data": {
             "0": {
                 "new_properties": {
-                    "block": "stone",
+                    "material": "stone",
                     "type": "double"
                 }
             },
             "1": {
                 "new_properties": {
-                    "block": "sandstone",
+                    "material": "sandstone",
                     "type": "double"
                 }
             },
             "2": {
                 "new_properties": {
-                    "block": "petrified_oak_slab",
+                    "material": "petrified_oak_slab",
                     "type": "double"
                 }
             },
             "3": {
                 "new_properties": {
-                    "block": "cobblestone",
+                    "material": "cobblestone",
                     "type": "double"
                 }
             },
             "4": {
                 "new_properties": {
-                    "block": "brick",
+                    "material": "brick",
                     "type": "double"
                 }
             },
             "5": {
                 "new_properties": {
-                    "block": "stone_brick",
+                    "material": "stone_brick",
                     "type": "double"
                 }
             },
             "6": {
                 "new_properties": {
-                    "block": "quartz",
+                    "material": "quartz",
                     "type": "double"
                 }
             },
             "7": {
                 "new_properties": {
-                    "block": "nether_brick",
+                    "material": "nether_brick",
                     "type": "double"
                 }
             }

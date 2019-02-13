@@ -1,6 +1,6 @@
 {
     "properties": {
-        "block": [
+        "material": [
             "red_sandstone",
             "purpur",
             "prismarine",
@@ -13,7 +13,7 @@
         ]
     },
     "defaults": {
-        "block": "red_sandstone",
+        "material": "red_sandstone",
         "type": "bottom"
     }
 }

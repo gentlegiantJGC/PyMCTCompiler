@@ -4,7 +4,7 @@
             "0": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "oak",
+                    "material": "oak",
                     "check_decay": "true",
                     "decayable": "false"
                 }
@@ -12,7 +12,7 @@
             "1": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "spruce",
+                    "material": "spruce",
                     "check_decay": "true",
                     "decayable": "false"
                 }
@@ -20,7 +20,7 @@
             "2": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "birch",
+                    "material": "birch",
                     "check_decay": "true",
                     "decayable": "false"
                 }
@@ -28,7 +28,7 @@
             "3": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "jungle",
+                    "material": "jungle",
                     "check_decay": "true",
                     "decayable": "false"
                 }
@@ -36,7 +36,7 @@
             "4": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "oak",
+                    "material": "oak",
                     "check_decay": "false",
                     "decayable": "false"
                 }
@@ -44,7 +44,7 @@
             "5": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "spruce",
+                    "material": "spruce",
                     "check_decay": "false",
                     "decayable": "false"
                 }
@@ -52,7 +52,7 @@
             "6": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "birch",
+                    "material": "birch",
                     "check_decay": "false",
                     "decayable": "false"
                 }
@@ -60,7 +60,7 @@
             "7": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "jungle",
+                    "material": "jungle",
                     "check_decay": "false",
                     "decayable": "false"
                 }
@@ -68,7 +68,7 @@
             "8": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "oak",
+                    "material": "oak",
                     "check_decay": "true",
                     "decayable": "true"
                 }
@@ -76,7 +76,7 @@
             "9": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "spruce",
+                    "material": "spruce",
                     "check_decay": "true",
                     "decayable": "true"
                 }
@@ -84,7 +84,7 @@
             "10": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "birch",
+                    "material": "birch",
                     "check_decay": "true",
                     "decayable": "true"
                 }
@@ -92,7 +92,7 @@
             "11": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "jungle",
+                    "material": "jungle",
                     "check_decay": "true",
                     "decayable": "true"
                 }
@@ -100,7 +100,7 @@
             "12": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "oak",
+                    "material": "oak",
                     "check_decay": "false",
                     "decayable": "true"
                 }
@@ -108,7 +108,7 @@
             "13": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "spruce",
+                    "material": "spruce",
                     "check_decay": "false",
                     "decayable": "true"
                 }
@@ -116,7 +116,7 @@
             "14": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "birch",
+                    "material": "birch",
                     "check_decay": "false",
                     "decayable": "true"
                 }
@@ -124,7 +124,7 @@
             "15": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "jungle",
+                    "material": "jungle",
                     "check_decay": "false",
                     "decayable": "true"
                 }

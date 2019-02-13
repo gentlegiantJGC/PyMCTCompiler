@@ -1,6 +1,6 @@
 {
     "map_properties": {
-        "block": {
+        "material": {
             "dirt": {
                 "new_block": "minecraft:dirt"
             },

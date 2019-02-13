@@ -4,13 +4,13 @@
             "false": {
                 "new_block": "minecraft:stone",
                 "new_properties": {
-                    "block": "andesite"
+                    "material": "andesite"
                 }
             },
             "true": {
                 "new_block": "minecraft:stone",
                 "new_properties": {
-                    "block": "polished_andesite"
+                    "material": "polished_andesite"
                 }
             }
         }

@@ -1,6 +1,6 @@
 {
     "new_block": "minecraft:dirt",
     "new_properties": {
-        "block": "podzol"
+        "material": "podzol"
     }
 }

@@ -23,7 +23,7 @@
 	"add": {
 		"slab": {
 			"properties": {
-				"block": [
+				"material": [
 					"oak",
 					"spruce",
 					"birch",
@@ -51,7 +51,7 @@
 				]
 			},
 			"defaults": {
-				"block": "oak",
+				"material": "oak",
 				"type": "bottom"
 			}
 		}

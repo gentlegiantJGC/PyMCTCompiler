@@ -4,7 +4,7 @@
             "0": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "acacia",
+                    "material": "acacia",
                     "check_decay": "true",
                     "decayable": "false"
                 }
@@ -12,7 +12,7 @@
             "1": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "dark_oak",
+                    "material": "dark_oak",
                     "check_decay": "true",
                     "decayable": "false"
                 }
@@ -20,7 +20,7 @@
             "4": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "acacia",
+                    "material": "acacia",
                     "check_decay": "false",
                     "decayable": "false"
                 }
@@ -28,7 +28,7 @@
             "5": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "dark_oak",
+                    "material": "dark_oak",
                     "check_decay": "false",
                     "decayable": "false"
                 }
@@ -36,7 +36,7 @@
             "8": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "acacia",
+                    "material": "acacia",
                     "check_decay": "true",
                     "decayable": "true"
                 }
@@ -44,7 +44,7 @@
             "9": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "dark_oak",
+                    "material": "dark_oak",
                     "check_decay": "true",
                     "decayable": "true"
                 }
@@ -52,7 +52,7 @@
             "12": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "acacia",
+                    "material": "acacia",
                     "check_decay": "false",
                     "decayable": "true"
                 }
@@ -60,7 +60,7 @@
             "13": {
                 "new_block": "minecraft:leaves",
                 "new_properties": {
-                    "block": "dark_oak",
+                    "material": "dark_oak",
                     "check_decay": "false",
                     "decayable": "true"
                 }

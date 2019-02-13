@@ -1,6 +1,6 @@
 {
     "map_properties": {
-        "block": {
+        "material": {
             "sand": {
                 "new_block": "minecraft:sand"
             },

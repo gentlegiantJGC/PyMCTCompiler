@@ -1,7 +1,7 @@
 {
     "new_block": "minecraft:slab",
     "carry_properties": {
-        "block": [
+        "material": [
             "red_sandstone",
             "purpur",
             "prismarine",

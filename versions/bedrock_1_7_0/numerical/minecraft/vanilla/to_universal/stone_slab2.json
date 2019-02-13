@@ -4,61 +4,61 @@
         "block_data": {
             "0": {
                 "new_properties": {
-                    "block": "red_sandstone",
+                    "material": "red_sandstone",
                     "type": "bottom"
                 }
             },
             "1": {
                 "new_properties": {
-                    "block": "purpur",
+                    "material": "purpur",
                     "type": "bottom"
                 }
             },
             "2": {
                 "new_properties": {
-                    "block": "prismarine",
+                    "material": "prismarine",
                     "type": "bottom"
                 }
             },
             "3": {
                 "new_properties": {
-                    "block": "prismarine_brick",
+                    "material": "prismarine_brick",
                     "type": "bottom"
                 }
             },
             "4": {
                 "new_properties": {
-                    "block": "dark_prismarine",
+                    "material": "dark_prismarine",
                     "type": "bottom"
                 }
             },
             "8": {
                 "new_properties": {
-                    "block": "red_sandstone",
+                    "material": "red_sandstone",
                     "type": "top"
                 }
             },
             "9": {
                 "new_properties": {
-                    "block": "purpur",
+                    "material": "purpur",
                     "type": "top"
                 }
             },
             "10": {
                 "new_properties": {
-                    "block": "prismarine",
+                    "material": "prismarine",
                     "type": "top"
                 }
             },
             "11": {
                 "new_properties": {
-                    "block": "prismarine_brick",
+                    "material": "prismarine_brick",
                     "type": "top"
                 }
             },
             "12": {
                 "new_properties": {
-                    "block": "dark_prismarine",
+                    "material": "dark_prismarine",
                     "type": "top"
                 }
             }

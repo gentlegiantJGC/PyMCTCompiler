@@ -10,7 +10,7 @@
 	"add": {
 		"infested_block": {
 			"properties": {
-				"block": [
+				"material": [
 					"cobblestone",
 					"stone",
 					"stone_bricks",
@@ -20,7 +20,7 @@
 				]
 			},
 			"defaults": {
-				"block": "cobblestone"
+				"material": "cobblestone"
 			}
 		}
 	}

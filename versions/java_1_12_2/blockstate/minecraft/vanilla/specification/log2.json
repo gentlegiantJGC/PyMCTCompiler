@@ -1,6 +1,6 @@
 {
     "properties": {
-        "block": [
+        "material": [
             "acacia",
             "dark_oak"
         ],
@@ -12,7 +12,7 @@
         ]
     },
     "defaults": {
-        "block": "acacia",
+        "material": "acacia",
         "axis": "y"
     }
 }

@@ -1,6 +1,6 @@
 {
     "properties": {
-        "block": [
+        "material": [
             "stone",
             "sandstone",
             "petrified_oak_slab",
@@ -16,7 +16,7 @@
         ]
     },
     "defaults": {
-        "block": "stone",
+        "material": "stone",
         "type": "bottom"
     }
 }

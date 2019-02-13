@@ -4,37 +4,37 @@
         "block_data": {
             "0": {
                 "new_properties": {
-                    "block": "oak",
+                    "material": "oak",
                     "type": "double"
                 }
             },
             "1": {
                 "new_properties": {
-                    "block": "spruce",
+                    "material": "spruce",
                     "type": "double"
                 }
             },
             "2": {
                 "new_properties": {
-                    "block": "birch",
+                    "material": "birch",
                     "type": "double"
                 }
             },
             "3": {
                 "new_properties": {
-                    "block": "jungle",
+                    "material": "jungle",
                     "type": "double"
                 }
             },
             "4": {
                 "new_properties": {
-                    "block": "acacia",
+                    "material": "acacia",
                     "type": "double"
                 }
             },
             "5": {
                 "new_properties": {
-                    "block": "dark_oak",
+                    "material": "dark_oak",
                     "type": "double"
                 }
             }

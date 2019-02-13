@@ -3,7 +3,7 @@
         "axis": {
             "y": {
                 "map_properties": {
-                    "block": {
+                    "material": {
                         "oak": {
                             "new_block": "minecraft:log",
                             "new_properties": {
@@ -45,7 +45,7 @@
             },
             "x": {
                 "map_properties": {
-                    "block": {
+                    "material": {
                         "oak": {
                             "new_block": "minecraft:log",
                             "new_properties": {
@@ -87,7 +87,7 @@
             },
             "z": {
                 "map_properties": {
-                    "block": {
+                    "material": {
                         "oak": {
                             "new_block": "minecraft:log",
                             "new_properties": {

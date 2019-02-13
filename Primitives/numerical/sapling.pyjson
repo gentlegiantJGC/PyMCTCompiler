@@ -5,7 +5,7 @@
 				str(data): {
 					"new_block": "minecraft:sapling",
 					"new_properties": {
-						"block": {0: "oak", 1: "spruce", 2: "birch", 3: "jungle", 4: "acacia", 5: "dark_oak"}[data & 7],
+						"material": {0: "oak", 1: "spruce", 2: "birch", 3: "jungle", 4: "acacia", 5: "dark_oak"}[data & 7],
 						"stage": {0: "0", 8: "1"}[data & 8],
 					}
 				} for data in range(16) if data & 7 <= 5
@@ -18,7 +18,7 @@
 				"stage": {
 					stage: {
 						"map_properties": {
-							"block": {
+							"material": {
 								block: {
 									"new_block": "minecraft:sapling",
 									"new_properties": {
@@ -34,7 +34,7 @@
 	},
 	"blockstate_specification": {
 		"properties": {
-			"block": [
+			"material": [
 				"oak",
 				"spruce",
 				"birch",
@@ -48,14 +48,14 @@
 			]
 		},
 		"defaults": {
-			"block": "oak",
+			"material": "oak",
 			"stage": "0"
 		}
 	},
 	"blockstate_to_universal": {
 		"new_block": "minecraft:sapling",
 		"carry_properties": {
-			"block": [
+			"material": [
 				"oak",
 				"spruce",
 				"birch",
@@ -73,7 +73,7 @@
 		"minecraft:sapling": {
 			"new_block": "minecraft:sapling",
 			"carry_properties": {
-				"block": [
+				"material": [
 					"oak",
 					"spruce",
 					"birch",

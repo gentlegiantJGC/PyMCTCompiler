@@ -1,7 +1,7 @@
 {
     "new_block": "minecraft:leaves",
     "carry_properties": {
-        "block": [
+        "material": [
             "acacia",
             "dark_oak"
         ],

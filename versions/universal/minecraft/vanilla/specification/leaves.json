@@ -1,6 +1,6 @@
 {
     "properties": {
-        "block": [
+        "material": [
             "oak",
             "spruce",
             "birch",
@@ -27,7 +27,7 @@
         ]
     },
     "defaults": {
-        "block": "oak",
+        "material": "oak",
         "distance": "7",
         "decayable": "true",
         "check_decay": "true"

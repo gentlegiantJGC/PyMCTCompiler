@@ -1,6 +1,6 @@
 {
     "map_properties": {
-        "block": {
+        "material": {
             "oak": {
                 "new_block": "minecraft:planks",
                 "new_properties": {

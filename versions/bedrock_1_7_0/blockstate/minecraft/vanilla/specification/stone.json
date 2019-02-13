@@ -1,6 +1,6 @@
 {
     "properties": {
-        "block": [
+        "material": [
             "stone",
             "granite",
             "polished_granite",
@@ -11,6 +11,6 @@
         ]
     },
     "defaults": {
-        "block": "stone"
+        "material": "stone"
     }
 }

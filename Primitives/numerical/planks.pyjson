@@ -5,7 +5,7 @@
 				str(data): {
 					"new_block": "minecraft:planks",
 					"new_properties": {
-						"block": {0: "oak", 1: "spruce", 2: "birch", 3: "jungle", 4: "acacia", 5: "dark_oak"}[data],
+						"material": {0: "oak", 1: "spruce", 2: "birch", 3: "jungle", 4: "acacia", 5: "dark_oak"}[data],
 					}
 				} for data in range(6)
 			}
@@ -14,7 +14,7 @@
 	"from_universal": {
 		"minecraft:planks": {
 			"map_properties": {
-				"block": {
+				"material": {
 					block: {
 						"new_block": "minecraft:planks",
 						"new_properties": {
@@ -27,7 +27,7 @@
 	},
 	"blockstate_specification": {
 		"properties": {
-			"block": [
+			"material": [
 				"oak",
 				"spruce",
 				"birch",
@@ -37,13 +37,13 @@
 			]
 		},
 		"defaults": {
-			"block": "oak"
+			"material": "oak"
 		}
 	},
 	"blockstate_to_universal": {
 		"new_block": "minecraft:planks",
 		"carry_properties": {
-			"block": [
+			"material": [
 				"oak",
 				"spruce",
 				"birch",
@@ -57,7 +57,7 @@
 		"minecraft:planks": {
 			"new_block": "minecraft:planks",
 			"carry_properties": {
-				"block": [
+				"material": [
 					"oak",
 					"spruce",
 					"birch",

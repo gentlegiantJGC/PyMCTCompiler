@@ -10,7 +10,7 @@
 	"add": {
 		"sapling": {
 			"properties": {
-				"block": [
+				"material": [
 					"oak",
 					"spruce",
 					"birch",
@@ -24,7 +24,7 @@
 				]
 			},
 			"defaults": {
-				"block": "oak",
+				"material": "oak",
 				"stage": "0"
 			}
 		}

@@ -11,7 +11,7 @@
 	"add": {
         "fence": {
             "properties": {
-                "block": [
+                "material": [
 					"oak",
 					"spruce",
 					"birch",
@@ -39,7 +39,7 @@
                 ]
             },
             "defaults": {
-                "block": "oak",
+                "material": "oak",
                 "east": "false",
                 "north": "false",
                 "south": "false",

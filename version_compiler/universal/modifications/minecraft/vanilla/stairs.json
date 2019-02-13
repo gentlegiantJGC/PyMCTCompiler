@@ -21,7 +21,7 @@
 	"add": {
 		"stairs": {
 			"properties": {
-				"block": [
+				"material": [
 					"oak",
 					"spruce",
 					"birch",
@@ -59,7 +59,7 @@
 				]
 			},
 			"defaults": {
-				"block": "oak",
+				"material": "oak",
 				"facing": "north",
 				"half": "bottom",
 				"shape": "straight"

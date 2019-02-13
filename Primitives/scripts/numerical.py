@@ -156,9 +156,9 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 		raise Exception(f'Platform "{platform}" is not known')
 
 	if block_name == "leaves":
-		block_pallet = {0: "oak", 1: "spruce", 2: "birch", 3: "jungle"}
+		material_pallet = {0: "oak", 1: "spruce", 2: "birch", 3: "jungle"}
 	elif block_name == "leaves2":
-		block_pallet = {0: "acacia", 1: "dark_oak"}
+		material_pallet = {0: "acacia", 1: "dark_oak"}
 	else:
 		raise Exception(f'Block name "{block_name}" is not known')
 
@@ -169,11 +169,11 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 					str(data): {
 						"new_block": f"{to_namespace}:{to_block_name}",
 						"new_properties": {
-							"block": block_pallet[data & 3],
+							"material": material_pallet[data & 3],
 							property4: {0: "true", 4: "false"}[data & 4],
 							property8: {0: "false", 8: "true"}[data & 8]
 						}
-					} for data in range(16) if data & 3 in block_pallet
+					} for data in range(16) if data & 3 in material_pallet
 				}
 			}
 		},
@@ -186,13 +186,13 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 								property4: {
 									val4: {
 										"map_properties": {
-											"block": {
-												block: {
+											"material": {
+												material: {
 													"new_block": f"{namespace}:{block_name}",
 													"new_properties": {
 														"block_data": str(data3 + data4 + data8)
 													}
-												} for data3, block in block_pallet.items()
+												} for data3, material in material_pallet.items()
 											}
 										}
 									} for data4, val4 in {0: "true", 4: "false"}.items()
@@ -205,7 +205,7 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 		},
 		"blockstate_specification": {
 			"properties": {
-				"block": list(block_pallet.values()),
+				"material": list(material_pallet.values()),
 				"decayable": [
 					"true",
 					"false"
@@ -216,7 +216,7 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 				]
 			},
 			"defaults": {
-				"block": block_pallet[0],
+				"material": material_pallet[0],
 				"decayable": "true",
 				"check_decay": "true"
 			}
@@ -224,7 +224,7 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 		"blockstate_to_universal": {
 			"new_block": f"{to_namespace}:{to_block_name}",
 			"carry_properties": {
-				"block": list(block_pallet.values()),
+				"material": list(material_pallet.values()),
 				"decayable": [
 					"true",
 					"false"
@@ -238,7 +238,7 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 		"blockstate_from_universal": {
 			f"{to_namespace}:{to_block_name}": {
 				"carry_properties": {
-					"block": list(block_pallet.values()),
+					"material": list(material_pallet.values()),
 					"decayable": [
 						"true",
 						"false"
@@ -249,10 +249,10 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 					]
 				},
 				"map_properties": {
-					"block": {
-						block: {
+					"material": {
+						material: {
 							"new_block": f"{namespace}:{block_name}"
-						} for block in block_pallet.values()
+						} for material in material_pallet.values()
 					}
 				}
 			}
@@ -262,9 +262,9 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 
 def log(namespace: str, block_name: str, to_namespace: str = "minecraft", to_block_name: str = "log") -> dict:
 	if block_name == "log":
-		block_pallet = {0: "oak", 1: "spruce", 2: "birch", 3: "jungle"}
+		material_pallet = {0: "oak", 1: "spruce", 2: "birch", 3: "jungle"}
 	elif block_name == "log2":
-		block_pallet = {0: "acacia", 1: "dark_oak"}
+		material_pallet = {0: "acacia", 1: "dark_oak"}
 	else:
 		raise Exception(f'Block name "{block_name}" is not known')
 
@@ -275,15 +275,15 @@ def log(namespace: str, block_name: str, to_namespace: str = "minecraft", to_blo
 					str(data): {
 						"new_block": f"{to_namespace}:{to_block_name}",
 						"new_properties": {
-							"block": block_pallet[data & 3],
+							"material": material_pallet[data & 3],
 							"axis": {0: "y", 4: "x", 8: "z"}[data & 12],
 						}
 					} if data <= 11 else {
 						"new_block": "minecraft:wood",
 						"new_properties": {
-							"block": block_pallet[data & 3]
+							"material": material_pallet[data & 3]
 						}
-					} for data in range(16) if data & 3 in block_pallet
+					} for data in range(16) if data & 3 in material_pallet
 				}
 			}
 		},
@@ -293,13 +293,13 @@ def log(namespace: str, block_name: str, to_namespace: str = "minecraft", to_blo
 					"axis": {
 						axis: {
 							"map_properties": {
-								"block": {
-									block: {
+								"material": {
+									material: {
 										"new_block": f"{namespace}:{block_name}",
 										"new_properties": {
 											"block_data": str(data12 + data3)
 										}
-									} for data3, block in block_pallet.items()
+									} for data3, material in material_pallet.items()
 								}
 							}
 						} for data12, axis in {0: "y", 4: "x", 8: "z"}.items()
@@ -308,20 +308,20 @@ def log(namespace: str, block_name: str, to_namespace: str = "minecraft", to_blo
 			},
 			"minecraft:wood": {
 				"map_properties": {
-					"block": {
-						block: {
+					"material": {
+						material: {
 							"new_block": f"{namespace}:{block_name}",
 							"new_properties": {
 								"block_data": str(12 + data3)
 							}
-						} for data3, block in block_pallet.items()
+						} for data3, material in material_pallet.items()
 					}
 				}
 			}
 		},
 		"blockstate_specification": {
 			"properties": {
-				"block": list(block_pallet.values()),
+				"material": list(material_pallet.values()),
 				"axis": [
 					"x",
 					"y",
@@ -330,13 +330,13 @@ def log(namespace: str, block_name: str, to_namespace: str = "minecraft", to_blo
 				]
 			},
 			"defaults": {
-				"block": block_pallet[0],
+				"material": material_pallet[0],
 				"axis": "y"
 			}
 		},
 		"blockstate_to_universal": {
 			"carry_properties": {
-				"block": list(block_pallet.values()),
+				"material": list(material_pallet.values()),
 				"axis": [
 					"x",
 					"y",
@@ -366,7 +366,7 @@ def log(namespace: str, block_name: str, to_namespace: str = "minecraft", to_blo
 		"blockstate_from_universal": {
 			"minecraft:log": {
 				"carry_properties": {
-					"block": list(block_pallet.values()),
+					"material": list(material_pallet.values()),
 					"axis": [
 						"x",
 						"y",
@@ -374,22 +374,22 @@ def log(namespace: str, block_name: str, to_namespace: str = "minecraft", to_blo
 					]
 				},
 				"map_properties": {
-					"block": {
-						block: {
+					"material": {
+						material: {
 							"new_block": f"{namespace}:{block_name}"
-						} for block in block_pallet.values()
+						} for material in material_pallet.values()
 					}
 				}
 			},
 			"minecraft:wood": {
 				"carry_properties": {
-					"block": list(block_pallet.values())
+					"material": list(material_pallet.values())
 				},
 				"map_properties": {
-					"block": {
-						block: {
+					"material": {
+						material: {
 							"new_block": f"{namespace}:{block_name}"
-						} for block in block_pallet.values()
+						} for material in material_pallet.values()
 					}
 				}
 			}
@@ -1153,10 +1153,10 @@ def double_slab(input_namespace: str, input_block_name: str, block_types: list, 
 				"block_data": {
 					str(data): {
 						"new_properties": {
-							"block": block,
+							"material": material,
 							"type": "double"
 						}
-					} for data, block in enumerate(block_types)
+					} for data, material in enumerate(block_types)
 				}
 			}
 		},
@@ -1166,13 +1166,13 @@ def double_slab(input_namespace: str, input_block_name: str, block_types: list, 
 					"type": {
 						"double": {
 							"map_properties": {
-								"block": {
-									block: {
+								"material": {
+									material: {
 										"new_block": f"{input_namespace}:{input_block_name}",
 										"new_properties": {
 											"block_data": str(data)
 										}
-									} for data, block in enumerate(block_types)
+									} for data, material in enumerate(block_types)
 								}
 							}
 						}
@@ -1182,16 +1182,16 @@ def double_slab(input_namespace: str, input_block_name: str, block_types: list, 
 		},
 		"blockstate_specification": {
 			"properties": {
-				"block": block_types
+				"material": block_types
 			},
 			"defaults": {
-				"block": block_types[0]
+				"material": block_types[0]
 			}
 		},
 		"blockstate_to_universal": {
 			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"carry_properties": {
-				"block": block_types
+				"material": block_types
 			},
 			"new_properties": {
 				"type": "double"
@@ -1203,13 +1203,13 @@ def double_slab(input_namespace: str, input_block_name: str, block_types: list, 
 					"type": {
 						"double": {
 							"map_properties": {
-								"block": {
-									block: {
+								"material": {
+									material: {
 										"new_block": f"{input_namespace}:{input_block_name}",
 										"new_properties": {
-											"block": block
+											"material": material
 										}
-									} for block in block_types
+									} for material in block_types
 								}
 							}
 						}
@@ -1232,10 +1232,10 @@ def slab(input_namespace: str, input_block_name: str, block_types: list, univers
 				"block_data": {
 					str(data): {
 						"new_properties": {
-							"block": block,
+							"material": block,
 							"type": position
 						}
-					} for data, (block, position) in {data + data8 * 8: [block, position] for data8, position in enumerate(["bottom", "top"]) for data, block in enumerate(block_types)}.items()
+					} for data, (block, position) in {data + data8 * 8: [material, position] for data8, position in enumerate(["bottom", "top"]) for data, material in enumerate(block_types)}.items()
 				}
 			}
 		},
@@ -1245,13 +1245,13 @@ def slab(input_namespace: str, input_block_name: str, block_types: list, univers
 					"type": {
 						position: {
 							"map_properties": {
-								"block": {
-									block: {
+								"material": {
+									material: {
 										"new_block": f"{input_namespace}:{input_block_name}",
 										"new_properties": {
 											"block_data": str(data + data8 * 8)
 										}
-									} for data, block in enumerate(block_types)
+									} for data, material in enumerate(block_types)
 								}
 							}
 						} for data8, position in enumerate(["bottom", "top"])
@@ -1261,18 +1261,18 @@ def slab(input_namespace: str, input_block_name: str, block_types: list, univers
 		},
 		"blockstate_specification": {
 			"properties": {
-				"block": block_types,
+				"material": block_types,
 				"type": ["bottom", "top"]
 			},
 			"defaults": {
-				"block": block_types[0],
+				"material": block_types[0],
 				"type": "bottom"
 			}
 		},
 		"blockstate_to_universal": {
 			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"carry_properties": {
-				"block": block_types,
+				"material": block_types,
 				"type": ["bottom", "top"]
 			}
 		},
@@ -1282,14 +1282,14 @@ def slab(input_namespace: str, input_block_name: str, block_types: list, univers
 					"type": {
 						position: {
 							"map_properties": {
-								"block": {
-									block: {
+								"material": {
+									material: {
 										"new_block": f"{input_namespace}:{input_block_name}",
 										"new_properties": {
-											"block": block,
+											"material": material,
 											"type": position
 										}
-									} for block in block_types
+									} for material in block_types
 								}
 							}
 						} for position in ["bottom", "top"]

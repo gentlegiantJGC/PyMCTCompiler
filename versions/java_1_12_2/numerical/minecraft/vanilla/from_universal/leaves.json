@@ -6,7 +6,7 @@
                     "decayable": {
                         "true": {
                             "map_properties": {
-                                "block": {
+                                "material": {
                                     "oak": {
                                         "new_block": "minecraft:leaves",
                                         "new_properties": {
@@ -48,7 +48,7 @@
                         },
                         "false": {
                             "map_properties": {
-                                "block": {
+                                "material": {
                                     "oak": {
                                         "new_block": "minecraft:leaves",
                                         "new_properties": {
@@ -96,7 +96,7 @@
                     "decayable": {
                         "true": {
                             "map_properties": {
-                                "block": {
+                                "material": {
                                     "oak": {
                                         "new_block": "minecraft:leaves",
                                         "new_properties": {
@@ -138,7 +138,7 @@
                         },
                         "false": {
                             "map_properties": {
-                                "block": {
+                                "material": {
                                     "oak": {
                                         "new_block": "minecraft:leaves",
                                         "new_properties": {

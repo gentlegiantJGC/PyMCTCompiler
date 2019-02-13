@@ -3,7 +3,7 @@
         "stage": {
             "0": {
                 "map_properties": {
-                    "block": {
+                    "material": {
                         "oak": {
                             "new_block": "minecraft:sapling",
                             "new_properties": {
@@ -45,7 +45,7 @@
             },
             "1": {
                 "map_properties": {
-                    "block": {
+                    "material": {
                         "oak": {
                             "new_block": "minecraft:sapling",
                             "new_properties": {

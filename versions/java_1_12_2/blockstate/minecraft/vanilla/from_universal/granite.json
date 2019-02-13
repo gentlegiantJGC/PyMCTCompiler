@@ -4,13 +4,13 @@
             "false": {
                 "new_block": "minecraft:stone",
                 "new_properties": {
-                    "block": "granite"
+                    "material": "granite"
                 }
             },
             "true": {
                 "new_block": "minecraft:stone",
                 "new_properties": {
-                    "block": "polished_granite"
+                    "material": "polished_granite"
                 }
             }
         }

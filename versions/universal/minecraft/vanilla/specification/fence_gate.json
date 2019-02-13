@@ -1,6 +1,6 @@
 {
     "properties": {
-        "block": [
+        "material": [
             "oak",
             "spruce",
             "birch",
@@ -28,7 +28,7 @@
         ]
     },
     "defaults": {
-        "block": "oak",
+        "material": "oak",
         "facing": "north",
         "in_wall": "false",
         "open": "false",

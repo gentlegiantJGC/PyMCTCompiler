@@ -1,6 +1,6 @@
 {
     "carry_properties": {
-        "block": [
+        "material": [
             "oak",
             "spruce",
             "birch",
@@ -10,7 +10,7 @@
         ]
     },
     "map_properties": {
-        "block": {
+        "material": {
             "oak": {
                 "new_block": "minecraft:log"
             },

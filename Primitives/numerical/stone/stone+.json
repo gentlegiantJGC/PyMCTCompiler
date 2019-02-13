@@ -108,7 +108,7 @@
 	},
 	"blockstate_specification": {
 		"properties": {
-	        "block": [
+	        "material": [
 	            "stone",
 	            "granite",
 	            "polished_granite",
@@ -119,12 +119,12 @@
 	        ]
 	    },
 	    "defaults": {
-	        "block": "stone"
+	        "material": "stone"
 	    }
 	},
 	"blockstate_to_universal" :{
 		"map_properties": {
-			"block": {
+			"material": {
 				"stone": {
 					"new_block": "minecraft:stone"
 				},
@@ -171,7 +171,7 @@
 		"minecraft:stone": {
 			"new_block": "minecraft:stone",
 			"new_properties": {
-				"block": "stone"
+				"material": "stone"
 			}
 		},
 		"minecraft:granite": {
@@ -180,13 +180,13 @@
 					"false": {
 						"new_block": "minecraft:stone",
 						"new_properties": {
-							"block": "granite"
+							"material": "granite"
 						}
 					},
 					"true": {
 						"new_block": "minecraft:stone",
 						"new_properties": {
-							"block": "polished_granite"
+							"material": "polished_granite"
 						}
 					}
 				}
@@ -198,13 +198,13 @@
 					"false": {
 						"new_block": "minecraft:stone",
 						"new_properties": {
-							"block": "diorite"
+							"material": "diorite"
 						}
 					},
 					"true": {
 						"new_block": "minecraft:stone",
 						"new_properties": {
-							"block": "polished_diorite"
+							"material": "polished_diorite"
 						}
 					}
 				}
@@ -216,13 +216,13 @@
 					"false": {
 						"new_block": "minecraft:stone",
 						"new_properties": {
-							"block": "andesite"
+							"material": "andesite"
 						}
 					},
 					"true": {
 						"new_block": "minecraft:stone",
 						"new_properties": {
-							"block": "polished_andesite"
+							"material": "polished_andesite"
 						}
 					}
 				}
