@@ -1,0 +1,1 @@
+numerical.compass("minecraft", "lit_pumpkin", {0: "south", 1: "west", 2: "north", 3: "east"}, "minecraft", "jack_o_lantern")
