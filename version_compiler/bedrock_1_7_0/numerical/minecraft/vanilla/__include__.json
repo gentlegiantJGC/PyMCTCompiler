@@ -84,7 +84,7 @@
 	"clay": "clay",
 	"reeds": null,
 	"jukebox": null,
-	"fence": null,
+	"fence": "fence_bedrock",
 	"pumpkin": null,
 	"netherrack": "netherrack",
 	"soul_sand": "soul_sand",
@@ -265,7 +265,7 @@
 	"coral_fan_hang2": null,
 	"coral_fan_hang3": null,
 	"kelp": null,
-	"dried_kelp_block": null,
+	"dried_kelp_block": "dried_kelp_block",
 	"acacia_button": null,
 	"birch_button": null,
 	"dark_oak_button": null,
@@ -286,5 +286,5 @@
 	"conduit": null,
 	"turtle_egg": null,
 	"bubble_column": null,
-	"barrier": null
+	"barrier": "barrier"
 }
