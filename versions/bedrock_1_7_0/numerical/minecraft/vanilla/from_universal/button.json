@@ -1,0 +1,113 @@
+{
+    "map_properties": {
+        "material": {
+            "stone": {
+                "new_block": "minecraft:stone_button"
+            },
+            "oak": {
+                "new_block": "minecraft:wooden_button"
+            },
+            "acacia": {
+                "new_block": "minecraft:acacia_button"
+            },
+            "birch": {
+                "new_block": "minecraft:birch_button"
+            },
+            "dark_oak": {
+                "new_block": "minecraft:dark_oak_button"
+            },
+            "jungle": {
+                "new_block": "minecraft:jungle_button"
+            },
+            "spruce": {
+                "new_block": "minecraft:spruce_button"
+            }
+        },
+        "powered": {
+            "false": {
+                "map_properties": {
+                    "face": {
+                        "ceiling": {
+                            "new_properties": {
+                                "block_data": "0"
+                            }
+                        },
+                        "floor": {
+                            "new_properties": {
+                                "block_data": "1"
+                            }
+                        },
+                        "wall": {
+                            "map_properties": {
+                                "facing": {
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "true": {
+                "map_properties": {
+                    "face": {
+                        "ceiling": {
+                            "new_properties": {
+                                "block_data": "8"
+                            }
+                        },
+                        "floor": {
+                            "new_properties": {
+                                "block_data": "9"
+                            }
+                        },
+                        "wall": {
+                            "map_properties": {
+                                "facing": {
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "10"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "11"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "12"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "13"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

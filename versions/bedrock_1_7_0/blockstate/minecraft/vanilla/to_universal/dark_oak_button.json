@@ -1,0 +1,50 @@
+{
+    "new_block": "minecraft:button",
+    "new_properties": {
+        "material": "dark_oak"
+    },
+    "carry_properties": {
+        "powered": [
+            "false",
+            "true"
+        ]
+    },
+    "map_properties": {
+        "facing": {
+            "down": {
+                "new_properties": {
+                    "face": "ceiling"
+                }
+            },
+            "up": {
+                "new_properties": {
+                    "face": "floor"
+                }
+            },
+            "north": {
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "north"
+                }
+            },
+            "south": {
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "south"
+                }
+            },
+            "west": {
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "west"
+                }
+            },
+            "east": {
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "east"
+                }
+            }
+        }
+    }
+}

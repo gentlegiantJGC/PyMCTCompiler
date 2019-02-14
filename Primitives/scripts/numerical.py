@@ -1444,3 +1444,143 @@ def compass(input_namespace: str, input_block_name: str, directions: Dict[int, s
 			}
 		}
 	}
+
+
+def button_bedrock(input_namespace: str, input_block_name: str, material: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	return {
+		"to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"new_properties": {
+				"material": material
+			},
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_properties": properties
+					} for data, properties in {
+						0: {"face": "ceiling", "powered": "false"},
+						1: {"face": "floor", "powered": "false"},
+						2: {"face": "wall", "facing": "north", "powered": "false"},
+						3: {"face": "wall", "facing": "south", "powered": "false"},
+						4: {"face": "wall", "facing": "west", "powered": "false"},
+						5: {"face": "wall", "facing": "east", "powered": "false"},
+						8: {"face": "ceiling", "powered": "true"},
+						9: {"face": "floor", "powered": "true"},
+						10: {"face": "wall", "facing": "north", "powered": "true"},
+						11: {"face": "wall", "facing": "south", "powered": "true"},
+						12: {"face": "wall", "facing": "west", "powered": "true"},
+						13: {"face": "wall", "facing": "east", "powered": "true"}
+					}.items()
+				}
+			}
+		},
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"map_properties": {
+					"material": {
+						material: {
+							"new_block": f"{input_namespace}:{input_block_name}"
+						}
+					},
+					"powered": {
+						powered: {
+							"map_properties": {
+								"face": {
+									"ceiling": {
+										"new_properties": {
+											"block_data": str(data8)
+										}
+									},
+									"floor": {
+										"new_properties": {
+											"block_data": str(1 + data8)
+										}
+									},
+									"wall": {
+										"map_properties": {
+											"facing": {
+												facing: {
+													"new_properties": {
+														"block_data": str(data7 + data8)
+													}
+												} for data7, facing in {2: "north", 3: "south", 4: "west", 5: "east"}.items()
+											}
+										}
+									}
+								}
+							}
+						} for data8, powered in {0: "false", 8: "true"}.items()
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"facing": ["down", "up", "north", "south", "west", "east"],
+				"powered": ["false", "true"]
+			},
+			"defaults": {
+				"facing": "up",
+				"powered": "false"
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"new_properties": {
+				"material": material
+			},
+			"carry_properties": {
+				"powered": ["false", "true"]
+			},
+			"map_properties": {
+				"facing": {
+					facing: {
+						"new_properties": properties
+					} for facing, properties in {
+						"down": {"face": "ceiling"},
+						"up": {"face": "floor"},
+						"north": {"face": "wall", "facing": "north"},
+						"south": {"face": "wall", "facing": "south"},
+						"west": {"face": "wall", "facing": "west"},
+						"east": {"face": "wall", "facing": "east"}
+					}.items()
+				}
+			}
+
+		},
+		"blockstate_from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"carry_properties": {
+					"powered": ["false", "true"]
+				},
+				"map_properties": {
+					"material": {
+						material: {
+							"new_block": f"{input_namespace}:{input_block_name}"
+						}
+					},
+					"face": {
+						"ceiling": {
+							"new_properties": {
+								"facing": "down",
+							}
+						},
+						"floor": {
+							"new_properties": {
+								"facing": "up",
+							}
+						},
+						"wall": {
+							"carry_properties": {
+								"facing": ["north", "south", "west", "east"]
+							}
+						}
+					}
+				}
+			}
+		}
+	}
