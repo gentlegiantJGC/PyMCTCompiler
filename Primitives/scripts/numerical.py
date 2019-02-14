@@ -1,28 +1,32 @@
-def default(namespace: str, block_name: str) -> dict:
+def default(input_namespace: str, input_block_name: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
 	return {
 		"to_universal": {
 			"map_properties": {
 				"block_data": {
 					"0": {
-						"new_block": f"{namespace}:{block_name}"
+						"new_block": f"{universal_namespace}:{universal_block_name}"
 					}
 				}
 			}
 		},
 		"from_universal": {
-			f"{namespace}:{block_name}": {
-				"new_block": f"{namespace}:{block_name}",
+			f"{universal_namespace}:{universal_block_name}": {
+				"new_block": f"{input_namespace}:{input_block_name}",
 				"new_properties": {
 					"block_data": "0"
 				}
 			}
 		},
 		"blockstate_to_universal": {
-			"new_block": f"{namespace}:{block_name}"
+			"new_block": f"{universal_namespace}:{universal_block_name}"
 		},
 		"blockstate_from_universal": {
-			f"{namespace}:{block_name}": {
-				"new_block": f"{namespace}:{block_name}"
+			f"{universal_namespace}:{universal_block_name}": {
+				"new_block": f"{input_namespace}:{input_block_name}"
 			}
 		}
 	}
