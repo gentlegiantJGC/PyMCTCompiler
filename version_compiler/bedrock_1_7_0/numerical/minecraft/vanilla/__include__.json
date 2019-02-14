@@ -165,7 +165,7 @@
 	"acacia_stairs": "acacia_stairs",
 	"dark_oak_stairs": "dark_oak_stairs",
 	"slime": "slime",
-	"glow_stick": null,
+
 	"iron_trapdoor": null,
 	"prismarine": null,
 	"sealantern": null,
@@ -189,9 +189,7 @@
 	"acacia_fence_gate": null,
 	"repeating_command_block": null,
 	"chain_command_block": null,
-	"hard_glass_pane": null,
-	"hard_stained_glass_pane": null,
-	"chemical_heat": null,
+
 	"spruce_door": null,
 	"birch_door": null,
 	"jungle_door": null,
@@ -199,27 +197,94 @@
 	"dark_oak_door": null,
 	"grass_path": null,
 	"frame": null,
-
-
-
-
+	"chorus_flower": null,
+	"purpur_block": null,
 
 	"purpur_stairs": "purpur_stairs",
 
+	"undyed_shulker_box": null,
+	"end_bricks": null,
+	"frosted_ice": null,
+	"end_rod": null,
+	"end_gateway": null,
+	"magma": null,
+	"nether_wart_block": null,
+	"red_nether_brick": null,
+	"bone_block": null,
+	"shulker_box": null,
+	"purple_glazed_terracotta": null,
+	"white_glazed_terracotta": null,
+	"orange_glazed_terracotta": null,
+	"magenta_glazed_terracotta": null,
+	"light_blue_glazed_terracotta": null,
+	"yellow_glazed_terracotta": null,
+	"lime_glazed_terracotta": null,
+	"pink_glazed_terracotta": null,
+	"gray_glazed_terracotta": null,
+	"silver_glazed_terracotta": null,
+	"cyan_glazed_terracotta": null,
+	"blue_glazed_terracotta": null,
+	"brown_glazed_terracotta": null,
+	"green_glazed_terracotta": null,
+	"red_glazed_terracotta": null,
+	"black_glazed_terracotta": null,
+	"concrete": null,
+	"concretepowder": null,
 
+	"chorus_plant": null,
+	"stained_glass": null,
+	"podzol": "podzol",
+	"beetroots": null,
+	"stonecutter": null,
+	"glowingobsidian": null,
+	"netherreactor": null,
+	"info_update": null,
+	"info_update2": null,
+	"movingblock": null,
+	"observer": null,
+	"structure_block": null,
+
+	"reserved6": null,
 	"prismarine_stairs": "prismarine_stairs",
 	"dark_prismarine_stairs": "dark_prismarine_stairs",
 	"prismarine_bricks_stairs": "prismarine_bricks_stairs",
+	"stripped_spruce_log": null,
+	"stripped_birch_log": null,
+	"stripped_jungle_log": null,
+	"stripped_acacia_log": null,
+	"stripped_dark_oak_log": null,
+	"stripped_oak_log": null,
+	"blue_ice": null,
 
-
-
-	
-	
-	
-
-	
-
-
-	
-	"podzol": "podzol"
+	"seagrass": null,
+	"coral": null,
+	"coral_block": null,
+	"coral_fan": null,
+	"coral_fan_dead": null,
+	"coral_fan_hang": null,
+	"coral_fan_hang2": null,
+	"coral_fan_hang3": null,
+	"kelp": null,
+	"dried_kelp_block": null,
+	"acacia_button": null,
+	"birch_button": null,
+	"dark_oak_button": null,
+	"jungle_button": null,
+	"spruce_button": null,
+	"acacia_trapdoor": null,
+	"birch_trapdoor": null,
+	"dark_oak_trapdoor": null,
+	"jungle_trapdoor": null,
+	"spruce_trapdoor": null,
+	"acacia_pressure_plate": null,
+	"birch_pressure_plate": null,
+	"dark_oak_pressure_plate": null,
+	"jungle_pressure_plate": null,
+	"spruce_pressure_plate": null,
+	"carved_pumpkin": null,
+	"sea_pickle": null,
+	"conduit": null,
+	"turtle_egg": null,
+	"bubble_column": null,
+	"barrier": null
 }
