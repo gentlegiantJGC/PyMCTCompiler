@@ -1584,3 +1584,77 @@ def button_bedrock(input_namespace: str, input_block_name: str, material: str, u
 			}
 		}
 	}
+
+
+def glazed_terracotta(input_namespace: str, input_block_name: str, color: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	directions = {0: "south", 1: "west", 2: "north", 3: "east"}
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	return {
+		"to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"new_properties": {
+				"color": color
+			},
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_properties": {
+							"facing": facing
+						}
+					} for data, facing in directions.items()
+				}
+			}
+		},
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"map_properties": {
+					"facing": {
+						facing: {
+							"new_properties": {
+								"block_data": str(data)
+							}
+						} for data, facing in directions.items()
+					},
+					"color": {
+						color: {
+							"new_block": f"{input_namespace}:{input_block_name}",
+						}
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"facing": list(directions.values())
+			},
+			"defaults": {
+				"facing": list(directions.values())[0]
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"new_properties": {
+				"color": color
+			},
+			"carry_properties": {
+				"facing": list(directions.values())
+			}
+		},
+		"blockstate_from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"map_properties": {
+					"color": {
+						color: {
+							"new_block": f"{input_namespace}:{input_block_name}",
+						}
+					}
+				},
+				"carry_properties": {
+					"facing": list(directions.values())
+				}
+			}
+		}
+	}

@@ -1,0 +1,76 @@
+{
+    "map_properties": {
+        "facing": {
+            "south": {
+                "new_properties": {
+                    "block_data": "0"
+                }
+            },
+            "west": {
+                "new_properties": {
+                    "block_data": "1"
+                }
+            },
+            "north": {
+                "new_properties": {
+                    "block_data": "2"
+                }
+            },
+            "east": {
+                "new_properties": {
+                    "block_data": "3"
+                }
+            }
+        },
+        "color": {
+            "purple": {
+                "new_block": "minecraft:purple_glazed_terracotta"
+            },
+            "white": {
+                "new_block": "minecraft:white_glazed_terracotta"
+            },
+            "orange": {
+                "new_block": "minecraft:orange_glazed_terracotta"
+            },
+            "magenta": {
+                "new_block": "minecraft:magenta_glazed_terracotta"
+            },
+            "light_blue": {
+                "new_block": "minecraft:light_blue_glazed_terracotta"
+            },
+            "yellow": {
+                "new_block": "minecraft:yellow_glazed_terracotta"
+            },
+            "lime": {
+                "new_block": "minecraft:lime_glazed_terracotta"
+            },
+            "pink": {
+                "new_block": "minecraft:pink_glazed_terracotta"
+            },
+            "gray": {
+                "new_block": "minecraft:gray_glazed_terracotta"
+            },
+            "light_gray": {
+                "new_block": "minecraft:silver_glazed_terracotta"
+            },
+            "cyan": {
+                "new_block": "minecraft:cyan_glazed_terracotta"
+            },
+            "blue": {
+                "new_block": "minecraft:blue_glazed_terracotta"
+            },
+            "brown": {
+                "new_block": "minecraft:brown_glazed_terracotta"
+            },
+            "green": {
+                "new_block": "minecraft:green_glazed_terracotta"
+            },
+            "red": {
+                "new_block": "minecraft:red_glazed_terracotta"
+            },
+            "black": {
+                "new_block": "minecraft:black_glazed_terracotta"
+            }
+        }
+    }
+}

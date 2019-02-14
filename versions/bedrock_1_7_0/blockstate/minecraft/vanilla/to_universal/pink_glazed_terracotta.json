@@ -1,0 +1,14 @@
+{
+    "new_block": "minecraft:glazed_terracotta",
+    "new_properties": {
+        "color": "pink"
+    },
+    "carry_properties": {
+        "facing": [
+            "south",
+            "west",
+            "north",
+            "east"
+        ]
+    }
+}
