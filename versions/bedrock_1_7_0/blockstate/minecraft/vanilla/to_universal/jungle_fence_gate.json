@@ -1,0 +1,22 @@
+{
+    "new_block": "minecraft:fence_gate",
+    "new_properties": {
+        "material": "jungle"
+    },
+    "carry_properties": {
+        "facing": [
+            "south",
+            "west",
+            "north",
+            "east"
+        ],
+        "open": [
+            "false",
+            "true"
+        ],
+        "in_wall": [
+            "false",
+            "true"
+        ]
+    }
+}
