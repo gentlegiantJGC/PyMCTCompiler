@@ -1320,7 +1320,7 @@ def stairs(input_namespace: str, input_block_name: str, material: str, universal
 					str(data): {
 						"new_properties": {
 							"material": material,
-							"facing": ["east", "west", "south", "north"][data % 4],
+							"facing": ["east", "west", "south", "north"][data & 3],
 							"half": {0: "bottom", 4: "top"}[data & 4]
 						}
 					} for data in range(8)
@@ -1365,6 +1365,9 @@ def stairs(input_namespace: str, input_block_name: str, material: str, universal
 		},
 		"blockstate_to_universal": {
 			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"new_properties": {
+				"material": material
+			},
 			"carry_properties": {
 				"material": material,
 				"facing": ["north", "east", "south", "west"],

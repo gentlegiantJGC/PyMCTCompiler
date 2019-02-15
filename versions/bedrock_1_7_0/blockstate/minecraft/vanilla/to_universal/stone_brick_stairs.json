@@ -1,7 +1,9 @@
 {
     "new_block": "minecraft:stairs",
+    "new_properties": {
+        "material": "stone_brick"
+    },
     "carry_properties": {
-        "material": "stone_brick",
         "facing": [
             "north",
             "east",

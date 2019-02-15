@@ -1,7 +1,9 @@
 {
     "new_block": "minecraft:stairs",
+    "new_properties": {
+        "material": "dark_prismarine"
+    },
     "carry_properties": {
-        "material": "dark_prismarine",
         "facing": [
             "north",
             "east",
