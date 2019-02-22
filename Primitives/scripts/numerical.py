@@ -1753,3 +1753,138 @@ def fence_gate(input_namespace: str, input_block_name: str, material: str, unive
 			}
 		}
 	}
+
+
+def torch(input_namespace: str, input_block_name: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	data_map = {1: "east", 2: "west", 3: "south", 4: "north", 5: "up"}
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	return {
+		"to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_properties": {
+							"facing": facing
+						}
+					} for data, facing in data_map.items()
+				}
+			}
+		},
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"new_block": f"{input_namespace}:{input_block_name}",
+				"map_properties": {
+					"facing": {
+						facing: {
+							"new_properties": {
+								"block_data": str(data)
+							}
+						} for data, facing in data_map.items()
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"facing": list(data_map.values())
+			},
+			"defaults": {
+				"color": "up"
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"carry_properties": {
+				"facing": list(data_map.values())
+			}
+		},
+		"blockstate_from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"new_block": f"{input_namespace}:{input_block_name}",
+				"carry_properties": {
+					"facing": list(data_map.values())
+				}
+			}
+		}
+	}
+
+
+def redstone_torch(input_namespace: str, input_block_name: str, lit: bool, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	data_map = {1: "east", 2: "west", 3: "south", 4: "north", 5: "up"}
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	lit = "true" if lit else "false"
+	return {
+		"to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_properties": {
+							"facing": facing
+						}
+					} for data, facing in data_map.items()
+				}
+			},
+			"new_properties": {
+				"lit": lit
+			}
+		},
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+
+				"map_properties": {
+					"lit": {
+						lit: {
+							"new_block": f"{input_namespace}:{input_block_name}",
+						}
+					},
+					"facing": {
+						facing: {
+							"new_properties": {
+								"block_data": str(data)
+							}
+						} for data, facing in data_map.items()
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"facing": list(data_map.values())
+			},
+			"defaults": {
+				"color": "up"
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"carry_properties": {
+				"facing": list(data_map.values())
+
+			},
+			"new_properties": {
+				"lit": lit
+			}
+		},
+		"blockstate_from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"map_properties": {
+					"lit": {
+						lit: {
+							"new_block": f"{input_namespace}:{input_block_name}",
+						}
+					}
+				},
+				"carry_properties": {
+					"facing": list(data_map.values())
+				}
+			}
+		}
+	}

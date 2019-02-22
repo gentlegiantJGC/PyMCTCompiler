@@ -1,0 +1,21 @@
+{
+    "map_properties": {
+        "lit": {
+            "false": {
+                "new_block": "minecraft:unlit_redstone_torch"
+            },
+            "true": {
+                "new_block": "minecraft:redstone_torch"
+            }
+        }
+    },
+    "carry_properties": {
+        "facing": [
+            "east",
+            "west",
+            "south",
+            "north",
+            "up"
+        ]
+    }
+}

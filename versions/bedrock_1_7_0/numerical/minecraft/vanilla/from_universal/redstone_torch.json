@@ -1,0 +1,39 @@
+{
+    "map_properties": {
+        "lit": {
+            "false": {
+                "new_block": "minecraft:unlit_redstone_torch"
+            },
+            "true": {
+                "new_block": "minecraft:redstone_torch"
+            }
+        },
+        "facing": {
+            "east": {
+                "new_properties": {
+                    "block_data": "1"
+                }
+            },
+            "west": {
+                "new_properties": {
+                    "block_data": "2"
+                }
+            },
+            "south": {
+                "new_properties": {
+                    "block_data": "3"
+                }
+            },
+            "north": {
+                "new_properties": {
+                    "block_data": "4"
+                }
+            },
+            "up": {
+                "new_properties": {
+                    "block_data": "5"
+                }
+            }
+        }
+    }
+}

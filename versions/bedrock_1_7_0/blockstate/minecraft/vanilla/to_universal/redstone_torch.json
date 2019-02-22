@@ -1,0 +1,15 @@
+{
+    "new_block": "minecraft:redstone_torch",
+    "carry_properties": {
+        "facing": [
+            "east",
+            "west",
+            "south",
+            "north",
+            "up"
+        ]
+    },
+    "new_properties": {
+        "lit": "true"
+    }
+}
