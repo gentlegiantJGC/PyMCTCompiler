@@ -1,0 +1,36 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "minecraft:log",
+                "new_properties": {
+                    "material": "oak",
+                    "axis": "y"
+                }
+            },
+            "1": {
+                "new_block": "minecraft:log",
+                "new_properties": {
+                    "material": "oak",
+                    "axis": "x"
+                }
+            },
+            "2": {
+                "new_block": "minecraft:log",
+                "new_properties": {
+                    "material": "oak",
+                    "axis": "z"
+                }
+            },
+            "3": {
+                "new_block": "minecraft:wood",
+                "new_properties": {
+                    "material": "oak"
+                }
+            }
+        }
+    },
+    "new_properties": {
+        "stripped": "true"
+    }
+}

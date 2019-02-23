@@ -267,7 +267,7 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 	}
 
 
-def log(namespace: str, block_name: str, to_namespace: str = "minecraft", to_block_name: str = "log") -> dict:
+def log(namespace: str, block_name: str) -> dict:
 	if block_name == "log":
 		material_pallet = {0: "oak", 1: "spruce", 2: "birch", 3: "jungle"}
 	elif block_name == "log2":
@@ -280,7 +280,7 @@ def log(namespace: str, block_name: str, to_namespace: str = "minecraft", to_blo
 			"map_properties": {
 				"block_data": {
 					str(data): {
-						"new_block": f"{to_namespace}:{to_block_name}",
+						"new_block": "minecraft:log",
 						"new_properties": {
 							"material": material_pallet[data & 3],
 							"axis": {0: "y", 4: "x", 8: "z"}[data & 12],
@@ -295,7 +295,7 @@ def log(namespace: str, block_name: str, to_namespace: str = "minecraft", to_blo
 			}
 		},
 		"from_universal": {
-			f"{to_namespace}:{to_block_name}": {
+			"minecraft:log": {
 				"map_properties": {
 					"axis": {
 						axis: {
@@ -398,6 +398,326 @@ def log(namespace: str, block_name: str, to_namespace: str = "minecraft", to_blo
 							"new_block": f"{namespace}:{block_name}"
 						} for material in material_pallet.values()
 					}
+				}
+			}
+		}
+	}
+
+
+def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
+	if input_block_name == "log":
+		material_pallet = {0: "oak", 1: "spruce", 2: "birch", 3: "jungle"}
+	elif input_block_name == "log2":
+		material_pallet = {0: "acacia", 1: "dark_oak"}
+	else:
+		raise Exception(f'Block name "{input_block_name}" is not known')
+
+	return {
+		"to_universal": {
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_block": "minecraft:log",
+						"new_properties": {
+							"material": material_pallet[data & 3],
+							"axis": {0: "y", 4: "x", 8: "z"}[data & 12],
+						}
+					} if data <= 11 else {
+						"new_block": "minecraft:wood",
+						"new_properties": {
+							"material": material_pallet[data & 3]
+						}
+					} for data in range(16) if data & 3 in material_pallet
+				}
+			}
+		},
+		"from_universal": {
+			"minecraft:log": {
+				"map_properties": {
+					"stripped": {
+						"false": {
+							"map_properties": {
+								"axis": {
+									axis: {
+										"map_properties": {
+											"material": {
+												material: {
+													"new_block": f"{input_namespace}:{input_block_name}",
+													"new_properties": {
+														"block_data": str(data12 + data3)
+													}
+												} for data3, material in material_pallet.items()
+											}
+										}
+									} for data12, axis in {0: "y", 4: "x", 8: "z"}.items()
+								}
+							}
+						}
+					}
+				}
+			},
+			"minecraft:wood": {
+				"map_properties": {
+					"stripped": {
+						"false": {
+							"map_properties": {
+								"material": {
+									material: {
+										"new_block": f"{input_namespace}:{input_block_name}",
+										"new_properties": {
+											"block_data": str(12 + data3)
+										}
+									} for data3, material in material_pallet.items()
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"material": list(material_pallet.values()),
+				"axis": [
+					"x",
+					"y",
+					"z",
+					"all"
+				]
+			},
+			"defaults": {
+				"material": material_pallet[0],
+				"axis": "y"
+			}
+		},
+		"blockstate_to_universal": {
+			"carry_properties": {
+				"material": list(material_pallet.values()),
+				"axis": [
+					"x",
+					"y",
+					"z"
+				]
+			},
+			"map_properties": {
+				"axis": {
+					"x": {
+						"new_block": "minecraft:log"
+					},
+					"y": {
+						"new_block": "minecraft:log"
+					},
+					"z": {
+						"new_block": "minecraft:log"
+					},
+					"all": {
+						"new_block": "minecraft:wood",
+						"new_properties": {
+							"axis": "y"
+						}
+					}
+				}
+			}
+		},
+		"blockstate_from_universal": {
+			"minecraft:log": {
+				"carry_properties": {
+					"axis": [
+						"x",
+						"y",
+						"z"
+					]
+				},
+				"map_properties": {
+					"stripped": {
+						"false": {
+							"carry_properties": {
+								"material": list(material_pallet.values())
+							},
+							"map_properties": {
+								"material": {
+									material: {
+										"new_block": f"{input_namespace}:{input_block_name}"
+									} for material in material_pallet.values()
+								}
+							}
+						}
+					}
+				}
+			},
+			"minecraft:wood": {
+				"map_properties": {
+					"stripped": {
+						"false": {
+							"carry_properties": {
+								"material": list(material_pallet.values())
+							},
+							"map_properties": {
+								"material": {
+									material: {
+										"new_block": f"{input_namespace}:{input_block_name}"
+									} for material in material_pallet.values()
+								}
+							}
+						}
+					}
+				},
+				"new_properties": {
+					"axis": "all"
+				}
+			}
+		}
+	}
+
+
+def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: str) -> dict:
+	return {
+		"to_universal": {
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_block": "minecraft:log",
+						"new_properties": {
+							"material": material,
+							"axis": {0: "y", 1: "x", 2: "z"}[data]
+						}
+					} if data <= 2 else {
+						"new_block": "minecraft:wood",
+						"new_properties": {
+							"material": material
+						}
+					} for data in range(4)
+				}
+			},
+			"new_properties": {
+				"stripped": "true"
+			}
+		},
+		"from_universal": {
+			"minecraft:log": {
+				"map_properties": {
+					"stripped": {
+						"true": {
+							"map_properties": {
+								"axis": {
+									axis: {
+										"new_properties": {
+											"block_data": str(data)
+										}
+									} for data, axis in {0: "y", 1: "x", 2: "z"}.items()
+								},
+								"material": {
+									material: {
+										"new_block": f"{input_namespace}:{input_block_name}"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"minecraft:wood": {
+				"map_properties": {
+					"stripped": {
+						"true": {
+							"map_properties": {
+								"material": {
+									material: {
+										"new_block": f"{input_namespace}:{input_block_name}"
+									}
+								}
+							},
+							"new_properties": {
+								"block_data": str(3)
+							}
+						}
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"axis": [
+					"x",
+					"y",
+					"z",
+					"all"
+				]
+			},
+			"defaults": {
+				"axis": "y"
+			}
+		},
+		"blockstate_to_universal": {
+			"carry_properties": {
+				"axis": [
+					"x",
+					"y",
+					"z"
+				]
+			},
+			"map_properties": {
+				"axis": {
+					"x": {
+						"new_block": "minecraft:log"
+					},
+					"y": {
+						"new_block": "minecraft:log"
+					},
+					"z": {
+						"new_block": "minecraft:log"
+					},
+					"all": {
+						"new_block": "minecraft:wood",
+						"new_properties": {
+							"axis": "y"
+						}
+					}
+				}
+			},
+			"new_properties": {
+				"stripped": "true"
+			}
+		},
+		"blockstate_from_universal": {
+			"minecraft:log": {
+				"carry_properties": {
+					"axis": [
+						"x",
+						"y",
+						"z"
+					]
+				},
+				"map_properties": {
+					"stripped": {
+						"true": {
+							"map_properties": {
+								"material": {
+									material: {
+										"new_block": f"{input_namespace}:{input_block_name}"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"minecraft:wood": {
+				"map_properties": {
+					"stripped": {
+						"true": {
+							"map_properties": {
+								"material": {
+									material: {
+										"new_block": f"{input_namespace}:{input_block_name}"
+									}
+								}
+							}
+						}
+					}
+				},
+				"new_properties": {
+					"axis": "all"
 				}
 			}
 		}
