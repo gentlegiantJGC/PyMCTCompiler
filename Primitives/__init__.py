@@ -1,5 +1,6 @@
 import json
 import os
+import traceback
 from .scripts import *
 
 print('Loading Primitives')
@@ -26,6 +27,7 @@ for start_folder in blocks:
 				blocks[start_folder][os.path.splitext(f)[0]] = load_file(f'{root}/{f}')
 			except Exception as e:
 				print(f'Failed to load {root}/{f}\n{e}')
+				print(traceback.print_tb(e.__traceback__))
 
 
 def get_block(block_format: str, block_name: str) -> dict:

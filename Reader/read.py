@@ -307,6 +307,7 @@ class Namespace:
 		if 'multiblock' in mappings:
 			if location is None:
 				return output_blockstate, new, True
+			# TODO: multiblock code
 
 		if 'map_properties' in mappings:
 			for key in mappings['map_properties']:
@@ -326,11 +327,16 @@ class Namespace:
 				else:
 					raise Exception(f'Property "{key}" is not present in the input blockstate')
 
-		'map_block_name'
+		if 'map_block_name' in mappings:
+			pass
+			# TODO: map block name code
 
 		if 'map_nbt' in mappings:
 			if location is None:
 				return output_blockstate, new, True
+			else:
+				pass
+				# TODO: map nbt code
 
 		if 'new_properties' in mappings:
 			for key, val in mappings['new_properties'].items():

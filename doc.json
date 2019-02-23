@@ -100,7 +100,7 @@
 				"key": "val"
 			},
 			"multiblock": {
-                "coords": [0, 1, 0],  // coords relative to the current block. Loads this block and continues with it for all contained functions
+                "coords": [0, 1, 0],  // [x, y, z] coords relative to the current block. Loads this block (in the unmodified version format) and continues with it for all contained functions
 				// be careful with how this is implemented as it can lead to infinate loops
                 "other": {},
 				"functions": {},

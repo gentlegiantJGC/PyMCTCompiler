@@ -2208,3 +2208,215 @@ def redstone_torch(input_namespace: str, input_block_name: str, lit: bool, unive
 			}
 		}
 	}
+
+
+def door(input_namespace: str, input_block_name: str, material: str) -> dict:
+	return {
+		"to_universal": {
+			"new_block": "minecraft:door",
+			"new_properties": {
+				"material": material
+			},
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						# lower half
+						"new_properties": {
+							"half": "lower",
+							"open": {0: "false", 4: "true"}[data & 4],
+							"facing": {0: "east", 1: "south", 2: "west", 3: "north"}[data & 3]
+						},
+						"multiblock": {
+							"coords": [0, 1, 0],
+							"map_block_name": {
+								f"{input_namespace}:{input_block_name}": {
+									"map_properties": {
+										"block_data": {
+											str(data_): {
+												# upper half
+												"new_properties": {
+													"powered": {0: "false", 2: "true"}[data_ & 2],
+													"hinge": {0: "left", 1: "right"}[data_ & 1]
+												}
+											} for data_ in range(8, 12)
+										}
+									}
+								}
+							}
+						}
+					} if data & 8 == 0 else {
+						# upper half
+						"new_properties": {
+							"half": "upper",
+							"powered": {0: "false", 2: "true"}[data & 2],
+							"hinge": {0: "left", 1: "right"}[data & 1]
+						},
+						"multiblock": {
+							"coords": [0, -1, 0],
+							"map_block_name": {
+								f"{input_namespace}:{input_block_name}": {
+									"map_properties": {
+										"block_data": {
+											str(data_): {
+												# lower half
+												"new_properties": {
+													"open": {0: "false", 4: "true"}[data & 4],
+													"facing": {0: "east", 1: "south", 2: "west", 3: "north"}[data & 3]
+												}
+											} for data_ in range(8)
+										}
+									}
+								}
+							}
+						}
+					} for data in range(12)
+				}
+			}
+		},
+		"from_universal": {
+			"minecraft:door": {
+				"map_properties": {
+					"material": {
+						material: {
+							"new_block": f"{input_namespace}:{input_block_name}",
+						}
+					},
+					"half": {
+						half: {
+							# lower half
+							"map_properties": {
+								"open": {
+									door_open: {
+										"map_properties": {
+											"facing": {
+												facing: {
+													"new_properties": {
+														"block_data": str(data8 + data4 + data3)
+													}
+												} for data3, facing in {0: "east", 1: "south", 2: "west", 3: "north"}.items()
+											}
+										}
+									} for data4, door_open in {0: "false", 4: "true"}.items()
+								}
+							}
+						} if data8 == 0 else {
+							# upper half
+							"map_properties": {
+								"powered": {
+									powered: {
+										"map_properties": {
+											"hinge": {
+												hinge: {
+													"new_properties": {
+														"block_data": str(data8 + data2 + data1)
+													}
+												} for data1, hinge in {0: "left", 1: "right"}.items()
+											}
+										}
+									} for data2, powered in {0: "false", 2: "true"}.items()
+								}
+							}
+						} for data8, half in {0: "lower", 8: "upper"}.items()
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"facing": [
+					"north",
+					"south",
+					"west",
+					"east"
+				],
+				"half": [
+					"upper",
+					"lower"
+				],
+				"hinge": [
+					"left",
+					"right"
+				],
+				"open": [
+					"true",
+					"false"
+				],
+				"powered": [
+					"true",
+					"false"
+				]
+			},
+			"defaults": {
+				"facing": "north",
+				"half": "lower",
+				"hinge": "left",
+				"open": "false",
+				"powered": "false"
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": "minecraft:door",
+			"new_properties": {
+				"material": material
+			},
+			"carry_properties": {
+				"facing": [
+					"north",
+					"south",
+					"west",
+					"east"
+				],
+				"half": [
+					"upper",
+					"lower"
+				],
+				"hinge": [
+					"left",
+					"right"
+				],
+				"open": [
+					"true",
+					"false"
+				],
+				"powered": [
+					"true",
+					"false"
+				]
+			}
+		},
+		"blockstate_from_universal": {
+			"minecraft:door": {
+				"map_properties": {
+					"material": {
+						material: {
+							"new_block": f"{input_namespace}:{input_block_name}",
+						}
+					}
+				},
+				"carry_properties": {
+					"facing": [
+						"north",
+						"south",
+						"west",
+						"east"
+					],
+					"half": [
+						"upper",
+						"lower"
+					],
+					"hinge": [
+						"left",
+						"right"
+					],
+					"open": [
+						"true",
+						"false"
+					],
+					"powered": [
+						"true",
+						"false"
+					]
+				}
+			}
+		}
+	}
