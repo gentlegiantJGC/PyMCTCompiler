@@ -54,7 +54,7 @@
 	"mob_spawner": null,
 	"oak_stairs": "oak_stairs",
 	"chest": null,
-	"redstone_wire": null,
+	"redstone_wire": "redstone_wire",
 	"diamond_ore": "diamond_ore",
 	"diamond_block": "diamond_block",
 	"crafting_table": "crafting_table",
