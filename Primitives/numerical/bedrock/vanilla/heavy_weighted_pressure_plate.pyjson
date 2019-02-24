@@ -1,0 +1,1 @@
+numerical.direct_data("minecraft", "heavy_weighted_pressure_plate", "power", list(range(16)))

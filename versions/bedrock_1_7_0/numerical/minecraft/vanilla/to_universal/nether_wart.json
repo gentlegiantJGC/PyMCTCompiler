@@ -1,0 +1,27 @@
+{
+    "new_block": "minecraft:nether_wart",
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_properties": {
+                    "age": "0"
+                }
+            },
+            "1": {
+                "new_properties": {
+                    "age": "1"
+                }
+            },
+            "2": {
+                "new_properties": {
+                    "age": "2"
+                }
+            },
+            "3": {
+                "new_properties": {
+                    "age": "3"
+                }
+            }
+        }
+    }
+}
