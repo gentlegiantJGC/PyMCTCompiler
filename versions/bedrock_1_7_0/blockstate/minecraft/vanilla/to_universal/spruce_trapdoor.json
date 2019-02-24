@@ -1,0 +1,22 @@
+{
+    "new_block": "minecraft:trapdoor",
+    "new_properties": {
+        "material": "spruce"
+    },
+    "carry_properties": {
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ],
+        "half": [
+            "top",
+            "bottom"
+        ],
+        "open": [
+            "true",
+            "false"
+        ]
+    }
+}

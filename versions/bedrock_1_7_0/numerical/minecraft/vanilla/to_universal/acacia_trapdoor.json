@@ -1,0 +1,122 @@
+{
+    "new_block": "minecraft:trapdoor",
+    "new_properties": {
+        "material": "acacia"
+    },
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_properties": {
+                    "half": "bottom",
+                    "open": "false",
+                    "facing": "south"
+                }
+            },
+            "1": {
+                "new_properties": {
+                    "half": "bottom",
+                    "open": "false",
+                    "facing": "north"
+                }
+            },
+            "2": {
+                "new_properties": {
+                    "half": "bottom",
+                    "open": "false",
+                    "facing": "east"
+                }
+            },
+            "3": {
+                "new_properties": {
+                    "half": "bottom",
+                    "open": "false",
+                    "facing": "west"
+                }
+            },
+            "4": {
+                "new_properties": {
+                    "half": "bottom",
+                    "open": "true",
+                    "facing": "south"
+                }
+            },
+            "5": {
+                "new_properties": {
+                    "half": "bottom",
+                    "open": "true",
+                    "facing": "north"
+                }
+            },
+            "6": {
+                "new_properties": {
+                    "half": "bottom",
+                    "open": "true",
+                    "facing": "east"
+                }
+            },
+            "7": {
+                "new_properties": {
+                    "half": "bottom",
+                    "open": "true",
+                    "facing": "west"
+                }
+            },
+            "8": {
+                "new_properties": {
+                    "half": "top",
+                    "open": "false",
+                    "facing": "south"
+                }
+            },
+            "9": {
+                "new_properties": {
+                    "half": "top",
+                    "open": "false",
+                    "facing": "north"
+                }
+            },
+            "10": {
+                "new_properties": {
+                    "half": "top",
+                    "open": "false",
+                    "facing": "east"
+                }
+            },
+            "11": {
+                "new_properties": {
+                    "half": "top",
+                    "open": "false",
+                    "facing": "west"
+                }
+            },
+            "12": {
+                "new_properties": {
+                    "half": "top",
+                    "open": "true",
+                    "facing": "south"
+                }
+            },
+            "13": {
+                "new_properties": {
+                    "half": "top",
+                    "open": "true",
+                    "facing": "north"
+                }
+            },
+            "14": {
+                "new_properties": {
+                    "half": "top",
+                    "open": "true",
+                    "facing": "east"
+                }
+            },
+            "15": {
+                "new_properties": {
+                    "half": "top",
+                    "open": "true",
+                    "facing": "west"
+                }
+            }
+        }
+    }
+}

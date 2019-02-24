@@ -1,0 +1,145 @@
+{
+    "map_properties": {
+        "material": {
+            "oak": {
+                "new_block": "minecraft:trapdoor"
+            },
+            "iron": {
+                "new_block": "minecraft:iron_trapdoor"
+            },
+            "acacia": {
+                "new_block": "minecraft:acacia_trapdoor"
+            },
+            "birch": {
+                "new_block": "minecraft:birch_trapdoor"
+            },
+            "dark_oak": {
+                "new_block": "minecraft:dark_oak_trapdoor"
+            },
+            "jungle": {
+                "new_block": "minecraft:jungle_trapdoor"
+            },
+            "spruce": {
+                "new_block": "minecraft:spruce_trapdoor"
+            }
+        },
+        "half": {
+            "bottom": {
+                "map_properties": {
+                    "open": {
+                        "false": {
+                            "map_properties": {
+                                "facing": {
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "map_properties": {
+                                "facing": {
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "top": {
+                "map_properties": {
+                    "open": {
+                        "false": {
+                            "map_properties": {
+                                "facing": {
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "8"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "9"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "10"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "11"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "map_properties": {
+                                "facing": {
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "12"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "13"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "14"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "15"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
