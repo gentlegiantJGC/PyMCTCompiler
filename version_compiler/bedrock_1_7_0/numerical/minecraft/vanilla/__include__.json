@@ -50,7 +50,7 @@
 	"mossy_cobblestone": "mossy_cobblestone",
 	"obsidian": "obsidian",
 	"torch": "torch",
-	"fire": null,
+	"fire": "fire",
 	"mob_spawner": null,
 	"oak_stairs": "oak_stairs",
 	"chest": null,
