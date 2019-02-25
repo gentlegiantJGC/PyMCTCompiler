@@ -36,6 +36,9 @@
                 "new_properties": {
                     "material": "dark_oak"
                 }
+            },
+            "nether_brick": {
+                "new_block": "minecraft:nether_brick_fence"
             }
         }
     }
