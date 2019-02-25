@@ -1,0 +1,12 @@
+{
+    "new_block": "minecraft:pressure_plate",
+    "new_properties": {
+        "material": "dark_oak"
+    },
+    "carry_properties": {
+        "powered": [
+            "true",
+            "false"
+        ]
+    }
+}

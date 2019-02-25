@@ -2601,3 +2601,82 @@ def trapdoor(input_namespace: str, input_block_name: str, material: str) -> dict
 			}
 		}
 	}
+
+
+def pressure_plate(input_namespace: str, input_block_name: str, material: str) -> dict:
+	states = {0: "false", 1: "true"}
+	return {
+		"to_universal": {
+			"new_block": "minecraft:pressure_plate",
+			"new_properties": {
+				"material": material
+			},
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_properties": {
+							"powered": powered
+						}
+					} for data, powered in states.items()
+				}
+			}
+		},
+		"from_universal": {
+			"minecraft:pressure_plate": {
+				"map_properties": {
+					"material": {
+						material: {
+							"new_block": f"{input_namespace}:{input_block_name}",
+						}
+					},
+					"powered": {
+						powered: {
+							"new_properties": {
+								"block_data": str(data)
+							}
+						} for data, powered in states.items()
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"powered": [
+					"true",
+					"false"
+				]
+			},
+			"defaults": {
+				"powered": "false"
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": "minecraft:pressure_plate",
+			"new_properties": {
+				"material": material
+			},
+			"carry_properties": {
+				"powered": [
+					"true",
+					"false"
+				]
+			}
+		},
+		"blockstate_from_universal": {
+			"minecraft:pressure_plate": {
+				"map_properties": {
+					"material": {
+						material: {
+							"new_block": f"{input_namespace}:{input_block_name}",
+						}
+					}
+				},
+				"carry_properties": {
+					"powered": [
+						"true",
+						"false"
+					]
+				}
+			}
+		}
+	}
