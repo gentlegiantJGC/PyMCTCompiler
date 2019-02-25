@@ -1,45 +1,45 @@
 {
-    "new_block": "minecraft:snow_layer",
+    "new_block": "minecraft:snow",
     "map_properties": {
-        "age": {
+        "block_data": {
             "0": {
                 "new_properties": {
-                    "block_data": "0"
+                    "age": "0"
                 }
             },
             "1": {
                 "new_properties": {
-                    "block_data": "1"
+                    "age": "1"
                 }
             },
             "2": {
                 "new_properties": {
-                    "block_data": "2"
+                    "age": "2"
                 }
             },
             "3": {
                 "new_properties": {
-                    "block_data": "3"
+                    "age": "3"
                 }
             },
             "4": {
                 "new_properties": {
-                    "block_data": "4"
+                    "age": "4"
                 }
             },
             "5": {
                 "new_properties": {
-                    "block_data": "5"
+                    "age": "5"
                 }
             },
             "6": {
                 "new_properties": {
-                    "block_data": "6"
+                    "age": "6"
                 }
             },
             "7": {
                 "new_properties": {
-                    "block_data": "7"
+                    "age": "7"
                 }
             }
         }
