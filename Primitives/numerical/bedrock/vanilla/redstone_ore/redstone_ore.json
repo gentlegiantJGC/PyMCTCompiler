@@ -1,0 +1,39 @@
+{
+	"to_universal": {
+		"new_block": "minecraft:redstone_ore",
+		"new_properties": {
+			"lit": "false"
+		}
+	},
+	"from_universal": {
+		"minecraft:redstone_ore": {
+			"map_properties": {
+				"lit": {
+					"false": {
+						"new_block": "minecraft:redstone_ore",
+						"new_properties": {
+							"block_data": "0"
+						}
+					}
+				}
+			}
+		}
+	},
+	"blockstate_to_universal": {
+		"new_block": "minecraft:redstone_ore",
+		"new_properties": {
+			"lit": "false"
+		}
+	},
+	"blockstate_from_universal": {
+		"minecraft:redstone_ore": {
+			"map_properties": {
+				"lit": {
+					"false": {
+						"new_block": "minecraft:redstone_ore"
+					}
+				}
+			}
+		}
+	}
+}
