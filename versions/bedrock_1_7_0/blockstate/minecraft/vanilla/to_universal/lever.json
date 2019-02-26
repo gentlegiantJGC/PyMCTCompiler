@@ -1,0 +1,61 @@
+{
+    "new_block": "minecraft:lever",
+    "carry_properties": {
+        "powered": [
+            "false",
+            "true"
+        ]
+    },
+    "map_properties": {
+        "position": {
+            "floor_south": {
+                "new_properties": {
+                    "face": "floor",
+                    "facing": "south"
+                }
+            },
+            "floor_east": {
+                "new_properties": {
+                    "face": "floor",
+                    "facing": "east"
+                }
+            },
+            "wall_east": {
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "east"
+                }
+            },
+            "wall_west": {
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "west"
+                }
+            },
+            "wall_south": {
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "south"
+                }
+            },
+            "wall_north": {
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "north"
+                }
+            },
+            "ceiling_south": {
+                "new_properties": {
+                    "face": "ceiling",
+                    "facing": "south"
+                }
+            },
+            "ceiling_east": {
+                "new_properties": {
+                    "face": "ceiling",
+                    "facing": "east"
+                }
+            }
+        }
+    }
+}

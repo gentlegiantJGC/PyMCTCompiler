@@ -1,0 +1,119 @@
+{
+    "new_block": "minecraft:lever",
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_properties": {
+                    "face": "floor",
+                    "facing": "east",
+                    "powered": "false"
+                }
+            },
+            "1": {
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "east",
+                    "powered": "false"
+                }
+            },
+            "2": {
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "west",
+                    "powered": "false"
+                }
+            },
+            "3": {
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "south",
+                    "powered": "false"
+                }
+            },
+            "4": {
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "north",
+                    "powered": "false"
+                }
+            },
+            "5": {
+                "new_properties": {
+                    "face": "ceiling",
+                    "facing": "south",
+                    "powered": "false"
+                }
+            },
+            "6": {
+                "new_properties": {
+                    "face": "ceiling",
+                    "facing": "east",
+                    "powered": "false"
+                }
+            },
+            "7": {
+                "new_properties": {
+                    "face": "floor",
+                    "facing": "south",
+                    "powered": "false"
+                }
+            },
+            "8": {
+                "new_properties": {
+                    "face": "floor",
+                    "facing": "east",
+                    "powered": "true"
+                }
+            },
+            "9": {
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "east",
+                    "powered": "true"
+                }
+            },
+            "10": {
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "west",
+                    "powered": "true"
+                }
+            },
+            "11": {
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "south",
+                    "powered": "true"
+                }
+            },
+            "12": {
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "north",
+                    "powered": "true"
+                }
+            },
+            "13": {
+                "new_properties": {
+                    "face": "ceiling",
+                    "facing": "south",
+                    "powered": "true"
+                }
+            },
+            "14": {
+                "new_properties": {
+                    "face": "ceiling",
+                    "facing": "east",
+                    "powered": "true"
+                }
+            },
+            "15": {
+                "new_properties": {
+                    "face": "floor",
+                    "facing": "south",
+                    "powered": "true"
+                }
+            }
+        }
+    }
+}

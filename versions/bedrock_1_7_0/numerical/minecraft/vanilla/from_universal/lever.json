@@ -1,0 +1,186 @@
+{
+    "map_properties": {
+        "powered": {
+            "false": {
+                "map_properties": {
+                    "face": {
+                        "ceiling": {
+                            "new_properties": {
+                                "block_data": "5"
+                            },
+                            "map_properties": {
+                                "facing": {
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "floor": {
+                            "new_properties": {
+                                "block_data": "7"
+                            },
+                            "map_properties": {
+                                "facing": {
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "wall": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "true": {
+                "map_properties": {
+                    "face": {
+                        "ceiling": {
+                            "new_properties": {
+                                "block_data": "13"
+                            },
+                            "map_properties": {
+                                "facing": {
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "13"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "13"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "14"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "14"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "floor": {
+                            "new_properties": {
+                                "block_data": "15"
+                            },
+                            "map_properties": {
+                                "facing": {
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "15"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "15"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "8"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "8"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "wall": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "9"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "10"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "11"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "12"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

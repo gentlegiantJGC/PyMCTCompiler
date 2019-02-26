@@ -1,0 +1,97 @@
+{
+    "new_block": "minecraft:lever",
+    "carry_properties": {
+        "powered": [
+            "false",
+            "true"
+        ]
+    },
+    "map_properties": {
+        "face": {
+            "ceiling": {
+                "new_properties": {
+                    "position": "ceiling_south"
+                },
+                "map_properties": {
+                    "facing": {
+                        "north": {
+                            "new_properties": {
+                                "position": "ceiling_south"
+                            }
+                        },
+                        "south": {
+                            "new_properties": {
+                                "position": "ceiling_south"
+                            }
+                        },
+                        "west": {
+                            "new_properties": {
+                                "position": "ceiling_east"
+                            }
+                        },
+                        "east": {
+                            "new_properties": {
+                                "position": "ceiling_east"
+                            }
+                        }
+                    }
+                }
+            },
+            "floor": {
+                "new_properties": {
+                    "position": "floor_south"
+                },
+                "map_properties": {
+                    "facing": {
+                        "north": {
+                            "new_properties": {
+                                "position": "floor_south"
+                            }
+                        },
+                        "south": {
+                            "new_properties": {
+                                "position": "floor_south"
+                            }
+                        },
+                        "west": {
+                            "new_properties": {
+                                "position": "floor_east"
+                            }
+                        },
+                        "east": {
+                            "new_properties": {
+                                "position": "floor_east"
+                            }
+                        }
+                    }
+                }
+            },
+            "wall": {
+                "map_properties": {
+                    "facing": {
+                        "north": {
+                            "new_properties": {
+                                "position": "wall_north"
+                            }
+                        },
+                        "south": {
+                            "new_properties": {
+                                "position": "wall_south"
+                            }
+                        },
+                        "west": {
+                            "new_properties": {
+                                "position": "wall_west"
+                            }
+                        },
+                        "east": {
+                            "new_properties": {
+                                "position": "wall_east"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
