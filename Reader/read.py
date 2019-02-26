@@ -304,6 +304,23 @@ class Namespace:
 			namespace, block_name = output_blockstate['block_name'].split(':')
 			output_blockstate['properties'] = output_version.get(namespace).get_specification(block_name).get('defaults', {})
 
+		if 'new_properties' in mappings:
+			for key, val in mappings['new_properties'].items():
+				new['properties'][key] = val
+
+		if 'new_nbt' in mappings:
+			for key, val in mappings['new_nbt'].items():
+				new['nbt'][key] = val
+
+		if 'carry_properties' in mappings:
+			for key in mappings['carry_properties']:
+				if key in input_blockstate['properties']:
+					val = input_blockstate['properties'][key]
+					if val in mappings['carry_properties'][key]:
+						new['properties'][key] = val
+				else:
+					raise Exception(f'Property "{key}" is not present in the input blockstate')
+
 		if 'multiblock' in mappings:
 			if location is None:
 				return output_blockstate, new, True
@@ -337,23 +354,6 @@ class Namespace:
 			else:
 				pass
 				# TODO: map nbt code
-
-		if 'new_properties' in mappings:
-			for key, val in mappings['new_properties'].items():
-				new['properties'][key] = val
-
-		if 'new_nbt' in mappings:
-			for key, val in mappings['new_nbt'].items():
-				new['nbt'][key] = val
-
-		if 'carry_properties' in mappings:
-			for key in mappings['carry_properties']:
-				if key in input_blockstate['properties']:
-					val = input_blockstate['properties'][key]
-					if val in mappings['carry_properties'][key]:
-						new['properties'][key] = val
-				else:
-					raise Exception(f'Property "{key}" is not present in the input blockstate')
 
 		return output_blockstate, new, extra
 
