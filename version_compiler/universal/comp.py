@@ -54,7 +54,6 @@ def main(uncompiled_path: str, compiled_path: str):
 		for namespace in (namespace for namespace in os.listdir(f'{uncompiled_path}/modifications') if os.path.isdir(f'{uncompiled_path}/modifications/{namespace}')):
 			if not os.path.isdir(f'{compiled_path}/{namespace}'):
 				os.makedirs(f'{compiled_path}/{namespace}')
-			modifications = {"remove": [], "add": {}}
 			if namespace == 'minecraft':
 				blocks = json.load(open(f'{uncompiled_path}/generated/reports/blocks.json'), object_pairs_hook=OrderedDict)
 			else:
@@ -62,6 +61,7 @@ def main(uncompiled_path: str, compiled_path: str):
 			# Iterate through each group name (these are arbitrary names that are just used to format the data better)
 			# EG 'chemistry' will be a separate group name from 'vanilla' but is just a visual split
 			for group_name in (group_name for group_name in os.listdir(f'{uncompiled_path}/modifications/{namespace}') if os.path.isdir(f'{uncompiled_path}/modifications/{namespace}/{group_name}')):
+				modifications = {"remove": [], "add": {}}
 				if not os.path.isdir(f'{compiled_path}/{namespace}/{group_name}'):
 					os.makedirs(f'{compiled_path}/{namespace}/{group_name}')
 				if not os.path.isdir(f'{compiled_path}/{namespace}/{group_name}/specification'):
