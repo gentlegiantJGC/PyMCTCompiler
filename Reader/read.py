@@ -318,13 +318,19 @@ class Namespace:
 					val = input_blockstate['properties'][key]
 					if val in mappings['carry_properties'][key]:
 						new['properties'][key] = val
-				else:
-					raise Exception(f'Property "{key}" is not present in the input blockstate')
+				# else:
+				# 	raise Exception(f'Property "{key}" is not present in the input blockstate')
 
 		if 'multiblock' in mappings:
 			if location is None:
 				return output_blockstate, new, True
 			# TODO: multiblock code
+			# else:
+			#	if 'multiblock' is a dictionary:
+				# 	get the block at 'location' in the input format
+				#	call self._convert on this new blockstate
+			#	elif 'multiblock' is a list:
+				#	do the above but on every dictionary in the list
 
 		if 'map_properties' in mappings:
 			for key in mappings['map_properties']:
@@ -339,10 +345,10 @@ class Namespace:
 						for entry in ['properties', 'nbt']:
 							for key2, val2 in temp_new[entry].items():
 								new[entry][key2] = val2
-					else:
-						raise Exception(f'Value "{val}" for property "{key}" is not present in the mappings')
-				else:
-					raise Exception(f'Property "{key}" is not present in the input blockstate')
+				# 	else:
+				# 		raise Exception(f'Value "{val}" for property "{key}" is not present in the mappings')
+				# else:
+				# 	raise Exception(f'Property "{key}" is not present in the input blockstate')
 
 		if 'map_block_name' in mappings:
 			pass
