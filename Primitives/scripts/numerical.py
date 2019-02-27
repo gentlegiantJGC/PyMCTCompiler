@@ -2680,3 +2680,132 @@ def pressure_plate(input_namespace: str, input_block_name: str, material: str) -
 			}
 		}
 	}
+
+
+def repeater(input_namespace: str, input_block_name: str, powered: bool) -> dict:
+	powered_str = "true" if powered else "false"
+	return {
+		"to_universal": {
+			"new_block": "minecraft:repeater",
+			"new_properties": {
+				"powered": powered_str
+			},
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_properties": {
+							"facing": {0: "south", 1: "west", 2: "north", 3: "east"}[data & 3],
+							"delay": {0: "1", 4: "2", 8: "3", 12: "4"}[data & 12]
+						},
+						"multiblock": [
+							{
+								"coords": coords,
+								"map_block_name": {
+									"minecraft:powered_repeater": {
+										"map_properties": {
+											"block_data": {
+												str(data12 + {0: {-1: 1, 1: 3}, 1: {-1: 0, 1: 2}}[data & 1][direction]): {
+													"new_properties": {
+														"locked": "true"
+													}
+												} for data12 in range(0, 16, 4)
+											}
+										}
+									}
+								}
+							} for coords, direction in {0: [[[1, 0, 0], 1], [[-1, 0, 0], -1]], 1: [[[0, 0, 1], 1], [[0, 0, -1], -1]]}[data & 1]
+						]
+					} for data in range(16)
+				}
+			}
+		},
+		"from_universal": {
+			"minecraft:repeater": {
+				"map_properties": {
+					"powered": {
+						powered_str: {
+							"new_block": f"{input_namespace}:{input_block_name}"
+						}
+					},
+					"delay": {
+						delay: {
+							"map_properties": {
+								"facing": {
+									facing: {
+										"new_properties": {
+											"block_data": str(data12 + data3)
+										}
+									} for data3, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
+								}
+							}
+						} for data12, delay in {0: "1", 4: "2", 8: "3", 12: "4"}.items()
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"delay": [
+					"1",
+					"2",
+					"3",
+					"4"
+				],
+				"facing": [
+					"north",
+					"south",
+					"west",
+					"east"
+				]
+			},
+			"defaults": {
+				"delay": "1",
+				"facing": "north"
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": "minecraft:repeater",
+			"new_properties": {
+			   "powered": powered_str
+			},
+			"carry_properties": {
+				"delay": [
+					"1",
+					"2",
+					"3",
+					"4"
+				],
+				"facing": [
+					"north",
+					"south",
+					"west",
+					"east"
+				]
+			}
+		},
+		"blockstate_from_universal": {
+			"minecraft:repeater": {
+				"map_properties": {
+					"powered": {
+						powered_str: {
+							"new_block": f"{input_namespace}:{input_block_name}"
+						}
+					}
+				},
+				"carry_properties": {
+					"delay": [
+						"1",
+						"2",
+						"3",
+						"4"
+					],
+					"facing": [
+						"north",
+						"south",
+						"west",
+						"east"
+					]
+				}
+			}
+		}
+	}
