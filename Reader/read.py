@@ -1,6 +1,6 @@
 import json
 import os
-from typing import Tuple, Dict, Generator
+from typing import Tuple, Dict, Generator, List
 
 
 """
@@ -69,18 +69,21 @@ class VersionContainer:
 		for version_name in directories(mappings_path):
 			version = Version(f'{mappings_path}/{version_name}', self)
 
-			if version.platform not in self.versions:
-				self.versions[version.platform] = {}
-			if version.version_number not in self.versions[version.platform]:
-				self.versions[version.platform][version.version_number] = version
+			if version.platform not in self._versions:
+				self._versions[version.platform] = {}
+			if version.version_number not in self._versions[version.platform]:
+				self._versions[version.platform][version.version_number] = version
 
 	@property
-	def versions(self) -> dict:
-		return self._versions
+	def platforms(self) -> List[str]:
+		return list(self._versions.keys())
+
+	def versions(self, platform: str) -> List[Tuple[int, int, int]]:
+		return list(self._versions[platform].keys())
 
 	def get(self, platform: str, version_number: Tuple[int, int, int]) -> 'Version':
-		assert platform in self.versions and version_number in self.versions[platform]
-		return self.versions[platform][version_number]
+		assert platform in self._versions and version_number in self._versions[platform]
+		return self._versions[platform][version_number]
 
 	def to_universal(self, level, platform: str, version_number: Tuple[int, int, int], namespace: str, block_id: str, properties: Dict[str, str], force_blockstate: bool = False, location: Tuple[int, int, int] = None):
 		return self.get(platform, version_number).to_universal(level, namespace, block_id, properties, force_blockstate, location)
@@ -163,9 +166,9 @@ class SubVersion:
 	This is the container where that data will be stored.
 	"""
 	def __init__(self, sub_version_path: str, version_container: VersionContainer):
-		self.namespaces = {}
+		self._namespaces = {}
 		for namespace in directories(sub_version_path):
-			self.namespaces[namespace] = Namespace(f'{sub_version_path}/{namespace}', namespace, version_container, self)
+			self._namespaces[namespace] = Namespace(f'{sub_version_path}/{namespace}', namespace, version_container, self)
 
 	def to_universal(self, level, namespace: str, block_name: str, properties: Dict[str, str], location: Tuple[int, int, int] = None):
 		try:
@@ -181,9 +184,13 @@ class SubVersion:
 			print(f'Failed getting namespace. It may not exist.\n{e}')
 			return {'block_name': f'{namespace}/{block_name}', 'properties': properties}
 
+	@property
+	def namespaces(self) -> List[str]:
+		return list(self._namespaces.keys())
+
 	def get(self, namespace: str) -> 'Namespace':
-		assert namespace in self.namespaces
-		return self.namespaces[namespace]
+		assert namespace in self._namespaces
+		return self._namespaces[namespace]
 
 
 class Namespace:
@@ -206,16 +213,20 @@ class Namespace:
 	def namespace(self) -> str:
 		return self._namespace
 
-	def get_specification(self, block_name):
+	@property
+	def block_names(self) -> List[str]:
+		return list(self._blocks['specification'].keys())
+
+	def get_specification(self, block_name) -> dict:
 		return self._blocks['specification'][block_name]
 
-	def get_mapping_to_universal(self, block_name):
+	def get_mapping_to_universal(self, block_name) -> dict:
 		return self._blocks['to_universal'][block_name]
 
-	def get_mapping_from_universal(self, block_name):
+	def get_mapping_from_universal(self, block_name) -> dict:
 		return self._blocks['from_universal'][block_name]
 
-	def to_universal(self, level, block_name: str, properties: Dict[str, str], location: Tuple[int, int, int] = None):
+	def to_universal(self, level, block_name: str, properties: Dict[str, str], location: Tuple[int, int, int] = None) -> Tuple[dict, bool]:
 		blockstate = {'block_name': f'{self.namespace}:{block_name}', 'properties': properties}
 		extra = False
 		try:
