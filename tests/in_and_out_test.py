@@ -18,12 +18,24 @@ if __name__ == '__main__':
 					keys, values = zip(*properties.items())
 					for spec_ in itertools.product(*values):
 						spec = dict(zip(keys, spec_))
-						universal_blockstate, extra = namespace.to_universal(None, block_name, spec)
+						try:
+							universal_blockstate, extra = namespace.to_universal(None, block_name, spec)
+						except:
+							print('error to universal')
+							print({'block_name': f'{namespace_str}:{block_name}', 'properties': spec})
+							continue
 						if extra:
 							print(f'skipping {platform_name} {version_number} {namespace_str} {block_name} {spec}. Needs more data')
 							continue
-						back_out = block_mappings.from_universal(None, platform_name, version_number, *universal_blockstate['block_name'].split(':'), universal_blockstate['properties'])
-						print(back_out == {'block_name': f'{namespace_str}:{block_name}', 'properties': spec})
+						try:
+							back_out = block_mappings.from_universal(None, platform_name, version_number, *universal_blockstate['block_name'].split(':'), universal_blockstate['properties'])
+						except:
+							print('error from universal')
+							print(universal_blockstate)
+							print({'block_name': f'{namespace_str}:{block_name}', 'properties': spec})
+							continue
+						if not back_out['block_name'] == f'{namespace_str}:{block_name}' and back_out['properties'] == spec:
+							print({'block_name': f'{namespace_str}:{block_name}', 'properties': spec})
 
 
 

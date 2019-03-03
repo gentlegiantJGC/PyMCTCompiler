@@ -85,10 +85,10 @@ class VersionContainer:
 		assert platform in self._versions and version_number in self._versions[platform]
 		return self._versions[platform][version_number]
 
-	def to_universal(self, level, platform: str, version_number: Tuple[int, int, int], namespace: str, block_id: str, properties: Dict[str, str], force_blockstate: bool = False, location: Tuple[int, int, int] = None):
+	def to_universal(self, level, platform: str, version_number: Tuple[int, int, int], namespace: str, block_id: str, properties: Dict[str, str], force_blockstate: bool = False, location: Tuple[int, int, int] = None) -> Tuple[dict, bool]:
 		return self.get(platform, version_number).to_universal(level, namespace, block_id, properties, force_blockstate, location)
 
-	def from_universal(self, level, platform: str, version_number: Tuple[int, int, int], namespace: str, block_id: str, properties: Dict[str, str], force_blockstate: bool = False):
+	def from_universal(self, level, platform: str, version_number: Tuple[int, int, int], namespace: str, block_id: str, properties: Dict[str, str], force_blockstate: bool = False) -> dict:
 		return self.get(platform, version_number).from_universal(level, namespace, block_id, properties, force_blockstate)
 
 
@@ -146,13 +146,12 @@ class Version:
 			elif self.format == 'blockstate':
 				return self._subversions['blockstate']
 
-	def to_universal(self, level, namespace: str, block_name: str, properties: Dict[str, str], force_blockstate: bool = False, location: Tuple[int, int, int] = None):
+	def to_universal(self, level, namespace: str, block_name: str, properties: Dict[str, str], force_blockstate: bool = False, location: Tuple[int, int, int] = None) -> Tuple[dict, bool]:
 		if self.format == 'numerical' and not force_blockstate:
 			namespace, block_name = self._numerical_map[block_name].split(':')
-		blockstate = self.get(force_blockstate).to_universal(level, namespace, block_name, properties, location)
-		return blockstate
+		return self.get(force_blockstate).to_universal(level, namespace, block_name, properties, location)
 
-	def from_universal(self, level, namespace: str, block_name: str, properties: Dict[str, str], force_blockstate: bool = False):
+	def from_universal(self, level, namespace: str, block_name: str, properties: Dict[str, str], force_blockstate: bool = False) -> dict:
 		blockstate = self.get(force_blockstate).from_universal(level, namespace, block_name, properties)
 		if self.format == 'numerical':
 			blockstate['block_name'] = self._numerical_map_inverse[blockstate['block_name']]
@@ -170,14 +169,14 @@ class SubVersion:
 		for namespace in directories(sub_version_path):
 			self._namespaces[namespace] = Namespace(f'{sub_version_path}/{namespace}', namespace, version_container, self)
 
-	def to_universal(self, level, namespace: str, block_name: str, properties: Dict[str, str], location: Tuple[int, int, int] = None):
+	def to_universal(self, level, namespace: str, block_name: str, properties: Dict[str, str], location: Tuple[int, int, int] = None) -> Tuple[dict, bool]:
 		try:
 			return self.get(namespace).to_universal(level, block_name, properties, location)
 		except Exception as e:
 			print(f'Failed getting namespace. It may not exist.\n{e}')
-			return {'block_name': f'{namespace}/{block_name}', 'properties': properties}
+			return {'block_name': f'{namespace}/{block_name}', 'properties': properties}, False
 
-	def from_universal(self, level, namespace: str, block_name: str, properties: Dict[str, str]):
+	def from_universal(self, level, namespace: str, block_name: str, properties: Dict[str, str]) -> dict:
 		try:
 			return self.get(namespace).from_universal(level, block_name, properties)
 		except Exception as e:
@@ -218,47 +217,62 @@ class Namespace:
 		return list(self._blocks['specification'].keys())
 
 	def get_specification(self, block_name) -> dict:
+		assert block_name in self._blocks['specification'], f'Specification for {self.namespace}:{block_name} does not exist'
 		return self._blocks['specification'][block_name]
 
 	def get_mapping_to_universal(self, block_name) -> dict:
+		assert block_name in self._blocks['to_universal'], f'Mapping to universal for {self.namespace}:{block_name} does not exist'
 		return self._blocks['to_universal'][block_name]
 
 	def get_mapping_from_universal(self, block_name) -> dict:
+		assert block_name in self._blocks['from_universal'], f'Mapping from universal for {self.namespace}:{block_name} does not exist'
 		return self._blocks['from_universal'][block_name]
 
 	def to_universal(self, level, block_name: str, properties: Dict[str, str], location: Tuple[int, int, int] = None) -> Tuple[dict, bool]:
 		blockstate = {'block_name': f'{self.namespace}:{block_name}', 'properties': properties}
 		extra = False
 		try:
-			blockstate, extra = self.convert(
+			new_blockstate, extra = self.convert(
 				level,
 				blockstate,
-				self._blocks['to_universal'][block_name],
+				self.get_specification(block_name),
+				self.get_mapping_to_universal(block_name),
 				self.version_container.get('universal', (1, 0, 0)).get(),
 				location
 			)
-			if blockstate['nbt'] != {}:
-				print(f'universal mappings should not have nbt: {blockstate}')
-			del blockstate['nbt']
+			if new_blockstate['nbt'] != {}:
+				print(f'universal mappings should not have nbt: {new_blockstate}')
+			del new_blockstate['nbt']
 
 		except Exception as e:
 			print(f'Failed converting blockstate to universal\n{e}')
-		return blockstate, extra
+			return blockstate, extra
+		else:
+			if new_blockstate['block_name'] is not None:
+				return new_blockstate, extra
+			else:
+				return blockstate, extra
 
 	def from_universal(self, level, block_name: str, properties: Dict[str, str]):
 		blockstate = {'block_name': f'{self.namespace}:{block_name}', 'properties': properties}
 		try:
-			return self.convert(
+			new_blockstate, _ = self.convert(
 				level,
 				blockstate,
-				self._blocks['from_universal'][block_name],
+				self.version_container.get('universal', (1, 0, 0)).get().get(self.namespace).get_specification(block_name),
+				self.get_mapping_from_universal(block_name),
 				self.current_version
 			)
 		except Exception as e:
 			print(f'Failed converting blockstate from universal\n{e}')
 			return blockstate
+		else:
+			if new_blockstate['block_name'] is not None:
+				return new_blockstate
+			else:
+				return blockstate
 
-	def convert(self, level, input_blockstate: dict, mappings: dict, output_version: SubVersion, location: Tuple[int, int, int] = None):
+	def convert(self, level, input_blockstate: dict, input_spec: dict, mappings: dict, output_version: SubVersion, location: Tuple[int, int, int] = None) -> Tuple[dict, bool]:
 		"""
 			A demonstration function on how to read the json files to convert into or out of the numerical format
 			You should implement something along these lines into you own code if you want to read them.
@@ -270,16 +284,15 @@ class Namespace:
 			:param location: (x, y, z) only used if data beyond the blockstate is needed
 			:return: The converted blockstate
 		"""
-		spec = self.get_specification(input_blockstate['block_name'].split(':')[-1])
-		if 'nbt' in spec:
+		if 'nbt' in input_spec:
 			if location is None:
 				return input_blockstate, True
 			else:
 				nbt = get_nbt(level, location)
 				input_blockstate['nbt'] = {}
-				for key in spec['nbt']:
+				for key in input_spec['nbt']:
 					_nbt = nbt
-					path = spec['nbt'][key].get('path', []) + [spec['nbt'][key]['name'], spec['nbt'][key]['type']]
+					path = input_spec['nbt'][key].get('path', []) + [input_spec['nbt'][key]['name'], input_spec['nbt'][key]['type']]
 					try:
 						assert _nbt.__class__.__name__ == 'TAG_Compound'
 						for path_key, dtype in path:
@@ -297,7 +310,7 @@ class Namespace:
 							}[dtype]
 						input_blockstate['nbt'][key] = str(_nbt.value)
 					except:
-						input_blockstate['nbt'][key] = spec['nbt'][key]['default']
+						input_blockstate['nbt'][key] = input_spec['nbt'][key]['default']
 
 		output_blockstate, new, extra = self._convert(level, input_blockstate, mappings, output_version, location)
 		for entry in ['properties', 'nbt']:
