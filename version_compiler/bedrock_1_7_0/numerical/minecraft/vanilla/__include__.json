@@ -257,8 +257,8 @@
 	"blue_ice": "blue_ice",
 
 	"seagrass": null,
-	"coral": null,
-	"coral_block": null,
+	"coral": "coral",
+	"coral_block": "coral_block",
 	"coral_fan": null,
 	"coral_fan_dead": null,
 	"coral_fan_hang": null,

@@ -1,4 +1,5 @@
 from typing import Dict, List
+import math
 
 
 def default(input_namespace: str, input_block_name: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
@@ -2804,6 +2805,176 @@ def repeater(input_namespace: str, input_block_name: str, powered: bool) -> dict
 						"south",
 						"west",
 						"east"
+					]
+				}
+			}
+		}
+	}
+
+
+def coral(input_namespace: str, input_block_name: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	return {
+		"to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_properties": {
+							"type": {0: "tube", 1: "brain", 2: "bubble", 3: "fire", 4: "horn"}[data % 4]
+						}
+					} for data in range(5)
+				}
+			}
+		},
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"new_block": f"{input_namespace}:{input_block_name}",
+				"map_properties": {
+					"type": {
+						material: {
+							"new_properties": {
+								"block_data": str(data4)
+							}
+						} for data4, material in {0: "tube", 1: "brain", 2: "bubble", 3: "fire", 4: "horn"}.items()
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"type": [
+					"tube",
+					"brain",
+					"bubble",
+					"fire",
+					"horn"
+				]
+			},
+			"defaults": {
+				"type": "tube"
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"carry_properties": {
+				"type": [
+					"tube",
+					"brain",
+					"bubble",
+					"fire",
+					"horn"
+				]
+			}
+		},
+		"blockstate_from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"new_block": f"{input_namespace}:{input_block_name}",
+				"carry_properties": {
+					"type": [
+						"tube",
+						"brain",
+						"bubble",
+						"fire",
+						"horn"
+					]
+				}
+			}
+		}
+	}
+
+
+def coral_block(input_namespace: str, input_block_name: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	return {
+		"to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_properties": {
+							"type": {0: "tube", 1: "brain", 2: "bubble", 3: "fire", 4: "horn"}[data % 4],
+							"dead": {0: "false", 1: "true"}[int(math.floor(data / 5))]
+						}
+					} for data in range(10)
+				}
+			}
+		},
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"new_block": f"{input_namespace}:{input_block_name}",
+				"map_properties": {
+					"type": {
+						material: {
+							"map_properties": {
+								"dead": {
+									dead: {
+										"new_properties": {
+											"block_data": str(data5 + data4)
+										}
+									} for data5, dead in {0: "false", 1: "true"}.items()
+								}
+							}
+						} for data4, material in {0: "tube", 1: "brain", 2: "bubble", 3: "fire", 4: "horn"}.items()
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"type": [
+					"tube",
+					"brain",
+					"bubble",
+					"fire",
+					"horn"
+				],
+				"dead": [
+					"true",
+					"false"
+				]
+			},
+			"defaults": {
+				"type": "tube",
+				"dead": "false"
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"carry_properties": {
+				"type": [
+					"tube",
+					"brain",
+					"bubble",
+					"fire",
+					"horn"
+				],
+				"dead": [
+					"true",
+					"false"
+				]
+			}
+		},
+		"blockstate_from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"new_block": f"{input_namespace}:{input_block_name}",
+				"carry_properties": {
+					"type": [
+						"tube",
+						"brain",
+						"bubble",
+						"fire",
+						"horn"
+					],
+					"dead": [
+						"true",
+						"false"
 					]
 				}
 			}
