@@ -1,0 +1,8 @@
+{
+	"remove": [
+		"bricks"
+	],
+	"add": {
+		"brick_block": {}
+	}
+}
