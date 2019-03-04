@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:fire",
+    "new_block": "universal_minecraft:fire",
     "carry_properties": {
         "age": [
             "0",

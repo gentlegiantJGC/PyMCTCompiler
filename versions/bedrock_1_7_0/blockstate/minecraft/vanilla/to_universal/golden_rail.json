@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:golden_rail",
+    "new_block": "universal_minecraft:golden_rail",
     "carry_properties": {
         "powered": [
             "true",

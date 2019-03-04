@@ -1,1 +1,1 @@
-numerical.rail2("minecraft", "activator_rail")
+numerical.rail2("minecraft", "activator_rail", "universal_minecraft")

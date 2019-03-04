@@ -1,100 +1,100 @@
 {
-		"specification": {
-			"properties": {
-				"block_data": [str(data) for data in range(16)]
-			},
-			"defaults": {
-				"block_data": "0"
-			},
-			"nbt": {
-				"note": {
-					"name": "note",
-					"type": "byte",
-					"options": [str(data) for data in range(25)],
-					"default": "0"
-				},
-				"powered": {
-					"name": "powered",
-					"type": "byte",
-					"options": ["0", "1"],
-					"default": "0"
-				}
-			},
+	"specification": {
+		"properties": {
+			"block_data": [str(data) for data in range(16)]
 		},
-		"to_universal": {
-			"new_block": "minecraft:note_block",
-			"map_nbt": {
+		"defaults": {
+			"block_data": "0"
+		},
+		"nbt": {
+			"note": {
+				"name": "note",
+				"type": "byte",
+				"options": [str(data) for data in range(25)],
+				"default": "0"
+			},
+			"powered": {
+				"name": "powered",
+				"type": "byte",
+				"options": ["0", "1"],
+				"default": "0"
+			}
+		},
+	},
+	"to_universal": {
+		"new_block": "universal_minecraft:note_block",
+		"map_nbt": {
+			"note": {
+				str(data): {
+					"new_properties": {
+						"note": str(data)
+					}
+				} for data in range(25)
+			},
+			"powered": {
+				"0": {
+					"new_properties": {
+						"powered": "false"
+					}
+				},
+				"1": {
+					"new_properties": {
+						"powered": "true"
+					}
+				}
+			}
+		}
+	},
+	"from_universal": {
+		"universal_minecraft:note_block": {
+			"new_block": "minecraft:noteblock",
+			"map_properties": {
 				"note": {
 					str(data): {
-						"new_properties": {
+						"new_nbt": {
 							"note": str(data)
 						}
 					} for data in range(25)
 				},
 				"powered": {
-					"0": {
-						"new_properties": {
-							"powered": "false"
+					"false": {
+						"new_nbt": {
+							"powered": "0"
 						}
 					},
-					"1": {
-						"new_properties": {
-							"powered": "true"
+					"true": {
+						"new_nbt": {
+							"powered": "1"
 						}
 					}
 				}
 			}
+		}
+	},
+	"blockstate_specification": {
+		"properties": {
+			"note": [str(data) for data in range(25)],
+			"powered": ["false", "true"]
 		},
-		"from_universal": {
-			"minecraft:note_block": {
-				"new_block": "minecraft:noteblock",
-				"map_properties": {
-					"note": {
-						str(data): {
-							"new_nbt": {
-								"note": str(data)
-							}
-						} for data in range(25)
-					},
-					"powered": {
-						"false": {
-							"new_nbt": {
-								"powered": "0"
-							}
-						},
-						"true": {
-							"new_nbt": {
-								"powered": "1"
-							}
-						}
-					}
-				}
-			}
-		},
-		"blockstate_specification": {
-			"properties": {
-				"note": [str(data) for data in range(25)],
-				"powered": ["false", "true"]
-			},
-			"defaults": {
-				"note": "0",
-				"powered": "false"
-			}
-		},
-		"blockstate_to_universal": {
-			"new_block": "minecraft:note_block",
+		"defaults": {
+			"note": "0",
+			"powered": "false"
+		}
+	},
+	"blockstate_to_universal": {
+		"new_block": "universal_minecraft:note_block",
+		"carry_properties": {
+			"note": [str(data) for data in range(25)],
+			"powered": ["false", "true"]
+		}
+	},
+	"blockstate_from_universal": {
+		"universal_minecraft:note_block": {
+			"new_block": "minecraft:noteblock",
 			"carry_properties": {
 				"note": [str(data) for data in range(25)],
 				"powered": ["false", "true"]
 			}
-		},
-		"blockstate_from_universal": {
-			"minecraft:note_block": {
-				"new_block": "minecraft:noteblock",
-				"carry_properties": {
-					"note": [str(data) for data in range(25)],
-					"powered": ["false", "true"]
-				}
-			}
 		}
 	}
+}

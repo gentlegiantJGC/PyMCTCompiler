@@ -2,28 +2,28 @@
     "map_properties": {
         "block_data": {
             "0": {
-                "new_block": "minecraft:log",
+                "new_block": "universal_minecraft:log",
                 "new_properties": {
                     "material": "spruce",
                     "axis": "y"
                 }
             },
             "1": {
-                "new_block": "minecraft:log",
+                "new_block": "universal_minecraft:log",
                 "new_properties": {
                     "material": "spruce",
                     "axis": "x"
                 }
             },
             "2": {
-                "new_block": "minecraft:log",
+                "new_block": "universal_minecraft:log",
                 "new_properties": {
                     "material": "spruce",
                     "axis": "z"
                 }
             },
             "3": {
-                "new_block": "minecraft:wood",
+                "new_block": "universal_minecraft:wood",
                 "new_properties": {
                     "material": "spruce"
                 }

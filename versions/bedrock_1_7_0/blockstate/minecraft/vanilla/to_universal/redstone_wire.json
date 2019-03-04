@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:redstone_wire",
+    "new_block": "universal_minecraft:redstone_wire",
     "carry_properties": {
         "power": [
             "0",

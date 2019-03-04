@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:carved_pumpkin",
+    "new_block": "universal_minecraft:carved_pumpkin",
     "map_properties": {
         "block_data": {
             "0": {

@@ -1,1 +1,1 @@
-numerical.button_bedrock("minecraft", "wooden_button", "oak", "minecraft", "button")
+numerical.button_bedrock("minecraft", "wooden_button", "oak", "universal_minecraft", "button")

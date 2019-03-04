@@ -1,1 +1,1 @@
-numerical.default("minecraft", "packed_ice")
+numerical.default("minecraft", "packed_ice", "universal_minecraft")

@@ -1,1 +1,1 @@
-numerical.direct_data("minecraft", "redstone_wire", "power", list(range(16)))
+numerical.direct_data("minecraft", "redstone_wire", "power", list(range(16)), "universal_minecraft")

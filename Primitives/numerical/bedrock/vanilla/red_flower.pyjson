@@ -3,24 +3,24 @@
 		"map_properties": {
 			"block_data": {
 				str(data): {
-					"new_block": "minecraft:plant",
+					"new_block": "universal_minecraft:plant",
 					"new_properties": {
-						"type": type
+						"type": material
 					}
-				} for data, type in enumerate(["poppy", "blue_orchid", "allium", "azure_bluet", "red_tulip", "orange_tulip", "white_tulip", "pink_tulip", "oxeye_daisy"])
+				} for data, material in enumerate(["poppy", "blue_orchid", "allium", "azure_bluet", "red_tulip", "orange_tulip", "white_tulip", "pink_tulip", "oxeye_daisy"])
 			}
 		}
 	},
 	"from_universal": {
-		"minecraft:plant": {
+		"universal_minecraft:plant": {
 			"map_properties": {
 				"type": {
-					type: {
+					material: {
 						"new_block": "minecraft:red_flower",
 						"new_properties": {
 							"block_data": str(data)
 						}
-					} for data, type in enumerate(["poppy", "blue_orchid", "allium", "azure_bluet", "red_tulip", "orange_tulip", "white_tulip", "pink_tulip", "oxeye_daisy"])
+					} for data, material in enumerate(["poppy", "blue_orchid", "allium", "azure_bluet", "red_tulip", "orange_tulip", "white_tulip", "pink_tulip", "oxeye_daisy"])
 				}
 			}
 		}
@@ -44,7 +44,7 @@
 		}
 	},
 	"blockstate_to_universal": {
-		"new_block": "minecraft:plant",
+		"new_block": "universal_minecraft:plant",
 		"carry_properties": {
 			"type": [
 				"poppy",
@@ -60,15 +60,15 @@
 		}
 	},
 	"blockstate_from_universal": {
-		"minecraft:plant": {
+		"universal_minecraft:plant": {
 			"map_properties": {
 				"type": {
-					type: {
+					material: {
 						"new_block": "minecraft:red_flower",
 						"new_properties": {
-							"type": type
+							"type": material
 						}
-					} for type in ["poppy", "blue_orchid", "allium", "azure_bluet", "red_tulip", "orange_tulip", "white_tulip", "pink_tulip", "oxeye_daisy"]
+					} for material in ["poppy", "blue_orchid", "allium", "azure_bluet", "red_tulip", "orange_tulip", "white_tulip", "pink_tulip", "oxeye_daisy"]
 				}
 			}
 		}

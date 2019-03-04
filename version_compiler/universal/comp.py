@@ -54,8 +54,8 @@ def main(uncompiled_path: str, compiled_path: str):
 		for namespace in (namespace for namespace in os.listdir(f'{uncompiled_path}/modifications') if os.path.isdir(f'{uncompiled_path}/modifications/{namespace}')):
 			if not os.path.isdir(f'{compiled_path}/{namespace}'):
 				os.makedirs(f'{compiled_path}/{namespace}')
-			if namespace == 'minecraft':
-				blocks = json.load(open(f'{uncompiled_path}/generated/reports/blocks.json'), object_pairs_hook=OrderedDict)
+			if namespace == 'universal_minecraft':
+				blocks = {f'universal_{key}': val for key, val in json.load(open(f'{uncompiled_path}/generated/reports/blocks.json'), object_pairs_hook=OrderedDict).items()}
 			else:
 				blocks = {}
 			# Iterate through each group name (these are arbitrary names that are just used to format the data better)

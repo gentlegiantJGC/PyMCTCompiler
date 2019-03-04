@@ -1,1 +1,1 @@
-numerical.default("minecraft", "netherreactor", "minecraft", "nether_reactor")
+numerical.default("minecraft", "netherreactor", "universal_minecraft", "nether_reactor")

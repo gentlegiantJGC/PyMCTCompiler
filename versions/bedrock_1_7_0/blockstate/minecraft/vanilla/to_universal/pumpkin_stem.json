@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:pumpkin_stem",
+    "new_block": "universal_minecraft:pumpkin_stem",
     "carry_properties": {
         "age": [
             "0",

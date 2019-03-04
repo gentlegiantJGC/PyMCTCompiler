@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:cactus",
+    "new_block": "universal_minecraft:cactus",
     "carry_properties": {
         "age": [
             "0",

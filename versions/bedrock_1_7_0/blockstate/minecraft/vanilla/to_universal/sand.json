@@ -2,10 +2,10 @@
     "map_properties": {
         "material": {
             "sand": {
-                "new_block": "minecraft:sand"
+                "new_block": "universal_minecraft:sand"
             },
             "red_sand": {
-                "new_block": "minecraft:red_sand"
+                "new_block": "universal_minecraft:red_sand"
             }
         }
     }

@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:glazed_terracotta",
+    "new_block": "universal_minecraft:glazed_terracotta",
     "new_properties": {
         "color": "green"
     },

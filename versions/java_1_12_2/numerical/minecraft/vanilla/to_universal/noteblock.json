@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:note_block",
+    "new_block": "universal_minecraft:note_block",
     "map_nbt": {
         "note": {
             "0": {

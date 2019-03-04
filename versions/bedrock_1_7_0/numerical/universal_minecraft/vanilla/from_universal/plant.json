@@ -2,13 +2,13 @@
     "map_properties": {
         "type": {
             "grass": {
-                "new_block": "minecraft:grass",
+                "new_block": "minecraft:tallgrass",
                 "new_properties": {
                     "block_data": "0"
                 }
             },
             "fern": {
-                "new_block": "minecraft:grass",
+                "new_block": "minecraft:tallgrass",
                 "new_properties": {
                     "block_data": "1"
                 }

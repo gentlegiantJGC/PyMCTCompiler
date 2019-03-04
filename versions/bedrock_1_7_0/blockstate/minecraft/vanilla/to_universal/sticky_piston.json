@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:sticky_piston",
+    "new_block": "universal_minecraft:sticky_piston",
     "carry_properties": {
         "facing": [
             "north",

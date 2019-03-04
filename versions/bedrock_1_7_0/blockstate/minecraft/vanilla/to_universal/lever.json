@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:lever",
+    "new_block": "universal_minecraft:lever",
     "carry_properties": {
         "powered": [
             "false",

@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:wall_sign",
+    "new_block": "universal_minecraft:wall_sign",
     "carry_properties": {
         "facing": [
             "north",

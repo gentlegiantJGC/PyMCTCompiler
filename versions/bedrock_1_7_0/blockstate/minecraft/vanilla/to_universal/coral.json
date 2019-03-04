@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:coral",
+    "new_block": "universal_minecraft:coral",
     "carry_properties": {
         "type": [
             "tube",

@@ -1,1 +1,1 @@
-numerical.sandstone("minecraft", "sandstone", 1)
+numerical.sandstone("minecraft", "sandstone", 1, "universal_minecraft")

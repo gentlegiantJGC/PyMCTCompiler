@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:rail",
+    "new_block": "universal_minecraft:rail",
     "carry_properties": {
         "shape": [
             "north_south",

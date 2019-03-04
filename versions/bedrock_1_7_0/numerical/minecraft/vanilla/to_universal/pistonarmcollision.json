@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:piston_head",
+    "new_block": "universal_minecraft:piston_head",
     "map_properties": {
         "block_data": {
             "0": {
@@ -14,10 +14,10 @@
                     ],
                     "map_block_name": {
                         "minecraft:piston": {
-                            "new_block": "minecraft:piston_head"
+                            "new_block": "universal_minecraft:piston_head"
                         },
                         "minecraft:sticky_piston": {
-                            "new_block": "minecraft:sticky_piston_head"
+                            "new_block": "universal_minecraft:sticky_piston_head"
                         }
                     }
                 }
@@ -34,10 +34,10 @@
                     ],
                     "map_block_name": {
                         "minecraft:piston": {
-                            "new_block": "minecraft:piston_head"
+                            "new_block": "universal_minecraft:piston_head"
                         },
                         "minecraft:sticky_piston": {
-                            "new_block": "minecraft:sticky_piston_head"
+                            "new_block": "universal_minecraft:sticky_piston_head"
                         }
                     }
                 }
@@ -54,10 +54,10 @@
                     ],
                     "map_block_name": {
                         "minecraft:piston": {
-                            "new_block": "minecraft:piston_head"
+                            "new_block": "universal_minecraft:piston_head"
                         },
                         "minecraft:sticky_piston": {
-                            "new_block": "minecraft:sticky_piston_head"
+                            "new_block": "universal_minecraft:sticky_piston_head"
                         }
                     }
                 }
@@ -74,10 +74,10 @@
                     ],
                     "map_block_name": {
                         "minecraft:piston": {
-                            "new_block": "minecraft:piston_head"
+                            "new_block": "universal_minecraft:piston_head"
                         },
                         "minecraft:sticky_piston": {
-                            "new_block": "minecraft:sticky_piston_head"
+                            "new_block": "universal_minecraft:sticky_piston_head"
                         }
                     }
                 }
@@ -94,10 +94,10 @@
                     ],
                     "map_block_name": {
                         "minecraft:piston": {
-                            "new_block": "minecraft:piston_head"
+                            "new_block": "universal_minecraft:piston_head"
                         },
                         "minecraft:sticky_piston": {
-                            "new_block": "minecraft:sticky_piston_head"
+                            "new_block": "universal_minecraft:sticky_piston_head"
                         }
                     }
                 }
@@ -114,10 +114,10 @@
                     ],
                     "map_block_name": {
                         "minecraft:piston": {
-                            "new_block": "minecraft:piston_head"
+                            "new_block": "universal_minecraft:piston_head"
                         },
                         "minecraft:sticky_piston": {
-                            "new_block": "minecraft:sticky_piston_head"
+                            "new_block": "universal_minecraft:sticky_piston_head"
                         }
                     }
                 }

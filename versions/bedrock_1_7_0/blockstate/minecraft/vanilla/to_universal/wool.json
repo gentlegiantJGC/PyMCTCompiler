@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:wool",
+    "new_block": "universal_minecraft:wool",
     "carry_properties": {
         "color": [
             "white",

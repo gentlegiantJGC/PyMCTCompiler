@@ -1,12 +1,12 @@
 {
 	"to_universal": {
-		"new_block": "minecraft:fence",
+		"new_block": "universal_minecraft:fence",
 		"new_properties": {
 			"material": "nether_brick"
 		}
 	},
 	"from_universal": {
-		"minecraft:fence": {
+		"universal_minecraft:fence": {
 			"map_properties": {
 				"material": {
 					"nether_brick": {
@@ -20,13 +20,13 @@
 		}
 	},
 	"blockstate_to_universal": {
-		"new_block": "minecraft:nether_brick_fence",
+		"new_block": "universal_minecraft:nether_brick_fence",
 		"new_properties": {
 			"material": "nether_brick"
 		}
 	},
 	"blockstate_from_universal": {
-		"minecraft:fence": {
+		"universal_minecraft:fence": {
 			"map_properties": {
 				"material": {
 					"nether_brick": {

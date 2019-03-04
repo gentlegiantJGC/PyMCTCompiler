@@ -1,1 +1,1 @@
-numerical.direct_data("minecraft", "nether_wart", "age", list(range(4)))
+numerical.direct_data("minecraft", "nether_wart", "age", list(range(4)), "universal_minecraft")

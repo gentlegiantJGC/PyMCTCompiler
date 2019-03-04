@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:concrete",
+    "new_block": "universal_minecraft:concrete",
     "carry_properties": {
         "color": [
             "white",

@@ -2,37 +2,37 @@
     "map_properties": {
         "block_data": {
             "0": {
-                "new_block": "minecraft:fence",
+                "new_block": "universal_minecraft:fence",
                 "new_properties": {
                     "material": "oak"
                 }
             },
             "1": {
-                "new_block": "minecraft:fence",
+                "new_block": "universal_minecraft:fence",
                 "new_properties": {
                     "material": "spruce"
                 }
             },
             "2": {
-                "new_block": "minecraft:fence",
+                "new_block": "universal_minecraft:fence",
                 "new_properties": {
                     "material": "birch"
                 }
             },
             "3": {
-                "new_block": "minecraft:fence",
+                "new_block": "universal_minecraft:fence",
                 "new_properties": {
                     "material": "jungle"
                 }
             },
             "4": {
-                "new_block": "minecraft:fence",
+                "new_block": "universal_minecraft:fence",
                 "new_properties": {
                     "material": "acacia"
                 }
             },
             "5": {
-                "new_block": "minecraft:fence",
+                "new_block": "universal_minecraft:fence",
                 "new_properties": {
                     "material": "dark_oak"
                 }

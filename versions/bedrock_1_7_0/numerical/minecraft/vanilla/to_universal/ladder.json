@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:ladder",
+    "new_block": "universal_minecraft:ladder",
     "map_properties": {
         "block_data": {
             "2": {

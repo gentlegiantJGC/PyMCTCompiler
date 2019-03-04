@@ -2,13 +2,13 @@
     "map_properties": {
         "block_data": {
             "0": {
-                "new_block": "minecraft:dirt"
+                "new_block": "universal_minecraft:dirt"
             },
             "1": {
-                "new_block": "minecraft:coarse_dirt"
+                "new_block": "universal_minecraft:coarse_dirt"
             },
             "2": {
-                "new_block": "minecraft:podzol"
+                "new_block": "universal_minecraft:podzol"
             }
         }
     }

@@ -1,1 +1,1 @@
-numerical.compass("minecraft", "wall_sign", {2: "north", 3: "south", 4: "west", 5: "east"})
+numerical.compass("minecraft", "wall_sign", {2: "north", 3: "south", 4: "west", 5: "east"}, "universal_minecraft")

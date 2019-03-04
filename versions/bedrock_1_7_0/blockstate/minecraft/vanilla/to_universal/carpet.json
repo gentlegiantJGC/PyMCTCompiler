@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:carpet",
+    "new_block": "universal_minecraft:carpet",
     "carry_properties": {
         "color": [
             "white",

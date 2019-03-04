@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:stairs",
+    "new_block": "universal_minecraft:stairs",
     "new_properties": {
         "material": "dark_prismarine"
     },

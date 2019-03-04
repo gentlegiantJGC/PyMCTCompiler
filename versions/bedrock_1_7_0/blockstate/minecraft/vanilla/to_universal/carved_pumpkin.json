@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:carved_pumpkin",
+    "new_block": "universal_minecraft:carved_pumpkin",
     "carry_properties": {
         "facing": [
             "south",

@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:stained_terracotta",
+    "new_block": "universal_minecraft:stained_terracotta",
     "map_properties": {
         "block_data": {
             "0": {

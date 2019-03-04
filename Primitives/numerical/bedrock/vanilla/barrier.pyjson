@@ -1,1 +1,1 @@
-numerical.default("minecraft", "barrier")
+numerical.default("minecraft", "barrier", "universal_minecraft")

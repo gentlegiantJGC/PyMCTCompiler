@@ -3,22 +3,22 @@
 		"map_properties": {
 			"block_data": {
 				"0": {
-					"new_block": "minecraft:dirt"
+					"new_block": "universal_minecraft:dirt"
 				},
 				"1": {
-					"new_block": "minecraft:coarse_dirt"
+					"new_block": "universal_minecraft:coarse_dirt"
 				}
 			}
 		}
 	},
 	"from_universal" :{
-		"minecraft:dirt": {
+		"universal_minecraft:dirt": {
 			"new_block": "minecraft:dirt",
 			"new_properties": {
 				"block_data": "0"
 			}
 		},
-		"minecraft:coarse_dirt": {
+		"universal_minecraft:coarse_dirt": {
 			"new_block": "minecraft:dirt",
 			"new_properties": {
 				"block_data": "1"
@@ -40,22 +40,22 @@
 		"map_properties": {
 			"material": {
 				"dirt": {
-					"new_block": "minecraft:dirt"
+					"new_block": "universal_minecraft:dirt"
 				},
 				"coarse_dirt": {
-					"new_block": "minecraft:coarse_dirt"
+					"new_block": "universal_minecraft:coarse_dirt"
 				}
 			}
 		}
 	},
 	"blockstate_from_universal" :{
-		"minecraft:dirt": {
+		"universal_minecraft:dirt": {
 			"new_block": "minecraft:dirt",
 			"new_properties": {
 				"material": "dirt"
 			}
 		},
-		"minecraft:coarse_dirt": {
+		"universal_minecraft:coarse_dirt": {
 			"new_block": "minecraft:dirt",
 			"new_properties": {
 				"material": "coarse_dirt"

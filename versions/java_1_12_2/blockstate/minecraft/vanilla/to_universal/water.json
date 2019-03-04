@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:water",
+    "new_block": "universal_minecraft:water",
     "carry_properties": {
         "level": [
             "0",

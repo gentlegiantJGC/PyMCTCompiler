@@ -93,14 +93,18 @@ def direct_data(input_namespace: str, input_block_name: str, property_name: str,
 	}
 
 
-def liquid(namespace: str, block_name: str, flowing_: bool) -> dict:
+def liquid(input_namespace: str, input_block_name: str, flowing_: bool, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
 	flowing_str = "true" if flowing_ else "false"
 	return {
 		"to_universal": {
 			"map_properties": {
 				"block_data": {
 					str(data): {
-						"new_block": f"{namespace}:{block_name}",
+						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
 							"level": {0: "0", 1: "1", 2: "2", 3: "3", 4: "4", 5: "5", 6: "6", 7: "7"}[data & 7],
 							"falling": {0: "false", 8: "true"}[data & 8],
@@ -111,7 +115,7 @@ def liquid(namespace: str, block_name: str, flowing_: bool) -> dict:
 			}
 		},
 		"from_universal": {
-			f"{namespace}:{block_name}": {
+			f"{universal_namespace}:{universal_block_name}": {
 				"map_properties": {
 					"flowing": {
 						flowing_str: {
@@ -121,7 +125,7 @@ def liquid(namespace: str, block_name: str, flowing_: bool) -> dict:
 										"map_properties": {
 											"level": {
 												level: {
-													"new_block": f"{namespace}:{'flowing_' if flowing_ else ''}{block_name}",
+													"new_block": f"{input_namespace}:{'flowing_' if flowing_ else ''}{input_block_name}",
 													"new_properties": {
 														"block_data": str(data8 + data7)
 													}
@@ -159,7 +163,7 @@ def liquid(namespace: str, block_name: str, flowing_: bool) -> dict:
 			}
 		},
 		"blockstate_to_universal": {
-			"new_block": f"{namespace}:{block_name}",
+			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"carry_properties": {
 				"level": [
 					"0",
@@ -181,7 +185,7 @@ def liquid(namespace: str, block_name: str, flowing_: bool) -> dict:
 			}
 		},
 		"blockstate_from_universal": {
-			f"{namespace}:{block_name}": {
+			f"{universal_namespace}:{universal_block_name}": {
 				"carry_properties": {
 					"level": [
 						"0",
@@ -201,7 +205,7 @@ def liquid(namespace: str, block_name: str, flowing_: bool) -> dict:
 				"map_properties": {
 					"flowing": {
 						flowing_str: {
-							"new_block": f"{namespace}:{'flowing_' if flowing_ else ''}{block_name}"
+							"new_block": f"{input_namespace}:{'flowing_' if flowing_ else ''}{input_block_name}"
 						}
 					}
 				}
@@ -210,7 +214,7 @@ def liquid(namespace: str, block_name: str, flowing_: bool) -> dict:
 	}
 
 
-def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "minecraft", to_block_name: str = "leaves") -> dict:
+def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "universal_minecraft", to_block_name: str = "leaves") -> dict:
 	if platform == 'bedrock':
 		property8 = "decayable"
 		property4 = "check_decay"
@@ -325,26 +329,26 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 	}
 
 
-def log(namespace: str, block_name: str) -> dict:
-	if block_name == "log":
+def log(input_namespace: str, input_block_name: str) -> dict:
+	if input_block_name == "log":
 		material_pallet = {0: "oak", 1: "spruce", 2: "birch", 3: "jungle"}
-	elif block_name == "log2":
+	elif input_block_name == "log2":
 		material_pallet = {0: "acacia", 1: "dark_oak"}
 	else:
-		raise Exception(f'Block name "{block_name}" is not known')
+		raise Exception(f'Block name "{input_block_name}" is not known')
 
 	return {
 		"to_universal": {
 			"map_properties": {
 				"block_data": {
 					str(data): {
-						"new_block": "minecraft:log",
+						"new_block": "universal_minecraft:log",
 						"new_properties": {
 							"material": material_pallet[data & 3],
 							"axis": {0: "y", 4: "x", 8: "z"}[data & 12],
 						}
 					} if data <= 11 else {
-						"new_block": "minecraft:wood",
+						"new_block": "universal_minecraft:wood",
 						"new_properties": {
 							"material": material_pallet[data & 3]
 						}
@@ -353,14 +357,14 @@ def log(namespace: str, block_name: str) -> dict:
 			}
 		},
 		"from_universal": {
-			"minecraft:log": {
+			"universal_minecraft:log": {
 				"map_properties": {
 					"axis": {
 						axis: {
 							"map_properties": {
 								"material": {
 									material: {
-										"new_block": f"{namespace}:{block_name}",
+										"new_block": f"{input_namespace}:{input_block_name}",
 										"new_properties": {
 											"block_data": str(data12 + data3)
 										}
@@ -371,11 +375,11 @@ def log(namespace: str, block_name: str) -> dict:
 					}
 				}
 			},
-			"minecraft:wood": {
+			"universal_minecraft:wood": {
 				"map_properties": {
 					"material": {
 						material: {
-							"new_block": f"{namespace}:{block_name}",
+							"new_block": f"{input_namespace}:{input_block_name}",
 							"new_properties": {
 								"block_data": str(12 + data3)
 							}
@@ -411,16 +415,16 @@ def log(namespace: str, block_name: str) -> dict:
 			"map_properties": {
 				"axis": {
 					"x": {
-						"new_block": "minecraft:log"
+						"new_block": "universal_minecraft:log"
 					},
 					"y": {
-						"new_block": "minecraft:log"
+						"new_block": "universal_minecraft:log"
 					},
 					"z": {
-						"new_block": "minecraft:log"
+						"new_block": "universal_minecraft:log"
 					},
 					"all": {
-						"new_block": "minecraft:wood",
+						"new_block": "universal_minecraft:wood",
 						"new_properties": {
 							"axis": "y"
 						}
@@ -429,7 +433,7 @@ def log(namespace: str, block_name: str) -> dict:
 			}
 		},
 		"blockstate_from_universal": {
-			"minecraft:log": {
+			"universal_minecraft:log": {
 				"carry_properties": {
 					"material": list(material_pallet.values()),
 					"axis": [
@@ -441,19 +445,19 @@ def log(namespace: str, block_name: str) -> dict:
 				"map_properties": {
 					"material": {
 						material: {
-							"new_block": f"{namespace}:{block_name}"
+							"new_block": f"{input_namespace}:{input_block_name}"
 						} for material in material_pallet.values()
 					}
 				}
 			},
-			"minecraft:wood": {
+			"universal_minecraft:wood": {
 				"carry_properties": {
 					"material": list(material_pallet.values())
 				},
 				"map_properties": {
 					"material": {
 						material: {
-							"new_block": f"{namespace}:{block_name}"
+							"new_block": f"{input_namespace}:{input_block_name}"
 						} for material in material_pallet.values()
 					}
 				}
@@ -475,13 +479,13 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 			"map_properties": {
 				"block_data": {
 					str(data): {
-						"new_block": "minecraft:log",
+						"new_block": "universal_minecraft:log",
 						"new_properties": {
 							"material": material_pallet[data & 3],
 							"axis": {0: "y", 4: "x", 8: "z"}[data & 12],
 						}
 					} if data <= 11 else {
-						"new_block": "minecraft:wood",
+						"new_block": "universal_minecraft:wood",
 						"new_properties": {
 							"material": material_pallet[data & 3]
 						}
@@ -490,7 +494,7 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 			}
 		},
 		"from_universal": {
-			"minecraft:log": {
+			"universal_minecraft:log": {
 				"map_properties": {
 					"stripped": {
 						"false": {
@@ -514,7 +518,7 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 					}
 				}
 			},
-			"minecraft:wood": {
+			"universal_minecraft:wood": {
 				"map_properties": {
 					"stripped": {
 						"false": {
@@ -560,16 +564,16 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 			"map_properties": {
 				"axis": {
 					"x": {
-						"new_block": "minecraft:log"
+						"new_block": "universal_minecraft:log"
 					},
 					"y": {
-						"new_block": "minecraft:log"
+						"new_block": "universal_minecraft:log"
 					},
 					"z": {
-						"new_block": "minecraft:log"
+						"new_block": "universal_minecraft:log"
 					},
 					"all": {
-						"new_block": "minecraft:wood",
+						"new_block": "universal_minecraft:wood",
 						"new_properties": {
 							"axis": "y"
 						}
@@ -578,7 +582,7 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 			}
 		},
 		"blockstate_from_universal": {
-			"minecraft:log": {
+			"universal_minecraft:log": {
 				"carry_properties": {
 					"axis": [
 						"x",
@@ -603,7 +607,7 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 					}
 				}
 			},
-			"minecraft:wood": {
+			"universal_minecraft:wood": {
 				"map_properties": {
 					"stripped": {
 						"false": {
@@ -634,13 +638,13 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 			"map_properties": {
 				"block_data": {
 					str(data): {
-						"new_block": "minecraft:log",
+						"new_block": "universal_minecraft:log",
 						"new_properties": {
 							"material": material,
 							"axis": {0: "y", 1: "x", 2: "z"}[data]
 						}
 					} if data <= 2 else {
-						"new_block": "minecraft:wood",
+						"new_block": "universal_minecraft:wood",
 						"new_properties": {
 							"material": material
 						}
@@ -652,7 +656,7 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 			}
 		},
 		"from_universal": {
-			"minecraft:log": {
+			"universal_minecraft:log": {
 				"map_properties": {
 					"stripped": {
 						"true": {
@@ -674,7 +678,7 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 					}
 				}
 			},
-			"minecraft:wood": {
+			"universal_minecraft:wood": {
 				"map_properties": {
 					"stripped": {
 						"true": {
@@ -717,16 +721,16 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 			"map_properties": {
 				"axis": {
 					"x": {
-						"new_block": "minecraft:log"
+						"new_block": "universal_minecraft:log"
 					},
 					"y": {
-						"new_block": "minecraft:log"
+						"new_block": "universal_minecraft:log"
 					},
 					"z": {
-						"new_block": "minecraft:log"
+						"new_block": "universal_minecraft:log"
 					},
 					"all": {
-						"new_block": "minecraft:wood",
+						"new_block": "universal_minecraft:wood",
 						"new_properties": {
 							"axis": "y"
 						}
@@ -738,7 +742,7 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 			}
 		},
 		"blockstate_from_universal": {
-			"minecraft:log": {
+			"universal_minecraft:log": {
 				"carry_properties": {
 					"axis": [
 						"x",
@@ -760,7 +764,7 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 					}
 				}
 			},
-			"minecraft:wood": {
+			"universal_minecraft:wood": {
 				"map_properties": {
 					"stripped": {
 						"true": {
@@ -782,13 +786,17 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 	}
 
 
-def dispenser(namespace: str, block_name: str) -> dict:
+def dispenser(input_namespace: str, input_block_name: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
 	return {
 		"to_universal": {
 			"map_properties": {
 				"block_data": {
 					str(data): {
-						"new_block": f"{namespace}:{block_name}",
+						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
 							"facing": {0: "down", 1: "up", 2: "north", 3: "south", 4: "west", 5: "east"}[data & 7],
 							"triggered": {0: "false", 8: "true"}[data & 8]
@@ -798,14 +806,14 @@ def dispenser(namespace: str, block_name: str) -> dict:
 			}
 		},
 		"from_universal": {
-			f"{namespace}:{block_name}": {
+			f"{universal_namespace}:{universal_block_name}": {
 				"map_properties": {
 					"triggered": {
 						triggered: {
 							"map_properties": {
 								"facing": {
 									facing: {
-										"new_block": f"{namespace}:{block_name}",
+										"new_block": f"{input_namespace}:{input_block_name}",
 										"new_properties": {
 											"block_data": str(data8 + data7)
 										}
@@ -838,7 +846,7 @@ def dispenser(namespace: str, block_name: str) -> dict:
 			}
 		},
 		"blockstate_to_universal": {
-			"new_block": f"{namespace}:{block_name}",
+			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"carry_properties": {
 				"facing": [
 					"north",
@@ -855,8 +863,8 @@ def dispenser(namespace: str, block_name: str) -> dict:
 			}
 		},
 		"blockstate_from_universal": {
-			f"{namespace}:{block_name}": {
-				"new_block": f"{namespace}:{block_name}",
+			f"{universal_namespace}:{universal_block_name}": {
+				"new_block": f"{input_namespace}:{input_block_name}",
 				"carry_properties": {
 					"facing": [
 						"north",
@@ -876,14 +884,18 @@ def dispenser(namespace: str, block_name: str) -> dict:
 	}
 
 
-def sandstone(namespace: str, block_name: str, level: int = 1) -> dict:
+def sandstone(input_namespace: str, input_block_name: str, level: int = 1, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
 	variants = {var: {0: "normal", 1: "chiseled", 2: "cut", 3: "smooth"}[var] for var in range(level)}
 	return {
 		"to_universal": {
 			"map_properties": {
 				"block_data": {
 					str(data): {
-						"new_block": f"{namespace}:{block_name}",
+						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
 							"variant": var
 						}
@@ -892,11 +904,11 @@ def sandstone(namespace: str, block_name: str, level: int = 1) -> dict:
 			}
 		},
 		"from_universal": {
-			f"{namespace}:{block_name}": {
+			f"{universal_namespace}:{universal_block_name}": {
 				"map_properties": {
 					"variant": {
 						variant: {
-							"new_block": f"{namespace}:{block_name}",
+							"new_block": f"{input_namespace}:{input_block_name}",
 							"new_properties": {
 								"block_data": str(data)
 							}
@@ -914,14 +926,14 @@ def sandstone(namespace: str, block_name: str, level: int = 1) -> dict:
 			}
 		},
 		"blockstate_to_universal": {
-			"new_block": f"{namespace}:{block_name}",
+			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"carry_properties": {
 				"variant": list(variants.values())
 			}
 		},
 		"blockstate_from_universal": {
-			f"{namespace}:{block_name}": {
-				"new_block": f"{namespace}:{block_name}",
+			f"{universal_namespace}:{universal_block_name}": {
+				"new_block": f"{input_namespace}:{input_block_name}",
 				"carry_properties": {
 					"variant": list(variants.values())
 				}
@@ -930,13 +942,17 @@ def sandstone(namespace: str, block_name: str, level: int = 1) -> dict:
 	}
 
 
-def rail(namespace: str, block_name: str) -> dict:
+def rail(input_namespace: str, input_block_name: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
 	return {
 		"to_universal": {
 			"map_properties": {
 				"block_data": {
 					str(data): {
-						"new_block": f"{namespace}:{block_name}",
+						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
 							"shape": {
 								0: "north_south", 1: "east_west", 2: "ascending_east", 3: "ascending_west", 4: "ascending_north", 5: "ascending_south", 6: "south_east", 7: "south_west", 8: "north_west", 9: "north_east"
@@ -947,11 +963,11 @@ def rail(namespace: str, block_name: str) -> dict:
 			}
 		},
 		"from_universal": {
-			f"{namespace}:{block_name}": {
+			f"{universal_namespace}:{universal_block_name}": {
 				"map_properties": {
 					"shape": {
 						shape: {
-							"new_block": f"{namespace}:{block_name}",
+							"new_block": f"{input_namespace}:{input_block_name}",
 							"new_properties": {
 								"block_data": str(data)
 							}
@@ -980,7 +996,7 @@ def rail(namespace: str, block_name: str) -> dict:
 			}
 		},
 		"blockstate_to_universal": {
-			"new_block": f"{namespace}:{block_name}",
+			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"carry_properties": {
 				"shape": [
 					"north_south",
@@ -997,8 +1013,8 @@ def rail(namespace: str, block_name: str) -> dict:
 			}
 		},
 		"blockstate_from_universal": {
-			f"{namespace}:{block_name}": {
-				"new_block": f"{namespace}:{block_name}",
+			f"{universal_namespace}:{universal_block_name}": {
+				"new_block": f"{input_namespace}:{input_block_name}",
 				"carry_properties": {
 					"shape": [
 						"north_south",
@@ -1018,13 +1034,17 @@ def rail(namespace: str, block_name: str) -> dict:
 	}
 
 
-def rail2(namespace: str, block_name: str) -> dict:
+def rail2(input_namespace: str, input_block_name: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
 	return {
 		"to_universal": {
 			"map_properties": {
 				"block_data": {
 					str(data): {
-						"new_block": f"{namespace}:{block_name}",
+						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
 							"shape": {
 								0: "north_south", 1: "east_west", 2: "ascending_east", 3: "ascending_west", 4: "ascending_north", 5: "ascending_south"
@@ -1036,14 +1056,14 @@ def rail2(namespace: str, block_name: str) -> dict:
 			}
 		},
 		"from_universal": {
-			f"{namespace}:{block_name}": {
+			f"{universal_namespace}:{universal_block_name}": {
 				"map_properties": {
 					"powered": {
 						powered: {
 							"map_properties": {
 								"shape": {
 									shape: {
-										"new_block": f"{namespace}:{block_name}",
+										"new_block": f"{input_namespace}:{input_block_name}",
 										"new_properties": {
 											"block_data": str(data8 + data7)
 										}
@@ -1076,7 +1096,7 @@ def rail2(namespace: str, block_name: str) -> dict:
 			}
 		},
 		"blockstate_to_universal": {
-			"new_block": f"{namespace}:{block_name}",
+			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"carry_properties": {
 				"powered": [
 					"true",
@@ -1093,8 +1113,8 @@ def rail2(namespace: str, block_name: str) -> dict:
 			}
 		},
 		"blockstate_from_universal": {
-			f"{namespace}:{block_name}": {
-				"new_block": f"{namespace}:{block_name}",
+			f"{universal_namespace}:{universal_block_name}": {
+				"new_block": f"{input_namespace}:{input_block_name}",
 				"carry_properties": {
 					"powered": [
 						"true",
@@ -1133,7 +1153,7 @@ def bed_color(platform: str) -> dict:
 			},
 		},
 		"to_universal": {
-			"new_block": "minecraft:bed",
+			"new_block": "universal_minecraft:bed",
 			"map_properties": {
 				"block_data": {
 					str(data): {
@@ -1173,7 +1193,7 @@ def bed_color(platform: str) -> dict:
 			}
 		},
 		"from_universal": {
-			"minecraft:bed": {
+			"universal_minecraft:bed": {
 				"new_block": "minecraft:bed",
 				"map_properties": {
 					"part": {
@@ -1265,7 +1285,7 @@ def bed_color(platform: str) -> dict:
 			}
 		},
 		"blockstate_to_universal": {
-			"new_block": "minecraft:bed",
+			"new_block": "universal_minecraft:bed",
 			"carry_properties": {
 				"facing": [
 					"east",
@@ -1302,7 +1322,7 @@ def bed_color(platform: str) -> dict:
 			}
 		},
 		"blockstate_from_universal": {
-			"minecraft:bed": {
+			"universal_minecraft:bed": {
 				"new_block": "minecraft:bed",
 				"carry_properties": {
 					"facing": [
@@ -1343,11 +1363,15 @@ def bed_color(platform: str) -> dict:
 	}
 
 
-def piston_bedrock(namespace: str, block_name: str) -> dict:
+def piston_bedrock(input_namespace: str, input_block_name: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
 	return {
 		"comment": "There is also a tile entity here that contains more data",
 		"to_universal": {
-			"new_block": f"{namespace}:{block_name}",
+			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"map_properties": {
 				"block_data": {
 					str(data): {
@@ -1359,8 +1383,8 @@ def piston_bedrock(namespace: str, block_name: str) -> dict:
 			}
 		},
 		"from_universal": {
-			f"{namespace}:{block_name}": {
-				"new_block": f"{namespace}:{block_name}",
+			f"{universal_namespace}:{universal_block_name}": {
+				"new_block": f"{input_namespace}:{input_block_name}",
 				"map_properties": {
 					"facing": {
 						facing: {
@@ -1388,7 +1412,7 @@ def piston_bedrock(namespace: str, block_name: str) -> dict:
 			}
 		},
 		"blockstate_to_universal": {
-			"new_block": f"{namespace}:{block_name}",
+			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"carry_properties": {
 				"facing": [
 					"north",
@@ -1401,8 +1425,8 @@ def piston_bedrock(namespace: str, block_name: str) -> dict:
 			}
 		},
 		"blockstate_from_universal": {
-			f"{namespace}:{block_name}": {
-				"new_block": f"{namespace}:{block_name}",
+			f"{universal_namespace}:{universal_block_name}": {
+				"new_block": f"{input_namespace}:{input_block_name}",
 				"carry_properties": {
 					"facing": [
 						"north",
@@ -2271,7 +2295,7 @@ def redstone_torch(input_namespace: str, input_block_name: str, lit: bool, unive
 def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 	return {
 		"to_universal": {
-			"new_block": "minecraft:door",
+			"new_block": "universal_minecraft:door",
 			"new_properties": {
 				"material": material
 			},
@@ -2332,7 +2356,7 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 			}
 		},
 		"from_universal": {
-			"minecraft:door": {
+			"universal_minecraft:door": {
 				"map_properties": {
 					"material": {
 						material: {
@@ -2413,7 +2437,7 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 			}
 		},
 		"blockstate_to_universal": {
-			"new_block": "minecraft:door",
+			"new_block": "universal_minecraft:door",
 			"new_properties": {
 				"material": material
 			},
@@ -2443,7 +2467,7 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 			}
 		},
 		"blockstate_from_universal": {
-			"minecraft:door": {
+			"universal_minecraft:door": {
 				"map_properties": {
 					"material": {
 						material: {
@@ -2483,7 +2507,7 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 def trapdoor(input_namespace: str, input_block_name: str, material: str) -> dict:
 	return {
 		"to_universal": {
-			"new_block": "minecraft:trapdoor",
+			"new_block": "universal_minecraft:trapdoor",
 			"new_properties": {
 				"material": material
 			},
@@ -2500,7 +2524,7 @@ def trapdoor(input_namespace: str, input_block_name: str, material: str) -> dict
 			}
 		},
 		"from_universal": {
-			"minecraft:trapdoor": {
+			"universal_minecraft:trapdoor": {
 				"map_properties": {
 					"material": {
 						material: {
@@ -2553,7 +2577,7 @@ def trapdoor(input_namespace: str, input_block_name: str, material: str) -> dict
 			}
 		},
 		"blockstate_to_universal": {
-			"new_block": "minecraft:trapdoor",
+			"new_block": "universal_minecraft:trapdoor",
 			"new_properties": {
 				"material": material
 			},
@@ -2575,7 +2599,7 @@ def trapdoor(input_namespace: str, input_block_name: str, material: str) -> dict
 			}
 		},
 		"blockstate_from_universal": {
-			"minecraft:trapdoor": {
+			"universal_minecraft:trapdoor": {
 				"map_properties": {
 					"material": {
 						material: {
@@ -2608,7 +2632,7 @@ def pressure_plate(input_namespace: str, input_block_name: str, material: str) -
 	states = {0: "false", 1: "true"}
 	return {
 		"to_universal": {
-			"new_block": "minecraft:pressure_plate",
+			"new_block": "universal_minecraft:pressure_plate",
 			"new_properties": {
 				"material": material
 			},
@@ -2623,7 +2647,7 @@ def pressure_plate(input_namespace: str, input_block_name: str, material: str) -
 			}
 		},
 		"from_universal": {
-			"minecraft:pressure_plate": {
+			"universal_minecraft:pressure_plate": {
 				"map_properties": {
 					"material": {
 						material: {
@@ -2652,7 +2676,7 @@ def pressure_plate(input_namespace: str, input_block_name: str, material: str) -
 			}
 		},
 		"blockstate_to_universal": {
-			"new_block": "minecraft:pressure_plate",
+			"new_block": "universal_minecraft:pressure_plate",
 			"new_properties": {
 				"material": material
 			},
@@ -2664,7 +2688,7 @@ def pressure_plate(input_namespace: str, input_block_name: str, material: str) -
 			}
 		},
 		"blockstate_from_universal": {
-			"minecraft:pressure_plate": {
+			"universal_minecraft:pressure_plate": {
 				"map_properties": {
 					"material": {
 						material: {
@@ -2687,7 +2711,7 @@ def repeater(input_namespace: str, input_block_name: str, powered: bool) -> dict
 	powered_str = "true" if powered else "false"
 	return {
 		"to_universal": {
-			"new_block": "minecraft:repeater",
+			"new_block": "universal_minecraft:repeater",
 			"new_properties": {
 				"powered": powered_str
 			},
@@ -2721,7 +2745,7 @@ def repeater(input_namespace: str, input_block_name: str, powered: bool) -> dict
 			}
 		},
 		"from_universal": {
-			"minecraft:repeater": {
+			"universal_minecraft:repeater": {
 				"map_properties": {
 					"powered": {
 						powered_str: {
@@ -2765,9 +2789,9 @@ def repeater(input_namespace: str, input_block_name: str, powered: bool) -> dict
 			}
 		},
 		"blockstate_to_universal": {
-			"new_block": "minecraft:repeater",
+			"new_block": "universal_minecraft:repeater",
 			"new_properties": {
-			   "powered": powered_str
+				"powered": powered_str
 			},
 			"carry_properties": {
 				"delay": [
@@ -2785,7 +2809,7 @@ def repeater(input_namespace: str, input_block_name: str, powered: bool) -> dict
 			}
 		},
 		"blockstate_from_universal": {
-			"minecraft:repeater": {
+			"universal_minecraft:repeater": {
 				"map_properties": {
 					"powered": {
 						powered_str: {

@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:torch",
+    "new_block": "universal_minecraft:torch",
     "map_properties": {
         "block_data": {
             "1": {

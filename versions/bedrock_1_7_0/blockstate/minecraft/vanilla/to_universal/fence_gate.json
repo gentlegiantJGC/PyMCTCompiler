@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:fence_gate",
+    "new_block": "universal_minecraft:fence_gate",
     "new_properties": {
         "material": "oak"
     },

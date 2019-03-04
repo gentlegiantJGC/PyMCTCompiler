@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:bed",
+    "new_block": "universal_minecraft:bed",
     "carry_properties": {
         "facing": [
             "east",

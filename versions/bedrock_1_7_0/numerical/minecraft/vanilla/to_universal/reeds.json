@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:sugar_cane",
+    "new_block": "universal_minecraft:sugar_cane",
     "map_properties": {
         "block_data": {
             "0": {

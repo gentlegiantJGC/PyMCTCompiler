@@ -1,1 +1,1 @@
-numerical.default("minecraft", "red_nether_brick", "minecraft", "red_nether_bricks")
+numerical.default("minecraft", "red_nether_brick", "universal_minecraft", "red_nether_bricks")

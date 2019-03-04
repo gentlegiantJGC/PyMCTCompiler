@@ -3,7 +3,7 @@
 		"map_properties": {
 			"block_data": {
 				str(data): {
-					"new_block": "minecraft:sapling",
+					"new_block": "universal_minecraft:sapling",
 					"new_properties": {
 						"material": {0: "oak", 1: "spruce", 2: "birch", 3: "jungle", 4: "acacia", 5: "dark_oak"}[data & 7],
 						"stage": {0: "0", 8: "1"}[data & 8],
@@ -13,7 +13,7 @@
 		}
 	},
 	"from_universal": {
-		"minecraft:sapling": {
+		"universal_minecraft:sapling": {
 			"map_properties": {
 				"stage": {
 					stage: {
@@ -53,7 +53,7 @@
 		}
 	},
 	"blockstate_to_universal": {
-		"new_block": "minecraft:sapling",
+		"new_block": "universal_minecraft:sapling",
 		"carry_properties": {
 			"material": [
 				"oak",
@@ -70,7 +70,7 @@
 		}
 	},
 	"blockstate_from_universal": {
-		"minecraft:sapling": {
+		"universal_minecraft:sapling": {
 			"new_block": "minecraft:sapling",
 			"carry_properties": {
 				"material": [

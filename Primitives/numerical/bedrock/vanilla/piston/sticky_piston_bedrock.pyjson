@@ -1,1 +1,1 @@
-numerical.piston_bedrock("minecraft", "sticky_piston")
+numerical.piston_bedrock("minecraft", "sticky_piston", "universal_minecraft")

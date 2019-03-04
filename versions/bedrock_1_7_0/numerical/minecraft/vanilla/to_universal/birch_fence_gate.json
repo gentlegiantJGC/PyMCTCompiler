@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:fence_gate",
+    "new_block": "universal_minecraft:fence_gate",
     "map_properties": {
         "block_data": {
             "0": {

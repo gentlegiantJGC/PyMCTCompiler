@@ -1,1 +1,1 @@
-numerical.default("minecraft", "enchanting_table")
+numerical.default("minecraft", "enchanting_table", "universal_minecraft")

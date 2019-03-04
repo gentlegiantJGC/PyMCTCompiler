@@ -2,13 +2,13 @@
     "map_properties": {
         "material": {
             "dirt": {
-                "new_block": "minecraft:dirt"
+                "new_block": "universal_minecraft:dirt"
             },
             "coarse_dirt": {
-                "new_block": "minecraft:coarse_dirt"
+                "new_block": "universal_minecraft:coarse_dirt"
             },
             "podzol": {
-                "new_block": "minecraft:podzol"
+                "new_block": "universal_minecraft:podzol"
             }
         }
     }

@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:redstone_wire",
+    "new_block": "universal_minecraft:redstone_wire",
     "map_properties": {
         "block_data": {
             "0": {

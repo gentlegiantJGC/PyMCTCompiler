@@ -1,1 +1,1 @@
-numerical.direct_data("minecraft", "potatoes", "age", list(range(8)))
+numerical.direct_data("minecraft", "potatoes", "age", list(range(8)), "universal_minecraft")

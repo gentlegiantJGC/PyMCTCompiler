@@ -1,1 +1,1 @@
-numerical.direct_data("minecraft", "light_weighted_pressure_plate", "power", list(range(16)))
+numerical.direct_data("minecraft", "light_weighted_pressure_plate", "power", list(range(16)), "universal_minecraft")

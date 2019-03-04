@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:ender_chest",
+    "new_block": "universal_minecraft:ender_chest",
     "carry_properties": {
         "facing": [
             "north",

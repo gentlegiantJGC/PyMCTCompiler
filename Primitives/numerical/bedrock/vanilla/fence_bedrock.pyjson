@@ -3,7 +3,7 @@
 		"map_properties": {
 			"block_data": {
 				str(data): {
-					"new_block": "minecraft:fence",
+					"new_block": "universal_minecraft:fence",
 					"new_properties": {
 						"material": material
 					}
@@ -12,7 +12,7 @@
 		}
 	},
 	"from_universal": {
-		"minecraft:fence": {
+		"universal_minecraft:fence": {
 			"map_properties": {
 				"material": {
 					material: {
@@ -34,13 +34,13 @@
 		}
 	},
 	"blockstate_to_universal": {
-		"new_block": "minecraft:fence",
+		"new_block": "universal_minecraft:fence",
 		"carry_properties": {
 			"material": ["oak", "spruce", "birch", "jungle", "acacia", "dark_oak"]
 		}
 	},
 	"blockstate_from_universal": {
-		"minecraft:fence": {
+		"universal_minecraft:fence": {
 			"map_properties": {
 				"material": {
 					material: {

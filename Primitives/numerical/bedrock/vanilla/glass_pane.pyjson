@@ -1,1 +1,1 @@
-numerical.default("minecraft", "glass_pane")
+numerical.default("minecraft", "glass_pane", "universal_minecraft")

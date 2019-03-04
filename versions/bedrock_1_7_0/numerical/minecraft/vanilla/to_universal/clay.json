@@ -2,7 +2,7 @@
     "map_properties": {
         "block_data": {
             "0": {
-                "new_block": "minecraft:clay"
+                "new_block": "universal_minecraft:clay"
             }
         }
     }

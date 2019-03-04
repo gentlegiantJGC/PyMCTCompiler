@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:trapdoor",
+    "new_block": "universal_minecraft:trapdoor",
     "new_properties": {
         "material": "dark_oak"
     },

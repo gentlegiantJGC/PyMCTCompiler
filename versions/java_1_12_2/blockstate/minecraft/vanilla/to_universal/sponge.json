@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:sponge",
+    "new_block": "universal_minecraft:sponge",
     "carry_properties": {
         "wet": [
             "false",

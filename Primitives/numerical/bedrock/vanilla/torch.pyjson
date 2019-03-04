@@ -1,1 +1,1 @@
-numerical.torch("minecraft", "torch")
+numerical.torch("minecraft", "torch", "universal_minecraft")

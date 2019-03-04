@@ -1,6 +1,6 @@
 {
     "to_universal": {
-        "new_block": "minecraft:piston_head",
+        "new_block": "universal_minecraft:piston_head",
         "map_properties": {
             "block_data": {
                 str(data): {
@@ -18,10 +18,10 @@
                         }[data],
                         "map_block_name": {
                             "minecraft:piston": {
-                                "new_block": "minecraft:piston_head"
+                                "new_block": "universal_minecraft:piston_head"
                             },
                             "minecraft:sticky_piston": {
-                                "new_block": "minecraft:sticky_piston_head"
+                                "new_block": "universal_minecraft:sticky_piston_head"
                             }
                         }
                     }
@@ -30,7 +30,7 @@
         }
     },
     "from_universal": {
-        "minecraft:piston_head": {
+        "universal_minecraft:piston_head": {
             "new_block": "minecraft:piston_head",
             "map_properties": {
                 "facing": {
@@ -67,10 +67,10 @@
         "map_properties": {
             "type": {
                 "normal": {
-                    "new_block": "minecraft:piston_head",
+                    "new_block": "universal_minecraft:piston_head",
                 },
                 "sticky": {
-                    "new_block": "minecraft:sticky_piston_head",
+                    "new_block": "universal_minecraft:sticky_piston_head",
                 }
             }
         },
@@ -86,7 +86,7 @@
         }
     },
     "blockstate_from_universal": {
-        "minecraft:piston_head": {
+        "universal_minecraft:piston_head": {
             "new_block": "minecraft:piston_head",
             "new_properties": {
                 "type": "normal"
@@ -102,7 +102,7 @@
                 ]
             }
         },
-        "minecraft:sticky_piston_head": {
+        "universal_minecraft:sticky_piston_head": {
             "new_block": "minecraft:piston_head",
             "new_properties": {
                 "type": "sticky"

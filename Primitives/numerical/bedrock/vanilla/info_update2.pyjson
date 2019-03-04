@@ -1,1 +1,1 @@
-numerical.default("minecraft", "info_update2")
+numerical.default("minecraft", "info_update2", "universal_minecraft")

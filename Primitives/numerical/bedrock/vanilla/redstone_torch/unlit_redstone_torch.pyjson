@@ -1,1 +1,1 @@
-numerical.redstone_torch("minecraft", "unlit_redstone_torch", False, "minecraft", "redstone_torch")
+numerical.redstone_torch("minecraft", "unlit_redstone_torch", False, "universal_minecraft", "redstone_torch")

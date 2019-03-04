@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:frosted_ice",
+    "new_block": "universal_minecraft:frosted_ice",
     "carry_properties": {
         "age": [
             "0",

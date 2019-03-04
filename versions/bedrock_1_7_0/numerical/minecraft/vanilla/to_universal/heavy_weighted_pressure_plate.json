@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:heavy_weighted_pressure_plate",
+    "new_block": "universal_minecraft:heavy_weighted_pressure_plate",
     "map_properties": {
         "block_data": {
             "0": {

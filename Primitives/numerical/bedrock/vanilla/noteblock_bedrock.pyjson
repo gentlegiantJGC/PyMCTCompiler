@@ -16,7 +16,7 @@
 			},
 		},
 		"to_universal": {
-			"new_block": "minecraft:note_block",
+			"new_block": "universal_minecraft:note_block",
 			"map_nbt": {
 				"note": {
 					str(data): {
@@ -28,7 +28,7 @@
 			}
 		},
 		"from_universal": {
-			"minecraft:note_block": {
+			"universal_minecraft:note_block": {
 				"new_block": "minecraft:noteblock",
 				"map_properties": {
 					"note": {
@@ -50,13 +50,13 @@
 			}
 		},
 		"blockstate_to_universal": {
-			"new_block": "minecraft:note_block",
+			"new_block": "universal_minecraft:note_block",
 			"carry_properties": {
 				"note": [str(data) for data in range(25)]
 			}
 		},
 		"blockstate_from_universal": {
-			"minecraft:note_block": {
+			"universal_minecraft:note_block": {
 				"new_block": "minecraft:noteblock",
 				"carry_properties": {
 					"note": [str(data) for data in range(25)]

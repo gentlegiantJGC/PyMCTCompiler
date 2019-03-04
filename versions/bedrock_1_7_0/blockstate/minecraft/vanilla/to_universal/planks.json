@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:planks",
+    "new_block": "universal_minecraft:planks",
     "carry_properties": {
         "material": [
             "oak",

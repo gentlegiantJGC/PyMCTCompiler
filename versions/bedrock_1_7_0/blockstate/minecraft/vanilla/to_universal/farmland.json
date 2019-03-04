@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:farmland",
+    "new_block": "universal_minecraft:farmland",
     "carry_properties": {
         "moisture": [
             "0",

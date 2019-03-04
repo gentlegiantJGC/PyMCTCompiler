@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:ender_chest",
+    "new_block": "universal_minecraft:ender_chest",
     "map_properties": {
         "block_data": {
             "2": {

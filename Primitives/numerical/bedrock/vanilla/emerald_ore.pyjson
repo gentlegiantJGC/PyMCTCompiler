@@ -1,1 +1,1 @@
-numerical.default("minecraft", "emerald_ore")
+numerical.default("minecraft", "emerald_ore", "universal_minecraft")

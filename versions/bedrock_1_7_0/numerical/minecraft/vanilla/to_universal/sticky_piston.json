@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:sticky_piston",
+    "new_block": "universal_minecraft:sticky_piston",
     "map_properties": {
         "block_data": {
             "0": {

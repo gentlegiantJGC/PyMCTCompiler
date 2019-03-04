@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:wheat",
+    "new_block": "universal_minecraft:wheat",
     "carry_properties": {
         "age": [
             "0",

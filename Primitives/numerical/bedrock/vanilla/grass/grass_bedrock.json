@@ -3,13 +3,13 @@
 		"map_properties": {
 			"block_data": {
 				"0": {
-					"new_block": "minecraft:plant",
+					"new_block": "universal_minecraft:plant",
 					"new_properties": {
 						"type": "grass"
 					}
 				},
 				"1": {
-					"new_block": "minecraft:plant",
+					"new_block": "universal_minecraft:plant",
 					"new_properties": {
 						"type": "fern"
 					}
@@ -18,17 +18,17 @@
 		}
 	},
 	"from_universal": {
-		"minecraft:plant": {
+		"universal_minecraft:plant": {
 			"map_properties": {
 				"type": {
 					"grass": {
-						"new_block": "minecraft:grass",
+						"new_block": "minecraft:tallgrass",
 						"new_properties": {
 							"block_data": "0"
 						}
 					},
 					"fern": {
-						"new_block": "minecraft:grass",
+						"new_block": "minecraft:tallgrass",
 						"new_properties": {
 							"block_data": "1"
 						}
@@ -52,13 +52,13 @@
 		"map_properties": {
 			"type": {
 				"grass": {
-					"new_block": "minecraft:plant",
+					"new_block": "universal_minecraft:plant",
 					"new_properties": {
 						"type": "grass"
 					}
 				},
 				"fern": {
-					"new_block": "minecraft:plant",
+					"new_block": "universal_minecraft:plant",
 					"new_properties": {
 						"type": "fern"
 					}
@@ -67,17 +67,17 @@
 		}
 	},
 	"blockstate_from_universal": {
-		"minecraft:plant": {
+		"universal_minecraft:plant": {
 			"map_properties": {
 				"type": {
 					"grass": {
-						"new_block": "minecraft:grass",
+						"new_block": "minecraft:tallgrass",
 						"new_properties": {
 							"type": "grass"
 						}
 					},
 					"fern": {
-						"new_block": "minecraft:grass",
+						"new_block": "minecraft:tallgrass",
 						"new_properties": {
 							"type": "fern"
 						}

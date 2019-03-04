@@ -3,22 +3,22 @@
 		"map_properties": {
 			"block_data": {
 				"0": {
-					"new_block": "minecraft:sand"
+					"new_block": "universal_minecraft:sand"
 				},
 				"1": {
-					"new_block": "minecraft:red_sand"
+					"new_block": "universal_minecraft:red_sand"
 				}
 			}
 		}
 	},
 	"from_universal" :{
-		"minecraft:sand": {
+		"universal_minecraft:sand": {
 			"new_block": "minecraft:sand",
 			"new_properties": {
 				"block_data": "0"
 			}
 		},
-		"minecraft:red_sand": {
+		"universal_minecraft:red_sand": {
 			"new_block": "minecraft:sand",
 			"new_properties": {
 				"block_data": "1"
@@ -40,22 +40,22 @@
 		"map_properties": {
 			"material": {
 				"sand": {
-					"new_block": "minecraft:sand"
+					"new_block": "universal_minecraft:sand"
 				},
 				"red_sand": {
-					"new_block": "minecraft:red_sand"
+					"new_block": "universal_minecraft:red_sand"
 				}
 			}
 		}
 	},
 	"blockstate_from_universal": {
-		"minecraft:sand": {
+		"universal_minecraft:sand": {
 			"new_block": "minecraft:sand",
 			"new_properties": {
 				"material": "sand"
 			}
 		},
-		"minecraft:red_sand": {
+		"universal_minecraft:red_sand": {
 			"new_block": "minecraft:sand",
 			"new_properties": {
 				"material": "red_sand"

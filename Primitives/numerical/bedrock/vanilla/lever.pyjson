@@ -1,6 +1,6 @@
 {
 	"to_universal": {
-		"new_block": "minecraft:lever",
+		"new_block": "universal_minecraft:lever",
 		"map_properties": {
 			"block_data": {
 				str(data): {
@@ -27,7 +27,7 @@
 		}
 	},
 	"from_universal": {
-		"minecraft:lever": {
+		"universal_minecraft:lever": {
 			"map_properties": {
 				"powered": {
 					powered: {
@@ -90,7 +90,7 @@
 		}
 	},
 	"blockstate_to_universal": {
-		"new_block": "minecraft:lever",
+		"new_block": "universal_minecraft:lever",
 		"carry_properties": {
 			"powered": ["false", "true"]
 		},
@@ -112,7 +112,7 @@
 		}
 	},
 	"blockstate_from_universal": {
-		"minecraft:lever": {
+		"universal_minecraft:lever": {
 			"new_block": "minecraft:lever",
 			"carry_properties": {
 				"powered": ["false", "true"]

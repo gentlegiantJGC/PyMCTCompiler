@@ -2,10 +2,10 @@
     "map_properties": {
         "type": {
             "normal": {
-                "new_block": "minecraft:piston_head"
+                "new_block": "universal_minecraft:piston_head"
             },
             "sticky": {
-                "new_block": "minecraft:sticky_piston_head"
+                "new_block": "universal_minecraft:sticky_piston_head"
             }
         }
     },

@@ -1,1 +1,1 @@
-numerical.liquid('minecraft', 'water', False)
+numerical.liquid('minecraft', 'water', False, "universal_minecraft")

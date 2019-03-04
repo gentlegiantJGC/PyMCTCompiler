@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:leaves",
+    "new_block": "universal_minecraft:leaves",
     "carry_properties": {
         "material": [
             "oak",

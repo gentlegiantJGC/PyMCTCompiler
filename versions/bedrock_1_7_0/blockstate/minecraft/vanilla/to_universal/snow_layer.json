@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:snow",
+    "new_block": "universal_minecraft:snow",
     "carry_properties": {
         "age": [
             "0",

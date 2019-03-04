@@ -3,13 +3,13 @@
 		"map_properties": {
 			"block_data": {
 				"0": {
-					"new_block": "minecraft:sponge",
+					"new_block": "universal_minecraft:sponge",
 					"new_properties": {
 						"wet": "false"
 					}
 				},
 				"1": {
-					"new_block": "minecraft:sponge",
+					"new_block": "universal_minecraft:sponge",
 					"new_properties": {
 						"wet": "true"
 					}
@@ -18,7 +18,7 @@
 		}
 	},
 	"from_universal" :{
-		"minecraft:sponge": {
+		"universal_minecraft:sponge": {
 			"new_block": "minecraft:sponge",
 			"map_properties": {
 				"wet": {
@@ -48,7 +48,7 @@
 		}
 	},
 	"blockstate_to_universal": {
-		"new_block": "minecraft:sponge",
+		"new_block": "universal_minecraft:sponge",
 		"carry_properties": {
 			"wet": [
 				"false",
@@ -57,7 +57,7 @@
 		}
 	},
 	"blockstate_from_universal": {
-		"minecraft:sponge": {
+		"universal_minecraft:sponge": {
 			"new_block": "minecraft:sponge",
 			"carry_properties": {
 				"wet": [

@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:concrete_powder",
+    "new_block": "universal_minecraft:concrete_powder",
     "map_properties": {
         "block_data": {
             "0": {

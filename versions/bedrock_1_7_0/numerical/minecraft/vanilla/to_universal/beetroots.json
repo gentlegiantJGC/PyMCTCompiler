@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:beetroots",
+    "new_block": "universal_minecraft:beetroots",
     "map_properties": {
         "block_data": {
             "0": {

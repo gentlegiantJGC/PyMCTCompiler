@@ -1,1 +1,1 @@
-numerical.default("minecraft", "obsidian")
+numerical.default("minecraft", "obsidian", "universal_minecraft")

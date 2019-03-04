@@ -1,1 +1,1 @@
-numerical.colour("minecraft", "wool")
+numerical.colour("minecraft", "wool", "universal_minecraft")

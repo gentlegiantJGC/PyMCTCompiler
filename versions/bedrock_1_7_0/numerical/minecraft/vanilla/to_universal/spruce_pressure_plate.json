@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:pressure_plate",
+    "new_block": "universal_minecraft:pressure_plate",
     "new_properties": {
         "material": "spruce"
     },

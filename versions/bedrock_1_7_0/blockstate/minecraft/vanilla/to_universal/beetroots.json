@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:beetroots",
+    "new_block": "universal_minecraft:beetroots",
     "carry_properties": {
         "age": [
             "0",

@@ -1,1 +1,1 @@
-numerical.default("minecraft", "dried_kelp_block")
+numerical.default("minecraft", "dried_kelp_block", "universal_minecraft")

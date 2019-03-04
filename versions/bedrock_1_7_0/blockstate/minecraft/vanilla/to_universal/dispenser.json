@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:dispenser",
+    "new_block": "universal_minecraft:dispenser",
     "carry_properties": {
         "facing": [
             "north",

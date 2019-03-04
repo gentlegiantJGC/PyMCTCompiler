@@ -2,7 +2,7 @@
     "map_properties": {
         "block_data": {
             "0": {
-                "new_block": "minecraft:leaves",
+                "new_block": "universal_minecraft:leaves",
                 "new_properties": {
                     "material": "acacia",
                     "decayable": "true",
@@ -10,7 +10,7 @@
                 }
             },
             "1": {
-                "new_block": "minecraft:leaves",
+                "new_block": "universal_minecraft:leaves",
                 "new_properties": {
                     "material": "dark_oak",
                     "decayable": "true",
@@ -18,7 +18,7 @@
                 }
             },
             "4": {
-                "new_block": "minecraft:leaves",
+                "new_block": "universal_minecraft:leaves",
                 "new_properties": {
                     "material": "acacia",
                     "decayable": "false",
@@ -26,7 +26,7 @@
                 }
             },
             "5": {
-                "new_block": "minecraft:leaves",
+                "new_block": "universal_minecraft:leaves",
                 "new_properties": {
                     "material": "dark_oak",
                     "decayable": "false",
@@ -34,7 +34,7 @@
                 }
             },
             "8": {
-                "new_block": "minecraft:leaves",
+                "new_block": "universal_minecraft:leaves",
                 "new_properties": {
                     "material": "acacia",
                     "decayable": "true",
@@ -42,7 +42,7 @@
                 }
             },
             "9": {
-                "new_block": "minecraft:leaves",
+                "new_block": "universal_minecraft:leaves",
                 "new_properties": {
                     "material": "dark_oak",
                     "decayable": "true",
@@ -50,7 +50,7 @@
                 }
             },
             "12": {
-                "new_block": "minecraft:leaves",
+                "new_block": "universal_minecraft:leaves",
                 "new_properties": {
                     "material": "acacia",
                     "decayable": "false",
@@ -58,7 +58,7 @@
                 }
             },
             "13": {
-                "new_block": "minecraft:leaves",
+                "new_block": "universal_minecraft:leaves",
                 "new_properties": {
                     "material": "dark_oak",
                     "decayable": "false",

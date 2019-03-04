@@ -1,1 +1,1 @@
-numerical.default("minecraft", "stonecutter", "minecraft", "stonecutter_old")
+numerical.default("minecraft", "stonecutter", "universal_minecraft", "stonecutter_old")

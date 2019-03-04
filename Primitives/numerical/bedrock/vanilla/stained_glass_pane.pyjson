@@ -1,1 +1,1 @@
-numerical.colour("minecraft", "stained_glass_pane")
+numerical.colour("minecraft", "stained_glass_pane", "universal_minecraft")

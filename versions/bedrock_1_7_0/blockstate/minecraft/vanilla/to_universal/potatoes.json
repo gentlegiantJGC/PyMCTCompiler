@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:potatoes",
+    "new_block": "universal_minecraft:potatoes",
     "carry_properties": {
         "age": [
             "0",

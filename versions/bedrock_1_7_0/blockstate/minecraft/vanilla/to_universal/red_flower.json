@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:plant",
+    "new_block": "universal_minecraft:plant",
     "carry_properties": {
         "type": [
             "poppy",

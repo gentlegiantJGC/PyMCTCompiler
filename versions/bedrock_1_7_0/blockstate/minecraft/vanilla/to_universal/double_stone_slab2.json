@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:slab",
+    "new_block": "universal_minecraft:slab",
     "carry_properties": {
         "material": [
             "red_sandstone",

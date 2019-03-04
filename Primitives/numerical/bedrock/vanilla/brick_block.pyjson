@@ -1,1 +1,1 @@
-numerical.default("minecraft", "brick_block")
+numerical.default("minecraft", "brick_block", "universal_minecraft")

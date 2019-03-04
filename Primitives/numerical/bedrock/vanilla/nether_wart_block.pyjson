@@ -1,1 +1,1 @@
-numerical.default("minecraft", "nether_wart_block")
+numerical.default("minecraft", "nether_wart_block", "universal_minecraft")

@@ -1,1 +1,1 @@
-numerical.default("minecraft", "sealantern", "minecraft", "sea_lantern")
+numerical.default("minecraft", "sealantern", "universal_minecraft", "sea_lantern")
