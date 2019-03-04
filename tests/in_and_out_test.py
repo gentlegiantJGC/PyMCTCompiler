@@ -4,7 +4,7 @@ import itertools
 if __name__ == '__main__':
 	block_mappings = VersionContainer(r'..\versions')
 	for platform_name in block_mappings.platforms:
-		for version_number in block_mappings.versions(platform_name):
+		for version_number in block_mappings.version_numbers(platform_name):
 			version = block_mappings.get(platform_name, version_number)
 			if not version.format == 'pseudo-numerical':
 				print(f'skipping {platform_name} {version_number}. Not pseudo-numerical format')
@@ -35,7 +35,8 @@ if __name__ == '__main__':
 							print({'block_name': f'{namespace_str}:{block_name}', 'properties': spec})
 							continue
 						if not back_out['block_name'] == f'{namespace_str}:{block_name}' and back_out['properties'] == spec:
-							print({'block_name': f'{namespace_str}:{block_name}', 'properties': spec})
+							print(f"Conversion error: {{'{block_name}': '{namespace_str}:{block_name}', 'properties': {spec}}} != {back_out}")
+							print(f'Universal: {universal_blockstate}')
 
 
 

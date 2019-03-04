@@ -1,7 +1,8 @@
 import json
 import os
-from typing import Tuple, Dict, Generator, List
+from typing import Union, Tuple, Dict, Generator, List
 
+log_level = 0  # 0 for no logs, 1 or higher for warnings, 2 or higher for info, 3 or higher for debug
 
 """
 Structure:
@@ -35,6 +36,21 @@ VersionContainer
 """
 
 
+def debug(msg: str):
+	if log_level >= 3:
+		print(msg)
+
+
+def info(msg: str):
+	if log_level >= 2:
+		print(msg)
+
+
+def warn(msg: str):
+	if log_level >= 1:
+		print(msg)
+
+
 def directories(path: str) -> Generator[str, None, None]:
 	"""
 	A generator of only directories in the given directory
@@ -56,12 +72,16 @@ def files(path: str) -> Generator[str, None, None]:
 
 
 def get_nbt(level, location: Tuple[int, int, int]):
-	return level.tileEntityAt(*location)
+	if level is not None:
+		return level.tileEntityAt(*location)
+	else:
+		raise Exception('level is None and more data needed from it')
 
 
 class VersionContainer:
 	"""
 	Container for the different versions
+	A version in this context is a version of the game from a specific platform (ie platform and version number need to be the same)
 	"""
 	def __init__(self, mappings_path: str):
 		self._versions = {}
@@ -78,12 +98,16 @@ class VersionContainer:
 	def platforms(self) -> List[str]:
 		return list(self._versions.keys())
 
-	def versions(self, platform: str) -> List[Tuple[int, int, int]]:
+	def version_numbers(self, platform: str) -> List[Tuple[int, int, int]]:
 		return list(self._versions[platform].keys())
 
-	def get(self, platform: str, version_number: Tuple[int, int, int]) -> 'Version':
+	def get(self, platform: str, version_number: Tuple[int, int, int], force_blockstate: bool = None, namespace: str = None):
 		assert platform in self._versions and version_number in self._versions[platform]
-		return self._versions[platform][version_number]
+		version: Version = self._versions[platform][version_number]
+		if force_blockstate is not None:
+			return version.get(force_blockstate, namespace)
+		else:
+			return version
 
 	def to_universal(self, level, platform: str, version_number: Tuple[int, int, int], namespace: str, block_id: str, properties: Dict[str, str], force_blockstate: bool = False, location: Tuple[int, int, int] = None) -> Tuple[dict, bool]:
 		return self.get(platform, version_number).to_universal(level, namespace, block_id, properties, force_blockstate, location)
@@ -137,19 +161,28 @@ class Version:
 	def version_number(self) -> Tuple[int, int, int]:
 		return self._version_number
 
-	def get(self, force_blockstate: bool = False) -> 'SubVersion':
+	def get(self, force_blockstate: bool = False, namespace: str = None):
+		assert isinstance(force_blockstate, bool), 'force_blockstate must be a bool type'
 		if force_blockstate:
-			return self._subversions['blockstate']
+			sub_version: SubVersion = self._subversions['blockstate']
 		else:
 			if self.format in ['numerical', 'pseudo-numerical']:
-				return self._subversions['numerical']
+				sub_version: SubVersion = self._subversions['numerical']
 			elif self.format == 'blockstate':
-				return self._subversions['blockstate']
+				sub_version: SubVersion = self._subversions['blockstate']
+			else:
+				raise NotImplemented
+		if namespace is not None:
+			return sub_version.get(namespace)
+		else:
+			return sub_version
 
-	def to_universal(self, level, namespace: str, block_name: str, properties: Dict[str, str], force_blockstate: bool = False, location: Tuple[int, int, int] = None) -> Tuple[dict, bool]:
+	def to_universal(self, level, namespace: str, block_id: str, properties: Dict[str, str], force_blockstate: bool = False, location: Tuple[int, int, int] = None) -> Tuple[dict, bool]:
 		if self.format == 'numerical' and not force_blockstate:
-			namespace, block_name = self._numerical_map[block_name].split(':')
-		return self.get(force_blockstate).to_universal(level, namespace, block_name, properties, location)
+			assert block_id.isnumeric(), 'For the numerical format block_id must be an int converted to a string'
+			namespace, block_id = self._numerical_map[block_id].split(':')
+		assert isinstance(block_id, str), 'block_id must be a string'
+		return self.get(force_blockstate).to_universal(level, namespace, block_id, properties, location)
 
 	def from_universal(self, level, namespace: str, block_name: str, properties: Dict[str, str], force_blockstate: bool = False) -> dict:
 		blockstate = self.get(force_blockstate).from_universal(level, namespace, block_name, properties)
@@ -173,14 +206,14 @@ class SubVersion:
 		try:
 			return self.get(namespace).to_universal(level, block_name, properties, location)
 		except Exception as e:
-			print(f'Failed getting namespace. It may not exist.\n{e}')
+			warn(f'Failed getting namespace. It may not exist.\n{e}')
 			return {'block_name': f'{namespace}/{block_name}', 'properties': properties}, False
 
 	def from_universal(self, level, namespace: str, block_name: str, properties: Dict[str, str]) -> dict:
 		try:
 			return self.get(namespace).from_universal(level, block_name, properties)
 		except Exception as e:
-			print(f'Failed getting namespace. It may not exist.\n{e}')
+			warn(f'Failed getting namespace. It may not exist.\n{e}')
 			return {'block_name': f'{namespace}/{block_name}', 'properties': properties}
 
 	@property
@@ -241,16 +274,17 @@ class Namespace:
 				location
 			)
 			if new_blockstate['nbt'] != {}:
-				print(f'universal mappings should not have nbt: {new_blockstate}')
+				warn(f'universal mappings should not have nbt: {new_blockstate}')
 			del new_blockstate['nbt']
 
 		except Exception as e:
-			print(f'Failed converting blockstate to universal\n{e}')
+			info(f'Failed converting blockstate to universal\n{e}')
 			return blockstate, extra
 		else:
-			if new_blockstate['block_name'] is not None:
+			if new_blockstate['block_name'] is not None and new_blockstate['block_name'].startswith('universal_'):
 				return new_blockstate, extra
 			else:
+				debug('Returning input as universal')
 				return blockstate, extra
 
 	def from_universal(self, level, block_name: str, properties: Dict[str, str]):
@@ -264,7 +298,7 @@ class Namespace:
 				self.current_version
 			)
 		except Exception as e:
-			print(f'Failed converting blockstate from universal\n{e}')
+			info(f'Failed converting blockstate from universal\n{e}')
 			return blockstate
 		else:
 			if new_blockstate['block_name'] is not None:
@@ -279,6 +313,7 @@ class Namespace:
 
 			:param level: a view into the level to access additional data
 			:param input_blockstate: the blockstate put into the converter eg {'block_name': 'minecraft:log', 'properties': {'block_data': '0'}}
+			:param input_spec: the specification for the input block from the input format
 			:param mappings: the mapping file for that block
 			:param output_version: A way for the function to look at the specification being converted to. (used to load default properties)
 			:param location: (x, y, z) only used if data beyond the blockstate is needed
@@ -390,12 +425,12 @@ class Namespace:
 
 if __name__ == '__main__':
 	block_mappings = VersionContainer(r'..\versions')
-	print('==== bedrock_1_7_0 ====')
+	info('==== bedrock_1_7_0 ====')
 	for data in range(16):
 		print(
 			block_mappings.to_universal(None, 'bedrock', (1, 7, 0), 'minecraft', 'log', {'block_data': str(data)})
 		)
-	print('==== java_1_12_2 ====')
+	info('==== java_1_12_2 ====')
 	for data in range(16):
 		print(
 			block_mappings.to_universal(None, 'java', (1, 12, 2), 'minecraft', '17', {'block_data': str(data)})
