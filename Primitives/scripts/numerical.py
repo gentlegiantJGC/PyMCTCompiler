@@ -1857,13 +1857,13 @@ def button_bedrock(input_namespace: str, input_block_name: str, material: str, u
 		universal_block_name = input_block_name
 	return {
 		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"new_properties": {
 				"material": material
 			},
 			"map_properties": {
 				"block_data": {
 					str(data): {
+						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": properties
 					} for data, properties in {
 						0: {"face": "ceiling", "powered": "false"},

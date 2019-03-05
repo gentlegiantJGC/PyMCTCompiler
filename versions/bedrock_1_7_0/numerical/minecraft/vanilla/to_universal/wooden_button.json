@@ -1,23 +1,25 @@
 {
-    "new_block": "universal_minecraft:button",
     "new_properties": {
         "material": "oak"
     },
     "map_properties": {
         "block_data": {
             "0": {
+                "new_block": "universal_minecraft:button",
                 "new_properties": {
                     "face": "ceiling",
                     "powered": "false"
                 }
             },
             "1": {
+                "new_block": "universal_minecraft:button",
                 "new_properties": {
                     "face": "floor",
                     "powered": "false"
                 }
             },
             "2": {
+                "new_block": "universal_minecraft:button",
                 "new_properties": {
                     "face": "wall",
                     "facing": "north",
@@ -25,6 +27,7 @@
                 }
             },
             "3": {
+                "new_block": "universal_minecraft:button",
                 "new_properties": {
                     "face": "wall",
                     "facing": "south",
@@ -32,6 +35,7 @@
                 }
             },
             "4": {
+                "new_block": "universal_minecraft:button",
                 "new_properties": {
                     "face": "wall",
                     "facing": "west",
@@ -39,6 +43,7 @@
                 }
             },
             "5": {
+                "new_block": "universal_minecraft:button",
                 "new_properties": {
                     "face": "wall",
                     "facing": "east",
@@ -46,18 +51,21 @@
                 }
             },
             "8": {
+                "new_block": "universal_minecraft:button",
                 "new_properties": {
                     "face": "ceiling",
                     "powered": "true"
                 }
             },
             "9": {
+                "new_block": "universal_minecraft:button",
                 "new_properties": {
                     "face": "floor",
                     "powered": "true"
                 }
             },
             "10": {
+                "new_block": "universal_minecraft:button",
                 "new_properties": {
                     "face": "wall",
                     "facing": "north",
@@ -65,6 +73,7 @@
                 }
             },
             "11": {
+                "new_block": "universal_minecraft:button",
                 "new_properties": {
                     "face": "wall",
                     "facing": "south",
@@ -72,6 +81,7 @@
                 }
             },
             "12": {
+                "new_block": "universal_minecraft:button",
                 "new_properties": {
                     "face": "wall",
                     "facing": "west",
@@ -79,6 +89,7 @@
                 }
             },
             "13": {
+                "new_block": "universal_minecraft:button",
                 "new_properties": {
                     "face": "wall",
                     "facing": "east",
