@@ -1,11 +1,11 @@
 {
-    "new_block": "universal_minecraft:trapdoor",
     "new_properties": {
         "material": "oak"
     },
     "map_properties": {
         "block_data": {
             "0": {
+                "new_block": "universal_minecraft:trapdoor",
                 "new_properties": {
                     "half": "bottom",
                     "open": "false",
@@ -13,6 +13,7 @@
                 }
             },
             "1": {
+                "new_block": "universal_minecraft:trapdoor",
                 "new_properties": {
                     "half": "bottom",
                     "open": "false",
@@ -20,6 +21,7 @@
                 }
             },
             "2": {
+                "new_block": "universal_minecraft:trapdoor",
                 "new_properties": {
                     "half": "bottom",
                     "open": "false",
@@ -27,6 +29,7 @@
                 }
             },
             "3": {
+                "new_block": "universal_minecraft:trapdoor",
                 "new_properties": {
                     "half": "bottom",
                     "open": "false",
@@ -34,6 +37,7 @@
                 }
             },
             "4": {
+                "new_block": "universal_minecraft:trapdoor",
                 "new_properties": {
                     "half": "bottom",
                     "open": "true",
@@ -41,6 +45,7 @@
                 }
             },
             "5": {
+                "new_block": "universal_minecraft:trapdoor",
                 "new_properties": {
                     "half": "bottom",
                     "open": "true",
@@ -48,6 +53,7 @@
                 }
             },
             "6": {
+                "new_block": "universal_minecraft:trapdoor",
                 "new_properties": {
                     "half": "bottom",
                     "open": "true",
@@ -55,6 +61,7 @@
                 }
             },
             "7": {
+                "new_block": "universal_minecraft:trapdoor",
                 "new_properties": {
                     "half": "bottom",
                     "open": "true",
@@ -62,6 +69,7 @@
                 }
             },
             "8": {
+                "new_block": "universal_minecraft:trapdoor",
                 "new_properties": {
                     "half": "top",
                     "open": "false",
@@ -69,6 +77,7 @@
                 }
             },
             "9": {
+                "new_block": "universal_minecraft:trapdoor",
                 "new_properties": {
                     "half": "top",
                     "open": "false",
@@ -76,6 +85,7 @@
                 }
             },
             "10": {
+                "new_block": "universal_minecraft:trapdoor",
                 "new_properties": {
                     "half": "top",
                     "open": "false",
@@ -83,6 +93,7 @@
                 }
             },
             "11": {
+                "new_block": "universal_minecraft:trapdoor",
                 "new_properties": {
                     "half": "top",
                     "open": "false",
@@ -90,6 +101,7 @@
                 }
             },
             "12": {
+                "new_block": "universal_minecraft:trapdoor",
                 "new_properties": {
                     "half": "top",
                     "open": "true",
@@ -97,6 +109,7 @@
                 }
             },
             "13": {
+                "new_block": "universal_minecraft:trapdoor",
                 "new_properties": {
                     "half": "top",
                     "open": "true",
@@ -104,6 +117,7 @@
                 }
             },
             "14": {
+                "new_block": "universal_minecraft:trapdoor",
                 "new_properties": {
                     "half": "top",
                     "open": "true",
@@ -111,6 +125,7 @@
                 }
             },
             "15": {
+                "new_block": "universal_minecraft:trapdoor",
                 "new_properties": {
                     "half": "top",
                     "open": "true",

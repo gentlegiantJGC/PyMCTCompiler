@@ -1,16 +1,17 @@
 {
-    "new_block": "universal_minecraft:pressure_plate",
     "new_properties": {
         "material": "oak"
     },
     "map_properties": {
         "block_data": {
             "0": {
+                "new_block": "universal_minecraft:pressure_plate",
                 "new_properties": {
                     "powered": "false"
                 }
             },
             "1": {
+                "new_block": "universal_minecraft:pressure_plate",
                 "new_properties": {
                     "powered": "true"
                 }

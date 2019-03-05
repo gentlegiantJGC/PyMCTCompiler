@@ -1,8 +1,8 @@
 {
-    "new_block": "universal_minecraft:bed",
     "map_properties": {
         "block_data": {
             "0": {
+                "new_block": "universal_minecraft:bed",
                 "new_properties": {
                     "facing": "south",
                     "occupied": "false",
@@ -10,6 +10,7 @@
                 }
             },
             "1": {
+                "new_block": "universal_minecraft:bed",
                 "new_properties": {
                     "facing": "west",
                     "occupied": "false",
@@ -17,6 +18,7 @@
                 }
             },
             "2": {
+                "new_block": "universal_minecraft:bed",
                 "new_properties": {
                     "facing": "north",
                     "occupied": "false",
@@ -24,6 +26,7 @@
                 }
             },
             "3": {
+                "new_block": "universal_minecraft:bed",
                 "new_properties": {
                     "facing": "east",
                     "occupied": "false",
@@ -31,6 +34,7 @@
                 }
             },
             "4": {
+                "new_block": "universal_minecraft:bed",
                 "new_properties": {
                     "facing": "south",
                     "occupied": "true",
@@ -38,6 +42,7 @@
                 }
             },
             "5": {
+                "new_block": "universal_minecraft:bed",
                 "new_properties": {
                     "facing": "west",
                     "occupied": "true",
@@ -45,6 +50,7 @@
                 }
             },
             "6": {
+                "new_block": "universal_minecraft:bed",
                 "new_properties": {
                     "facing": "north",
                     "occupied": "true",
@@ -52,6 +58,7 @@
                 }
             },
             "7": {
+                "new_block": "universal_minecraft:bed",
                 "new_properties": {
                     "facing": "east",
                     "occupied": "true",
@@ -59,6 +66,7 @@
                 }
             },
             "8": {
+                "new_block": "universal_minecraft:bed",
                 "new_properties": {
                     "facing": "south",
                     "occupied": "false",
@@ -66,6 +74,7 @@
                 }
             },
             "9": {
+                "new_block": "universal_minecraft:bed",
                 "new_properties": {
                     "facing": "west",
                     "occupied": "false",
@@ -73,6 +82,7 @@
                 }
             },
             "10": {
+                "new_block": "universal_minecraft:bed",
                 "new_properties": {
                     "facing": "north",
                     "occupied": "false",
@@ -80,6 +90,7 @@
                 }
             },
             "11": {
+                "new_block": "universal_minecraft:bed",
                 "new_properties": {
                     "facing": "east",
                     "occupied": "false",
@@ -87,6 +98,7 @@
                 }
             },
             "12": {
+                "new_block": "universal_minecraft:bed",
                 "new_properties": {
                     "facing": "south",
                     "occupied": "true",
@@ -94,6 +106,7 @@
                 }
             },
             "13": {
+                "new_block": "universal_minecraft:bed",
                 "new_properties": {
                     "facing": "west",
                     "occupied": "true",
@@ -101,6 +114,7 @@
                 }
             },
             "14": {
+                "new_block": "universal_minecraft:bed",
                 "new_properties": {
                     "facing": "north",
                     "occupied": "true",
@@ -108,6 +122,7 @@
                 }
             },
             "15": {
+                "new_block": "universal_minecraft:bed",
                 "new_properties": {
                     "facing": "east",
                     "occupied": "true",

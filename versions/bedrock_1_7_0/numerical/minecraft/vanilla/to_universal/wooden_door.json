@@ -1,11 +1,11 @@
 {
-    "new_block": "universal_minecraft:door",
     "new_properties": {
         "material": "oak"
     },
     "map_properties": {
         "block_data": {
             "0": {
+                "new_block": "universal_minecraft:door",
                 "new_properties": {
                     "half": "lower",
                     "open": "false",
@@ -52,6 +52,7 @@
                 }
             },
             "1": {
+                "new_block": "universal_minecraft:door",
                 "new_properties": {
                     "half": "lower",
                     "open": "false",
@@ -98,6 +99,7 @@
                 }
             },
             "2": {
+                "new_block": "universal_minecraft:door",
                 "new_properties": {
                     "half": "lower",
                     "open": "false",
@@ -144,6 +146,7 @@
                 }
             },
             "3": {
+                "new_block": "universal_minecraft:door",
                 "new_properties": {
                     "half": "lower",
                     "open": "false",
@@ -190,6 +193,7 @@
                 }
             },
             "4": {
+                "new_block": "universal_minecraft:door",
                 "new_properties": {
                     "half": "lower",
                     "open": "true",
@@ -236,6 +240,7 @@
                 }
             },
             "5": {
+                "new_block": "universal_minecraft:door",
                 "new_properties": {
                     "half": "lower",
                     "open": "true",
@@ -282,6 +287,7 @@
                 }
             },
             "6": {
+                "new_block": "universal_minecraft:door",
                 "new_properties": {
                     "half": "lower",
                     "open": "true",
@@ -328,6 +334,7 @@
                 }
             },
             "7": {
+                "new_block": "universal_minecraft:door",
                 "new_properties": {
                     "half": "lower",
                     "open": "true",
@@ -374,6 +381,7 @@
                 }
             },
             "8": {
+                "new_block": "universal_minecraft:door",
                 "new_properties": {
                     "half": "upper",
                     "powered": "false",
@@ -444,6 +452,7 @@
                 }
             },
             "9": {
+                "new_block": "universal_minecraft:door",
                 "new_properties": {
                     "half": "upper",
                     "powered": "false",
@@ -514,6 +523,7 @@
                 }
             },
             "10": {
+                "new_block": "universal_minecraft:door",
                 "new_properties": {
                     "half": "upper",
                     "powered": "true",
@@ -584,6 +594,7 @@
                 }
             },
             "11": {
+                "new_block": "universal_minecraft:door",
                 "new_properties": {
                     "half": "upper",
                     "powered": "true",

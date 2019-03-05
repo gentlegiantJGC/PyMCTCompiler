@@ -1,11 +1,11 @@
 {
-    "new_block": "universal_minecraft:repeater",
     "new_properties": {
         "powered": "false"
     },
     "map_properties": {
         "block_data": {
             "0": {
+                "new_block": "universal_minecraft:repeater",
                 "new_properties": {
                     "facing": "south",
                     "delay": "1"
@@ -84,6 +84,7 @@
                 ]
             },
             "1": {
+                "new_block": "universal_minecraft:repeater",
                 "new_properties": {
                     "facing": "west",
                     "delay": "1"
@@ -162,6 +163,7 @@
                 ]
             },
             "2": {
+                "new_block": "universal_minecraft:repeater",
                 "new_properties": {
                     "facing": "north",
                     "delay": "1"
@@ -240,6 +242,7 @@
                 ]
             },
             "3": {
+                "new_block": "universal_minecraft:repeater",
                 "new_properties": {
                     "facing": "east",
                     "delay": "1"
@@ -318,6 +321,7 @@
                 ]
             },
             "4": {
+                "new_block": "universal_minecraft:repeater",
                 "new_properties": {
                     "facing": "south",
                     "delay": "2"
@@ -396,6 +400,7 @@
                 ]
             },
             "5": {
+                "new_block": "universal_minecraft:repeater",
                 "new_properties": {
                     "facing": "west",
                     "delay": "2"
@@ -474,6 +479,7 @@
                 ]
             },
             "6": {
+                "new_block": "universal_minecraft:repeater",
                 "new_properties": {
                     "facing": "north",
                     "delay": "2"
@@ -552,6 +558,7 @@
                 ]
             },
             "7": {
+                "new_block": "universal_minecraft:repeater",
                 "new_properties": {
                     "facing": "east",
                     "delay": "2"
@@ -630,6 +637,7 @@
                 ]
             },
             "8": {
+                "new_block": "universal_minecraft:repeater",
                 "new_properties": {
                     "facing": "south",
                     "delay": "3"
@@ -708,6 +716,7 @@
                 ]
             },
             "9": {
+                "new_block": "universal_minecraft:repeater",
                 "new_properties": {
                     "facing": "west",
                     "delay": "3"
@@ -786,6 +795,7 @@
                 ]
             },
             "10": {
+                "new_block": "universal_minecraft:repeater",
                 "new_properties": {
                     "facing": "north",
                     "delay": "3"
@@ -864,6 +874,7 @@
                 ]
             },
             "11": {
+                "new_block": "universal_minecraft:repeater",
                 "new_properties": {
                     "facing": "east",
                     "delay": "3"
@@ -942,6 +953,7 @@
                 ]
             },
             "12": {
+                "new_block": "universal_minecraft:repeater",
                 "new_properties": {
                     "facing": "south",
                     "delay": "4"
@@ -1020,6 +1032,7 @@
                 ]
             },
             "13": {
+                "new_block": "universal_minecraft:repeater",
                 "new_properties": {
                     "facing": "west",
                     "delay": "4"
@@ -1098,6 +1111,7 @@
                 ]
             },
             "14": {
+                "new_block": "universal_minecraft:repeater",
                 "new_properties": {
                     "facing": "north",
                     "delay": "4"
@@ -1176,6 +1190,7 @@
                 ]
             },
             "15": {
+                "new_block": "universal_minecraft:repeater",
                 "new_properties": {
                     "facing": "east",
                     "delay": "4"

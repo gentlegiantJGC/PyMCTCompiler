@@ -1,74 +1,85 @@
 {
-    "new_block": "universal_minecraft:slab",
     "map_properties": {
         "block_data": {
             "0": {
+                "new_block": "universal_minecraft:slab",
                 "new_properties": {
                     "material": "oak",
                     "type": "bottom"
                 }
             },
             "1": {
+                "new_block": "universal_minecraft:slab",
                 "new_properties": {
                     "material": "spruce",
                     "type": "bottom"
                 }
             },
             "2": {
+                "new_block": "universal_minecraft:slab",
                 "new_properties": {
                     "material": "birch",
                     "type": "bottom"
                 }
             },
             "3": {
+                "new_block": "universal_minecraft:slab",
                 "new_properties": {
                     "material": "jungle",
                     "type": "bottom"
                 }
             },
             "4": {
+                "new_block": "universal_minecraft:slab",
                 "new_properties": {
                     "material": "acacia",
                     "type": "bottom"
                 }
             },
             "5": {
+                "new_block": "universal_minecraft:slab",
                 "new_properties": {
                     "material": "dark_oak",
                     "type": "bottom"
                 }
             },
             "8": {
+                "new_block": "universal_minecraft:slab",
                 "new_properties": {
                     "material": "oak",
                     "type": "top"
                 }
             },
             "9": {
+                "new_block": "universal_minecraft:slab",
                 "new_properties": {
                     "material": "spruce",
                     "type": "top"
                 }
             },
             "10": {
+                "new_block": "universal_minecraft:slab",
                 "new_properties": {
                     "material": "birch",
                     "type": "top"
                 }
             },
             "11": {
+                "new_block": "universal_minecraft:slab",
                 "new_properties": {
                     "material": "jungle",
                     "type": "top"
                 }
             },
             "12": {
+                "new_block": "universal_minecraft:slab",
                 "new_properties": {
                     "material": "acacia",
                     "type": "top"
                 }
             },
             "13": {
+                "new_block": "universal_minecraft:slab",
                 "new_properties": {
                     "material": "dark_oak",
                     "type": "top"

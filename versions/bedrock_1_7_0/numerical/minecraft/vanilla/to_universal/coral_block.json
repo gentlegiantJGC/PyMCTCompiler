@@ -1,62 +1,71 @@
 {
-    "new_block": "universal_minecraft:coral_block",
     "map_properties": {
         "block_data": {
             "0": {
+                "new_block": "universal_minecraft:coral_block",
                 "new_properties": {
                     "type": "tube",
                     "dead": "false"
                 }
             },
             "1": {
+                "new_block": "universal_minecraft:coral_block",
                 "new_properties": {
                     "type": "brain",
                     "dead": "false"
                 }
             },
             "2": {
+                "new_block": "universal_minecraft:coral_block",
                 "new_properties": {
                     "type": "bubble",
                     "dead": "false"
                 }
             },
             "3": {
+                "new_block": "universal_minecraft:coral_block",
                 "new_properties": {
                     "type": "fire",
                     "dead": "false"
                 }
             },
             "4": {
+                "new_block": "universal_minecraft:coral_block",
                 "new_properties": {
                     "type": "tube",
                     "dead": "false"
                 }
             },
             "5": {
+                "new_block": "universal_minecraft:coral_block",
                 "new_properties": {
                     "type": "brain",
                     "dead": "true"
                 }
             },
             "6": {
+                "new_block": "universal_minecraft:coral_block",
                 "new_properties": {
                     "type": "bubble",
                     "dead": "true"
                 }
             },
             "7": {
+                "new_block": "universal_minecraft:coral_block",
                 "new_properties": {
                     "type": "fire",
                     "dead": "true"
                 }
             },
             "8": {
+                "new_block": "universal_minecraft:coral_block",
                 "new_properties": {
                     "type": "tube",
                     "dead": "true"
                 }
             },
             "9": {
+                "new_block": "universal_minecraft:coral_block",
                 "new_properties": {
                     "type": "brain",
                     "dead": "true"

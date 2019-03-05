@@ -1,8 +1,8 @@
 {
-    "new_block": "universal_minecraft:stairs",
     "map_properties": {
         "block_data": {
             "0": {
+                "new_block": "universal_minecraft:stairs",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "east",
@@ -10,6 +10,7 @@
                 }
             },
             "1": {
+                "new_block": "universal_minecraft:stairs",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "west",
@@ -17,6 +18,7 @@
                 }
             },
             "2": {
+                "new_block": "universal_minecraft:stairs",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "south",
@@ -24,6 +26,7 @@
                 }
             },
             "3": {
+                "new_block": "universal_minecraft:stairs",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "north",
@@ -31,6 +34,7 @@
                 }
             },
             "4": {
+                "new_block": "universal_minecraft:stairs",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "east",
@@ -38,6 +42,7 @@
                 }
             },
             "5": {
+                "new_block": "universal_minecraft:stairs",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "west",
@@ -45,6 +50,7 @@
                 }
             },
             "6": {
+                "new_block": "universal_minecraft:stairs",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "south",
@@ -52,6 +58,7 @@
                 }
             },
             "7": {
+                "new_block": "universal_minecraft:stairs",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "north",

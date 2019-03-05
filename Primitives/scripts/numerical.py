@@ -43,10 +43,10 @@ def direct_data(input_namespace: str, input_block_name: str, property_name: str,
 		universal_block_name = input_block_name
 	return {
 		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"map_properties": {
 				"block_data": {
 					str(data): {
+						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
 							property_name: str(data)
 						}
@@ -1153,10 +1153,10 @@ def bed_color(platform: str) -> dict:
 			},
 		},
 		"to_universal": {
-			"new_block": "universal_minecraft:bed",
 			"map_properties": {
 				"block_data": {
 					str(data): {
+						"new_block": "universal_minecraft:bed",
 						"new_properties": {
 							"facing": {0: "south", 1: "west", 2: "north", 3: "east"}[data & 3],
 							"occupied": {0: "false", 4: "true"}[data & 4],
@@ -1371,10 +1371,10 @@ def piston_bedrock(input_namespace: str, input_block_name: str, universal_namesp
 	return {
 		"comment": "There is also a tile entity here that contains more data",
 		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"map_properties": {
 				"block_data": {
 					str(data): {
+						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
 							"facing": {0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}[data]
 						}
@@ -1449,10 +1449,10 @@ def colour(input_namespace: str, input_block_name: str, universal_namespace: str
 		universal_block_name = input_block_name
 	return {
 		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"map_properties": {
 				"block_data": {
 					str(data): {
+						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
 							"color": ["white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"][data]
 						}
@@ -1557,10 +1557,10 @@ def double_slab(input_namespace: str, input_block_name: str, block_types: List[s
 		universal_block_name = input_block_name
 	return {
 		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"map_properties": {
 				"block_data": {
 					str(data): {
+						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
 							"material": material,
 							"type": "double"
@@ -1636,10 +1636,10 @@ def slab(input_namespace: str, input_block_name: str, block_types: List[str], un
 		universal_block_name = input_block_name
 	return {
 		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"map_properties": {
 				"block_data": {
 					str(data): {
+						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
 							"material": block,
 							"type": position
@@ -1716,10 +1716,10 @@ def stairs(input_namespace: str, input_block_name: str, material: str, universal
 		universal_block_name = input_block_name
 	return {
 		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"map_properties": {
 				"block_data": {
 					str(data): {
+						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
 							"material": material,
 							"facing": ["east", "west", "south", "north"][data & 3],
@@ -1800,10 +1800,10 @@ def compass(input_namespace: str, input_block_name: str, directions: Dict[int, s
 		universal_block_name = input_block_name
 	return {
 		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"map_properties": {
 				"block_data": {
 					str(data): {
+						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
 							"facing": facing,
 						}
@@ -1998,13 +1998,13 @@ def glazed_terracotta(input_namespace: str, input_block_name: str, color: str, u
 		universal_block_name = input_block_name
 	return {
 		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"new_properties": {
 				"color": color
 			},
 			"map_properties": {
 				"block_data": {
 					str(data): {
+						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
 							"facing": facing
 						}
@@ -2071,10 +2071,10 @@ def fence_gate(input_namespace: str, input_block_name: str, material: str, unive
 		universal_block_name = input_block_name
 	return {
 		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"map_properties": {
 				"block_data": {
 					str(data): {
+						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
 							"material": material,
 							"facing": ["south", "west", "north", "east"][data & 3],
@@ -2165,10 +2165,10 @@ def torch(input_namespace: str, input_block_name: str, universal_namespace: str 
 		universal_block_name = input_block_name
 	return {
 		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"map_properties": {
 				"block_data": {
 					str(data): {
+						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
 							"facing": facing
 						}
@@ -2224,10 +2224,10 @@ def redstone_torch(input_namespace: str, input_block_name: str, lit: bool, unive
 	lit = "true" if lit else "false"
 	return {
 		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"map_properties": {
 				"block_data": {
 					str(data): {
+						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
 							"facing": facing
 						}
@@ -2295,7 +2295,6 @@ def redstone_torch(input_namespace: str, input_block_name: str, lit: bool, unive
 def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 	return {
 		"to_universal": {
-			"new_block": "universal_minecraft:door",
 			"new_properties": {
 				"material": material
 			},
@@ -2303,6 +2302,7 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 				"block_data": {
 					str(data): {
 						# lower half
+						"new_block": "universal_minecraft:door",
 						"new_properties": {
 							"half": "lower",
 							"open": {0: "false", 4: "true"}[data & 4],
@@ -2328,6 +2328,7 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 						}
 					} if data & 8 == 0 else {
 						# upper half
+						"new_block": "universal_minecraft:door",
 						"new_properties": {
 							"half": "upper",
 							"powered": {0: "false", 2: "true"}[data & 2],
@@ -2507,13 +2508,13 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 def trapdoor(input_namespace: str, input_block_name: str, material: str) -> dict:
 	return {
 		"to_universal": {
-			"new_block": "universal_minecraft:trapdoor",
 			"new_properties": {
 				"material": material
 			},
 			"map_properties": {
 				"block_data": {
 					str(data): {
+						"new_block": "universal_minecraft:trapdoor",
 						"new_properties": {
 							"half": {0: "bottom", 8: "top"}[data & 8],
 							"open": {0: "false", 4: "true"}[data & 4],
@@ -2632,13 +2633,13 @@ def pressure_plate(input_namespace: str, input_block_name: str, material: str) -
 	states = {0: "false", 1: "true"}
 	return {
 		"to_universal": {
-			"new_block": "universal_minecraft:pressure_plate",
 			"new_properties": {
 				"material": material
 			},
 			"map_properties": {
 				"block_data": {
 					str(data): {
+						"new_block": "universal_minecraft:pressure_plate",
 						"new_properties": {
 							"powered": powered
 						}
@@ -2711,13 +2712,13 @@ def repeater(input_namespace: str, input_block_name: str, powered: bool) -> dict
 	powered_str = "true" if powered else "false"
 	return {
 		"to_universal": {
-			"new_block": "universal_minecraft:repeater",
 			"new_properties": {
 				"powered": powered_str
 			},
 			"map_properties": {
 				"block_data": {
 					str(data): {
+						"new_block": "universal_minecraft:repeater",
 						"new_properties": {
 							"facing": {0: "south", 1: "west", 2: "north", 3: "east"}[data & 3],
 							"delay": {0: "1", 4: "2", 8: "3", 12: "4"}[data & 12]
@@ -2843,10 +2844,10 @@ def coral(input_namespace: str, input_block_name: str, universal_namespace: str 
 		universal_block_name = input_block_name
 	return {
 		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"map_properties": {
 				"block_data": {
 					str(data): {
+						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
 							"type": {0: "tube", 1: "brain", 2: "bubble", 3: "fire", 4: "horn"}[data % 4]
 						}
@@ -2918,10 +2919,10 @@ def coral_block(input_namespace: str, input_block_name: str, universal_namespace
 		universal_block_name = input_block_name
 	return {
 		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
 			"map_properties": {
 				"block_data": {
 					str(data): {
+						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
 							"type": {0: "tube", 1: "brain", 2: "bubble", 3: "fire", 4: "horn"}[data % 4],
 							"dead": {0: "false", 1: "true"}[int(math.floor(data / 5))]

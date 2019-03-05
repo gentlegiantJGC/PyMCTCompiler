@@ -1,8 +1,8 @@
 {
-    "new_block": "universal_minecraft:fence_gate",
     "map_properties": {
         "block_data": {
             "0": {
+                "new_block": "universal_minecraft:fence_gate",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "south",
@@ -11,6 +11,7 @@
                 }
             },
             "1": {
+                "new_block": "universal_minecraft:fence_gate",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "west",
@@ -19,6 +20,7 @@
                 }
             },
             "2": {
+                "new_block": "universal_minecraft:fence_gate",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "north",
@@ -27,6 +29,7 @@
                 }
             },
             "3": {
+                "new_block": "universal_minecraft:fence_gate",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "east",
@@ -35,6 +38,7 @@
                 }
             },
             "4": {
+                "new_block": "universal_minecraft:fence_gate",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "south",
@@ -43,6 +47,7 @@
                 }
             },
             "5": {
+                "new_block": "universal_minecraft:fence_gate",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "west",
@@ -51,6 +56,7 @@
                 }
             },
             "6": {
+                "new_block": "universal_minecraft:fence_gate",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "north",
@@ -59,6 +65,7 @@
                 }
             },
             "7": {
+                "new_block": "universal_minecraft:fence_gate",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "east",
@@ -67,6 +74,7 @@
                 }
             },
             "8": {
+                "new_block": "universal_minecraft:fence_gate",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "south",
@@ -75,6 +83,7 @@
                 }
             },
             "9": {
+                "new_block": "universal_minecraft:fence_gate",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "west",
@@ -83,6 +92,7 @@
                 }
             },
             "10": {
+                "new_block": "universal_minecraft:fence_gate",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "north",
@@ -91,6 +101,7 @@
                 }
             },
             "11": {
+                "new_block": "universal_minecraft:fence_gate",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "east",
@@ -99,6 +110,7 @@
                 }
             },
             "12": {
+                "new_block": "universal_minecraft:fence_gate",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "south",
@@ -107,6 +119,7 @@
                 }
             },
             "13": {
+                "new_block": "universal_minecraft:fence_gate",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "west",
@@ -115,6 +128,7 @@
                 }
             },
             "14": {
+                "new_block": "universal_minecraft:fence_gate",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "north",
@@ -123,6 +137,7 @@
                 }
             },
             "15": {
+                "new_block": "universal_minecraft:fence_gate",
                 "new_properties": {
                     "material": "jungle",
                     "facing": "east",
