@@ -1,7 +1,7 @@
 {
     "new_block": "minecraft:snow_layer",
     "carry_properties": {
-        "age": [
+        "layers": [
             "0",
             "1",
             "2",

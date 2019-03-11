@@ -1,7 +1,7 @@
 {
     "new_block": "minecraft:snow_layer",
     "map_properties": {
-        "age": {
+        "layers": {
             "0": {
                 "new_properties": {
                     "block_data": "0"
