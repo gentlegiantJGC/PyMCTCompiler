@@ -23,29 +23,29 @@
                 "new_block": "minecraft:spruce_trapdoor"
             }
         },
-        "half": {
-            "bottom": {
+        "open": {
+            "false": {
                 "map_properties": {
-                    "open": {
-                        "false": {
+                    "half": {
+                        "bottom": {
                             "map_properties": {
                                 "facing": {
-                                    "south": {
+                                    "east": {
                                         "new_properties": {
                                             "block_data": "0"
                                         }
                                     },
-                                    "north": {
+                                    "west": {
                                         "new_properties": {
                                             "block_data": "1"
                                         }
                                     },
-                                    "east": {
+                                    "south": {
                                         "new_properties": {
                                             "block_data": "2"
                                         }
                                     },
-                                    "west": {
+                                    "north": {
                                         "new_properties": {
                                             "block_data": "3"
                                         }
@@ -53,25 +53,25 @@
                                 }
                             }
                         },
-                        "true": {
+                        "top": {
                             "map_properties": {
                                 "facing": {
-                                    "south": {
+                                    "east": {
                                         "new_properties": {
                                             "block_data": "4"
                                         }
                                     },
-                                    "north": {
+                                    "west": {
                                         "new_properties": {
                                             "block_data": "5"
                                         }
                                     },
-                                    "east": {
+                                    "south": {
                                         "new_properties": {
                                             "block_data": "6"
                                         }
                                     },
-                                    "west": {
+                                    "north": {
                                         "new_properties": {
                                             "block_data": "7"
                                         }
@@ -82,28 +82,28 @@
                     }
                 }
             },
-            "top": {
+            "true": {
                 "map_properties": {
-                    "open": {
-                        "false": {
+                    "half": {
+                        "bottom": {
                             "map_properties": {
                                 "facing": {
-                                    "south": {
+                                    "east": {
                                         "new_properties": {
                                             "block_data": "8"
                                         }
                                     },
-                                    "north": {
+                                    "west": {
                                         "new_properties": {
                                             "block_data": "9"
                                         }
                                     },
-                                    "east": {
+                                    "south": {
                                         "new_properties": {
                                             "block_data": "10"
                                         }
                                     },
-                                    "west": {
+                                    "north": {
                                         "new_properties": {
                                             "block_data": "11"
                                         }
@@ -111,25 +111,25 @@
                                 }
                             }
                         },
-                        "true": {
+                        "top": {
                             "map_properties": {
                                 "facing": {
-                                    "south": {
+                                    "east": {
                                         "new_properties": {
                                             "block_data": "12"
                                         }
                                     },
-                                    "north": {
+                                    "west": {
                                         "new_properties": {
                                             "block_data": "13"
                                         }
                                     },
-                                    "east": {
+                                    "south": {
                                         "new_properties": {
                                             "block_data": "14"
                                         }
                                     },
-                                    "west": {
+                                    "north": {
                                         "new_properties": {
                                             "block_data": "15"
                                         }

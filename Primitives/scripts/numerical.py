@@ -2505,7 +2505,131 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 	}
 
 
-def trapdoor(input_namespace: str, input_block_name: str, material: str) -> dict:
+def trapdoor_bedrock(input_namespace: str, input_block_name: str, material: str) -> dict:
+	return {
+		"to_universal": {
+			"new_properties": {
+				"material": material
+			},
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_block": "universal_minecraft:trapdoor",
+						"new_properties": {
+							"open": {0: "false", 8: "true"}[data & 8],
+							"half": {0: "bottom", 4: "top"}[data & 4],
+							"facing": {0: "east", 1: "west", 2: "south", 3: "north"}[data & 3]
+						}
+					} for data in range(16)
+				}
+			}
+		},
+		"from_universal": {
+			"universal_minecraft:trapdoor": {
+				"map_properties": {
+					"material": {
+						material: {
+							"new_block": f"{input_namespace}:{input_block_name}",
+						}
+					},
+					"open": {
+						door_open: {
+							"map_properties": {
+								"half": {
+									half: {
+										"map_properties": {
+											"facing": {
+												facing: {
+													"new_properties": {
+														"block_data": str(data8 + data4 + data3)
+													}
+												} for data3, facing in {0: "east", 1: "west", 2: "south", 3: "north"}.items()
+											}
+										}
+									} for data4, half in {0: "bottom", 4: "top"}.items()
+								}
+							}
+						} for data8, door_open in {0: "false", 8: "true"}.items()
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"facing": [
+					"north",
+					"south",
+					"west",
+					"east"
+				],
+				"half": [
+					"top",
+					"bottom"
+				],
+				"open": [
+					"true",
+					"false"
+				]
+			},
+			"defaults": {
+				"facing": "north",
+				"half": "bottom",
+				"open": "false"
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": "universal_minecraft:trapdoor",
+			"new_properties": {
+				"material": material
+			},
+			"carry_properties": {
+				"facing": [
+					"north",
+					"south",
+					"west",
+					"east"
+				],
+				"half": [
+					"top",
+					"bottom"
+				],
+				"open": [
+					"true",
+					"false"
+				]
+			}
+		},
+		"blockstate_from_universal": {
+			"universal_minecraft:trapdoor": {
+				"map_properties": {
+					"material": {
+						material: {
+							"new_block": f"{input_namespace}:{input_block_name}",
+						}
+					}
+				},
+				"carry_properties": {
+					"facing": [
+						"north",
+						"south",
+						"west",
+						"east"
+					],
+					"half": [
+						"top",
+						"bottom"
+					],
+					"open": [
+						"true",
+						"false"
+					]
+				}
+			}
+		}
+	}
+
+
+def trapdoor_java(input_namespace: str, input_block_name: str, material: str) -> dict:
 	return {
 		"to_universal": {
 			"new_properties": {
