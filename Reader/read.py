@@ -1,6 +1,7 @@
 import json
 import os
 from typing import Union, Tuple, Dict, Generator, List
+import copy
 
 log_level = 0  # 0 for no logs, 1 or higher for warnings, 2 or higher for info, 3 or higher for debug
 
@@ -296,15 +297,15 @@ class Namespace:
 
 	def get_specification(self, block_name) -> dict:
 		assert block_name in self._blocks['specification'], f'Specification for {self.namespace}:{block_name} does not exist'
-		return self._blocks['specification'][block_name]
+		return copy.deepcopy(self._blocks['specification'][block_name])
 
 	def get_mapping_to_universal(self, block_name) -> dict:
 		assert block_name in self._blocks['to_universal'], f'Mapping to universal for {self.namespace}:{block_name} does not exist'
-		return self._blocks['to_universal'][block_name]
+		return copy.deepcopy(self._blocks['to_universal'][block_name])
 
 	def get_mapping_from_universal(self, block_name) -> dict:
 		assert block_name in self._blocks['from_universal'], f'Mapping from universal for {self.namespace}:{block_name} does not exist'
-		return self._blocks['from_universal'][block_name]
+		return copy.deepcopy(self._blocks['from_universal'][block_name])
 
 	def to_universal(self, level, block_name: str, properties: Dict[str, str], location: Tuple[int, int, int] = None) -> Tuple[dict, bool]:
 		blockstate = {'block_name': f'{self.namespace}:{block_name}', 'properties': properties}
