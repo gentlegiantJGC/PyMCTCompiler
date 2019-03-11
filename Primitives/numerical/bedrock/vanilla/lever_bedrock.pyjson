@@ -6,22 +6,22 @@
 				str(data): {
 					"new_properties": properties
 				} for data, properties in {
-					0: {"face": "ceiling", "facing": "east", "powered": "false"},
+					0: {"face": "ceiling", "facing": "west", "powered": "false"},
 					1: {"face": "wall", "facing": "east", "powered": "false"},
 					2: {"face": "wall", "facing": "west", "powered": "false"},
 					3: {"face": "wall", "facing": "south", "powered": "false"},
 					4: {"face": "wall", "facing": "north", "powered": "false"},
-					5: {"face": "floor", "facing": "south", "powered": "false"},
-					6: {"face": "floor", "facing": "east", "powered": "false"},
-					7: {"face": "ceiling", "facing": "south", "powered": "false"},
-					8: {"face": "ceiling", "facing": "east", "powered": "true"},
+					5: {"face": "floor", "facing": "north", "powered": "false"},
+					6: {"face": "floor", "facing": "west", "powered": "false"},
+					7: {"face": "ceiling", "facing": "north", "powered": "false"},
+					8: {"face": "ceiling", "facing": "west", "powered": "true"},
 					9: {"face": "wall", "facing": "east", "powered": "true"},
 					10: {"face": "wall", "facing": "west", "powered": "true"},
 					11: {"face": "wall", "facing": "south", "powered": "true"},
 					12: {"face": "wall", "facing": "north", "powered": "true"},
-					13: {"face": "floor", "facing": "south", "powered": "true"},
-					14: {"face": "floor", "facing": "east", "powered": "true"},
-					15: {"face": "ceiling", "facing": "south", "powered": "true"},
+					13: {"face": "floor", "facing": "north", "powered": "true"},
+					14: {"face": "floor", "facing": "west", "powered": "true"},
+					15: {"face": "ceiling", "facing": "north", "powered": "true"},
 				}.items()
 			}
 		}
