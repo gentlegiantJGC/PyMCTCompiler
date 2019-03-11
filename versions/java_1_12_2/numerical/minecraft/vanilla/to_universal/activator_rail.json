@@ -18,14 +18,14 @@
             "2": {
                 "new_block": "universal_minecraft:activator_rail",
                 "new_properties": {
-                    "shape": "north_south",
+                    "shape": "ascending_east",
                     "powered": "false"
                 }
             },
             "3": {
                 "new_block": "universal_minecraft:activator_rail",
                 "new_properties": {
-                    "shape": "east_west",
+                    "shape": "ascending_west",
                     "powered": "false"
                 }
             },
@@ -60,14 +60,14 @@
             "10": {
                 "new_block": "universal_minecraft:activator_rail",
                 "new_properties": {
-                    "shape": "north_south",
+                    "shape": "ascending_east",
                     "powered": "true"
                 }
             },
             "11": {
                 "new_block": "universal_minecraft:activator_rail",
                 "new_properties": {
-                    "shape": "east_west",
+                    "shape": "ascending_west",
                     "powered": "true"
                 }
             },

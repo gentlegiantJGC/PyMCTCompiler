@@ -1048,7 +1048,7 @@ def rail2(input_namespace: str, input_block_name: str, universal_namespace: str 
 						"new_properties": {
 							"shape": {
 								0: "north_south", 1: "east_west", 2: "ascending_east", 3: "ascending_west", 4: "ascending_north", 5: "ascending_south"
-							}[data & 5],
+							}[data & 7],
 							"powered": {0: "false", 8: "true"}[data & 8]
 						}
 					} for data in range(16) if data & 7 <= 5
