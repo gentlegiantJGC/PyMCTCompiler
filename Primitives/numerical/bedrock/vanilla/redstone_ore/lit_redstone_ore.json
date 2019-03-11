@@ -1,8 +1,14 @@
 {
 	"to_universal": {
-		"new_block": "universal_minecraft:redstone_ore",
-		"new_properties": {
-			"lit": "true"
+		"map_properties": {
+			"block_data": {
+				"0": {
+					"new_block": "universal_minecraft:redstone_ore",
+					"new_properties": {
+						"lit": "true"
+					}
+				}
+			}
 		}
 	},
 	"from_universal": {
