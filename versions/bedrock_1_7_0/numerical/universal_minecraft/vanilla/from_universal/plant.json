@@ -10,7 +10,7 @@
             "fern": {
                 "new_block": "minecraft:tallgrass",
                 "new_properties": {
-                    "block_data": "1"
+                    "block_data": "2"
                 }
             },
             "dead_bush": {

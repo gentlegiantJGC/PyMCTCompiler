@@ -7,7 +7,7 @@
                     "type": "grass"
                 }
             },
-            "1": {
+            "2": {
                 "new_block": "universal_minecraft:plant",
                 "new_properties": {
                     "type": "fern"
