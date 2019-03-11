@@ -6,22 +6,22 @@
 				str(data): {
 					"new_properties": properties
 				} for data, properties in {
-					0: {"face": "floor", "facing": "east", "powered": "false"},
+					0: {"face": "ceiling", "facing": "east", "powered": "false"},
 					1: {"face": "wall", "facing": "east", "powered": "false"},
 					2: {"face": "wall", "facing": "west", "powered": "false"},
 					3: {"face": "wall", "facing": "south", "powered": "false"},
 					4: {"face": "wall", "facing": "north", "powered": "false"},
-					5: {"face": "ceiling", "facing": "south", "powered": "false"},
-					6: {"face": "ceiling", "facing": "east", "powered": "false"},
-					7: {"face": "floor", "facing": "south", "powered": "false"},
-					8: {"face": "floor", "facing": "east", "powered": "true"},
+					5: {"face": "floor", "facing": "south", "powered": "false"},
+					6: {"face": "floor", "facing": "east", "powered": "false"},
+					7: {"face": "ceiling", "facing": "south", "powered": "false"},
+					8: {"face": "ceiling", "facing": "east", "powered": "true"},
 					9: {"face": "wall", "facing": "east", "powered": "true"},
 					10: {"face": "wall", "facing": "west", "powered": "true"},
 					11: {"face": "wall", "facing": "south", "powered": "true"},
 					12: {"face": "wall", "facing": "north", "powered": "true"},
-					13: {"face": "ceiling", "facing": "south", "powered": "true"},
-					14: {"face": "ceiling", "facing": "east", "powered": "true"},
-					15: {"face": "floor", "facing": "south", "powered": "true"},
+					13: {"face": "floor", "facing": "south", "powered": "true"},
+					14: {"face": "floor", "facing": "east", "powered": "true"},
+					15: {"face": "ceiling", "facing": "south", "powered": "true"},
 				}.items()
 			}
 		}
@@ -43,7 +43,7 @@
 												"new_properties": {
 													"block_data": str(data7 + data8)
 												}
-											} for facing, data7 in {"north": 5, "south": 5, "west": 6, "east": 6}.items()
+											} for facing, data7 in {"north": 7, "south": 7, "west": 0, "east": 0}.items()
 										}
 									}
 								},
@@ -57,7 +57,7 @@
 												"new_properties": {
 													"block_data": str(data7 + data8)
 												}
-											} for facing, data7 in {"north": 7, "south": 7, "west": 0, "east": 0}.items()
+											} for facing, data7 in {"north": 5, "south": 5, "west": 6, "east": 6}.items()
 										}
 									}
 								},

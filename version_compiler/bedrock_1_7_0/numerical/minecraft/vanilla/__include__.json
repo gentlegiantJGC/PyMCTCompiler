@@ -68,7 +68,7 @@
 	"rail": "rail",
 	"stone_stairs": "stone_stairs",
 	"wall_sign": "wall_sign",
-	"lever": "lever",
+	"lever": "lever_bedrock",
 	"stone_pressure_plate": "stone_pressure_plate",
 	"iron_door": "iron_door",
 	"wooden_pressure_plate": "wooden_pressure_plate",

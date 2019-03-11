@@ -5,6 +5,7 @@ block_names = ['air', 'stone', 'grass', 'dirt', 'cobblestone', 'planks', 'saplin
 if __name__ == '__main__':
 	block_mappings = VersionContainer(r'..\versions')
 	for block_name in block_names:
+		print(block_name)
 		for data in range(16):
 			print(
 				block_mappings.to_universal(None, 'bedrock', (1, 7, 0), 'minecraft', block_name, {'block_data': str(data)})
