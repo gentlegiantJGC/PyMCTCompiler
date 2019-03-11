@@ -1991,7 +1991,7 @@ def button_bedrock(input_namespace: str, input_block_name: str, material: str, u
 
 
 def glazed_terracotta(input_namespace: str, input_block_name: str, color: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
-	directions = {0: "south", 1: "west", 2: "north", 3: "east"}
+	directions = {2: "north", 3: "south", 4: "west", 5: "east"}
 	if universal_namespace is None:
 		universal_namespace = input_namespace
 	if universal_block_name is None:

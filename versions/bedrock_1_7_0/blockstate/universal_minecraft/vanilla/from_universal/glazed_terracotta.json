@@ -53,9 +53,9 @@
     },
     "carry_properties": {
         "facing": [
+            "north",
             "south",
             "west",
-            "north",
             "east"
         ]
     }

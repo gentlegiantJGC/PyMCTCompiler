@@ -1,24 +1,24 @@
 {
     "map_properties": {
         "facing": {
-            "south": {
-                "new_properties": {
-                    "block_data": "0"
-                }
-            },
-            "west": {
-                "new_properties": {
-                    "block_data": "1"
-                }
-            },
             "north": {
                 "new_properties": {
                     "block_data": "2"
                 }
             },
-            "east": {
+            "south": {
                 "new_properties": {
                     "block_data": "3"
+                }
+            },
+            "west": {
+                "new_properties": {
+                    "block_data": "4"
+                }
+            },
+            "east": {
+                "new_properties": {
+                    "block_data": "5"
                 }
             }
         },
