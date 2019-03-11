@@ -23,7 +23,7 @@
 	"lapis_ore": "lapis_ore",
 	"lapis_block": "lapis_block",
 	"dispenser": "dispenser",
-	"sandstone": "sandstone+chiseled+cut",
+	"sandstone": "sandstone+chiseled+cut+smooth",
 	"noteblock": "noteblock_bedrock",
 	"bed": "bed_color_bedrock",
 	"golden_rail": "golden_rail",

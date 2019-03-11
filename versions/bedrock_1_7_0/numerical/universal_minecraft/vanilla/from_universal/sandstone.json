@@ -18,6 +18,12 @@
                 "new_properties": {
                     "block_data": "2"
                 }
+            },
+            "smooth": {
+                "new_block": "minecraft:sandstone",
+                "new_properties": {
+                    "block_data": "3"
+                }
             }
         }
     }

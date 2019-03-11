@@ -3,7 +3,8 @@
         "variant": [
             "normal",
             "chiseled",
-            "cut"
+            "cut",
+            "smooth"
         ]
     },
     "defaults": {

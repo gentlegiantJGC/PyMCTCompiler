@@ -18,6 +18,12 @@
                 "new_properties": {
                     "variant": "cut"
                 }
+            },
+            "3": {
+                "new_block": "universal_minecraft:sandstone",
+                "new_properties": {
+                    "variant": "smooth"
+                }
             }
         }
     }
