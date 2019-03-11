@@ -1,1 +1,1 @@
-numerical.default("minecraft", "web", "universal_minecraft")
+numerical.default("minecraft", "web", "universal_minecraft", "cobweb")
