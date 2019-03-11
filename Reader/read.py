@@ -427,7 +427,7 @@ class Namespace:
 
 		if 'multiblock' in mappings:
 			if location is None:
-				return output_blockstate, new, True
+				extra = True
 			# TODO: multiblock code
 			# else:
 			#	if 'multiblock' is a dictionary:
@@ -444,8 +444,6 @@ class Namespace:
 						temp_blockstate, temp_new, extra = self._convert(level, input_blockstate, mappings['map_properties'][key][val], output_version)
 						if temp_blockstate['block_name'] is not None:
 							output_blockstate = temp_blockstate
-						if extra:
-							return output_blockstate, new, extra
 						for entry in ['properties', 'nbt']:
 							for key2, val2 in temp_new[entry].items():
 								new[entry][key2] = val2
@@ -460,7 +458,7 @@ class Namespace:
 
 		if 'map_nbt' in mappings:
 			if location is None:
-				return output_blockstate, new, True
+				extra = True
 			else:
 				pass
 				# TODO: map nbt code
