@@ -442,10 +442,10 @@ class Namespace:
 					val = input_blockstate['properties'][key]
 					if val in mappings['map_properties'][key]:
 						temp_blockstate, temp_new, extra = self._convert(level, input_blockstate, mappings['map_properties'][key][val], output_version)
-						if extra:
-							return output_blockstate, new, extra
 						if temp_blockstate['block_name'] is not None:
 							output_blockstate = temp_blockstate
+						if extra:
+							return output_blockstate, new, extra
 						for entry in ['properties', 'nbt']:
 							for key2, val2 in temp_new[entry].items():
 								new[entry][key2] = val2
