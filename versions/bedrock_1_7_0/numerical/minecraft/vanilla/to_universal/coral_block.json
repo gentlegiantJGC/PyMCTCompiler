@@ -32,29 +32,8 @@
             "4": {
                 "new_block": "universal_minecraft:coral_block",
                 "new_properties": {
-                    "type": "tube",
+                    "type": "horn",
                     "dead": "false"
-                }
-            },
-            "5": {
-                "new_block": "universal_minecraft:coral_block",
-                "new_properties": {
-                    "type": "brain",
-                    "dead": "true"
-                }
-            },
-            "6": {
-                "new_block": "universal_minecraft:coral_block",
-                "new_properties": {
-                    "type": "bubble",
-                    "dead": "true"
-                }
-            },
-            "7": {
-                "new_block": "universal_minecraft:coral_block",
-                "new_properties": {
-                    "type": "fire",
-                    "dead": "true"
                 }
             },
             "8": {
@@ -68,6 +47,27 @@
                 "new_block": "universal_minecraft:coral_block",
                 "new_properties": {
                     "type": "brain",
+                    "dead": "true"
+                }
+            },
+            "10": {
+                "new_block": "universal_minecraft:coral_block",
+                "new_properties": {
+                    "type": "bubble",
+                    "dead": "true"
+                }
+            },
+            "11": {
+                "new_block": "universal_minecraft:coral_block",
+                "new_properties": {
+                    "type": "fire",
+                    "dead": "true"
+                }
+            },
+            "12": {
+                "new_block": "universal_minecraft:coral_block",
+                "new_properties": {
+                    "type": "horn",
                     "dead": "true"
                 }
             }

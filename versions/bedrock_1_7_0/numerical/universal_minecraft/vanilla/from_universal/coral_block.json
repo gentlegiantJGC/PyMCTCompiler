@@ -1,64 +1,31 @@
 {
     "new_block": "minecraft:coral_block",
     "map_properties": {
-        "type": {
-            "tube": {
+        "dead": {
+            "false": {
                 "map_properties": {
-                    "dead": {
-                        "false": {
+                    "type": {
+                        "tube": {
                             "new_properties": {
                                 "block_data": "0"
                             }
                         },
-                        "true": {
-                            "new_properties": {
-                                "block_data": "1"
-                            }
-                        }
-                    }
-                }
-            },
-            "brain": {
-                "map_properties": {
-                    "dead": {
-                        "false": {
+                        "brain": {
                             "new_properties": {
                                 "block_data": "1"
                             }
                         },
-                        "true": {
-                            "new_properties": {
-                                "block_data": "2"
-                            }
-                        }
-                    }
-                }
-            },
-            "bubble": {
-                "map_properties": {
-                    "dead": {
-                        "false": {
+                        "bubble": {
                             "new_properties": {
                                 "block_data": "2"
                             }
                         },
-                        "true": {
-                            "new_properties": {
-                                "block_data": "3"
-                            }
-                        }
-                    }
-                }
-            },
-            "fire": {
-                "map_properties": {
-                    "dead": {
-                        "false": {
+                        "fire": {
                             "new_properties": {
                                 "block_data": "3"
                             }
                         },
-                        "true": {
+                        "horn": {
                             "new_properties": {
                                 "block_data": "4"
                             }
@@ -66,17 +33,32 @@
                     }
                 }
             },
-            "horn": {
+            "true": {
                 "map_properties": {
-                    "dead": {
-                        "false": {
+                    "type": {
+                        "tube": {
                             "new_properties": {
-                                "block_data": "4"
+                                "block_data": "8"
                             }
                         },
-                        "true": {
+                        "brain": {
                             "new_properties": {
-                                "block_data": "5"
+                                "block_data": "9"
+                            }
+                        },
+                        "bubble": {
+                            "new_properties": {
+                                "block_data": "10"
+                            }
+                        },
+                        "fire": {
+                            "new_properties": {
+                                "block_data": "11"
+                            }
+                        },
+                        "horn": {
+                            "new_properties": {
+                                "block_data": "12"
                             }
                         }
                     }

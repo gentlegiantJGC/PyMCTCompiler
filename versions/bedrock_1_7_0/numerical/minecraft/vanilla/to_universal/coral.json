@@ -28,7 +28,7 @@
             "4": {
                 "new_block": "universal_minecraft:coral",
                 "new_properties": {
-                    "type": "tube"
+                    "type": "horn"
                 }
             }
         }

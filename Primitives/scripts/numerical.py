@@ -2973,9 +2973,9 @@ def coral(input_namespace: str, input_block_name: str, universal_namespace: str 
 					str(data): {
 						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
-							"type": {0: "tube", 1: "brain", 2: "bubble", 3: "fire", 4: "horn"}[data % 4]
+							"type": material
 						}
-					} for data in range(5)
+					} for data, material in {0: "tube", 1: "brain", 2: "bubble", 3: "fire", 4: "horn"}.items()
 				}
 			}
 		},
@@ -3048,10 +3048,10 @@ def coral_block(input_namespace: str, input_block_name: str, universal_namespace
 					str(data): {
 						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
-							"type": {0: "tube", 1: "brain", 2: "bubble", 3: "fire", 4: "horn"}[data % 4],
-							"dead": {0: "false", 1: "true"}[int(math.floor(data / 5))]
+							"type": {0: "tube", 1: "brain", 2: "bubble", 3: "fire", 4: "horn"}[data & 7],
+							"dead": {0: "false", 8: "true"}[data & 8]
 						}
-					} for data in range(10)
+					} for data in range(16) if data & 7 <= 4
 				}
 			}
 		},
@@ -3059,18 +3059,18 @@ def coral_block(input_namespace: str, input_block_name: str, universal_namespace
 			f"{universal_namespace}:{universal_block_name}": {
 				"new_block": f"{input_namespace}:{input_block_name}",
 				"map_properties": {
-					"type": {
-						material: {
+					"dead": {
+						dead: {
 							"map_properties": {
-								"dead": {
-									dead: {
+								"type": {
+									material: {
 										"new_properties": {
-											"block_data": str(data5 + data4)
+											"block_data": str(data8 + data7)
 										}
-									} for data5, dead in {0: "false", 1: "true"}.items()
+									} for data7, material in {0: "tube", 1: "brain", 2: "bubble", 3: "fire", 4: "horn"}.items()
 								}
 							}
-						} for data4, material in {0: "tube", 1: "brain", 2: "bubble", 3: "fire", 4: "horn"}.items()
+						} for data8, dead in {0: "false", 8: "true"}.items()
 					}
 				}
 			}
