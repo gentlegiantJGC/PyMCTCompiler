@@ -320,7 +320,7 @@ def main():
 					copy_file(f'{version}/__numerical_map__.json')
 
 				if getattr(version_compiler, version).compiler is not None:
-					getattr(version_compiler, version).compiler(f'./version_compiler/{version}', f'./versions/{version}')
+					getattr(version_compiler, version).compiler(f'{uncompiled_dir}/{version}', f'{compiled_dir}/{version}')
 				else:
 					if init['format'] in ['numerical', 'pseudo-numerical']:
 						process_version(version, 'numerical')
