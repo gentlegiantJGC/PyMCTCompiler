@@ -22,10 +22,19 @@
 					"13",
 					"14",
 					"15"
+				],
+				"material": [
+					"oak",
+					"spruce",
+					"birch",
+					"jungle",
+					"acacia",
+					"dark_oak"
 				]
 			},
 			"defaults": {
-				"rotation": "0"
+				"rotation": "0",
+				"material": "oak"
 			}
 		}
 	}

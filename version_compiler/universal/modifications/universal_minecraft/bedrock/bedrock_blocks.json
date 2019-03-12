@@ -5,6 +5,7 @@
 		"nether_reactor": {},
 		"info_update": {},
 		"info_update2": {},
-		"reserved6": {}
+		"reserved6": {},
+		"invisible_bedrock": {}
 	}
 }

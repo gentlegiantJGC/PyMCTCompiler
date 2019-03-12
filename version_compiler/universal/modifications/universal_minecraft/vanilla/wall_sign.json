@@ -10,10 +10,19 @@
 					"south",
 					"west",
 					"east"
+				],
+				"material": [
+					"oak",
+					"spruce",
+					"birch",
+					"jungle",
+					"acacia",
+					"dark_oak"
 				]
 			},
 			"defaults": {
-				"facing": "north"
+				"facing": "north",
+				"material": "oak"
 			}
 		}
 	}
