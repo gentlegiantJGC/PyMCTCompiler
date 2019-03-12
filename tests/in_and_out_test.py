@@ -1,4 +1,4 @@
-from Reader.read import VersionContainer
+from reader.read import VersionContainer
 import itertools
 
 if __name__ == '__main__':
