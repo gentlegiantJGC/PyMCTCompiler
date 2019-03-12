@@ -1,0 +1,20 @@
+{
+    "map_properties": {
+        "lit": {
+            "false": {
+                "new_block": "minecraft:lit_furnace"
+            },
+            "true": {
+                "new_block": "minecraft:furnace"
+            }
+        }
+    },
+    "carry_properties": {
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ]
+    }
+}

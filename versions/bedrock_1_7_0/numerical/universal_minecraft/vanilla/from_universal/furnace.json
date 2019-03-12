@@ -1,0 +1,34 @@
+{
+    "map_properties": {
+        "lit": {
+            "false": {
+                "new_block": "minecraft:lit_furnace"
+            },
+            "true": {
+                "new_block": "minecraft:furnace"
+            }
+        },
+        "facing": {
+            "north": {
+                "new_properties": {
+                    "block_data": "2"
+                }
+            },
+            "south": {
+                "new_properties": {
+                    "block_data": "3"
+                }
+            },
+            "west": {
+                "new_properties": {
+                    "block_data": "4"
+                }
+            },
+            "east": {
+                "new_properties": {
+                    "block_data": "5"
+                }
+            }
+        }
+    }
+}
