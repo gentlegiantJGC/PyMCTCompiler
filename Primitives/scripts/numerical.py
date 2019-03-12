@@ -1805,7 +1805,7 @@ def compass(input_namespace: str, input_block_name: str, directions: Dict[int, s
 					str(data): {
 						"new_block": f"{universal_namespace}:{universal_block_name}",
 						"new_properties": {
-							"facing": facing,
+							"facing": facing
 						}
 					} for data, facing in directions.items()
 				}
@@ -3200,6 +3200,149 @@ def coral_block(input_namespace: str, input_block_name: str, universal_namespace
 						"true",
 						"false"
 					]
+				}
+			}
+		}
+	}
+
+
+def standing_sign(input_namespace: str, input_block_name: str, material: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	return {
+		"to_universal": {
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_block": f"{universal_namespace}:{universal_block_name}",
+						"new_properties": {
+							"rotation": str(data),
+							"material": material
+						}
+					} for data in range(16)
+				}
+			}
+		},
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"map_properties": {
+					"rotation": {
+						str(data): {
+							"new_properties": {
+								"block_data": str(data)
+							}
+						} for data in range(16)
+					},
+					"material": {
+						material: {
+							"new_block": f"{input_namespace}:{input_block_name}",
+						}
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"rotation": [str(data) for data in range(16)]
+			},
+			"defaults": {
+				"rotation": "0"
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"carry_properties": {
+				"rotation": [str(data) for data in range(16)]
+			},
+			"new_properties": {
+				"material": material
+			}
+		},
+		"blockstate_from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"map_properties": {
+					"material": {
+						material: {
+							"new_block": f"{input_namespace}:{input_block_name}",
+						}
+					}
+				},
+				"carry_properties": {
+					"rotation": [str(data) for data in range(16)]
+				}
+			}
+		}
+	}
+
+
+def wall_sign(input_namespace: str, input_block_name: str, material: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	directions = {2: "north", 3: "south", 4: "west", 5: "east"}
+	return {
+		"to_universal": {
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_block": f"{universal_namespace}:{universal_block_name}",
+						"new_properties": {
+							"facing": facing,
+							"material": material
+						}
+					} for data, facing in directions.items()
+				}
+			}
+		},
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"map_properties": {
+					"facing": {
+						facing: {
+							"new_properties": {
+								"block_data": str(data)
+							}
+						} for data, facing in directions.items()
+					},
+					"material": {
+						material: {
+							"new_block": f"{input_namespace}:{input_block_name}",
+						}
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"facing": list(directions.values())
+			},
+			"defaults": {
+				"facing": list(directions.values())[0]
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"carry_properties": {
+				"facing": list(directions.values())
+			},
+			"new_properties": {
+				"material": material
+			}
+		},
+		"blockstate_from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"map_properties": {
+					"material": {
+						material: {
+							"new_block": f"{input_namespace}:{input_block_name}",
+						}
+					}
+				},
+				"carry_properties": {
+					"facing": list(directions.values())
 				}
 			}
 		}

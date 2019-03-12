@@ -1,0 +1,1 @@
+numerical.direct_data("minecraft", "standing_sign", "rotation", list(range(16)), "universal_minecraft", "sign")
