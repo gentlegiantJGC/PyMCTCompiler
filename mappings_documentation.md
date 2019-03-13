@@ -12,7 +12,8 @@ The below is an example that uses all the functions. If a function is not being 
   "carry_properties": {},
   "new_nbt": {},
   "map_nbt": {},  
-  "multiblock": {}
+  "multiblock": {},
+  "map_block_name": {}
 }
 ```
 
@@ -52,4 +53,82 @@ Based on the property value from the input blockstate run selected functions. Th
 }
 ```
 
+## carry_properties
 
+For each property in the dictionary if that property's value in the input blockstate is in the list then it is carried over to the output blockstate.
+
+```
+"carry_properties": {
+  "<property>": ["val1", "val2", ...],
+  "<property>": ["val1", "val2", ...]
+}
+```
+
+## new_nbt
+
+The same as new_properties but with nbt instead of properties
+
+```
+"new_nbt": {
+  "<internal_name>": "<val>",
+  "<internal_name>": "<val>"
+}
+```
+
+## map_nbt
+
+The same as map_properties but with nbt instead of properties
+
+```
+"map_nbt": {
+  "<internal_name>": {
+    "val1": {
+      =>
+    },
+    "val2": {
+      =>
+    }
+  }
+}
+```
+
+## multiblock
+
+The most complicated of the functions. Loads up the input blockstate of the block relative to the input block based on the "coords" key and runs further functions using this new blockstate and location.
+
+```
+"multiblock": {
+  "coords": [dx, dy, dz],
+  =>
+},
+```
+
+can also be a list to do multiple multiblock mappings for the same block.
+
+```
+"multiblock": [
+  {
+    "coords": [dx, dy, dz],
+    =>
+  },
+  {
+    "coords": [dx, dy, dz],
+    =>
+  }
+]
+```
+
+## map_block_name
+
+Much the same concept as map_properties and map_nbt but with the input block name.
+
+```
+"map_block_name": {
+  "<namespace>:<block_name>": {
+    =>
+  },
+  "<namespace>:<block_name>": {
+    =>
+  }
+}
+```
