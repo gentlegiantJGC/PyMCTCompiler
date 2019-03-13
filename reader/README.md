@@ -106,6 +106,12 @@ See the [mappings readme](mappings_readme.md) for info on the specification and 
 
     * the same as 8 but with nbt rather than properties
     
+11. Return the __output_blockstate__ and __new__ (but don't merge them here)
+
+Some of the mapping functions allow nesting so there should be another function that calls the above and at the very end merges __new__ into __output_blockstate__ and that is the final blockstate in the output version.
+
+Note that sometimes the mappings will fail perhaps because an invalid input blockstate is given. In these cases the input blockstate should be given as the output so that if converted back to the input version no data will be lost. The user can also be asked what they want done with it.
+    
 ## Feature Set
 
 When converting from version to universal all bar "new_nbt" can be used. The universal format should not contain any nbt data. Store it as a property instead.
