@@ -11,10 +11,16 @@
             "west",
             "up",
             "down"
+        ],
+        "mode": [
+            "impulse",
+            "chain",
+            "repeating"
         ]
     },
     "defaults": {
         "conditional": "false",
-        "facing": "north"
+        "facing": "north",
+        "mode": "impulse"
     }
 }

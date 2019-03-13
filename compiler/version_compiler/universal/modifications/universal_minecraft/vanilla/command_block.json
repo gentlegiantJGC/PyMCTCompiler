@@ -1,0 +1,35 @@
+{
+	"remove": [
+		"command_block",
+		"chain_command_block",
+		"repeating_command_block"
+	],
+	"add": {
+		"command_block": {
+			"properties": {
+				"conditional": [
+					"true",
+					"false"
+				],
+				"facing": [
+					"north",
+					"east",
+					"south",
+					"west",
+					"up",
+					"down"
+				],
+				"mode": [
+					"impulse",
+					"chain",
+					"repeating"
+				]
+			},
+			"defaults": {
+				"conditional": "false",
+				"facing": "north",
+				"mode": "impulse"
+			}
+		}
+	}
+}
