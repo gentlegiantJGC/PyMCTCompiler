@@ -1,6 +1,6 @@
 # The Compiler
 
-The JSON files in the versions directory are the end result but writing these by hand would be slow and prone to errors. This is where the compiler comes in.
+The JSON files in the block_mappings directory are the end result but writing these by hand would be slow and prone to errors. This is where the compiler comes in.
 
 The compiler takes the elemental mappings for each block and merges them based on which blocks are used in each version. This means that the mappings only need to be written once for each block and then each version can pull what it needs.
 
