@@ -3347,3 +3347,118 @@ def wall_sign(input_namespace: str, input_block_name: str, material: str, univer
 			}
 		}
 	}
+
+
+def command_block(input_namespace: str, input_block_name: str, mode: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	directions = {0: "down", 1: "up", 2: "north", 3: "south", 4: "west", 5: "east"}
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	return {
+		"to_universal": {
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_block": f"{universal_namespace}:{universal_block_name}",
+						"new_properties": {
+							"facing": directions[data & 7],
+							"conditional": {0: "false", 8: "true"}[data & 8],
+							"mode": mode
+						}
+					} for data in range(16) if data & 7 <= 5
+				}
+			}
+		},
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"map_properties": {
+					"mode": {
+						mode: {
+							"new_block": f"{input_namespace}:{input_block_name}",
+							"map_properties": {
+								"conditional": {
+									conditional: {
+										"map_properties": {
+											"facing": {
+												facing: {
+													"new_properties": {
+														"block_data": str(data8 + data7)
+													}
+												} for data7, facing in directions.items()
+											}
+										}
+									} for data8, conditional in {0: "false", 8: "true"}.items()
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"conditional": [
+					"false",
+					"true"
+				],
+				"facing": [
+					"north",
+					"east",
+					"south",
+					"west",
+					"up",
+					"down"
+				]
+			},
+			"defaults": {
+				"conditional": "false",
+				"facing": "north"
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"carry_properties": {
+				"conditional": [
+					"false",
+					"true"
+				],
+				"facing": [
+					"north",
+					"east",
+					"south",
+					"west",
+					"up",
+					"down"
+				]
+			},
+			"new_properties": {
+				"mode": mode
+			}
+		},
+		"blockstate_from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"map_properties": {
+					"mode": {
+						mode: {
+							"new_block": f"{input_namespace}:{input_block_name}"
+						}
+					}
+				},
+				"carry_properties": {
+					"conditional": [
+						"false",
+						"true"
+					],
+					"facing": [
+						"north",
+						"east",
+						"south",
+						"west",
+						"up",
+						"down"
+					]
+				}
+			}
+		}
+	}

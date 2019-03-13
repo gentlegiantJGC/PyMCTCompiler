@@ -8,8 +8,8 @@
 		"command_block": {
 			"properties": {
 				"conditional": [
-					"true",
-					"false"
+					"false",
+					"true"
 				],
 				"facing": [
 					"north",

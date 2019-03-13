@@ -1,5 +1,6 @@
 {
-    "properties": {
+    "new_block": "universal_minecraft:command_block",
+    "carry_properties": {
         "conditional": [
             "false",
             "true"
@@ -11,16 +12,9 @@
             "west",
             "up",
             "down"
-        ],
-        "mode": [
-            "impulse",
-            "chain",
-            "repeating"
         ]
     },
-    "defaults": {
-        "conditional": "false",
-        "facing": "north",
+    "new_properties": {
         "mode": "impulse"
     }
 }
