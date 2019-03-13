@@ -4,9 +4,9 @@ import shutil
 import traceback
 from compiler import primitives, version_compiler
 
-uncompiled_dir = './version_compiler'
-compiled_dir = '../versions'
 primitive_dir = './primitives'
+uncompiled_dir = './version_compiler'
+compiled_dir = '../block_mappings'
 
 log_file = open('log.txt', 'w')
 
