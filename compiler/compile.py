@@ -329,7 +329,7 @@ def main():
 						process_version(version, 'blockstate')
 
 				save_json(f'{version}/__init__.json', init)
-
+				log_to_file(f'Finished compiling {version}')
 			else:
 				log_to_file(f'"format" in __init__.json for {version} is either not defined or not a valid value. This version has been skipped')
 		else:
