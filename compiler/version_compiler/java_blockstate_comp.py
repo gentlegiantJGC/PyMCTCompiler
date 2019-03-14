@@ -86,6 +86,10 @@ def main(uncompiled_path: str, compiled_path: str, primitives):
 
 			if 'properties' in default_state:
 				states['defaults'] = default_state['properties']
+				if 'waterlogged' in states['properties']:
+					del states['properties']['waterlogged']
+					del states['defaults']['waterlogged']
+					# TODO: save this somewhere
 			del states['states']
 			if not debug(states):
 				print(f'Error in "{block_string}"')
@@ -140,8 +144,13 @@ def main(uncompiled_path: str, compiled_path: str, primitives):
 
 						if not debug(block_data):
 							print(f'Error in "{block_name}"')
+						specification = block_data.get("specification", {})
+						if 'properties' in specification and 'waterlogged' in specification['properties']:
+							del specification['properties']['waterlogged']
+							del specification['defaults']['waterlogged']
+							# TODO: save this somewhere
 						with open(f'{compiled_path}/blockstate/{namespace}/{group_name}/specification/{block_name}.json', 'w') as block_out:
-							json.dump(block_data.get("specification", {}), block_out, indent=4)
+							json.dump(specification, block_out, indent=4)
 
 						assert 'to_universal' in block_data, f'"to_universal" must be present. Was missing for {uncompiled_path} {namespace}:{block_name}'
 						with open(f'{compiled_path}/blockstate/{namespace}/{group_name}/to_universal/{block_name}.json', 'w') as block_out:
