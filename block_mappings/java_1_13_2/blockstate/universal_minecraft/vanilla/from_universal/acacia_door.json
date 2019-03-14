@@ -1,0 +1,10 @@
+{
+    "new_block": "minecraft:acacia_door",
+    "carry_properties": {
+        "facing": "north",
+        "half": "lower",
+        "hinge": "left",
+        "open": "false",
+        "powered": "false"
+    }
+}

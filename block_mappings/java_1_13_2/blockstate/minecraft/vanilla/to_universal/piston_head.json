@@ -1,0 +1,8 @@
+{
+    "new_block": "universal_minecraft:piston_head",
+    "carry_properties": {
+        "facing": "north",
+        "short": "false",
+        "type": "normal"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "new_block": "universal_minecraft:birch_leaves",
+    "carry_properties": {
+        "distance": "7",
+        "persistent": "false"
+    }
+}

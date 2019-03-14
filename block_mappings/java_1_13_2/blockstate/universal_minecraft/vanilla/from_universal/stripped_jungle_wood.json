@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:stripped_jungle_wood",
+    "carry_properties": {
+        "axis": "y"
+    }
+}

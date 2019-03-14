@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:structure_block",
+    "carry_properties": {
+        "mode": "save"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:jukebox",
+    "carry_properties": {
+        "has_record": "false"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "new_block": "minecraft:dropper",
+    "carry_properties": {
+        "facing": "north",
+        "triggered": "false"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:mycelium",
+    "carry_properties": {
+        "snowy": "false"
+    }
+}

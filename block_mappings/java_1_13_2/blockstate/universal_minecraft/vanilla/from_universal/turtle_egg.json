@@ -1,0 +1,7 @@
+{
+    "new_block": "minecraft:turtle_egg",
+    "carry_properties": {
+        "eggs": "1",
+        "hatch": "0"
+    }
+}

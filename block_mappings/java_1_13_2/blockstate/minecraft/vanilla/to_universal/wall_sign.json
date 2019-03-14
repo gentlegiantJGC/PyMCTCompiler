@@ -1,0 +1,7 @@
+{
+    "new_block": "universal_minecraft:wall_sign",
+    "carry_properties": {
+        "facing": "north",
+        "waterlogged": "false"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "new_block": "universal_minecraft:skeleton_wall_skull",
+    "carry_properties": {
+        "facing": "north"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "new_block": "universal_minecraft:spruce_wood",
+    "carry_properties": {
+        "axis": "y"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "new_block": "minecraft:observer",
+    "carry_properties": {
+        "facing": "south",
+        "powered": "false"
+    }
+}

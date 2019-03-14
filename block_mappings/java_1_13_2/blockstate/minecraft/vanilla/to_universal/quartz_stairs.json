@@ -1,0 +1,9 @@
+{
+    "new_block": "universal_minecraft:quartz_stairs",
+    "carry_properties": {
+        "facing": "north",
+        "half": "bottom",
+        "shape": "straight",
+        "waterlogged": "false"
+    }
+}

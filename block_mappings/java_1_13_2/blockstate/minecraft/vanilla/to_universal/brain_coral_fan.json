@@ -1,0 +1,6 @@
+{
+    "new_block": "universal_minecraft:brain_coral_fan",
+    "carry_properties": {
+        "waterlogged": "true"
+    }
+}

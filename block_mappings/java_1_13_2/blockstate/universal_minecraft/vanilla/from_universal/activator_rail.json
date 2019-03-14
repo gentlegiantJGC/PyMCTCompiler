@@ -1,0 +1,7 @@
+{
+    "new_block": "minecraft:activator_rail",
+    "carry_properties": {
+        "powered": "false",
+        "shape": "north_south"
+    }
+}

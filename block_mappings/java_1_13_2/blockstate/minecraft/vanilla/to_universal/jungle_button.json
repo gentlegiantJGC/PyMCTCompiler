@@ -1,0 +1,8 @@
+{
+    "new_block": "universal_minecraft:jungle_button",
+    "carry_properties": {
+        "face": "wall",
+        "facing": "north",
+        "powered": "false"
+    }
+}

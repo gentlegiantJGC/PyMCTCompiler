@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:tnt",
+    "carry_properties": {
+        "unstable": "false"
+    }
+}

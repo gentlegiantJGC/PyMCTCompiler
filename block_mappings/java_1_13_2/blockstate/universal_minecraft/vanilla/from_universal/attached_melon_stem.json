@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:attached_melon_stem",
+    "carry_properties": {
+        "facing": "north"
+    }
+}

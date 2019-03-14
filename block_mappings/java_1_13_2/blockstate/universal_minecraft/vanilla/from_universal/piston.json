@@ -1,0 +1,7 @@
+{
+    "new_block": "minecraft:piston",
+    "carry_properties": {
+        "extended": "false",
+        "facing": "north"
+    }
+}

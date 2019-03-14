@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:carved_pumpkin",
+    "carry_properties": {
+        "facing": "north"
+    }
+}

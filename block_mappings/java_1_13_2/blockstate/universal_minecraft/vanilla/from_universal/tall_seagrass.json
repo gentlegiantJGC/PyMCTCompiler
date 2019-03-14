@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:tall_seagrass",
+    "carry_properties": {
+        "half": "lower"
+    }
+}

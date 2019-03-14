@@ -1,0 +1,8 @@
+{
+    "new_block": "minecraft:tripwire_hook",
+    "carry_properties": {
+        "attached": "false",
+        "facing": "north",
+        "powered": "false"
+    }
+}

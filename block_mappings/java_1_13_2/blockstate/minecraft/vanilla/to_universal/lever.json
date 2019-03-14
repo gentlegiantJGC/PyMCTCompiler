@@ -1,0 +1,8 @@
+{
+    "new_block": "universal_minecraft:lever",
+    "carry_properties": {
+        "face": "wall",
+        "facing": "north",
+        "powered": "false"
+    }
+}

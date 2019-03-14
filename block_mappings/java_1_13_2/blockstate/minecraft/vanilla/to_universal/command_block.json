@@ -1,0 +1,7 @@
+{
+    "new_block": "universal_minecraft:command_block",
+    "carry_properties": {
+        "conditional": "false",
+        "facing": "north"
+    }
+}

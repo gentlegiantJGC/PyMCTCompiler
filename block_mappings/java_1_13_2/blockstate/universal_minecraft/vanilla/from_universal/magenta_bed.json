@@ -1,0 +1,8 @@
+{
+    "new_block": "minecraft:magenta_bed",
+    "carry_properties": {
+        "facing": "north",
+        "occupied": "false",
+        "part": "foot"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:wall_torch",
+    "carry_properties": {
+        "facing": "north"
+    }
+}

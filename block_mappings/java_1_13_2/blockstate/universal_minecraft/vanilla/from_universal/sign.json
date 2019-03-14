@@ -1,0 +1,7 @@
+{
+    "new_block": "minecraft:sign",
+    "carry_properties": {
+        "rotation": "0",
+        "waterlogged": "false"
+    }
+}

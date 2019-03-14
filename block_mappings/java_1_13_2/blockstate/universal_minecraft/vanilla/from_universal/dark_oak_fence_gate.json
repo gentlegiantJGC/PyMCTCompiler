@@ -1,0 +1,9 @@
+{
+    "new_block": "minecraft:dark_oak_fence_gate",
+    "carry_properties": {
+        "facing": "north",
+        "in_wall": "false",
+        "open": "false",
+        "powered": "false"
+    }
+}

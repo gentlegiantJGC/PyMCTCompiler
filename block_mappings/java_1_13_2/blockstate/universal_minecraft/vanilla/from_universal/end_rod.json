@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:end_rod",
+    "carry_properties": {
+        "facing": "up"
+    }
+}

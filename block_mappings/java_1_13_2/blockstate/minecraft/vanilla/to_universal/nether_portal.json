@@ -1,0 +1,6 @@
+{
+    "new_block": "universal_minecraft:nether_portal",
+    "carry_properties": {
+        "axis": "x"
+    }
+}

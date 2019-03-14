@@ -1,0 +1,7 @@
+{
+    "new_block": "minecraft:dead_brain_coral_wall_fan",
+    "carry_properties": {
+        "facing": "north",
+        "waterlogged": "true"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:purple_wall_banner",
+    "carry_properties": {
+        "facing": "north"
+    }
+}

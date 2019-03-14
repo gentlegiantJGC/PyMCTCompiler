@@ -1,0 +1,9 @@
+{
+    "format": "blockstate",
+    "platform": "java",
+    "version": [
+        1,
+        13,
+        2
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "new_block": "universal_minecraft:nether_brick_stairs",
+    "carry_properties": {
+        "facing": "north",
+        "half": "bottom",
+        "shape": "straight",
+        "waterlogged": "false"
+    }
+}

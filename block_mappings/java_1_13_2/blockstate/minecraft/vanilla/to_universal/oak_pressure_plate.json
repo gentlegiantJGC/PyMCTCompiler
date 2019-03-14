@@ -1,0 +1,6 @@
+{
+    "new_block": "universal_minecraft:oak_pressure_plate",
+    "carry_properties": {
+        "powered": "false"
+    }
+}

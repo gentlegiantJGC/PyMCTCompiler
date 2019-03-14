@@ -1,0 +1,11 @@
+{
+    "new_block": "minecraft:red_mushroom_block",
+    "carry_properties": {
+        "down": "true",
+        "east": "true",
+        "north": "true",
+        "south": "true",
+        "up": "true",
+        "west": "true"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "new_block": "minecraft:chest",
+    "carry_properties": {
+        "facing": "north",
+        "type": "single",
+        "waterlogged": "false"
+    }
+}

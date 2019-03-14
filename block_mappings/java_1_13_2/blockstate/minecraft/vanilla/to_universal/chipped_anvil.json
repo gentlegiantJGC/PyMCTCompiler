@@ -1,0 +1,6 @@
+{
+    "new_block": "universal_minecraft:chipped_anvil",
+    "carry_properties": {
+        "facing": "north"
+    }
+}

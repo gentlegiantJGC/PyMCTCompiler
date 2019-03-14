@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:conduit",
+    "carry_properties": {
+        "waterlogged": "true"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "new_block": "universal_minecraft:note_block",
+    "carry_properties": {
+        "instrument": "harp",
+        "note": "0",
+        "powered": "false"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "new_block": "minecraft:repeating_command_block",
+    "carry_properties": {
+        "conditional": "false",
+        "facing": "north"
+    }
+}

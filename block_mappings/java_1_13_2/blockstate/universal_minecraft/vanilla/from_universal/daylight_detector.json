@@ -1,0 +1,7 @@
+{
+    "new_block": "minecraft:daylight_detector",
+    "carry_properties": {
+        "inverted": "false",
+        "power": "0"
+    }
+}

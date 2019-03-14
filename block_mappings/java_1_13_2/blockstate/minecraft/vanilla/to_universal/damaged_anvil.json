@@ -1,0 +1,6 @@
+{
+    "new_block": "universal_minecraft:damaged_anvil",
+    "carry_properties": {
+        "facing": "north"
+    }
+}

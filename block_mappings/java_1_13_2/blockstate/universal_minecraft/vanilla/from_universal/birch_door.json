@@ -1,0 +1,10 @@
+{
+    "new_block": "minecraft:birch_door",
+    "carry_properties": {
+        "facing": "north",
+        "half": "lower",
+        "hinge": "left",
+        "open": "false",
+        "powered": "false"
+    }
+}

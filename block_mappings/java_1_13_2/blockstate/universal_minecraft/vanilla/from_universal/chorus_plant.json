@@ -1,0 +1,11 @@
+{
+    "new_block": "minecraft:chorus_plant",
+    "carry_properties": {
+        "down": "false",
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+    }
+}

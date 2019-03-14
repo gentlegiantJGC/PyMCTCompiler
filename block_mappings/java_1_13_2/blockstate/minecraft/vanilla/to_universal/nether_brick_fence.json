@@ -1,0 +1,10 @@
+{
+    "new_block": "universal_minecraft:nether_brick_fence",
+    "carry_properties": {
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "waterlogged": "false",
+        "west": "false"
+    }
+}

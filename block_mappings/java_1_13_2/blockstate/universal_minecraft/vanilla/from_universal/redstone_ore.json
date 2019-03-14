@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:redstone_ore",
+    "carry_properties": {
+        "lit": "false"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "new_block": "universal_minecraft:spruce_leaves",
+    "carry_properties": {
+        "distance": "7",
+        "persistent": "false"
+    }
+}

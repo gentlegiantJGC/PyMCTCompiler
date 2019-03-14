@@ -1,0 +1,7 @@
+{
+    "new_block": "universal_minecraft:acacia_leaves",
+    "carry_properties": {
+        "distance": "7",
+        "persistent": "false"
+    }
+}

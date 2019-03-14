@@ -1,0 +1,10 @@
+{
+    "new_block": "universal_minecraft:iron_bars",
+    "carry_properties": {
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "waterlogged": "false",
+        "west": "false"
+    }
+}

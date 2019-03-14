@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:large_fern",
+    "carry_properties": {
+        "half": "lower"
+    }
+}

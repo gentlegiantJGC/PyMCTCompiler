@@ -1,0 +1,7 @@
+{
+    "new_block": "universal_minecraft:birch_slab",
+    "carry_properties": {
+        "type": "bottom",
+        "waterlogged": "false"
+    }
+}

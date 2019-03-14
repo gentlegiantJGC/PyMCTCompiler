@@ -1,0 +1,7 @@
+{
+    "new_block": "minecraft:sticky_piston",
+    "carry_properties": {
+        "extended": "false",
+        "facing": "north"
+    }
+}

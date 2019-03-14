@@ -1,0 +1,7 @@
+{
+    "new_block": "universal_minecraft:detector_rail",
+    "carry_properties": {
+        "powered": "false",
+        "shape": "north_south"
+    }
+}

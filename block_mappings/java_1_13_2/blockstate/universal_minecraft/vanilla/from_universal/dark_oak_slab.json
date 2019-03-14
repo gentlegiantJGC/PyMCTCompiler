@@ -1,0 +1,7 @@
+{
+    "new_block": "minecraft:dark_oak_slab",
+    "carry_properties": {
+        "type": "bottom",
+        "waterlogged": "false"
+    }
+}

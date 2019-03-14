@@ -1,0 +1,8 @@
+{
+    "new_block": "universal_minecraft:cyan_bed",
+    "carry_properties": {
+        "facing": "north",
+        "occupied": "false",
+        "part": "foot"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "new_block": "minecraft:spruce_trapdoor",
+    "carry_properties": {
+        "facing": "north",
+        "half": "bottom",
+        "open": "false",
+        "powered": "false",
+        "waterlogged": "false"
+    }
+}

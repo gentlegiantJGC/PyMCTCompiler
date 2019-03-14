@@ -1,0 +1,7 @@
+{
+    "new_block": "minecraft:chain_command_block",
+    "carry_properties": {
+        "conditional": "false",
+        "facing": "north"
+    }
+}

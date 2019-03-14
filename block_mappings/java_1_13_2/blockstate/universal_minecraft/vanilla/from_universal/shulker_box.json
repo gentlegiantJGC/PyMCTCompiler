@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:shulker_box",
+    "carry_properties": {
+        "facing": "up"
+    }
+}

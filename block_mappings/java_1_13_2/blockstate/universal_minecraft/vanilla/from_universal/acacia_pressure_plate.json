@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:acacia_pressure_plate",
+    "carry_properties": {
+        "powered": "false"
+    }
+}

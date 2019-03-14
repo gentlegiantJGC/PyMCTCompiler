@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:dead_fire_coral_fan",
+    "carry_properties": {
+        "waterlogged": "true"
+    }
+}

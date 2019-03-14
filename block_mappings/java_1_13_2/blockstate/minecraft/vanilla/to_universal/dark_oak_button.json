@@ -1,0 +1,8 @@
+{
+    "new_block": "universal_minecraft:dark_oak_button",
+    "carry_properties": {
+        "face": "wall",
+        "facing": "north",
+        "powered": "false"
+    }
+}

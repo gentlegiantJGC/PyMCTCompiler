@@ -1,0 +1,8 @@
+{
+    "new_block": "minecraft:stone_button",
+    "carry_properties": {
+        "face": "wall",
+        "facing": "north",
+        "powered": "false"
+    }
+}

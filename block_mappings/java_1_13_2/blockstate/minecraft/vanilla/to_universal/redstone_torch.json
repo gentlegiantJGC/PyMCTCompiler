@@ -1,0 +1,6 @@
+{
+    "new_block": "universal_minecraft:redstone_torch",
+    "carry_properties": {
+        "lit": "true"
+    }
+}

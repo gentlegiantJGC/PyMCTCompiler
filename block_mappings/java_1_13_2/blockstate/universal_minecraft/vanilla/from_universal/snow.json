@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:snow",
+    "carry_properties": {
+        "layers": "1"
+    }
+}

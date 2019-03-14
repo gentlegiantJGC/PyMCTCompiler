@@ -1,0 +1,10 @@
+{
+    "new_block": "universal_minecraft:birch_trapdoor",
+    "carry_properties": {
+        "facing": "north",
+        "half": "bottom",
+        "open": "false",
+        "powered": "false",
+        "waterlogged": "false"
+    }
+}

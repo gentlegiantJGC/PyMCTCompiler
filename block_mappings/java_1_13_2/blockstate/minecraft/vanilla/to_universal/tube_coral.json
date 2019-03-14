@@ -1,0 +1,6 @@
+{
+    "new_block": "universal_minecraft:tube_coral",
+    "carry_properties": {
+        "waterlogged": "true"
+    }
+}

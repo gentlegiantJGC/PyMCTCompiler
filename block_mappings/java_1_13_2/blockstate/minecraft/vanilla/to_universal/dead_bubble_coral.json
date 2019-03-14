@@ -1,0 +1,6 @@
+{
+    "new_block": "universal_minecraft:dead_bubble_coral",
+    "carry_properties": {
+        "waterlogged": "true"
+    }
+}

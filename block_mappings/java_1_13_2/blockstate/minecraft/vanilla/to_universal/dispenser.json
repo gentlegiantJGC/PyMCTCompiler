@@ -1,0 +1,7 @@
+{
+    "new_block": "universal_minecraft:dispenser",
+    "carry_properties": {
+        "facing": "north",
+        "triggered": "false"
+    }
+}

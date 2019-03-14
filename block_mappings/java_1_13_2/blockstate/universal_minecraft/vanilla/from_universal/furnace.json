@@ -1,0 +1,7 @@
+{
+    "new_block": "minecraft:furnace",
+    "carry_properties": {
+        "facing": "north",
+        "lit": "false"
+    }
+}
