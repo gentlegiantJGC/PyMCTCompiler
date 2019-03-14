@@ -1,4 +1,4 @@
-from ..universal import comp
+from . import comp
 init = {
 	"format": "blockstate",
 	"platform": "universal",
