@@ -1,6 +1,6 @@
 # The Compiler
 
-The JSON files in the block_mappings directory are the end result but writing these by hand would be slow and prone to errors. This is where the compiler comes in.
+The JSON files in the block_mappings directory are the end result but writing these by hand would be slow and prone to errors. This is where the compiler comes in. Each time the compiler is run the block_mappings directory is completely deleted and the compiler recreates it. As such don't directly modify the block_mappings directory as it will be overwritten when the compiler is run.
 
 The compiler takes the elemental mappings for each block and merges them based on which blocks are used in each version. This means that the mappings only need to be written once for each block and then each version can pull what it needs.
 
