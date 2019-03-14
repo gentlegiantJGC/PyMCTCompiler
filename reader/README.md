@@ -1,10 +1,10 @@
 # Reader
 
-This is a simple runthrough of how to read the mappings and convert a block. For a code implimentation see [read.py](reader/read.py) which may be more up to date. It is advised to pre-load all these files rather than reading them from disk each time.
+This is a simple runthrough of how to read the mappings and convert a block. For a code implimentation see [read.py](read.py) which may be more up to date. It is advised to pre-load all these files rather than reading them from disk each time.
 
 
 ## Folder Structure
-The folders are structured like this: (subject to change and can be baked out differently if needed. See [the compiler](compiler) for more info)
+The folders are structured like this: (subject to change and can be baked out differently if needed. See [the compiler](/compiler) for more info)
 
 ~~~~
 - <version_name>
@@ -56,7 +56,7 @@ The folders are structured like this: (subject to change and can be baked out di
 
 ## Reading Mappings
 
-See the [mappings readme](mappings_readme.md) for info on the specification and mapping formats. The below will explain how to read them.
+See the [mappings documentation](/mappings_documentation.md) for info on the specification and mapping formats. The below will explain how to read them.
 
 (This assumes it is being done individual block by individual block but for most blocks the mapping will only be dependent on the blockstate so all blocks with the same blockstate can be done at once)
 
