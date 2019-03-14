@@ -17,7 +17,7 @@ def debug(block_data: dict) -> bool:
 		return True
 
 
-def main(uncompiled_path: str, compiled_path: str):
+def main(uncompiled_path: str, compiled_path: str, _):
 	"""Custom compiler for the universal version.
 
 	:param uncompiled_path: The path where the uncompiled files are found
