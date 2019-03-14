@@ -1,6 +1,4 @@
 {
     "new_block": "universal_minecraft:horn_coral",
-    "carry_properties": {
-        "waterlogged": "true"
-    }
+    "carry_properties": {}
 }

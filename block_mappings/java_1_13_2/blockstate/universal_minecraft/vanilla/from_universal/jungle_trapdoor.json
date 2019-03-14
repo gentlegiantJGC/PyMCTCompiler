@@ -4,7 +4,6 @@
         "facing": "north",
         "half": "bottom",
         "open": "false",
-        "powered": "false",
-        "waterlogged": "false"
+        "powered": "false"
     }
 }

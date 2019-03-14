@@ -1,7 +1,6 @@
 {
     "new_block": "universal_minecraft:ladder",
     "carry_properties": {
-        "facing": "north",
-        "waterlogged": "false"
+        "facing": "north"
     }
 }

@@ -3,7 +3,6 @@
     "carry_properties": {
         "facing": "north",
         "half": "bottom",
-        "shape": "straight",
-        "waterlogged": "false"
+        "shape": "straight"
     }
 }

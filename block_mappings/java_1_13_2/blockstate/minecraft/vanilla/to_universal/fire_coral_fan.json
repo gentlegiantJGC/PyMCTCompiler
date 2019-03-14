@@ -1,6 +1,4 @@
 {
     "new_block": "universal_minecraft:fire_coral_fan",
-    "carry_properties": {
-        "waterlogged": "true"
-    }
+    "carry_properties": {}
 }

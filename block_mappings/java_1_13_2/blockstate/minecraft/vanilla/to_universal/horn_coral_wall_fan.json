@@ -1,7 +1,6 @@
 {
     "new_block": "universal_minecraft:horn_coral_wall_fan",
     "carry_properties": {
-        "facing": "north",
-        "waterlogged": "true"
+        "facing": "north"
     }
 }

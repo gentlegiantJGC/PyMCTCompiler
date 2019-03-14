@@ -2,7 +2,6 @@
     "new_block": "universal_minecraft:chest",
     "carry_properties": {
         "facing": "north",
-        "type": "single",
-        "waterlogged": "false"
+        "type": "single"
     }
 }

@@ -1,7 +1,6 @@
 {
     "new_block": "minecraft:sea_pickle",
     "carry_properties": {
-        "pickles": "1",
-        "waterlogged": "true"
+        "pickles": "1"
     }
 }

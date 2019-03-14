@@ -1,7 +1,6 @@
 {
     "new_block": "universal_minecraft:nether_brick_slab",
     "carry_properties": {
-        "type": "bottom",
-        "waterlogged": "false"
+        "type": "bottom"
     }
 }
