@@ -3462,3 +3462,385 @@ def command_block(input_namespace: str, input_block_name: str, mode: str, univer
 			}
 		}
 	}
+
+
+def noteblock(input_namespace: str, input_block_name: str, platform: str, feature_level: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	instruments = None
+	if platform == 'java':
+		instruments = {}
+		# "snare",
+		# "hat",
+		# "basedrum",
+		# "bell",
+		# "flute",
+		# "chime",
+		# "guitar",
+		# "xylophone"
+		# "harp",
+	elif platform == 'bedrock':
+		if feature_level == '1.0.0':
+			instruments = {
+				"bass": [
+					"minecraft:log",
+					"minecraft:log2",
+					"minecraft:stripped_oak_log",
+					"minecraft:stripped_spruce_log",
+					"minecraft:stripped_birch_log",
+					"minecraft:stripped_jungle_log",
+					"minecraft:stripped_acacia_log",
+					"minecraft:stripped_dark_oak_log",
+					"minecraft:planks",
+					"minecraft:wooden_slab",
+					"minecraft:double_wooden_slab",
+					"minecraft:oak_stairs",
+					"minecraft:spruce_stairs",
+					"minecraft:birch_stairs",
+					"minecraft:jungle_stairs",
+					"minecraft:acacia_stairs",
+					"minecraft:dark_oak_stairs",
+					"minecraft:fence",
+					"minecraft:fence_gate",
+					"minecraft:spruce_fence_gate",
+					"minecraft:birch_fence_gate",
+					"minecraft:jungle_fence_gate",
+					"minecraft:dark_oak_fence_gate",
+					"minecraft:acacia_fence_gate",
+					"minecraft:wooden_door",
+					"minecraft:spruce_door",
+					"minecraft:birch_door",
+					"minecraft:jungle_door",
+					"minecraft:acacia_door",
+					"minecraft:dark_oak_door",
+					"minecraft:wooden_pressure_plate",
+					"minecraft:acacia_pressure_plate",
+					"minecraft:birch_pressure_plate",
+					"minecraft:dark_oak_pressure_plate",
+					"minecraft:jungle_pressure_plate",
+					"minecraft:spruce_pressure_plate",
+					"minecraft:trapdoor",
+					"minecraft:acacia_trapdoor",
+					"minecraft:birch_trapdoor",
+					"minecraft:dark_oak_trapdoor",
+					"minecraft:jungle_trapdoor",
+					"minecraft:spruce_trapdoor",
+					"minecraft:standing_sign",
+					"minecraft:wall_sign",
+					"minecraft:noteblock",
+					"minecraft:bookshelf",
+					"minecraft:chest",
+					"minecraft:trapped_chest",
+					"minecraft:crafting_table",
+					"minecraft:jukebox",
+					"minecraft:brown_mushroom_block",
+					"minecraft:red_mushroom_block",
+					"minecraft:daylight_detector",
+					"minecraft:daylight_detector_inverted",
+					"minecraft:standing_banner",
+					"minecraft:wall_banner",
+					"minecraft:wooden_button",
+					"minecraft:acacia_button",
+					"minecraft:birch_button",
+					"minecraft:dark_oak_button",
+					"minecraft:jungle_button",
+					"minecraft:spruce_button"
+				],
+				"snare": [
+					"minecraft:sand",
+					"minecraft:gravel",
+					"minecraft:soul_sand",
+					"minecraft:concretepowder"
+				],
+				"hat": [
+					"minecraft:glass",
+					"minecraft:glass_pane",
+					"minecraft:stained_glass",
+					"minecraft:stained_glass_pane",
+					"minecraft:stained_glass_pane",
+					"minecraft:glowstone",
+					"minecraft:beacon",
+					"minecraft:sealantern",
+					"minecraft:hard_glass",
+					"minecraft:hard_glass_pane",
+					"minecraft:hard_stained_glass",
+					"minecraft:hard_stained_glass_pane"
+				],
+				"basedrum": [
+					"minecraft:stone",
+					"minecraft:cobblestone",
+					"minecraft:bedrock",
+					"minecraft:gold_ore",
+					"minecraft:iron_ore",
+					"minecraft:coal_ore",
+					"minecraft:lapis_ore",
+					"minecraft:lapis_block",
+					"minecraft:dispenser",
+					"minecraft:sandstone",
+					"minecraft:stone_slab",
+					"minecraft:double_stone_slab",
+					"minecraft:brick_block",
+					"minecraft:mossy_cobblestone",
+					"minecraft:obsidian",
+					"minecraft:mob_spawner",
+					"minecraft:diamond_ore",
+					"minecraft:furnace",
+					"minecraft:lit_furnace",
+					"minecraft:stone_stairs",
+					"minecraft:stone_pressure_plate",
+					"minecraft:redstone_ore",
+					"minecraft:lit_redstone_ore",
+					"minecraft:stone_button",
+					"minecraft:netherrack",
+					"minecraft:stonebrick",
+					"minecraft:brick_stairs",
+					"minecraft:stone_brick_stairs",
+					"minecraft:nether_brick",
+					"minecraft:nether_brick_fence",
+					"minecraft:nether_brick_stairs",
+					"minecraft:enchanting_table",
+					"minecraft:end_portal_frame",
+					"minecraft:end_stone",
+					"minecraft:dragon_egg",
+					"minecraft:dropper",
+					"minecraft:sandstone_stairs",
+					"minecraft:emerald_ore",
+					"minecraft:ender_chest",
+					"minecraft:cobblestone_wall",
+					"minecraft:quartz_ore",
+					"minecraft:quartz_block",
+					"minecraft:quartz_stairs",
+					"minecraft:stained_hardened_clay",
+					"minecraft:prismarine",
+					"minecraft:hardened_clay",
+					"minecraft:red_sandstone",
+					"minecraft:red_sandstone_stairs",
+					"minecraft:stone_slab2",
+					"minecraft:double_stone_slab2",
+					"minecraft:chemical_heat",
+					"minecraft:purpur_block",
+					"minecraft:purpur_stairs",
+					"minecraft:end_bricks",
+					"minecraft:magma",
+					"minecraft:red_nether_brick",
+					"minecraft:bone_block",
+					"minecraft:purple_glazed_terracotta",
+					"minecraft:white_glazed_terracotta",
+					"minecraft:orange_glazed_terracotta",
+					"minecraft:magenta_glazed_terracotta",
+					"minecraft:light_blue_glazed_terracotta",
+					"minecraft:yellow_glazed_terracotta",
+					"minecraft:lime_glazed_terracotta",
+					"minecraft:pink_glazed_terracotta",
+					"minecraft:gray_glazed_terracotta",
+					"minecraft:silver_glazed_terracotta",
+					"minecraft:cyan_glazed_terracotta",
+					"minecraft:blue_glazed_terracotta",
+					"minecraft:brown_glazed_terracotta",
+					"minecraft:green_glazed_terracotta",
+					"minecraft:red_glazed_terracotta",
+					"minecraft:black_glazed_terracotta",
+					"minecraft:concrete",
+					"minecraft:chemistry_table",
+					"minecraft:stonecutter",
+					"minecraft:glowingobsidian",
+					"minecraft:observer",
+					"minecraft:prismarine_stairs",
+					"minecraft:dark_prismarine_stairs",
+					"minecraft:prismarine_bricks_stairs",
+					"minecraft:coral_block",
+				]
+			}
+	if instruments is None:
+		raise Exception
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+
+	if platform == 'java':
+		return {
+			"specification": {
+				"properties": {
+					"block_data": [str(data) for data in range(16)]
+				},
+				"defaults": {
+					"block_data": "0"
+				},
+				"nbt": {
+					"note": {
+						"name": "note",
+						"type": "byte",
+						"options": [str(data) for data in range(25)],
+						"default": "0"
+					},
+					"powered": {
+						"name": "powered",
+						"type": "byte",
+						"options": ["0", "1"],
+						"default": "0"
+					}
+				},
+			},
+			"to_universal": {
+				"new_block": f"{universal_namespace}:{universal_block_name}",
+				"map_nbt": {
+					"note": {
+						str(data): {
+							"new_properties": {
+								"note": str(data)
+							}
+						} for data in range(25)
+					},
+					"powered": {
+						"0": {
+							"new_properties": {
+								"powered": "false"
+							}
+						},
+						"1": {
+							"new_properties": {
+								"powered": "true"
+							}
+						}
+					}
+				}
+			},
+			"from_universal": {
+				f"{universal_namespace}:{universal_block_name}": {
+					"new_block": f"{input_namespace}:{input_block_name}",
+					"map_properties": {
+						"note": {
+							str(data): {
+								"new_nbt": {
+									"note": str(data)
+								}
+							} for data in range(25)
+						},
+						"powered": {
+							"false": {
+								"new_nbt": {
+									"powered": "0"
+								}
+							},
+							"true": {
+								"new_nbt": {
+									"powered": "1"
+								}
+							}
+						}
+					}
+				}
+			},
+			"blockstate_specification": {
+				"properties": {
+					"note": [str(data) for data in range(25)],
+					"powered": ["false", "true"]
+				},
+				"defaults": {
+					"note": "0",
+					"powered": "false"
+				}
+			},
+			"blockstate_to_universal": {
+				"new_block": f"{universal_namespace}:{universal_block_name}",
+				"carry_properties": {
+					"note": [str(data) for data in range(25)],
+					"powered": ["false", "true"]
+				}
+			},
+			"blockstate_from_universal": {
+				f"{universal_namespace}:{universal_block_name}": {
+					"new_block": f"{input_namespace}:{input_block_name}",
+					"carry_properties": {
+						"note": [str(data) for data in range(25)],
+						"powered": ["false", "true"]
+					}
+				}
+			}
+		}
+	elif platform == 'bedrock':
+		return {
+			"specification": {
+				"properties": {
+					"block_data": [str(data) for data in range(16)]
+				},
+				"defaults": {
+					"block_data": "0"
+				},
+				"nbt": {
+					"note": {
+						"name": "note",
+						"type": "byte",
+						"options": [str(data) for data in range(25)],
+						"default": "0"
+					}
+				},
+			},
+			"to_universal": {
+				"new_block": f"{universal_namespace}:{universal_block_name}",
+				"map_nbt": {
+					"note": {
+						str(data): {
+							"new_properties": {
+								"note": str(data)
+							}
+						} for data in range(25)
+					}
+				},
+				"multiblock": {
+					"coords": [0, -1, 0],
+					"map_block_name": {
+						block_name: {
+							"new_properties": {
+								"instrument": instrument
+							}
+						} for instrument in instruments.keys() for block_name in instruments[instrument]
+					}
+				}
+			},
+			"from_universal": {
+				f"{universal_namespace}:{universal_block_name}": {
+					"new_block": f"{input_namespace}:{input_block_name}",
+					"map_properties": {
+						"note": {
+							str(data): {
+								"new_nbt": {
+									"note": str(data)
+								}
+							} for data in range(25)
+						}
+					}
+				}
+			},
+			"blockstate_specification": {
+				"properties": {
+					"note": [str(data) for data in range(25)]
+				},
+				"defaults": {
+					"note": "0"
+				}
+			},
+			"blockstate_to_universal": {
+				"new_block": f"{universal_namespace}:{universal_block_name}",
+				"carry_properties": {
+					"note": [str(data) for data in range(25)]
+				},
+				"multiblock": {
+					"coords": [0, -1, 0],
+					"map_block_name": {
+						block_name: {
+							"new_properties": {
+								"instrument": instrument
+							}
+						} for instrument in instruments.keys() for block_name in instruments[instrument]
+					}
+				}
+			},
+			"blockstate_from_universal": {
+				f"{universal_namespace}:{universal_block_name}": {
+					"new_block": f"{input_namespace}:{input_block_name}",
+					"carry_properties": {
+						"note": [str(data) for data in range(25)]
+					}
+				}
+			}
+		}
