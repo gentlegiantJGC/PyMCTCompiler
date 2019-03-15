@@ -208,8 +208,8 @@ def _merge_map(data_: dict, data: dict) -> dict:
 	:type data: dict
 	:return: data_ after "data" has been merged into it
 	"""
-	check_formatting(data_)
-	check_formatting(data)
+	check_formatting(data_, ['out'])
+	check_formatting(data, ['out'])
 	if 'new_block' in data and 'new_block' in data_:
 		if data_['new_block'] != data['new_block']:
 			raise Exception('"new_block" must be the same when merging')
@@ -243,10 +243,22 @@ def _merge_map(data_: dict, data: dict) -> dict:
 				data_['carry_properties'][key] = unique_merge_lists(data_['carry_properties'][key], data['carry_properties'][key])
 	elif 'carry_properties' in data != 'carry_properties' in data_:
 		raise Exception('"carry_properties" defined in one but not the other')
+
+	if 'new_nbt' in data and 'new_nbt' in data_:
+		if data_['new_nbt'] != data['new_nbt']:
+			raise Exception('"new_nbt" must be the same when merging')
+	elif 'new_nbt' in data != 'new_nbt' in data_:
+		raise Exception('"new_nbt" defined in one but not the other')
+
+	for fun in ("map_nbt", "multiblock", "map_block_name"):
+		for d in (data, data_):
+			if fun in d:
+				raise Exception(f'Function {fun} should not be in mappings from universal')
+
 	return data_
 
 
-def check_formatting(data: dict):
+def check_formatting(data: dict, mode: list):
 	"""Will verify that "data" fits the required format.
 
 	:param data: The data to verify the formatting of
@@ -268,7 +280,7 @@ def check_formatting(data: dict):
 			for val, nest in val_dict.items():
 				assert isinstance(val, str)
 				assert isinstance(nest, dict)
-				check_formatting(nest)
+				check_formatting(nest, mode)
 
 	if 'carry_properties' in data:
 		for key, val_list in data['carry_properties'].items():
@@ -277,8 +289,45 @@ def check_formatting(data: dict):
 			for val in val_list:
 				assert isinstance(val, str)
 
+	if 'new_nbt' in data:
+		assert isinstance(data['new_nbt'], dict)
+		for key, val in data['new_nbt'].items():
+			assert isinstance(key, str)
+			assert isinstance(val, str)
+
+	feature_set = ('new_block', 'new_properties', 'map_properties', 'carry_properties', 'new_nbt', 'map_nbt', 'multiblock', 'map_block_name')
+
+	if 'in' in mode:
+		if 'map_nbt' in data:
+			for key, val_dict in data['map_nbt'].items():
+				assert isinstance(key, str)
+				assert isinstance(val_dict, dict)
+				for val, nest in val_dict.items():
+					assert isinstance(val, str)
+					assert isinstance(nest, dict)
+					check_formatting(nest, mode)
+
+		if 'multiblock' in data:
+			assert isinstance(data['multiblock'], (dict, list))
+			if isinstance(data['multiblock'], dict):
+				assert 'coords' in data['multiblock']
+				check_formatting(data['multiblock'], ['in', 'multiblock'])
+			elif isinstance(data['multiblock'], list):
+				for mapping in data['multiblock']:
+					assert isinstance(mapping, dict)
+					assert 'coords' in data['multiblock']
+					check_formatting(data['multiblock'], ['in', 'multiblock'])
+
+	elif 'out' in mode:
+		for fun in ("map_nbt", "multiblock", "map_block_name"):
+			if fun in data:
+				raise Exception(f'Function {fun} should not be in mappings from universal')
+
+	if 'multiblock' in mode:
+		feature_set += ('coords', )
+
 	for key in data.keys():
-		if key not in ['new_block', 'new_properties', 'map_properties', 'carry_properties']:
+		if key not in feature_set:
 			log_to_file(f'Extra key "{key}" found')
 
 
