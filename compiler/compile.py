@@ -366,7 +366,7 @@ def main():
 			assert isinstance(init, dict)
 			if 'format' in init and init['format'] in ['numerical', 'pseudo-numerical', 'blockstate']:
 				if init['format'] == 'numerical':
-					copy_file(f'{version}/block/__numerical_map__.json')
+					copy_file(f'{version}/__numerical_map__.json')
 
 				if getattr(version_compiler, version).compiler is not None:
 					getattr(version_compiler, version).compiler(f'{uncompiled_dir}/{version}', f'{compiled_dir}/{version}', primitives)

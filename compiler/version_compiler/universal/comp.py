@@ -77,30 +77,34 @@ def main(uncompiled_path: str, compiled_path: str, _):
 
 		for block_string, states in blocks.items():
 			namespace, block_name = block_string.split(':', 1)
+			namespace = f'universal_{namespace}'
 
 			if not os.path.isdir(f'{compiled_path}/block/blockstate/specification/{namespace}/vanilla'):
 				os.makedirs(f'{compiled_path}/block/blockstate/specification/{namespace}/vanilla')
 
 			default_state = next(s for s in states['states'] if s.get('default', False))
 
+			if 'properties' in default_state:
+				states['defaults'] = default_state['properties']
+
 			del states['states']
 			if not debug(states):
 				print(f'Error in "{block_string}"')
-			with open(f'{compiled_path}/block/blockstate/specification/{namespace}/vanilla/{block_name}.json', 'w') as block_out:
-				json.dump(states, block_out, indent=4)
+			if not(namespace in modifications and any(block_name in modifications[namespace][group_name]['remove'] for group_name in modifications[namespace])):
+				# the block is not marked for removal
+				with open(f'{compiled_path}/block/blockstate/specification/{namespace}/vanilla/{block_name}.json', 'w') as block_out:
+					json.dump(states, block_out, indent=4)
 
 		for namespace in modifications:
 			for group_name in modifications[namespace]:
-				for block_name, block_data in modifications[namespace][group_name]["add"]:
+				for block_name, block_data in modifications[namespace][group_name]["add"].items():
 					if os.path.isfile(f'{compiled_path}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json'):
 						print(f'"{block_name}" is already present.')
 					else:
 						assert isinstance(block_data, dict), f'The data here is supposed to be a dictionary. Got this instead:\n{block_data}'
 
-						if not os.path.isdir(f'{compiled_path}/block/blockstate/specification/{namespace}/vanilla'):
-							os.makedirs(f'{compiled_path}/block/blockstate/specification/{namespace}/vanilla')
-						if not os.path.isdir(f'{compiled_path}/block/blockstate/to_universal/{namespace}/vanilla'):
-							os.makedirs(f'{compiled_path}/block/blockstate/to_universal/{namespace}/vanilla')
+						if not os.path.isdir(f'{compiled_path}/block/blockstate/specification/{namespace}/{group_name}'):
+							os.makedirs(f'{compiled_path}/block/blockstate/specification/{namespace}/{group_name}')
 
 						if not debug(block_data):
 							print(f'Error in "{block_name}"')

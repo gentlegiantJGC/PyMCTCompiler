@@ -96,7 +96,7 @@ def main(uncompiled_path: str, compiled_path: str, primitives):
 			with open(f'{compiled_path}/block/blockstate/specification/{namespace}/vanilla/{block_name}.json', 'w') as block_out:
 				json.dump(states, block_out, indent=4)
 
-			if not(namespace in modifications and any(block_name in modifications[namespace][group_name] for group_name in modifications[namespace])):
+			if not(namespace in modifications and any(block_name in modifications[namespace][group_name]['remove'] for group_name in modifications[namespace])):
 				# the block is not marked for removal
 
 				if not os.path.isdir(f'{compiled_path}/block/blockstate/to_universal/{namespace}/vanilla'):
@@ -128,7 +128,7 @@ def main(uncompiled_path: str, compiled_path: str, primitives):
 
 		for namespace in modifications:
 			for group_name in modifications[namespace]:
-				for block_name, block_data in modifications[namespace][group_name]["add"]:
+				for block_name, block_data in modifications[namespace][group_name]["add"].items():
 					if os.path.isfile(f'{compiled_path}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json'):
 						print(f'"{block_name}" is already present.')
 					else:
@@ -137,10 +137,10 @@ def main(uncompiled_path: str, compiled_path: str, primitives):
 
 						assert isinstance(block_data, dict), f'The data here is supposed to be a dictionary. Got this instead:\n{block_data}'
 
-						if not os.path.isdir(f'{compiled_path}/block/blockstate/specification/{namespace}/vanilla'):
-							os.makedirs(f'{compiled_path}/block/blockstate/specification/{namespace}/vanilla')
-						if not os.path.isdir(f'{compiled_path}/block/blockstate/to_universal/{namespace}/vanilla'):
-							os.makedirs(f'{compiled_path}/block/blockstate/to_universal/{namespace}/vanilla')
+						if not os.path.isdir(f'{compiled_path}/block/blockstate/specification/{namespace}/{group_name}'):
+							os.makedirs(f'{compiled_path}/block/blockstate/specification/{namespace}/{group_name}')
+						if not os.path.isdir(f'{compiled_path}/block/blockstate/to_universal/{namespace}/{group_name}'):
+							os.makedirs(f'{compiled_path}/block/blockstate/to_universal/{namespace}/{group_name}')
 
 						if not debug(block_data):
 							print(f'Error in "{block_name}"')
