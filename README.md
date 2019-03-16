@@ -5,7 +5,7 @@ It does this by converting the local block definition into the Universal format 
 
 The Universal format is modeled on the Java 1.13+ format with modifications in places that make sense.
 
-To implement these mappings into your project you will just need the contents of the [block_mappings](block_mappings) directory and a reader written in the language of the application. A example Python reader can be found [here](reader/read.py).
+To implement these mappings into your project you will just need the contents of the [mappings](mappings) directory and a reader written in the language of the application. A example Python reader can be found [here](reader/read.py).
 
 # Contributing
 
