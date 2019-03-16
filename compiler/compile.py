@@ -6,7 +6,7 @@ from compiler import primitives, version_compiler
 
 primitive_dir = './primitives'
 uncompiled_dir = './version_compiler'
-compiled_dir = '../block_mappings'
+compiled_dir = '../mappings'
 
 log_file = open('log.txt', 'w')
 
@@ -139,43 +139,43 @@ def process_file(file_format: str, block_json: dict, version_name: str, namespac
 	"""
 	if file_format == 'numerical':
 		if 'specification' in block_json:
-			save_json(f'{version_name}/numerical/{namespace}/{sub_name}/specification/{block_file_name}.json', block_json['specification'])
+			save_json(f'{version_name}/block/numerical/specification/{namespace}/{sub_name}/{block_file_name}.json', block_json['specification'])
 		else:
-			save_json(f'{version_name}/numerical/{namespace}/{sub_name}/specification/{block_file_name}.json', {"properties": {"block_data": [str(data) for data in range(16)]}, "defaults": {"block_data": "0"}})
+			save_json(f'{version_name}/block/numerical/specification/{namespace}/{sub_name}/{block_file_name}.json', {"properties": {"block_data": [str(data) for data in range(16)]}, "defaults": {"block_data": "0"}})
 
 		if 'blockstate_specification' in block_json:
-			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/specification/{block_file_name}.json', block_json['blockstate_specification'])
+			save_json(f'{version_name}/block/blockstate/specification/{namespace}/{sub_name}/{block_file_name}.json', block_json['blockstate_specification'])
 		else:
-			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/specification/{block_file_name}.json', {})
+			save_json(f'{version_name}/block/blockstate/specification/{namespace}/{sub_name}/{block_file_name}.json', {})
 
 		for prefix, file_format_2 in [['', 'numerical'], ['blockstate_', 'blockstate']]:
 			if f'{prefix}to_universal' in block_json:
-				save_json(f'{version_name}/{file_format_2}/{namespace}/{sub_name}/to_universal/{block_file_name}.json', block_json[f'{prefix}to_universal'])
+				save_json(f'{version_name}/block/{file_format_2}/to_universal/{namespace}/{sub_name}/{block_file_name}.json', block_json[f'{prefix}to_universal'])
 			else:
 				raise Exception(f'"{prefix}to_universal" must be defined')
 
 			if f'{prefix}from_universal' in block_json:
 				for block_str, block_data in block_json[f'{prefix}from_universal'].items():
 					namespace_, block_name = block_str.split(':')
-					merge_map(block_data, f'{version_name}/{file_format_2}/{namespace_}/{sub_name}/from_universal/{block_name}.json')
+					merge_map(block_data, f'{version_name}/block/{file_format_2}/from_universal/{namespace_}/{sub_name}/{block_name}.json')
 			else:
 				raise Exception(f'"{prefix}from_universal" must be defined')
 
 	elif file_format == 'blockstate':
 		if 'specification' in block_json:
-			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/specification/{block_file_name}.json', block_json['specification'])
+			save_json(f'{version_name}/block/blockstate/specification/{namespace}/{sub_name}/{block_file_name}.json', block_json['specification'])
 		else:
-			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/specification/{block_file_name}.json', {})
+			save_json(f'{version_name}/block/blockstate/specification/{namespace}/{sub_name}/{block_file_name}.json', {})
 
 		if 'to_universal' in block_json:
-			save_json(f'{version_name}/blockstate/{namespace}/{sub_name}/to_universal/{block_file_name}.json', block_json['to_universal'])
+			save_json(f'{version_name}/block/blockstate/to_universal/{namespace}/{sub_name}/{block_file_name}.json', block_json['to_universal'])
 		else:
 			raise Exception('"to_universal" must be defined')
 
 		if 'from_universal' in block_json:
 			for block_str, block_data in block_json['from_universal'].items():
 				namespace_, block_name = block_str.split(':')
-				merge_map(block_data, f'{version_name}/blockstate/{namespace_}/{sub_name}/from_universal/{block_name}.json')
+				merge_map(block_data, f'{version_name}/block/blockstate/from_universal/{namespace_}/{sub_name}/{block_name}.json')
 		else:
 			raise Exception('"from_universal" must be defined')
 
@@ -366,7 +366,7 @@ def main():
 			assert isinstance(init, dict)
 			if 'format' in init and init['format'] in ['numerical', 'pseudo-numerical', 'blockstate']:
 				if init['format'] == 'numerical':
-					copy_file(f'{version}/__numerical_map__.json')
+					copy_file(f'{version}/block/__numerical_map__.json')
 
 				if getattr(version_compiler, version).compiler is not None:
 					getattr(version_compiler, version).compiler(f'{uncompiled_dir}/{version}', f'{compiled_dir}/{version}', primitives)
