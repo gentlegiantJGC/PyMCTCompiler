@@ -97,18 +97,17 @@ def main(uncompiled_path: str, compiled_path: str, _):
 
 		for namespace in modifications:
 			for group_name in modifications[namespace]:
-				for block_name, block_data in modifications[namespace][group_name]["add"].items():
+				for block_name, specification in modifications[namespace][group_name]["add"].items():
 					if os.path.isfile(f'{compiled_path}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json'):
 						print(f'"{block_name}" is already present.')
 					else:
-						assert isinstance(block_data, dict), f'The data here is supposed to be a dictionary. Got this instead:\n{block_data}'
+						assert isinstance(specification, dict), f'The data here is supposed to be a dictionary. Got this instead:\n{specification}'
 
 						if not os.path.isdir(f'{compiled_path}/block/blockstate/specification/{namespace}/{group_name}'):
 							os.makedirs(f'{compiled_path}/block/blockstate/specification/{namespace}/{group_name}')
 
-						if not debug(block_data):
+						if not debug(specification):
 							print(f'Error in "{block_name}"')
-						specification = block_data.get("specification", {})
 						with open(f'{compiled_path}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', 'w') as block_out:
 							json.dump(specification, block_out, indent=4)
 	else:
