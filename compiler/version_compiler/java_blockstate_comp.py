@@ -79,8 +79,8 @@ def main(uncompiled_path: str, compiled_path: str, primitives):
 		for block_string, states in blocks.items():
 			namespace, block_name = block_string.split(':', 1)
 
-			if not os.path.isdir(f'{compiled_path}/blockstate/{namespace}/vanilla/specification'):
-				os.makedirs(f'{compiled_path}/blockstate/{namespace}/vanilla/specification')
+			if not os.path.isdir(f'{compiled_path}/block/blockstate/specification/{namespace}/vanilla'):
+				os.makedirs(f'{compiled_path}/block/blockstate/specification/{namespace}/vanilla')
 
 			default_state = next(s for s in states['states'] if s.get('default', False))
 
@@ -93,16 +93,16 @@ def main(uncompiled_path: str, compiled_path: str, primitives):
 			del states['states']
 			if not debug(states):
 				print(f'Error in "{block_string}"')
-			with open(f'{compiled_path}/blockstate/{namespace}/vanilla/specification/{block_name}.json', 'w') as block_out:
+			with open(f'{compiled_path}/block/blockstate/specification/{namespace}/vanilla/{block_name}.json', 'w') as block_out:
 				json.dump(states, block_out, indent=4)
 
 			if not(namespace in modifications and any(block_name in modifications[namespace][group_name] for group_name in modifications[namespace])):
 				# the block is not marked for removal
 
-				if not os.path.isdir(f'{compiled_path}/blockstate/{namespace}/vanilla/to_universal'):
-					os.makedirs(f'{compiled_path}/blockstate/{namespace}/vanilla/to_universal')
-				if not os.path.isdir(f'{compiled_path}/blockstate/universal_{namespace}/vanilla/from_universal'):
-					os.makedirs(f'{compiled_path}/blockstate/universal_{namespace}/vanilla/from_universal')
+				if not os.path.isdir(f'{compiled_path}/block/blockstate/to_universal/{namespace}/vanilla'):
+					os.makedirs(f'{compiled_path}/block/blockstate/to_universal/{namespace}/vanilla')
+				if not os.path.isdir(f'{compiled_path}/block/blockstate/from_universal/universal_{namespace}/vanilla'):
+					os.makedirs(f'{compiled_path}/block/blockstate/from_universal/universal_{namespace}/vanilla')
 
 				if 'properties' in default_state:
 					to_universal = {
@@ -121,15 +121,15 @@ def main(uncompiled_path: str, compiled_path: str, primitives):
 						"new_block": block_string
 					}
 
-				with open(f'{compiled_path}/blockstate/{namespace}/vanilla/to_universal/{block_name}.json', 'w') as block_out:
+				with open(f'{compiled_path}/block/blockstate/to_universal/{namespace}/vanilla/{block_name}.json', 'w') as block_out:
 					json.dump(to_universal, block_out, indent=4)
-				with open(f'{compiled_path}/blockstate/universal_{namespace}/vanilla/from_universal/{block_name}.json', 'w') as block_out:
+				with open(f'{compiled_path}/block/blockstate/from_universal/universal_{namespace}/vanilla/{block_name}.json', 'w') as block_out:
 					json.dump(from_universal, block_out, indent=4)
 
 		for namespace in modifications:
 			for group_name in modifications[namespace]:
 				for block_name, block_data in modifications[namespace][group_name]["add"]:
-					if os.path.isfile(f'{compiled_path}/{namespace}/{group_name}/specification/{block_name}.json'):
+					if os.path.isfile(f'{compiled_path}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json'):
 						print(f'"{block_name}" is already present.')
 					else:
 						if isinstance(block_data, str):
@@ -137,10 +137,10 @@ def main(uncompiled_path: str, compiled_path: str, primitives):
 
 						assert isinstance(block_data, dict), f'The data here is supposed to be a dictionary. Got this instead:\n{block_data}'
 
-						if not os.path.isdir(f'{compiled_path}/blockstate/{namespace}/vanilla/specification'):
-							os.makedirs(f'{compiled_path}/blockstate/{namespace}/vanilla/specification')
-						if not os.path.isdir(f'{compiled_path}/blockstate/{namespace}/vanilla/to_universal'):
-							os.makedirs(f'{compiled_path}/blockstate/{namespace}/vanilla/to_universal')
+						if not os.path.isdir(f'{compiled_path}/block/blockstate/specification/{namespace}/vanilla'):
+							os.makedirs(f'{compiled_path}/block/blockstate/specification/{namespace}/vanilla')
+						if not os.path.isdir(f'{compiled_path}/block/blockstate/to_universal/{namespace}/vanilla'):
+							os.makedirs(f'{compiled_path}/block/blockstate/to_universal/{namespace}/vanilla')
 
 						if not debug(block_data):
 							print(f'Error in "{block_name}"')
@@ -149,23 +149,23 @@ def main(uncompiled_path: str, compiled_path: str, primitives):
 							del specification['properties']['waterlogged']
 							del specification['defaults']['waterlogged']
 							# TODO: save this somewhere
-						with open(f'{compiled_path}/blockstate/{namespace}/{group_name}/specification/{block_name}.json', 'w') as block_out:
+						with open(f'{compiled_path}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', 'w') as block_out:
 							json.dump(specification, block_out, indent=4)
 
 						assert 'to_universal' in block_data, f'"to_universal" must be present. Was missing for {uncompiled_path} {namespace}:{block_name}'
-						with open(f'{compiled_path}/blockstate/{namespace}/{group_name}/to_universal/{block_name}.json', 'w') as block_out:
+						with open(f'{compiled_path}/block/blockstate/to_universal/{namespace}/{group_name}/{block_name}.json', 'w') as block_out:
 							json.dump(block_data["to_universal"], block_out, indent=4)
 
 						assert 'from_universal' in block_data, f'"to_universal" must be present. Was missing for {uncompiled_path} {namespace}:{block_name}'
 						for block_string2, mapping in block_data['from_universal'].items():
 							namespace2, block_name2 = block_string2.split(':', 1)
-							if not os.path.isdir(f'{compiled_path}/blockstate/{namespace2}/vanilla/from_universal'):
-								os.makedirs(f'{compiled_path}/blockstate/{namespace2}/vanilla/from_universal')
-							if os.path.isfile(f'{compiled_path}/blockstate/{namespace2}/vanilla/from_universal/{block_name}.json'):
-								with open(f'{compiled_path}/blockstate/{namespace2}/vanilla/from_universal/{block_name}.json', 'r') as block_out:
+							if not os.path.isdir(f'{compiled_path}/block/blockstate/from_universal/{namespace2}/vanilla'):
+								os.makedirs(f'{compiled_path}/block/blockstate/from_universal/{namespace2}/vanilla')
+							if os.path.isfile(f'{compiled_path}/block/blockstate/from_universal/{namespace2}/vanilla/{block_name}.json'):
+								with open(f'{compiled_path}/block/blockstate/from_universal/{namespace2}/vanilla/{block_name}.json', 'r') as block_out:
 									saved_data = json.load(block_out)
 								mapping = _merge_map(saved_data, mapping)
-							with open(f'{compiled_path}/blockstate/{namespace2}/vanilla/from_universal/{block_name}.json', 'w') as block_out:
+							with open(f'{compiled_path}/block/blockstate/from_universal/{namespace2}/vanilla/{block_name}.json', 'w') as block_out:
 								json.dump(mapping, block_out, indent=4)
 	else:
 		raise Exception(f'Cound not find {uncompiled_path}/generated/reports/blocks.json')
