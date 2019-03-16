@@ -50,22 +50,14 @@ def main(uncompiled_path: str, compiled_path: str, _):
 	if os.path.isdir(compiled_path):
 		shutil.rmtree(compiled_path)
 	if os.path.isfile(f'{uncompiled_path}/generated/reports/blocks.json'):
-		# Iterate through all namespaces
+		modifications = {}
+		# Iterate through all modifications and load them into a dictionary
 		for namespace in (namespace for namespace in os.listdir(f'{uncompiled_path}/modifications') if os.path.isdir(f'{uncompiled_path}/modifications/{namespace}')):
-			if not os.path.isdir(f'{compiled_path}/{namespace}'):
-				os.makedirs(f'{compiled_path}/{namespace}')
-			if namespace == 'universal_minecraft':
-				blocks = {f'universal_{key}': val for key, val in json.load(open(f'{uncompiled_path}/generated/reports/blocks.json'), object_pairs_hook=OrderedDict).items()}
-			else:
-				blocks = {}
-			# Iterate through each group name (these are arbitrary names that are just used to format the data better)
-			# EG 'chemistry' will be a separate group name from 'vanilla' but is just a visual split
+			if namespace not in modifications:
+				modifications[namespace] = {}
 			for group_name in (group_name for group_name in os.listdir(f'{uncompiled_path}/modifications/{namespace}') if os.path.isdir(f'{uncompiled_path}/modifications/{namespace}/{group_name}')):
-				modifications = {"remove": [], "add": {}}
-				if not os.path.isdir(f'{compiled_path}/{namespace}/{group_name}'):
-					os.makedirs(f'{compiled_path}/{namespace}/{group_name}')
-				if not os.path.isdir(f'{compiled_path}/{namespace}/{group_name}/specification'):
-					os.makedirs(f'{compiled_path}/{namespace}/{group_name}/specification')
+				if group_name not in modifications[namespace]:
+					modifications[namespace][group_name] = {"remove": [], "add": {}}
 
 				# load the modifications for that namespace and group name
 				for file_name in os.listdir(f'{uncompiled_path}/modifications/{namespace}/{group_name}'):
@@ -73,45 +65,47 @@ def main(uncompiled_path: str, compiled_path: str, _):
 						with open(f'{uncompiled_path}/modifications/{namespace}/{group_name}/{file_name}') as file_object:
 							json_object = json.load(file_object)
 						if "remove" in json_object:
-							modifications["remove"] += json_object["remove"]
+							modifications[namespace][group_name]["remove"] += json_object["remove"]
 						if "add" in json_object:
 							for key, val in json_object["add"].items():
-								if key in modifications["add"]:
+								if key in modifications[namespace][group_name]["add"]:
 									print(f'Key "{key}" specified for addition more than once')
-								modifications["add"][key] = val
+								modifications[namespace][group_name]["add"][key] = val
 
-				# remove all the blocks marked for removal from the vanilla java files
-				for block_name in modifications["remove"]:
-					if f'{namespace}:{block_name}' in blocks:
-						del blocks[f'{namespace}:{block_name}']
-					else:
-						print(f'"{namespace}:{block_name}" either does not exist or was deleted more than once')
+		# load the block list the server created
+		blocks: OrderedDict[str, dict] = json.load(open(f'{uncompiled_path}/generated/reports/blocks.json'), object_pairs_hook=OrderedDict)
 
-				# if the group name is vanilla go through all the vanilla java blocks remaining and add them
-				if group_name == 'vanilla':
-					for block_string, block_data in blocks.items():
-						namespace_, block_name = block_string.split(':')
-						default_state = next(s for s in block_data['states'] if s.get('default', False))
-						if 'properties' in default_state:
-							block_data['defaults'] = default_state['properties']
-						del block_data['states']
-						if not debug(block_data):
-							print(f'Error in "{block_string}"')
-						with open(f'{compiled_path}/{namespace_}/{group_name}/specification/{block_name}.json', 'w') as block_out:
-							json.dump(block_data, block_out, indent=4)
+		for block_string, states in blocks.items():
+			namespace, block_name = block_string.split(':', 1)
 
-				# add the new files
-				for block_name, block_data in modifications["add"].items():
-					if os.path.isfile(f'{compiled_path}/{namespace}/{group_name}/specification/{block_name}.json'):
+			if not os.path.isdir(f'{compiled_path}/block/blockstate/specification/{namespace}/vanilla'):
+				os.makedirs(f'{compiled_path}/block/blockstate/specification/{namespace}/vanilla')
+
+			default_state = next(s for s in states['states'] if s.get('default', False))
+
+			del states['states']
+			if not debug(states):
+				print(f'Error in "{block_string}"')
+			with open(f'{compiled_path}/block/blockstate/specification/{namespace}/vanilla/{block_name}.json', 'w') as block_out:
+				json.dump(states, block_out, indent=4)
+
+		for namespace in modifications:
+			for group_name in modifications[namespace]:
+				for block_name, block_data in modifications[namespace][group_name]["add"]:
+					if os.path.isfile(f'{compiled_path}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json'):
 						print(f'"{block_name}" is already present.')
 					else:
+						assert isinstance(block_data, dict), f'The data here is supposed to be a dictionary. Got this instead:\n{block_data}'
+
+						if not os.path.isdir(f'{compiled_path}/block/blockstate/specification/{namespace}/vanilla'):
+							os.makedirs(f'{compiled_path}/block/blockstate/specification/{namespace}/vanilla')
+						if not os.path.isdir(f'{compiled_path}/block/blockstate/to_universal/{namespace}/vanilla'):
+							os.makedirs(f'{compiled_path}/block/blockstate/to_universal/{namespace}/vanilla')
+
 						if not debug(block_data):
 							print(f'Error in "{block_name}"')
-						with open(f'{compiled_path}/{namespace}/{group_name}/specification/{block_name}.json', 'w') as block_out:
-							json.dump(block_data, block_out, indent=4)
+						specification = block_data.get("specification", {})
+						with open(f'{compiled_path}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', 'w') as block_out:
+							json.dump(specification, block_out, indent=4)
 	else:
 		raise Exception(f'Cound not find {uncompiled_path}/generated/reports/blocks.json')
-
-
-if __name__ == "__main__":
-	main('../../versions/universal', '.')
