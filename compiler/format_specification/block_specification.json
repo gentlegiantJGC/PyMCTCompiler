@@ -1,0 +1,192 @@
+{
+	"version": 0,
+	"types": {
+		"dict": {
+			"required_keys": null,
+			"optional_keys": {
+				"properties": {
+					"types": {
+						"dict": {
+							"required_keys": null,
+							"optional_keys": null,
+							"variable_keys": {
+								"types": {
+									"list": {
+										"types": {
+											"str": {
+												"options": null
+											}
+										}
+									},
+									"dict": {
+										"required_keys": {
+											"type": {
+												"types": {
+													"str": {
+														"options": [
+															"byte",
+															"short",
+															"int",
+															"long",
+															"float",
+															"double",
+															"string"
+														]
+													}
+												}
+											},
+											"default": {
+												"types": {
+													"str": {
+														"options": null
+													}
+												}
+											}
+										},
+										"optional_keys": {
+											"options": {
+												"types": {
+													"list": {
+														"types": {
+															"str": {
+																"options": null
+															}
+														}
+													}
+												}
+											}
+										},
+										"variable_keys": null
+									}
+								}
+							}
+						}
+					}
+				},
+				"defaults": {
+					"types": {
+						"dict": {
+							"required_keys": null,
+							"optional_keys": null,
+							"variable_keys": {
+								"types": {
+									"str": {
+										"options": null
+									}
+								}
+							}
+						}
+					}
+				},
+				"nbt": {
+					"types": {
+						"dict": {
+							"required_keys": null,
+							"optional_keys": null,
+							"variable_keys": {
+								"types": {
+									"dict": {
+										"required_keys": {
+											"name": {
+												"types": {
+													"str": {
+														"options": null
+													},
+													"int": {
+														"options": null
+													}
+												}
+											},
+											"type": {
+												"types": {
+													"str": {
+														"options": [
+															"byte",
+															"short",
+															"int",
+															"long",
+															"float",
+															"double",
+															"string"
+														]
+													}
+												}
+											},
+											"default": {
+												"types": {
+													"str": {
+														"options": null
+													},
+													"int": {
+														"options": null
+													},
+													"float": {
+														"options": null
+													}
+												}
+											}
+										},
+										"optional_keys": {
+											"path": {
+												"types": {
+													"list": {
+														"types": {
+															"list": {
+																"types": [
+																	{
+																		"str": {
+																			"options": null
+																		},
+																		"int": {
+																			"options": null
+																		}
+																	},
+																	{
+																		"str": {
+																			"options": [
+																				"byte",
+																				"short",
+																				"int",
+																				"long",
+																				"float",
+																				"double",
+																				"string"
+																			]
+																		}
+																	}
+																]
+															}
+														}
+													}
+												}
+											},
+											"options": {
+												"types": {
+													"list": {
+														"types": {
+															"str": {
+																"options": null
+															},
+															"int": {
+																"options": null
+															},
+															"float": {
+																"options": null
+															}
+														}
+													}
+												}
+											}
+										},
+										"variable_keys": null
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"variable_keys": null
+		}
+	}
+}

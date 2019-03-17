@@ -1,0 +1,79 @@
+{
+	"version": 0,
+	"types": {
+		"dict": {
+			"required_keys": {
+				"coords": {
+					"types": {
+						"list": [
+							{
+								"types": {
+									"int": {
+										"options": null
+									}
+								}
+							},
+							{
+								"types": {
+									"int": {
+										"options": null
+									}
+								}
+							},
+							{
+								"types": {
+									"int": {
+										"options": null
+									}
+								}
+							}
+						]
+					}
+				}
+			},
+			"optional_keys": {
+				"#mapping_functions": {}
+			},
+			"variable_keys": null
+		},
+		"list": {
+			"types": {
+				"dict": {
+					"required_keys": {
+						"coords": {
+							"types": {
+								"list": [
+									{
+										"types": {
+											"int": {
+												"options": null
+											}
+										}
+									},
+									{
+										"types": {
+											"int": {
+												"options": null
+											}
+										}
+									},
+									{
+										"types": {
+											"int": {
+												"options": null
+											}
+										}
+									}
+								]
+							}
+						}
+					},
+					"optional_keys": {
+						"#mapping_functions": {}
+					},
+					"variable_keys": null
+				}
+			}
+		}
+	}
+}

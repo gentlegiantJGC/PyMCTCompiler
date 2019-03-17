@@ -1,0 +1,22 @@
+{
+	"version": 0,
+	"types": {
+		"dict": {
+			"required_keys": null,
+			"optional_keys": null,
+			"variable_keys": {
+				"types": {
+					"str": {
+						"options": null
+					},
+					"int": {
+						"options": null
+					},
+					"float": {
+						"options": null
+					}
+				}
+			}
+		}
+	}
+}

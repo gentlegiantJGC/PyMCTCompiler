@@ -1,0 +1,20 @@
+{
+	"version": 0,
+	"types": {
+		"dict": {
+			"required_keys": null,
+			"optional_keys": null,
+			"variable_keys": {
+				"types": {
+					"dict": {
+						"required_keys": null,
+						"optional_keys": {
+							"#mapping_functions": {}
+						},
+						"variable_keys": null
+					}
+				}
+			}
+		}
+	}
+}
