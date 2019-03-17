@@ -2,7 +2,7 @@ import os
 import json
 import shutil
 from collections import OrderedDict
-from ..compile import _merge_map
+from ..helpers import _merge_map
 
 
 def debug(block_data: dict) -> bool:
