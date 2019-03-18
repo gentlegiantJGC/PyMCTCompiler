@@ -4,54 +4,66 @@ This is a simple runthrough of how to read the mappings and convert a block. For
 
 
 ## Folder Structure
-The folders are structured like this: (subject to change and can be baked out differently if needed. See [the compiler](/compiler) for more info)
+The folders are structured like this: (See [the compiler](/compiler) for more info)
 
 ~~~~
 - <version_name>
-    - blockstate  (this is always present for all formats. Either the actual format or implemented to mirror the numerical format.)
-        (directory with the same format as numerical below)
-    - numerical   (this is only present for numerical and psudo-numerical formats)
-        - <namespace>
-            - <group_name>  (used to split up blocks under the same namespace. EG for chemistry blocks in Bedrock that can be disabled)
-                - specification   (contains JSON files defining the specification for each file eg valid properties and nbt)
-                    <block_name>.json
-                - to_universal    (the mappings to convert from the version format to the universal format)
-                - from_universal  (the mappings to convert from the universal format to the version format. Should be under the namespace of the universal block)
-            - <group_name2> ('vanilla' should be the default group name)
-        - <namespace2>
+    - block
+        - blockstate  (this is always present for all formats. Either the actual format or implemented to mirror the numerical format.)
+            (directory with the same format as numerical below)
+        - numerical   (this is only present for numerical and psudo-numerical formats)
+            - specification   (contains JSON files defining the specification for each file eg valid properties and nbt)
+                - <namespace>
+                    - <group_name>  (used to split up blocks under the same namespace. EG for chemistry blocks in Bedrock that can be disabled)
+                        <block_name>.json
+                    - <group_name2> ('vanilla' should be the default group name)
+                - <namespace2>
+                    
+            - to_universal  (the mappings to convert from the version format to the universal format)
+                - <namespace>
+                    - <group_name>
+                        <block_name>.json
+                    - <group_name2>
+                - <namespace2>
+            
+            - from_universal  (the mappings to convert from the universal format to the version format)
+                - <namespace>  (These namespaces and group_names refer to the universal system.
+                                Namespaces should follow the format universal_{namespace})
+                    - <group_name>
+                        <block_name>.json
+                    - <group_name2>
+                - <namespace2>
     __init__.json
+    __numerical_map__.json (needed only for the "numerical" format)
 ~~~~
 
 ## Setting up for Conversion to Universal
 
-1. Find the version for the format the block is coming from. Check the 'format' key in the __init__.json file.
+1. Find the version for the format the block is coming from. Check the 'format' key in the `__init__.json` file.
 
-2. If the format is numerical then look up the numerical id in __numerical_map__.json to convert to a string id (used to put meaning to the numbers).
+2. If the format is numerical then look up the numerical id in `__numerical_map__.json` to convert to a string id (used to put meaning to the numbers).
 
     * Pass if psudo-numerical or blockstate format.
     
-3. Split the block id string about the ':' character (there should only be 1) to give <namespace> and <block_name>.
+3. Split the block id string about the ':' character (there should only be 1) to give `<namespace>` and `<block_name>`.
 
 4. Find the specification for the block and load in any missing properties from the defaults. It may also have NBT that needs to be loaded.
-    * For numerical and psudo-numerical in <version_name>/numerical/<namespace>/<group_name>/specification/<block_name>.json (it should only be found in one group_name and it should really be loaded beforehand so this isn't an issue)
-    * For blockstate in <version_name>/blockstate/<namespace>/<group_name>/specification/<block_name>.json
+    * For numerical and psudo-numerical in `<version_name>/block/numerical/specification/<namespace>/<group_name>/<block_name>.json` (it should only be found in one group_name and it should really be loaded beforehand so this isn't an issue)
+    * For blockstate in `<version_name>/block/blockstate/specification/<namespace>/<group_name>/<block_name>.json`
     
 5. Find the mappings to_universal in a similar way to the specification in 4. See 'Reading Mappings' below to do the actual conversion.
 
 
 ## Setting up for a Conversion from Universal
 
-1. Split the block id string about the ':' character (there should only be 1) to give <namespace> and <block_name>.
+1. Split the block id string about the ':' character (there should only be 1) to give `<namespace>` and `<block_name>`.
 
 2. Find the specification for the block and load in any missing properties from the defaults.
-    * universal/<namespace>/<group_name>/specification/<block_name>.json
+    * `universal/block/blockstate/specification/<namespace>/<group_name>/<block_name>.json`
 
 3. Find the mappings from_universal. See 'Reading Mappings' below to do the actual conversion.
-    * For numerical and psudo-numerical in <version_name>/numerical/<namespace>/<group_name>/from_universal/<block_name>.json (it should only be found in one group_name and it should really be loaded beforehand so this isn't an issue)
-    * For blockstate in <version_name>/blockstate/<namespace>/<group_name>/from_universal/<block_name>.json (also present for the numerical formats to replace the numerical format)
-
-
-
+    * For numerical and psudo-numerical in `<version_name>/block/numerical/from_universal/<namespace>/<group_name>/<block_name>.json` (it should only be found in one group_name and it should really be loaded beforehand so this isn't an issue)
+    * For blockstate in `<version_name>/block/blockstate/from_universal/<namespace>/<group_name>/<block_name>.json` (also present for the numerical formats to replace the numerical format)
 
 
 ## Reading Mappings
