@@ -2,6 +2,7 @@ import json
 import os
 import shutil
 import traceback
+import time
 from compiler import primitives, version_compiler
 from compiler.helpers import log_to_file, _merge_map, _blocks_from_server
 
@@ -202,6 +203,7 @@ def merge_map(data: dict, path: str, prefix: str = compiled_dir):
 
 def main():
 	"""Will remove all files from compiled_dir and generate them from uncompiled_dir"""
+	t2 = time.time()
 	counter = 0
 	while isdir('', compiled_dir) and counter < 10:
 		counter += 1
@@ -215,6 +217,8 @@ def main():
 		if not isdir(f'./{version_name}'):
 			continue
 		if hasattr(version_compiler, version_name) and hasattr(getattr(version_compiler, version_name), 'init'):
+			log_to_file(f'Compiling {version_name} ...')
+			t = time.time()
 			init = getattr(version_compiler, version_name).init
 			assert isinstance(init, dict)
 			if 'format' in init and init['format'] in ['numerical', 'pseudo-numerical', 'blockstate']:
@@ -231,11 +235,12 @@ def main():
 						process_version(version_name, 'blockstate')
 
 				save_json(f'{version_name}/__init__.json', init)
-				log_to_file(f'Finished compiling {version_name}')
+				log_to_file(f'\tFinished in {round(time.time() - t, 2)} seconds')
 			else:
 				log_to_file(f'"format" in __init__.json for {version_name} is either not defined or not a valid value. This version has been skipped')
 		else:
 			log_to_file(f'Cound not find __init__.json file for {version_name}. This version has been skipped')
+	log_to_file(f'\nFinished compiling all versions in {round(time.time() - t2, 2)}')
 
 
 if __name__ == '__main__':

@@ -14,7 +14,7 @@ def load_file(path: str) -> dict:
 			print(f'Could not load {path}. Not a .json or .pyjson file')
 
 
-print('Loading Primitives')
+print('Loading Primitives ...')
 blocks = {'numerical': {}}
 
 for start_folder in blocks:
@@ -29,7 +29,7 @@ for start_folder in blocks:
 				print(traceback.print_tb(e.__traceback__))
 
 
-print('Finished Loading Primitives')
+print('\tFinished Loading Primitives')
 
 
 def get_block(block_format: str, block_name: str) -> dict:
