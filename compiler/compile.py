@@ -3,7 +3,7 @@ import os
 import shutil
 import traceback
 from compiler import primitives, version_compiler
-from compiler.helpers import log_to_file, _merge_map
+from compiler.helpers import log_to_file, _merge_map, _blocks_from_server
 
 primitive_dir = './primitives'
 uncompiled_dir = './version_compiler'
@@ -46,6 +46,11 @@ def listdir(path: str, prefix: str = uncompiled_dir) -> list:
 	return os.listdir(f'{prefix}/{path}')
 
 
+def create_directory(path: str, prefix: str = compiled_dir):
+	if not isdir(path, prefix):
+		os.makedirs(f'{prefix}/{path}')
+
+
 def load_file(path: str, prefix: str = uncompiled_dir) -> dict:
 	"""Loads and returns the data from the file at prefix/path if it is a json file.
 
@@ -62,7 +67,7 @@ def load_file(path: str, prefix: str = uncompiled_dir) -> dict:
 		raise Exception(f'Could not load "{prefix}/{path}"')
 
 
-def save_json(path: str, data: dict, overwrite: bool = False):
+def save_json(path: str, data: dict, overwrite: bool = False, prefix: str = compiled_dir):
 	"""Will save "data" to a json file at compiled_dir/path.
 
 	:param path: The path to look for within prefix
@@ -71,12 +76,13 @@ def save_json(path: str, data: dict, overwrite: bool = False):
 	:type data: dict
 	:param overwrite: Whether to overwrite the file or error if it exists
 	:type overwrite: bool
+	:param prefix: Path prefix
+	:type prefix: str
 	"""
-	if not isdir(os.path.dirname(path), compiled_dir):
-		os.makedirs(os.path.dirname(f'{compiled_dir}/{path}'))
-	if not overwrite and os.path.isfile(f'{compiled_dir}/{path}'):
+	create_directory(os.path.dirname(path))
+	if not overwrite and os.path.isfile(f'{prefix}/{path}'):
 		raise Exception(f'File "{path}" already exists. Doing this will overwrite the data')
-	with open(f'{compiled_dir}/{path}', 'w') as f:
+	with open(f'{prefix}/{path}', 'w') as f:
 		json.dump(data, f, indent=4)
 
 
@@ -87,11 +93,15 @@ def copy_file(path: str):
 	:type path: str
 	"""
 	if isfile(path):
-		if not isdir(os.path.dirname(path), compiled_dir):
-			os.makedirs(os.path.dirname(f'{compiled_dir}/{path}'))
+		create_directory(os.path.dirname(path))
 		shutil.copy(f'{uncompiled_dir}/{path}', f'{compiled_dir}/{path}')
 	else:
 		log_to_file(f'Could not find file {uncompiled_dir}/{path} to copy')
+
+
+def blocks_from_server(version_name: str, prefix: str = uncompiled_dir):
+	"""Generate the block.json file from the server.jar"""
+	_blocks_from_server(prefix, version_name)
 
 
 def process_version(version_name: str, file_format: str):
@@ -172,16 +182,18 @@ def process_file(file_format: str, block_json: dict, version_name: str, namespac
 		raise Exception()
 
 
-def merge_map(data: dict, path: str):
+def merge_map(data: dict, path: str, prefix: str = compiled_dir):
 	"""Will save "data" to compiled_dir/path and merge with any data present.
 
 	:param data: The data to save
 	:type data: dict
 	:param path: The path to save it to relative to compiled_dir
 	:type path: str
+	:param prefix: Path prefix
+	:type path: str
 	"""
-	if isfile(path, compiled_dir):
-		with open(f'{compiled_dir}/{path}') as f:
+	if isfile(path, prefix):
+		with open(f'{prefix}/{path}') as f:
 			data_ = json.load(f)
 		save_json(path, _merge_map(data_, data), True)
 	else:
@@ -199,31 +211,31 @@ def main():
 			log_to_file(str(e))
 	if isdir('', compiled_dir):
 		raise Exception(f'Failed to delete "{compiled_dir}" for some reason')
-	for version in listdir(''):
-		if not isdir(f'./{version}'):
+	for version_name in listdir(''):
+		if not isdir(f'./{version_name}'):
 			continue
-		if hasattr(version_compiler, version) and hasattr(getattr(version_compiler, version), 'init'):
-			init = getattr(version_compiler, version).init
+		if hasattr(version_compiler, version_name) and hasattr(getattr(version_compiler, version_name), 'init'):
+			init = getattr(version_compiler, version_name).init
 			assert isinstance(init, dict)
 			if 'format' in init and init['format'] in ['numerical', 'pseudo-numerical', 'blockstate']:
 				if init['format'] == 'numerical':
-					copy_file(f'{version}/__numerical_map__.json')
+					copy_file(f'{version_name}/__numerical_map__.json')
 
-				if getattr(version_compiler, version).compiler is not None:
-					getattr(version_compiler, version).compiler(f'{uncompiled_dir}/{version}', f'{compiled_dir}/{version}', primitives)
+				if getattr(version_compiler, version_name).compiler is not None:
+					getattr(version_compiler, version_name).compiler(version_name, primitives)
 				else:
 					if init['format'] in ['numerical', 'pseudo-numerical']:
-						process_version(version, 'numerical')
+						process_version(version_name, 'numerical')
 
 					elif init['format'] == 'blockstate':
-						process_version(version, 'blockstate')
+						process_version(version_name, 'blockstate')
 
-				save_json(f'{version}/__init__.json', init)
-				log_to_file(f'Finished compiling {version}')
+				save_json(f'{version_name}/__init__.json', init)
+				log_to_file(f'Finished compiling {version_name}')
 			else:
-				log_to_file(f'"format" in __init__.json for {version} is either not defined or not a valid value. This version has been skipped')
+				log_to_file(f'"format" in __init__.json for {version_name} is either not defined or not a valid value. This version has been skipped')
 		else:
-			log_to_file(f'Cound not find __init__.json file for {version}. This version has been skipped')
+			log_to_file(f'Cound not find __init__.json file for {version_name}. This version has been skipped')
 
 
 if __name__ == '__main__':

@@ -1,3 +1,5 @@
+import os
+
 log_file = open('log.txt', 'w')
 
 
@@ -157,3 +159,28 @@ def unique_merge_lists(list_a: list, list_b: list) -> list:
 		if entry not in merged_list:
 			merged_list.append(entry)
 	return merged_list
+
+
+def _blocks_from_server(uncompiled_path: str, version_name: str):
+	if not os.path.isfile(f'{uncompiled_path}/{version_name}/generated/reports/blocks.json') and os.path.isfile(f'{uncompiled_path}/{version_name}/server.jar'):
+		# try and find a version of java with which to extract the blocks.json file
+		try:
+			os.system(f'java -cp {uncompiled_path}/{version_name}/server.jar net.minecraft.data.Main --reports --output {uncompiled_path}/{version_name}/generated')
+		except:
+			print('Cound not find global Java. Trying to find the one packaged with Minecraft')
+			if os.path.isdir(r'C:\Program Files (x86)\Minecraft\runtime'):
+				path = r'C:\Program Files (x86)\Minecraft\runtime'
+			elif os.path.isdir(r'C:\Program Files\Minecraft\runtime'):
+				path = r'C:\Program Files\Minecraft\runtime'
+			else:
+				raise Exception('Could not find where the Minecraft launcher is saved')
+			java_path = None
+			for (dirpath, _, filenames) in os.walk(path):
+				if 'java.exe' in filenames:
+					java_path = f'{dirpath}/java.exe'
+					break
+			if java_path is not None:
+				try:
+					os.system(f'{java_path} -cp {uncompiled_path}/{version_name}/server.jar net.minecraft.data.Main --reports --output {uncompiled_path}/{version_name}/generated')
+				except Exception as e:
+					raise Exception(f'This failed for some reason\n{e}')
