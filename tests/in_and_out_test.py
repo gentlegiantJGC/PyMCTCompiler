@@ -17,26 +17,56 @@ if __name__ == '__main__':
 					keys, values = zip(*properties.items())
 					for spec_ in itertools.product(*values):
 						spec = dict(zip(keys, spec_))
-						input_block = Block(namespace_str, block_name, spec)
+						input_numerical_block = Block(namespace_str, block_name, spec)
+						# numerical to universal
 						try:
-							output, extra_output, extra_needed = input_version.to_universal(None, input_block)
+							universal_output, extra_output, extra_needed = mappings.to_universal(None, platform_name, version_number, input_numerical_block)
 						except:
 							print('error to universal')
-							print({'block_name': f'{namespace_str}:{block_name}', 'properties': spec})
+							print(f'Input numerical: {input_numerical_block}')
 							continue
 						if extra_needed or extra_output is not None:
-							print(f'skipping {platform_name} {version_number} {namespace_str} {block_name} {spec}. Needs more data')
+							print(f'skipping {platform_name} {version_number} {input_numerical_block}. Needs more data')
 							continue
+
+						# universal to blockstate
 						try:
-							back_out = input_version.from_universal(None, output)
+							blockstate_output, extra_output, extra_needed = mappings.from_universal(None, platform_name, version_number, universal_output, True)
+						except:
+							print('error from universal to blockstate')
+							print(f'Input numerical: {input_numerical_block}')
+							print(f'Universal output: {universal_output}')
+							continue
+						if extra_needed or extra_output is not None:
+							print(f'skipping {platform_name} {version_number} {input_numerical_block}. Needs more data')
+							continue
+
+						# blockstate to universal
+						try:
+							universal_output2, extra_output, extra_needed = mappings.to_universal(None, platform_name, version_number, blockstate_output, True)
+						except:
+							print('error from universal to blockstate')
+							print(f'Input numerical: {input_numerical_block}')
+							print(f'Universal output: {universal_output}')
+							print(f'Blockstate output: {blockstate_output}')
+							continue
+						if extra_needed or extra_output is not None:
+							print(f'skipping {platform_name} {version_number} {input_numerical_block}. Needs more data')
+							continue
+
+						# universal to numerical
+						try:
+							back_out, extra_output, extra_needed = mappings.from_universal(None, platform_name, version_number, universal_output)
 						except:
 							print('error from universal')
-							print(output)
-							print({'block_name': f'{namespace_str}:{block_name}', 'properties': spec})
+							print(f'Input numerical: {input_numerical_block}')
+							print(f'Universal output: {universal_output}')
+							print(f'Blockstate output: {blockstate_output}')
+							print(f'Universal output 2: {universal_output2}')
 							continue
-						if str(input_block) != str(back_out[0]):
-							print(f"Conversion error: {{'{block_name}': '{namespace_str}:{block_name}', 'properties': {spec}}} != {back_out[0]}")
-							print(f'Universal: {output}')
-
-
-
+						if str(input_numerical_block) != str(back_out):
+							print(f"Conversion error: {input_numerical_block} != {back_out}")
+							print(f'Universal output: {universal_output}')
+							print(f'Blockstate output: {blockstate_output}')
+							print(f'Universal output 2: {universal_output2}')
+							print(f'Numerical: {back_out}')
