@@ -103,7 +103,7 @@ class Block:
 
 	@property
 	def properties(self) -> Dict[str, Union[str, bool, int]]:
-		return self._properties
+		return copy.deepcopy(self._properties)
 
 	@property
 	def blockstate(self) -> str:
@@ -122,6 +122,16 @@ class Block:
 		:return: The base blockstate string of the Block object
 		"""
 		return self.blockstate
+
+
+class Entity:
+	def __init__(self):
+		pass
+
+
+class BlockEntity:
+	def __init__(self):
+		pass
 
 
 class VersionContainer:
@@ -147,19 +157,19 @@ class VersionContainer:
 	def version_numbers(self, platform: str) -> List[Tuple[int, int, int]]:
 		return list(self._versions[platform].keys())
 
-	def get(self, platform: str, version_number: Tuple[int, int, int], force_blockstate: bool = None, namespace: str = None):
+	def get(self, platform: str, version_number: Tuple[int, int, int], force_blockstate: bool = None):
 		assert platform in self._versions and version_number in self._versions[platform]
 		version: Version = self._versions[platform][version_number]
 		if force_blockstate is not None:
-			return version.get(force_blockstate, namespace)
+			return version.get(force_blockstate)
 		else:
 			return version
 
-	def to_universal(self, level, platform: str, version_number: Tuple[int, int, int], namespace: str, block_id: str, properties: Dict[str, str], force_blockstate: bool = False, location: Tuple[int, int, int] = None) -> Tuple[dict, bool]:
-		return self.get(platform, version_number).to_universal(level, namespace, block_id, properties, force_blockstate, location)
+	def to_universal(self, level, platform: str, version_number: Tuple[int, int, int], object_input: Union[Block, Entity], force_blockstate: bool = False, location: Tuple[int, int, int] = None) -> Tuple[Union[Block, Entity], Union[BlockEntity, None], bool]:
+		return self.get(platform, version_number).to_universal(level, object_input, force_blockstate, location)
 
-	def from_universal(self, level, platform: str, version_number: Tuple[int, int, int], namespace: str, block_id: str, properties: Dict[str, str], force_blockstate: bool = False) -> dict:
-		return self.get(platform, version_number).from_universal(level, namespace, block_id, properties, force_blockstate)
+	def from_universal(self, level, platform: str, version_number: Tuple[int, int, int], object_input: Union[Block, Entity], force_blockstate: bool = False, location: Tuple[int, int, int] = None) -> Tuple[Union[Block, Entity], Union[BlockEntity, None], bool]:
+		return self.get(platform, version_number).from_universal(level, object_input, force_blockstate, location)
 
 
 class Version:
@@ -183,7 +193,7 @@ class Version:
 
 			if self.format in ['numerical', 'pseudo-numerical']:
 				for block_format in ['blockstate', 'numerical']:
-					self._subversions[block_format] = SubVersion(f'{version_path}/{block_format}', version_container)
+					self._subversions[block_format] = SubVersion(f'{version_path}/block/{block_format}', version_container)
 				if self.format == 'numerical':
 					with open(f'{version_path}/__numerical_map__.json') as f:
 						self._numerical_map = json.load(f)
@@ -193,7 +203,7 @@ class Version:
 						self._numerical_map_inverse[block_string] = block_id
 
 			elif self.format == 'blockstate':
-				self._subversions['blockstate'] = SubVersion(version_path, version_container)
+				self._subversions['blockstate'] = SubVersion(f'{version_path}/block/blockstate', version_container)
 
 	@property
 	def format(self) -> str:
@@ -207,34 +217,42 @@ class Version:
 	def version_number(self) -> Tuple[int, int, int]:
 		return self._version_number
 
-	def get(self, force_blockstate: bool = False, namespace: str = None):
+	def get(self, force_blockstate: bool = False) -> 'SubVersion':
 		assert isinstance(force_blockstate, bool), 'force_blockstate must be a bool type'
 		if force_blockstate:
-			sub_version: SubVersion = self._subversions['blockstate']
+			return self._subversions['blockstate']
 		else:
 			if self.format in ['numerical', 'pseudo-numerical']:
-				sub_version: SubVersion = self._subversions['numerical']
+				return self._subversions['numerical']
 			elif self.format == 'blockstate':
-				sub_version: SubVersion = self._subversions['blockstate']
+				return self._subversions['blockstate']
 			else:
 				raise NotImplemented
-		if namespace is not None:
-			return sub_version.get(namespace)
+
+	def to_universal(self, level, object_input: Union[Block, Entity], force_blockstate: bool = False, location: Tuple[int, int, int] = None) -> Tuple[Union[Block, Entity], Union[BlockEntity, None], bool]:
+		if isinstance(object_input, Block):
+			if self.format == 'numerical' and not force_blockstate:
+				assert object_input.base_name.isnumeric(), 'For the numerical format base_name must be an int converted to a string'
+				namespace, base_name = self._numerical_map[object_input.base_name].split(':')
+				object_input = Block(namespace, base_name, object_input.properties)
+		elif isinstance(object_input, Entity):
+			raise NotImplemented
 		else:
-			return sub_version
+			raise Exception
+		return self.get(force_blockstate).to_universal(level, object_input, location)
 
-	def to_universal(self, level, namespace: str, block_id: str, properties: Dict[str, str], force_blockstate: bool = False, location: Tuple[int, int, int] = None) -> Tuple[dict, bool]:
-		if self.format == 'numerical' and not force_blockstate:
-			assert block_id.isnumeric(), 'For the numerical format block_id must be an int converted to a string'
-			namespace, block_id = self._numerical_map[block_id].split(':')
-		assert isinstance(block_id, str), 'block_id must be a string'
-		return self.get(force_blockstate).to_universal(level, namespace, block_id, properties, location)
+	def from_universal(self, level, object_input: Union[Block, Entity], force_blockstate: bool = False, location: Tuple[int, int, int] = None) -> Tuple[Union[Block, Entity], Union[BlockEntity, None], bool]:
+		assert isinstance(object_input, (Block, Entity)), f'Input must be a Block or an Entity. Got "{type(object_input)}" instead.'
 
-	def from_universal(self, level, namespace: str, block_name: str, properties: Dict[str, str], force_blockstate: bool = False) -> dict:
-		blockstate = self.get(force_blockstate).from_universal(level, namespace, block_name, properties)
-		if self.format == 'numerical':
-			blockstate['block_name'] = self._numerical_map_inverse[blockstate['block_name']]
-		return blockstate
+		output, extra_output, extra_needed = self.get(force_blockstate).from_universal(level, object_input, location)
+		if isinstance(output, Block) and self.format == 'numerical':
+			namespace, base_name = '', self._numerical_map_inverse[output.base_name]
+			output = Block(namespace, base_name, object_input.properties)
+		elif isinstance(object_input, Entity):
+			raise NotImplemented
+		else:
+			raise Exception
+		return output, extra_output, extra_needed
 
 
 class SubVersion:
@@ -244,238 +262,274 @@ class SubVersion:
 	This is the container where that data will be stored.
 	"""
 	def __init__(self, sub_version_path: str, version_container: VersionContainer):
-		self._namespaces = {}
-		for namespace in directories(sub_version_path):
-			self._namespaces[namespace] = Namespace(f'{sub_version_path}/{namespace}', namespace, version_container, self)
-
-	def to_universal(self, level, namespace: str, block_name: str, properties: Dict[str, str], location: Tuple[int, int, int] = None) -> Tuple[dict, bool]:
-		try:
-			return self.get(namespace).to_universal(level, block_name, properties, location)
-		except Exception as e:
-			warn(f'Failed getting namespace. It may not exist.\n{e}')
-			return {'block_name': f'{namespace}/{block_name}', 'properties': properties}, False
-
-	def from_universal(self, level, namespace: str, block_name: str, properties: Dict[str, str]) -> dict:
-		try:
-			return self.get(namespace).from_universal(level, block_name, properties)
-		except Exception as e:
-			warn(f'Failed getting namespace. It may not exist.\n{e}')
-			return {'block_name': f'{namespace}/{block_name}', 'properties': properties}
+		self._version_container = version_container
+		self._mappings = {
+			"block": {
+				'to_universal': {},
+				'from_universal': {},
+				'specification': {}
+			}
+		}
+		assert os.path.isdir(sub_version_path), f'{sub_version_path} is not a valid path'
+		for method in ['to_universal', 'from_universal', 'specification']:
+			if os.path.isdir(f'{sub_version_path}/{method}'):
+				for namespace in directories(f'{sub_version_path}/{method}'):
+					self._mappings["block"][method][namespace] = {}
+					for group_name in directories(f'{sub_version_path}/{method}/{namespace}'):
+						for block in files(f'{sub_version_path}/{method}/{namespace}/{group_name}'):
+							if block.endswith('.json'):
+								with open(f'{sub_version_path}/{method}/{namespace}/{group_name}/{block}') as f:
+									self._mappings["block"][method][namespace][block[:-5]] = json.load(f)
 
 	@property
 	def namespaces(self) -> List[str]:
-		return list(self._namespaces.keys())
+		return list(self._mappings['block']['specification'].keys())
 
-	def get(self, namespace: str) -> 'Namespace':
-		assert namespace in self._namespaces
-		return self._namespaces[namespace]
+	def block_names(self, namespace: str) -> List[str]:
+		return list(self._mappings['block']['specification'][namespace])
 
-
-class Namespace:
-	"""
-	Container for each namespace
-	"""
-	def __init__(self, namespace_path: str, namespace: str, version_container: VersionContainer, current_version: SubVersion):
-		self._namespace = namespace
-		self.version_container = version_container
-		self.current_version = current_version
-		self._blocks = {'to_universal': {}, 'from_universal': {}, 'specification': {}}
-		for group_name in directories(namespace_path):
-			for method in ['to_universal', 'from_universal', 'specification']:
-				if os.path.isdir(f'{namespace_path}/{group_name}/{method}'):
-					for block in files(f'{namespace_path}/{group_name}/{method}'):
-						with open(f'{namespace_path}/{group_name}/{method}/{block}') as f:
-							self._blocks[method][block[:-5]] = json.load(f)
-
-	@property
-	def namespace(self) -> str:
-		return self._namespace
-
-	@property
-	def block_names(self) -> List[str]:
-		return list(self._blocks['specification'].keys())
-
-	def get_specification(self, block_name) -> dict:
-		assert block_name in self._blocks['specification'], f'Specification for {self.namespace}:{block_name} does not exist'
-		return copy.deepcopy(self._blocks['specification'][block_name])
-
-	def get_mapping_to_universal(self, block_name) -> dict:
-		assert block_name in self._blocks['to_universal'], f'Mapping to universal for {self.namespace}:{block_name} does not exist'
-		return copy.deepcopy(self._blocks['to_universal'][block_name])
-
-	def get_mapping_from_universal(self, block_name) -> dict:
-		assert block_name in self._blocks['from_universal'], f'Mapping from universal for {self.namespace}:{block_name} does not exist'
-		return copy.deepcopy(self._blocks['from_universal'][block_name])
-
-	def to_universal(self, level, block_name: str, properties: Dict[str, str], location: Tuple[int, int, int] = None) -> Tuple[dict, bool]:
-		blockstate = {'block_name': f'{self.namespace}:{block_name}', 'properties': properties}
-		extra = False
+	def get_specification(self, mode: str, namespace: str, name: str) -> dict:
 		try:
-			new_blockstate, extra = self.convert(
+			return copy.deepcopy(self._mappings[mode]['specification'][namespace][name])
+		except KeyError:
+			raise KeyError(f'Specification for {mode} {namespace}:{name} does not exist')
+
+	def get_mapping_to_universal(self, mode: str, namespace: str, name: str) -> dict:
+		try:
+			return copy.deepcopy(self._mappings[mode]['to_universal'][namespace][name])
+		except KeyError:
+			raise KeyError(f'Mapping to universal for {mode} {namespace}:{name} does not exist')
+
+	def get_mapping_from_universal(self, mode: str, namespace: str, name: str) -> dict:
+		try:
+			return copy.deepcopy(self._mappings[mode]['from_universal'][namespace][name])
+		except KeyError:
+			raise KeyError(f'Specification for {mode} {namespace}:{name} does not exist')
+
+	def to_universal(self, level, object_input: Union[Block, Entity], location: Tuple[int, int, int] = None) -> Tuple[Union[Block, Entity], Union[BlockEntity, None], bool]:
+		if isinstance(object_input, Block):
+			mode = 'block'
+		elif isinstance(object_input, Entity):
+			mode = 'entity'
+			raise NotImplemented
+		else:
+			raise Exception
+		try:
+			return self.convert(
 				level,
-				blockstate,
-				self.get_specification(block_name),
-				self.get_mapping_to_universal(block_name),
-				self.version_container.get('universal', (1, 0, 0)).get(),
+				object_input,
+				self.get_specification(mode, object_input.namespace, object_input.base_name),
+				self.get_mapping_to_universal(mode, object_input.namespace, object_input.base_name),
+				self._version_container.get('universal', (1, 0, 0)).get(),
 				location
 			)
-			if new_blockstate['nbt'] != {}:
-				warn(f'universal mappings should not have nbt: {new_blockstate}')
-			del new_blockstate['nbt']
 
 		except Exception as e:
 			info(f'Failed converting blockstate to universal\n{e}')
-			return blockstate, extra
-		else:
-			if new_blockstate['block_name'] is not None and new_blockstate['block_name'].startswith('universal_'):
-				return new_blockstate, extra
-			else:
-				debug('Returning input as universal')
-				return blockstate, extra
+			return object_input, None, False
 
-	def from_universal(self, level, block_name: str, properties: Dict[str, str]):
-		blockstate = {'block_name': f'{self.namespace}:{block_name}', 'properties': properties}
+	def from_universal(self, level, object_input: Union[Block, Entity], location: Tuple[int, int, int] = None) -> Tuple[Union[Block, Entity], Union[BlockEntity, None], bool]:
+		if isinstance(object_input, Block):
+			mode = 'block'
+		elif isinstance(object_input, Entity):
+			raise NotImplemented
+		else:
+			raise Exception
 		try:
-			new_blockstate, _ = self.convert(
+
+			return self.convert(
 				level,
-				blockstate,
-				self.version_container.get('universal', (1, 0, 0)).get().get(self.namespace).get_specification(block_name),
-				self.get_mapping_from_universal(block_name),
-				self.current_version
+				object_input,
+				self._version_container.get('universal', (1, 0, 0)).get().get_specification(mode, object_input.namespace, object_input.base_name),
+				self.get_mapping_from_universal(mode, object_input.namespace, object_input.base_name),
+				self,
+				location
 			)
 		except Exception as e:
 			info(f'Failed converting blockstate from universal\n{e}')
-			return blockstate
-		else:
-			if new_blockstate['block_name'] is not None:
-				return new_blockstate
-			else:
-				return blockstate
+			return object_input, None, False
 
-	def convert(self, level, input_blockstate: dict, input_spec: dict, mappings: dict, output_version: SubVersion, location: Tuple[int, int, int] = None) -> Tuple[dict, bool]:
+	def convert(self, level, object_input: Union[Block, Entity], input_spec: dict, mappings: dict, output_version: 'SubVersion', location: Tuple[int, int, int] = None) -> Tuple[Union[Block, Entity], Union[BlockEntity, None], bool]:
 		"""
 			A demonstration function on how to read the json files to convert into or out of the numerical format
 			You should implement something along these lines into you own code if you want to read them.
 
 			:param level: a view into the level to access additional data
-			:param input_blockstate: the blockstate put into the converter eg {'block_name': 'minecraft:log', 'properties': {'block_data': '0'}}
+			:param object_input: the Block or Entity object to be converted
 			:param input_spec: the specification for the input block from the input format
 			:param mappings: the mapping file for that block
 			:param output_version: A way for the function to look at the specification being converted to. (used to load default properties)
 			:param location: (x, y, z) only used if data beyond the blockstate is needed
 			:return: The converted blockstate
 		"""
-		if 'nbt' in input_spec:
-			if location is None:
-				return input_blockstate, True
+
+		extra_input = None
+
+		if isinstance(object_input, Block):
+			if 'nbt' in input_spec and location is not None:
+				# TODO: create blockentity from the nbt spec
+				extra_input = BlockEntity()
+				# TODO: overwrite with the data loaded from the world if present
+
+		elif isinstance(object_input, Entity):
+			raise NotImplemented
+
+			# TODO: rework the NBT system
+			# if location is None:
+			# 	return object_input, None, True
+			# else:
+			# 	nbt = get_nbt(level, location)
+			# 	input_blockstate['nbt'] = {}
+			# 	for key in input_spec['nbt']:
+			# 		_nbt = nbt
+			# 		path = input_spec['nbt'][key].get('path', []) + [input_spec['nbt'][key]['name'], input_spec['nbt'][key]['type']]
+			# 		try:
+			# 			assert _nbt.__class__.__name__ == 'TAG_Compound'
+			# 			for path_key, dtype in path:
+			# 				_nbt = _nbt[path_key]
+			# 				assert _nbt.__class__.__name__ == {
+			# 					'compound': 'TAG_Compound',
+			# 					'list': 'TAG_List',
+			# 					'byte': 'TAG_Byte',
+			# 					'short': 'TAG_Short',
+			# 					'int': 'TAG_Int',
+			# 					'long': 'TAG_Long',
+			# 					'float': 'TAG_Float',
+			# 					'double': 'TAG_Double',
+			# 					'string': 'TAG_String'
+			# 				}[dtype]
+			# 			input_blockstate['nbt'][key] = str(_nbt.value)
+			# 		except:
+			# 			input_blockstate['nbt'][key] = input_spec['nbt'][key]['default']
+
+		if isinstance(object_input, Block):
+			block_input = object_input
+			if extra_input is not None:
+				assert isinstance(extra_input, BlockEntity)
+				nbt_input = extra_input
 			else:
-				nbt = get_nbt(level, location)
-				input_blockstate['nbt'] = {}
-				for key in input_spec['nbt']:
-					_nbt = nbt
-					path = input_spec['nbt'][key].get('path', []) + [input_spec['nbt'][key]['name'], input_spec['nbt'][key]['type']]
-					try:
-						assert _nbt.__class__.__name__ == 'TAG_Compound'
-						for path_key, dtype in path:
-							_nbt = _nbt[path_key]
-							assert _nbt.__class__.__name__ == {
-								'compound': 'TAG_Compound',
-								'list': 'TAG_List',
-								'byte': 'TAG_Byte',
-								'short': 'TAG_Short',
-								'int': 'TAG_Int',
-								'long': 'TAG_Long',
-								'float': 'TAG_Float',
-								'double': 'TAG_Double',
-								'string': 'TAG_String'
-							}[dtype]
-						input_blockstate['nbt'][key] = str(_nbt.value)
-					except:
-						input_blockstate['nbt'][key] = input_spec['nbt'][key]['default']
+				nbt_input = None
+		elif isinstance(object_input, Entity):
+			block_input = None
+			nbt_input = object_input
+			raise NotImplemented
+		else:
+			raise Exception
 
-		output_blockstate, new, extra = self._convert(level, input_blockstate, mappings, output_version, location)
-		for entry in ['properties', 'nbt']:
-			for key, val in new[entry].items():
-				output_blockstate[entry][key] = val
-		return output_blockstate, extra
+		block_output, nbt_output, new, extra_needed, cacheable = self._convert(level, block_input, nbt_input, mappings, output_version, location)
+		if isinstance(block_output, dict):
+			properties = block_output['properties']
+			for key, val in new['properties'].items():
+				properties[key] = val
+			namespace, base_name = block_output['block_name'].split(':', 1)
+			output = Block(namespace, base_name, properties)
+			extra_output = None
+			if extra_input is not None:
+				assert isinstance(nbt_output, dict)
+				# TODO: merge new['nbt'] into nbt_output and convert to a block entity
 
-	def _convert(self, level, input_blockstate: dict, mappings: dict, output_version: SubVersion, location: Tuple[int, int, int] = None):
-		output_blockstate = {'block_name': None, 'properties': {}, 'nbt': {}}
+		elif block_output is None:
+			assert isinstance(nbt_output, dict)
+			# TODO: merge new['nbt'] into nbt_output and convert to an entity
+			output, extra_output = nbt_output, None
+			raise NotImplemented
+		else:
+			raise Exception
+		return output, extra_output, extra_needed
+
+	def _convert(self, level, block_input: Union[Block, None], nbt_input: Union[Entity, BlockEntity], mappings: dict, output_version: 'SubVersion', location: Tuple[int, int, int] = None) -> Tuple[Union[dict, None], Union[dict, None], dict, bool, bool]:
+		block_output = None
+		nbt_output = None
 		new = {'properties': {}, 'nbt': {}}  # There could be multiple 'new_block' functions in the mappings so new properties are put in here and merged at the very end
-		extra = False  # used to determine if extra data is required (and thus to do block by block)
+		extra_needed = False  # used to determine if extra data is required (and thus to do block by block)
+		cacheable = True
 		if 'new_block' in mappings:
 			assert isinstance(mappings['new_block'], str)
-			output_blockstate['block_name'] = mappings['new_block']
-			namespace, block_name = output_blockstate['block_name'].split(':')
-			output_blockstate['properties'] = output_version.get(namespace).get_specification(block_name).get('defaults', {})
+			namespace, block_name = mappings['new_block'].split(':', 1)
+			spec = output_version.get_specification('block', namespace, block_name)
+			block_output = {
+				'block_name': mappings['new_block'],
+				'properties': spec.get('defaults', {})
+			}
+			if 'nbt' in spec:
+				pass
+				# TODO: implement NBT
 
 		if 'new_properties' in mappings:
 			for key, val in mappings['new_properties'].items():
 				new['properties'][key] = val
 
 		if 'new_nbt' in mappings:
+			# TODO: rework for the new NBT system
 			for key, val in mappings['new_nbt'].items():
 				new['nbt'][key] = val
 
 		if 'carry_properties' in mappings:
+			assert isinstance(block_input, Block), 'The block input is not a block'
 			for key in mappings['carry_properties']:
-				if key in input_blockstate['properties']:
-					val = input_blockstate['properties'][key]
-					if val in mappings['carry_properties'][key]:
+				if key in block_input.properties:
+					val = block_input.properties[key]
+					if str(val) in mappings['carry_properties'][key]:
 						new['properties'][key] = val
-				# else:
-				# 	raise Exception(f'Property "{key}" is not present in the input blockstate')
 
 		if 'multiblock' in mappings:
+			cacheable = False
 			if location is None:
-				extra = True
+				extra_needed = True
 			# TODO: multiblock code
 			# else:
-			#	if 'multiblock' is a dictionary:
-				# 	get the block at 'location' in the input format
-				#	call self._convert on this new blockstate
-			#	elif 'multiblock' is a list:
-				#	do the above but on every dictionary in the list
+			# 	if 'multiblock' is a dictionary:
+			# 		get the block at 'location' in the input format
+			# 		call self._convert on this new blockstate
+			# 	elif 'multiblock' is a list:
+			# 		do the above but on every dictionary in the list
 
 		if 'map_properties' in mappings:
+			assert isinstance(block_input, Block), 'The block input is not a block'
 			for key in mappings['map_properties']:
-				if key in input_blockstate['properties']:
-					val = input_blockstate['properties'][key]
+				if key in block_input.properties:
+					val = block_input.properties[key]
 					if val in mappings['map_properties'][key]:
-						temp_blockstate, temp_new, extra = self._convert(level, input_blockstate, mappings['map_properties'][key][val], output_version)
-						if temp_blockstate['block_name'] is not None:
-							output_blockstate = temp_blockstate
-						for entry in ['properties', 'nbt']:
-							for key2, val2 in temp_new[entry].items():
-								new[entry][key2] = val2
-				# 	else:
-				# 		raise Exception(f'Value "{val}" for property "{key}" is not present in the mappings')
-				# else:
-				# 	raise Exception(f'Property "{key}" is not present in the input blockstate')
+						block_output_, nbt_output_, new_, extra_needed_, cacheable_ = self._convert(level, block_input, nbt_input, mappings['map_properties'][key][val], output_version, location)
+						if cacheable and not cacheable_:
+							cacheable = False
+						if not extra_needed and extra_needed_:
+							extra_needed = True
+						if isinstance(block_output_, dict):
+							block_output = block_output_
+						if isinstance(nbt_output_, dict):
+							nbt_output = nbt_output_
+						for key2, val2 in new_['properties'].items():
+							new['properties'][key2] = val2
+						# TODO: carry over nbt
 
 		if 'map_block_name' in mappings:
+			assert isinstance(block_input, Block)
 			pass
 			# TODO: map block name code
 
 		if 'map_nbt' in mappings:
+			cacheable = False
 			if location is None:
-				extra = True
+				extra_needed = True
 			else:
 				pass
 				# TODO: map nbt code
 
-		return output_blockstate, new, extra
+		return block_output, nbt_output, new, extra_needed, cacheable
 
 
 if __name__ == '__main__':
-	block_mappings = VersionContainer(r'..\versions')
+	print('Loading mappings...')
+	block_mappings = VersionContainer(r'..\mappings')
+	print('\tFinished')
 	info('==== bedrock_1_7_0 ====')
 	for data in range(16):
 		print(
-			block_mappings.to_universal(None, 'bedrock', (1, 7, 0), 'minecraft', 'log', {'block_data': str(data)})
+			block_mappings.to_universal(None, 'bedrock', (1, 7, 0), Block('minecraft', 'log', {'block_data': str(data)}))[0]
 		)
 	info('==== java_1_12_2 ====')
 	for data in range(16):
 		print(
-			block_mappings.to_universal(None, 'java', (1, 12, 2), 'minecraft', '17', {'block_data': str(data)})
+			block_mappings.to_universal(None, 'java', (1, 12, 2), Block('minecraft', '17', {'block_data': str(data)}))[0]
 		)
