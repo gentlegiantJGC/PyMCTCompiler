@@ -11,29 +11,17 @@ Structure:
 VersionContainer
 	Version : bedrock_1_7_0
 		SubVersion : numerical
-			Namespace : minecraft
-			Namespace : other_namespace
 		SubVersion : blockstate
-			Namespace : minecraft
-			Namespace : other_namespace
 			
 	Version : java_1_12_0
 		SubVersion : numerical
-			Namespace : minecraft
-			Namespace : other_namespace
 		SubVersion : blockstate
-			Namespace : minecraft
-			Namespace : other_namespace
 			
 	Version : java_1_13_0
 		SubVersion : blockstate
-			Namespace : minecraft
-			Namespace : other_namespace
 			
 	Version : universal
 		SubVersion : blockstate
-			Namespace : minecraft
-			Namespace : other_namespace
 """
 
 
@@ -193,7 +181,7 @@ class Version:
 
 			if self.format in ['numerical', 'pseudo-numerical']:
 				for block_format in ['blockstate', 'numerical']:
-					self._subversions[block_format] = SubVersion(f'{version_path}/block/{block_format}', version_container)
+					self._subversions[block_format] = SubVersion(f'{version_path}/block/{block_format}', version_container, self)
 				if self.format == 'numerical':
 					with open(f'{version_path}/__numerical_map__.json') as f:
 						self._numerical_map = json.load(f)
@@ -203,7 +191,7 @@ class Version:
 						self._numerical_map_inverse[block_string] = block_id
 
 			elif self.format == 'blockstate':
-				self._subversions['blockstate'] = SubVersion(f'{version_path}/block/blockstate', version_container)
+				self._subversions['blockstate'] = SubVersion(f'{version_path}/block/blockstate', version_container, self)
 
 	@property
 	def format(self) -> str:
@@ -262,7 +250,8 @@ class SubVersion:
 	(if it is numerical or pseudo-numerical it will have both a numerical and blockstate format)
 	This is the container where that data will be stored.
 	"""
-	def __init__(self, sub_version_path: str, version_container: VersionContainer):
+	def __init__(self, sub_version_path: str, version_container: VersionContainer, parent: Version):
+		self._parent = parent
 		self._version_container = version_container
 		self._mappings = {
 			"block": {
@@ -281,6 +270,14 @@ class SubVersion:
 							if block.endswith('.json'):
 								with open(f'{sub_version_path}/{method}/{namespace}/{group_name}/{block}') as f:
 									self._mappings["block"][method][namespace][block[:-5]] = json.load(f)
+
+	@property
+	def platform(self) -> str:
+		return self._parent.platform
+
+	@property
+	def version_number(self) -> Tuple[int, int, int]:
+		return self._parent.version_number
 
 	@property
 	def namespaces(self) -> List[str]:
