@@ -1,9 +1,9 @@
 {
 	"to_universal": {
-		"new_block": "universal_minecraft:lever",
 		"map_properties": {
 			"block_data": {
 				str(data): {
+					"new_block": "universal_minecraft:lever",
 					"new_properties": properties
 				} for data, properties in {
 					0: {"face": "ceiling", "facing": "west", "powered": "false"},
@@ -28,6 +28,7 @@
 	},
 	"from_universal": {
 		"universal_minecraft:lever": {
+			"new_block": "minecraft:lever",
 			"map_properties": {
 				"powered": {
 					powered: {

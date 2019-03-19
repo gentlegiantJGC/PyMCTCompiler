@@ -1,1 +1,1 @@
-numerical.furnace("minecraft", "furnace", True, "universal_minecraft", "furnace")
+numerical.furnace("minecraft", "lit_furnace", True, "universal_minecraft", "furnace")

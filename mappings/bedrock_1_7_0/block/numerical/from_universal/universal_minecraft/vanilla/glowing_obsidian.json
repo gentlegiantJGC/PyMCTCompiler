@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:glowing_obsidian",
+    "new_block": "minecraft:glowingobsidian",
     "new_properties": {
         "block_data": "0"
     }

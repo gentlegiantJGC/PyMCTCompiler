@@ -1,9 +1,9 @@
 {
     "to_universal": {
-        "new_block": "universal_minecraft:piston_head",
         "map_properties": {
             "block_data": {
                 str(data): {
+                    "new_block": "universal_minecraft:piston_head",
                     "new_properties": {
                         "facing": {0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}[data]
                     },
@@ -31,7 +31,7 @@
     },
     "from_universal": {
         "universal_minecraft:piston_head": {
-            "new_block": "minecraft:piston_head",
+            "new_block": "minecraft:pistonarmcollision",
             "map_properties": {
                 "facing": {
                     facing: {
@@ -87,7 +87,7 @@
     },
     "blockstate_from_universal": {
         "universal_minecraft:piston_head": {
-            "new_block": "minecraft:piston_head",
+            "new_block": "minecraft:pistonarmcollision",
             "new_properties": {
                 "type": "normal"
             },
@@ -103,7 +103,7 @@
             }
         },
         "universal_minecraft:sticky_piston_head": {
-            "new_block": "minecraft:piston_head",
+            "new_block": "minecraft:pistonarmcollision",
             "new_properties": {
                 "type": "sticky"
             },

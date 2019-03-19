@@ -1,5 +1,5 @@
 {
-    "new_block": "minecraft:piston_head",
+    "new_block": "minecraft:pistonarmcollision",
     "new_properties": {
         "type": "sticky"
     },
