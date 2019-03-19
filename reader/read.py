@@ -245,9 +245,10 @@ class Version:
 		assert isinstance(object_input, (Block, Entity)), f'Input must be a Block or an Entity. Got "{type(object_input)}" instead.'
 
 		output, extra_output, extra_needed = self.get(force_blockstate).from_universal(level, object_input, location)
-		if isinstance(output, Block) and self.format == 'numerical':
-			namespace, base_name = '', self._numerical_map_inverse[output.base_name]
-			output = Block(namespace, base_name, object_input.properties)
+		if isinstance(output, Block):
+			if self.format == 'numerical':
+				namespace, base_name = '', self._numerical_map_inverse[output.base_name]
+				output = Block(namespace, base_name, object_input.properties)
 		elif isinstance(object_input, Entity):
 			raise NotImplemented
 		else:
