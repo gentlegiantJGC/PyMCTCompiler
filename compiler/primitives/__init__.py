@@ -15,7 +15,7 @@ def load_file(path: str) -> dict:
 
 
 print('Loading Primitives ...')
-blocks = {'numerical': {}}
+blocks = {'numerical': {}, 'blockstate': {}}
 
 for start_folder in blocks:
 	for root, dirs, files in os.walk(f'{os.path.dirname(__file__)}/{start_folder}'):

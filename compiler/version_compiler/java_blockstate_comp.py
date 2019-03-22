@@ -36,13 +36,11 @@ def main(version_name: str, primitives):
 				for file_name in listdir(f'{version_name}/modifications/{namespace}/{group_name}'):
 					if file_name.endswith('.json'):
 						json_object = load_file(f'{version_name}/modifications/{namespace}/{group_name}/{file_name}')
-						if "remove" in json_object:
-							modifications[namespace][group_name]["remove"] += json_object["remove"]
-						if "add" in json_object:
-							for key, val in json_object["add"].items():
-								if key in modifications[namespace][group_name]["add"]:
-									print(f'Key "{key}" specified for addition more than once')
-								modifications[namespace][group_name]["add"][key] = val
+						modifications[namespace][group_name]["remove"] += list(json_object.keys())
+						for key, val in json_object.items():
+							if key in modifications[namespace][group_name]:
+								print(f'Key "{key}" specified for addition more than once')
+							modifications[namespace][group_name]['add'][key] = val
 
 		# load the block list the server created
 		blocks: dict = load_file(f'{version_name}/generated/reports/blocks.json')
@@ -89,7 +87,7 @@ def main(version_name: str, primitives):
 		for namespace in modifications:
 			for group_name in modifications[namespace]:
 				for block_name, block_data in modifications[namespace][group_name]["add"].items():
-					if isfile(f'{version_name}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', compiled_dir):
+					if isfile(f'{version_name}/block/blockstate/to_universal/{namespace}/{group_name}/{block_name}.json', compiled_dir):
 						print(f'"{block_name}" is already present.')
 					else:
 						if isinstance(block_data, str):
@@ -104,7 +102,7 @@ def main(version_name: str, primitives):
 							del specification['properties']['waterlogged']
 							del specification['defaults']['waterlogged']
 							# TODO: save this somewhere
-						save_json(f'{version_name}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', specification)
+						save_json(f'{version_name}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', specification, True)
 
 						assert 'to_universal' in block_data, f'"to_universal" must be present. Was missing for {version_name} {namespace}:{block_name}'
 						save_json(f'{version_name}/block/blockstate/to_universal/{namespace}/{group_name}/{block_name}.json', block_data["to_universal"])
@@ -112,6 +110,6 @@ def main(version_name: str, primitives):
 						assert 'from_universal' in block_data, f'"to_universal" must be present. Was missing for {version_name} {namespace}:{block_name}'
 						for block_string2, mapping in block_data['from_universal'].items():
 							namespace2, block_name2 = block_string2.split(':', 1)
-							merge_map(mapping, f'{version_name}/block/blockstate/from_universal/{namespace2}/vanilla/{block_name}.json')
+							merge_map(mapping, f'{version_name}/block/blockstate/from_universal/{namespace2}/vanilla/{block_name2}.json')
 	else:
 		raise Exception(f'Cound not find {version_name}/generated/reports/blocks.json')
