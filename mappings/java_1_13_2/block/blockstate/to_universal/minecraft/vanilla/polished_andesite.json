@@ -1,3 +1,6 @@
 {
-    "new_block": "universal_minecraft:polished_andesite"
+    "new_block": "universal_minecraft:andesite",
+    "new_properties": {
+        "polished": "true"
+    }
 }
