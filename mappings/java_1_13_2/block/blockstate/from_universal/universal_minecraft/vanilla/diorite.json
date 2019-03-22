@@ -1,3 +1,12 @@
 {
-    "new_block": "minecraft:diorite"
+    "map_properties": {
+        "polished": {
+            "false": {
+                "new_block": "minecraft:diorite"
+            },
+            "true": {
+                "new_block": "minecraft:polished_diorite"
+            }
+        }
+    }
 }
