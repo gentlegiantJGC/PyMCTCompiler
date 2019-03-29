@@ -71,14 +71,14 @@ def main(version_name: str, primitives):
 
 				if 'properties' in default_state:
 					if 'waterlogged' in default_state['properties']:
-						del default_state['properties']['waterlogged']
+						del states['properties']['waterlogged']
 					to_universal = {
 						"new_block": f"universal_{block_string}",
-						"carry_properties": default_state['properties']
+						"carry_properties": states['properties']
 					}
 					from_universal = {
 						"new_block": block_string,
-						"carry_properties": default_state['properties']
+						"carry_properties": states['properties']
 					}
 				else:
 					to_universal = {
