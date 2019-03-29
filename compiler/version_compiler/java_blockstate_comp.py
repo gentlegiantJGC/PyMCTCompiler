@@ -33,14 +33,13 @@ def main(version_name: str, primitives):
 					modifications[namespace][group_name] = {"remove": [], "add": {}}
 
 				# load the modifications for that namespace and group name
-				for file_name in listdir(f'{version_name}/modifications/{namespace}/{group_name}'):
-					if file_name.endswith('.json'):
-						json_object = load_file(f'{version_name}/modifications/{namespace}/{group_name}/{file_name}')
-						modifications[namespace][group_name]["remove"] += list(json_object.keys())
-						for key, val in json_object.items():
-							if key in modifications[namespace][group_name]:
-								print(f'Key "{key}" specified for addition more than once')
-							modifications[namespace][group_name]['add'][key] = val
+				if '__include__.json' in listdir(f'{version_name}/modifications/{namespace}/{group_name}'):
+					json_object = load_file(f'{version_name}/modifications/{namespace}/{group_name}/__include__.json')
+					modifications[namespace][group_name]["remove"] += list(json_object.keys())
+					for key, val in json_object.items():
+						if key in modifications[namespace][group_name]:
+							print(f'Key "{key}" specified for addition more than once')
+						modifications[namespace][group_name]['add'][key] = primitives.get_block('blockstate', val)
 
 		# load the block list the server created
 		blocks: dict = load_file(f'{version_name}/generated/reports/blocks.json')
@@ -90,9 +89,6 @@ def main(version_name: str, primitives):
 					if isfile(f'{version_name}/block/blockstate/to_universal/{namespace}/{group_name}/{block_name}.json', compiled_dir):
 						print(f'"{block_name}" is already present.')
 					else:
-						if isinstance(block_data, str):
-							block_data = primitives.get_block('blockstate', block_data)
-
 						assert isinstance(block_data, dict), f'The data here is supposed to be a dictionary. Got this instead:\n{block_data}'
 
 						if not debug(block_data):
