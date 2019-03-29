@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:jungle_button",
+    "new_block": "universal_minecraft:button",
+    "new_properties": {
+        "material": "jungle"
+    },
     "carry_properties": {
         "face": [
             "floor",

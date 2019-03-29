@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:spruce_button",
+    "new_block": "universal_minecraft:button",
+    "new_properties": {
+        "material": "spruce"
+    },
     "carry_properties": {
         "face": [
             "floor",

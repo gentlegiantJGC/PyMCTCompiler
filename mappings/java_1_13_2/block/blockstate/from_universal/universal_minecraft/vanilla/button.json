@@ -1,0 +1,44 @@
+{
+    "map_properties": {
+        "material": {
+            "oak": {
+                "new_block": "minecraft:oak_button"
+            },
+            "spruce": {
+                "new_block": "minecraft:spruce_button"
+            },
+            "birch": {
+                "new_block": "minecraft:birch_button"
+            },
+            "jungle": {
+                "new_block": "minecraft:jungle_button"
+            },
+            "acacia": {
+                "new_block": "minecraft:acacia_button"
+            },
+            "dark_oak": {
+                "new_block": "minecraft:dark_oak_button"
+            },
+            "stone": {
+                "new_block": "minecraft:stone_button"
+            }
+        }
+    },
+    "carry_properties": {
+        "face": [
+            "floor",
+            "wall",
+            "ceiling"
+        ],
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ],
+        "powered": [
+            "true",
+            "false"
+        ]
+    }
+}
