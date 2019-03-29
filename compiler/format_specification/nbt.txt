@@ -1,0 +1,175 @@
+general process:
+	if 'nbt' is defined in the input specification
+		load the data from the specification
+		load the data from the entity/block entity depending on the type and overlay on the template data
+
+	run the main mappings like normal. These all get written to a buffer and applied later.
+
+	hopefully in those mappings an output block/entity should have been specified (if not throw out the input as usual)
+
+	if "map_input_nbt" is defined then process that data here
+
+	merge the nbt buffer into the output nbt (if the output nbt is not defined then it is created)
+
+	return all the data
+
+
+NOTE: path is not relative to the root. path should point to the parent data
+	first entry in the path should be ['', 'compound'] if the outer data type is a compound
+
+main functions
+	"new_nbt": {  # add nbt to the output
+		"path": [
+			# when used outside map_input_nbt -> undefined or [] to be the outer data type
+			# when used inside map_input_data -> [] to be the outer data type, undefined to be the input path
+			[<path1>: Union[str, int], <datatype1>: str],
+			...
+		],
+		"key": <key>: Union[str, int]
+		"type": <type>: str
+		"value": <value>: Union[str, int, float]
+	}
+
+	"new_nbt": [  # add nbt to the output (same as above but can be nested to allow multiple additions in the same function
+		{
+			"path": [
+				# when used outside map_input_nbt -> undefined or [] to be the outer data type
+				# when used inside map_input_data -> [] to be the outer data type, undefined to be the input path
+				[<path1>: Union[str, int], <datatype1>: str],
+				...
+			],
+			"key": <key>: Union[str, int]
+			"type": <type>: str
+			"value": <value>: Union[str, int, float]
+		},
+		...
+	]
+
+	"map_input_nbt": {  # if this is going to appear it should be in the root of the mappings (run after all the other mappings)
+		# This has various different layouts depending on data type (see below)
+	}
+
+	"map_input_nbt": {
+		"type": "compound",
+		# iterate through every key in the compound tag.
+		# Look up if that key exists in "keys".
+		# If it doesn't, run "nested_default" functions on it
+		"keys": {	# if undefined will not iterate through and will just run functions
+			"<key>": {} # this dictionary is in the same format as "map_input_nbt"
+		}
+		# If "functions" is defined then run these functions
+		"functions": {},
+		"nested_default": {
+			<functions to run on the inner keys if they are not in "keys">
+			If undefined defaults to {"carry_nbt": {}}
+		},
+		"self_default": {} # functions to run if "type" does not match. Defaults to {"carry_nbt": {}}
+	}
+
+	"map_input_nbt": {
+		"type": "list",
+		# iterate through every index in the list.
+		# Look up if the string of that index exists in "index" (sadly JSON only allows string keys).
+		# If it doesn't, run "nested_default" functions on it
+		"index": {	# if undefined will not iterate through and will just run functions
+			"<index>": {} # this dictionary is in the same format as "map_input_nbt"
+		}
+		# If "functions" is defined then run these functions
+		"functions": {},
+		"nested_default": {
+			<functions to run on the inner indexes if they are not in "index">
+			If undefined defaults to {"carry_nbt": {}}
+		}
+		"self_default": {} # functions to run if "type" does not match. Defaults to {"carry_nbt": {}}
+	}
+
+	"map_input_nbt": {
+		"type": "byte/short/int/long/float/double/string",
+		# If "functions" is defined then run these functions
+		"functions": {},
+		"self_default": {} # functions to run if "type" does not match. Defaults to {"carry_nbt": {}}
+	}
+
+	"map_input_nbt": {
+		"type": "byte_array/int_array/long_array",
+		# These are essentially identical to a list with that nested data type. I don't know why they weren't just implemented as that.
+		# iterate through every index in the list.
+		# Look up if the string of that index exists in "index" (sadly JSON only allows string keys).
+		# If it doesn't, run "nested_default" functions on it
+		"index": {	# if undefined will not iterate through and will just run functions
+			"<index>": {} # this dictionary is in the same format as "map_input_nbt" but "type" is not read
+		}
+		# If "functions" is defined then run these functions
+		"functions": {},
+		"nested_default": {
+			<functions to run on the inner indexes if they are not in "index">
+			If undefined defaults to {"carry_nbt": {}}
+		}
+		"self_default": {} # functions to run if "type" does not match. Defaults to {"carry_nbt": {}}
+	}
+
+
+	# an example of this nested
+	"map_input_nbt": {
+		"type": "compound",
+		"keys": {
+			"Air": {  # copy "Air": TAG_Short as it is
+				"type": "short"
+				"functions": {
+					"carry_nbt": {}
+				}
+			},
+			"Dimension": {  # copy "Dimension": TAG_Int in the same place but change its key
+				"type": "int",
+				"functions": {
+					"carry_nbt": {
+						"key": "LastDimensionId"
+					}
+				}
+			},
+			"Unused_Key": { # do not copy over "Unused_Key"
+				"type": "int",
+				"functions": {}
+			},
+			"Fire": {
+				"type": "short",
+				"functions": {
+					"map_nbt": {
+						"default": {
+							"carry_nbt": {}
+						},
+						"cases": {
+							"-1": {
+								"new_nbt": {
+									"value": 0
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+
+side functions (these are "map_input_nbt" and functions that can only be used within map_input_nbt) (note any of the main functions can be used in map_input_nbt as well
+
+	"map_item": {   # Still WIP (used to convert items from one format to another and pass it through the mappings)
+		"input_format": "",
+		"output_format": "",
+		"output_path": [[]],
+	}
+
+	"carry_nbt": {
+		"path": [	# [] to be the outer data type, undefined to be the input path
+			[<path1>: Union[str, int], <datatype1>: str],
+			...
+		],
+		"key": <key>: Union[str, int] # undefined to remain under the same key/index
+		"type": <type>: str # undefined to remain as the input type
+	}
+
+	"map_nbt": {	# based on the input nbt value at path (should only be used with end stringable datatypes)
+		"default": {},  # if the data is not in cases or cases is not defined then do these functions
+		"cases": {}	 # if the data is in here then do the nested functions
+	}
