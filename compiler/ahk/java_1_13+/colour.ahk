@@ -6,6 +6,7 @@ ToolTip % clipboard
 sleep 1000
 ToolTip
 colours := ["white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black", "black"]
+FileCreateDir, %A_MyDocuments%\GitHub\Minecraft-Universal-Block-Mappings\compiler\primitives\blockstate\java_1_13+\vanilla\%clipboard%
 for index, colour in colours
 {
 	f = blockstate.colour("minecraft", "%colour%_%clipboard%", "%colour%", "universal_minecraft", "%clipboard%")
