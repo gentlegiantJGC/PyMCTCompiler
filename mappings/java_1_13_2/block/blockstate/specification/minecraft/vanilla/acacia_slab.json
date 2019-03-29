@@ -4,9 +4,14 @@
             "top",
             "bottom",
             "double"
+        ],
+        "waterlogged": [
+            "true",
+            "false"
         ]
     },
     "defaults": {
-        "type": "bottom"
+        "type": "bottom",
+        "waterlogged": "false"
     }
 }

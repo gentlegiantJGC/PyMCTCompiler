@@ -10,10 +10,15 @@
             "single",
             "left",
             "right"
+        ],
+        "waterlogged": [
+            "true",
+            "false"
         ]
     },
     "defaults": {
         "facing": "north",
-        "type": "single"
+        "type": "single",
+        "waterlogged": "false"
     }
 }

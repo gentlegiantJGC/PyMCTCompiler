@@ -5,9 +5,14 @@
             "south",
             "west",
             "east"
+        ],
+        "waterlogged": [
+            "true",
+            "false"
         ]
     },
     "defaults": {
-        "facing": "north"
+        "facing": "north",
+        "waterlogged": "false"
     }
 }

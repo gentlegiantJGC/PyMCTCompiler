@@ -1,4 +1,11 @@
 {
-    "properties": {},
-    "defaults": {}
+    "properties": {
+        "waterlogged": [
+            "true",
+            "false"
+        ]
+    },
+    "defaults": {
+        "waterlogged": "true"
+    }
 }
