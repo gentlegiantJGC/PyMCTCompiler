@@ -1,3 +1,6 @@
 {
-    "new_block": "universal_minecraft:white_wool"
+    "new_block": "universal_minecraft:wool",
+    "new_properties": {
+        "color": "white"
+    }
 }

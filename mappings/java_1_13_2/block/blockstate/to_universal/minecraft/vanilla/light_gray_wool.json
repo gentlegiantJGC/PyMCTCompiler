@@ -1,3 +1,6 @@
 {
-    "new_block": "universal_minecraft:light_gray_wool"
+    "new_block": "universal_minecraft:wool",
+    "new_properties": {
+        "color": "light_gray"
+    }
 }
