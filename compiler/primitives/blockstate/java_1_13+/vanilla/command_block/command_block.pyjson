@@ -1,0 +1,1 @@
+blockstate.command_block("minecraft", "command_block", "impulse", "universal_minecraft", "command_block")

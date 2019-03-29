@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:chain_command_block",
+    "new_block": "universal_minecraft:command_block",
+    "new_properties": {
+        "mode": "chain"
+    },
     "carry_properties": {
         "conditional": [
             "true",

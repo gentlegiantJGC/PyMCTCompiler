@@ -1,3 +1,7 @@
 {
-    "new_block": "universal_minecraft:dead_brain_coral_block"
+    "new_block": "universal_minecraft:coral_block",
+    "new_properties": {
+        "type": "brain",
+        "dead": "true"
+    }
 }

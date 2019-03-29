@@ -1,5 +1,17 @@
 {
-    "new_block": "minecraft:command_block",
+    "map_properties": {
+        "mode": {
+            "impulse": {
+                "new_block": "minecraft:command_block"
+            },
+            "chain": {
+                "new_block": "minecraft:chain_command_block"
+            },
+            "repeating": {
+                "new_block": "minecraft:repeating_command_block"
+            }
+        }
+    },
     "carry_properties": {
         "conditional": [
             "true",

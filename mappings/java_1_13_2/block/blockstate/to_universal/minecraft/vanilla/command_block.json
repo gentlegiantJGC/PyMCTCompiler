@@ -1,5 +1,8 @@
 {
     "new_block": "universal_minecraft:command_block",
+    "new_properties": {
+        "mode": "impulse"
+    },
     "carry_properties": {
         "conditional": [
             "true",

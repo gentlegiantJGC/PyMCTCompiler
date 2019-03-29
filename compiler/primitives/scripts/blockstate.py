@@ -177,3 +177,93 @@ def button(input_namespace: str, input_block_name: str, material: str, universal
 			}
 		}
 	}
+
+
+def command_block(input_namespace: str, input_block_name: str, mode: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	return {
+		"to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"new_properties": {
+				"mode": mode
+			},
+			"carry_properties": {
+				"conditional": [
+					"true",
+					"false"
+				],
+				"facing": [
+					"north",
+					"east",
+					"south",
+					"west",
+					"up",
+					"down"
+				]
+			}
+		},
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"map_properties": {
+					"mode": {
+						mode: {
+							"new_block": f"{input_namespace}:{input_block_name}"
+						}
+					}
+				},
+				"carry_properties": {
+					"conditional": [
+						"true",
+						"false"
+					],
+					"facing": [
+						"north",
+						"east",
+						"south",
+						"west",
+						"up",
+						"down"
+					]
+				}
+			}
+		}
+	}
+
+
+def coral(input_namespace: str, input_block_name: str, material: str, dead: bool, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	dead = 'true' if dead else 'false'
+	return {
+		"to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"new_properties": {
+				"type": material,
+				"dead": dead
+			}
+		},
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"new_block": "minecraft:tube_coral",
+				"map_properties": {
+					"type": {
+						material: {
+							"new_block": f"minecraft:{material}_coral",
+							"map_properties": {
+								"dead": {
+									dead: {
+										"new_block": f"{input_namespace}:{input_block_name}"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}

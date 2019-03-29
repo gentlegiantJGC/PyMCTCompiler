@@ -1,0 +1,72 @@
+{
+    "new_block": "minecraft:tube_coral",
+    "map_properties": {
+        "type": {
+            "tube": {
+                "new_block": "minecraft:tube_coral",
+                "map_properties": {
+                    "dead": {
+                        "false": {
+                            "new_block": "minecraft:tube_coral"
+                        },
+                        "true": {
+                            "new_block": "minecraft:dead_tube_coral"
+                        }
+                    }
+                }
+            },
+            "brain": {
+                "new_block": "minecraft:brain_coral",
+                "map_properties": {
+                    "dead": {
+                        "false": {
+                            "new_block": "minecraft:brain_coral"
+                        },
+                        "true": {
+                            "new_block": "minecraft:dead_brain_coral"
+                        }
+                    }
+                }
+            },
+            "bubble": {
+                "new_block": "minecraft:bubble_coral",
+                "map_properties": {
+                    "dead": {
+                        "false": {
+                            "new_block": "minecraft:bubble_coral"
+                        },
+                        "true": {
+                            "new_block": "minecraft:dead_bubble_coral"
+                        }
+                    }
+                }
+            },
+            "fire": {
+                "new_block": "minecraft:fire_coral",
+                "map_properties": {
+                    "dead": {
+                        "false": {
+                            "new_block": "minecraft:fire_coral"
+                        },
+                        "true": {
+                            "new_block": "minecraft:dead_fire_coral"
+                        }
+                    }
+                }
+            },
+            "horn": {
+                "new_block": "minecraft:horn_coral",
+                "map_properties": {
+                    "dead": {
+                        "false": {
+                            "new_block": "minecraft:horn_coral"
+                        },
+                        "true": {
+                            "new_block": "minecraft:dead_horn_coral"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
