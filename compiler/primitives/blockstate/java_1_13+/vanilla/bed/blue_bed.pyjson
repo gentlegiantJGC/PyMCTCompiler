@@ -1,0 +1,1 @@
+blockstate.colour("minecraft", "blue_bed", "blue", "universal_minecraft", "bed", {"facing":["north","south","west","east"],"occupied":["true","false"],"part":["head","foot"]})

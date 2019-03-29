@@ -1,0 +1,1 @@
+blockstate.colour("minecraft", "green_stained_glass_pane", "green", "universal_minecraft", "stained_glass_pane", {"east": ["true","false"],"north": ["true","false"],"south": ["true","false"],"west": ["true","false"]})
