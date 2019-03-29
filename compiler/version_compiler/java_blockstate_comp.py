@@ -35,11 +35,16 @@ def main(version_name: str, primitives):
 				# load the modifications for that namespace and group name
 				if '__include__.json' in listdir(f'{version_name}/modifications/{namespace}/{group_name}'):
 					json_object = load_file(f'{version_name}/modifications/{namespace}/{group_name}/__include__.json')
-					modifications[namespace][group_name]["remove"] += list(json_object.keys())
 					for key, val in json_object.items():
 						if key in modifications[namespace][group_name]:
 							print(f'Key "{key}" specified for addition more than once')
-						modifications[namespace][group_name]['add'][key] = primitives.get_block('blockstate', val)
+						try:
+							modifications[namespace][group_name]['add'][key] = primitives.get_block('blockstate', val)
+							modifications[namespace][group_name]["remove"].append(key)
+						except:
+							print(f'could not get primitive "{val}"')
+							continue
+
 
 		# load the block list the server created
 		blocks: dict = load_file(f'{version_name}/generated/reports/blocks.json')
