@@ -52,8 +52,9 @@ def main(version_name: str, primitives):
 			if 'properties' in default_state:
 				states['defaults'] = default_state['properties']
 				if 'waterlogged' in states['properties']:
-					del states['properties']['waterlogged']
-					del states['defaults']['waterlogged']
+					pass # keeping the waterlogged property in the specification
+					# del states['properties']['waterlogged']
+					# del states['defaults']['waterlogged']
 					# TODO: save this somewhere
 			del states['states']
 			if not debug(states):
@@ -64,6 +65,8 @@ def main(version_name: str, primitives):
 				# the block is not marked for removal
 
 				if 'properties' in default_state:
+					if 'waterlogged' in default_state['properties']:
+						del default_state['properties']['waterlogged']
 					to_universal = {
 						"new_block": f"universal_{block_string}",
 						"carry_properties": default_state['properties']
@@ -95,8 +98,9 @@ def main(version_name: str, primitives):
 							print(f'Error in "{block_name}"')
 						specification = block_data.get("specification", {})
 						if 'properties' in specification and 'waterlogged' in specification['properties']:
-							del specification['properties']['waterlogged']
-							del specification['defaults']['waterlogged']
+							pass  # keeping the waterlogged property in the specification
+							# del specification['properties']['waterlogged']
+							# del specification['defaults']['waterlogged']
 							# TODO: save this somewhere
 						save_json(f'{version_name}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', specification, True)
 
