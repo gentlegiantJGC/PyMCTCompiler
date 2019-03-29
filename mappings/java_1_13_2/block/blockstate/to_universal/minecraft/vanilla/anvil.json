@@ -1,6 +1,14 @@
 {
     "new_block": "universal_minecraft:anvil",
+    "new_properties": {
+        "damage": "normal"
+    },
     "carry_properties": {
-        "facing": "north"
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ]
     }
 }

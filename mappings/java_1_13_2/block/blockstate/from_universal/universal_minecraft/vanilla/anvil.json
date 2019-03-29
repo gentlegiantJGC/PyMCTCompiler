@@ -1,6 +1,23 @@
 {
-    "new_block": "minecraft:anvil",
+    "map_properties": {
+        "damage": {
+            "normal": {
+                "new_block": "minecraft:anvil"
+            },
+            "chipped": {
+                "new_block": "minecraft:chipped_anvil"
+            },
+            "damaged": {
+                "new_block": "minecraft:damaged_anvil"
+            }
+        }
+    },
     "carry_properties": {
-        "facing": "north"
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ]
     }
 }
