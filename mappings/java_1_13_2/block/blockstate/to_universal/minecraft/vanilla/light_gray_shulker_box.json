@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:light_gray_shulker_box",
+    "new_block": "universal_minecraft:shulker_box",
+    "new_properties": {
+        "color": "light_gray"
+    },
     "carry_properties": {
         "facing": [
             "north",

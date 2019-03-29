@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:lime_bed",
+    "new_block": "universal_minecraft:bed",
+    "new_properties": {
+        "color": "lime"
+    },
     "carry_properties": {
         "facing": [
             "north",

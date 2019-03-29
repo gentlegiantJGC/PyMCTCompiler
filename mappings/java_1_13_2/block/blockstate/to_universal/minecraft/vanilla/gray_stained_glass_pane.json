@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:gray_stained_glass_pane",
+    "new_block": "universal_minecraft:stained_glass_pane",
+    "new_properties": {
+        "color": "gray"
+    },
     "carry_properties": {
         "east": [
             "true",

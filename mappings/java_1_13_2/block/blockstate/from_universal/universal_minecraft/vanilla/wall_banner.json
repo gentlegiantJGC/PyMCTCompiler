@@ -1,0 +1,62 @@
+{
+    "map_properties": {
+        "color": {
+            "white": {
+                "new_block": "minecraft:white_wall_banner"
+            },
+            "orange": {
+                "new_block": "minecraft:orange_wall_banner"
+            },
+            "magenta": {
+                "new_block": "minecraft:magenta_wall_banner"
+            },
+            "light_blue": {
+                "new_block": "minecraft:light_blue_wall_banner"
+            },
+            "yellow": {
+                "new_block": "minecraft:yellow_wall_banner"
+            },
+            "lime": {
+                "new_block": "minecraft:lime_wall_banner"
+            },
+            "pink": {
+                "new_block": "minecraft:pink_wall_banner"
+            },
+            "gray": {
+                "new_block": "minecraft:gray_wall_banner"
+            },
+            "light_gray": {
+                "new_block": "minecraft:light_gray_wall_banner"
+            },
+            "cyan": {
+                "new_block": "minecraft:cyan_wall_banner"
+            },
+            "purple": {
+                "new_block": "minecraft:purple_wall_banner"
+            },
+            "blue": {
+                "new_block": "minecraft:blue_wall_banner"
+            },
+            "brown": {
+                "new_block": "minecraft:brown_wall_banner"
+            },
+            "green": {
+                "new_block": "minecraft:green_wall_banner"
+            },
+            "red": {
+                "new_block": "minecraft:red_wall_banner"
+            },
+            "black": {
+                "new_block": "minecraft:black_wall_banner"
+            }
+        }
+    },
+    "carry_properties": {
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ]
+    }
+}

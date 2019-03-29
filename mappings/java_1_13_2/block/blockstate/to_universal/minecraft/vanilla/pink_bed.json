@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:pink_bed",
+    "new_block": "universal_minecraft:bed",
+    "new_properties": {
+        "color": "pink"
+    },
     "carry_properties": {
         "facing": [
             "north",

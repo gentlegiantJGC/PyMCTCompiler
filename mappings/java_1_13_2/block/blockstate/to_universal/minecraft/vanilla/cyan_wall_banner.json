@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:cyan_wall_banner",
+    "new_block": "universal_minecraft:wall_banner",
+    "new_properties": {
+        "color": "cyan"
+    },
     "carry_properties": {
         "facing": [
             "north",

@@ -101,13 +101,14 @@ def main(version_name: str, primitives):
 
 						if not debug(block_data):
 							print(f'Error in "{block_name}"')
-						specification = block_data.get("specification", {})
-						if 'properties' in specification and 'waterlogged' in specification['properties']:
-							pass  # keeping the waterlogged property in the specification
-							# del specification['properties']['waterlogged']
-							# del specification['defaults']['waterlogged']
-							# TODO: save this somewhere
-						save_json(f'{version_name}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', specification, True)
+						if 'specification' in block_data:
+							specification = block_data.get("specification")
+							if 'properties' in specification and 'waterlogged' in specification['properties']:
+								pass  # keeping the waterlogged property in the specification
+								# del specification['properties']['waterlogged']
+								# del specification['defaults']['waterlogged']
+								# TODO: save this somewhere
+							save_json(f'{version_name}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', specification, True)
 
 						assert 'to_universal' in block_data, f'"to_universal" must be present. Was missing for {version_name} {namespace}:{block_name}'
 						save_json(f'{version_name}/block/blockstate/to_universal/{namespace}/{group_name}/{block_name}.json', block_data["to_universal"])

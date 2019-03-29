@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:magenta_banner",
+    "new_block": "universal_minecraft:banner",
+    "new_properties": {
+        "color": "magenta"
+    },
     "carry_properties": {
         "rotation": [
             "0",

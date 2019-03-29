@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:gray_wall_banner",
+    "new_block": "universal_minecraft:wall_banner",
+    "new_properties": {
+        "color": "gray"
+    },
     "carry_properties": {
         "facing": [
             "north",

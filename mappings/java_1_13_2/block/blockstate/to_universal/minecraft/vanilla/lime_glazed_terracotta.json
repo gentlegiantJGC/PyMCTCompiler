@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:lime_glazed_terracotta",
+    "new_block": "universal_minecraft:glazed_terracotta",
+    "new_properties": {
+        "color": "lime"
+    },
     "carry_properties": {
         "facing": [
             "north",

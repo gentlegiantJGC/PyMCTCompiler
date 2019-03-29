@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:purple_stained_glass_pane",
+    "new_block": "universal_minecraft:stained_glass_pane",
+    "new_properties": {
+        "color": "purple"
+    },
     "carry_properties": {
         "east": [
             "true",

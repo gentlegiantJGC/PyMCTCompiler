@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:brown_bed",
+    "new_block": "universal_minecraft:bed",
+    "new_properties": {
+        "color": "brown"
+    },
     "carry_properties": {
         "facing": [
             "north",

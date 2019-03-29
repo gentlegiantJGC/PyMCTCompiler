@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:gray_banner",
+    "new_block": "universal_minecraft:banner",
+    "new_properties": {
+        "color": "gray"
+    },
     "carry_properties": {
         "rotation": [
             "0",

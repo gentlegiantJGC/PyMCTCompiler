@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:light_blue_glazed_terracotta",
+    "new_block": "universal_minecraft:glazed_terracotta",
+    "new_properties": {
+        "color": "light_blue"
+    },
     "carry_properties": {
         "facing": [
             "north",

@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:yellow_banner",
+    "new_block": "universal_minecraft:banner",
+    "new_properties": {
+        "color": "yellow"
+    },
     "carry_properties": {
         "rotation": [
             "0",
