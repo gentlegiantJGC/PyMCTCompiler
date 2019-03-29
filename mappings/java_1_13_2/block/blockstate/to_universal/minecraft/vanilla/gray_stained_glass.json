@@ -1,3 +1,6 @@
 {
-    "new_block": "universal_minecraft:gray_stained_glass"
+    "new_block": "universal_minecraft:stained_glass",
+    "new_properties": {
+        "color": "gray"
+    }
 }

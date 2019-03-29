@@ -1,3 +1,6 @@
 {
-    "new_block": "universal_minecraft:orange_terracotta"
+    "new_block": "universal_minecraft:terracotta",
+    "new_properties": {
+        "color": "orange"
+    }
 }

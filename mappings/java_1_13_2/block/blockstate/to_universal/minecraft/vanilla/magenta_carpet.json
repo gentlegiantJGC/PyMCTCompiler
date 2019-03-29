@@ -1,3 +1,6 @@
 {
-    "new_block": "universal_minecraft:magenta_carpet"
+    "new_block": "universal_minecraft:carpet",
+    "new_properties": {
+        "color": "magenta"
+    }
 }

@@ -1,0 +1,54 @@
+{
+    "map_properties": {
+        "color": {
+            "white": {
+                "new_block": "minecraft:white_stained_glass"
+            },
+            "orange": {
+                "new_block": "minecraft:orange_stained_glass"
+            },
+            "magenta": {
+                "new_block": "minecraft:magenta_stained_glass"
+            },
+            "light_blue": {
+                "new_block": "minecraft:light_blue_stained_glass"
+            },
+            "yellow": {
+                "new_block": "minecraft:yellow_stained_glass"
+            },
+            "lime": {
+                "new_block": "minecraft:lime_stained_glass"
+            },
+            "pink": {
+                "new_block": "minecraft:pink_stained_glass"
+            },
+            "gray": {
+                "new_block": "minecraft:gray_stained_glass"
+            },
+            "light_gray": {
+                "new_block": "minecraft:light_gray_stained_glass"
+            },
+            "cyan": {
+                "new_block": "minecraft:cyan_stained_glass"
+            },
+            "purple": {
+                "new_block": "minecraft:purple_stained_glass"
+            },
+            "blue": {
+                "new_block": "minecraft:blue_stained_glass"
+            },
+            "brown": {
+                "new_block": "minecraft:brown_stained_glass"
+            },
+            "green": {
+                "new_block": "minecraft:green_stained_glass"
+            },
+            "red": {
+                "new_block": "minecraft:red_stained_glass"
+            },
+            "black": {
+                "new_block": "minecraft:black_stained_glass"
+            }
+        }
+    }
+}

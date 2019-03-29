@@ -1,0 +1,54 @@
+{
+    "map_properties": {
+        "color": {
+            "white": {
+                "new_block": "minecraft:white_concrete"
+            },
+            "orange": {
+                "new_block": "minecraft:orange_concrete"
+            },
+            "magenta": {
+                "new_block": "minecraft:magenta_concrete"
+            },
+            "light_blue": {
+                "new_block": "minecraft:light_blue_concrete"
+            },
+            "yellow": {
+                "new_block": "minecraft:yellow_concrete"
+            },
+            "lime": {
+                "new_block": "minecraft:lime_concrete"
+            },
+            "pink": {
+                "new_block": "minecraft:pink_concrete"
+            },
+            "gray": {
+                "new_block": "minecraft:gray_concrete"
+            },
+            "light_gray": {
+                "new_block": "minecraft:light_gray_concrete"
+            },
+            "cyan": {
+                "new_block": "minecraft:cyan_concrete"
+            },
+            "purple": {
+                "new_block": "minecraft:purple_concrete"
+            },
+            "blue": {
+                "new_block": "minecraft:blue_concrete"
+            },
+            "brown": {
+                "new_block": "minecraft:brown_concrete"
+            },
+            "green": {
+                "new_block": "minecraft:green_concrete"
+            },
+            "red": {
+                "new_block": "minecraft:red_concrete"
+            },
+            "black": {
+                "new_block": "minecraft:black_concrete"
+            }
+        }
+    }
+}

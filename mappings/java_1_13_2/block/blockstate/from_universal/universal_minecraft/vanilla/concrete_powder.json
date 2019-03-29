@@ -1,0 +1,54 @@
+{
+    "map_properties": {
+        "color": {
+            "white": {
+                "new_block": "minecraft:white_concrete_powder"
+            },
+            "orange": {
+                "new_block": "minecraft:orange_concrete_powder"
+            },
+            "magenta": {
+                "new_block": "minecraft:magenta_concrete_powder"
+            },
+            "light_blue": {
+                "new_block": "minecraft:light_blue_concrete_powder"
+            },
+            "yellow": {
+                "new_block": "minecraft:yellow_concrete_powder"
+            },
+            "lime": {
+                "new_block": "minecraft:lime_concrete_powder"
+            },
+            "pink": {
+                "new_block": "minecraft:pink_concrete_powder"
+            },
+            "gray": {
+                "new_block": "minecraft:gray_concrete_powder"
+            },
+            "light_gray": {
+                "new_block": "minecraft:light_gray_concrete_powder"
+            },
+            "cyan": {
+                "new_block": "minecraft:cyan_concrete_powder"
+            },
+            "purple": {
+                "new_block": "minecraft:purple_concrete_powder"
+            },
+            "blue": {
+                "new_block": "minecraft:blue_concrete_powder"
+            },
+            "brown": {
+                "new_block": "minecraft:brown_concrete_powder"
+            },
+            "green": {
+                "new_block": "minecraft:green_concrete_powder"
+            },
+            "red": {
+                "new_block": "minecraft:red_concrete_powder"
+            },
+            "black": {
+                "new_block": "minecraft:black_concrete_powder"
+            }
+        }
+    }
+}
