@@ -1,6 +1,11 @@
 {
     "new_block": "universal_minecraft:sea_pickle",
     "carry_properties": {
-        "pickles": "1"
+        "pickles": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ]
     }
 }

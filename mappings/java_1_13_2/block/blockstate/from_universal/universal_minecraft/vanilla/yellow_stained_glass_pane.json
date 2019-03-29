@@ -1,9 +1,21 @@
 {
     "new_block": "minecraft:yellow_stained_glass_pane",
     "carry_properties": {
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "west": "false"
+        "east": [
+            "true",
+            "false"
+        ],
+        "north": [
+            "true",
+            "false"
+        ],
+        "south": [
+            "true",
+            "false"
+        ],
+        "west": [
+            "true",
+            "false"
+        ]
     }
 }

@@ -1,6 +1,10 @@
 {
     "new_block": "minecraft:purpur_pillar",
     "carry_properties": {
-        "axis": "y"
+        "axis": [
+            "x",
+            "y",
+            "z"
+        ]
     }
 }

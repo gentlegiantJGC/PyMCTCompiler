@@ -1,6 +1,10 @@
 {
     "new_block": "minecraft:dark_oak_wood",
     "carry_properties": {
-        "axis": "y"
+        "axis": [
+            "x",
+            "y",
+            "z"
+        ]
     }
 }

@@ -1,8 +1,19 @@
 {
     "new_block": "universal_minecraft:pink_bed",
     "carry_properties": {
-        "facing": "north",
-        "occupied": "false",
-        "part": "foot"
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ],
+        "occupied": [
+            "true",
+            "false"
+        ],
+        "part": [
+            "head",
+            "foot"
+        ]
     }
 }

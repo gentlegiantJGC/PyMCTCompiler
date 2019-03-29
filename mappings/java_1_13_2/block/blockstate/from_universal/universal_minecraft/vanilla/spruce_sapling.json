@@ -1,6 +1,9 @@
 {
     "new_block": "minecraft:spruce_sapling",
     "carry_properties": {
-        "stage": "0"
+        "stage": [
+            "0",
+            "1"
+        ]
     }
 }

@@ -1,8 +1,20 @@
 {
     "new_block": "universal_minecraft:lever",
     "carry_properties": {
-        "face": "wall",
-        "facing": "north",
-        "powered": "false"
+        "face": [
+            "floor",
+            "wall",
+            "ceiling"
+        ],
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ],
+        "powered": [
+            "true",
+            "false"
+        ]
     }
 }

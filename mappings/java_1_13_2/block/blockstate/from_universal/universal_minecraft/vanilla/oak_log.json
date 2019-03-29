@@ -1,6 +1,10 @@
 {
     "new_block": "minecraft:oak_log",
     "carry_properties": {
-        "axis": "y"
+        "axis": [
+            "x",
+            "y",
+            "z"
+        ]
     }
 }

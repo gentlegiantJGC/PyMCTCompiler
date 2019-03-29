@@ -1,6 +1,13 @@
 {
     "new_block": "universal_minecraft:chorus_flower",
     "carry_properties": {
-        "age": "0"
+        "age": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ]
     }
 }

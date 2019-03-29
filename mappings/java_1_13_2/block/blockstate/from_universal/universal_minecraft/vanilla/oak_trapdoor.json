@@ -1,9 +1,23 @@
 {
     "new_block": "minecraft:oak_trapdoor",
     "carry_properties": {
-        "facing": "north",
-        "half": "bottom",
-        "open": "false",
-        "powered": "false"
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ],
+        "half": [
+            "top",
+            "bottom"
+        ],
+        "open": [
+            "true",
+            "false"
+        ],
+        "powered": [
+            "true",
+            "false"
+        ]
     }
 }

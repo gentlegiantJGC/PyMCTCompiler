@@ -1,9 +1,23 @@
 {
     "new_block": "universal_minecraft:jungle_fence_gate",
     "carry_properties": {
-        "facing": "north",
-        "in_wall": "false",
-        "open": "false",
-        "powered": "false"
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ],
+        "in_wall": [
+            "true",
+            "false"
+        ],
+        "open": [
+            "true",
+            "false"
+        ],
+        "powered": [
+            "true",
+            "false"
+        ]
     }
 }

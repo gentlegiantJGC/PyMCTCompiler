@@ -1,6 +1,11 @@
 {
     "new_block": "universal_minecraft:structure_block",
     "carry_properties": {
-        "mode": "save"
+        "mode": [
+            "save",
+            "load",
+            "corner",
+            "data"
+        ]
     }
 }

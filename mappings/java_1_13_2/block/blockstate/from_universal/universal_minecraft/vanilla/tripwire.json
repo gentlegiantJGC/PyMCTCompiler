@@ -1,12 +1,33 @@
 {
     "new_block": "minecraft:tripwire",
     "carry_properties": {
-        "attached": "false",
-        "disarmed": "false",
-        "east": "false",
-        "north": "false",
-        "powered": "false",
-        "south": "false",
-        "west": "false"
+        "attached": [
+            "true",
+            "false"
+        ],
+        "disarmed": [
+            "true",
+            "false"
+        ],
+        "east": [
+            "true",
+            "false"
+        ],
+        "north": [
+            "true",
+            "false"
+        ],
+        "powered": [
+            "true",
+            "false"
+        ],
+        "south": [
+            "true",
+            "false"
+        ],
+        "west": [
+            "true",
+            "false"
+        ]
     }
 }

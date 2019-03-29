@@ -1,9 +1,25 @@
 {
     "new_block": "universal_minecraft:repeater",
     "carry_properties": {
-        "delay": "1",
-        "facing": "north",
-        "locked": "false",
-        "powered": "false"
+        "delay": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ],
+        "locked": [
+            "true",
+            "false"
+        ],
+        "powered": [
+            "true",
+            "false"
+        ]
     }
 }

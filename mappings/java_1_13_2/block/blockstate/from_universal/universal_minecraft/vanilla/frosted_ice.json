@@ -1,6 +1,11 @@
 {
     "new_block": "minecraft:frosted_ice",
     "carry_properties": {
-        "age": "0"
+        "age": [
+            "0",
+            "1",
+            "2",
+            "3"
+        ]
     }
 }

@@ -1,6 +1,9 @@
 {
     "new_block": "minecraft:podzol",
     "carry_properties": {
-        "snowy": "false"
+        "snowy": [
+            "true",
+            "false"
+        ]
     }
 }

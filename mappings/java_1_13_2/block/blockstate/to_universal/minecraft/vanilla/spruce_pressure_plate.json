@@ -1,6 +1,9 @@
 {
     "new_block": "universal_minecraft:spruce_pressure_plate",
     "carry_properties": {
-        "powered": "false"
+        "powered": [
+            "true",
+            "false"
+        ]
     }
 }

@@ -1,6 +1,10 @@
 {
     "new_block": "minecraft:bone_block",
     "carry_properties": {
-        "axis": "y"
+        "axis": [
+            "x",
+            "y",
+            "z"
+        ]
     }
 }

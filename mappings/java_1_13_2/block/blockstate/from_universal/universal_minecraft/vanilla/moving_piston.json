@@ -1,7 +1,17 @@
 {
     "new_block": "minecraft:moving_piston",
     "carry_properties": {
-        "facing": "north",
-        "type": "normal"
+        "facing": [
+            "north",
+            "east",
+            "south",
+            "west",
+            "up",
+            "down"
+        ],
+        "type": [
+            "normal",
+            "sticky"
+        ]
     }
 }

@@ -1,7 +1,16 @@
 {
     "new_block": "minecraft:cocoa",
     "carry_properties": {
-        "age": "0",
-        "facing": "north"
+        "age": [
+            "0",
+            "1",
+            "2"
+        ],
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ]
     }
 }

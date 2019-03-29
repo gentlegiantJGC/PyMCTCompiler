@@ -1,6 +1,9 @@
 {
     "new_block": "universal_minecraft:oak_sapling",
     "carry_properties": {
-        "stage": "0"
+        "stage": [
+            "0",
+            "1"
+        ]
     }
 }

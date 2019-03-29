@@ -1,7 +1,15 @@
 {
     "new_block": "minecraft:end_portal_frame",
     "carry_properties": {
-        "eye": "false",
-        "facing": "north"
+        "eye": [
+            "true",
+            "false"
+        ],
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ]
     }
 }

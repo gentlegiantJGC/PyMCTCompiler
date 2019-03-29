@@ -1,6 +1,11 @@
 {
     "new_block": "universal_minecraft:gray_wall_banner",
     "carry_properties": {
-        "facing": "north"
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ]
     }
 }

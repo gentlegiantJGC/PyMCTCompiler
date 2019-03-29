@@ -1,6 +1,9 @@
 {
     "new_block": "minecraft:bubble_column",
     "carry_properties": {
-        "drag": "true"
+        "drag": [
+            "true",
+            "false"
+        ]
     }
 }

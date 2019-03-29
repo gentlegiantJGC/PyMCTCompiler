@@ -1,7 +1,15 @@
 {
     "new_block": "universal_minecraft:redstone_wall_torch",
     "carry_properties": {
-        "facing": "north",
-        "lit": "true"
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ],
+        "lit": [
+            "true",
+            "false"
+        ]
     }
 }

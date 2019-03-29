@@ -1,6 +1,14 @@
 {
     "new_block": "universal_minecraft:cake",
     "carry_properties": {
-        "bites": "0"
+        "bites": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ]
     }
 }

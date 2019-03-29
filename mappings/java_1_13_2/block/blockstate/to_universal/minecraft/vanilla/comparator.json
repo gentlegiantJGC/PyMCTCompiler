@@ -1,8 +1,19 @@
 {
     "new_block": "universal_minecraft:comparator",
     "carry_properties": {
-        "facing": "north",
-        "mode": "compare",
-        "powered": "false"
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ],
+        "mode": [
+            "compare",
+            "subtract"
+        ],
+        "powered": [
+            "true",
+            "false"
+        ]
     }
 }

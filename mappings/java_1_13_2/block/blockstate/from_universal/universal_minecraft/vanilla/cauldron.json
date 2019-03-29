@@ -1,6 +1,11 @@
 {
     "new_block": "minecraft:cauldron",
     "carry_properties": {
-        "level": "0"
+        "level": [
+            "0",
+            "1",
+            "2",
+            "3"
+        ]
     }
 }

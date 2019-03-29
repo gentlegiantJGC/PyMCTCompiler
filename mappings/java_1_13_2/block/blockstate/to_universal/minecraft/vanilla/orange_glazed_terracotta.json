@@ -1,6 +1,11 @@
 {
     "new_block": "universal_minecraft:orange_glazed_terracotta",
     "carry_properties": {
-        "facing": "north"
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ]
     }
 }

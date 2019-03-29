@@ -1,6 +1,10 @@
 {
     "new_block": "minecraft:prismarine_brick_slab",
     "carry_properties": {
-        "type": "bottom"
+        "type": [
+            "top",
+            "bottom",
+            "double"
+        ]
     }
 }

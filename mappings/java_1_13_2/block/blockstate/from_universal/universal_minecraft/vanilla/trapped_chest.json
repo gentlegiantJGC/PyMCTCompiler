@@ -1,7 +1,16 @@
 {
     "new_block": "minecraft:trapped_chest",
     "carry_properties": {
-        "facing": "north",
-        "type": "single"
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ],
+        "type": [
+            "single",
+            "left",
+            "right"
+        ]
     }
 }

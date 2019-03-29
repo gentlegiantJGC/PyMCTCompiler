@@ -1,10 +1,27 @@
 {
     "new_block": "universal_minecraft:spruce_door",
     "carry_properties": {
-        "facing": "north",
-        "half": "lower",
-        "hinge": "left",
-        "open": "false",
-        "powered": "false"
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ],
+        "half": [
+            "upper",
+            "lower"
+        ],
+        "hinge": [
+            "left",
+            "right"
+        ],
+        "open": [
+            "true",
+            "false"
+        ],
+        "powered": [
+            "true",
+            "false"
+        ]
     }
 }

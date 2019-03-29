@@ -1,10 +1,25 @@
 {
     "new_block": "minecraft:mossy_cobblestone_wall",
     "carry_properties": {
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "true",
-        "west": "false"
+        "east": [
+            "true",
+            "false"
+        ],
+        "north": [
+            "true",
+            "false"
+        ],
+        "south": [
+            "true",
+            "false"
+        ],
+        "up": [
+            "true",
+            "false"
+        ],
+        "west": [
+            "true",
+            "false"
+        ]
     }
 }
