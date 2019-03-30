@@ -1,4 +1,8 @@
 {
-    "new_block": "universal_minecraft:brain_coral_fan",
-    "carry_properties": {}
+    "new_block": "universal_minecraft:coral_fan",
+    "new_properties": {
+        "type": "brain",
+        "dead": "false",
+        "facing": "up"
+    }
 }

@@ -1,4 +1,8 @@
 {
-    "new_block": "universal_minecraft:horn_coral_fan",
-    "carry_properties": {}
+    "new_block": "universal_minecraft:coral_fan",
+    "new_properties": {
+        "type": "horn",
+        "dead": "false",
+        "facing": "up"
+    }
 }

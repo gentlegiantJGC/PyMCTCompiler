@@ -267,3 +267,98 @@ def coral(input_namespace: str, input_block_name: str, material: str, dead: bool
 			}
 		}
 	}
+
+
+def coral_fan(input_namespace: str, input_block_name: str, material: str, dead: bool, wall: bool, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	dead, dead_str = ('true', 'dead_') if dead else ('false', '')
+	if wall:
+		return {
+			"to_universal": {
+				"new_block": f"{universal_namespace}:{universal_block_name}",
+				"new_properties": {
+					"type": material,
+					"dead": dead
+				},
+				"carry_properties": {
+					"facing": [
+						"north",
+						"south",
+						"west",
+						"east"
+					]
+				}
+			},
+			"from_universal": {
+				f"{universal_namespace}:{universal_block_name}": {
+					"new_block": "minecraft:tube_coral_fan",
+					"map_properties": {
+						"type": {
+							material: {
+								"new_block": f"minecraft:{material}_coral_fan",
+								"map_properties": {
+									"dead": {
+										dead: {
+											"new_block": f"minecraft:{dead_str}{material}_coral_fan",
+											"map_properties": {
+												"facing": {
+													facing: {
+														"new_block": f"{input_namespace}:{input_block_name}",
+														"new_properties": {
+															"facing": facing
+														}
+													} for facing in ["north", "south", "west", "east"]
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	else:
+		return {
+			"to_universal": {
+				"new_block": f"{universal_namespace}:{universal_block_name}",
+				"new_properties": {
+					"type": material,
+					"dead": dead,
+					"facing": "up"
+				}
+			},
+			"from_universal": {
+				f"{universal_namespace}:{universal_block_name}": {
+					"new_block": "minecraft:tube_coral_fan",
+					"map_properties": {
+						"type": {
+							material: {
+								"new_block": f"minecraft:{material}_coral_fan",
+								"map_properties": {
+									"dead": {
+										dead: {
+											"new_block": f"minecraft:{dead_str}{material}_coral_fan",
+											"map_properties": {
+												"facing": {
+													"up": {
+														"new_block": f"{input_namespace}:{input_block_name}",
+														"new_properties": {
+															"facing": "up"
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}

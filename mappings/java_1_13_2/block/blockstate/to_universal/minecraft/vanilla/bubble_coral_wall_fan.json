@@ -1,5 +1,9 @@
 {
-    "new_block": "universal_minecraft:bubble_coral_wall_fan",
+    "new_block": "universal_minecraft:coral_fan",
+    "new_properties": {
+        "type": "bubble",
+        "dead": "false"
+    },
     "carry_properties": {
         "facing": [
             "north",
