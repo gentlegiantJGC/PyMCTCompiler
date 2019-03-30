@@ -1,0 +1,1 @@
+blockstate.material("minecraft", "acacia_pressure_plate", "acacia", "universal_minecraft", "pressure_plate", {"powered": ["true","false"]})

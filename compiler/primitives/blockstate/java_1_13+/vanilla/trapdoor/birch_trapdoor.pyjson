@@ -1,0 +1,1 @@
+blockstate.material("minecraft", "birch_trapdoor", "birch", "universal_minecraft", "trapdoor", {"facing": ["north","south","west","east"],"half": ["top","bottom"],"open": ["true","false"],"powered": ["true","false"]})

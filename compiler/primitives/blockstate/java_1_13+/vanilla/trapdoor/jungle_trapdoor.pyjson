@@ -1,0 +1,1 @@
+blockstate.material("minecraft", "jungle_trapdoor", "jungle", "universal_minecraft", "trapdoor", {"facing": ["north","south","west","east"],"half": ["top","bottom"],"open": ["true","false"],"powered": ["true","false"]})

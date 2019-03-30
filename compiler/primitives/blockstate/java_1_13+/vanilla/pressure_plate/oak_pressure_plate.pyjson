@@ -1,0 +1,1 @@
+blockstate.material("minecraft", "oak_pressure_plate", "oak", "universal_minecraft", "pressure_plate", {"powered": ["true","false"]})

@@ -1,0 +1,1 @@
+blockstate.material("minecraft", "oak_slab", "oak", "universal_minecraft", "slab", {"type": ["top","bottom","double"]})

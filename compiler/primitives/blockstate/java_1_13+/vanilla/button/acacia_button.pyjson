@@ -1,1 +1,1 @@
-blockstate.button("minecraft", "acacia_button", "acacia", "universal_minecraft", "button")
+blockstate.material("minecraft", "acacia_button", "acacia", "universal_minecraft", "button", {"face": ["floor","wall","ceiling"],"facing": ["north","south","west","east"],"powered": ["true","false"]})

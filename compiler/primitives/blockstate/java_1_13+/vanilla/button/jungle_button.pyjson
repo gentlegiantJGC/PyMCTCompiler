@@ -1,1 +1,1 @@
-blockstate.button("minecraft", "jungle_button", "jungle", "universal_minecraft", "button")
+blockstate.material("minecraft", "jungle_button", "jungle", "universal_minecraft", "button", {"face": ["floor","wall","ceiling"],"facing": ["north","south","west","east"],"powered": ["true","false"]})
