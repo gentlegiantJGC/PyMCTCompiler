@@ -1,0 +1,31 @@
+{
+    "map_properties": {
+        "material": {
+            "oak": {
+                "new_block": "minecraft:oak_slab"
+            },
+            "spruce": {
+                "new_block": "minecraft:spruce_slab"
+            },
+            "birch": {
+                "new_block": "minecraft:birch_slab"
+            },
+            "jungle": {
+                "new_block": "minecraft:jungle_slab"
+            },
+            "acacia": {
+                "new_block": "minecraft:acacia_slab"
+            },
+            "dark_oak": {
+                "new_block": "minecraft:dark_oak_slab"
+            }
+        }
+    },
+    "carry_properties": {
+        "type": [
+            "top",
+            "bottom",
+            "double"
+        ]
+    }
+}

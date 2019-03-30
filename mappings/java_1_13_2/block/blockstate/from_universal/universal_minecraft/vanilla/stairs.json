@@ -1,0 +1,43 @@
+{
+    "map_properties": {
+        "material": {
+            "oak": {
+                "new_block": "minecraft:oak_stairs"
+            },
+            "spruce": {
+                "new_block": "minecraft:spruce_stairs"
+            },
+            "birch": {
+                "new_block": "minecraft:birch_stairs"
+            },
+            "jungle": {
+                "new_block": "minecraft:jungle_stairs"
+            },
+            "acacia": {
+                "new_block": "minecraft:acacia_stairs"
+            },
+            "dark_oak": {
+                "new_block": "minecraft:dark_oak_stairs"
+            }
+        }
+    },
+    "carry_properties": {
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ],
+        "half": [
+            "top",
+            "bottom"
+        ],
+        "shape": [
+            "straight",
+            "inner_left",
+            "inner_right",
+            "outer_left",
+            "outer_right"
+        ]
+    }
+}

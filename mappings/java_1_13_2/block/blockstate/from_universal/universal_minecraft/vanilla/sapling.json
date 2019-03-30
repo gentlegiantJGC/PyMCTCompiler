@@ -1,0 +1,30 @@
+{
+    "map_properties": {
+        "material": {
+            "oak": {
+                "new_block": "minecraft:oak_sapling"
+            },
+            "spruce": {
+                "new_block": "minecraft:spruce_sapling"
+            },
+            "birch": {
+                "new_block": "minecraft:birch_sapling"
+            },
+            "jungle": {
+                "new_block": "minecraft:jungle_sapling"
+            },
+            "acacia": {
+                "new_block": "minecraft:acacia_sapling"
+            },
+            "dark_oak": {
+                "new_block": "minecraft:dark_oak_sapling"
+            }
+        }
+    },
+    "carry_properties": {
+        "stage": [
+            "0",
+            "1"
+        ]
+    }
+}

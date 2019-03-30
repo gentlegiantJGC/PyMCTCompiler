@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:spruce_pressure_plate",
+    "new_block": "universal_minecraft:pressure_plate",
+    "new_properties": {
+        "material": "spruce"
+    },
     "carry_properties": {
         "powered": [
             "true",

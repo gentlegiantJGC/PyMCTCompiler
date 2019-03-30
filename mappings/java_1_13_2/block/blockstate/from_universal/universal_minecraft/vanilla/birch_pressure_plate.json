@@ -1,9 +1,0 @@
-{
-    "new_block": "minecraft:birch_pressure_plate",
-    "carry_properties": {
-        "powered": [
-            "true",
-            "false"
-        ]
-    }
-}

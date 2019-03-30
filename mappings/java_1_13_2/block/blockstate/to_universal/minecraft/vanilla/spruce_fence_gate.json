@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:spruce_fence_gate",
+    "new_block": "universal_minecraft:fence_gate",
+    "new_properties": {
+        "material": "spruce"
+    },
     "carry_properties": {
         "facing": [
             "north",

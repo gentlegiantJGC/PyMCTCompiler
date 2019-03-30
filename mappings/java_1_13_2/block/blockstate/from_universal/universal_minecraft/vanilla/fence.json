@@ -1,0 +1,42 @@
+{
+    "map_properties": {
+        "material": {
+            "oak": {
+                "new_block": "minecraft:oak_fence"
+            },
+            "spruce": {
+                "new_block": "minecraft:spruce_fence"
+            },
+            "birch": {
+                "new_block": "minecraft:birch_fence"
+            },
+            "jungle": {
+                "new_block": "minecraft:jungle_fence"
+            },
+            "acacia": {
+                "new_block": "minecraft:acacia_fence"
+            },
+            "dark_oak": {
+                "new_block": "minecraft:dark_oak_fence"
+            }
+        }
+    },
+    "carry_properties": {
+        "east": [
+            "true",
+            "false"
+        ],
+        "north": [
+            "true",
+            "false"
+        ],
+        "south": [
+            "true",
+            "false"
+        ],
+        "west": [
+            "true",
+            "false"
+        ]
+    }
+}

@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:spruce_stairs",
+    "new_block": "universal_minecraft:stairs",
+    "new_properties": {
+        "material": "spruce"
+    },
     "carry_properties": {
         "facing": [
             "north",

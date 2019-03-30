@@ -1,3 +1,6 @@
 {
-    "new_block": "universal_minecraft:birch_planks"
+    "new_block": "universal_minecraft:planks",
+    "new_properties": {
+        "material": "birch"
+    }
 }

@@ -1,0 +1,30 @@
+{
+    "map_properties": {
+        "material": {
+            "oak": {
+                "new_block": "minecraft:oak_pressure_plate"
+            },
+            "spruce": {
+                "new_block": "minecraft:spruce_pressure_plate"
+            },
+            "birch": {
+                "new_block": "minecraft:birch_pressure_plate"
+            },
+            "jungle": {
+                "new_block": "minecraft:jungle_pressure_plate"
+            },
+            "acacia": {
+                "new_block": "minecraft:acacia_pressure_plate"
+            },
+            "dark_oak": {
+                "new_block": "minecraft:dark_oak_pressure_plate"
+            }
+        }
+    },
+    "carry_properties": {
+        "powered": [
+            "true",
+            "false"
+        ]
+    }
+}

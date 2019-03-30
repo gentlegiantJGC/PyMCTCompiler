@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:acacia_trapdoor",
+    "new_block": "universal_minecraft:trapdoor",
+    "new_properties": {
+        "material": "acacia"
+    },
     "carry_properties": {
         "facing": [
             "north",

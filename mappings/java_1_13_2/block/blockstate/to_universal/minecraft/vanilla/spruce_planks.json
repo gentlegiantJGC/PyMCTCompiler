@@ -1,3 +1,6 @@
 {
-    "new_block": "universal_minecraft:spruce_planks"
+    "new_block": "universal_minecraft:planks",
+    "new_properties": {
+        "material": "spruce"
+    }
 }

@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:dark_oak_door",
+    "new_block": "universal_minecraft:door",
+    "new_properties": {
+        "material": "dark_oak"
+    },
     "carry_properties": {
         "facing": [
             "north",

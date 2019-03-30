@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:acacia_slab",
+    "new_block": "universal_minecraft:slab",
+    "new_properties": {
+        "material": "acacia"
+    },
     "carry_properties": {
         "type": [
             "top",

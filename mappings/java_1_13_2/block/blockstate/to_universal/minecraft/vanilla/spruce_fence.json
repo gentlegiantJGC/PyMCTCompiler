@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:spruce_fence",
+    "new_block": "universal_minecraft:fence",
+    "new_properties": {
+        "material": "spruce"
+    },
     "carry_properties": {
         "east": [
             "true",

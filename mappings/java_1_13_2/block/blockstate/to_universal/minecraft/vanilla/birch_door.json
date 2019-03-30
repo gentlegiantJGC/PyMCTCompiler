@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:birch_door",
+    "new_block": "universal_minecraft:door",
+    "new_properties": {
+        "material": "birch"
+    },
     "carry_properties": {
         "facing": [
             "north",

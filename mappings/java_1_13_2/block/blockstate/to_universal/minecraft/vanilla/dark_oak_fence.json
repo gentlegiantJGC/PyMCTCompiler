@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:dark_oak_fence",
+    "new_block": "universal_minecraft:fence",
+    "new_properties": {
+        "material": "dark_oak"
+    },
     "carry_properties": {
         "east": [
             "true",

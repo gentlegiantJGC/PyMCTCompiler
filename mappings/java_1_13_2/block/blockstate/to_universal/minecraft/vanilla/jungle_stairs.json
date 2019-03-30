@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:jungle_stairs",
+    "new_block": "universal_minecraft:stairs",
+    "new_properties": {
+        "material": "jungle"
+    },
     "carry_properties": {
         "facing": [
             "north",

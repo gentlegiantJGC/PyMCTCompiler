@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:oak_stairs",
+    "new_block": "universal_minecraft:stairs",
+    "new_properties": {
+        "material": "oak"
+    },
     "carry_properties": {
         "facing": [
             "north",

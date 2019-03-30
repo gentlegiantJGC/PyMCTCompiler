@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:oak_trapdoor",
+    "new_block": "universal_minecraft:trapdoor",
+    "new_properties": {
+        "material": "oak"
+    },
     "carry_properties": {
         "facing": [
             "north",

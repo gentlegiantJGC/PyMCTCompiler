@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:jungle_trapdoor",
+    "new_block": "universal_minecraft:trapdoor",
+    "new_properties": {
+        "material": "jungle"
+    },
     "carry_properties": {
         "facing": [
             "north",
