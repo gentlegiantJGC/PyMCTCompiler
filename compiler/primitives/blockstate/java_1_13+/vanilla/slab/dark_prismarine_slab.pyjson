@@ -1,0 +1,1 @@
+blockstate.material("minecraft", "dark_prismarine_slab", "dark_prismarine", "universal_minecraft", "slab", {"type": ["top","bottom","double"]})

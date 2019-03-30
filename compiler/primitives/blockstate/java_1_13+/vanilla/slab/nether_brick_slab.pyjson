@@ -1,0 +1,1 @@
+blockstate.material("minecraft", "nether_brick_slab", "nether_brick", "universal_minecraft", "slab", {"type": ["top","bottom","double"]})
