@@ -111,6 +111,14 @@ class Block:
 			self._gen_blockstate()
 		return self._blockstate
 
+	@property
+	def blockstate_without_waterlogged(self):
+		blockstate = f"{self.namespace}:{self.base_name}"
+		if self.properties:
+			props = [f"{key}={value}" for key, value in self.properties.items() if key != 'waterlogged']
+			blockstate = f"{blockstate}[{','.join(props)}]"
+		return blockstate
+
 	def _gen_blockstate(self):
 		self._blockstate = f"{self.namespace}:{self.base_name}"
 		if self.properties:
