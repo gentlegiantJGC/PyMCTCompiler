@@ -1,1 +1,0 @@
-blockstate.colour("minecraft", "yellow_shulker_box", "yellow", "universal_minecraft", "shulker_box", {"facing": ["north","east","south","west","up","down"]})

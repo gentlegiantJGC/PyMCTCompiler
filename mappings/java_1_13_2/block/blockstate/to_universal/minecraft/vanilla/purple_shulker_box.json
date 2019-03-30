@@ -1,5 +1,5 @@
 {
-    "new_block": "universal_minecraft:shulker_box",
+    "new_block": "universal_minecraft:stained_shulker_box",
     "new_properties": {
         "color": "purple"
     },
