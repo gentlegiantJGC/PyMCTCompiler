@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:stone_pressure_plate",
+    "new_block": "universal_minecraft:pressure_plate",
+    "new_properties": {
+        "material": "stone"
+    },
     "carry_properties": {
         "powered": [
             "true",

@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:cobblestone_stairs",
+    "new_block": "universal_minecraft:stairs",
+    "new_properties": {
+        "material": "cobblestone"
+    },
     "carry_properties": {
         "facing": [
             "north",

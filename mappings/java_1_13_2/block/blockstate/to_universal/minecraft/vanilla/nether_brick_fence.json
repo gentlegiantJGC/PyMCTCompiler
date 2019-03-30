@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:nether_brick_fence",
+    "new_block": "universal_minecraft:fence",
+    "new_properties": {
+        "material": "nether_brick"
+    },
     "carry_properties": {
         "east": [
             "true",

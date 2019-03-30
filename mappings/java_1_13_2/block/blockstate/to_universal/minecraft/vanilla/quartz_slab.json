@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:quartz_slab",
+    "new_block": "universal_minecraft:slab",
+    "new_properties": {
+        "material": "quartz"
+    },
     "carry_properties": {
         "type": [
             "top",

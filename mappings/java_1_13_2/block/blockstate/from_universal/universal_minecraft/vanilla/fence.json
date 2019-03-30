@@ -18,6 +18,9 @@
             },
             "dark_oak": {
                 "new_block": "minecraft:dark_oak_fence"
+            },
+            "nether_brick": {
+                "new_block": "minecraft:nether_brick_fence"
             }
         }
     },

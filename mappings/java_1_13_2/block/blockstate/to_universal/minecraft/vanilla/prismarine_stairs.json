@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:prismarine_stairs",
+    "new_block": "universal_minecraft:stairs",
+    "new_properties": {
+        "material": "prismarine"
+    },
     "carry_properties": {
         "facing": [
             "north",

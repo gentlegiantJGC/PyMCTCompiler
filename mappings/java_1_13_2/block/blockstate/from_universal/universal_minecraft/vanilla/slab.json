@@ -18,6 +18,45 @@
             },
             "dark_oak": {
                 "new_block": "minecraft:dark_oak_slab"
+            },
+            "petrified_oak": {
+                "new_block": "minecraft:petrified_oak_slab"
+            },
+            "brick": {
+                "new_block": "minecraft:brick_slab"
+            },
+            "stone": {
+                "new_block": "minecraft:stone_slab"
+            },
+            "cobblestone": {
+                "new_block": "minecraft:cobblestone_slab"
+            },
+            "stone_brick": {
+                "new_block": "minecraft:stone_brick_slab"
+            },
+            "sandstone": {
+                "new_block": "minecraft:sandstone_slab"
+            },
+            "red_sandstone": {
+                "new_block": "minecraft:red_sandstone_slab"
+            },
+            "nether_brick": {
+                "new_block": "minecraft:nether_brick_slab"
+            },
+            "quartz": {
+                "new_block": "minecraft:quartz_slab"
+            },
+            "purpur": {
+                "new_block": "minecraft:purpur_slab"
+            },
+            "prismarine": {
+                "new_block": "minecraft:prismarine_slab"
+            },
+            "prismarine_brick": {
+                "new_block": "minecraft:prismarine_brick_slab"
+            },
+            "dark_prismarine": {
+                "new_block": "minecraft:dark_prismarine_slab"
             }
         }
     },

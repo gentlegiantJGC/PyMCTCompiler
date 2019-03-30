@@ -18,6 +18,9 @@
             },
             "dark_oak": {
                 "new_block": "minecraft:dark_oak_pressure_plate"
+            },
+            "stone": {
+                "new_block": "minecraft:stone_pressure_plate"
             }
         }
     },

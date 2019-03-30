@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:purpur_slab",
+    "new_block": "universal_minecraft:slab",
+    "new_properties": {
+        "material": "purpur"
+    },
     "carry_properties": {
         "type": [
             "top",

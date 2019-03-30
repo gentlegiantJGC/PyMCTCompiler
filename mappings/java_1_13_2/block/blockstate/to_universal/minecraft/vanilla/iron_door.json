@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:iron_door",
+    "new_block": "universal_minecraft:door",
+    "new_properties": {
+        "material": "iron"
+    },
     "carry_properties": {
         "facing": [
             "north",

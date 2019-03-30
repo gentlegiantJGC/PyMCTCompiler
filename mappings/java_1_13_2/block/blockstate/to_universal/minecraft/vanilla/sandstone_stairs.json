@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:sandstone_stairs",
+    "new_block": "universal_minecraft:stairs",
+    "new_properties": {
+        "material": "sandstone"
+    },
     "carry_properties": {
         "facing": [
             "north",

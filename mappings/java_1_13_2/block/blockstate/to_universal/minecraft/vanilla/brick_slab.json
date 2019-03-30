@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:brick_slab",
+    "new_block": "universal_minecraft:slab",
+    "new_properties": {
+        "material": "brick"
+    },
     "carry_properties": {
         "type": [
             "top",

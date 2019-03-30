@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:petrified_oak_slab",
+    "new_block": "universal_minecraft:slab",
+    "new_properties": {
+        "material": "petrified_oak"
+    },
     "carry_properties": {
         "type": [
             "top",

@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:nether_brick_slab",
+    "new_block": "universal_minecraft:slab",
+    "new_properties": {
+        "material": "nether_brick"
+    },
     "carry_properties": {
         "type": [
             "top",

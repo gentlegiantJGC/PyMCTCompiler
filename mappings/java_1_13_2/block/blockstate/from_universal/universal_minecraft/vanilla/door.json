@@ -18,6 +18,9 @@
             },
             "dark_oak": {
                 "new_block": "minecraft:dark_oak_door"
+            },
+            "iron": {
+                "new_block": "minecraft:iron_door"
             }
         }
     },
