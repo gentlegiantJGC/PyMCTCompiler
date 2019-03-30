@@ -1,0 +1,54 @@
+{
+    "map_properties": {
+        "color": {
+            "white": {
+                "new_block": "minecraft:white_terracotta"
+            },
+            "orange": {
+                "new_block": "minecraft:orange_terracotta"
+            },
+            "magenta": {
+                "new_block": "minecraft:magenta_terracotta"
+            },
+            "light_blue": {
+                "new_block": "minecraft:light_blue_terracotta"
+            },
+            "yellow": {
+                "new_block": "minecraft:yellow_terracotta"
+            },
+            "lime": {
+                "new_block": "minecraft:lime_terracotta"
+            },
+            "pink": {
+                "new_block": "minecraft:pink_terracotta"
+            },
+            "gray": {
+                "new_block": "minecraft:gray_terracotta"
+            },
+            "light_gray": {
+                "new_block": "minecraft:light_gray_terracotta"
+            },
+            "cyan": {
+                "new_block": "minecraft:cyan_terracotta"
+            },
+            "purple": {
+                "new_block": "minecraft:purple_terracotta"
+            },
+            "blue": {
+                "new_block": "minecraft:blue_terracotta"
+            },
+            "brown": {
+                "new_block": "minecraft:brown_terracotta"
+            },
+            "green": {
+                "new_block": "minecraft:green_terracotta"
+            },
+            "red": {
+                "new_block": "minecraft:red_terracotta"
+            },
+            "black": {
+                "new_block": "minecraft:black_terracotta"
+            }
+        }
+    }
+}
