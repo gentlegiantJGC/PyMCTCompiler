@@ -11,10 +11,7 @@
                             "map_properties": {
                                 "facing": {
                                     "up": {
-                                        "new_block": "minecraft:tube_coral_fan",
-                                        "new_properties": {
-                                            "facing": "up"
-                                        }
+                                        "new_block": "minecraft:tube_coral_fan"
                                     },
                                     "north": {
                                         "new_block": "minecraft:tube_coral_wall_fan",
@@ -48,10 +45,7 @@
                             "map_properties": {
                                 "facing": {
                                     "up": {
-                                        "new_block": "minecraft:dead_tube_coral_fan",
-                                        "new_properties": {
-                                            "facing": "up"
-                                        }
+                                        "new_block": "minecraft:dead_tube_coral_fan"
                                     },
                                     "north": {
                                         "new_block": "minecraft:dead_tube_coral_wall_fan",
@@ -92,10 +86,7 @@
                             "map_properties": {
                                 "facing": {
                                     "up": {
-                                        "new_block": "minecraft:brain_coral_fan",
-                                        "new_properties": {
-                                            "facing": "up"
-                                        }
+                                        "new_block": "minecraft:brain_coral_fan"
                                     },
                                     "north": {
                                         "new_block": "minecraft:brain_coral_wall_fan",
@@ -129,10 +120,7 @@
                             "map_properties": {
                                 "facing": {
                                     "up": {
-                                        "new_block": "minecraft:dead_brain_coral_fan",
-                                        "new_properties": {
-                                            "facing": "up"
-                                        }
+                                        "new_block": "minecraft:dead_brain_coral_fan"
                                     },
                                     "north": {
                                         "new_block": "minecraft:dead_brain_coral_wall_fan",
@@ -173,10 +161,7 @@
                             "map_properties": {
                                 "facing": {
                                     "up": {
-                                        "new_block": "minecraft:bubble_coral_fan",
-                                        "new_properties": {
-                                            "facing": "up"
-                                        }
+                                        "new_block": "minecraft:bubble_coral_fan"
                                     },
                                     "north": {
                                         "new_block": "minecraft:bubble_coral_wall_fan",
@@ -210,10 +195,7 @@
                             "map_properties": {
                                 "facing": {
                                     "up": {
-                                        "new_block": "minecraft:dead_bubble_coral_fan",
-                                        "new_properties": {
-                                            "facing": "up"
-                                        }
+                                        "new_block": "minecraft:dead_bubble_coral_fan"
                                     },
                                     "north": {
                                         "new_block": "minecraft:dead_bubble_coral_wall_fan",
@@ -254,10 +236,7 @@
                             "map_properties": {
                                 "facing": {
                                     "up": {
-                                        "new_block": "minecraft:fire_coral_fan",
-                                        "new_properties": {
-                                            "facing": "up"
-                                        }
+                                        "new_block": "minecraft:fire_coral_fan"
                                     },
                                     "north": {
                                         "new_block": "minecraft:fire_coral_wall_fan",
@@ -291,10 +270,7 @@
                             "map_properties": {
                                 "facing": {
                                     "up": {
-                                        "new_block": "minecraft:dead_fire_coral_fan",
-                                        "new_properties": {
-                                            "facing": "up"
-                                        }
+                                        "new_block": "minecraft:dead_fire_coral_fan"
                                     },
                                     "north": {
                                         "new_block": "minecraft:dead_fire_coral_wall_fan",
@@ -335,10 +311,7 @@
                             "map_properties": {
                                 "facing": {
                                     "up": {
-                                        "new_block": "minecraft:horn_coral_fan",
-                                        "new_properties": {
-                                            "facing": "up"
-                                        }
+                                        "new_block": "minecraft:horn_coral_fan"
                                     },
                                     "north": {
                                         "new_block": "minecraft:horn_coral_wall_fan",
@@ -372,10 +345,7 @@
                             "map_properties": {
                                 "facing": {
                                     "up": {
-                                        "new_block": "minecraft:dead_horn_coral_fan",
-                                        "new_properties": {
-                                            "facing": "up"
-                                        }
+                                        "new_block": "minecraft:dead_horn_coral_fan"
                                     },
                                     "north": {
                                         "new_block": "minecraft:dead_horn_coral_wall_fan",

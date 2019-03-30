@@ -286,10 +286,7 @@ def coral_fan(input_namespace: str, input_block_name: str, material: str, dead: 
 											"map_properties": {
 												"facing": {
 													"up": {
-														"new_block": f"{input_namespace}:{input_block_name}",
-														"new_properties": {
-															"facing": "up"
-														}
+														"new_block": f"{input_namespace}:{input_block_name}"
 													}
 												}
 											}
