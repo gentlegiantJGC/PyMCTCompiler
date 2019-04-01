@@ -1,3 +1,6 @@
 {
-    "new_block": "universal_minecraft:white_tulip"
+    "new_block": "universal_minecraft:plant",
+    "new_properties": {
+        "type": "white_tulip"
+    }
 }

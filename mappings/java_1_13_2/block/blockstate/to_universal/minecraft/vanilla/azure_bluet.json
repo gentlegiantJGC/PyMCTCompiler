@@ -1,3 +1,6 @@
 {
-    "new_block": "universal_minecraft:azure_bluet"
+    "new_block": "universal_minecraft:plant",
+    "new_properties": {
+        "type": "azure_bluet"
+    }
 }
