@@ -65,7 +65,8 @@ def main(version_name: str, primitives):
 			if not debug(states):
 				print(f'Error in "{block_string}"')
 			save_json(f'{version_name}/block/blockstate/specification/{namespace}/vanilla/{block_name}.json', states)
-
+			if block_name == 'flower_pot':
+				pass
 			if not(namespace in modifications and any(block_name in modifications[namespace][group_name]['remove'] for group_name in modifications[namespace])):
 				# the block is not marked for removal
 

@@ -1,3 +1,6 @@
 {
-    "new_block": "universal_minecraft:potted_poppy"
+    "new_block": "universal_minecraft:flower_pot",
+    "new_properties": {
+        "plant": "poppy"
+    }
 }

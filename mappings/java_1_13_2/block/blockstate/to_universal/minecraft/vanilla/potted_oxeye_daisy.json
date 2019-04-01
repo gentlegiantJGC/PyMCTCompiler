@@ -1,3 +1,6 @@
 {
-    "new_block": "universal_minecraft:potted_oxeye_daisy"
+    "new_block": "universal_minecraft:flower_pot",
+    "new_properties": {
+        "plant": "oxeye_daisy"
+    }
 }

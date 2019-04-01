@@ -1,3 +1,73 @@
 {
-    "new_block": "minecraft:flower_pot"
+    "new_block": "minecraft:flower_pot",
+    "map_properties": {
+        "plant": {
+            "none": {
+                "new_block": "minecraft:flower_pot"
+            },
+            "dandelion": {
+                "new_block": "minecraft:potted_dandelion"
+            },
+            "poppy": {
+                "new_block": "minecraft:potted_poppy"
+            },
+            "blue_orchid": {
+                "new_block": "minecraft:potted_blue_orchid"
+            },
+            "allium": {
+                "new_block": "minecraft:potted_allium"
+            },
+            "azure_bluet": {
+                "new_block": "minecraft:potted_azure_bluet"
+            },
+            "red_tulip": {
+                "new_block": "minecraft:potted_red_tulip"
+            },
+            "orange_tulip": {
+                "new_block": "minecraft:potted_orange_tulip"
+            },
+            "white_tulip": {
+                "new_block": "minecraft:potted_white_tulip"
+            },
+            "pink_tulip": {
+                "new_block": "minecraft:potted_pink_tulip"
+            },
+            "oxeye_daisy": {
+                "new_block": "minecraft:potted_oxeye_daisy"
+            },
+            "oak_sapling": {
+                "new_block": "minecraft:potted_oak_sapling"
+            },
+            "spruce_sapling": {
+                "new_block": "minecraft:potted_spruce_sapling"
+            },
+            "birch_sapling": {
+                "new_block": "minecraft:potted_birch_sapling"
+            },
+            "jungle_sapling": {
+                "new_block": "minecraft:potted_jungle_sapling"
+            },
+            "acacia_sapling": {
+                "new_block": "minecraft:potted_acacia_sapling"
+            },
+            "dark_oak_sapling": {
+                "new_block": "minecraft:potted_dark_oak_sapling"
+            },
+            "red_mushroom": {
+                "new_block": "minecraft:potted_red_mushroom"
+            },
+            "brown_mushroom": {
+                "new_block": "minecraft:potted_brown_mushroom"
+            },
+            "fern": {
+                "new_block": "minecraft:potted_fern"
+            },
+            "dead_bush": {
+                "new_block": "minecraft:potted_dead_bush"
+            },
+            "cactus": {
+                "new_block": "minecraft:potted_cactus"
+            }
+        }
+    }
 }

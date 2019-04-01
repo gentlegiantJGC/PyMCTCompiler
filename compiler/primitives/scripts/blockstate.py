@@ -348,3 +348,30 @@ def material(input_namespace: str, input_block_name: str, material: str, univers
 				}
 			}
 		}
+
+
+def flower_pot(input_namespace: str, input_block_name: str, plant: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	return {
+		"to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"new_properties": {
+				"plant": plant
+			}
+		},
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"new_block": "minecraft:flower_pot",
+				"map_properties": {
+					"plant": {
+						plant: {
+							"new_block": f"{input_namespace}:{input_block_name}"
+						}
+					}
+				}
+			}
+		}
+	}
