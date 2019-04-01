@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:rose_bush",
+    "new_block": "universal_minecraft:double_plant",
+    "new_properties": {
+        "type": "rose_bush"
+    },
     "carry_properties": {
         "half": [
             "upper",

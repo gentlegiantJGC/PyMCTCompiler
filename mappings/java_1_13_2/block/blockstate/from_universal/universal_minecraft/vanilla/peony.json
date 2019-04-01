@@ -1,9 +1,0 @@
-{
-    "new_block": "minecraft:peony",
-    "carry_properties": {
-        "half": [
-            "upper",
-            "lower"
-        ]
-    }
-}

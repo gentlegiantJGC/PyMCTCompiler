@@ -528,3 +528,44 @@ def plant(input_namespace: str, input_block_name: str, universal_namespace: str 
 			}
 		}
 	}
+
+
+def double_plant(input_namespace: str, input_block_name: str, universal_namespace: str = None, universal_block_name: str = None, flower: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	if flower is None:
+		flower = input_block_name
+	return {
+		"to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"new_properties": {
+				"type": flower
+			},
+			"carry_properties": {
+				"half": [
+					"upper",
+					"lower"
+				]
+			}
+		},
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"new_block": "minecraft:dandelion",
+				"map_properties": {
+					"type": {
+						flower: {
+							"new_block": f"{input_namespace}:{input_block_name}"
+						}
+					}
+				},
+				"carry_properties": {
+					"half": [
+						"upper",
+						"lower"
+					]
+				}
+			}
+		}
+	}

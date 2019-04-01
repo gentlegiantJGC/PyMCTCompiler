@@ -1,0 +1,31 @@
+{
+    "new_block": "minecraft:dandelion",
+    "map_properties": {
+        "type": {
+            "sunflower": {
+                "new_block": "minecraft:sunflower"
+            },
+            "lilac": {
+                "new_block": "minecraft:lilac"
+            },
+            "rose_bush": {
+                "new_block": "minecraft:rose_bush"
+            },
+            "peony": {
+                "new_block": "minecraft:peony"
+            },
+            "tall_grass": {
+                "new_block": "minecraft:tall_grass"
+            },
+            "large_fern": {
+                "new_block": "minecraft:large_fern"
+            }
+        }
+    },
+    "carry_properties": {
+        "half": [
+            "upper",
+            "lower"
+        ]
+    }
+}

@@ -1,9 +1,0 @@
-{
-    "new_block": "minecraft:tall_grass",
-    "carry_properties": {
-        "half": [
-            "upper",
-            "lower"
-        ]
-    }
-}

@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:large_fern",
+    "new_block": "universal_minecraft:double_plant",
+    "new_properties": {
+        "type": "large_fern"
+    },
     "carry_properties": {
         "half": [
             "upper",

@@ -1,9 +1,0 @@
-{
-    "new_block": "minecraft:lilac",
-    "carry_properties": {
-        "half": [
-            "upper",
-            "lower"
-        ]
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "new_block": "minecraft:sunflower",
-    "carry_properties": {
-        "half": [
-            "upper",
-            "lower"
-        ]
-    }
-}
