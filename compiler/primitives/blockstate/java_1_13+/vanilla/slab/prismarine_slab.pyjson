@@ -1,1 +1,1 @@
-blockstate.material("minecraft", "prismarine_slab", "prismarine", "universal_minecraft", "slab", {"type": ["top","bottom","double"]})
+blockstate.material_helper("minecraft", "prismarine_slab", "prismarine", "universal_minecraft", "slab", {"type": ["top","bottom","double"]})

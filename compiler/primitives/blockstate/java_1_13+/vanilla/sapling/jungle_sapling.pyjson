@@ -1,1 +1,1 @@
-blockstate.material("minecraft", "jungle_sapling", "jungle", "universal_minecraft", "sapling", {"stage": ["0","1"]})
+blockstate.material_helper("minecraft", "jungle_sapling", "jungle", "universal_minecraft", "sapling", {"stage": ["0","1"]})

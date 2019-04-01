@@ -1,1 +1,1 @@
-blockstate.material("minecraft", "brick_stairs", "brick", "universal_minecraft", "stairs", {"facing": ["north","south","west","east"],"half": ["top","bottom"],"shape": ["straight","inner_left","inner_right","outer_left","outer_right"]})
+blockstate.material_helper("minecraft", "brick_stairs", "brick", "universal_minecraft", "stairs", {"facing": ["north","south","west","east"],"half": ["top","bottom"],"shape": ["straight","inner_left","inner_right","outer_left","outer_right"]})

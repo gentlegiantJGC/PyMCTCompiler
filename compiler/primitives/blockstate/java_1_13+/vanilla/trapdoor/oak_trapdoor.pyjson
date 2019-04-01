@@ -1,1 +1,1 @@
-blockstate.material("minecraft", "oak_trapdoor", "oak", "universal_minecraft", "trapdoor", {"facing": ["north","south","west","east"],"half": ["top","bottom"],"open": ["true","false"],"powered": ["true","false"]})
+blockstate.material_helper("minecraft", "oak_trapdoor", "oak", "universal_minecraft", "trapdoor", {"facing": ["north","south","west","east"],"half": ["top","bottom"],"open": ["true","false"],"powered": ["true","false"]})

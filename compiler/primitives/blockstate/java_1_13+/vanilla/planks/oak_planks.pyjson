@@ -1,1 +1,1 @@
-blockstate.material("minecraft", "oak_planks", "oak", "universal_minecraft", "planks")
+blockstate.material_helper("minecraft", "oak_planks", "oak", "universal_minecraft", "planks")

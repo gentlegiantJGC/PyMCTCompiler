@@ -1,1 +1,1 @@
-blockstate.material("minecraft", "red_sandstone_slab", "red_sandstone", "universal_minecraft", "slab", {"type": ["top","bottom","double"]})
+blockstate.material_helper("minecraft", "red_sandstone_slab", "red_sandstone", "universal_minecraft", "slab", {"type": ["top","bottom","double"]})

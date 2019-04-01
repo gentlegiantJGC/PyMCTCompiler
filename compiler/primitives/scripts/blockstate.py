@@ -301,7 +301,7 @@ def coral_fan(input_namespace: str, input_block_name: str, material: str, dead: 
 		}
 
 
-def material(input_namespace: str, input_block_name: str, material: str, universal_namespace: str = None, universal_block_name: str = None, carry_properties: Dict[str, List[str]] = None) -> dict:
+def material_helper(input_namespace: str, input_block_name: str, material: str, universal_namespace: str = None, universal_block_name: str = None, carry_properties: Dict[str, List[str]] = None) -> dict:
 	if universal_namespace is None:
 		universal_namespace = input_namespace
 	if universal_block_name is None:

@@ -1,1 +1,1 @@
-blockstate.material("minecraft", "oak_fence", "oak", "universal_minecraft", "fence", {"east": ["true","false"],"north": ["true","false"],"south": ["true","false"],"west": ["true","false"]})
+blockstate.material_helper("minecraft", "oak_fence", "oak", "universal_minecraft", "fence", {"east": ["true","false"],"north": ["true","false"],"south": ["true","false"],"west": ["true","false"]})
