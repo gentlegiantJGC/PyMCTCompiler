@@ -1,0 +1,47 @@
+{
+    "map_properties": {
+        "material": {
+            "oak": {
+                "new_block": "minecraft:oak_leaves"
+            },
+            "spruce": {
+                "new_block": "minecraft:spruce_leaves"
+            },
+            "birch": {
+                "new_block": "minecraft:birch_leaves"
+            },
+            "jungle": {
+                "new_block": "minecraft:jungle_leaves"
+            },
+            "acacia": {
+                "new_block": "minecraft:acacia_leaves"
+            },
+            "dark_oak": {
+                "new_block": "minecraft:dark_oak_leaves"
+            }
+        },
+        "decayable": {
+            "true": {
+                "new_properties": {
+                    "persistent": "false"
+                }
+            },
+            "false": {
+                "new_properties": {
+                    "persistent": "true"
+                }
+            }
+        }
+    },
+    "carry_properties": {
+        "distance": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+        ]
+    }
+}
