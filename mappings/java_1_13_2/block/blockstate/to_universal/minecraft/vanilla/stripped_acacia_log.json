@@ -1,5 +1,9 @@
 {
-    "new_block": "universal_minecraft:stripped_acacia_log",
+    "new_block": "universal_minecraft:log",
+    "new_properties": {
+        "material": "acacia",
+        "stripped": "true"
+    },
     "carry_properties": {
         "axis": [
             "x",

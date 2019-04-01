@@ -1,5 +1,9 @@
 {
-    "new_block": "universal_minecraft:birch_wood",
+    "new_block": "universal_minecraft:wood",
+    "new_properties": {
+        "material": "birch",
+        "stripped": "false"
+    },
     "carry_properties": {
         "axis": [
             "x",

@@ -1,0 +1,85 @@
+{
+    "map_properties": {
+        "material": {
+            "oak": {
+                "map_properties": {
+                    "stripped": {
+                        "false": {
+                            "new_block": "minecraft:oak_wood"
+                        },
+                        "true": {
+                            "new_block": "minecraft:stripped_oak_wood"
+                        }
+                    }
+                }
+            },
+            "spruce": {
+                "map_properties": {
+                    "stripped": {
+                        "false": {
+                            "new_block": "minecraft:spruce_wood"
+                        },
+                        "true": {
+                            "new_block": "minecraft:stripped_spruce_wood"
+                        }
+                    }
+                }
+            },
+            "birch": {
+                "map_properties": {
+                    "stripped": {
+                        "false": {
+                            "new_block": "minecraft:birch_wood"
+                        },
+                        "true": {
+                            "new_block": "minecraft:stripped_birch_wood"
+                        }
+                    }
+                }
+            },
+            "jungle": {
+                "map_properties": {
+                    "stripped": {
+                        "false": {
+                            "new_block": "minecraft:jungle_wood"
+                        },
+                        "true": {
+                            "new_block": "minecraft:stripped_jungle_wood"
+                        }
+                    }
+                }
+            },
+            "acacia": {
+                "map_properties": {
+                    "stripped": {
+                        "false": {
+                            "new_block": "minecraft:acacia_wood"
+                        },
+                        "true": {
+                            "new_block": "minecraft:stripped_acacia_wood"
+                        }
+                    }
+                }
+            },
+            "dark_oak": {
+                "map_properties": {
+                    "stripped": {
+                        "false": {
+                            "new_block": "minecraft:dark_oak_wood"
+                        },
+                        "true": {
+                            "new_block": "minecraft:stripped_dark_oak_wood"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "carry_properties": {
+        "axis": [
+            "x",
+            "y",
+            "z"
+        ]
+    }
+}

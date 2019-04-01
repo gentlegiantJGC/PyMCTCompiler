@@ -1,0 +1,85 @@
+{
+    "map_properties": {
+        "material": {
+            "oak": {
+                "map_properties": {
+                    "stripped": {
+                        "false": {
+                            "new_block": "minecraft:oak_log"
+                        },
+                        "true": {
+                            "new_block": "minecraft:stripped_oak_log"
+                        }
+                    }
+                }
+            },
+            "spruce": {
+                "map_properties": {
+                    "stripped": {
+                        "false": {
+                            "new_block": "minecraft:spruce_log"
+                        },
+                        "true": {
+                            "new_block": "minecraft:stripped_spruce_log"
+                        }
+                    }
+                }
+            },
+            "birch": {
+                "map_properties": {
+                    "stripped": {
+                        "false": {
+                            "new_block": "minecraft:birch_log"
+                        },
+                        "true": {
+                            "new_block": "minecraft:stripped_birch_log"
+                        }
+                    }
+                }
+            },
+            "jungle": {
+                "map_properties": {
+                    "stripped": {
+                        "false": {
+                            "new_block": "minecraft:jungle_log"
+                        },
+                        "true": {
+                            "new_block": "minecraft:stripped_jungle_log"
+                        }
+                    }
+                }
+            },
+            "acacia": {
+                "map_properties": {
+                    "stripped": {
+                        "false": {
+                            "new_block": "minecraft:acacia_log"
+                        },
+                        "true": {
+                            "new_block": "minecraft:stripped_acacia_log"
+                        }
+                    }
+                }
+            },
+            "dark_oak": {
+                "map_properties": {
+                    "stripped": {
+                        "false": {
+                            "new_block": "minecraft:dark_oak_log"
+                        },
+                        "true": {
+                            "new_block": "minecraft:stripped_dark_oak_log"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "carry_properties": {
+        "axis": [
+            "x",
+            "y",
+            "z"
+        ]
+    }
+}

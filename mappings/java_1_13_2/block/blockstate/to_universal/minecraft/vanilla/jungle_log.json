@@ -1,5 +1,9 @@
 {
-    "new_block": "universal_minecraft:jungle_log",
+    "new_block": "universal_minecraft:log",
+    "new_properties": {
+        "material": "jungle",
+        "stripped": "false"
+    },
     "carry_properties": {
         "axis": [
             "x",

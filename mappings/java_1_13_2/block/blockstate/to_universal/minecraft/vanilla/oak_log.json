@@ -1,5 +1,9 @@
 {
-    "new_block": "universal_minecraft:oak_log",
+    "new_block": "universal_minecraft:log",
+    "new_properties": {
+        "material": "oak",
+        "stripped": "false"
+    },
     "carry_properties": {
         "axis": [
             "x",

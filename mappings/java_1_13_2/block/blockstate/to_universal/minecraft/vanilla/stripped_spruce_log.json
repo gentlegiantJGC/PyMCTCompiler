@@ -1,5 +1,9 @@
 {
-    "new_block": "universal_minecraft:stripped_spruce_log",
+    "new_block": "universal_minecraft:log",
+    "new_properties": {
+        "material": "spruce",
+        "stripped": "true"
+    },
     "carry_properties": {
         "axis": [
             "x",

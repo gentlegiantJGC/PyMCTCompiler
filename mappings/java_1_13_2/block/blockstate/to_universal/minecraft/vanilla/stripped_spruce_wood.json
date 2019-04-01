@@ -1,5 +1,9 @@
 {
-    "new_block": "universal_minecraft:stripped_spruce_wood",
+    "new_block": "universal_minecraft:wood",
+    "new_properties": {
+        "material": "spruce",
+        "stripped": "true"
+    },
     "carry_properties": {
         "axis": [
             "x",
