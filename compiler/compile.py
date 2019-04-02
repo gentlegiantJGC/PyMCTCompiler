@@ -125,13 +125,13 @@ def process_version(version_name: str, file_format: str):
 							if primitive_block_name is None:
 								continue
 							try:
-								process_file(file_format, primitives.get_block(file_format, primitive_block_name), version_name, namespace, sub_name, block_file_name)
+								process_block(file_format, primitives.get_block(file_format, primitive_block_name), version_name, namespace, sub_name, block_file_name)
 							except Exception as e:
 								log_to_file(f'Failed to process {version_name}/{namespace}/{sub_name}/{block_file_name}\n{e}\n{traceback.print_exc()}')
 					# TODO: __include_entities__.json
 
 
-def process_file(file_format: str, block_json: dict, version_name: str, namespace: str, sub_name: str, block_file_name: str):
+def process_block(file_format: str, block_json: dict, version_name: str, namespace: str, sub_name: str, block_file_name: str):
 	"""Will create json files based on block_json.
 
 	:param file_format: The format of the blocks. Either "numerical" or "blockstate"
@@ -142,49 +142,30 @@ def process_file(file_format: str, block_json: dict, version_name: str, namespac
 	:param block_file_name: The name of the block for use in the file path
 	"""
 	if file_format == 'numerical':
-		if 'specification' in block_json:
-			save_json(f'{version_name}/block/numerical/specification/{namespace}/{sub_name}/{block_file_name}.json', block_json['specification'])
-		else:
-			save_json(f'{version_name}/block/numerical/specification/{namespace}/{sub_name}/{block_file_name}.json', {"properties": {"block_data": [str(data) for data in range(16)]}, "defaults": {"block_data": "0"}})
-
-		if 'blockstate_specification' in block_json:
-			save_json(f'{version_name}/block/blockstate/specification/{namespace}/{sub_name}/{block_file_name}.json', block_json['blockstate_specification'])
-		else:
-			save_json(f'{version_name}/block/blockstate/specification/{namespace}/{sub_name}/{block_file_name}.json', {})
-
-		for prefix, file_format_2 in [['', 'numerical'], ['blockstate_', 'blockstate']]:
-			if f'{prefix}to_universal' in block_json:
-				save_json(f'{version_name}/block/{file_format_2}/to_universal/{namespace}/{sub_name}/{block_file_name}.json', block_json[f'{prefix}to_universal'])
-			else:
-				raise Exception(f'"{prefix}to_universal" must be defined')
-
-			if f'{prefix}from_universal' in block_json:
-				for block_str, block_data in block_json[f'{prefix}from_universal'].items():
-					namespace_, block_name = block_str.split(':')
-					merge_map(block_data, f'{version_name}/block/{file_format_2}/from_universal/{namespace_}/{sub_name}/{block_name}.json')
-			else:
-				raise Exception(f'"{prefix}from_universal" must be defined')
-
+		formats = ('numerical', 'blockstate')
 	elif file_format == 'blockstate':
-		if 'specification' in block_json:
-			save_json(f'{version_name}/block/blockstate/specification/{namespace}/{sub_name}/{block_file_name}.json', block_json['specification'])
-		else:
-			save_json(f'{version_name}/block/blockstate/specification/{namespace}/{sub_name}/{block_file_name}.json', {})
-
-		if 'to_universal' in block_json:
-			save_json(f'{version_name}/block/blockstate/to_universal/{namespace}/{sub_name}/{block_file_name}.json', block_json['to_universal'])
-		else:
-			raise Exception('"to_universal" must be defined')
-
-		if 'from_universal' in block_json:
-			for block_str, block_data in block_json['from_universal'].items():
-				namespace_, block_name = block_str.split(':')
-				merge_map(block_data, f'{version_name}/block/blockstate/from_universal/{namespace_}/{sub_name}/{block_name}.json')
-		else:
-			raise Exception('"from_universal" must be defined')
-
+		formats = ('blockstate', )
 	else:
-		raise Exception()
+		raise Exception(f'file_format needs to be "numerical" or "blockstate". Got {file_format} instead')
+
+	default_spec = {'blockstate': {}, 'numerical': {"properties": {"block_data": [str(data) for data in range(16)]}, "defaults": {"block_data": "0"}}}
+
+	for file_format in formats:
+		prefix = 'blockstate_' if file_format == 'blockstate' else ''
+
+		save_json(f'{version_name}/block/{file_format}/specification/{namespace}/{sub_name}/{block_file_name}.json', block_json.get(f'{prefix}specification', default_spec[file_format]))
+
+		if f'{prefix}to_universal' in block_json:
+			save_json(f'{version_name}/block/{file_format}/to_universal/{namespace}/{sub_name}/{block_file_name}.json', block_json[f'{prefix}to_universal'])
+		else:
+			raise Exception(f'"{prefix}to_universal" must be defined')
+
+		if f'{prefix}from_universal' in block_json:
+			for block_str, block_data in block_json[f'{prefix}from_universal'].items():
+				namespace_, block_name = block_str.split(':')
+				merge_map(block_data, f'{version_name}/block/{file_format}/from_universal/{namespace_}/{sub_name}/{block_name}.json')
+		else:
+			raise Exception(f'"{prefix}from_universal" must be defined')
 
 
 def merge_map(data: dict, path: str, prefix: str = compiled_dir):
