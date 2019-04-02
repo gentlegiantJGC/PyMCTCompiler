@@ -29,7 +29,7 @@ compiler is optional if a custom compiler is to be used for that version. See th
 
 ## Version Data
 
-Within the version directory are json files in the format {format}/{namespace}/{group_name}/__include__.json
+Within the version directory are json files in the format {format}/{namespace}/{group_name}/__include_blocks__.json
 
 This is a JSON file that maps from block name for that namespace to the primitive file to pull.
 

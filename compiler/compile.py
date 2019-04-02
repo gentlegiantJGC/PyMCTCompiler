@@ -113,18 +113,22 @@ def process_version(version_name: str, file_format: str):
 	:param file_format: The format of the blocks. Either "numerical" or "blockstate"
 	:type file_format: str
 	"""
+	# iterate through all namespaces
 	for namespace in listdir(f'{version_name}/{file_format}'):
 		if isdir(f'{version_name}/{file_format}/{namespace}'):
+			# iterate through all sub_names ('vanilla', 'chemistry'...)
 			for sub_name in listdir(f'{version_name}/{file_format}/{namespace}'):
 				if isdir(f'{version_name}/{file_format}/{namespace}/{sub_name}'):
-					if '__include__.json' in listdir(f'{version_name}/{file_format}/{namespace}/{sub_name}'):
-						for block_file_name, primitive_block_name in load_file(f'{version_name}/{file_format}/{namespace}/{sub_name}/__include__.json').items():
+					# load __include_blocks__.json if it exists and unpack those primitive files
+					if '__include_blocks__.json' in listdir(f'{version_name}/{file_format}/{namespace}/{sub_name}'):
+						for block_file_name, primitive_block_name in load_file(f'{version_name}/{file_format}/{namespace}/{sub_name}/__include_blocks__.json').items():
 							if primitive_block_name is None:
 								continue
 							try:
 								process_file(file_format, primitives.get_block(file_format, primitive_block_name), version_name, namespace, sub_name, block_file_name)
 							except Exception as e:
 								log_to_file(f'Failed to process {version_name}/{namespace}/{sub_name}/{block_file_name}\n{e}\n{traceback.print_exc()}')
+					# TODO: __include_entities__.json
 
 
 def process_file(file_format: str, block_json: dict, version_name: str, namespace: str, sub_name: str, block_file_name: str):
@@ -204,6 +208,7 @@ def merge_map(data: dict, path: str, prefix: str = compiled_dir):
 def main():
 	"""Will remove all files from compiled_dir and generate them from uncompiled_dir"""
 	t2 = time.time()
+	# delete the mappings folder
 	counter = 0
 	while isdir('', compiled_dir) and counter < 10:
 		counter += 1
@@ -213,6 +218,7 @@ def main():
 			log_to_file(str(e))
 	if isdir('', compiled_dir):
 		raise Exception(f'Failed to delete "{compiled_dir}" for some reason')
+	# iterate through all versions in the uncompiled directory
 	for version_name in listdir(''):
 		if not isdir(f'./{version_name}'):
 			continue
@@ -223,8 +229,10 @@ def main():
 			assert isinstance(init, dict)
 			if 'format' in init and init['format'] in ['numerical', 'pseudo-numerical', 'blockstate']:
 				if init['format'] == 'numerical':
+					# copy over the numerical map required for old numerical formats
 					copy_file(f'{version_name}/__numerical_map__.json')
 
+				# run the relevant compiler
 				if getattr(version_compiler, version_name).compiler is not None:
 					getattr(version_compiler, version_name).compiler(version_name, '.'.join(str(a) for a in init['version']), primitives)
 				else:
@@ -234,6 +242,7 @@ def main():
 					elif init['format'] == 'blockstate':
 						process_version(version_name, 'blockstate')
 
+				# save the init file
 				save_json(f'{version_name}/__init__.json', init)
 				log_to_file(f'\tFinished in {round(time.time() - t, 2)} seconds')
 			else:

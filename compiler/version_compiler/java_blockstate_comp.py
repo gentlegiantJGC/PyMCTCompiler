@@ -33,8 +33,8 @@ def main(version_name: str, version_str: str, primitives):
 					modifications[namespace][group_name] = {"remove": [], "add": {}}
 
 				# load the modifications for that namespace and group name
-				if '__include__.json' in listdir(f'{version_name}/modifications/{namespace}/{group_name}'):
-					json_object = load_file(f'{version_name}/modifications/{namespace}/{group_name}/__include__.json')
+				if '__include_blocks__.json' in listdir(f'{version_name}/modifications/{namespace}/{group_name}'):
+					json_object = load_file(f'{version_name}/modifications/{namespace}/{group_name}/__include_blocks__.json')
 					for key, val in json_object.items():
 						if key in modifications[namespace][group_name]:
 							print(f'Key "{key}" specified for addition more than once')
