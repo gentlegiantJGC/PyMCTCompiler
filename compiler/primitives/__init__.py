@@ -16,9 +16,10 @@ def load_file(path: str) -> dict:
 
 print('Loading Primitives ...')
 blocks = {'numerical': {}, 'blockstate': {}}
+entities = {}
 
 for start_folder in blocks:
-	for root, dirs, files in os.walk(f'{os.path.dirname(__file__)}/{start_folder}'):
+	for root, dirs, files in os.walk(f'{os.path.dirname(__file__)}/blocks/{start_folder}'):
 		for f in files:
 			if os.path.splitext(f)[0] in blocks[start_folder]:
 				print(f'Block name "{os.path.splitext(f)[0]}" is define twice')
@@ -28,6 +29,15 @@ for start_folder in blocks:
 				print(f'Failed to load {root}/{f}\n{e}')
 				print(traceback.print_tb(e.__traceback__))
 
+for root, dirs, files in os.walk(f'{os.path.dirname(__file__)}/entities'):
+	for f in files:
+		if os.path.splitext(f)[0] in entities:
+			print(f'Block name "{os.path.splitext(f)[0]}" is define twice')
+		try:
+			entities[os.path.splitext(f)[0]] = load_file(f'{root}/{f}')
+		except Exception as e:
+			print(f'Failed to load {root}/{f}\n{e}')
+			print(traceback.print_tb(e.__traceback__))
 
 print('\tFinished Loading Primitives')
 
