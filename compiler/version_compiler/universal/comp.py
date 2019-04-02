@@ -14,7 +14,7 @@ def debug(block_data: dict) -> bool:
 		return True
 
 
-def main(version_name: str, _):
+def main(version_name: str, *_):
 	"""Custom compiler for the universal version.
 
 	:param version_name: The folder name of the version being compiled

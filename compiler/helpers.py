@@ -1,4 +1,6 @@
 import os
+from urllib.request import urlopen
+import json
 
 log_file = open('log.txt', 'w')
 
@@ -161,8 +163,10 @@ def unique_merge_lists(list_a: list, list_b: list) -> list:
 	return merged_list
 
 
-def _blocks_from_server(uncompiled_path: str, version_name: str):
-	if not os.path.isfile(f'{uncompiled_path}/{version_name}/generated/reports/blocks.json') and os.path.isfile(f'{uncompiled_path}/{version_name}/server.jar'):
+def _blocks_from_server(uncompiled_path: str, version_name: str, version_str: str = None):
+	if not os.path.isfile(f'{uncompiled_path}/{version_name}/generated/reports/blocks.json'):
+		if not os.path.isfile(f'{uncompiled_path}/{version_name}/server.jar'):
+			download_server_jar(f'{uncompiled_path}/{version_name}', version_str)
 		# try and find a version of java with which to extract the blocks.json file
 		try:
 			os.system(f'java -cp {uncompiled_path}/{version_name}/server.jar net.minecraft.data.Main --reports --output {uncompiled_path}/{version_name}/generated')
@@ -184,3 +188,20 @@ def _blocks_from_server(uncompiled_path: str, version_name: str):
 					os.system(f'{java_path} -cp {uncompiled_path}/{version_name}/server.jar net.minecraft.data.Main --reports --output {uncompiled_path}/{version_name}/generated')
 				except Exception as e:
 					raise Exception(f'This failed for some reason\n{e}')
+
+
+def download_server_jar(path: str, version_str: str = None):
+	manifest = json.load(urlopen('https://launchermeta.mojang.com/mc/game/version_manifest.json'))
+	if version_str is None:
+		version_str = manifest['latest']['release']
+	version = next((v for v in manifest['versions'] if v['id'] == version_str), None)
+	if version is None:
+		raise Exception(f'Could not find version "{version_str}"')
+	version_manifest = json.load(urlopen(version['url']))
+	if 'server' in version_manifest['downloads']:
+		print('\tDownloading server.jar')
+		server = urlopen(version_manifest['downloads']['server']['url']).read()
+		with open(f'{path}/server.jar', 'wb') as f:
+			f.write(server)
+	else:
+		raise Exception(f'Could not find server for version "{version_str}"')

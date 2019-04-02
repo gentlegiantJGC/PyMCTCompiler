@@ -100,9 +100,9 @@ def copy_file(path: str):
 		log_to_file(f'Could not find file {uncompiled_dir}/{path} to copy')
 
 
-def blocks_from_server(version_name: str, prefix: str = uncompiled_dir):
+def blocks_from_server(version_name: str, version_str: str = None, prefix: str = uncompiled_dir):
 	"""Generate the block.json file from the server.jar"""
-	_blocks_from_server(prefix, version_name)
+	_blocks_from_server(prefix, version_name, version_str)
 
 
 def process_version(version_name: str, file_format: str):
@@ -226,7 +226,7 @@ def main():
 					copy_file(f'{version_name}/__numerical_map__.json')
 
 				if getattr(version_compiler, version_name).compiler is not None:
-					getattr(version_compiler, version_name).compiler(version_name, primitives)
+					getattr(version_compiler, version_name).compiler(version_name, '.'.join(str(a) for a in init['version']), primitives)
 				else:
 					if init['format'] in ['numerical', 'pseudo-numerical']:
 						process_version(version_name, 'numerical')

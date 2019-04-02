@@ -14,13 +14,13 @@ def debug(block_data: dict) -> bool:
 		return True
 
 
-def main(version_name: str, primitives):
+def main(version_name: str, version_str: str, primitives):
 	"""Custom compiler for the Java 1.13+ versions.
 
 	:param version_name: The folder name of the version being compiled
 	:param primitives: the primitives module
 	"""
-	blocks_from_server(version_name)
+	blocks_from_server(version_name, version_str)
 
 	if isfile(f'{version_name}/generated/reports/blocks.json'):
 		modifications = {}
