@@ -1,23 +1,103 @@
 {
     "new_block": "universal_minecraft:lava",
-    "carry_properties": {
-        "level": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15"
-        ]
+    "map_properties": {
+        "level": {
+            "0": {
+                "new_properties": {
+                    "falling": "false",
+                    "level": "0"
+                }
+            },
+            "1": {
+                "new_properties": {
+                    "falling": "false",
+                    "level": "1"
+                }
+            },
+            "2": {
+                "new_properties": {
+                    "falling": "false",
+                    "level": "2"
+                }
+            },
+            "3": {
+                "new_properties": {
+                    "falling": "false",
+                    "level": "3"
+                }
+            },
+            "4": {
+                "new_properties": {
+                    "falling": "false",
+                    "level": "4"
+                }
+            },
+            "5": {
+                "new_properties": {
+                    "falling": "false",
+                    "level": "5"
+                }
+            },
+            "6": {
+                "new_properties": {
+                    "falling": "false",
+                    "level": "6"
+                }
+            },
+            "7": {
+                "new_properties": {
+                    "falling": "false",
+                    "level": "7"
+                }
+            },
+            "8": {
+                "new_properties": {
+                    "falling": "true",
+                    "level": "0"
+                }
+            },
+            "9": {
+                "new_properties": {
+                    "falling": "true",
+                    "level": "1"
+                }
+            },
+            "10": {
+                "new_properties": {
+                    "falling": "true",
+                    "level": "2"
+                }
+            },
+            "11": {
+                "new_properties": {
+                    "falling": "true",
+                    "level": "3"
+                }
+            },
+            "12": {
+                "new_properties": {
+                    "falling": "true",
+                    "level": "4"
+                }
+            },
+            "13": {
+                "new_properties": {
+                    "falling": "true",
+                    "level": "5"
+                }
+            },
+            "14": {
+                "new_properties": {
+                    "falling": "true",
+                    "level": "6"
+                }
+            },
+            "15": {
+                "new_properties": {
+                    "falling": "true",
+                    "level": "7"
+                }
+            }
+        }
     }
 }

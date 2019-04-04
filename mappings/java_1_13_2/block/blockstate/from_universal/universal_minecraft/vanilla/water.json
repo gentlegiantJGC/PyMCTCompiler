@@ -1,23 +1,99 @@
 {
     "new_block": "minecraft:water",
-    "carry_properties": {
-        "level": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15"
-        ]
+    "map_properties": {
+        "falling": {
+            "false": {
+                "map_properties": {
+                    "level": {
+                        "0": {
+                            "new_properties": {
+                                "level": "0"
+                            }
+                        },
+                        "1": {
+                            "new_properties": {
+                                "level": "1"
+                            }
+                        },
+                        "2": {
+                            "new_properties": {
+                                "level": "2"
+                            }
+                        },
+                        "3": {
+                            "new_properties": {
+                                "level": "3"
+                            }
+                        },
+                        "4": {
+                            "new_properties": {
+                                "level": "4"
+                            }
+                        },
+                        "5": {
+                            "new_properties": {
+                                "level": "5"
+                            }
+                        },
+                        "6": {
+                            "new_properties": {
+                                "level": "6"
+                            }
+                        },
+                        "7": {
+                            "new_properties": {
+                                "level": "7"
+                            }
+                        }
+                    }
+                }
+            },
+            "true": {
+                "map_properties": {
+                    "level": {
+                        "0": {
+                            "new_properties": {
+                                "level": "8"
+                            }
+                        },
+                        "1": {
+                            "new_properties": {
+                                "level": "9"
+                            }
+                        },
+                        "2": {
+                            "new_properties": {
+                                "level": "10"
+                            }
+                        },
+                        "3": {
+                            "new_properties": {
+                                "level": "11"
+                            }
+                        },
+                        "4": {
+                            "new_properties": {
+                                "level": "12"
+                            }
+                        },
+                        "5": {
+                            "new_properties": {
+                                "level": "13"
+                            }
+                        },
+                        "6": {
+                            "new_properties": {
+                                "level": "14"
+                            }
+                        },
+                        "7": {
+                            "new_properties": {
+                                "level": "15"
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

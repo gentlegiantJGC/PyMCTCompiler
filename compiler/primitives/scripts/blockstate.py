@@ -477,3 +477,45 @@ def double_plant(input_namespace: str, input_block_name: str, universal_namespac
 			]
 		}
 	)
+
+
+def fluid(input_namespace: str, input_block_name: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	return {
+		"to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"map_properties": {
+				"level": {
+					str(level): {
+						"new_properties": {
+							"falling": {0: "false", 8: "true"}[level & 8],
+							"level": str(level & 7)
+						}
+					} for level in range(16)
+				}
+			},
+		},
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"new_block": f"{input_namespace}:{input_block_name}",
+				"map_properties": {
+					"falling": {
+						falling: {
+							"map_properties": {
+								"level": {
+									level: {
+										"new_properties": {
+											"level": str(level + data8 * 8)
+										}
+									} for level in range(8)
+								}
+							}
+						} for falling, data8 in [["false", 0], ["true", 1]]
+					}
+				}
+			}
+		}
+	}
