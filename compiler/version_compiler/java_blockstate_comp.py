@@ -1,4 +1,5 @@
-from ..compile import save_json, load_file, isfile, isdir, listdir, merge_map, blocks_from_server, compiled_dir
+from ..compile import save_json, load_file, isfile, isdir, listdir, merge_map, blocks_from_server, compiled_dir, DiskBuffer
+import copy
 
 
 def debug(block_data: dict) -> bool:
@@ -18,11 +19,13 @@ def main(version_name: str, version_str: str, primitives):
 	"""Custom compiler for the Java 1.13+ versions.
 
 	:param version_name: The folder name of the version being compiled
+	:param version_str: The string of the version number exactly as it appears in the version manifest
 	:param primitives: the primitives module
 	"""
 	blocks_from_server(version_name, version_str)
 
 	if isfile(f'{version_name}/generated/reports/blocks.json'):
+		output = DiskBuffer()
 		modifications = {}
 		# Iterate through all modifications and load them into a dictionary
 		for namespace in (namespace for namespace in listdir(f'{version_name}/modifications') if isdir(f'{version_name}/modifications/{namespace}')):
@@ -64,14 +67,13 @@ def main(version_name: str, version_str: str, primitives):
 			del states['states']
 			if not debug(states):
 				print(f'Error in "{block_string}"')
-			save_json(f'{version_name}/block/blockstate/specification/{namespace}/vanilla/{block_name}.json', states)
-			if block_name == 'flower_pot':
-				pass
+			save_json(f'{version_name}/block/blockstate/specification/{namespace}/vanilla/{block_name}.json', states, buffer=output)
 			if not(namespace in modifications and any(block_name in modifications[namespace][group_name]['remove'] for group_name in modifications[namespace])):
 				# the block is not marked for removal
 
 				if 'properties' in default_state:
 					if 'waterlogged' in default_state['properties']:
+						states = copy.deepcopy(states)
 						del states['properties']['waterlogged']
 					to_universal = {
 						"new_block": f"universal_{block_string}",
@@ -89,13 +91,13 @@ def main(version_name: str, version_str: str, primitives):
 						"new_block": block_string
 					}
 
-				save_json(f'{version_name}/block/blockstate/to_universal/{namespace}/vanilla/{block_name}.json', to_universal)
-				save_json(f'{version_name}/block/blockstate/from_universal/universal_{namespace}/vanilla/{block_name}.json', from_universal)
+				save_json(f'{version_name}/block/blockstate/to_universal/{namespace}/vanilla/{block_name}.json', to_universal, buffer=output)
+				save_json(f'{version_name}/block/blockstate/from_universal/universal_{namespace}/vanilla/{block_name}.json', from_universal, buffer=output)
 
 		for namespace in modifications:
 			for group_name in modifications[namespace]:
 				for block_name, block_data in modifications[namespace][group_name]["add"].items():
-					if isfile(f'{version_name}/block/blockstate/to_universal/{namespace}/{group_name}/{block_name}.json', compiled_dir):
+					if isfile(f'{version_name}/block/blockstate/to_universal/{namespace}/{group_name}/{block_name}.json', compiled_dir, buffer=output):
 						print(f'"{block_name}" is already present.')
 					else:
 						assert isinstance(block_data, dict), f'The data here is supposed to be a dictionary. Got this instead:\n{block_data}'
@@ -109,14 +111,17 @@ def main(version_name: str, version_str: str, primitives):
 								# del specification['properties']['waterlogged']
 								# del specification['defaults']['waterlogged']
 								# TODO: save this somewhere
-							save_json(f'{version_name}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', specification, True)
+							save_json(f'{version_name}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', specification, True, buffer=output)
 
 						assert 'to_universal' in block_data, f'"to_universal" must be present. Was missing for {version_name} {namespace}:{block_name}'
-						save_json(f'{version_name}/block/blockstate/to_universal/{namespace}/{group_name}/{block_name}.json', block_data["to_universal"])
+						save_json(f'{version_name}/block/blockstate/to_universal/{namespace}/{group_name}/{block_name}.json', block_data["to_universal"], buffer=output)
 
 						assert 'from_universal' in block_data, f'"to_universal" must be present. Was missing for {version_name} {namespace}:{block_name}'
 						for block_string2, mapping in block_data['from_universal'].items():
 							namespace2, block_name2 = block_string2.split(':', 1)
-							merge_map(mapping, f'{version_name}/block/blockstate/from_universal/{namespace2}/vanilla/{block_name2}.json')
+							merge_map(mapping, f'{version_name}/block/blockstate/from_universal/{namespace2}/vanilla/{block_name2}.json', buffer=output)
+		return output.save()
 	else:
-		raise Exception(f'Cound not find {version_name}/generated/reports/blocks.json')
+		raise Exception(f'Could not find {version_name}/generated/reports/blocks.json')
+
+

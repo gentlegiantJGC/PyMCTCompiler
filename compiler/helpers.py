@@ -1,8 +1,43 @@
 import os
 from urllib.request import urlopen
 import json
+import threading
+from typing import List
 
 log_file = open('log.txt', 'w')
+
+
+class ThreadSave(threading.Thread):
+	def __init__(self, path: str, data):
+		threading.Thread.__init__(self)
+		self.path = path
+		self.data = data
+
+	def run(self):
+		os.makedirs(os.path.dirname(self.path), exist_ok=True)
+		with open(self.path, 'w') as f:
+			if self.path.endswith('.json'):
+				json.dump(self.data, f, indent=4)
+			else:
+				f.write(self.data)
+
+
+class DiskBuffer:
+	def __init__(self):
+		self._files = {}
+
+	def add_file(self, path: str, data):
+		self._files[path] = data
+
+	def load_file(self, path: str):
+		return self._files[path]
+
+	def save(self) -> List[ThreadSave]:
+		threads = [ThreadSave(path, data) for path, data in self._files.items()]
+		return threads
+
+	def isfile(self, path: str) -> bool:
+		return path in self._files.keys()
 
 
 def log_to_file(msg: str):
@@ -171,7 +206,7 @@ def _blocks_from_server(uncompiled_path: str, version_name: str, version_str: st
 		try:
 			os.system(f'java -cp {uncompiled_path}/{version_name}/server.jar net.minecraft.data.Main --reports --output {uncompiled_path}/{version_name}/generated')
 		except:
-			print('Cound not find global Java. Trying to find the one packaged with Minecraft')
+			print('Could not find global Java. Trying to find the one packaged with Minecraft')
 			if os.path.isdir(r'C:\Program Files (x86)\Minecraft\runtime'):
 				path = r'C:\Program Files (x86)\Minecraft\runtime'
 			elif os.path.isdir(r'C:\Program Files\Minecraft\runtime'):

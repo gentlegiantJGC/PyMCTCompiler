@@ -1,4 +1,4 @@
-from ...compile import save_json, load_file, isfile, isdir, listdir, blocks_from_server, compiled_dir
+from ...compile import save_json, load_file, isfile, isdir, listdir, blocks_from_server, compiled_dir, DiskBuffer
 
 
 def debug(block_data: dict) -> bool:
@@ -23,6 +23,7 @@ def main(version_name: str, *_):
 	blocks_from_server(version_name)
 
 	if isfile(f'{version_name}/generated/reports/blocks.json'):
+		output = DiskBuffer()
 		modifications = {}
 		# Iterate through all modifications and load them into a dictionary
 		for namespace in (namespace for namespace in listdir(f'{version_name}/modifications') if isdir(f'{version_name}/modifications/{namespace}')):
@@ -61,18 +62,19 @@ def main(version_name: str, *_):
 				print(f'Error in "{block_string}"')
 			if not(namespace in modifications and any(block_name in modifications[namespace][group_name]['remove'] for group_name in modifications[namespace])):
 				# the block is not marked for removal
-				save_json(f'{version_name}/block/blockstate/specification/{namespace}/vanilla/{block_name}.json', states)
+				save_json(f'{version_name}/block/blockstate/specification/{namespace}/vanilla/{block_name}.json', states, buffer=output)
 
 		for namespace in modifications:
 			for group_name in modifications[namespace]:
 				for block_name, specification in modifications[namespace][group_name]["add"].items():
-					if isfile(f'{version_name}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', compiled_dir):
+					if isfile(f'{version_name}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', compiled_dir, buffer=output):
 						print(f'"{block_name}" is already present.')
 					else:
 						assert isinstance(specification, dict), f'The data here is supposed to be a dictionary. Got this instead:\n{specification}'
 
 						if not debug(specification):
 							print(f'Error in "{block_name}"')
-						save_json(f'{version_name}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', specification)
+						save_json(f'{version_name}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', specification, buffer=output)
+		return output.save()
 	else:
-		raise Exception(f'Cound not find {version_name}/generated/reports/blocks.json')
+		raise Exception(f'Could not find {version_name}/generated/reports/blocks.json')

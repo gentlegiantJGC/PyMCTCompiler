@@ -4,47 +4,44 @@ import shutil
 import traceback
 import time
 from compiler import primitives, version_compiler
-from compiler.helpers import log_to_file, _merge_map, _blocks_from_server
+from compiler.helpers import log_to_file, _merge_map, _blocks_from_server, DiskBuffer
 
 primitive_dir = './primitives'
 uncompiled_dir = './version_compiler'
 compiled_dir = '../mappings'
 
 
-def isfile(path: str, prefix: str = uncompiled_dir) -> bool:
+def isfile(path: str, prefix: str = uncompiled_dir, buffer: DiskBuffer = None) -> bool:
 	"""Return if the "path" at "prefix" exists and is a file. Defaults to the uncompiled directory.
 
 	:param path: The path to look for within prefix
-	:type path: str
 	:param prefix: The directory to look in
-	:type prefix: str
+	:param buffer: The DiskBuffer to check in
 	:return: bool
 	"""
-	return os.path.isfile(f'{prefix}/{path}')
+	if isinstance(buffer, DiskBuffer) and prefix == compiled_dir:
+		return buffer.isfile(f'{prefix}/{path}')
+	else:
+		return os.path.isfile(f'{prefix}/{path}')
 
 
 def isdir(path: str, prefix: str = uncompiled_dir) -> bool:
 	"""Return if the "path" at "prefix" exists and is a directory. Defaults to the uncompiled directory.
 
 	:param path: The path to look for within prefix
-	:type path: str
 	:param prefix: The directory to look in
-	:type prefix: str
 	:return: bool
 	"""
 	return os.path.isdir(f'{prefix}/{path}')
 
 
-def listdir(path: str, prefix: str = uncompiled_dir) -> list:
-	"""Returns the listdir of prefix/path.
+def listdir(path: str) -> list:
+	"""Returns the listdir of uncompiled_dir/path.
 
 	:param path: The path to look for within prefix
-	:type path: str
-	:param prefix: The directory to look in
-	:type prefix: str
 	:return: bool
 	"""
-	return os.listdir(f'{prefix}/{path}')
+	return os.listdir(f'{uncompiled_dir}/{path}')
 
 
 def create_directory(path: str, prefix: str = compiled_dir):
@@ -52,39 +49,43 @@ def create_directory(path: str, prefix: str = compiled_dir):
 		os.makedirs(f'{prefix}/{path}')
 
 
-def load_file(path: str, prefix: str = uncompiled_dir) -> dict:
+def load_file(path: str, prefix: str = uncompiled_dir, buffer: DiskBuffer = None) -> dict:
 	"""Loads and returns the data from the file at prefix/path if it is a json file.
 
 	:param path: The path to look for within prefix
-	:type path: str
 	:param prefix: The directory to look in
-	:type prefix: str
+	:param buffer: The DiskBuffer to read from
 	:return: bool
 	"""
-	if path.endswith('.json'):
-		with open(f'{prefix}/{path}') as f:
-			return json.load(f)
+	if isinstance(buffer, DiskBuffer) and prefix == compiled_dir:
+		return buffer.load_file(f'{prefix}/{path}')
 	else:
-		raise Exception(f'Could not load "{prefix}/{path}"')
+		if path.endswith('.json'):
+			with open(f'{prefix}/{path}') as f:
+				return json.load(f)
+		else:
+			raise Exception(f'Could not load "{prefix}/{path}"')
 
 
-def save_json(path: str, data: dict, overwrite: bool = False, prefix: str = compiled_dir):
+def save_json(path: str, data: dict, overwrite: bool = False, prefix: str = compiled_dir, buffer: DiskBuffer = None):
 	"""Will save "data" to a json file at compiled_dir/path.
 
 	:param path: The path to look for within prefix
-	:type path: str
 	:param data: The object to write to the file
-	:type data: dict
 	:param overwrite: Whether to overwrite the file or error if it exists
-	:type overwrite: bool
 	:param prefix: Path prefix
-	:type prefix: str
+	:param buffer: the DiskBuffer to write in
 	"""
-	create_directory(os.path.dirname(path))
-	if not overwrite and os.path.isfile(f'{prefix}/{path}'):
-		raise Exception(f'File "{path}" already exists. Doing this will overwrite the data')
-	with open(f'{prefix}/{path}', 'w') as f:
-		json.dump(data, f, indent=4)
+	if isinstance(buffer, DiskBuffer) and prefix == compiled_dir:
+		if not overwrite and isfile(path, prefix):
+			raise Exception(f'File "{prefix}/{path}" already exists. Doing this will overwrite the data')
+		buffer.add_file(f'{prefix}/{path}', data)
+	else:
+		create_directory(os.path.dirname(path))
+		if not overwrite and isfile(path, prefix):
+			raise Exception(f'File "{prefix}/{path}" already exists. Doing this will overwrite the data')
+		with open(f'{prefix}/{path}', 'w') as f:
+			json.dump(data, f, indent=4)
 
 
 def copy_file(path: str):
@@ -98,6 +99,20 @@ def copy_file(path: str):
 		shutil.copy(f'{uncompiled_dir}/{path}', f'{compiled_dir}/{path}')
 	else:
 		log_to_file(f'Could not find file {uncompiled_dir}/{path} to copy')
+
+
+def merge_map(data: dict, path: str, buffer: DiskBuffer = None):
+	"""Will save "data" to compiled_dir/path and merge with any data present.
+
+	:param data: The data to save
+	:param path: The path to save it to relative to compiled_dir
+	:param buffer: The DiskBuffer to read and write from
+	"""
+	if isfile(path, compiled_dir, buffer):
+		data_ = load_file(path, compiled_dir, buffer)
+		save_json(path, _merge_map(data_, data), True, buffer=buffer)
+	else:
+		save_json(path, data, buffer=buffer)
 
 
 def blocks_from_server(version_name: str, version_str: str = None, prefix: str = uncompiled_dir):
@@ -114,6 +129,7 @@ def process_version(version_name: str, file_format: str):
 	:type file_format: str
 	"""
 	# iterate through all namespaces
+	output = DiskBuffer()
 	for namespace in listdir(f'{version_name}/{file_format}'):
 		if isdir(f'{version_name}/{file_format}/{namespace}'):
 			# iterate through all sub_names ('vanilla', 'chemistry'...)
@@ -125,13 +141,14 @@ def process_version(version_name: str, file_format: str):
 							if primitive_block_name is None:
 								continue
 							try:
-								process_block(file_format, primitives.get_block(file_format, primitive_block_name), version_name, namespace, sub_name, block_file_name)
+								process_block(output, file_format, primitives.get_block(file_format, primitive_block_name), version_name, namespace, sub_name, block_file_name)
 							except Exception as e:
 								log_to_file(f'Failed to process {version_name}/{namespace}/{sub_name}/{block_file_name}\n{e}\n{traceback.print_exc()}')
 					# TODO: __include_entities__.json
+	return output.save()
 
 
-def process_block(file_format: str, block_json: dict, version_name: str, namespace: str, sub_name: str, block_file_name: str):
+def process_block(buffer: DiskBuffer, file_format: str, block_json: dict, version_name: str, namespace: str, sub_name: str, block_file_name: str):
 	"""Will create json files based on block_json.
 
 	:param file_format: The format of the blocks. Either "numerical" or "blockstate"
@@ -153,37 +170,19 @@ def process_block(file_format: str, block_json: dict, version_name: str, namespa
 	for file_format in formats:
 		prefix = 'blockstate_' if file_format == 'blockstate' else ''
 
-		save_json(f'{version_name}/block/{file_format}/specification/{namespace}/{sub_name}/{block_file_name}.json', block_json.get(f'{prefix}specification', default_spec[file_format]))
+		save_json(f'{version_name}/block/{file_format}/specification/{namespace}/{sub_name}/{block_file_name}.json', block_json.get(f'{prefix}specification', default_spec[file_format]), buffer=buffer)
 
 		if f'{prefix}to_universal' in block_json:
-			save_json(f'{version_name}/block/{file_format}/to_universal/{namespace}/{sub_name}/{block_file_name}.json', block_json[f'{prefix}to_universal'])
+			save_json(f'{version_name}/block/{file_format}/to_universal/{namespace}/{sub_name}/{block_file_name}.json', block_json[f'{prefix}to_universal'], buffer=buffer)
 		else:
 			raise Exception(f'"{prefix}to_universal" must be defined')
 
 		if f'{prefix}from_universal' in block_json:
 			for block_str, block_data in block_json[f'{prefix}from_universal'].items():
 				namespace_, block_name = block_str.split(':')
-				merge_map(block_data, f'{version_name}/block/{file_format}/from_universal/{namespace_}/{sub_name}/{block_name}.json')
+				merge_map(block_data, f'{version_name}/block/{file_format}/from_universal/{namespace_}/{sub_name}/{block_name}.json', buffer=buffer)
 		else:
 			raise Exception(f'"{prefix}from_universal" must be defined')
-
-
-def merge_map(data: dict, path: str, prefix: str = compiled_dir):
-	"""Will save "data" to compiled_dir/path and merge with any data present.
-
-	:param data: The data to save
-	:type data: dict
-	:param path: The path to save it to relative to compiled_dir
-	:type path: str
-	:param prefix: Path prefix
-	:type path: str
-	"""
-	if isfile(path, prefix):
-		with open(f'{prefix}/{path}') as f:
-			data_ = json.load(f)
-		save_json(path, _merge_map(data_, data), True)
-	else:
-		save_json(path, data)
 
 
 def main():
@@ -200,6 +199,7 @@ def main():
 	if isdir('', compiled_dir):
 		raise Exception(f'Failed to delete "{compiled_dir}" for some reason')
 	# iterate through all versions in the uncompiled directory
+	threads = []
 	for version_name in listdir(''):
 		if not isdir(f'./{version_name}'):
 			continue
@@ -215,13 +215,20 @@ def main():
 
 				# run the relevant compiler
 				if getattr(version_compiler, version_name).compiler is not None:
-					getattr(version_compiler, version_name).compiler(version_name, '.'.join(str(a) for a in init['version']), primitives)
+					temp_threads = getattr(version_compiler, version_name).compiler(version_name, '.'.join(str(a) for a in init['version']), primitives)
+					threads += temp_threads
+					[thread.start() for thread in temp_threads]
+
 				else:
 					if init['format'] in ['numerical', 'pseudo-numerical']:
-						process_version(version_name, 'numerical')
+						temp_threads = process_version(version_name, 'numerical')
+						threads += temp_threads
+						[thread.start() for thread in temp_threads]
 
 					elif init['format'] == 'blockstate':
-						process_version(version_name, 'blockstate')
+						temp_threads = process_version(version_name, 'blockstate')
+						threads += temp_threads
+						[thread.start() for thread in temp_threads]
 
 				# save the init file
 				save_json(f'{version_name}/__init__.json', init)
@@ -229,7 +236,8 @@ def main():
 			else:
 				log_to_file(f'"format" in __init__.json for {version_name} is either not defined or not a valid value. This version has been skipped')
 		else:
-			log_to_file(f'Cound not find __init__.json file for {version_name}. This version has been skipped')
+			log_to_file(f'Could not find __init__.json file for {version_name}. This version has been skipped')
+	[thread.join() for thread in threads]
 	log_to_file(f'\nFinished compiling all versions in {round(time.time() - t2, 2)}')
 
 
