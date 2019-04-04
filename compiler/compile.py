@@ -190,6 +190,7 @@ def main():
 	t2 = time.time()
 	# delete the mappings folder
 	counter = 0
+	log_to_file('Deleting the mapping directory ...')
 	while isdir('', compiled_dir) and counter < 10:
 		counter += 1
 		try:
@@ -198,8 +199,9 @@ def main():
 			log_to_file(str(e))
 	if isdir('', compiled_dir):
 		raise Exception(f'Failed to delete "{compiled_dir}" for some reason')
-	# iterate through all versions in the uncompiled directory
+	log_to_file('\tFinished deleting the mapping directory')
 	threads = []
+	# iterate through all versions in the uncompiled directory
 	for version_name in listdir(''):
 		if not isdir(f'./{version_name}'):
 			continue
@@ -216,19 +218,13 @@ def main():
 				# run the relevant compiler
 				if getattr(version_compiler, version_name).compiler is not None:
 					temp_threads = getattr(version_compiler, version_name).compiler(version_name, '.'.join(str(a) for a in init['version']), primitives)
-					threads += temp_threads
-					[thread.start() for thread in temp_threads]
 
 				else:
 					if init['format'] in ['numerical', 'pseudo-numerical']:
 						temp_threads = process_version(version_name, 'numerical')
-						threads += temp_threads
-						[thread.start() for thread in temp_threads]
 
 					elif init['format'] == 'blockstate':
 						temp_threads = process_version(version_name, 'blockstate')
-						threads += temp_threads
-						[thread.start() for thread in temp_threads]
 
 				# save the init file
 				save_json(f'{version_name}/__init__.json', init)
@@ -237,7 +233,6 @@ def main():
 				log_to_file(f'"format" in __init__.json for {version_name} is either not defined or not a valid value. This version has been skipped')
 		else:
 			log_to_file(f'Could not find __init__.json file for {version_name}. This version has been skipped')
-	[thread.join() for thread in threads]
 	log_to_file(f'\nFinished compiling all versions in {round(time.time() - t2, 2)}')
 
 

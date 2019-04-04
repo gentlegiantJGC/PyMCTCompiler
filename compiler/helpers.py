@@ -1,25 +1,18 @@
 import os
 from urllib.request import urlopen
 import json
-import threading
-from typing import List
+from concurrent.futures import ThreadPoolExecutor
 
 log_file = open('log.txt', 'w')
 
 
-class ThreadSave(threading.Thread):
-	def __init__(self, path: str, data):
-		threading.Thread.__init__(self)
-		self.path = path
-		self.data = data
-
-	def run(self):
-		os.makedirs(os.path.dirname(self.path), exist_ok=True)
-		with open(self.path, 'w') as f:
-			if self.path.endswith('.json'):
-				json.dump(self.data, f, indent=4)
-			else:
-				f.write(self.data)
+def _save_file(path, data):
+	os.makedirs(os.path.dirname(path), exist_ok=True)
+	with open(path, 'w') as f:
+		if path.endswith('.json'):
+			json.dump(data, f, indent=4)
+		else:
+			f.write(data)
 
 
 class DiskBuffer:
@@ -32,9 +25,10 @@ class DiskBuffer:
 	def load_file(self, path: str):
 		return self._files[path]
 
-	def save(self) -> List[ThreadSave]:
-		threads = [ThreadSave(path, data) for path, data in self._files.items()]
-		return threads
+	def save(self):
+		with ThreadPoolExecutor(max_workers=1000) as executor:
+			for path, data in self._files.items():
+				executor.submit(_save_file, path, data)
 
 	def isfile(self, path: str) -> bool:
 		return path in self._files.keys()
