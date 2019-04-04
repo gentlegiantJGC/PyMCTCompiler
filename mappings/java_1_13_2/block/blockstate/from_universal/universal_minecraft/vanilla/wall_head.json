@@ -1,0 +1,33 @@
+{
+    "new_block": "minecraft:skeleton_wall_skull",
+    "map_properties": {
+        "mob": {
+            "skeleton": {
+                "new_block": "minecraft:skeleton_wall_skull"
+            },
+            "wither_skeleton": {
+                "new_block": "minecraft:wither_skeleton_wall_skull"
+            },
+            "zombie": {
+                "new_block": "minecraft:zombie_wall_head"
+            },
+            "player": {
+                "new_block": "minecraft:player_wall_head"
+            },
+            "creeper": {
+                "new_block": "minecraft:creeper_wall_head"
+            },
+            "dragon": {
+                "new_block": "minecraft:dragon_wall_head"
+            }
+        }
+    },
+    "carry_properties": {
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ]
+    }
+}

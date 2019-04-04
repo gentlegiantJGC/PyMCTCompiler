@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:zombie_wall_head",
+    "new_block": "universal_minecraft:wall_head",
+    "new_properties": {
+        "mob": "zombie"
+    },
     "carry_properties": {
         "facing": [
             "north",

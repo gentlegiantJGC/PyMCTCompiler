@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:dragon_wall_head",
+    "new_block": "universal_minecraft:wall_head",
+    "new_properties": {
+        "mob": "dragon"
+    },
     "carry_properties": {
         "facing": [
             "north",

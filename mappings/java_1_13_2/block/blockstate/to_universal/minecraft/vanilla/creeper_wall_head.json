@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:creeper_wall_head",
+    "new_block": "universal_minecraft:wall_head",
+    "new_properties": {
+        "mob": "creeper"
+    },
     "carry_properties": {
         "facing": [
             "north",

@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:skeleton_wall_skull",
+    "new_block": "universal_minecraft:wall_head",
+    "new_properties": {
+        "mob": "skeleton"
+    },
     "carry_properties": {
         "facing": [
             "north",

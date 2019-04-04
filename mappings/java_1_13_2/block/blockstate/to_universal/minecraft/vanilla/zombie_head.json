@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:zombie_head",
+    "new_block": "universal_minecraft:head",
+    "new_properties": {
+        "mob": "zombie"
+    },
     "carry_properties": {
         "rotation": [
             "0",
