@@ -1,34 +1,7 @@
 from typing import Dict, List
 
 
-def stone(input_namespace: str, input_block_name: str, polished: bool, universal_namespace: str = None, universal_block_name: str = None) -> dict:
-	if universal_namespace is None:
-		universal_namespace = input_namespace
-	if universal_block_name is None:
-		universal_block_name = input_block_name
-	polished = 'true' if polished else 'false'
-	return {
-		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
-			"new_properties": {
-				"polished": polished
-			}
-		},
-		"from_universal": {
-			f"{universal_namespace}:{universal_block_name}": {
-				"map_properties": {
-					"polished": {
-						polished: {
-							"new_block": f"{input_namespace}:{input_block_name}"
-						}
-					}
-				}
-			}
-		}
-	}
-
-
-def colour(input_namespace: str, input_block_name: str, color: str, universal_namespace: str = None, universal_block_name: str = None, carry_properties: Dict[str, List[str]] = None) -> dict:
+def single_map(input_namespace: str, input_block_name: str, key: str, val: str, default_block: str, universal_namespace: str = None, universal_block_name: str = None, carry_properties: Dict[str, List[str]] = None) -> dict:
 	if universal_namespace is None:
 		universal_namespace = input_namespace
 	if universal_block_name is None:
@@ -38,14 +11,15 @@ def colour(input_namespace: str, input_block_name: str, color: str, universal_na
 			"to_universal": {
 				"new_block": f"{universal_namespace}:{universal_block_name}",
 				"new_properties": {
-					"color": color
+					key: val
 				}
 			},
 			"from_universal": {
 				f"{universal_namespace}:{universal_block_name}": {
+					"new_block": default_block,
 					"map_properties": {
-						"color": {
-							color: {
+						key: {
+							val: {
 								"new_block": f"{input_namespace}:{input_block_name}"
 							}
 						}
@@ -58,15 +32,16 @@ def colour(input_namespace: str, input_block_name: str, color: str, universal_na
 			"to_universal": {
 				"new_block": f"{universal_namespace}:{universal_block_name}",
 				"new_properties": {
-					"color": color
+					key: val
 				},
 				"carry_properties": carry_properties
 			},
 			"from_universal": {
 				f"{universal_namespace}:{universal_block_name}": {
+					"new_block": default_block,
 					"map_properties": {
-						"color": {
-							color: {
+						key: {
+							val: {
 								"new_block": f"{input_namespace}:{input_block_name}"
 							}
 						}
@@ -77,100 +52,82 @@ def colour(input_namespace: str, input_block_name: str, color: str, universal_na
 		}
 
 
+def stone(input_namespace: str, input_block_name: str, polished: bool, default_block: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	return single_map(
+		input_namespace,
+		input_block_name,
+		"polished",
+		'true' if polished else 'false',
+		default_block,
+		universal_namespace,
+		universal_block_name
+	)
+
+
+def colour(input_namespace: str, input_block_name: str, color: str, universal_namespace: str = None, universal_block_name: str = None, carry_properties: Dict[str, List[str]] = None) -> dict:
+	for col in ('black_', 'blue_', 'brown_', 'cyan_', 'gray_', 'green_', 'light_blue_', 'light_gray_', 'lime_', 'magenta_', 'orange_', 'pink_', 'purple_', 'red_', 'white_', 'yellow_'):
+		if input_block_name.startswith(col):
+			default_block = f'{input_namespace}:white_{input_block_name[len(col):]}'
+			break
+	else:
+		raise Exception()
+
+	return single_map(
+		input_namespace,
+		input_block_name,
+		"color",
+		color,
+		default_block,
+		universal_namespace,
+		universal_block_name,
+		carry_properties
+	)
+
+
 def anvil(input_namespace: str, input_block_name: str, damage: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
-	if universal_namespace is None:
-		universal_namespace = input_namespace
-	if universal_block_name is None:
-		universal_block_name = input_block_name
-	return {
-		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
-			"new_properties": {
-				"damage": damage
-			},
-			"carry_properties": {
-				"facing": [
-					"north",
-					"south",
-					"west",
-					"east"
-				]
-			}
-		},
-		"from_universal": {
-			f"{universal_namespace}:{universal_block_name}": {
-				"map_properties": {
-					"damage": {
-						damage: {
-							"new_block": f"{input_namespace}:{input_block_name}"
-						}
-					}
-				},
-				"carry_properties": {
-					"facing": [
-						"north",
-						"south",
-						"west",
-						"east"
-					]
-				}
-			}
+	return single_map(
+		input_namespace,
+		input_block_name,
+		"damage",
+		damage,
+		"minecraft:anvil",
+		universal_namespace,
+		universal_block_name,
+		{
+			"facing": [
+				"north",
+				"south",
+				"west",
+				"east"
+			]
 		}
-	}
+	)
 
 
 def command_block(input_namespace: str, input_block_name: str, mode: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
-	if universal_namespace is None:
-		universal_namespace = input_namespace
-	if universal_block_name is None:
-		universal_block_name = input_block_name
-	return {
-		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
-			"new_properties": {
-				"mode": mode
-			},
-			"carry_properties": {
-				"conditional": [
-					"true",
-					"false"
-				],
-				"facing": [
-					"north",
-					"east",
-					"south",
-					"west",
-					"up",
-					"down"
-				]
-			}
-		},
-		"from_universal": {
-			f"{universal_namespace}:{universal_block_name}": {
-				"map_properties": {
-					"mode": {
-						mode: {
-							"new_block": f"{input_namespace}:{input_block_name}"
-						}
-					}
-				},
-				"carry_properties": {
-					"conditional": [
-						"true",
-						"false"
-					],
-					"facing": [
-						"north",
-						"east",
-						"south",
-						"west",
-						"up",
-						"down"
-					]
-				}
-			}
+	return single_map(
+		input_namespace,
+		input_block_name,
+		"mode",
+		mode,
+		"minecraft:command_block",
+		universal_namespace,
+		universal_block_name,
+		{
+			"conditional": [
+				"true",
+				"false"
+			],
+			"facing": [
+				"north",
+				"east",
+				"south",
+				"west",
+				"up",
+				"down"
+			]
 		}
-	}
+	)
 
 
 def coral(input_namespace: str, input_block_name: str, material: str, dead: bool, universal_namespace: str = None, universal_block_name: str = None) -> dict:
@@ -351,30 +308,15 @@ def material_helper(input_namespace: str, input_block_name: str, material: str, 
 
 
 def flower_pot(input_namespace: str, input_block_name: str, plant: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
-	if universal_namespace is None:
-		universal_namespace = input_namespace
-	if universal_block_name is None:
-		universal_block_name = input_block_name
-	return {
-		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
-			"new_properties": {
-				"plant": plant
-			}
-		},
-		"from_universal": {
-			f"{universal_namespace}:{universal_block_name}": {
-				"new_block": "minecraft:flower_pot",
-				"map_properties": {
-					"plant": {
-						plant: {
-							"new_block": f"{input_namespace}:{input_block_name}"
-						}
-					}
-				}
-			}
-		}
-	}
+	return single_map(
+		input_namespace,
+		input_block_name,
+		"plant",
+		plant,
+		"minecraft:flower_pot",
+		universal_namespace,
+		universal_block_name
+	)
 
 
 def leaves(input_namespace: str, input_block_name: str, material: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
@@ -502,70 +444,36 @@ def wood(input_namespace: str, input_block_name: str, material: str, stripped: b
 
 
 def plant(input_namespace: str, input_block_name: str, universal_namespace: str = None, universal_block_name: str = None, flower: str = None) -> dict:
-	if universal_namespace is None:
-		universal_namespace = input_namespace
-	if universal_block_name is None:
-		universal_block_name = input_block_name
 	if flower is None:
 		flower = input_block_name
-	return {
-		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
-			"new_properties": {
-				"type": flower
-			}
-		},
-		"from_universal": {
-			f"{universal_namespace}:{universal_block_name}": {
-				"new_block": "minecraft:dandelion",
-				"map_properties": {
-					"type": {
-						flower: {
-							"new_block": f"{input_namespace}:{input_block_name}"
-						}
-					}
-				}
-			}
-		}
-	}
+
+	return single_map(
+		input_namespace,
+		input_block_name,
+		"type",
+		flower,
+		"minecraft:dandelion",
+		universal_namespace,
+		universal_block_name
+	)
 
 
 def double_plant(input_namespace: str, input_block_name: str, universal_namespace: str = None, universal_block_name: str = None, flower: str = None) -> dict:
-	if universal_namespace is None:
-		universal_namespace = input_namespace
-	if universal_block_name is None:
-		universal_block_name = input_block_name
 	if flower is None:
 		flower = input_block_name
-	return {
-		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
-			"new_properties": {
-				"type": flower
-			},
-			"carry_properties": {
-				"half": [
-					"upper",
-					"lower"
-				]
-			}
-		},
-		"from_universal": {
-			f"{universal_namespace}:{universal_block_name}": {
-				"new_block": "minecraft:dandelion",
-				"map_properties": {
-					"type": {
-						flower: {
-							"new_block": f"{input_namespace}:{input_block_name}"
-						}
-					}
-				},
-				"carry_properties": {
-					"half": [
-						"upper",
-						"lower"
-					]
-				}
-			}
+
+	return single_map(
+		input_namespace,
+		input_block_name,
+		"type",
+		flower,
+		"minecraft:dandelion",
+		universal_namespace,
+		universal_block_name,
+		{
+			"half": [
+				"upper",
+				"lower"
+			]
 		}
-	}
+	)

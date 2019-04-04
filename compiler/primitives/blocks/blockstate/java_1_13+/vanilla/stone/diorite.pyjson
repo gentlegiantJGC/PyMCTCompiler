@@ -1,1 +1,1 @@
-blockstate.stone("minecraft", "diorite", False, "universal_minecraft", "diorite")
+blockstate.stone("minecraft", "diorite", False, "minecraft:diorite", "universal_minecraft", "diorite")

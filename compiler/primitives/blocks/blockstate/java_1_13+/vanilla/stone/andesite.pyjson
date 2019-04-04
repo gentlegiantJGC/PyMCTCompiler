@@ -1,1 +1,1 @@
-blockstate.stone("minecraft", "andesite", False, "universal_minecraft", "andesite")
+blockstate.stone("minecraft", "andesite", False, "minecraft:andesite", "universal_minecraft", "andesite")

@@ -1,1 +1,1 @@
-blockstate.stone("minecraft", "granite", False, "universal_minecraft", "granite")
+blockstate.stone("minecraft", "granite", False, "minecraft:granite", "universal_minecraft", "granite")
