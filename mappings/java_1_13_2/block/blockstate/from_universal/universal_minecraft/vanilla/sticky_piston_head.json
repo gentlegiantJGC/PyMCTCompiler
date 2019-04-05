@@ -1,7 +1,7 @@
 {
     "new_block": "minecraft:piston_head",
     "new_properties": {
-        "type": "normal"
+        "type": "sticky"
     },
     "carry_properties": {
         "facing": [

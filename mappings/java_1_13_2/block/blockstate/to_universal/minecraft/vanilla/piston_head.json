@@ -1,5 +1,14 @@
 {
-    "new_block": "universal_minecraft:piston_head",
+    "map_properties": {
+        "type": {
+            "normal": {
+                "new_block": "universal_minecraft:piston_head"
+            },
+            "sticky": {
+                "new_block": "universal_minecraft:sticky_piston_head"
+            }
+        }
+    },
     "carry_properties": {
         "facing": [
             "north",
@@ -12,10 +21,6 @@
         "short": [
             "true",
             "false"
-        ],
-        "type": [
-            "normal",
-            "sticky"
         ]
     }
 }

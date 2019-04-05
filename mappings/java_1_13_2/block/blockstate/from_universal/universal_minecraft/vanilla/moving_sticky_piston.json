@@ -1,7 +1,7 @@
 {
-    "new_block": "minecraft:piston_head",
+    "new_block": "minecraft:moving_piston",
     "new_properties": {
-        "type": "normal"
+        "type": "sticky"
     },
     "carry_properties": {
         "facing": [
@@ -11,10 +11,6 @@
             "west",
             "up",
             "down"
-        ],
-        "short": [
-            "true",
-            "false"
         ]
     }
 }

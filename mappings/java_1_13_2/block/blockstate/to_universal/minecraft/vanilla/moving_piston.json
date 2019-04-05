@@ -1,5 +1,14 @@
 {
-    "new_block": "universal_minecraft:moving_piston",
+    "map_properties": {
+        "type": {
+            "normal": {
+                "new_block": "universal_minecraft:moving_piston"
+            },
+            "sticky": {
+                "new_block": "universal_minecraft:moving_sticky_piston"
+            }
+        }
+    },
     "carry_properties": {
         "facing": [
             "north",
@@ -8,10 +17,6 @@
             "west",
             "up",
             "down"
-        ],
-        "type": [
-            "normal",
-            "sticky"
         ]
     }
 }
