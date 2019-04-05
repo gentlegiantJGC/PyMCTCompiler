@@ -1,3 +1,6 @@
 {
-    "new_block": "universal_minecraft:infested_cobblestone"
+    "new_block": "universal_minecraft:infested_block",
+    "new_properties": {
+        "material": "cobblestone"
+    }
 }

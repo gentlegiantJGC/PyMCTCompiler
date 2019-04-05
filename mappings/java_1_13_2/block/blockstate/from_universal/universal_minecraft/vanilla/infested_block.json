@@ -1,0 +1,25 @@
+{
+    "new_block": "minecraft:infested_cobblestone",
+    "map_properties": {
+        "material": {
+            "cobblestone": {
+                "new_block": "minecraft:infested_cobblestone"
+            },
+            "stone": {
+                "new_block": "minecraft:infested_stone"
+            },
+            "stone_bricks": {
+                "new_block": "minecraft:infested_stone_bricks"
+            },
+            "cracked_stone_bricks": {
+                "new_block": "minecraft:infested_cracked_stone_bricks"
+            },
+            "mossy_stone_bricks": {
+                "new_block": "minecraft:infested_mossy_stone_bricks"
+            },
+            "chiseled_stone_bricks": {
+                "new_block": "minecraft:infested_chiseled_stone_bricks"
+            }
+        }
+    }
+}
