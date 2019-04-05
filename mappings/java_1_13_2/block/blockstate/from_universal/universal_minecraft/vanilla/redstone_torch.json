@@ -1,5 +1,36 @@
 {
     "new_block": "minecraft:redstone_torch",
+    "map_properties": {
+        "facing": {
+            "up": {
+                "new_block": "minecraft:redstone_torch"
+            },
+            "north": {
+                "new_block": "minecraft:redstone_wall_torch",
+                "new_properties": {
+                    "facing": "north"
+                }
+            },
+            "south": {
+                "new_block": "minecraft:redstone_wall_torch",
+                "new_properties": {
+                    "facing": "south"
+                }
+            },
+            "west": {
+                "new_block": "minecraft:redstone_wall_torch",
+                "new_properties": {
+                    "facing": "west"
+                }
+            },
+            "east": {
+                "new_block": "minecraft:redstone_wall_torch",
+                "new_properties": {
+                    "facing": "east"
+                }
+            }
+        }
+    },
     "carry_properties": {
         "lit": [
             "true",

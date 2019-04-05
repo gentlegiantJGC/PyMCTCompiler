@@ -1,0 +1,1 @@
+blockstate.torch("minecraft", "redstone_torch", False, "minecraft:redstone_torch", "universal_minecraft", "redstone_torch", {"lit": ["true", "false"]})

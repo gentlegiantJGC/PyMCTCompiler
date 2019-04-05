@@ -1,5 +1,8 @@
 {
     "new_block": "universal_minecraft:redstone_torch",
+    "new_properties": {
+        "facing": "up"
+    },
     "carry_properties": {
         "lit": [
             "true",

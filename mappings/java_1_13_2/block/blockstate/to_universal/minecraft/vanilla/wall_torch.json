@@ -1,5 +1,5 @@
 {
-    "new_block": "universal_minecraft:wall_torch",
+    "new_block": "universal_minecraft:torch",
     "carry_properties": {
         "facing": [
             "north",

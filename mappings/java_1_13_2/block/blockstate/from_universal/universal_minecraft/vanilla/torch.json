@@ -1,3 +1,34 @@
 {
-    "new_block": "minecraft:torch"
+    "new_block": "minecraft:torch",
+    "map_properties": {
+        "facing": {
+            "up": {
+                "new_block": "minecraft:torch"
+            },
+            "north": {
+                "new_block": "minecraft:wall_torch",
+                "new_properties": {
+                    "facing": "north"
+                }
+            },
+            "south": {
+                "new_block": "minecraft:wall_torch",
+                "new_properties": {
+                    "facing": "south"
+                }
+            },
+            "west": {
+                "new_block": "minecraft:wall_torch",
+                "new_properties": {
+                    "facing": "west"
+                }
+            },
+            "east": {
+                "new_block": "minecraft:wall_torch",
+                "new_properties": {
+                    "facing": "east"
+                }
+            }
+        }
+    }
 }
