@@ -1,5 +1,8 @@
 {
-    "new_block": "universal_minecraft:iron_trapdoor",
+    "new_block": "universal_minecraft:trapdoor",
+    "new_properties": {
+        "material": "iron"
+    },
     "carry_properties": {
         "facing": [
             "north",
