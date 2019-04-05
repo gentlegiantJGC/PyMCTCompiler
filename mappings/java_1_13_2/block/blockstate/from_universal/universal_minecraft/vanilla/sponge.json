@@ -1,3 +1,13 @@
 {
-    "new_block": "minecraft:sponge"
+    "new_block": "minecraft:sponge",
+    "map_properties": {
+        "wet": {
+            "false": {
+                "new_block": "minecraft:sponge"
+            },
+            "true": {
+                "new_block": "minecraft:wet_sponge"
+            }
+        }
+    }
 }
