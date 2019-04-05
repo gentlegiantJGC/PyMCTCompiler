@@ -1,3 +1,6 @@
 {
-    "new_block": "universal_minecraft:smooth_sandstone"
+    "new_block": "universal_minecraft:sandstone",
+    "new_properties": {
+        "variant": "smooth"
+    }
 }

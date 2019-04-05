@@ -1,3 +1,19 @@
 {
-    "new_block": "minecraft:red_sandstone"
+    "new_block": "minecraft:red_sandstone",
+    "map_properties": {
+        "variant": {
+            "normal": {
+                "new_block": "minecraft:red_sandstone"
+            },
+            "chiseled": {
+                "new_block": "minecraft:chiseled_red_sandstone"
+            },
+            "cut": {
+                "new_block": "minecraft:cut_red_sandstone"
+            },
+            "smooth": {
+                "new_block": "minecraft:smooth_red_sandstone"
+            }
+        }
+    }
 }
