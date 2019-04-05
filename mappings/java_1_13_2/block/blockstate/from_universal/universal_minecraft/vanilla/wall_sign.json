@@ -1,5 +1,11 @@
 {
-    "new_block": "minecraft:wall_sign",
+    "map_properties": {
+        "material": {
+            "oak": {
+                "new_block": "minecraft:wall_sign"
+            }
+        }
+    },
     "carry_properties": {
         "facing": [
             "north",

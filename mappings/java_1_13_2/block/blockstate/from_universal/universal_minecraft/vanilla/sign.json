@@ -1,5 +1,11 @@
 {
-    "new_block": "minecraft:sign",
+    "map_properties": {
+        "material": {
+            "oak": {
+                "new_block": "minecraft:sign"
+            }
+        }
+    },
     "carry_properties": {
         "rotation": [
             "0",

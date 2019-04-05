@@ -1,5 +1,8 @@
 {
     "new_block": "universal_minecraft:wall_sign",
+    "new_properties": {
+        "material": "oak"
+    },
     "carry_properties": {
         "facing": [
             "north",
