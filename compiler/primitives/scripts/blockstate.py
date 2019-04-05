@@ -579,7 +579,7 @@ def torch(input_namespace: str, input_block_name: str, wall: bool, default_block
 			return {
 				"to_universal": {
 					"new_block": f"{universal_namespace}:{universal_block_name}",
-					"carry_properties": carry_properties
+					"carry_properties": carry_properties_merge
 				},
 				"from_universal": {
 					f"{universal_namespace}:{universal_block_name}": {
