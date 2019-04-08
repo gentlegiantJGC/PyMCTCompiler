@@ -441,5 +441,6 @@
 	"brown_wool": "brown_wool",
 	"green_wool": "green_wool",
 	"red_wool": "red_wool",
-	"black_wool": "black_wool"
+	"black_wool": "black_wool",
+	"dispenser": ["base_te_java_1_13", "items_java_1_13", "dispenser"]
 }

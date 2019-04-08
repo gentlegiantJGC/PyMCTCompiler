@@ -1,0 +1,67 @@
+{
+	"specification": {
+		"properties": {
+			"facing": [
+				"north",
+				"east",
+				"south",
+				"west",
+				"up",
+				"down"
+			],
+			"triggered": [
+				"true",
+				"false"
+			]
+		},
+		"defaults": {
+			"facing": "north",
+			"triggered": "false"
+		},
+		"nbt": {
+			"type": "compound",
+			"val": {
+				"id": {
+					"type": "string",
+					"val": "minecraft:dispenser"
+				}
+			}
+		}
+	},
+	"to_universal": {
+		"new_block": "universal_minecraft:dispenser",
+		"carry_properties": {
+			"facing": [
+				"north",
+				"east",
+				"south",
+				"west",
+				"up",
+				"down"
+			],
+			"triggered": [
+				"true",
+				"false"
+			]
+		}
+	},
+	"from_universal": {
+		"universal_minecraft:dispenser": {
+			"new_block": "minecraft:dispenser",
+			"carry_properties": {
+				"facing": [
+					"north",
+					"east",
+					"south",
+					"west",
+					"up",
+					"down"
+				],
+				"triggered": [
+					"true",
+					"false"
+				]
+			}
+		}
+	}
+}
