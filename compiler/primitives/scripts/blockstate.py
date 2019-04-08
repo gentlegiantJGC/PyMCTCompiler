@@ -1,4 +1,5 @@
-from typing import Dict, List
+from typing import Dict, List, Union, Tuple
+import struct
 
 
 def single_map(input_namespace: str, input_block_name: str, key: str, val: str, default_block: str, universal_namespace: str = None, universal_block_name: str = None, carry_properties: Dict[str, List[str]] = None) -> dict:
@@ -47,6 +48,208 @@ def single_map(input_namespace: str, input_block_name: str, key: str, val: str, 
 						}
 					},
 					"carry_properties": carry_properties
+				}
+			}
+		}
+
+
+def nbt_from_hex(hex_str: str, block_names: Union[str, List[str]]):
+	if isinstance(block_names, str):
+		block_names = [block_names]
+	else:
+		assert isinstance(block_names, (list, tuple)) and all(isinstance(block, str) for block in block_names), 'block_names must be a string or a list of strings'
+	mapping = _nbt_mapping_from_hex(bytes.fromhex(hex_str))
+	return {
+		"specification": {
+			"nbt": _nbt_spec_from_hex(bytes.fromhex(hex_str))
+		},
+		"to_universal": {
+			"map_input_nbt": mapping
+		},
+		"from_universal": {
+			block: {
+				"map_input_nbt": mapping
+			} for block in block_names
+		}
+	}
+
+
+def _nbt_spec_from_hex(nbt_bin: bytes, endianness = '>', nbt_type: bytes = None) -> Union[Tuple[str, dict, bytes], None]:
+	name = ''
+	if nbt_type is None:
+		# TYPE(byte)
+		nbt_type = nbt_bin[:1]
+		if nbt_type == b'\x00':
+			nbt_bin = nbt_bin[1:]
+		else:
+			# NAME_LEN(short) NAME(str(NAME_LEN))
+			name_length = struct.unpack(f'{endianness}h', nbt_bin[1:3])[0]
+			name = struct.unpack(f'{endianness}{name_length}s', nbt_bin[3:3+name_length])[0].decode("utf-8")
+			nbt_bin = nbt_bin[3+name_length:]
+	if nbt_type == b'\x00':
+		return
+	elif nbt_type == b'\x01':
+		# PAYLOAD(byte)
+		payload = struct.unpack(f'{endianness}b', nbt_bin[:1])[0]
+		nbt_bin = nbt_bin[1:]
+		return name, {"type": "byte", "val": payload}, nbt_bin
+	elif nbt_type == b'\x02':
+		# PAYLOAD(short)
+		payload = struct.unpack(f'{endianness}h', nbt_bin[:2])[0]
+		nbt_bin = nbt_bin[2:]
+		return name, {"type": "short", "val": payload}, nbt_bin
+	elif nbt_type == b'\x03':
+		# PAYLOAD(int)
+		payload = struct.unpack(f'{endianness}i', nbt_bin[:4])[0]
+		nbt_bin = nbt_bin[4:]
+		return name, {"type": "int", "val": payload}, nbt_bin
+	elif nbt_type == b'\x04':
+		payload = struct.unpack(f'{endianness}l', nbt_bin[:4])[0]
+		nbt_bin = nbt_bin[4:]
+		return name, {"type": "long", "val": payload}, nbt_bin
+	elif nbt_type == b'\x05':
+		payload = struct.unpack(f'{endianness}f', nbt_bin[:4])[0]
+		nbt_bin = nbt_bin[4:]
+		return name, {"type": "float", "val": payload}, nbt_bin
+	elif nbt_type == b'\x06':
+		payload = struct.unpack(f'{endianness}d', nbt_bin[:8])[0]
+		nbt_bin = nbt_bin[8:]
+		return name, {"type": "double", "val": payload}, nbt_bin
+	elif nbt_type == b'\x07':
+		array_length = struct.unpack(f'{endianness}i', nbt_bin[:4])[0]
+		payload = list(struct.unpack(f'{endianness}{array_length}b', nbt_bin[4:4+array_length]))
+		nbt_bin = nbt_bin[4+array_length:]
+		return name, {"type": "byte_array", "val": payload}, nbt_bin
+	elif nbt_type == b'\x08':
+		payload_length = struct.unpack(f'{endianness}H', nbt_bin[:2])[0]
+		payload = struct.unpack(f'{endianness}{payload_length}s', nbt_bin[2:2+payload_length])[0]
+		nbt_bin = nbt_bin[2+payload_length:]
+		return name, {"type": "string", "val": payload}, nbt_bin
+	elif nbt_type == b'\x09':
+		payload = []
+		payload_nbt_type = nbt_bin[:1]
+		payload_length = struct.unpack(f'{endianness}i', nbt_bin[1:5])[0]
+		for _ in range(payload_length):
+			_, nested_obj, nbt_bin = _nbt_spec_from_hex(nbt_bin, endianness, payload_nbt_type)
+			payload.append(nested_obj)
+		return name, {"type": "list", "val": payload}, nbt_bin
+	elif nbt_type == b'\x0A':
+		payload = {}
+		nested_obj = _nbt_spec_from_hex(nbt_bin, endianness)
+		while nested_obj is not None:
+			payload[nested_obj[0]] = nested_obj[1]
+			nbt_bin = nested_obj[2]
+			nested_obj = _nbt_spec_from_hex(nbt_bin, endianness)
+		nbt_bin = nbt_bin[1:]
+		return name, {"type": "compound", "val": payload}, nbt_bin
+	elif nbt_type == b'\x0B':
+		array_length = struct.unpack(f'{endianness}i', nbt_bin[:4])[0]
+		payload = list(struct.unpack(f'{endianness}{array_length}i', nbt_bin[4:4 + array_length * 4]))
+		nbt_bin = nbt_bin[4 + array_length * 4:]
+		return name, {"type": "int_array", "val": payload}, nbt_bin
+	elif nbt_type == b'\x0C':
+		array_length = struct.unpack(f'{endianness}i', nbt_bin[:4])[0]
+		payload = list(struct.unpack(f'{endianness}{array_length}l', nbt_bin[4:4 + array_length * 8]))
+		nbt_bin = nbt_bin[4 + array_length * 8:]
+		return name, {"type": "long_array", "val": payload}, nbt_bin
+	else:
+		raise Exception(f'NBT type {nbt_type} is not known')
+
+
+def _nbt_mapping_from_hex(nbt_bin: bytes):
+	if nbt_bin.startswith(b'\x00'):
+		return
+	elif nbt_bin.startswith(b'\x01'):
+		return {
+			"type": "byte",
+			"functions": {
+				"carry_nbt": {}
+			}
+		}
+	elif nbt_bin.startswith(b'\x02'):
+		return {
+			"type": "short",
+			"functions": {
+				"carry_nbt": {}
+			}
+		}
+	elif nbt_bin.startswith(b'\x03'):
+		return {
+			"type": "int",
+			"functions": {
+				"carry_nbt": {}
+			}
+		}
+	elif nbt_bin.startswith(b'\x04'):
+		return {
+			"type": "long",
+			"functions": {
+				"carry_nbt": {}
+			}
+		}
+	elif nbt_bin.startswith(b'\x05'):
+		return {
+			"type": "float",
+			"functions": {
+				"carry_nbt": {}
+			}
+		}
+	elif nbt_bin.startswith(b'\x06'):
+		return {
+			"type": "double",
+			"functions": {
+				"carry_nbt": {}
+			}
+		}
+	elif nbt_bin.startswith(b'\x07'):
+		return {
+			"map_input_nbt": {
+				"type": "byte_array",
+				"functions": {
+					"carry_nbt": {}
+				}
+			}
+		}
+	elif nbt_bin.startswith(b'\x08'):
+		return {
+			"type": "string",
+			"functions": {
+				"carry_nbt": {}
+			}
+		}
+	elif nbt_bin.startswith(b'\x09'):
+		return {
+			"map_input_nbt": {
+				"type": "list",
+				"functions": {
+					"carry_nbt": {}
+				}
+			}
+		}
+	elif nbt_bin.startswith(b'\x0A'):
+		return {
+			"map_input_nbt": {
+				"type": "compound",
+				"functions": {
+					"carry_nbt": {}
+				}
+			}
+		}
+	elif nbt_bin.startswith(b'\x0B'):
+		return {
+			"map_input_nbt": {
+				"type": "int_array",
+				"functions": {
+					"carry_nbt": {}
+				}
+			}
+		}
+	elif nbt_bin.startswith(b'\x0C'):
+		return {
+			"map_input_nbt": {
+				"type": "long_array",
+				"functions": {
+					"carry_nbt": {}
 				}
 			}
 		}
