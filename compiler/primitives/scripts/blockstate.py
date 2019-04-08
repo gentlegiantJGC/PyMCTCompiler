@@ -61,7 +61,7 @@ def nbt_from_hex(hex_str: str, block_names: Union[str, List[str]]):
 	mapping = _nbt_mapping_from_hex(bytes.fromhex(hex_str))
 	return {
 		"specification": {
-			"nbt": _nbt_spec_from_hex(bytes.fromhex(hex_str))
+			"nbt": _nbt_spec_from_hex(bytes.fromhex(hex_str))[1]
 		},
 		"to_universal": {
 			"map_input_nbt": mapping
@@ -75,7 +75,7 @@ def nbt_from_hex(hex_str: str, block_names: Union[str, List[str]]):
 
 
 def _nbt_spec_from_hex(nbt_bin: bytes, endianness = '>', nbt_type: bytes = None) -> Union[Tuple[str, dict, bytes], None]:
-	name = ''
+	name = None
 	if nbt_type is None:
 		# TYPE(byte)
 		nbt_type = nbt_bin[:1]
@@ -129,6 +129,7 @@ def _nbt_spec_from_hex(nbt_bin: bytes, endianness = '>', nbt_type: bytes = None)
 		payload = []
 		payload_nbt_type = nbt_bin[:1]
 		payload_length = struct.unpack(f'{endianness}i', nbt_bin[1:5])[0]
+		nbt_bin = nbt_bin[5:]
 		for _ in range(payload_length):
 			_, nested_obj, nbt_bin = _nbt_spec_from_hex(nbt_bin, endianness, payload_nbt_type)
 			payload.append(nested_obj)
