@@ -81,5 +81,6 @@ def merge_objects(obj1, obj2):
 				obj1[key] = merge_objects(obj1[key], obj2[key])
 			else:
 				obj1[key] = val
+		return obj1
 	else:
 		return obj2
