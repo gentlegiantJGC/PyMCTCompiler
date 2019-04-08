@@ -1,6 +1,7 @@
 import json
 import os
 import traceback
+import copy
 from typing import Union, List
 from .scripts import *
 
@@ -76,6 +77,7 @@ def get_entity(primitive: Union[str, List[str]]) -> dict:
 
 def merge_objects(obj1, obj2):
 	if isinstance(obj2, dict) and isinstance(obj1, dict):
+		obj1 = copy.deepcopy(obj1)
 		for key, val in obj2.items():
 			if key in obj1:
 				obj1[key] = merge_objects(obj1[key], obj2[key])
