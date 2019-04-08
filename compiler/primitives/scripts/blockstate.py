@@ -53,23 +53,10 @@ def single_map(input_namespace: str, input_block_name: str, key: str, val: str, 
 		}
 
 
-def nbt_from_hex(hex_str: str, block_names: Union[str, List[str]]):
-	if isinstance(block_names, str):
-		block_names = [block_names]
-	else:
-		assert isinstance(block_names, (list, tuple)) and all(isinstance(block, str) for block in block_names), 'block_names must be a string or a list of strings'
-	mapping = _nbt_mapping_from_hex(bytes.fromhex(hex_str))
+def nbt_from_hex(hex_str: str):
 	return {
 		"specification": {
 			"nbt": _nbt_spec_from_hex(bytes.fromhex(hex_str))[1]
-		},
-		"to_universal": {
-			"map_input_nbt": mapping
-		},
-		"from_universal": {
-			block: {
-				"map_input_nbt": mapping
-			} for block in block_names
 		}
 	}
 
@@ -122,7 +109,7 @@ def _nbt_spec_from_hex(nbt_bin: bytes, endianness = '>', nbt_type: bytes = None)
 		return name, {"type": "byte_array", "val": payload}, nbt_bin
 	elif nbt_type == b'\x08':
 		payload_length = struct.unpack(f'{endianness}H', nbt_bin[:2])[0]
-		payload = struct.unpack(f'{endianness}{payload_length}s', nbt_bin[2:2+payload_length])[0]
+		payload = struct.unpack(f'{endianness}{payload_length}s', nbt_bin[2:2+payload_length])[0].decode("utf-8")
 		nbt_bin = nbt_bin[2+payload_length:]
 		return name, {"type": "string", "val": payload}, nbt_bin
 	elif nbt_type == b'\x09':
