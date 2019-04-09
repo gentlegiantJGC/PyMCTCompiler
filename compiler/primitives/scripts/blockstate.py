@@ -243,6 +243,80 @@ def _nbt_mapping_from_hex(nbt_bin: bytes):
 		}
 
 
+def auto_id(entity_id: str, universal_blocks: List[str]):
+	return {
+		"specification": {
+			"nbt": {
+				"type": "compound",
+				"val": {
+					"id": {
+						"type": "string",
+						"val": entity_id
+					}
+				}
+			}
+		},
+		"to_universal": {
+			"map_input_nbt": {
+				"type": "compound",
+				"keys": {
+					"id": {
+						"type": "string",
+						"functions": {
+							"new_nbt": [
+								{
+									"key": "id",
+									"type": "string",
+									"value": f"universal_{entity_id}"
+								}
+							]
+						},
+						"self_default": {
+							"new_nbt": [
+								{
+									"key": "id",
+									"type": "string",
+									"value": f"universal_{entity_id}"
+								}
+							]
+						}
+					}
+				}
+			}
+		},
+		"from_universal": {
+			universal_block: {
+				"map_input_nbt": {
+					"type": "compound",
+					"keys": {
+						"id": {
+							"type": "string",
+							"functions": {
+								"new_nbt": [
+									{
+										"key": "id",
+										"type": "string",
+										"value": entity_id
+									}
+								]
+							},
+							"self_default": {
+								"new_nbt": [
+									{
+										"key": "id",
+										"type": "string",
+										"value": entity_id
+									}
+								]
+							}
+						}
+					}
+				}
+			} for universal_block in universal_blocks
+		}
+	}
+
+
 def stone(input_namespace: str, input_block_name: str, polished: bool, default_block: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
 	return single_map(
 		input_namespace,

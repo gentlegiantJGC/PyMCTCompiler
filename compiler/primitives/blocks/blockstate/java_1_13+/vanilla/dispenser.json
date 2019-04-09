@@ -17,15 +17,6 @@
 		"defaults": {
 			"facing": "north",
 			"triggered": "false"
-		},
-		"nbt": {
-			"type": "compound",
-			"val": {
-				"id": {
-					"type": "string",
-					"val": "minecraft:dispenser"
-				}
-			}
 		}
 	},
 	"to_universal": {

@@ -1,4 +1,30 @@
 {
+    "map_input_nbt": {
+        "type": "compound",
+        "keys": {
+            "id": {
+                "type": "string",
+                "functions": {
+                    "new_nbt": [
+                        {
+                            "key": "id",
+                            "type": "string",
+                            "value": "universal_minecraft:banner"
+                        }
+                    ]
+                },
+                "self_default": {
+                    "new_nbt": [
+                        {
+                            "key": "id",
+                            "type": "string",
+                            "value": "universal_minecraft:banner"
+                        }
+                    ]
+                }
+            }
+        }
+    },
     "new_block": "universal_minecraft:banner",
     "new_properties": {
         "color": "lime"

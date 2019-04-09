@@ -22,15 +22,6 @@
 		},
 		"defaults": {
 			"rotation": "0"
-		},
-		"nbt": {
-			"type": "compound",
-			"val": {
-				"id": {
-					"type": "string",
-					"val": "minecraft:banner"
-				}
-			}
 		}
 	}
 }
