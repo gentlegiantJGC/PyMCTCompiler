@@ -218,7 +218,10 @@ def check_mapping_format(data: dict, feature_set: List[str] = default_mapping_fe
 			check_mapping_format(val, default_mapping_feature_set, carry_feature_set)
 
 	if 'map_input_nbt' in full_feature_set and 'map_input_nbt' in data:
-		check_map_input_nbt_format(data['map_input_nbt'])
+		assert isinstance(data['map_input_nbt'], dict)
+		for key, val in data['map_input_nbt'].items():
+			assert isinstance(key, str)
+			check_map_input_nbt_format(val)
 
 	if 'carry_nbt' in full_feature_set and 'carry_nbt' in data:
 		assert isinstance(data['carry_nbt'], dict)
