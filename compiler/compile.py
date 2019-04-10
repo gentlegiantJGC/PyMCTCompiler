@@ -6,7 +6,6 @@ import time
 from compiler import primitives, version_compiler
 from compiler.helpers import log_to_file, _merge_map, _blocks_from_server, DiskBuffer, check_formatting
 
-primitive_dir = './primitives'
 uncompiled_dir = './version_compiler'
 compiled_dir = '../mappings'
 
