@@ -256,7 +256,7 @@ def check_mapping_format(data: dict, feature_set: List[str] = default_mapping_fe
 	if 'map_nbt' in full_feature_set and 'map_nbt' in data:
 		if 'cases' in data['map_nbt']:
 			assert isinstance(data['map_nbt']['cases'], dict)
-			for key, val in data['map_nbt']['cases']:
+			for key, val in data['map_nbt']['cases'].items():
 				assert isinstance(key, str)
 				check_mapping_format(val, default_mapping_feature_set, carry_feature_set)
 
@@ -293,6 +293,7 @@ def check_map_input_nbt_format(data: dict):
 			assert isinstance(data['index'], dict)
 			for key, val in data['index'].items():
 				assert isinstance(key, str)
+				assert key.isdigit()
 				check_map_input_nbt_format(val)
 		if 'functions' in data:
 			check_mapping_format(data['functions'], default_mapping_feature_set, ['carry_nbt'])
@@ -320,6 +321,7 @@ def check_map_input_nbt_format(data: dict):
 			assert isinstance(data['index'], dict)
 			for key, val in data['index'].items():
 				assert isinstance(key, str)
+				assert key.isdigit()
 				assert isinstance(val, dict)
 				if 'functions' in val:
 					check_mapping_format(val['functions'], default_mapping_feature_set, ['carry_nbt', 'map_nbt'])

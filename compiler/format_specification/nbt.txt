@@ -21,7 +21,7 @@ NOTE: path is not relative to the root. path should point to the parent data
 main functions
 	"new_nbt": {  # add nbt to the output
 		"path": [
-			# when used outside map_input_nbt -> undefined or [] to be the outer data type
+			# when used outside map_input_nbt -> [] to be the outer data type, undeined to be ['', 'compound']
 			# when used inside map_input_data -> [] to be the outer data type, undefined to be the input path
 			[<path1>: Union[str, int], <datatype1>: str],
 			...

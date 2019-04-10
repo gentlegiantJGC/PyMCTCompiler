@@ -76,10 +76,13 @@ def save_json(path: str, data: dict, overwrite: bool = False, prefix: str = comp
 	:param prefix: Path prefix
 	:param buffer: the DiskBuffer to write in
 	"""
-	if 'specification' in path:
-		check_formatting(data, 'specification')
-	elif 'to_universal' in path or 'from_universal' in path:
-		check_formatting(data, 'mapping')
+	try:
+		if 'specification' in path:
+			check_formatting(data, 'specification')
+		elif 'to_universal' in path or 'from_universal' in path:
+			check_formatting(data, 'mapping')
+	except Exception as e:
+		log_to_file(f'Format check failed for {prefix}/{path}\n{e}')
 
 	if isinstance(buffer, DiskBuffer) and prefix == compiled_dir:
 		if not overwrite and isfile(path, prefix):
