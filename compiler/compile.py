@@ -4,7 +4,7 @@ import shutil
 import traceback
 import time
 from compiler import primitives, version_compiler
-from compiler.helpers import log_to_file, _merge_map, _blocks_from_server, DiskBuffer
+from compiler.helpers import log_to_file, _merge_map, _blocks_from_server, DiskBuffer, check_formatting
 
 primitive_dir = './primitives'
 uncompiled_dir = './version_compiler'
@@ -76,6 +76,11 @@ def save_json(path: str, data: dict, overwrite: bool = False, prefix: str = comp
 	:param prefix: Path prefix
 	:param buffer: the DiskBuffer to write in
 	"""
+	if 'specification' in path:
+		check_formatting(data, 'specification')
+	elif 'to_universal' in path or 'from_universal' in path:
+		check_formatting(data, 'mapping')
+
 	if isinstance(buffer, DiskBuffer) and prefix == compiled_dir:
 		if not overwrite and isfile(path, prefix):
 			raise Exception(f'File "{prefix}/{path}" already exists. Doing this will overwrite the data')
@@ -151,6 +156,7 @@ def process_version(version_name: str, file_format: str):
 def process_block(buffer: DiskBuffer, file_format: str, block_json: dict, version_name: str, namespace: str, sub_name: str, block_file_name: str):
 	"""Will create json files based on block_json.
 
+	:param buffer: DiskBuffer instance to hold the data in memory rather than writing directly to disk
 	:param file_format: The format of the blocks. Either "numerical" or "blockstate"
 	:param block_json: The data that will be split up and saved out
 	:param version_name: The version name for use in the file path

@@ -107,6 +107,17 @@ def _merge_map(data_: dict, data: dict) -> dict:
 default_mapping_feature_set = ['new_block', 'new_properties', 'map_properties', 'carry_properties', 'new_nbt', 'multiblock', 'map_block_name', 'map_input_nbt']
 
 
+def check_formatting(data: dict, mode: str):
+	if mode == 'specification':
+		check_specification_format(data)
+	elif mode == 'mapping':
+		check_mapping_format(data)
+
+
+def check_specification_format(data: dict):
+	pass
+
+
 def check_mapping_format(data: dict, feature_set: List[str] = default_mapping_feature_set, carry_feature_set: List[str] = None):
 	"""Will verify that "data" fits the required format.
 
