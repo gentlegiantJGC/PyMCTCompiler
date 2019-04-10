@@ -1,19 +1,6 @@
 from ...compile import save_json, load_file, isfile, isdir, listdir, blocks_from_server, compiled_dir, DiskBuffer
 
 
-def debug(block_data: dict) -> bool:
-	"""Confirm that all the properties defined have a default set and the default is in list of values.
-
-	:param block_data: The data to test
-	:type block_data: dict
-	:return: bool
-	"""
-	if "properties" in block_data and "defaults" in block_data:
-		return sorted(block_data["properties"].keys()) == sorted(block_data["defaults"].keys()) and all([val in block_data["properties"][key] for key, val in block_data["defaults"].items()])
-	else:
-		return True
-
-
 def main(version_name: str, *_):
 	"""Custom compiler for the universal version.
 
@@ -58,8 +45,6 @@ def main(version_name: str, *_):
 				states['defaults'] = default_state['properties']
 
 			del states['states']
-			if not debug(states):
-				print(f'Error in "{block_string}"')
 			if not(namespace in modifications and any(block_name in modifications[namespace][group_name]['remove'] for group_name in modifications[namespace])):
 				# the block is not marked for removal
 				save_json(f'{version_name}/block/blockstate/specification/{namespace}/vanilla/{block_name}.json', states, buffer=output)
@@ -72,8 +57,6 @@ def main(version_name: str, *_):
 					else:
 						assert isinstance(specification, dict), f'The data here is supposed to be a dictionary. Got this instead:\n{specification}'
 
-						if not debug(specification):
-							print(f'Error in "{block_name}"')
 						save_json(f'{version_name}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', specification, buffer=output)
 		return output.save()
 	else:
