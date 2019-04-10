@@ -8,6 +8,6 @@
         ]
     },
     "defaults": {
-        "color": "north"
+        "facing": "north"
     }
 }

@@ -1148,7 +1148,7 @@ def bed_color(platform: str) -> dict:
 					"val": {
 						"color": {
 							"type": {"bedrock": "byte", "java": "int"}[platform],
-							"val": "14"
+							"val": 14
 						}
 					}
 				}
@@ -2213,7 +2213,7 @@ def torch(input_namespace: str, input_block_name: str, universal_namespace: str 
 				"facing": list(data_map.values())
 			},
 			"defaults": {
-				"color": "up"
+				"facing": "up"
 			}
 		},
 		"blockstate_to_universal": {
@@ -2279,7 +2279,7 @@ def redstone_torch(input_namespace: str, input_block_name: str, lit: bool, unive
 				"facing": list(data_map.values())
 			},
 			"defaults": {
-				"color": "up"
+				"facing": "up"
 			}
 		},
 		"blockstate_to_universal": {
@@ -2355,7 +2355,7 @@ def furnace(input_namespace: str, input_block_name: str, lit: bool, universal_na
 				"facing": list(data_map.values())
 			},
 			"defaults": {
-				"color": "north"
+				"facing": "north"
 			}
 		},
 		"blockstate_to_universal": {

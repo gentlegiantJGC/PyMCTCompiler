@@ -9,6 +9,6 @@
         ]
     },
     "defaults": {
-        "color": "up"
+        "facing": "up"
     }
 }

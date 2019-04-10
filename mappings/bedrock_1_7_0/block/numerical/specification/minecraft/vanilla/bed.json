@@ -28,7 +28,7 @@
             "val": {
                 "color": {
                     "type": "byte",
-                    "val": "14"
+                    "val": 14
                 }
             }
         }

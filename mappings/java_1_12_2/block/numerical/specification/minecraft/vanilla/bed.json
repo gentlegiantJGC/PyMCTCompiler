@@ -28,7 +28,7 @@
             "val": {
                 "color": {
                     "type": "int",
-                    "val": "14"
+                    "val": 14
                 }
             }
         }

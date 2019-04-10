@@ -16,7 +16,7 @@
         ]
     },
     "defaults": {
-        "facing": "floor_south",
+        "position": "floor_south",
         "powered": "false"
     }
 }
