@@ -122,82 +122,114 @@
         "color": {
             "white": {
                 "new_nbt": {
-                    "color": "0"
+                    "key": "color",
+                    "type": "byte",
+                    "value": 0
                 }
             },
             "orange": {
                 "new_nbt": {
-                    "color": "1"
+                    "key": "color",
+                    "type": "byte",
+                    "value": 1
                 }
             },
             "magenta": {
                 "new_nbt": {
-                    "color": "2"
+                    "key": "color",
+                    "type": "byte",
+                    "value": 2
                 }
             },
             "light_blue": {
                 "new_nbt": {
-                    "color": "3"
+                    "key": "color",
+                    "type": "byte",
+                    "value": 3
                 }
             },
             "yellow": {
                 "new_nbt": {
-                    "color": "4"
+                    "key": "color",
+                    "type": "byte",
+                    "value": 4
                 }
             },
             "lime": {
                 "new_nbt": {
-                    "color": "5"
+                    "key": "color",
+                    "type": "byte",
+                    "value": 5
                 }
             },
             "pink": {
                 "new_nbt": {
-                    "color": "6"
+                    "key": "color",
+                    "type": "byte",
+                    "value": 6
                 }
             },
             "gray": {
                 "new_nbt": {
-                    "color": "7"
+                    "key": "color",
+                    "type": "byte",
+                    "value": 7
                 }
             },
             "light_gray": {
                 "new_nbt": {
-                    "color": "8"
+                    "key": "color",
+                    "type": "byte",
+                    "value": 8
                 }
             },
             "cyan": {
                 "new_nbt": {
-                    "color": "9"
+                    "key": "color",
+                    "type": "byte",
+                    "value": 9
                 }
             },
             "purple": {
                 "new_nbt": {
-                    "color": "10"
+                    "key": "color",
+                    "type": "byte",
+                    "value": 10
                 }
             },
             "blue": {
                 "new_nbt": {
-                    "color": "11"
+                    "key": "color",
+                    "type": "byte",
+                    "value": 11
                 }
             },
             "brown": {
                 "new_nbt": {
-                    "color": "12"
+                    "key": "color",
+                    "type": "byte",
+                    "value": 12
                 }
             },
             "green": {
                 "new_nbt": {
-                    "color": "13"
+                    "key": "color",
+                    "type": "byte",
+                    "value": 13
                 }
             },
             "red": {
                 "new_nbt": {
-                    "color": "14"
+                    "key": "color",
+                    "type": "byte",
+                    "value": 14
                 }
             },
             "black": {
                 "new_nbt": {
-                    "color": "15"
+                    "key": "color",
+                    "type": "byte",
+                    "value": 15
                 }
             }
         }

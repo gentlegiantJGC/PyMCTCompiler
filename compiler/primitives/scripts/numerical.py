@@ -1143,13 +1143,16 @@ def bed_color(platform: str) -> dict:
 				"block_data": "0"
 			},
 			"nbt": {
-				"color": {
-					"name": "color",
-					"type": {"bedrock": "byte", "java": "int"}[platform],
-					"options": [str(data) for data in range(16)],
-					"default": "14"
+				"": {
+					"type": "compound",
+					"val": {
+						"color": {
+							"type": {"bedrock": "byte", "java": "int"}[platform],
+							"val": "14"
+						}
+					}
 				}
-			},
+			}
 		},
 		"to_universal": {
 			"map_properties": {
@@ -1164,30 +1167,44 @@ def bed_color(platform: str) -> dict:
 					} for data in range(16)
 				}
 			},
-			"map_nbt": {
-				"color": {
-					num: {
-						"new_properties": {
-							"color": color
+			"map_input_nbt": {
+				"": {
+					"type": "compound",
+					"keys": {
+						"color": {
+							"type": {"bedrock": "byte", "java": "int"}[platform],
+							"functions": {
+								"map_nbt": {
+									"cases": {
+										str(num): {
+											"new_properties": {
+												"color": color
+											}
+										} for num, color in enumerate([
+											"white",
+											"orange",
+											"magenta",
+											"light_blue",
+											"yellow",
+											"lime",
+											"pink",
+											"gray",
+											"light_gray",
+											"cyan",
+											"purple",
+											"blue",
+											"brown",
+											"green",
+											"red",
+											"black"
+										])
+									},
+									"default": {}
+								}
+							},
+							"self_default": {}
 						}
-					} for num, color in {
-						"0": "white",
-						"1": "orange",
-						"2": "magenta",
-						"3": "light_blue",
-						"4": "yellow",
-						"5": "lime",
-						"6": "pink",
-						"7": "gray",
-						"8": "light_gray",
-						"9": "cyan",
-						"10": "purple",
-						"11": "blue",
-						"12": "brown",
-						"13": "green",
-						"14": "red",
-						"15": "black"
-					}.items()
+					}
 				}
 			}
 		},
@@ -1217,26 +1234,28 @@ def bed_color(platform: str) -> dict:
 					"color": {
 						color: {
 							"new_nbt": {
-								"color": num
+								"key": "color",
+								"type": {"bedrock": "byte", "java": "int"}[platform],
+								"value": num
 							}
-						} for num, color in {
-							"0": "white",
-							"1": "orange",
-							"2": "magenta",
-							"3": "light_blue",
-							"4": "yellow",
-							"5": "lime",
-							"6": "pink",
-							"7": "gray",
-							"8": "light_gray",
-							"9": "cyan",
-							"10": "purple",
-							"11": "blue",
-							"12": "brown",
-							"13": "green",
-							"14": "red",
-							"15": "black"
-						}.items()
+						} for num, color in enumerate([
+							"white",
+							"orange",
+							"magenta",
+							"light_blue",
+							"yellow",
+							"lime",
+							"pink",
+							"gray",
+							"light_gray",
+							"cyan",
+							"purple",
+							"blue",
+							"brown",
+							"green",
+							"red",
+							"black"
+						])
 					}
 				}
 			}
@@ -3665,39 +3684,63 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 					"block_data": "0"
 				},
 				"nbt": {
-					"note": {
-						"name": "note",
-						"type": "byte",
-						"options": [str(data) for data in range(25)],
-						"default": "0"
-					},
-					"powered": {
-						"name": "powered",
-						"type": "byte",
-						"options": ["0", "1"],
-						"default": "0"
+					"": {
+						"type": "compound",
+						"val": {
+							"note": {
+								"type": "byte",
+								"val": 0
+							},
+							"powered": {
+								"type": "byte",
+								"val": 0
+							}
+						}
 					}
-				},
+				}
 			},
 			"to_universal": {
 				"new_block": f"{universal_namespace}:{universal_block_name}",
-				"map_nbt": {
-					"note": {
-						str(data): {
-							"new_properties": {
-								"note": str(data)
-							}
-						} for data in range(25)
-					},
-					"powered": {
-						"0": {
-							"new_properties": {
-								"powered": "false"
-							}
-						},
-						"1": {
-							"new_properties": {
-								"powered": "true"
+				"map_input_nbt": {
+					"": {
+						"type": "compound",
+						"keys": {
+							"note": {
+								"type": "byte",
+								"functions": {
+									"map_nbt": {
+										"cases": {
+											str(data): {
+												"new_properties": {
+													"note": str(data)
+												}
+											} for data in range(25)
+										},
+										"default": {}
+									}
+								},
+								"self_default": {}
+							},
+							"powered": {
+								"type": "byte",
+								"functions": {
+									"map_nbt": {
+										"cases": {
+											"0": {
+												"new_properties": {
+													"powered": "false"
+												}
+											},
+											"1": {
+												"new_properties": {
+													"powered": "true"
+												}
+											}
+										},
+										"default": {}
+									}
+								},
+								"self_default": {}
 							}
 						}
 					}
@@ -3710,19 +3753,25 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 						"note": {
 							str(data): {
 								"new_nbt": {
-									"note": str(data)
+									"key": "note",
+									"type": "byte",
+									"value": data
 								}
 							} for data in range(25)
 						},
 						"powered": {
 							"false": {
 								"new_nbt": {
-									"powered": "0"
+									"key": "powered",
+									"type": "byte",
+									"value": 0
 								}
 							},
 							"true": {
 								"new_nbt": {
-									"powered": "1"
+									"key": "powered",
+									"type": "byte",
+									"value": 1
 								}
 							}
 						}
@@ -3766,23 +3815,40 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 					"block_data": "0"
 				},
 				"nbt": {
-					"note": {
-						"name": "note",
-						"type": "byte",
-						"options": [str(data) for data in range(25)],
-						"default": "0"
+					"": {
+						"type": "compound",
+						"val": {
+							"note": {
+								"type": "byte",
+								"val": 0
+							}
+						}
 					}
-				},
+				}
 			},
 			"to_universal": {
 				"new_block": f"{universal_namespace}:{universal_block_name}",
-				"map_nbt": {
-					"note": {
-						str(data): {
-							"new_properties": {
-								"note": str(data)
+				"map_input_nbt": {
+					"": {
+						"type": "compound",
+						"keys": {
+							"note": {
+								"type": "byte",
+								"functions": {
+									"map_nbt": {
+										"cases": {
+											str(data): {
+												"new_properties": {
+													"note": str(data)
+												}
+											} for data in range(25)
+										},
+										"default": {}
+									}
+								},
+								"self_default": {}
 							}
-						} for data in range(25)
+						}
 					}
 				},
 				"multiblock": {
@@ -3803,7 +3869,9 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 						"note": {
 							str(data): {
 								"new_nbt": {
-									"note": str(data)
+									"key": "note",
+									"type": "byte",
+									"value": data
 								}
 							} for data in range(25)
 						}

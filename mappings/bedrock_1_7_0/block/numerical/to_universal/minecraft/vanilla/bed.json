@@ -131,86 +131,100 @@
             }
         }
     },
-    "map_nbt": {
-        "color": {
-            "0": {
-                "new_properties": {
-                    "color": "white"
-                }
-            },
-            "1": {
-                "new_properties": {
-                    "color": "orange"
-                }
-            },
-            "2": {
-                "new_properties": {
-                    "color": "magenta"
-                }
-            },
-            "3": {
-                "new_properties": {
-                    "color": "light_blue"
-                }
-            },
-            "4": {
-                "new_properties": {
-                    "color": "yellow"
-                }
-            },
-            "5": {
-                "new_properties": {
-                    "color": "lime"
-                }
-            },
-            "6": {
-                "new_properties": {
-                    "color": "pink"
-                }
-            },
-            "7": {
-                "new_properties": {
-                    "color": "gray"
-                }
-            },
-            "8": {
-                "new_properties": {
-                    "color": "light_gray"
-                }
-            },
-            "9": {
-                "new_properties": {
-                    "color": "cyan"
-                }
-            },
-            "10": {
-                "new_properties": {
-                    "color": "purple"
-                }
-            },
-            "11": {
-                "new_properties": {
-                    "color": "blue"
-                }
-            },
-            "12": {
-                "new_properties": {
-                    "color": "brown"
-                }
-            },
-            "13": {
-                "new_properties": {
-                    "color": "green"
-                }
-            },
-            "14": {
-                "new_properties": {
-                    "color": "red"
-                }
-            },
-            "15": {
-                "new_properties": {
-                    "color": "black"
+    "map_input_nbt": {
+        "": {
+            "type": "compound",
+            "keys": {
+                "color": {
+                    "type": "byte",
+                    "functions": {
+                        "map_nbt": {
+                            "cases": {
+                                "0": {
+                                    "new_properties": {
+                                        "color": "white"
+                                    }
+                                },
+                                "1": {
+                                    "new_properties": {
+                                        "color": "orange"
+                                    }
+                                },
+                                "2": {
+                                    "new_properties": {
+                                        "color": "magenta"
+                                    }
+                                },
+                                "3": {
+                                    "new_properties": {
+                                        "color": "light_blue"
+                                    }
+                                },
+                                "4": {
+                                    "new_properties": {
+                                        "color": "yellow"
+                                    }
+                                },
+                                "5": {
+                                    "new_properties": {
+                                        "color": "lime"
+                                    }
+                                },
+                                "6": {
+                                    "new_properties": {
+                                        "color": "pink"
+                                    }
+                                },
+                                "7": {
+                                    "new_properties": {
+                                        "color": "gray"
+                                    }
+                                },
+                                "8": {
+                                    "new_properties": {
+                                        "color": "light_gray"
+                                    }
+                                },
+                                "9": {
+                                    "new_properties": {
+                                        "color": "cyan"
+                                    }
+                                },
+                                "10": {
+                                    "new_properties": {
+                                        "color": "purple"
+                                    }
+                                },
+                                "11": {
+                                    "new_properties": {
+                                        "color": "blue"
+                                    }
+                                },
+                                "12": {
+                                    "new_properties": {
+                                        "color": "brown"
+                                    }
+                                },
+                                "13": {
+                                    "new_properties": {
+                                        "color": "green"
+                                    }
+                                },
+                                "14": {
+                                    "new_properties": {
+                                        "color": "red"
+                                    }
+                                },
+                                "15": {
+                                    "new_properties": {
+                                        "color": "black"
+                                    }
+                                }
+                            },
+                            "default": {}
+                        }
+                    },
+                    "self_default": {}
                 }
             }
         }

@@ -247,46 +247,20 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 	return {
 		"specification": {
 			"nbt": {
-				"type": "compound",
-				"val": {
-					"id": {
-						"type": "string",
-						"val": entity_id
+				"": {
+					"type": "compound",
+					"val": {
+						"id": {
+							"type": "string",
+							"val": entity_id
+						}
 					}
 				}
 			}
 		},
 		"to_universal": {
 			"map_input_nbt": {
-				"type": "compound",
-				"keys": {
-					"id": {
-						"type": "string",
-						"functions": {
-							"new_nbt": [
-								{
-									"key": "id",
-									"type": "string",
-									"value": f"universal_{entity_id}"
-								}
-							]
-						},
-						"self_default": {
-							"new_nbt": [
-								{
-									"key": "id",
-									"type": "string",
-									"value": f"universal_{entity_id}"
-								}
-							]
-						}
-					}
-				}
-			}
-		},
-		"from_universal": {
-			universal_block: {
-				"map_input_nbt": {
+				"": {
 					"type": "compound",
 					"keys": {
 						"id": {
@@ -296,7 +270,7 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 									{
 										"key": "id",
 										"type": "string",
-										"value": entity_id
+										"value": f"universal_{entity_id}"
 									}
 								]
 							},
@@ -305,9 +279,41 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 									{
 										"key": "id",
 										"type": "string",
-										"value": entity_id
+										"value": f"universal_{entity_id}"
 									}
 								]
+							}
+						}
+					}
+				}
+			}
+		},
+		"from_universal": {
+			universal_block: {
+				"map_input_nbt": {
+					"": {
+						"type": "compound",
+						"keys": {
+							"id": {
+								"type": "string",
+								"functions": {
+									"new_nbt": [
+										{
+											"key": "id",
+											"type": "string",
+											"value": entity_id
+										}
+									]
+								},
+								"self_default": {
+									"new_nbt": [
+										{
+											"key": "id",
+											"type": "string",
+											"value": entity_id
+										}
+									]
+								}
 							}
 						}
 					}
@@ -771,14 +777,14 @@ def fluid(input_namespace: str, input_block_name: str, universal_namespace: str 
 						falling: {
 							"map_properties": {
 								"level": {
-									level: {
+									str(level): {
 										"new_properties": {
-											"level": str(level + data8 * 8)
+											"level": str(level + data8)
 										}
 									} for level in range(8)
 								}
 							}
-						} for falling, data8 in [["false", 0], ["true", 1]]
+						} for data8, falling in {0: "false", 8: "true"}.items()
 					}
 				}
 			}

@@ -4,139 +4,193 @@
         "note": {
             "0": {
                 "new_nbt": {
-                    "note": "0"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 0
                 }
             },
             "1": {
                 "new_nbt": {
-                    "note": "1"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 1
                 }
             },
             "2": {
                 "new_nbt": {
-                    "note": "2"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 2
                 }
             },
             "3": {
                 "new_nbt": {
-                    "note": "3"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 3
                 }
             },
             "4": {
                 "new_nbt": {
-                    "note": "4"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 4
                 }
             },
             "5": {
                 "new_nbt": {
-                    "note": "5"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 5
                 }
             },
             "6": {
                 "new_nbt": {
-                    "note": "6"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 6
                 }
             },
             "7": {
                 "new_nbt": {
-                    "note": "7"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 7
                 }
             },
             "8": {
                 "new_nbt": {
-                    "note": "8"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 8
                 }
             },
             "9": {
                 "new_nbt": {
-                    "note": "9"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 9
                 }
             },
             "10": {
                 "new_nbt": {
-                    "note": "10"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 10
                 }
             },
             "11": {
                 "new_nbt": {
-                    "note": "11"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 11
                 }
             },
             "12": {
                 "new_nbt": {
-                    "note": "12"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 12
                 }
             },
             "13": {
                 "new_nbt": {
-                    "note": "13"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 13
                 }
             },
             "14": {
                 "new_nbt": {
-                    "note": "14"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 14
                 }
             },
             "15": {
                 "new_nbt": {
-                    "note": "15"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 15
                 }
             },
             "16": {
                 "new_nbt": {
-                    "note": "16"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 16
                 }
             },
             "17": {
                 "new_nbt": {
-                    "note": "17"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 17
                 }
             },
             "18": {
                 "new_nbt": {
-                    "note": "18"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 18
                 }
             },
             "19": {
                 "new_nbt": {
-                    "note": "19"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 19
                 }
             },
             "20": {
                 "new_nbt": {
-                    "note": "20"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 20
                 }
             },
             "21": {
                 "new_nbt": {
-                    "note": "21"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 21
                 }
             },
             "22": {
                 "new_nbt": {
-                    "note": "22"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 22
                 }
             },
             "23": {
                 "new_nbt": {
-                    "note": "23"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 23
                 }
             },
             "24": {
                 "new_nbt": {
-                    "note": "24"
+                    "key": "note",
+                    "type": "byte",
+                    "value": 24
                 }
             }
         },
         "powered": {
             "false": {
                 "new_nbt": {
-                    "powered": "0"
+                    "key": "powered",
+                    "type": "byte",
+                    "value": 0
                 }
             },
             "true": {
                 "new_nbt": {
-                    "powered": "1"
+                    "key": "powered",
+                    "type": "byte",
+                    "value": 1
                 }
             }
         }

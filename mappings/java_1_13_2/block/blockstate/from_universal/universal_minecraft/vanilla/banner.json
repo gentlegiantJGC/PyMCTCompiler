@@ -1,26 +1,28 @@
 {
     "map_input_nbt": {
-        "type": "compound",
-        "keys": {
-            "id": {
-                "type": "string",
-                "functions": {
-                    "new_nbt": [
-                        {
-                            "key": "id",
-                            "type": "string",
-                            "value": "minecraft:banner"
-                        }
-                    ]
-                },
-                "self_default": {
-                    "new_nbt": [
-                        {
-                            "key": "id",
-                            "type": "string",
-                            "value": "minecraft:banner"
-                        }
-                    ]
+        "": {
+            "type": "compound",
+            "keys": {
+                "id": {
+                    "type": "string",
+                    "functions": {
+                        "new_nbt": [
+                            {
+                                "key": "id",
+                                "type": "string",
+                                "value": "minecraft:banner"
+                            }
+                        ]
+                    },
+                    "self_default": {
+                        "new_nbt": [
+                            {
+                                "key": "id",
+                                "type": "string",
+                                "value": "minecraft:banner"
+                            }
+                        ]
+                    }
                 }
             }
         }
