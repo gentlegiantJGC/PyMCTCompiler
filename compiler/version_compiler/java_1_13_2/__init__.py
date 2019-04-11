@@ -1,4 +1,4 @@
-from .. import java_blockstate_comp
+from compiler.compilers import java_blockstate_comp
 
 init = {
 	"format": "blockstate",
