@@ -3,6 +3,7 @@ import os
 import shutil
 import traceback
 import time
+from typing import Union
 from compiler import primitives, version_compiler
 from compiler.helpers import log_to_file, _merge_map, _blocks_from_server, DiskBuffer, check_formatting
 
@@ -66,7 +67,7 @@ def load_file(path: str, prefix: str = uncompiled_dir, buffer: DiskBuffer = None
 			raise Exception(f'Could not load "{prefix}/{path}"')
 
 
-def save_json(path: str, data: dict, overwrite: bool = False, prefix: str = compiled_dir, buffer: DiskBuffer = None):
+def save_json(path: str, data: Union[dict, list], overwrite: bool = False, prefix: str = compiled_dir, buffer: DiskBuffer = None):
 	"""Will save "data" to a json file at compiled_dir/path.
 
 	:param path: The path to look for within prefix

@@ -25,6 +25,7 @@ def main(version_name: str, version_str: str, primitives):
 	blocks_from_server(version_name, version_str)
 
 	if isfile(f'{version_name}/generated/reports/blocks.json'):
+		waterlogable = []
 		output = DiskBuffer()
 		modifications = {}
 		# Iterate through all modifications and load them into a dictionary
@@ -60,10 +61,8 @@ def main(version_name: str, version_str: str, primitives):
 			if 'properties' in default_state:
 				states['defaults'] = default_state['properties']
 				if 'waterlogged' in states['properties']:
-					pass # keeping the waterlogged property in the specification
-					# del states['properties']['waterlogged']
-					# del states['defaults']['waterlogged']
-					# TODO: save this somewhere
+					if block_string not in waterlogable:
+						waterlogable.append(block_string)
 			del states['states']
 			if not debug(states):
 				print(f'Error in "{block_string}"')
@@ -107,10 +106,8 @@ def main(version_name: str, version_str: str, primitives):
 						if 'specification' in block_data:
 							specification = block_data.get("specification")
 							if 'properties' in specification and 'waterlogged' in specification['properties']:
-								pass  # keeping the waterlogged property in the specification
-								# del specification['properties']['waterlogged']
-								# del specification['defaults']['waterlogged']
-								# TODO: save this somewhere
+								if block_string not in waterlogable:
+									waterlogable.append(block_string)
 							save_json(f'{version_name}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', specification, True, buffer=output)
 
 						assert 'to_universal' in block_data, f'"to_universal" must be present. Was missing for {version_name} {namespace}:{block_name}'
@@ -120,6 +117,7 @@ def main(version_name: str, version_str: str, primitives):
 						for block_string2, mapping in block_data['from_universal'].items():
 							namespace2, block_name2 = block_string2.split(':', 1)
 							merge_map(mapping, f'{version_name}/block/blockstate/from_universal/{namespace2}/vanilla/{block_name2}.json', buffer=output)
+		save_json(f'{version_name}/__waterlogable__.json', waterlogable)
 		return output.save()
 	else:
 		raise Exception(f'Could not find {version_name}/generated/reports/blocks.json')
