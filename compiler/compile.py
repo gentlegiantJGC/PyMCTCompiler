@@ -1,7 +1,6 @@
 import json
 import os
 import shutil
-import traceback
 import time
 from typing import Union
 from compiler import primitives, version_compiler
@@ -128,72 +127,6 @@ def blocks_from_server(version_name: str, version_str: str = None, prefix: str =
 	_blocks_from_server(prefix, version_name, version_str)
 
 
-def process_version(version_name: str, file_format: str):
-	"""Will bake out the files in uncompiled_dir/version_name into compiled_dir/version_name
-
-	:param version_name: A version name found in uncompiled_dir
-	:type version_name: str
-	:param file_format: The format of the blocks. Either "numerical" or "blockstate"
-	:type file_format: str
-	"""
-	# iterate through all namespaces
-	output = DiskBuffer()
-	for namespace in listdir(f'{version_name}/{file_format}'):
-		if isdir(f'{version_name}/{file_format}/{namespace}'):
-			# iterate through all sub_names ('vanilla', 'chemistry'...)
-			for sub_name in listdir(f'{version_name}/{file_format}/{namespace}'):
-				if isdir(f'{version_name}/{file_format}/{namespace}/{sub_name}'):
-					# load __include_blocks__.json if it exists and unpack those primitive files
-					if '__include_blocks__.json' in listdir(f'{version_name}/{file_format}/{namespace}/{sub_name}'):
-						for block_file_name, primitive_block_name in load_file(f'{version_name}/{file_format}/{namespace}/{sub_name}/__include_blocks__.json').items():
-							if primitive_block_name is None:
-								continue
-							try:
-								process_block(output, file_format, primitives.get_block(file_format, primitive_block_name), version_name, namespace, sub_name, block_file_name)
-							except Exception as e:
-								log_to_file(f'Failed to process {version_name}/{namespace}/{sub_name}/{block_file_name}\n{e}\n{traceback.print_exc()}')
-					# TODO: __include_entities__.json
-	return output.save()
-
-
-def process_block(buffer: DiskBuffer, file_format: str, block_json: dict, version_name: str, namespace: str, sub_name: str, block_file_name: str):
-	"""Will create json files based on block_json.
-
-	:param buffer: DiskBuffer instance to hold the data in memory rather than writing directly to disk
-	:param file_format: The format of the blocks. Either "numerical" or "blockstate"
-	:param block_json: The data that will be split up and saved out
-	:param version_name: The version name for use in the file path
-	:param namespace: The namespace for use in the file path
-	:param sub_name: The sub_name for use in the file path
-	:param block_file_name: The name of the block for use in the file path
-	"""
-	if file_format == 'numerical':
-		formats = ('numerical', 'blockstate')
-	elif file_format == 'blockstate':
-		formats = ('blockstate', )
-	else:
-		raise Exception(f'file_format needs to be "numerical" or "blockstate". Got {file_format} instead')
-
-	default_spec = {'blockstate': {}, 'numerical': {"properties": {"block_data": [str(data) for data in range(16)]}, "defaults": {"block_data": "0"}}}
-
-	for file_format in formats:
-		prefix = 'blockstate_' if file_format == 'blockstate' else ''
-
-		save_json(f'{version_name}/block/{file_format}/specification/{namespace}/{sub_name}/{block_file_name}.json', block_json.get(f'{prefix}specification', default_spec[file_format]), buffer=buffer)
-
-		if f'{prefix}to_universal' in block_json:
-			save_json(f'{version_name}/block/{file_format}/to_universal/{namespace}/{sub_name}/{block_file_name}.json', block_json[f'{prefix}to_universal'], buffer=buffer)
-		else:
-			raise Exception(f'"{prefix}to_universal" must be defined')
-
-		if f'{prefix}from_universal' in block_json:
-			for block_str, block_data in block_json[f'{prefix}from_universal'].items():
-				namespace_, block_name = block_str.split(':')
-				merge_map(block_data, f'{version_name}/block/{file_format}/from_universal/{namespace_}/{sub_name}/{block_name}.json', buffer=buffer)
-		else:
-			raise Exception(f'"{prefix}from_universal" must be defined')
-
-
 def main():
 	"""Will remove all files from compiled_dir and generate them from uncompiled_dir"""
 	t2 = time.time()
@@ -209,7 +142,6 @@ def main():
 	if isdir('', compiled_dir):
 		raise Exception(f'Failed to delete "{compiled_dir}" for some reason')
 	log_to_file('\tFinished deleting the mapping directory')
-	threads = []
 	# iterate through all versions in the uncompiled directory
 	for version_name in listdir(''):
 		if not isdir(f'./{version_name}'):
@@ -225,15 +157,8 @@ def main():
 					copy_file(f'{version_name}/__numerical_map__.json')
 
 				# run the relevant compiler
-				if getattr(version_compiler, version_name).compiler is not None:
-					temp_threads = getattr(version_compiler, version_name).compiler(version_name, '.'.join(str(a) for a in init['version']), primitives)
-
-				else:
-					if init['format'] in ['numerical', 'pseudo-numerical']:
-						temp_threads = process_version(version_name, 'numerical')
-
-					elif init['format'] == 'blockstate':
-						temp_threads = process_version(version_name, 'blockstate')
+				assert hasattr(getattr(version_compiler, version_name), 'compiler') and getattr(version_compiler, version_name).compiler is not None
+				getattr(version_compiler, version_name).compiler(version_name, '.'.join(str(a) for a in init['version']), primitives)
 
 				# save the init file
 				save_json(f'{version_name}/__init__.json', init)
