@@ -1,4 +1,5 @@
-from . import comp
+from compiler.compilers import comp
+
 init = {
 	"format": "blockstate",
 	"platform": "universal",
