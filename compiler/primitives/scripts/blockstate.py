@@ -253,6 +253,18 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 						"id": {
 							"type": "string",
 							"val": entity_id
+						},
+						"x": {
+							"type": "int",
+							"val": 0
+						},
+						"y": {
+							"type": "int",
+							"val": 0
+						},
+						"z": {
+							"type": "int",
+							"val": 0
 						}
 					}
 				}

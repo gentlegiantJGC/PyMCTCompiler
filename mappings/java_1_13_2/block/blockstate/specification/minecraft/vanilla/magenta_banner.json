@@ -3,6 +3,10 @@
         "": {
             "type": "compound",
             "val": {
+                "id": {
+                    "type": "string",
+                    "val": "minecraft:banner"
+                },
                 "x": {
                     "type": "int",
                     "val": 0
@@ -14,10 +18,6 @@
                 "z": {
                     "type": "int",
                     "val": 0
-                },
-                "id": {
-                    "type": "string",
-                    "val": "minecraft:banner"
                 }
             }
         }
