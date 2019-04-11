@@ -46,25 +46,39 @@ def process_block(buffer: DiskBuffer, block_json: dict, version_name: str, names
 	:param block_file_name: The name of the block for use in the file path
 	"""
 
-	formats = ('numerical', 'blockstate')
-	default_spec = {'blockstate': {}, 'numerical': {"properties": {"block_data": [str(data) for data in range(16)]}, "defaults": {"block_data": "0"}}}
+	universal_type = block_json.get('universal_type', 'block')
 
-	for file_format in formats:
-		prefix = 'blockstate_' if file_format == 'blockstate' else ''
+	for prefix in ('blockstate_', ''):
+		for key in ('to_universal', 'from_universal'):
+			assert f'{prefix}{key}' in block_json, f'Key {key} must be defined'
+			assert isinstance(block_json[f'{prefix}{key}'], dict), f'Key {key} must be a dictionary'
 
-		save_json(f'{version_name}/block/{file_format}/specification/{namespace}/{sub_name}/{block_file_name}.json', block_json.get(f'{prefix}specification', default_spec[file_format]), buffer=buffer)
+	if universal_type == 'block':
+		default_spec = {'blockstate': {}, 'numerical': {"properties": {"block_data": [str(data) for data in range(16)]}, "defaults": {"block_data": "0"}}}
 
-		if f'{prefix}to_universal' in block_json:
-			save_json(f'{version_name}/block/{file_format}/to_universal/{namespace}/{sub_name}/{block_file_name}.json', block_json[f'{prefix}to_universal'], buffer=buffer)
-		else:
-			raise Exception(f'"{prefix}to_universal" must be defined')
+		for file_format in ('numerical', 'blockstate'):
+			prefix = 'blockstate_' if file_format == 'blockstate' else ''
 
-		if f'{prefix}from_universal' in block_json:
+			save_json(f'{version_name}/block/{file_format}/specification/{namespace}/{sub_name}/{block_file_name}.json', block_json.get(f'{prefix}specification', default_spec[file_format]), buffer=buffer)
+			save_json( f'{version_name}/block/{file_format}/to_universal/{namespace}/{sub_name}/{block_file_name}.json', block_json[f'{prefix}to_universal'], buffer=buffer)
 			for block_str, block_data in block_json[f'{prefix}from_universal'].items():
 				namespace_, block_name = block_str.split(':')
 				merge_map(block_data, f'{version_name}/block/{file_format}/from_universal/{namespace_}/{sub_name}/{block_name}.json', buffer=buffer)
-		else:
-			raise Exception(f'"{prefix}from_universal" must be defined')
+
+	elif universal_type == 'entity':
+		default_spec = {'blockstate': {}, 'numerical': {"properties": {"block_data": [str(data) for data in range(16)]}, "defaults": {"block_data": "0"}}}
+
+		for file_format in ('numerical', 'blockstate'):
+			prefix = 'blockstate_' if file_format == 'blockstate' else ''
+
+			save_json(f'{version_name}/block/{file_format}/specification/{namespace}/{sub_name}/{block_file_name}.json', block_json.get(f'{prefix}specification', default_spec[file_format]), buffer=buffer)
+			save_json(f'{version_name}/block/{file_format}/to_universal/{namespace}/{sub_name}/{block_file_name}.json', block_json[f'{prefix}to_universal'], buffer=buffer)
+			for block_str, block_data in block_json[f'{prefix}from_universal'].items():
+				namespace_, block_name = block_str.split(':')
+				merge_map(block_data, f'{version_name}/entity/{file_format}/from_universal/{namespace_}/{sub_name}/{block_name}.json', buffer=buffer)
+
+	else:
+		raise Exception(f'Universal type "{universal_type}" is not known')
 
 
 def process_entity(buffer: DiskBuffer, entity_json: dict, version_name: str, namespace: str, sub_name: str, block_file_name: str):
@@ -85,9 +99,11 @@ def process_entity(buffer: DiskBuffer, entity_json: dict, version_name: str, nam
 		assert isinstance(entity_json[key], dict), f'Key {key} must be a dictionary'
 
 	if universal_type == 'entity':
-		formats = ('numerical', 'blockstate')
-		for file_format in formats:
-			prefix = 'blockstate_' if file_format == 'blockstate' else ''
+		for key in ('blockstate_specification', 'blockstate_to_universal', 'blockstate_from_universal'):
+			if key in entity_json:
+				log_to_file(f'{version_name}/entity/blockstate/{key}/{namespace}/{sub_name}/{block_file_name}.json uses numerical as blockstate but {key} is present')
+
+		for file_format in ('numerical', 'blockstate'):
 			save_json(f'{version_name}/entity/{file_format}/specification/{namespace}/{sub_name}/{block_file_name}.json', entity_json['specification'], buffer=buffer)
 			save_json(f'{version_name}/entity/{file_format}/to_universal/{namespace}/{sub_name}/{block_file_name}.json', entity_json['to_universal'], buffer=buffer)
 			for block_str, block_data in entity_json['from_universal'].items():
@@ -95,14 +111,16 @@ def process_entity(buffer: DiskBuffer, entity_json: dict, version_name: str, nam
 				merge_map(block_data, f'{version_name}/entity/{file_format}/from_universal/{namespace_}/{sub_name}/{block_name}.json', buffer=buffer)
 
 	elif universal_type == 'block':
-		for key in ('blockstate_specification', 'blockstate_to_universal', 'blockstate_from_universal'):
+		for key in ('blockstate_to_universal', 'blockstate_from_universal'):
 			assert key in entity_json, f'Key {key} must be defined'
 			assert isinstance(entity_json[key], dict), f'Key {key} must be a dictionary'
 
-		formats = ('numerical', 'blockstate')
-		for file_format in formats:
+		if 'blockstate_specification' in entity_json:
+			log_to_file(f'{version_name}/entity/blockstate/specification/{namespace}/{sub_name}/{block_file_name}.json uses specification as blockstate_specification but blockstate_specification is present')
+
+		for file_format in ('numerical', 'blockstate'):
 			prefix = 'blockstate_' if file_format == 'blockstate' else ''
-			save_json(f'{version_name}/entity/{file_format}/specification/{namespace}/{sub_name}/{block_file_name}.json', entity_json[f'{prefix}specification'], buffer=buffer)
+			save_json(f'{version_name}/entity/{file_format}/specification/{namespace}/{sub_name}/{block_file_name}.json', entity_json['specification'], buffer=buffer)
 			save_json(f'{version_name}/entity/{file_format}/to_universal/{namespace}/{sub_name}/{block_file_name}.json', entity_json[f'{prefix}to_universal'], buffer=buffer)
 			for block_str, block_data in entity_json[f'{prefix}from_universal'].items():
 				namespace_, block_name = block_str.split(':')
