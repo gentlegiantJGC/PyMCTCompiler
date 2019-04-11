@@ -1,8 +1,8 @@
-from compiler.compilers import comp
+from compiler.compilers import universal_compiler
 
 init = {
 	"format": "blockstate",
 	"platform": "universal",
 	"version": [1, 0, 0],
 }
-compiler = comp.main
+compiler = universal_compiler.main
