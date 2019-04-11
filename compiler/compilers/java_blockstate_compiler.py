@@ -2,19 +2,6 @@ from compiler.compile import save_json, load_file, isfile, isdir, listdir, merge
 import copy
 
 
-def debug(block_data: dict) -> bool:
-	"""Confirm that all the properties defined have a default set and the default is in list of values.
-
-	:param block_data: The data to test
-	:type block_data: dict
-	:return: bool
-	"""
-	if "properties" in block_data and "defaults" in block_data:
-		return sorted(block_data["properties"].keys()) == sorted(block_data["defaults"].keys()) and all([val in block_data["properties"][key] for key, val in block_data["defaults"].items()])
-	else:
-		return True
-
-
 def main(version_name: str, version_str: str, primitives):
 	"""Custom compiler for the Java 1.13+ versions.
 
@@ -64,8 +51,6 @@ def main(version_name: str, version_str: str, primitives):
 					if block_string not in waterlogable:
 						waterlogable.append(block_string)
 			del states['states']
-			if not debug(states):
-				print(f'Error in "{block_string}"')
 			save_json(f'{version_name}/block/blockstate/specification/{namespace}/vanilla/{block_name}.json', states, buffer=output)
 			if not(namespace in modifications and any(block_name in modifications[namespace][group_name]['remove'] for group_name in modifications[namespace])):
 				# the block is not marked for removal
@@ -101,8 +86,6 @@ def main(version_name: str, version_str: str, primitives):
 					else:
 						assert isinstance(block_data, dict), f'The data here is supposed to be a dictionary. Got this instead:\n{block_data}'
 
-						if not debug(block_data):
-							print(f'Error in "{block_name}"')
 						if 'specification' in block_data:
 							specification = block_data.get("specification")
 							if 'properties' in specification and 'waterlogged' in specification['properties']:
