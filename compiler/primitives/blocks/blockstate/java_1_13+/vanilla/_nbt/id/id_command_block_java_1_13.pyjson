@@ -1,0 +1,1 @@
+blockstate.auto_id('minecraft:command_block', ['universal_minecraft:command_block'])
