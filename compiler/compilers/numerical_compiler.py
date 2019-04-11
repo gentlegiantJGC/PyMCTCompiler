@@ -24,6 +24,15 @@ def main(version_name: str, version_str: str, primitives):
 								process_block(output, primitives.get_block('numerical', primitive_block_name), version_name, namespace, sub_name, block_file_name)
 							except Exception as e:
 								log_to_file(f'Failed to process {version_name}/{namespace}/{sub_name}/{block_file_name}\n{e}\n{traceback.print_exc()}')
+					if '__include_entities__.json' in listdir(f'{version_name}/{namespace}/{sub_name}'):
+						for entity_file_name, primitive_entity_name in load_file(f'{version_name}/{namespace}/{sub_name}/__include_entities__.json').items():
+							if primitive_entity_name is None:
+								continue
+							try:
+								process_entity(output, primitives.get_entity(primitive_entity_name), version_name, namespace, sub_name, entity_file_name)
+							except Exception as e:
+								log_to_file(f'Failed to process {version_name}/{namespace}/{sub_name}/{block_file_name}\n{e}\n{traceback.print_exc()}')
+	return output.save()
 
 
 def process_block(buffer: DiskBuffer, block_json: dict, version_name: str, namespace: str, sub_name: str, block_file_name: str):
@@ -58,3 +67,45 @@ def process_block(buffer: DiskBuffer, block_json: dict, version_name: str, names
 			raise Exception(f'"{prefix}from_universal" must be defined')
 
 
+def process_entity(buffer: DiskBuffer, entity_json: dict, version_name: str, namespace: str, sub_name: str, block_file_name: str):
+	"""Will create json files based on block_json.
+
+	:param buffer: DiskBuffer instance to hold the data in memory rather than writing directly to disk
+	:param entity_json: The data that will be split up and saved out
+	:param version_name: The version name for use in the file path
+	:param namespace: The namespace for use in the file path
+	:param sub_name: The sub_name for use in the file path
+	:param block_file_name: The name of the block for use in the file path
+	"""
+
+	universal_type = entity_json.get('universal_type', 'entity')
+
+	for key in ('specification', 'to_universal', 'from_universal'):
+		assert key in entity_json, f'Key {key} must be defined'
+		assert isinstance(entity_json[key], dict), f'Key {key} must be a dictionary'
+
+	if universal_type == 'entity':
+		formats = ('numerical', 'blockstate')
+		for file_format in formats:
+			prefix = 'blockstate_' if file_format == 'blockstate' else ''
+			save_json(f'{version_name}/entity/{file_format}/specification/{namespace}/{sub_name}/{block_file_name}.json', entity_json['specification'], buffer=buffer)
+			save_json(f'{version_name}/entity/{file_format}/to_universal/{namespace}/{sub_name}/{block_file_name}.json', entity_json['to_universal'], buffer=buffer)
+			for block_str, block_data in entity_json['from_universal'].items():
+				namespace_, block_name = block_str.split(':')
+				merge_map(block_data, f'{version_name}/entity/{file_format}/from_universal/{namespace_}/{sub_name}/{block_name}.json', buffer=buffer)
+
+	elif universal_type == 'block':
+		for key in ('blockstate_specification', 'blockstate_to_universal', 'blockstate_from_universal'):
+			assert key in entity_json, f'Key {key} must be defined'
+			assert isinstance(entity_json[key], dict), f'Key {key} must be a dictionary'
+
+		formats = ('numerical', 'blockstate')
+		for file_format in formats:
+			prefix = 'blockstate_' if file_format == 'blockstate' else ''
+			save_json(f'{version_name}/entity/{file_format}/specification/{namespace}/{sub_name}/{block_file_name}.json', entity_json[f'{prefix}specification'], buffer=buffer)
+			save_json(f'{version_name}/entity/{file_format}/to_universal/{namespace}/{sub_name}/{block_file_name}.json', entity_json[f'{prefix}to_universal'], buffer=buffer)
+			for block_str, block_data in entity_json[f'{prefix}from_universal'].items():
+				namespace_, block_name = block_str.split(':')
+				merge_map(block_data, f'{version_name}/block/{file_format}/from_universal/{namespace_}/{sub_name}/{block_name}.json', buffer=buffer)
+	else:
+		raise Exception(f'Universal type "{universal_type}" is not known')
