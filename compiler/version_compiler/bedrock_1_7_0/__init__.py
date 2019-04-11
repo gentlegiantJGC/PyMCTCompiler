@@ -1,6 +1,8 @@
+from compiler.compilers import numerical_compiler
+
 init = {
 	"format": "pseudo-numerical",
 	"platform": "bedrock",
 	"version": [1, 7, 0]
 }
-compiler = None
+compiler = numerical_compiler.main
