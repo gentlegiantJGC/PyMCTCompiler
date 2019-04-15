@@ -14,24 +14,38 @@ def main(version_name: str, version_str: str, primitives):
 	if isfile(f'{version_name}/generated/reports/blocks.json'):
 		waterlogable = []
 		output = DiskBuffer()
-		modifications = {}
+		modifications = {'block': {}, 'entity': {}}
 		# Iterate through all modifications and load them into a dictionary
 		for namespace in (namespace for namespace in listdir(f'{version_name}/modifications') if isdir(f'{version_name}/modifications/{namespace}')):
-			if namespace not in modifications:
-				modifications[namespace] = {}
 			for group_name in (group_name for group_name in listdir(f'{version_name}/modifications/{namespace}') if isdir(f'{version_name}/modifications/{namespace}/{group_name}')):
-				if group_name not in modifications[namespace]:
-					modifications[namespace][group_name] = {"remove": [], "add": {}}
-
 				# load the modifications for that namespace and group name
 				if '__include_blocks__.json' in listdir(f'{version_name}/modifications/{namespace}/{group_name}'):
+					if namespace not in modifications['block']:
+						modifications['block'][namespace] = {}
+					if group_name not in modifications['block'][namespace]:
+						modifications['block'][namespace][group_name] = {"remove": [], "add": {}}
 					json_object = load_file(f'{version_name}/modifications/{namespace}/{group_name}/__include_blocks__.json')
 					for key, val in json_object.items():
-						if key in modifications[namespace][group_name]:
+						if key in modifications['block'][namespace][group_name]:
 							print(f'Key "{key}" specified for addition more than once')
 						try:
-							modifications[namespace][group_name]['add'][key] = primitives.get_block('blockstate', val)
-							modifications[namespace][group_name]["remove"].append(key)
+							modifications['block'][namespace][group_name]['add'][key] = primitives.get_block('blockstate', val)
+							modifications['block'][namespace][group_name]["remove"].append(key)
+						except:
+							print(f'could not get primitive "{val}"')
+							continue
+
+				if '__include_entities__.json' in listdir(f'{version_name}/modifications/{namespace}/{group_name}'):
+					if namespace not in modifications['entity']:
+						modifications['entity'][namespace] = {}
+					if group_name not in modifications['entity'][namespace]:
+						modifications['entity'][namespace][group_name] = {"remove": [], "add": {}}
+					json_object = load_file(f'{version_name}/modifications/{namespace}/{group_name}/__include_entities__.json')
+					for key, val in json_object.items():
+						if key in modifications['entity'][namespace][group_name]:
+							print(f'Key "{key}" specified for addition more than once')
+						try:
+							modifications['entity'][namespace][group_name]['add'][key] = primitives.get_entity(val)
 						except:
 							print(f'could not get primitive "{val}"')
 							continue
@@ -40,6 +54,7 @@ def main(version_name: str, version_str: str, primitives):
 		# load the block list the server created
 		blocks: dict = load_file(f'{version_name}/generated/reports/blocks.json')
 
+		# unpack all the default states from blocks.json and create direct mappings unless that block is in the modifications
 		for block_string, states in blocks.items():
 			namespace, block_name = block_string.split(':', 1)
 
@@ -52,7 +67,7 @@ def main(version_name: str, version_str: str, primitives):
 						waterlogable.append(block_string)
 			del states['states']
 			save_json(f'{version_name}/block/blockstate/specification/{namespace}/vanilla/{block_name}.json', states, buffer=output)
-			if not(namespace in modifications and any(block_name in modifications[namespace][group_name]['remove'] for group_name in modifications[namespace])):
+			if not(namespace in modifications['block'] and any(block_name in modifications['block'][namespace][group_name]['remove'] for group_name in modifications['block'][namespace])):
 				# the block is not marked for removal
 
 				if 'properties' in default_state:
@@ -78,9 +93,10 @@ def main(version_name: str, version_str: str, primitives):
 				save_json(f'{version_name}/block/blockstate/to_universal/{namespace}/vanilla/{block_name}.json', to_universal, buffer=output)
 				save_json(f'{version_name}/block/blockstate/from_universal/universal_{namespace}/vanilla/{block_name}.json', from_universal, buffer=output)
 
-		for namespace in modifications:
-			for group_name in modifications[namespace]:
-				for block_name, block_data in modifications[namespace][group_name]["add"].items():
+		# add in the modifications for blocks
+		for namespace in modifications['block']:
+			for group_name in modifications['block'][namespace]:
+				for block_name, block_data in modifications['block'][namespace][group_name]["add"].items():
 					if isfile(f'{version_name}/block/blockstate/to_universal/{namespace}/{group_name}/{block_name}.json', compiled_dir, buffer=output):
 						print(f'"{block_name}" is already present.')
 					else:
@@ -97,10 +113,33 @@ def main(version_name: str, version_str: str, primitives):
 						save_json(f'{version_name}/block/blockstate/to_universal/{namespace}/{group_name}/{block_name}.json', block_data["to_universal"], buffer=output)
 
 						assert 'from_universal' in block_data, f'"to_universal" must be present. Was missing for {version_name} {namespace}:{block_name}'
+						universal_type = block_data.get('universal_type', 'block')
 						for block_string2, mapping in block_data['from_universal'].items():
 							namespace2, block_name2 = block_string2.split(':', 1)
-							merge_map(mapping, f'{version_name}/block/blockstate/from_universal/{namespace2}/vanilla/{block_name2}.json', buffer=output)
+							merge_map(mapping, f'{version_name}/{universal_type}/blockstate/from_universal/{namespace2}/vanilla/{block_name2}.json', buffer=output)
 		save_json(f'{version_name}/__waterlogable__.json', waterlogable)
+
+		# add in the modifications for entities
+		for namespace in modifications['entity']:
+			for group_name in modifications['entity'][namespace]:
+				for entity_name, entity_data in modifications['entity'][namespace][group_name]["add"].items():
+					if isfile(f'{version_name}/entity/blockstate/to_universal/{namespace}/{group_name}/{entity_name}.json', compiled_dir, buffer=output):
+						print(f'"{entity_name}" is already present.')
+					else:
+						assert isinstance(entity_data, dict), f'The data here is supposed to be a dictionary. Got this instead:\n{entity_data}'
+
+						assert 'specification' in entity_data
+						specification = entity_data.get("specification")
+						save_json(f'{version_name}/entity/blockstate/specification/{namespace}/{group_name}/{entity_name}.json', specification, True, buffer=output)
+
+						assert 'to_universal' in entity_data, f'"to_universal" must be present. Was missing for {version_name} {namespace}:{entity_name}'
+						save_json(f'{version_name}/entity/blockstate/to_universal/{namespace}/{group_name}/{entity_name}.json', entity_data["to_universal"], buffer=output)
+
+						assert 'from_universal' in entity_data, f'"to_universal" must be present. Was missing for {version_name} {namespace}:{entity_name}'
+						universal_type = entity_data.get('universal_type', 'entity')
+						for entity_string2, mapping in entity_data['from_universal'].items():
+							namespace2, entity_name2 = entity_string2.split(':', 1)
+							merge_map(mapping, f'{version_name}/{universal_type}/blockstate/from_universal/{namespace2}/vanilla/{entity_name2}.json', buffer=output)
 		return output.save()
 	else:
 		raise Exception(f'Could not find {version_name}/generated/reports/blocks.json')
