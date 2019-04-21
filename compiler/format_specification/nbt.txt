@@ -98,7 +98,7 @@ main functions
 		# Look up if the string of that index exists in "index" (sadly JSON only allows string keys).
 		# If it doesn't, run "nested_default" functions on it
 		"index": {	# if undefined will not iterate through and will just run functions
-			"<index>": {} # this dictionary is in the same format as "map_input_nbt" but "type" is not read
+			"<index>": {} # this dictionary is in the same format as "map_input_nbt" as a byte/int/long but "type" is not read
 		}
 		# If "functions" is defined then run these functions
 		"functions": {},

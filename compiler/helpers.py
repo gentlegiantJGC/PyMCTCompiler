@@ -1,5 +1,5 @@
 import os
-from typing import List
+from typing import Tuple
 from urllib.request import urlopen
 import json
 from concurrent.futures import ThreadPoolExecutor
@@ -45,7 +45,7 @@ def log_to_file(msg: str):
 	log_file.write(f'{msg}\n')
 
 
-def _merge_map(data_: dict, data: dict) -> dict:
+def merge_map_(data_: dict, data: dict) -> dict:
 	"""Merge new "data" object into "data_" (data loaded from disk) and return the result.
 
 	:param data_: Dict to merge with data_
@@ -56,55 +56,149 @@ def _merge_map(data_: dict, data: dict) -> dict:
 	"""
 	check_mapping_format(data_)
 	check_mapping_format(data)
+	return _merge_map(data_, data)
+
+
+def _merge_map(data_: dict, data: dict) -> dict:
 	if 'new_block' in data and 'new_block' in data_:
-		if data_['new_block'] != data['new_block']:
-			raise Exception('"new_block" must be the same when merging')
-	elif 'new_block' in data != 'new_block' in data_:
-		raise Exception('"new_block" defined in one but not the other')
+		assert data_['new_block'] == data['new_block'], '"new_block" must be the same when merging'
+	else:
+		assert 'new_block' not in data and 'new_block' not in data_, '"new_block" defined in one but not the other'
 
 	if 'new_properties' in data and 'new_properties' in data_:
-		if data_['new_properties'] != data['new_properties']:
-			raise Exception('"new_properties" must be the same when merging')
-	elif 'new_properties' in data != 'new_properties' in data_:
-		raise Exception('"new_properties" defined in one but not the other')
+		assert data_['new_properties'] == data['new_properties'], '"new_properties" must be the same when merging'
+	else:
+		assert 'new_properties' not in data and'new_properties' not in data_, '"new_properties" defined in one but not the other'
 
 	if 'map_properties' in data and 'map_properties' in data_:
-		if data_['map_properties'].keys() != data['map_properties'].keys():
-			raise Exception('"map_properties" must have the same key entries when merging')
-		else:
-			for key in data['map_properties'].keys():
-				for val in data['map_properties'][key].keys():
-					if val in data_['map_properties'][key].keys():
-						data_['map_properties'][key][val] = _merge_map(data_['map_properties'][key][val], data['map_properties'][key][val])
-					else:
-						data_['map_properties'][key][val] = data['map_properties'][key][val]
-	elif 'map_properties' in data != 'map_properties' in data_:
-		raise Exception('"map_properties" defined in one but not the other')
+		assert data_['map_properties'].keys() == data['map_properties'].keys(), '"map_properties" must have the same key entries when merging'
+		for key in data['map_properties'].keys():
+			for val in data['map_properties'][key].keys():
+				if val in data_['map_properties'][key].keys():
+					data_['map_properties'][key][val] = _merge_map(data_['map_properties'][key][val], data['map_properties'][key][val])
+				else:
+					data_['map_properties'][key][val] = data['map_properties'][key][val]
+	else:
+		assert 'map_properties' not in data and'map_properties' not in data_, '"map_properties" defined in one but not the other'
 
 	if 'carry_properties' in data and 'carry_properties' in data_:
-		if data_['carry_properties'].keys() != data['carry_properties'].keys():
-			raise Exception('"carry_properties" must have the same key entries when merging')
-		else:
-			for key in data['carry_properties'].keys():
-				data_['carry_properties'][key] = unique_merge_lists(data_['carry_properties'][key], data['carry_properties'][key])
-	elif 'carry_properties' in data != 'carry_properties' in data_:
-		raise Exception('"carry_properties" defined in one but not the other')
+		assert data_['carry_properties'].keys() == data['carry_properties'].keys(), '"carry_properties" must have the same key entries when merging'
+		for key in data['carry_properties'].keys():
+			data_['carry_properties'][key] = unique_merge_lists(data_['carry_properties'][key], data['carry_properties'][key])
+	else:
+		assert 'carry_properties' not in data and'carry_properties' not in data_, '"carry_properties" defined in one but not the other'
 
 	if 'new_nbt' in data and 'new_nbt' in data_:
-		if data_['new_nbt'] != data['new_nbt']:
-			raise Exception('"new_nbt" must be the same when merging')
-	elif 'new_nbt' in data != 'new_nbt' in data_:
-		raise Exception('"new_nbt" defined in one but not the other')
+		assert data_['new_nbt'] == data['new_nbt'], '"new_nbt" must be the same when merging'
+	else:
+		assert 'new_nbt' not in data and'new_nbt' not in data_, '"new_nbt" defined in one but not the other'
 
-	for fun in ("map_nbt", "multiblock", "map_block_name"):
-		for d in (data, data_):
-			if fun in d:
-				raise Exception(f'Function {fun} should not be in mappings from universal')
+	if 'multiblock' in data and 'multiblock' in data_:
+		assert data_['multiblock'] == data['multiblock'], '"multiblock" must be the same when merging'
+	else:
+		assert 'multiblock' not in data and'multiblock' not in data_, '"multiblock" defined in one but not the other'
+
+	if 'map_block_name' in data and 'map_block_name' in data_:
+		assert data_['map_block_name'].keys() == data['map_block_name'].keys(), '"map_block_name" must have the same key entries when merging'
+		for key in data['map_block_name'].keys():
+			for val in data['map_block_name'][key].keys():
+				if val in data_['map_block_name'][key].keys():
+					data_['map_block_name'][key][val] = _merge_map(data_['map_block_name'][key][val], data['map_block_name'][key][val])
+				else:
+					data_['map_block_name'][key][val] = data['map_block_name'][key][val]
+	else:
+		assert 'map_block_name' not in data and'map_block_name' not in data_, '"map_block_name" defined in one but not the other'
+
+	if 'map_input_nbt' in data and 'map_input_nbt' in data_:
+		data_['map_input_nbt'] = merge_map_input_nbt(data_['map_input_nbt'], data['map_input_nbt'])
+	else:
+		assert 'map_input_nbt' not in data and'map_input_nbt' not in data_, '"map_input_nbt" defined in one but not the other'
+
+	if 'carry_nbt' in data and 'carry_nbt' in data_:
+		assert data_['carry_nbt'] == data['carry_nbt'], '"carry_nbt" must be the same when merging'
+	else:
+		assert 'carry_nbt' not in data and'carry_nbt' not in data_, '"carry_nbt" defined in one but not the other'
+
+	if 'map_nbt' in data and 'map_nbt' in data_:
+		assert data_['map_nbt'] == data['map_nbt'], '"map_nbt" must be the same when merging'
+	else:
+		assert 'map_nbt' not in data and'map_nbt' not in data_, '"map_nbt" defined in one but not the other'
 
 	return data_
 
 
-default_mapping_feature_set = ['new_block', 'new_properties', 'map_properties', 'carry_properties', 'new_nbt', 'multiblock', 'map_block_name', 'map_input_nbt']
+def merge_map_input_nbt(data_: dict, data: dict) -> dict:
+	for key, val in data.items():
+		if key in data_:
+			data_[key] = _merge_map_input_nbt(data_[key], val)
+		else:
+			data_[key] = val
+	return data_
+
+
+def _merge_map_input_nbt(data_: dict, data: dict, bypass_type=False) -> dict:
+	if not bypass_type:
+		assert data_['type'] == data['type'], '"type" must match in both NBT types'
+	if 'self_default' in data_ and 'self_default' in data:
+		data_['self_default'] = _merge_map(data_['self_default'], data['self_default'])
+	elif not ('self_default' not in data_ and 'self_default' not in data):
+		data_['self_default'] = _merge_map(data_.get('self_default', {"carry_nbt": {}}), data.get('self_default', {"carry_nbt": {}}))
+
+	if 'functions' in data_ and 'functions' in data:
+		data_['functions'] = _merge_map(data_['functions'], data['functions'])
+	elif not ('functions' not in data_ and 'functions' not in data):
+		data_['functions'] = _merge_map(data_.get('functions', {}), data.get('functions', {}))
+
+	if not bypass_type:
+		if data_['type'] == 'compound':
+			if 'keys' in data and 'keys' in data_:
+				for val in data['keys'].keys():
+					if val in data_['keys'].keys():
+						data_['keys'][val] = _merge_map_input_nbt(data_['keys'][val], data['keys'][val])
+					else:
+						data_['keys'][val] = data['keys'][val]
+			else:
+				assert 'keys' not in data and 'keys' not in data_, '"keys" defined in one but not the other'
+
+			if 'nested_default' in data_ and 'nested_default' in data:
+				data_['nested_default'] = _merge_map(data_['nested_default'], data['nested_default'])
+			elif not ('nested_default' not in data_ and 'nested_default' not in data):
+				data_['nested_default'] = _merge_map(data_.get('nested_default', {"carry_nbt": {}}), data.get('nested_default', {"carry_nbt": {}}))
+
+		elif data_['type'] == 'list':
+			if 'index' in data and 'index' in data_:
+				for val in data['index'].keys():
+					if val in data_['index'].keys():
+						data_['index'][val] = _merge_map_input_nbt(data_['index'][val], data['index'][val])
+					else:
+						data_['index'][val] = data['index'][val]
+			else:
+				assert 'index' not in data and 'index' not in data_, '"keys" defined in one but not the other'
+
+			if 'nested_default' in data_ and 'nested_default' in data:
+				data_['nested_default'] = _merge_map(data_['nested_default'], data['nested_default'])
+			elif not ('nested_default' not in data_ and 'nested_default' not in data):
+				data_['nested_default'] = _merge_map(data_.get('nested_default', {"carry_nbt": {}}), data.get('nested_default', {"carry_nbt": {}}))
+
+		elif data_['type'] in ('byte_array', 'int_array', 'long_array'):
+			if 'index' in data and 'index' in data_:
+				for val in data['index'].keys():
+					if val in data_['index'].keys():
+						data_['index'][val] = _merge_map_input_nbt(data_['index'][val], data['index'][val], True)
+					else:
+						data_['index'][val] = data['index'][val]
+			else:
+				assert 'index' not in data and 'index' not in data_, '"keys" defined in one but not the other'
+
+			if 'nested_default' in data_ and 'nested_default' in data:
+				data_['nested_default'] = _merge_map(data_['nested_default'], data['nested_default'])
+			elif not ('nested_default' not in data_ and 'nested_default' not in data):
+				data_['nested_default'] = _merge_map(data_.get('nested_default', {"carry_nbt": {}}), data.get('nested_default', {"carry_nbt": {}}))
+
+	return data_
+
+
+default_mapping_feature_set = ('new_block', 'new_properties', 'map_properties', 'carry_properties', 'new_nbt', 'multiblock', 'map_block_name', 'map_input_nbt')
 
 
 def check_formatting(data: dict, mode: str):
@@ -175,14 +269,15 @@ def _check_nbt_specification(data: dict):
 			log_to_file(f'Extra key "{key}" found')
 
 
-def check_mapping_format(data: dict, feature_set: List[str] = default_mapping_feature_set, carry_feature_set: List[str] = None):
+def check_mapping_format(data: dict, feature_set: Tuple[str, ...] = default_mapping_feature_set, carry_feature_set: Tuple[str, ...] = None):
 	"""Will verify that "data" fits the required format.
 
 	:param data: The data to verify the formatting of
 	:param feature_set: List containing info on how the function should be run
+	:param carry_feature_set: Like the above but carried down through all nested functions (used for NBT)
 	"""
 	if carry_feature_set is None:
-		carry_feature_set = []
+		carry_feature_set = ()
 	full_feature_set = feature_set + carry_feature_set
 	assert isinstance(data, dict), 'Outer mapping data type must be a dictionary'
 	if 'new_block' in full_feature_set and 'new_block' in data:
@@ -264,7 +359,7 @@ def check_mapping_format(data: dict, feature_set: List[str] = default_mapping_fe
 		assert isinstance(multiblock, list), 'multiblock must be a dictionary or a list of dictionaries'
 		for mapping in multiblock:
 			assert isinstance(mapping, dict), 'multiblock must be a dictionary or a list of dictionaries'
-			check_mapping_format(mapping, default_mapping_feature_set + ['coords'], carry_feature_set)
+			check_mapping_format(mapping, default_mapping_feature_set + ('coords',))
 
 	if 'coords' in full_feature_set:
 		assert 'coords' in data, 'coords must be present in multiblock'
@@ -337,11 +432,11 @@ def check_map_input_nbt_format(data: dict):
 				assert isinstance(key, str), 'keys in nbt map compound "keys" must be strings'
 				check_map_input_nbt_format(val)
 		if 'functions' in data:
-			check_mapping_format(data['functions'], default_mapping_feature_set, ['carry_nbt'])
+			check_mapping_format(data['functions'], default_mapping_feature_set, ('carry_nbt',))
 		if 'nested_default' in data:
-			check_mapping_format(data['nested_default'], default_mapping_feature_set, ['carry_nbt'])
+			check_mapping_format(data['nested_default'], default_mapping_feature_set, ('carry_nbt',))
 		if 'self_default' in data:
-			check_mapping_format(data['self_default'], default_mapping_feature_set, ['carry_nbt'])
+			check_mapping_format(data['self_default'], default_mapping_feature_set, ('carry_nbt',))
 
 		for key in data.keys():
 			if key not in ('type', 'keys', 'functions', 'nested_default', 'self_default'):
@@ -354,11 +449,11 @@ def check_map_input_nbt_format(data: dict):
 				assert isinstance(key, str) and key.isdigit(), 'all keys in nbt map list index must be an int in string form'
 				check_map_input_nbt_format(val)
 		if 'functions' in data:
-			check_mapping_format(data['functions'], default_mapping_feature_set, ['carry_nbt'])
+			check_mapping_format(data['functions'], default_mapping_feature_set, ('carry_nbt',))
 		if 'nested_default' in data:
-			check_mapping_format(data['nested_default'], default_mapping_feature_set, ['carry_nbt'])
+			check_mapping_format(data['nested_default'], default_mapping_feature_set, ('carry_nbt',))
 		if 'self_default' in data:
-			check_mapping_format(data['self_default'], default_mapping_feature_set, ['carry_nbt'])
+			check_mapping_format(data['self_default'], default_mapping_feature_set, ('carry_nbt',))
 
 		for key in data.keys():
 			if key not in ('type', 'index', 'functions', 'nested_default', 'self_default'):
@@ -366,9 +461,9 @@ def check_map_input_nbt_format(data: dict):
 
 	elif data['type'] in ('byte', 'short', 'int', 'long', 'float', 'double', 'string'):
 		if 'functions' in data:
-			check_mapping_format(data['functions'], default_mapping_feature_set, ['carry_nbt', 'map_nbt'])
+			check_mapping_format(data['functions'], default_mapping_feature_set, ('carry_nbt', 'map_nbt'))
 		if 'self_default' in data:
-			check_mapping_format(data['self_default'], default_mapping_feature_set, ['carry_nbt', 'map_nbt'])
+			check_mapping_format(data['self_default'], default_mapping_feature_set, ('carry_nbt', 'map_nbt'))
 
 		for key in data.keys():
 			if key not in ('type', 'functions', 'self_default'):
@@ -381,18 +476,18 @@ def check_map_input_nbt_format(data: dict):
 				assert isinstance(key, str) and key.isdigit(), 'all keys in nbt map array index must be an int in string form'
 				assert isinstance(val, dict), 'all values in nbt map array index must be dictionaries'
 				if 'functions' in val:
-					check_mapping_format(val['functions'], default_mapping_feature_set, ['carry_nbt', 'map_nbt'])
+					check_mapping_format(val['functions'], default_mapping_feature_set, ('carry_nbt', 'map_nbt'))
 
 				for key2 in data.keys():
 					if key2 not in ('type', 'functions'):
 						log_to_file(f'Extra key "{key2}" found')
 
 		if 'functions' in data:
-			check_mapping_format(data['functions'], default_mapping_feature_set, ['carry_nbt'])
+			check_mapping_format(data['functions'], default_mapping_feature_set, ('carry_nbt',))
 		if 'nested_default' in data:
-			check_mapping_format(data['nested_default'], default_mapping_feature_set, ['carry_nbt'])
+			check_mapping_format(data['nested_default'], default_mapping_feature_set, ('carry_nbt',))
 		if 'self_default' in data:
-			check_mapping_format(data['self_default'], default_mapping_feature_set, ['carry_nbt'])
+			check_mapping_format(data['self_default'], default_mapping_feature_set, ('carry_nbt',))
 
 		for key in data.keys():
 			if key not in ('type', 'index', 'functions', 'nested_default', 'self_default'):
@@ -418,7 +513,7 @@ def unique_merge_lists(list_a: list, list_b: list) -> list:
 	return merged_list
 
 
-def _blocks_from_server(uncompiled_path: str, version_name: str, version_str: str = None):
+def blocks_from_server_(uncompiled_path: str, version_name: str, version_str: str = None):
 	if not os.path.isfile(f'{uncompiled_path}/{version_name}/generated/reports/blocks.json'):
 		if not os.path.isfile(f'{uncompiled_path}/{version_name}/server.jar'):
 			download_server_jar(f'{uncompiled_path}/{version_name}', version_str)

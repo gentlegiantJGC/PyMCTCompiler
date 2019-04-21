@@ -4,7 +4,7 @@ import shutil
 import time
 from typing import Union
 from compiler import primitives, version_compiler
-from compiler.helpers import log_to_file, _merge_map, _blocks_from_server, DiskBuffer, check_formatting
+from compiler.helpers import log_to_file, merge_map_, blocks_from_server_, DiskBuffer, check_formatting
 
 uncompiled_dir = './version_compiler'
 compiled_dir = '../mappings'
@@ -117,14 +117,14 @@ def merge_map(data: dict, path: str, buffer: DiskBuffer = None):
 	"""
 	if isfile(path, compiled_dir, buffer):
 		data_ = load_file(path, compiled_dir, buffer)
-		save_json(path, _merge_map(data_, data), True, buffer=buffer)
+		save_json(path, merge_map_(data_, data), True, buffer=buffer)
 	else:
 		save_json(path, data, buffer=buffer)
 
 
 def blocks_from_server(version_name: str, version_str: str = None, prefix: str = uncompiled_dir):
 	"""Generate the block.json file from the server.jar"""
-	_blocks_from_server(prefix, version_name, version_str)
+	blocks_from_server_(prefix, version_name, version_str)
 
 
 def main():
