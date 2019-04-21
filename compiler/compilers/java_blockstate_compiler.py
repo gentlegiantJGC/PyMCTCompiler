@@ -50,7 +50,6 @@ def main(version_name: str, version_str: str):
 							print(f'could not get primitive "{val}"')
 							continue
 
-
 		# load the block list the server created
 		blocks: dict = load_file(f'{version_name}/generated/reports/blocks.json')
 
@@ -105,8 +104,8 @@ def main(version_name: str, version_str: str):
 						if 'specification' in block_data:
 							specification = block_data.get("specification")
 							if 'properties' in specification and 'waterlogged' in specification['properties']:
-								if block_string not in waterlogable:
-									waterlogable.append(block_string)
+								if f'{namespace}:{block_name}' not in waterlogable:
+									waterlogable.append(f'{namespace}:{block_name}')
 							save_json(f'{version_name}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', specification, True, buffer=output)
 
 						assert 'to_universal' in block_data, f'"to_universal" must be present. Was missing for {version_name} {namespace}:{block_name}'
@@ -143,5 +142,3 @@ def main(version_name: str, version_str: str):
 		return output.save()
 	else:
 		raise Exception(f'Could not find {version_name}/generated/reports/blocks.json')
-
-

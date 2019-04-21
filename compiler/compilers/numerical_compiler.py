@@ -32,7 +32,7 @@ def main(version_name: str, version_str: str):
 							try:
 								process_entity(output, primitives.get_entity(primitive_entity_name), version_name, namespace, sub_name, entity_file_name)
 							except Exception as e:
-								log_to_file(f'Failed to process {version_name}/{namespace}/{sub_name}/{block_file_name}\n{e}\n{traceback.print_exc()}')
+								log_to_file(f'Failed to process {version_name}/{namespace}/{sub_name}/{entity_file_name}\n{e}\n{traceback.print_exc()}')
 	return output.save()
 
 
@@ -61,7 +61,7 @@ def process_block(buffer: DiskBuffer, block_json: dict, version_name: str, names
 			prefix = 'blockstate_' if file_format == 'blockstate' else ''
 
 			save_json(f'{version_name}/block/{file_format}/specification/{namespace}/{sub_name}/{block_file_name}.json', block_json.get(f'{prefix}specification', default_spec[file_format]), buffer=buffer)
-			save_json( f'{version_name}/block/{file_format}/to_universal/{namespace}/{sub_name}/{block_file_name}.json', block_json[f'{prefix}to_universal'], buffer=buffer)
+			save_json(f'{version_name}/block/{file_format}/to_universal/{namespace}/{sub_name}/{block_file_name}.json', block_json[f'{prefix}to_universal'], buffer=buffer)
 			for block_str, block_data in block_json[f'{prefix}from_universal'].items():
 				namespace_, block_name = block_str.split(':')
 				merge_map(block_data, f'{version_name}/block/{file_format}/from_universal/{namespace_}/{sub_name}/{block_name}.json', buffer=buffer)
