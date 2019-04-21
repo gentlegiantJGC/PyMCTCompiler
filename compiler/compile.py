@@ -158,7 +158,7 @@ def main():
 
 				# run the relevant compiler
 				assert hasattr(getattr(version_compiler, version_name), 'compiler') and getattr(version_compiler, version_name).compiler is not None
-				getattr(version_compiler, version_name).compiler(version_name, '.'.join(str(a) for a in init['version']), primitives)
+				getattr(version_compiler, version_name).compiler(version_name, '.'.join(str(a) for a in init['version']))
 
 				# save the init file
 				save_json(f'{version_name}/__init__.json', init)

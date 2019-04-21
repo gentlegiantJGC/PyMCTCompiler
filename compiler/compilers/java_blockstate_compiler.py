@@ -1,13 +1,13 @@
 from compiler.compile import save_json, load_file, isfile, isdir, listdir, merge_map, blocks_from_server, compiled_dir, DiskBuffer
+from compiler import primitives
 import copy
 
 
-def main(version_name: str, version_str: str, primitives):
+def main(version_name: str, version_str: str):
 	"""Custom compiler for the Java 1.13+ versions.
 
 	:param version_name: The folder name of the version being compiled
 	:param version_str: The string of the version number exactly as it appears in the version manifest
-	:param primitives: the primitives module
 	"""
 	blocks_from_server(version_name, version_str)
 

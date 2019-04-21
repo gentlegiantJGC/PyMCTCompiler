@@ -1,11 +1,11 @@
 from compiler.compile import save_json, load_file, isfile, isdir, listdir, blocks_from_server, compiled_dir, DiskBuffer
 
 
-def main(version_name: str, *_):
+def main(version_name: str, version_str: str):
 	"""Custom compiler for the universal version.
 
 	:param version_name: The folder name of the version being compiled
-	:param _: the primitives module (unused)
+	:param version_str: The string form of the version name "x.x.x" not used in this compiler
 	"""
 	blocks_from_server(version_name)
 

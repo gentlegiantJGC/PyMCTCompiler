@@ -1,12 +1,13 @@
 from compiler.compile import save_json, load_file, isdir, listdir, merge_map, DiskBuffer, log_to_file
+from compiler import primitives
 import traceback
 
-def main(version_name: str, version_str: str, primitives):
+
+def main(version_name: str, version_str: str):
 	"""Will bake out the files in uncompiled_dir/version_name into compiled_dir/version_name
 
 	:param version_name: A version name found in uncompiled_dir
 	:param version_str: The string form of the version name "x.x.x" not used in this compiler
-	:param primitives: The primitives modules
 	"""
 	# iterate through all namespaces
 	output = DiskBuffer()
