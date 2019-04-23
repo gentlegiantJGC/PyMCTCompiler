@@ -1,0 +1,131 @@
+# a very very minimalistic NBT data storage. Write/use a proper NBT library
+
+class TAG_Value:
+	def __init__(self, val):
+		self._val = val
+
+	@property
+	def val(self):
+		return self._val
+
+
+class TAG_Byte(TAG_Value):
+	def __init__(self, val):
+		TAG_Value.__init__(self, val)
+
+
+class TAG_Short(TAG_Value):
+	def __init__(self, val):
+		TAG_Value.__init__(self, val)
+
+
+class TAG_Int(TAG_Value):
+	def __init__(self, val):
+		TAG_Value.__init__(self, val)
+
+
+class TAG_Long(TAG_Value):
+	def __init__(self, val):
+		TAG_Value.__init__(self, val)
+
+
+class TAG_Float(TAG_Value):
+	def __init__(self, val):
+		TAG_Value.__init__(self, val)
+
+
+class TAG_Double(TAG_Value):
+	def __init__(self, val):
+		TAG_Value.__init__(self, val)
+
+
+class TAG_String(TAG_Value):
+	def __init__(self, val):
+		TAG_Value.__init__(self, val)
+
+
+class TAG_Compound(TAG_Value):
+	def __init__(self, val=None):
+		if val is None:
+			val = {}
+		TAG_Value.__init__(self, val)
+
+
+class TAG_List(TAG_Value):
+	def __init__(self, val=None):
+		if val is None:
+			val = []
+		TAG_Value.__init__(self, val)
+
+
+class TAG_Byte_Array(TAG_Value):
+	def __init__(self, val=None):
+		if val is None:
+			val = []
+		TAG_Value.__init__(self, val)
+
+
+class TAG_Int_Array(TAG_Value):
+	def __init__(self, val=None):
+		if val is None:
+			val = []
+		TAG_Value.__init__(self, val)
+
+
+class TAG_Long_Array(TAG_Value):
+	def __init__(self, val=None):
+		if val is None:
+			val = []
+		TAG_Value.__init__(self, val)
+
+
+class NBT(TAG_Value):
+	def __init__(self, val=None):
+		if val is None:
+			val = {}
+		TAG_Value.__init__(self, val)
+
+
+def from_spec(spec):
+	return {
+		key: _from_spec(val) for key, val in spec.items()
+	}
+
+
+nbt_map = {
+	'byte': TAG_Byte,
+	'short': TAG_Short,
+	'int': TAG_Int,
+	'long': TAG_Long,
+	'float': TAG_Float,
+	'double': TAG_Double,
+	'string': TAG_String
+}
+
+nbt_array = {
+	'byte_array': TAG_Byte_Array,
+	'int_array': TAG_Int_Array,
+	'long_array': TAG_Long_Array
+}
+
+
+def _from_spec(spec):
+	assert 'type' in spec
+	if spec['type'] == 'compound':
+		return NBT(
+			{
+				key: _from_spec(val) for key, val in spec['val'].items()
+			}
+		)
+	elif spec['type'] == 'list':
+		return TAG_List(
+			[
+				_from_spec(val) for val in spec['val'].items()
+			]
+		)
+	elif spec['type'] in nbt_array:
+		return nbt_array[spec['type']](spec['val'])
+	elif spec['type'] in nbt_map:
+		return nbt_map[spec['type']](spec['val'])
+	else:
+		raise AssertionError
