@@ -1,7 +1,7 @@
 from compiler.compilers import java_blockstate_compiler
 
 init = {
-	"format": "blockstate",
+	"block_format": "blockstate",
 	"platform": "java",
 	"version": [1, 13, 2]
 }

@@ -1,7 +1,7 @@
 from compiler.compilers import universal_compiler
 
 init = {
-	"format": "blockstate",
+	"block_format": "blockstate",
 	"platform": "universal",
 	"version": [1, 0, 0],
 }

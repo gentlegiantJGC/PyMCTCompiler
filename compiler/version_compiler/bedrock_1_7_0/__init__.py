@@ -1,7 +1,7 @@
 from compiler.compilers import numerical_compiler
 
 init = {
-	"format": "pseudo-numerical",
+	"block_format": "pseudo-numerical",
 	"platform": "bedrock",
 	"version": [1, 7, 0]
 }

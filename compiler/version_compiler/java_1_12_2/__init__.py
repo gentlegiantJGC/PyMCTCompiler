@@ -1,7 +1,7 @@
 from compiler.compilers import numerical_compiler
 
 init = {
-	"format": "numerical",
+	"block_format": "numerical",
 	"platform": "java",
 	"version": [1, 12, 2]
 }

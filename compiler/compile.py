@@ -151,8 +151,8 @@ def main():
 			t = time.time()
 			init = getattr(version_compiler, version_name).init
 			assert isinstance(init, dict)
-			if 'format' in init and init['format'] in ['numerical', 'pseudo-numerical', 'blockstate']:
-				if init['format'] == 'numerical':
+			if 'block_format' in init and init['block_format'] in ['numerical', 'pseudo-numerical', 'blockstate']:
+				if init['block_format'] == 'numerical':
 					# copy over the numerical map required for old numerical formats
 					copy_file(f'{version_name}/__numerical_map__.json')
 
@@ -164,7 +164,7 @@ def main():
 				save_json(f'{version_name}/__init__.json', init)
 				log_to_file(f'\tFinished in {round(time.time() - t, 2)} seconds')
 			else:
-				log_to_file(f'"format" in __init__.json for {version_name} is either not defined or not a valid value. This version has been skipped')
+				log_to_file(f'"block_format" in __init__.json for {version_name} is either not defined or not a valid value. This version has been skipped')
 		else:
 			log_to_file(f'Could not find __init__.json file for {version_name}. This version has been skipped')
 	log_to_file(f'\nFinished compiling all versions in {round(time.time() - t2, 2)}')

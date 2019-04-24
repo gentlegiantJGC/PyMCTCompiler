@@ -130,17 +130,17 @@ class Version:
 			self._platform = init_file['platform']
 			assert isinstance(init_file['version'], list) and len(init_file['version']) == 3
 			self._version_number = tuple(init_file['version'])
-			assert isinstance(init_file['format'], str)
-			self._format = init_file['format']
+			assert isinstance(init_file['block_format'], str)
+			self._block_format = init_file['block_format']
 
 			self._subversions = {}
 			self._numerical_map = None
 			self._numerical_map_inverse = None
 
-			if self.format in ['numerical', 'pseudo-numerical']:
+			if self.block_format in ['numerical', 'pseudo-numerical']:
 				for block_format in ['blockstate', 'numerical']:
 					self._subversions[block_format] = SubVersion(f'{version_path}/block/{block_format}', version_container)
-				if self.format == 'numerical':
+				if self.block_format == 'numerical':
 					with open(f'{version_path}/__numerical_map__.json') as f:
 						self._numerical_map = json.load(f)
 					self._numerical_map_inverse = {}
@@ -148,12 +148,12 @@ class Version:
 						assert isinstance(block_id, str) and isinstance(block_string, str) and block_id.isnumeric()
 						self._numerical_map_inverse[block_string] = block_id
 
-			elif self.format == 'blockstate':
+			elif self.block_format == 'blockstate':
 				self._subversions['blockstate'] = SubVersion(f'{version_path}/block/blockstate', version_container)
 
 	@property
-	def format(self) -> str:
-		return self._format
+	def block_format(self) -> str:
+		return self._block_format
 
 	@property
 	def platform(self) -> str:
@@ -168,17 +168,17 @@ class Version:
 		if force_blockstate:
 			return self._subversions['blockstate']
 		else:
-			if self.format in ['numerical', 'pseudo-numerical']:
+			if self.block_format in ['numerical', 'pseudo-numerical']:
 				return self._subversions['numerical']
-			elif self.format == 'blockstate':
+			elif self.block_format == 'blockstate':
 				return self._subversions['blockstate']
 			else:
 				raise NotImplemented
 
 	def to_universal(self, level, object_input: Union[Block, Entity], force_blockstate: bool = False, location: Tuple[int, int, int] = None) -> Tuple[Union[Block, Entity], Union[BlockEntity, None], bool]:
 		if isinstance(object_input, Block):
-			if self.format == 'numerical' and not force_blockstate:
-				assert object_input.base_name.isnumeric(), 'For the numerical format base_name must be an int converted to a string'
+			if self.block_format == 'numerical' and not force_blockstate:
+				assert object_input.base_name.isnumeric(), 'For the numerical block_format base_name must be an int converted to a string'
 				namespace, base_name = self._numerical_map[object_input.base_name].split(':')
 				object_input = Block(namespace, base_name, object_input.properties)
 		elif isinstance(object_input, Entity):
@@ -192,7 +192,7 @@ class Version:
 
 		output, extra_output, extra_needed = self.get(force_blockstate).from_universal(level, object_input, location)
 		if isinstance(output, Block):
-			if self.format == 'numerical':
+			if self.block_format == 'numerical':
 				namespace, base_name = '', self._numerical_map_inverse[output.base_name]
 				output = Block(namespace, base_name, object_input.properties)
 		elif isinstance(object_input, Entity):

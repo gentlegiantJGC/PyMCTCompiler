@@ -100,8 +100,8 @@ class Version:
 			self._platform = init_file['platform']
 			assert isinstance(init_file['version'], list) and len(init_file['version']) == 3
 			self._version_number = tuple(init_file['version'])
-			assert isinstance(init_file['format'], str) or isinstance(init_file['format'], unicode)
-			self._format = init_file['format']
+			assert isinstance(init_file['block_format'], str) or isinstance(init_file['block_format'], unicode)
+			self._format = init_file['block_format']
 
 			self._subversions = {}
 			self._numerical_map = None
@@ -157,8 +157,8 @@ class Version:
 
 class SubVersion:
 	"""
-	Within each unique game version there may be more than one format
-	(if it is numerical or pseudo-numerical it will have both a numerical and blockstate format)
+	Within each unique game version there may be more than one block_format
+	(if it is numerical or pseudo-numerical it will have both a numerical and blockstate block_format)
 	This is the container where that data will be stored.
 	"""
 	def __init__(self, sub_version_path, version_container):
@@ -248,7 +248,7 @@ class Namespace:
 
 	def convert(self, level, input_blockstate, mappings, output_version, location=None):
 		"""
-			A demonstration function on how to read the json files to convert into or out of the numerical format
+			A demonstration function on how to read the json files to convert into or out of the numerical block_format
 			You should implement something along these lines into you own code if you want to read them.
 
 			:param level: a view into the level to access additional data

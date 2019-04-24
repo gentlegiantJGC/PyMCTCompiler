@@ -9,7 +9,7 @@ if __name__ == '__main__':
 	for platform_name in block_mappings.platforms:
 		for version_number in block_mappings.version_numbers(platform_name):
 			version = block_mappings.get(platform_name, version_number)
-			if not version.format == 'pseudo-numerical':
+			if not version.block_format == 'pseudo-numerical':
 				print(f'skipping {platform_name} {version_number}. Not pseudo-numerical format')
 				continue
 			input_version = version.get()
