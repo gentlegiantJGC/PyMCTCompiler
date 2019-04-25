@@ -1,5 +1,5 @@
 {
-    "format": "numerical",
+    "block_format": "numerical",
     "platform": "java",
     "version": [
         1,

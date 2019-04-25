@@ -1,12 +1,9 @@
 {
+    "nbt_identifier": "minecraft:banner",
     "nbt": {
         "": {
             "type": "compound",
             "val": {
-                "id": {
-                    "type": "string",
-                    "val": "minecraft:banner"
-                },
                 "x": {
                     "type": "int",
                     "val": 0

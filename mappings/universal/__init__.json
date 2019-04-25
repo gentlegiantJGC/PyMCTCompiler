@@ -1,5 +1,5 @@
 {
-    "format": "blockstate",
+    "block_format": "blockstate",
     "platform": "universal",
     "version": [
         1,

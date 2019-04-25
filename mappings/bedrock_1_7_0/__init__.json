@@ -1,5 +1,5 @@
 {
-    "format": "pseudo-numerical",
+    "block_format": "pseudo-numerical",
     "platform": "bedrock",
     "version": [
         1,

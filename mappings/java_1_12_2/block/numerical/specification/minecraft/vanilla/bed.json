@@ -22,6 +22,7 @@
     "defaults": {
         "block_data": "0"
     },
+    "nbt_identifier": "minecraft:bed",
     "nbt": {
         "": {
             "type": "compound",

@@ -227,9 +227,12 @@ def check_specification_format(data: dict):
 		for key, val in data['nbt'].items():
 			assert isinstance(key, str), 'All keys in the outer nbt type must be strings'
 			_check_nbt_specification(val)
+		assert 'nbt_identifier' in data and isinstance(data['nbt_identifier'], str), 'if "nbt" is defined then "nbt_identifier" must be defined and be a string'
+	else:
+		assert 'nbt_identifier' not in data, '"nbt_identifier" should only be defined if "nbt" is defined'
 
 	for key in data.keys():
-		if key not in ('properties', 'defaults', 'nbt'):
+		if key not in ('properties', 'defaults', 'nbt', "nbt_identifier"):
 			log_to_file(f'Extra key "{key}" found')
 
 

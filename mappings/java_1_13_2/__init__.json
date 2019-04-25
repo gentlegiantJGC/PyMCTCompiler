@@ -1,5 +1,5 @@
 {
-    "format": "blockstate",
+    "block_format": "blockstate",
     "platform": "java",
     "version": [
         1,

@@ -1,12 +1,9 @@
 {
+    "nbt_identifier": "minecraft:dispenser",
     "nbt": {
         "": {
             "type": "compound",
             "val": {
-                "id": {
-                    "type": "string",
-                    "val": "minecraft:dispenser"
-                },
                 "x": {
                     "type": "int",
                     "val": 0
