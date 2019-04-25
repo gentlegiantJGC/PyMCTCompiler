@@ -20,7 +20,7 @@ if __name__ == '__main__':
 						keys, values = zip(*properties.items())
 					for spec_ in itertools.product(*values):
 						spec = dict(zip(keys, spec_))
-						input_block = Block(namespace_str, block_name, spec)
+						input_block = Block(None, namespace_str, block_name, spec)
 						try:
 							output, extra_output, extra_needed = input_version.to_universal(None, input_block)
 						except:
