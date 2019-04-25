@@ -246,14 +246,11 @@ def _nbt_mapping_from_hex(nbt_bin: bytes):
 def auto_id(entity_id: str, universal_blocks: List[str]):
 	return {
 		"specification": {
+			"nbt_identifier": entity_id,
 			"nbt": {
 				"": {
 					"type": "compound",
 					"val": {
-						"id": {
-							"type": "string",
-							"val": entity_id
-						},
 						"x": {
 							"type": "int",
 							"val": 0
@@ -274,29 +271,7 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 			"map_input_nbt": {
 				"": {
 					"type": "compound",
-					"keys": {
-						"id": {
-							"type": "string",
-							"functions": {
-								"new_nbt": [
-									{
-										"key": "id",
-										"type": "string",
-										"value": f"universal_{entity_id}"
-									}
-								]
-							},
-							"self_default": {
-								"new_nbt": [
-									{
-										"key": "id",
-										"type": "string",
-										"value": f"universal_{entity_id}"
-									}
-								]
-							}
-						}
-					}
+					"keys": {}
 				}
 			}
 		},
@@ -305,29 +280,7 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 				"map_input_nbt": {
 					"": {
 						"type": "compound",
-						"keys": {
-							"id": {
-								"type": "string",
-								"functions": {
-									"new_nbt": [
-										{
-											"key": "id",
-											"type": "string",
-											"value": entity_id
-										}
-									]
-								},
-								"self_default": {
-									"new_nbt": [
-										{
-											"key": "id",
-											"type": "string",
-											"value": entity_id
-										}
-									]
-								}
-							}
-						}
+						"keys": {}
 					}
 				}
 			} for universal_block in universal_blocks
