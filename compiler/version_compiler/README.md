@@ -35,4 +35,4 @@ This is a JSON file that maps from block name for that namespace to the primitiv
 
 group_name is a way to seperate blocks under the same namespace which can be used for example with chemistry blocks in the Bedrock edition.
 
-For all versions with the numerical format the file `__numerical_map__.json` is needed which converts the numerical id to a string id which is used to abstract away the numerical id. See the java_1_12_2 version for an example.
+For all versions with the numerical format the file `__numerical_block_map__.json` is needed which converts the numerical id to a string id which is used to abstract away the numerical id. See the java_1_12_2 version for an example.

@@ -111,7 +111,7 @@ class Version:
 				for block_format in ['blockstate', 'numerical']:
 					self._subversions[block_format] = SubVersion('{}/{}'.format(version_path, block_format), version_container)
 				if self.format == 'numerical':
-					with open('{}/__numerical_map__.json'.format(version_path)) as f:
+					with open('{}/__numerical_block_map__.json'.format(version_path)) as f:
 						self._numerical_map = json.load(f)
 					self._numerical_map_inverse = {}
 					for block_id, block_string in self._numerical_map.items():

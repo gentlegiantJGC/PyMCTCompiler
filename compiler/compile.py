@@ -154,7 +154,7 @@ def main():
 			if 'block_format' in init and init['block_format'] in ['numerical', 'pseudo-numerical', 'blockstate']:
 				if init['block_format'] == 'numerical':
 					# copy over the numerical map required for old numerical formats
-					copy_file(f'{version_name}/__numerical_map__.json')
+					copy_file(f'{version_name}/__numerical_block_map__.json')
 
 				# run the relevant compiler
 				assert hasattr(getattr(version_compiler, version_name), 'compiler') and getattr(version_compiler, version_name).compiler is not None
