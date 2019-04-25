@@ -6,8 +6,8 @@ class Block:
 	"""
 	A minified version of the block class from the Amulet Editor.
 	"""
-	def __init__(self, namespace: str, base_name: str, properties: Dict[str, Union[str, bool, int]]):
-		self._blockstate = None
+	def __init__(self, blockstate: str = None, namespace: str = None, base_name: str = None, properties: Dict[str, Union[str, bool, int]] = None):
+		self._blockstate = blockstate
 		self._namespace = namespace
 		self._base_name = base_name
 
