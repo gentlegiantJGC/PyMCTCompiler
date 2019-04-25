@@ -1,5 +1,6 @@
 # a very very minimalistic NBT data storage. Write/use a proper NBT library
 
+
 class TAG_Value:
 	def __init__(self, val):
 		self._val = val
@@ -50,6 +51,12 @@ class TAG_Compound(TAG_Value):
 			val = {}
 		TAG_Value.__init__(self, val)
 
+	def __contains__(self, item):
+		return item in self.val
+
+	def __getitem__(self, item):
+		return self.val[item]
+
 
 class TAG_List(TAG_Value):
 	def __init__(self, val=None):
@@ -79,11 +86,11 @@ class TAG_Long_Array(TAG_Value):
 		TAG_Value.__init__(self, val)
 
 
-class NBT(TAG_Value):
+class NBT(TAG_Compound):
 	def __init__(self, val=None):
 		if val is None:
 			val = {}
-		TAG_Value.__init__(self, val)
+		TAG_Compound.__init__(self, val)
 
 
 def from_spec(spec):
