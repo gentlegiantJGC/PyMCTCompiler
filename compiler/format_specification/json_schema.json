@@ -1,0 +1,139 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://raw.githubusercontent.com/gentlegiantJGC/Minecraft-Universal-Conversion-Mappings/master/compiler/format_specification/json_schema.json",
+	"definitions": {
+		"specification": {
+			"type": "object",
+			"properties": {
+				"properties": {
+					"type": "object",
+					"additionalProperties": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					}
+				},
+				"defaults": {
+					"type": "object",
+					"additionalProperties": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"mapping_functions": {
+			"type": "object",
+			"properties": {
+				"new_block": {
+					"type": "string"
+				},
+				"new_properties": {
+					"type": "object",
+					"additionalProperties": {
+						"type": "string"
+					}
+				},
+				"map_properties": {
+					"type": "object",
+					"additionalProperties": {
+						"type": "object",
+						"additionalProperties": {
+							"$ref": "#/definitions/mapping_functions"
+						}
+					}
+				},
+				"carry_properties": {
+					"type": "object",
+					"additionalProperties": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					}
+				},
+				"new_nbt": {},
+				"multiblock": {
+					"anyOf": [
+						{
+							"type": "object",
+							"properties": {
+								"coords": {
+									"type": "array",
+									"items": {
+										"type": "integer"
+									},
+									"minLength": 3,
+									"maxLength": 3
+								}
+							},
+							"required": ["coords"],
+							"$ref": "#/definitions/mapping_functions"
+						},
+						{
+							"type": "array",
+							"items": [
+								{
+									"type": "object",
+									"properties": {
+										"coords": {
+											"type": "array",
+											"items": {
+												"type": "integer"
+											},
+											"minLength": 3,
+											"maxLength": 3
+										}
+									},
+									"required": ["coords"],
+									"$ref": "#/definitions/mapping_functions"
+								}
+							]
+						}
+					]
+				},
+				"map_block_name": {
+					"type": "object",
+					"additionalProperties": {
+						"$ref": "#/definitions/mapping_functions"
+					}
+				},
+				"map_input_nbt": {},
+				"carry_nbt": {},
+				"map_nbt": {}
+			},
+			"additionalProperties": false
+		}
+	},
+	"type": "object",
+	"properties": {
+		"specification": {
+			"$ref": "#/definitions/specification"
+		},
+		"to_universal": {
+			"$ref": "#/definitions/mapping_functions"
+		},
+		"from_universal": {
+			"additionalProperties": {
+				"$ref": "#/definitions/mapping_functions"
+			}
+		},
+		"blockstate_specification": {
+			"$ref": "#/definitions/specification"
+		},
+		"blockstate_to_universal": {
+			"$ref": "#/definitions/mapping_functions"
+		},
+		"blockstate_from_universal": {
+			"additionalProperties": {
+				"$ref": "#/definitions/mapping_functions"
+			}
+		}
+	},
+	"required": [
+		"to_universal",
+		"from_universal",
+		"blockstate_to_universal",
+		"blockstate_from_universal"
+	]
+}
