@@ -1,5 +1,7 @@
 {
     "block_format": "pseudo-numerical",
+    "block_entity_format": "str-id",
+    "entity_format": null,
     "platform": "bedrock",
     "version": [
         1,
