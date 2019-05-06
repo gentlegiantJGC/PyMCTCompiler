@@ -114,6 +114,7 @@
 			"$ref": "#/definitions/mapping_functions"
 		},
 		"from_universal": {
+			"type": "object",
 			"additionalProperties": {
 				"$ref": "#/definitions/mapping_functions"
 			}
@@ -125,6 +126,7 @@
 			"$ref": "#/definitions/mapping_functions"
 		},
 		"blockstate_from_universal": {
+			"type": "object",
 			"additionalProperties": {
 				"$ref": "#/definitions/mapping_functions"
 			}
