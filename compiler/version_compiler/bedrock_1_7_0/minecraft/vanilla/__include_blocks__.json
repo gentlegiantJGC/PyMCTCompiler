@@ -97,7 +97,7 @@
 	"invisiblebedrock": "invisiblebedrock",
 	"trapdoor": "trapdoor_bedrock",
 	"monster_egg": null,
-	"stonebrick": null,
+	"stonebrick": "stonebrick",
 	"brown_mushroom_block": null,
 	"red_mushroom_block": null,
 	"iron_bars": "iron_bars",
