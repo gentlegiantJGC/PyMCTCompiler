@@ -1,0 +1,22 @@
+{
+    "new_block": "minecraft:stonebrick",
+    "map_properties": {
+        "variant": {
+            "normal": {
+                "new_properties": {
+                    "block_data": "0"
+                }
+            },
+            "mossy": {
+                "new_properties": {
+                    "block_data": "1"
+                }
+            },
+            "cracked": {
+                "new_properties": {
+                    "block_data": "2"
+                }
+            }
+        }
+    }
+}

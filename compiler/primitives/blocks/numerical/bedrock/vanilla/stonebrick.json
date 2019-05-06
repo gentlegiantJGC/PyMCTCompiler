@@ -1,0 +1,117 @@
+{
+	"to_universal": {
+		"map_properties": {
+			"block_data": {
+				"0": {
+					"new_block": "universal_minecraft:stone_bricks",
+					"new_properties": {
+						"variant": "normal"
+					}
+				},
+				"1": {
+					"new_block": "universal_minecraft:stone_bricks",
+					"new_properties": {
+						"variant": "mossy"
+					}
+				},
+				"2": {
+					"new_block": "universal_minecraft:stone_bricks",
+					"new_properties": {
+						"variant": "cracked"
+					}
+				},
+				"3": {
+					"new_block": "universal_minecraft:chiseled_stone_bricks"
+				}
+			}
+		}
+	},
+	"from_universal": {
+		"universal_minecraft:stone_bricks": {
+			"new_block": "minecraft:stonebrick",
+			"map_properties": {
+				"variant": {
+					"normal": {
+						"new_properties": {
+							"block_data": "0"
+						}
+					},
+					"mossy": {
+						"new_properties": {
+							"block_data": "1"
+						}
+					},
+					"cracked": {
+						"new_properties": {
+							"block_data": "2"
+						}
+					}
+				}
+			}
+		},
+		"universal_minecraft:chiseled_stone_bricks": {
+			"new_block": "minecraft:stonebrick",
+			"new_properties": {
+				"block_data": "3"
+			}
+		}
+	},
+	"blockstate_specification": {
+		"properties": {
+			"variant": [
+				"normal",
+				"cracked",
+				"mossy",
+				"chiseled"
+			]
+		},
+		"defaults": {
+			"variant": "normal"
+		}
+	},
+	"blockstate_to_universal": {
+		"map_properties": {
+			"variant": {
+				"normal": {
+					"new_block": "universal_minecraft:stone_bricks",
+					"new_properties": {
+						"variant": "normal"
+					}
+				},
+				"cracked": {
+					"new_block": "universal_minecraft:stone_bricks",
+					"new_properties": {
+						"variant": "cracked"
+					}
+				},
+				"mossy": {
+					"new_block": "universal_minecraft:stone_bricks",
+					"new_properties": {
+						"variant": "mossy"
+					}
+				},
+				"chiseled": {
+					"new_block": "universal_minecraft:chiseled_stone_bricks"
+				}
+			}
+		}
+	},
+	"blockstate_from_universal": {
+		"universal_minecraft:stone_bricks": {
+			"new_block": "minecraft:stonebrick",
+			"carry_properties": {
+				"variant": [
+					"normal",
+					"cracked",
+					"mossy"
+				]
+			}
+		},
+		"universal_minecraft:chiseled_stone_bricks": {
+			"new_block": "minecraft:stonebrick",
+			"new_properties": {
+				"variant": "chiseled"
+			}
+		}
+	}
+}
