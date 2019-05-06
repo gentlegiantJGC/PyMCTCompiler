@@ -1,5 +1,6 @@
 {
-    "properties": {
+    "new_block": "minecraft:monster_egg",
+    "carry_properties": {
         "material": [
             "cobblestone",
             "stone",
@@ -8,8 +9,5 @@
             "mossy_stone_bricks",
             "chiseled_stone_bricks"
         ]
-    },
-    "defaults": {
-        "material": "stone"
     }
 }

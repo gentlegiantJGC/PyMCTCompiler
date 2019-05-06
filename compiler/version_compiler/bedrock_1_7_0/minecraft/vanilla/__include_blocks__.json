@@ -96,7 +96,7 @@
 	"powered_repeater": "powered_repeater",
 	"invisiblebedrock": "invisiblebedrock",
 	"trapdoor": "trapdoor_bedrock",
-	"monster_egg": null,
+	"monster_egg": "monster_egg",
 	"stonebrick": "stonebrick",
 	"brown_mushroom_block": null,
 	"red_mushroom_block": null,

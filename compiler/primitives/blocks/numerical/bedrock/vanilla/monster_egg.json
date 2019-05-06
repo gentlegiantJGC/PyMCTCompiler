@@ -1,0 +1,126 @@
+{
+	"to_universal": {
+		"map_properties": {
+			"block_data": {
+				"0": {
+					"new_block": "universal_minecraft:infested_block",
+					"new_properties": {
+						"material": "stone"
+					}
+				},
+				"1": {
+					"new_block": "universal_minecraft:infested_block",
+					"new_properties": {
+						"material": "cobblestone"
+					}
+				},
+				"2": {
+					"new_block": "universal_minecraft:infested_block",
+					"new_properties": {
+						"material": "stone_bricks"
+					}
+				},
+				"3": {
+					"new_block": "universal_minecraft:infested_block",
+					"new_properties": {
+						"material": "mossy_stone_bricks"
+					}
+				},
+				"4": {
+					"new_block": "universal_minecraft:infested_block",
+					"new_properties": {
+						"material": "cracked_stone_bricks"
+					}
+				},
+				"5": {
+					"new_block": "universal_minecraft:infested_block",
+					"new_properties": {
+						"material": "chiseled_stone_bricks"
+					}
+				}
+			}
+		}
+	},
+	"from_universal": {
+		"universal_minecraft:infested_block": {
+			"new_block": "minecraft:monster_egg",
+			"map_properties": {
+				"material": {
+					"stone": {
+						"new_properties": {
+							"block_data": "0"
+						}
+					},
+					"cobblestone": {
+						"new_properties": {
+							"block_data": "1"
+						}
+					},
+					"stone_bricks": {
+						"new_properties": {
+							"block_data": "2"
+						}
+					},
+					"mossy_stone_bricks": {
+						"new_properties": {
+							"block_data": "3"
+						}
+					},
+					"cracked_stone_bricks": {
+						"new_properties": {
+							"block_data": "4"
+						}
+					},
+					"chiseled_stone_bricks": {
+						"new_properties": {
+							"block_data": "5"
+						}
+					}
+				}
+			}
+		}
+	},
+	"blockstate_specification": {
+		"properties": {
+			"material": [
+	            "cobblestone",
+	            "stone",
+	            "stone_bricks",
+	            "cracked_stone_bricks",
+	            "mossy_stone_bricks",
+	            "chiseled_stone_bricks"
+	        ]
+		},
+		"defaults": {
+			"material": "stone"
+		}
+	},
+	"blockstate_to_universal": {
+		"new_block": "universal_minecraft:infested_block",
+		"carry_properties": {
+			"material": [
+	            "cobblestone",
+	            "stone",
+	            "stone_bricks",
+	            "cracked_stone_bricks",
+	            "mossy_stone_bricks",
+	            "chiseled_stone_bricks"
+	        ]
+		}
+	},
+	"blockstate_from_universal": {
+		"universal_minecraft:infested_block": {
+			"new_block": "minecraft:monster_egg",
+			"carry_properties": {
+				"material": [
+		            "cobblestone",
+		            "stone",
+		            "stone_bricks",
+		            "cracked_stone_bricks",
+		            "mossy_stone_bricks",
+		            "chiseled_stone_bricks"
+		        ]
+			}
+		}
+	}
+}
