@@ -27,8 +27,8 @@ def block_from_disk(version: Version, block: Union[Tuple[int, int], NBT, str]) -
 	if version.block_format == 'numerical':
 		assert isinstance(block, tuple) and len(block) == 2 and all(isinstance(a, int) for a in block), 'Block must be an tuple of two integers for the numerical format'
 		block, data = block
-		if str(block) in version.block_numerical_map:
-			namespace, base_name = version.block_numerical_map[str(block)].split(':', 1)
+		if str(block) in version.numerical_block_map:
+			namespace, base_name = version.numerical_block_map[str(block)].split(':', 1)
 			return Block(
 				None,
 				namespace,
@@ -88,11 +88,11 @@ def block_to_disk(version: Version, block: Block) -> Union[Tuple[int, int], NBT,
 			else:
 				raise NotImplemented
 				# TODO: Ask for user input
-		elif f'{block.namespace}:{block.base_name}' in version.block_numerical_map_inverse and \
+		elif f'{block.namespace}:{block.base_name}' in version.numerical_block_map_inverse and \
 			'block_data' in block.properties and \
 			block.properties['block_data'].isnumeric():
 			return int(
-				version.block_numerical_map_inverse[f'{block.namespace}:{block.base_name}']
+				version.numerical_block_map_inverse[f'{block.namespace}:{block.base_name}']
 			), \
 			int(
 				block.properties['block_data']

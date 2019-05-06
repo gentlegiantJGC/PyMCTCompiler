@@ -1,6 +1,6 @@
 import json
 import os
-from typing import Union, Tuple, Dict, Generator, List
+from typing import Union, Tuple, Generator, List, Dict
 from .helpers.objects import Block, BlockEntity, Entity
 import copy
 
@@ -12,29 +12,23 @@ Structure:
 VersionContainer
 	Version : bedrock_1_7_0
 		SubVersion : numerical
-			Namespace : minecraft
-			Namespace : other_namespace
+			minecraft, other_namespace
 		SubVersion : blockstate
-			Namespace : minecraft
-			Namespace : other_namespace
+			minecraft, other_namespace
 			
 	Version : java_1_12_0
 		SubVersion : numerical
-			Namespace : minecraft
-			Namespace : other_namespace
+			minecraft, other_namespace
 		SubVersion : blockstate
-			Namespace : minecraft
-			Namespace : other_namespace
+			minecraft, other_namespace
 			
 	Version : java_1_13_0
 		SubVersion : blockstate
-			Namespace : minecraft
-			Namespace : other_namespace
+			minecraft, other_namespace
 			
 	Version : universal
 		SubVersion : blockstate
-			Namespace : minecraft
-			Namespace : other_namespace
+			minecraft, other_namespace
 """
 
 
@@ -134,19 +128,19 @@ class Version:
 			self._block_format = init_file['block_format']
 
 			self._subversions = {}
-			self._numerical_map = None
-			self._numerical_map_inverse = None
+			self.numerical_block_map: Dict[str, str] = None
+			self.numerical_block_map_inverse: Dict[str, str] = None
 
 			if self.block_format in ['numerical', 'pseudo-numerical']:
 				for block_format in ['blockstate', 'numerical']:
 					self._subversions[block_format] = SubVersion(f'{version_path}/block/{block_format}', version_container)
 				if self.block_format == 'numerical':
-					with open(f'{version_path}/__numerical_map__.json') as f:
-						self._numerical_map = json.load(f)
-					self._numerical_map_inverse = {}
-					for block_id, block_string in self._numerical_map.items():
+					with open(f'{version_path}/__numerical_block_map__.json') as f:
+						self.numerical_block_map = json.load(f)
+					self.numerical_block_map_inverse = {}
+					for block_id, block_string in self.numerical_block_map.items():
 						assert isinstance(block_id, str) and isinstance(block_string, str) and block_id.isnumeric()
-						self._numerical_map_inverse[block_string] = block_id
+						self.numerical_block_map_inverse[block_string] = block_id
 
 			elif self.block_format == 'blockstate':
 				self._subversions['blockstate'] = SubVersion(f'{version_path}/block/blockstate', version_container)
@@ -179,8 +173,8 @@ class Version:
 		if isinstance(object_input, Block):
 			if self.block_format == 'numerical' and not force_blockstate:
 				assert object_input.base_name.isnumeric(), 'For the numerical block_format base_name must be an int converted to a string'
-				namespace, base_name = self._numerical_map[object_input.base_name].split(':')
-				object_input = Block(namespace, base_name, object_input.properties)
+				namespace, base_name = self.numerical_block_map[object_input.base_name].split(':')
+				object_input = Block(None, namespace, base_name, object_input.properties)
 		elif isinstance(object_input, Entity):
 			raise NotImplemented
 		else:
@@ -193,8 +187,8 @@ class Version:
 		output, extra_output, extra_needed = self.get(force_blockstate).from_universal(level, object_input, location)
 		if isinstance(output, Block):
 			if self.block_format == 'numerical':
-				namespace, base_name = '', self._numerical_map_inverse[output.base_name]
-				output = Block(namespace, base_name, object_input.properties)
+				namespace, base_name = '', self.numerical_block_map_inverse[output.base_name]
+				output = Block(None, namespace, base_name, object_input.properties)
 		elif isinstance(object_input, Entity):
 			raise NotImplemented
 		else:
@@ -215,6 +209,14 @@ class SubVersion:
 				'to_universal': {},
 				'from_universal': {},
 				'specification': {}
+			}
+		}
+		self._cache = {  # only blocks without a block entity can be cached
+			'to_universal': {
+
+			},
+			'from_universal': {
+
 			}
 		}
 		assert os.path.isdir(sub_version_path), f'{sub_version_path} is not a valid path'
@@ -258,11 +260,10 @@ class SubVersion:
 			mode = 'block'
 		elif isinstance(object_input, Entity):
 			mode = 'entity'
-			raise NotImplemented
 		else:
-			raise Exception
+			raise AssertionError('object_input must be a Block or an Entity')
 		try:
-			return self.convert(
+			output, extra_output, extra_needed, cacheable = self.convert(
 				level,
 				object_input,
 				self.get_specification(mode, object_input.namespace, object_input.base_name),
@@ -270,12 +271,19 @@ class SubVersion:
 				self._version_container.get('universal', (1, 0, 0)).get(),
 				location
 			)
-
+			return output, extra_output, extra_needed
 		except Exception as e:
 			info(f'Failed converting blockstate to universal\n{e}')
 			return object_input, None, False
 
 	def from_universal(self, level, object_input: Union[Block, Entity], location: Tuple[int, int, int] = None) -> Tuple[Union[Block, Entity], Union[BlockEntity, None], bool]:
+		"""
+
+		:param level:
+		:param object_input:
+		:param location:
+		:return:
+		"""
 		if isinstance(object_input, Block):
 			mode = 'block'
 		elif isinstance(object_input, Entity):
@@ -283,8 +291,7 @@ class SubVersion:
 		else:
 			raise Exception
 		try:
-
-			return self.convert(
+			output, extra_output, extra_needed, cacheable = self.convert(
 				level,
 				object_input,
 				self._version_container.get('universal', (1, 0, 0)).get().get_specification(mode, object_input.namespace, object_input.base_name),
@@ -292,22 +299,28 @@ class SubVersion:
 				self,
 				location
 			)
+			return output, extra_output, extra_needed
 		except Exception as e:
 			info(f'Failed converting blockstate from universal\n{e}')
 			return object_input, None, False
 
-	def convert(self, level, object_input: Union[Block, Entity], input_spec: dict, mappings: dict, output_version: 'SubVersion', location: Tuple[int, int, int] = None) -> Tuple[Union[Block, Entity], Union[BlockEntity, None], bool]:
+	def convert(self, level, object_input: Union[Block, Entity], input_spec: dict, mappings: dict, output_version: 'SubVersion', location: Tuple[int, int, int] = None) -> Tuple[Union[Block, Entity], Union[BlockEntity, None], bool, bool]:
 		"""
-			A demonstration function on how to read the json files to convert into or out of the numerical format
+			A demonstration function on how to read the json files to convert into or out of the numerical block_format
 			You should implement something along these lines into you own code if you want to read them.
 
 			:param level: a view into the level to access additional data
 			:param object_input: the Block or Entity object to be converted
-			:param input_spec: the specification for the input block from the input format
-			:param mappings: the mapping file for that block
+			:param input_spec: the specification for the object_input from the input block_format
+			:param mappings: the mapping file for the input_object
 			:param output_version: A way for the function to look at the specification being converted to. (used to load default properties)
-			:param location: (x, y, z) only used if data beyond the blockstate is needed
-			:return: The converted blockstate
+			:param location: (x, y, z) only used for Blocks if data beyond the object_input is needed
+			:return: output, extra_output, extra_needed, cacheable
+				extra_needed: a bool to specify if more data is needed beyond the object_input
+				cacheable: a bool to specify if the result can be cached to reduce future processing
+				Block, None, bool, bool
+				Block, BlockEntity, bool, bool
+				Entity, None, bool, bool
 		"""
 
 		extra_input = None
@@ -369,7 +382,7 @@ class SubVersion:
 			for key, val in new['properties'].items():
 				properties[key] = val
 			namespace, base_name = block_output['block_name'].split(':', 1)
-			output = Block(namespace, base_name, properties)
+			output = Block(None, namespace, base_name, properties)
 			extra_output = None
 			if extra_input is not None:
 				assert isinstance(nbt_output, dict)
@@ -382,7 +395,7 @@ class SubVersion:
 			raise NotImplemented
 		else:
 			raise Exception
-		return output, extra_output, extra_needed
+		return output, extra_output, extra_needed, cacheable
 
 	def _convert(self, level, block_input: Union[Block, None], nbt_input: Union[Entity, BlockEntity], mappings: dict, output_version: 'SubVersion', location: Tuple[int, int, int] = None) -> Tuple[Union[dict, None], Union[dict, None], dict, bool, bool]:
 		block_output = None
@@ -473,10 +486,10 @@ if __name__ == '__main__':
 	info('==== bedrock_1_7_0 ====')
 	for data in range(16):
 		print(
-			block_mappings.to_universal(None, 'bedrock', (1, 7, 0), Block('minecraft', 'log', {'block_data': str(data)}))[0]
+			block_mappings.to_universal(None, 'bedrock', (1, 7, 0), Block(None, 'minecraft', 'log', {'block_data': str(data)}))[0]
 		)
 	info('==== java_1_12_2 ====')
 	for data in range(16):
 		print(
-			block_mappings.to_universal(None, 'java', (1, 12, 2), Block('minecraft', '17', {'block_data': str(data)}))[0]
+			block_mappings.to_universal(None, 'java', (1, 12, 2), Block(None, 'minecraft', '17', {'block_data': str(data)}))[0]
 		)
