@@ -1,3 +1,15 @@
 {
-    "new_block": "minecraft:stone_bricks"
+    "map_properties": {
+        "variant": {
+            "normal": {
+                "new_block": "minecraft:stone_bricks"
+            },
+            "cracked": {
+                "new_block": "minecraft:cracked_stone_bricks"
+            },
+            "mossy": {
+                "new_block": "minecraft:mossy_stone_bricks"
+            }
+        }
+    }
 }

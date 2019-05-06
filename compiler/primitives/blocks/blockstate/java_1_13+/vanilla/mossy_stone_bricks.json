@@ -1,0 +1,19 @@
+{
+	"to_universal": {
+		"new_block": "universal_minecraft:stone_bricks",
+		"new_properties": {
+			"variant": "mossy"
+		}
+	},
+	"from_universal": {
+		"universal_minecraft:stone_bricks": {
+			"map_properties": {
+				"variant": {
+					"mossy": {
+						"new_block": "minecraft:mossy_stone_bricks"
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"to_universal": {
+		"new_block": "universal_minecraft:stone_bricks",
+		"new_properties": {
+			"variant": "normal"
+		}
+	},
+	"from_universal": {
+		"universal_minecraft:stone_bricks": {
+			"map_properties": {
+				"variant": {
+					"normal": {
+						"new_block": "minecraft:stone_bricks"
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"to_universal": {
+		"new_block": "universal_minecraft:stone_bricks",
+		"new_properties": {
+			"variant": "cracked"
+		}
+	},
+	"from_universal": {
+		"universal_minecraft:stone_bricks": {
+			"map_properties": {
+				"variant": {
+					"cracked": {
+						"new_block": "minecraft:cracked_stone_bricks"
+					}
+				}
+			}
+		}
+	}
+}

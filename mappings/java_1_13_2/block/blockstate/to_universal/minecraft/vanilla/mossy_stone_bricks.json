@@ -1,3 +1,6 @@
 {
-    "new_block": "universal_minecraft:mossy_stone_bricks"
+    "new_block": "universal_minecraft:stone_bricks",
+    "new_properties": {
+        "variant": "mossy"
+    }
 }
