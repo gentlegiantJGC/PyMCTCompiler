@@ -1,7 +1,9 @@
 {
     "block_format": "pseudo-numerical",
     "block_entity_format": "str-id",
+    "block_entity_coord_format": "xyz-int",
     "entity_format": null,
+    "entity_coord_format": "Pos-list-float",
     "platform": "bedrock",
     "version": [
         1,
