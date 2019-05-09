@@ -4,6 +4,16 @@ from .data_version_handler import SubVersion
 
 
 def convert(level, object_input: Union[Block, Entity], input_spec: dict, mappings: dict, output_version: SubVersion, location: Tuple[int, int, int] = None) -> Tuple[Union[Block, Entity], Union[BlockEntity, None], bool, bool]:
+def get_blockentity(level, location: Tuple[int, int, int]) -> BlockEntity:
+	"""Reach back into the level and pull the block entity from the given location
+	Should return a BlockEntity class or None if there is no BlockEntity at the given location
+	"""
+	if level is not None:
+		return level.tileEntityAt(*location)
+	else:
+		raise Exception('level is None and more data needed from it')
+
+
 	"""
 		A demonstration function on how to read the json files to convert into or out of the numerical block_format
 		You should implement something along these lines into you own code if you want to read them.

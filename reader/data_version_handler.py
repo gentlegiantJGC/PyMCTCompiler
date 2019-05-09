@@ -68,13 +68,6 @@ def files(path: str) -> Generator[str, None, None]:
 			yield file_name
 
 
-def get_nbt(level, location: Tuple[int, int, int]):
-	if level is not None:
-		return level.tileEntityAt(*location)
-	else:
-		raise Exception('level is None and more data needed from it')
-
-
 class VersionContainer:
 	"""
 	Container for the different versions
