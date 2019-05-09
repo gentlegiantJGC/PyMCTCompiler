@@ -65,24 +65,31 @@ def convert(level, object_input: Union[Block, Entity], input_spec: dict, mapping
 	output_name, output_type, new, extra_needed, cacheable = _convert(level, block_input, nbt_input, mappings, location)
 
 	# sort out the outputs from the _convert function
-	if isinstance(block_output, dict):
-		# we should have a Block output
-		# create the block object based on the block_output and new['properties']
-		properties = block_output['properties']
+	extra_output = None
+	if output_type == 'block':
+		# we should have a block output
+		# create the block object based on output_name and new['properties']
+		namespace, base_name = output_name.split(':', 1)
+		spec = output_version.get_specification('block', namespace, base_name)
+		properties = spec.get('defaults', {})
 		for key, val in new['properties'].items():
 			properties[key] = val
-		namespace, base_name = block_output['block_name'].split(':', 1)
 		output = Block(None, namespace, base_name, properties)
-		extra_output = None
-		if extra_input is not None:
-			assert isinstance(nbt_output, dict)
-	# TODO: merge new['nbt'] into nbt_output and convert to a block entity
 
-	elif block_output is None:
-		assert isinstance(nbt_output, dict)
+		if 'nbt' in spec:
+			namespace, base_name = spec['nbt_identifier'].split(':', 1)
+			extra_output = BlockEntity(namespace, base_name, (0, 0, 0), from_spec(spec['nbt']))
+			# not quite sure how to handle coordinates here. I could populate it will location but this is not always given
+			# it makes sense to me to have the wrapper program set the coordinates so none are missed.
+			# TODO: merge new['nbt'] into extra_output
+
+	elif output_type == 'entity':
+		# we should have an entity output
+		# create the entity object based on output_name and new['nbt']
+		namespace, base_name = output_name.split(':', 1)
+		spec = output_version.get_specification('entity', namespace, base_name)
+		output = Entity(namespace, base_name, (0.0, 0.0, 0.0), from_spec(spec['nbt']))
 		# TODO: merge new['nbt'] into nbt_output and convert to an entity
-		output, extra_output = nbt_output, None
-		raise NotImplemented
 	else:
 		raise Exception
 	return output, extra_output, extra_needed, cacheable
@@ -160,8 +167,8 @@ def _convert(level, block_input: Union[Block, None], nbt_input: Union[Entity, Bl
 						cacheable = False
 					if not extra_needed and extra_needed_:
 						extra_needed = True
-					if isinstance(block_output_, str):
-						block_output = block_output_
+					if isinstance(output_name_, str):
+						output_name = output_name_
 						output_type = output_type_
 					for key2, val2 in new_['properties'].items():
 						new['properties'][key2] = val2
