@@ -1,7 +1,7 @@
 from typing import Union, Tuple
 from .objects import Block, BlockEntity, Entity
 from .nbt import NBT, TAG_Compound, TAG_String, TAG_Short
-from ..read import Version
+from ..data_version_handler import Version
 
 """
 block formats

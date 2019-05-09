@@ -1,4 +1,4 @@
-from reader.read import VersionContainer, Block
+from reader.data_version_handler import VersionContainer, Block
 import itertools
 import os
 
