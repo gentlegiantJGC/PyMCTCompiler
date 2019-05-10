@@ -130,11 +130,11 @@ class Version:
 					self._subversions[block_format] = SubVersion(f'{version_path}/block/{block_format}', version_container)
 				if self.block_format == 'numerical':
 					with open(f'{version_path}/__numerical_block_map__.json') as f:
-						self.numerical_block_map = json.load(f)
-					self.numerical_block_map_inverse = {}
-					for block_id, block_string in self.numerical_block_map.items():
+						self.numerical_block_map_inverse = json.load(f)
+					self.numerical_block_map = {}
+					for block_string, block_id in self.numerical_block_map_inverse.items():
 						assert isinstance(block_id, str) and isinstance(block_string, str) and block_id.isnumeric()
-						self.numerical_block_map_inverse[block_string] = block_id
+						self.numerical_block_map[block_id] = block_string
 
 			elif self.block_format == 'blockstate':
 				self._subversions['blockstate'] = SubVersion(f'{version_path}/block/blockstate', version_container)
