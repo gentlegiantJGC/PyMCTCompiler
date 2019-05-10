@@ -14,6 +14,11 @@ def get_blockentity(level, location: Tuple[int, int, int]) -> BlockEntity:
 		raise Exception('level is None and more data needed from it')
 
 
+def get_block_at(level, location: Tuple[int, int, int]) -> Tuple[Union[Block, None], Union[BlockEntity, None]]:
+	"""Should return the Block instance in the input format at location"""
+	return None, None
+
+
 def convert(level, object_input: Union[Block, Entity], input_spec: dict, mappings: dict, output_version: SubVersion, location: Tuple[int, int, int] = None, extra_input: BlockEntity = None) -> Tuple[Union[Block, Entity], Union[BlockEntity, None], bool, bool]:
 	"""
 		A demonstration function on how to read the json files to convert into or out of the numerical block_format
@@ -95,9 +100,8 @@ def convert(level, object_input: Union[Block, Entity], input_spec: dict, mapping
 	return output, extra_output, extra_needed, cacheable
 
 
-def _convert(level, block_input: Union[Block, None], nbt_input: Union[Entity, BlockEntity], mappings: dict, location: Tuple[int, int, int] = None) -> Tuple[Union[str, None], Union[str, None], dict, bool, bool]:
+def _convert(level, block_input: Union[Block, None], nbt_input: Union[Entity, BlockEntity], mappings: dict, location: Tuple[int, int, int] = None, nbt_path: Tuple[Tuple[Union[str, int], str]] = None) -> Tuple[Union[str, None], Union[str, None], dict, bool, bool]:
 	"""
-
 	:param level:
 	:param block_input:
 	:param nbt_input:
@@ -113,7 +117,20 @@ def _convert(level, block_input: Union[Block, None], nbt_input: Union[Entity, Bl
 	"""
 	output_name = None
 	output_type = None
-	new = {'properties': {}, 'nbt': {}}  # There could be multiple 'new_block' functions in the mappings so new properties are put in here and merged at the very end
+	new = {'properties': {}, 'nbt': []}  # There could be multiple 'new_block' functions in the mappings so new properties are put in here and merged at the very end
+	"""
+	new['nbt'] = [
+		(
+			(
+				(path0, type0),
+				(path1, type1),
+				...
+			),
+			value
+		),
+		...
+	]
+	"""
 	extra_needed = False  # used to determine if extra data is required (and thus to do block by block)
 	cacheable = True    # cacheable until proven otherwise
 
@@ -131,11 +148,6 @@ def _convert(level, block_input: Union[Block, None], nbt_input: Union[Entity, Bl
 		for key, val in mappings['new_properties'].items():
 			new['properties'][key] = val
 
-	if 'new_nbt' in mappings:
-		# TODO: rework for the new NBT system
-		for key, val in mappings['new_nbt'].items():
-			new['nbt'][key] = val
-
 	if 'carry_properties' in mappings:
 		assert isinstance(block_input, Block), 'The block input is not a block'
 		for key in mappings['carry_properties']:
@@ -143,18 +155,6 @@ def _convert(level, block_input: Union[Block, None], nbt_input: Union[Entity, Bl
 				val = block_input.properties[key]
 				if str(val) in mappings['carry_properties'][key]:
 					new['properties'][key] = val
-
-	if 'multiblock' in mappings:
-		cacheable = False
-		if location is None:
-			extra_needed = True
-	# TODO: multiblock code
-	# else:
-	# 	if 'multiblock' is a dictionary:
-	# 		get the block at 'location' in the input format
-	# 		call self._convert on this new blockstate
-	# 	elif 'multiblock' is a list:
-	# 		do the above but on every dictionary in the list
 
 	if 'map_properties' in mappings:
 		assert isinstance(block_input, Block), 'The block input is not a block'
@@ -172,12 +172,42 @@ def _convert(level, block_input: Union[Block, None], nbt_input: Union[Entity, Bl
 						output_type = output_type_
 					for key2, val2 in new_['properties'].items():
 						new['properties'][key2] = val2
-					# TODO: carry over nbt
+					new['nbt'] += new_['nbt']
+
+	if 'multiblock' in mappings:
+		cacheable = False
+		if location is None:
+			extra_needed = True
+	# TODO: multiblock code
+	# else:
+	# 	if 'multiblock' is a dictionary:
+	# 		get the block at 'location' in the input format
+	# 		call self._convert on this new blockstate
+	# 	elif 'multiblock' is a list:
+	# 		do the above but on every dictionary in the list
 
 	if 'map_block_name' in mappings:
 		assert isinstance(block_input, Block)
 		pass
 		# TODO: map block name code
+
+	if 'map_input_nbt' in mappings:
+		pass
+
+	if 'new_nbt' in mappings:
+		new_nbts = mappings['new_nbt']
+		if isinstance(new_nbts, dict):
+			new_nbts = [new_nbts]
+
+		for new_nbt in new_nbts:
+			path = nbt_path
+			if path is None:
+				path = ()
+			path = new_nbt.get('path', path) + ((new_nbt['key'], new_nbt['value']), )
+			new['nbt'].append((path, new_nbt['value']))
+
+	if 'carry_nbt' in mappings:
+		pass
 
 	if 'map_nbt' in mappings:
 		cacheable = False
