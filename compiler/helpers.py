@@ -198,7 +198,7 @@ def _merge_map_input_nbt(data_: dict, data: dict, bypass_type=False) -> dict:
 	return data_
 
 
-default_mapping_feature_set = ('new_block', 'new_properties', 'map_properties', 'carry_properties', 'new_nbt', 'multiblock', 'map_block_name', 'map_input_nbt')
+default_mapping_feature_set = ('new_block', 'new_entity', 'new_properties', 'map_properties', 'carry_properties', 'new_nbt', 'multiblock', 'map_block_name', 'map_input_nbt')
 
 
 def check_formatting(data: dict, mode: str):
@@ -286,11 +286,22 @@ def check_mapping_format(data: dict, feature_set: Tuple[str, ...] = default_mapp
 	if 'new_block' in full_feature_set and 'new_block' in data:
 		assert isinstance(data['new_block'], str), '"new_block" must be a string'
 
+	if 'new_entity' in full_feature_set and 'new_entity' in data:
+		assert isinstance(data['new_entity'], str), '"new_entity" must be a string'
+
 	if 'new_properties' in full_feature_set and 'new_properties' in data:
 		assert isinstance(data['new_properties'], dict), '"new_properties" must be a dictionary'
 		for key, val in data['new_properties'].items():
 			assert isinstance(key, str), '"new_properties" keys must be strings'
 			assert isinstance(val, str), '"new_properties" values must be strings'
+
+	if 'carry_properties' in full_feature_set and 'carry_properties' in data:
+		assert isinstance(data['carry_properties'], dict), '"carry_properties" must be a dictionary'
+		for key, val_list in data['carry_properties'].items():
+			assert isinstance(key, str), '"carry_properties" keys are property names which must be strings'
+			assert isinstance(val_list, list), '"carry_properties" values must be a list of strings'
+			for val in val_list:
+				assert isinstance(val, str), '"carry_properties" property values must be strings'
 
 	if 'map_properties' in full_feature_set and 'map_properties' in data:
 		assert isinstance(data['map_properties'], dict), '"map_properties" must be a dictionary'
@@ -301,13 +312,30 @@ def check_mapping_format(data: dict, feature_set: Tuple[str, ...] = default_mapp
 				assert isinstance(val, str), '"map_properties" property values must be strings'
 				check_mapping_format(nest, default_mapping_feature_set, carry_feature_set)
 
-	if 'carry_properties' in full_feature_set and 'carry_properties' in data:
-		assert isinstance(data['carry_properties'], dict), '"carry_properties" must be a dictionary'
-		for key, val_list in data['carry_properties'].items():
-			assert isinstance(key, str), '"carry_properties" keys are property names which must be strings'
-			assert isinstance(val_list, list), '"carry_properties" values must be a list of strings'
-			for val in val_list:
-				assert isinstance(val, str), '"carry_properties" property values must be strings'
+	if 'multiblock' in full_feature_set and 'multiblock' in data:
+		multiblock = data['multiblock']
+		if isinstance(multiblock, dict):
+			multiblock = [multiblock]
+		assert isinstance(multiblock, list), 'multiblock must be a dictionary or a list of dictionaries'
+		for mapping in multiblock:
+			assert isinstance(mapping, dict), 'multiblock must be a dictionary or a list of dictionaries'
+			check_mapping_format(mapping, default_mapping_feature_set + ('coords',))
+
+	if 'coords' in full_feature_set:
+		assert 'coords' in data, 'coords must be present in multiblock'
+		assert isinstance(data['coords'], list) and len(data['coords']) == 3 and all(isinstance(coord, int) for coord in data['coords']), f'"coords" must be a list of ints of length 3. Got {data["coords"]} instead'
+
+	if 'map_block_name' in full_feature_set and 'map_block_name' in data:
+		assert isinstance(data['map_block_name'], dict), f'"map_block_name" must be a dictionary. Got {data["map_block_name"]} instead'
+		for key, val in data['map_block_name'].items():
+			assert isinstance(key, str), f'Key must be a string. Got {key}'
+			check_mapping_format(val, default_mapping_feature_set, carry_feature_set)
+
+	if 'map_input_nbt' in full_feature_set and 'map_input_nbt' in data:
+		assert isinstance(data['map_input_nbt'], dict), 'map_input_nbt must be a dictionary'
+		for key, val in data['map_input_nbt'].items():
+			assert isinstance(key, str), 'All keys in the outer nbt type must be strings'
+			check_map_input_nbt_format(val)
 
 	if 'new_nbt' in full_feature_set and 'new_nbt' in data:
 		new_nbts = data['new_nbt']
@@ -354,31 +382,6 @@ def check_mapping_format(data: dict, feature_set: Tuple[str, ...] = default_mapp
 			elif new_nbt['type'] in ('byte_array', 'int_array', 'long_array'):
 				assert isinstance(new_nbt['value'], list), f'new_nbt "value" must be a list of ints for type {new_nbt["type"]}'
 				assert all(isinstance(array_val, int) for array_val in new_nbt['value']), f'new_nbt "value" must be a list of ints for type {new_nbt["type"]}'
-
-	if 'multiblock' in full_feature_set and 'multiblock' in data:
-		multiblock = data['multiblock']
-		if isinstance(multiblock, dict):
-			multiblock = [multiblock]
-		assert isinstance(multiblock, list), 'multiblock must be a dictionary or a list of dictionaries'
-		for mapping in multiblock:
-			assert isinstance(mapping, dict), 'multiblock must be a dictionary or a list of dictionaries'
-			check_mapping_format(mapping, default_mapping_feature_set + ('coords',))
-
-	if 'coords' in full_feature_set:
-		assert 'coords' in data, 'coords must be present in multiblock'
-		assert isinstance(data['coords'], list) and len(data['coords']) == 3 and all(isinstance(coord, int) for coord in data['coords']), f'"coords" must be a list of ints of length 3. Got {data["coords"]} instead'
-
-	if 'map_block_name' in full_feature_set and 'map_block_name' in data:
-		assert isinstance(data['map_block_name'], dict), f'"map_block_name" must be a dictionary. Got {data["map_block_name"]} instead'
-		for key, val in data['map_block_name'].items():
-			assert isinstance(key, str), f'Key must be a string. Got {key}'
-			check_mapping_format(val, default_mapping_feature_set, carry_feature_set)
-
-	if 'map_input_nbt' in full_feature_set and 'map_input_nbt' in data:
-		assert isinstance(data['map_input_nbt'], dict), 'map_input_nbt must be a dictionary'
-		for key, val in data['map_input_nbt'].items():
-			assert isinstance(key, str), 'All keys in the outer nbt type must be strings'
-			check_map_input_nbt_format(val)
 
 	if 'carry_nbt' in full_feature_set and 'carry_nbt' in data:
 		assert isinstance(data['carry_nbt'], dict), 'carry_nbt must be a dictionary'
