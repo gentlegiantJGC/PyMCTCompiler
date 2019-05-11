@@ -210,10 +210,21 @@ def _convert(level, block_input: Union[Block, None], nbt_input: Union[Entity, Bl
 
 	if 'map_nbt' in mappings:
 		cacheable = False
-		if location is None:
-			extra_needed = True
-		else:
-			pass
-		# TODO: map nbt code
+		if nbt_path is not None:
+			if 'cases' in mappings['map_nbt']:
+				nbt = nbt_input
+				for path, nbt_type in nbt_path:
+					if isinstance(path, int) and len(nbt > path):
+						nbt = nbt[path]
+					elif isinstance(path, str) and path in nbt:
+						nbt = nbt[path]
+					else:
+						output_name, output_type, new, extra_needed, cacheable = _convert(level, block_input, nbt_input, mappings['map_nbt'].get('default', {}), location, nbt_path, (output_name, output_type, new, extra_needed, cacheable))
+						break
+				val = str(nbt.value)
+				if val in mappings['map_nbt']['cases']:
+					output_name, output_type, new, extra_needed, cacheable = _convert(level, block_input, nbt_input, mappings['map_nbt']['cases'][val], location, nbt_path, (output_name, output_type, new, extra_needed, cacheable))
+			else:
+				output_name, output_type, new, extra_needed, cacheable = _convert(level, block_input, nbt_input, mappings['map_nbt'].get('default', {}), location, nbt_path, (output_name, output_type, new, extra_needed, cacheable))
 
 	return output_name, output_type, new, extra_needed, cacheable
