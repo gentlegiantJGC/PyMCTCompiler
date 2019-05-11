@@ -2,6 +2,7 @@ from typing import Union, Tuple
 from .helpers.objects import Block, BlockEntity, Entity
 from .helpers.nbt import from_spec
 from .data_version_handler import SubVersion
+from .helpers.nbt import NBT
 
 
 def get_blockentity(level, location: Tuple[int, int, int]) -> BlockEntity:
@@ -86,6 +87,8 @@ def convert(level, object_input: Union[Block, Entity], input_spec: dict, mapping
 			extra_output = BlockEntity(namespace, base_name, (0, 0, 0), from_spec(spec['nbt']))
 			# not quite sure how to handle coordinates here. I could populate it will location but this is not always given
 			# it makes sense to me to have the wrapper program set the coordinates so none are missed.
+			# for new_nbt in new['nbt']:
+				# merge into extra_output
 			# TODO: merge new['nbt'] into extra_output
 
 	elif output_type == 'entity':
@@ -100,14 +103,14 @@ def convert(level, object_input: Union[Block, Entity], input_spec: dict, mapping
 	return output, extra_output, extra_needed, cacheable
 
 
-def _convert(level, block_input: Union[Block, None], nbt_input: Union[Entity, BlockEntity], mappings: dict, location: Tuple[int, int, int] = None, nbt_path: Tuple[Tuple[Union[str, int], str]] = None) -> Tuple[Union[str, None], Union[str, None], dict, bool, bool]:
+def _convert(level, block_input: Union[Block, None], nbt_input: Union[Entity, BlockEntity], mappings: dict, location: Tuple[int, int, int] = None, nbt_path: Tuple[Tuple[Union[str, int], str], ...] = None, inherited: Tuple[Union[str, None], Union[str, None], dict, bool, bool] = None) -> Tuple[Union[str, None], Union[str, None], dict, bool, bool]:
 	"""
 	:param level:
 	:param block_input:
 	:param nbt_input:
 	:param mappings:
-	:param output_version:
 	:param location:
+	:param inherited:
 	:return:
 		output_name - string of the object being output
 		output_type - string of the type output name is (should be 'block' or 'entity')
@@ -115,24 +118,27 @@ def _convert(level, block_input: Union[Block, None], nbt_input: Union[Entity, Bl
 		extra_needed - bool. Specifies if more data is needed (ie if location needs to be given to do a full map)
 		cacheable - bool. Specifies if the input object is cachable. Only true for simple Blocks without BlockEntities
 	"""
-	output_name = None
-	output_type = None
-	new = {'properties': {}, 'nbt': []}  # There could be multiple 'new_block' functions in the mappings so new properties are put in here and merged at the very end
-	"""
-	new['nbt'] = [
-		(
+	if inherited is not None:
+		output_name, output_type, new, extra_needed, cacheable = inherited
+	else:
+		output_name = None
+		output_type = None
+		new = {'properties': {}, 'nbt': []}  # There could be multiple 'new_block' functions in the mappings so new properties are put in here and merged at the very end
+		"""
+		new['nbt'] = [
 			(
-				(path0, type0),
-				(path1, type1),
-				...
+				(
+					(path0, type0),
+					(path1, type1),
+					...
+				),
+				value
 			),
-			value
-		),
-		...
-	]
-	"""
-	extra_needed = False  # used to determine if extra data is required (and thus to do block by block)
-	cacheable = True    # cacheable until proven otherwise
+			...
+		]
+		"""
+		extra_needed = False  # used to determine if extra data is required (and thus to do block by block)
+		cacheable = True    # cacheable until proven otherwise
 
 	if 'new_block' in mappings:
 		assert isinstance(mappings['new_block'], str)
@@ -162,34 +168,27 @@ def _convert(level, block_input: Union[Block, None], nbt_input: Union[Entity, Bl
 			if key in block_input.properties:
 				val = block_input.properties[key]
 				if val in mappings['map_properties'][key]:
-					output_name_, output_type_, new_, extra_needed_, cacheable_ = _convert(level, block_input, nbt_input, mappings['map_properties'][key][val], location)
-					if cacheable and not cacheable_:
-						cacheable = False
-					if not extra_needed and extra_needed_:
-						extra_needed = True
-					if isinstance(output_name_, str):
-						output_name = output_name_
-						output_type = output_type_
-					for key2, val2 in new_['properties'].items():
-						new['properties'][key2] = val2
-					new['nbt'] += new_['nbt']
+					output_name, output_type, new, extra_needed, cacheable = _convert(level, block_input, nbt_input, mappings['map_properties'][key][val], location, nbt_path, (output_name, output_type, new, extra_needed, cacheable))
 
 	if 'multiblock' in mappings:
 		cacheable = False
 		if location is None:
 			extra_needed = True
-	# TODO: multiblock code
-	# else:
-	# 	if 'multiblock' is a dictionary:
-	# 		get the block at 'location' in the input format
-	# 		call self._convert on this new blockstate
-	# 	elif 'multiblock' is a list:
-	# 		do the above but on every dictionary in the list
+		else:
+			multiblocks = mappings['multiblock']
+			if isinstance(multiblocks, dict):
+				multiblocks = [multiblocks]
+			for multiblock in multiblocks:
+				dx, dy, dz = multiblock['coords']
+				x, y, z = location
+				block_input_, nbt_input_ = get_block_at(level, (x + dx, y + dy, z + dz))
+				output_name, output_type, new, extra_needed, cacheable = _convert(level, block_input_, nbt_input_, multiblock, (x + dx, y + dy, z + dz), nbt_path, (output_name, output_type, new, extra_needed, cacheable))
 
 	if 'map_block_name' in mappings:
-		assert isinstance(block_input, Block)
-		pass
-		# TODO: map block name code
+		assert isinstance(block_input, Block), 'The block input is not a block'
+		block_name = f'{block_input.namespace}:{block_input.base_name}'
+		if block_name in mappings['map_block_name']:
+			output_name, output_type, new, extra_needed, cacheable = _convert(level, block_input, nbt_input, mappings['map_block_name'][block_name], location, nbt_path, (output_name, output_type, new, extra_needed, cacheable))
 
 	if 'map_input_nbt' in mappings:
 		pass
