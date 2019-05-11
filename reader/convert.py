@@ -1,4 +1,4 @@
-from typing import Union, Tuple
+from typing import Union, Tuple, List
 from .helpers.objects import Block, BlockEntity, Entity
 from .helpers.nbt import from_spec
 from .data_version_handler import SubVersion
@@ -103,7 +103,7 @@ def convert(level, object_input: Union[Block, Entity], input_spec: dict, mapping
 	return output, extra_output, extra_needed, cacheable
 
 
-def _convert(level, block_input: Union[Block, None], nbt_input: Union[Entity, BlockEntity], mappings: dict, location: Tuple[int, int, int] = None, nbt_path: Tuple[Tuple[Union[str, int], str], ...] = None, inherited: Tuple[Union[str, None], Union[str, None], dict, bool, bool] = None) -> Tuple[Union[str, None], Union[str, None], dict, bool, bool]:
+def _convert(level, block_input: Union[Block, None], nbt_input: Union[Entity, BlockEntity], mappings: dict, location: Tuple[int, int, int] = None, nbt_path: List[List[Union[str, int], str], ...] = None, inherited: Tuple[Union[str, None], Union[str, None], dict, bool, bool] = None) -> Tuple[Union[str, None], Union[str, None], dict, bool, bool]:
 	"""
 	:param level:
 	:param block_input:
@@ -126,14 +126,14 @@ def _convert(level, block_input: Union[Block, None], nbt_input: Union[Entity, Bl
 		new = {'properties': {}, 'nbt': []}  # There could be multiple 'new_block' functions in the mappings so new properties are put in here and merged at the very end
 		"""
 		new['nbt'] = [
-			(
-				(
-					(path0, type0),
-					(path1, type1),
+			[
+				[
+					[path0, type0],
+					[path1, type1],
 					...
-				),
+				],
 				value
-			),
+			],
 			...
 		]
 		"""
@@ -201,9 +201,9 @@ def _convert(level, block_input: Union[Block, None], nbt_input: Union[Entity, Bl
 		for new_nbt in new_nbts:
 			path = nbt_path
 			if path is None:
-				path = ()
-			path = new_nbt.get('path', path) + ((new_nbt['key'], new_nbt['value']), )
-			new['nbt'].append((path, new_nbt['value']))
+				path = []
+			path = new_nbt.get('path', path) + [[new_nbt['key'], new_nbt['value']]]
+			new['nbt'].append([path, new_nbt['value']])
 
 	if 'carry_nbt' in mappings:
 		pass
