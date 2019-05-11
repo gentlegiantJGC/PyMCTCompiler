@@ -206,7 +206,24 @@ def _convert(level, block_input: Union[Block, None], nbt_input: Union[Entity, Bl
 			new['nbt'].append([path, new_nbt['value']])
 
 	if 'carry_nbt' in mappings:
-		pass
+		if nbt_path is not None:
+			nbt = nbt_input
+			for path, nbt_type in nbt_path:
+				if isinstance(path, int) and len(nbt > path):
+					nbt = nbt[path]
+				elif isinstance(path, str) and path in nbt:
+					nbt = nbt[path]
+				else:
+					raise Exception('This code should not be run because it should be caught by other code before it gets here.')
+			val = str(nbt.value)
+
+			path = mappings['carry_nbt'].get('path', nbt_path[:-1])
+			key = mappings['carry_nbt'].get('key', nbt_path[-1][0])
+			nbt_type = mappings['carry_nbt'].get('type', nbt_path[-1][1])
+
+			# TODO: some kind of check to make sure that the input data type nbt_path[-1][1] can be cast to nbt_type
+				# perhaps this should be done in the compiler rather than at runtime
+			new['nbt'].append([path + [key, nbt_type], val])
 
 	if 'map_nbt' in mappings:
 		cacheable = False
