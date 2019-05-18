@@ -11,41 +11,57 @@ class TAG_Value:
 
 
 class TAG_Byte(TAG_Value):
+	datatype = 'byte'
+
 	def __init__(self, val):
 		TAG_Value.__init__(self, val)
 
 
 class TAG_Short(TAG_Value):
+	datatype = 'short'
+
 	def __init__(self, val):
 		TAG_Value.__init__(self, val)
 
 
 class TAG_Int(TAG_Value):
+	datatype = 'int'
+
 	def __init__(self, val):
 		TAG_Value.__init__(self, val)
 
 
 class TAG_Long(TAG_Value):
+	datatype = 'long'
+
 	def __init__(self, val):
 		TAG_Value.__init__(self, val)
 
 
 class TAG_Float(TAG_Value):
+	datatype = 'float'
+
 	def __init__(self, val):
 		TAG_Value.__init__(self, val)
 
 
 class TAG_Double(TAG_Value):
+	datatype = 'double'
+
 	def __init__(self, val):
 		TAG_Value.__init__(self, val)
 
 
 class TAG_String(TAG_Value):
+	datatype = 'string'
+
 	def __init__(self, val):
 		TAG_Value.__init__(self, val)
 
 
 class TAG_Compound(TAG_Value):
+	datatype = 'compound'
+
 	def __init__(self, val=None):
 		if val is None:
 			val = {}
@@ -57,15 +73,28 @@ class TAG_Compound(TAG_Value):
 	def __getitem__(self, item):
 		return self.val[item]
 
+	def __len__(self):
+		return len(self.val)
+
+	def items(self):
+		return self.val.items()
+
 
 class TAG_List(TAG_Value):
+	datatype = 'list'
+
 	def __init__(self, val=None):
 		if val is None:
 			val = []
 		TAG_Value.__init__(self, val)
 
+	def __len__(self):
+		return len(self.val)
+
 
 class TAG_Byte_Array(TAG_Value):
+	datatype = 'byte_array'
+
 	def __init__(self, val=None):
 		if val is None:
 			val = []
@@ -73,6 +102,8 @@ class TAG_Byte_Array(TAG_Value):
 
 
 class TAG_Int_Array(TAG_Value):
+	datatype = 'int_array'
+
 	def __init__(self, val=None):
 		if val is None:
 			val = []
@@ -80,6 +111,8 @@ class TAG_Int_Array(TAG_Value):
 
 
 class TAG_Long_Array(TAG_Value):
+	datatype = 'long_array'
+
 	def __init__(self, val=None):
 		if val is None:
 			val = []
