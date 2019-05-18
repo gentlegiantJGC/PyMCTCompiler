@@ -132,7 +132,7 @@ class Version:
 						self.numerical_block_map_inverse = json.load(f)
 					self.numerical_block_map = {}
 					for block_string, block_id in self.numerical_block_map_inverse.items():
-						assert isinstance(block_id, str) and isinstance(block_string, str) and block_id.isnumeric()
+						assert isinstance(block_id, int) and isinstance(block_string, str)
 						self.numerical_block_map[block_id] = block_string
 
 			elif self.block_format == 'blockstate':
