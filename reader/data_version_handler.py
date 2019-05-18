@@ -2,7 +2,6 @@ import json
 import os
 from typing import Union, Tuple, Generator, List, Dict
 from .helpers.objects import Block, BlockEntity, Entity
-from .convert import convert
 import copy
 
 log_level = 0  # 0 for no logs, 1 or higher for warnings, 2 or higher for info, 3 or higher for debug
@@ -297,6 +296,8 @@ class SubVersion:
 		except Exception as e:
 			info(f'Failed converting blockstate from universal\n{e}')
 			return object_input, None, False
+
+from .convert import convert
 
 
 if __name__ == '__main__':
