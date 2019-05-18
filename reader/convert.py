@@ -1,4 +1,4 @@
-from typing import Union, Tuple, List
+from typing import Union, Tuple
 from .helpers.objects import Block, BlockEntity, Entity
 from .helpers.nbt import from_spec
 from .data_version_handler import SubVersion
@@ -20,7 +20,7 @@ def get_block_at(level, location: Tuple[int, int, int]) -> Tuple[Union[Block, No
 	return None, None
 
 
-def index_nbt(nbt: NBT, nbt_path: List[List[Union[str, int], str], ...]):
+def index_nbt(nbt: NBT, nbt_path: Tuple[Tuple[Union[str, int], str], ...]):
 	for path, nbt_type in nbt_path:
 		if isinstance(path, int) and len(nbt) > path:
 			nbt = nbt[path]
@@ -114,7 +114,7 @@ def convert(level, object_input: Union[Block, Entity], input_spec: dict, mapping
 	return output, extra_output, extra_needed, cacheable
 
 
-def _convert(level, block_input: Union[Block, None], nbt_input: Union[Entity, BlockEntity, None], mappings: dict, location: Tuple[int, int, int] = None, nbt_path: List[List[Union[str, int], str], ...] = None, inherited: Tuple[Union[str, None], Union[str, None], dict, bool, bool] = None) -> Tuple[Union[str, None], Union[str, None], dict, bool, bool]:
+def _convert(level, block_input: Union[Block, None], nbt_input: Union[Entity, BlockEntity, None], mappings: dict, location: Tuple[int, int, int] = None, nbt_path: Tuple[Tuple[Union[str, int], str], ...] = None, inherited: Tuple[Union[str, None], Union[str, None], dict, bool, bool] = None) -> Tuple[Union[str, None], Union[str, None], dict, bool, bool]:
 	"""
 	:param level:
 	:param block_input:
@@ -268,7 +268,7 @@ def _convert(level, block_input: Union[Block, None], nbt_input: Union[Entity, Bl
 	return output_name, output_type, new, extra_needed, cacheable
 
 
-def _convert_map_input_nbt(level, block_input: Union[Block, None], nbt_input: Union[Entity, BlockEntity, None], mappings: dict, location: Tuple[int, int, int] = None, nbt_path: List[List[Union[str, int], str], ...] = None, inherited: Tuple[Union[str, None], Union[str, None], dict, bool, bool] = None) -> Tuple[Union[str, None], Union[str, None], dict, bool, bool]:
+def _convert_map_input_nbt(level, block_input: Union[Block, None], nbt_input: Union[Entity, BlockEntity, None], mappings: dict, location: Tuple[int, int, int] = None, nbt_path: Tuple[Tuple[Union[str, int], str], ...] = None, inherited: Tuple[Union[str, None], Union[str, None], dict, bool, bool] = None) -> Tuple[Union[str, None], Union[str, None], dict, bool, bool]:
 	if inherited is not None:
 		output_name, output_type, new, extra_needed, cacheable = inherited
 	else:
