@@ -2009,8 +2009,14 @@ def button_bedrock(input_namespace: str, input_block_name: str, material: str, u
 	}
 
 
-def glazed_terracotta(input_namespace: str, input_block_name: str, color: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
-	directions = {2: "north", 3: "south", 4: "west", 5: "east"}
+def glazed_terracotta(input_namespace: str, input_block_name: str, color: str, platform: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if platform == 'java':
+		directions = {0: "north", 2: "south", 3: "west", 1: "east"}
+	elif platform == 'bedrock':
+		directions = {2: "north", 3: "south", 4: "west", 5: "east"}
+	else:
+		raise Exception(f'Unknown platform {platform}')
+
 	if universal_namespace is None:
 		universal_namespace = input_namespace
 	if universal_block_name is None:
