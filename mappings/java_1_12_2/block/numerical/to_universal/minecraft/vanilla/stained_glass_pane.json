@@ -1,0 +1,102 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:stained_glass_pane",
+                "new_properties": {
+                    "color": "white"
+                }
+            },
+            "1": {
+                "new_block": "universal_minecraft:stained_glass_pane",
+                "new_properties": {
+                    "color": "orange"
+                }
+            },
+            "2": {
+                "new_block": "universal_minecraft:stained_glass_pane",
+                "new_properties": {
+                    "color": "magenta"
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:stained_glass_pane",
+                "new_properties": {
+                    "color": "light_blue"
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:stained_glass_pane",
+                "new_properties": {
+                    "color": "yellow"
+                }
+            },
+            "5": {
+                "new_block": "universal_minecraft:stained_glass_pane",
+                "new_properties": {
+                    "color": "lime"
+                }
+            },
+            "6": {
+                "new_block": "universal_minecraft:stained_glass_pane",
+                "new_properties": {
+                    "color": "pink"
+                }
+            },
+            "7": {
+                "new_block": "universal_minecraft:stained_glass_pane",
+                "new_properties": {
+                    "color": "gray"
+                }
+            },
+            "8": {
+                "new_block": "universal_minecraft:stained_glass_pane",
+                "new_properties": {
+                    "color": "light_gray"
+                }
+            },
+            "9": {
+                "new_block": "universal_minecraft:stained_glass_pane",
+                "new_properties": {
+                    "color": "cyan"
+                }
+            },
+            "10": {
+                "new_block": "universal_minecraft:stained_glass_pane",
+                "new_properties": {
+                    "color": "purple"
+                }
+            },
+            "11": {
+                "new_block": "universal_minecraft:stained_glass_pane",
+                "new_properties": {
+                    "color": "blue"
+                }
+            },
+            "12": {
+                "new_block": "universal_minecraft:stained_glass_pane",
+                "new_properties": {
+                    "color": "brown"
+                }
+            },
+            "13": {
+                "new_block": "universal_minecraft:stained_glass_pane",
+                "new_properties": {
+                    "color": "green"
+                }
+            },
+            "14": {
+                "new_block": "universal_minecraft:stained_glass_pane",
+                "new_properties": {
+                    "color": "red"
+                }
+            },
+            "15": {
+                "new_block": "universal_minecraft:stained_glass_pane",
+                "new_properties": {
+                    "color": "black"
+                }
+            }
+        }
+    }
+}
