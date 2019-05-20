@@ -1,0 +1,13 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "purpur",
+                    "type": "double"
+                }
+            }
+        }
+    }
+}

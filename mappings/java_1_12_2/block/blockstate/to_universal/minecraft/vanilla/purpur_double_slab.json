@@ -1,0 +1,11 @@
+{
+    "new_block": "universal_minecraft:slab",
+    "carry_properties": {
+        "material": [
+            "purpur"
+        ]
+    },
+    "new_properties": {
+        "type": "double"
+    }
+}
