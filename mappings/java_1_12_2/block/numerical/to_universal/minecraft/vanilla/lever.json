@@ -1,0 +1,134 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:lever",
+                "new_properties": {
+                    "face": "ceiling",
+                    "facing": "west",
+                    "powered": "false"
+                }
+            },
+            "1": {
+                "new_block": "universal_minecraft:lever",
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "east",
+                    "powered": "false"
+                }
+            },
+            "2": {
+                "new_block": "universal_minecraft:lever",
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "west",
+                    "powered": "false"
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:lever",
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "south",
+                    "powered": "false"
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:lever",
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "north",
+                    "powered": "false"
+                }
+            },
+            "5": {
+                "new_block": "universal_minecraft:lever",
+                "new_properties": {
+                    "face": "floor",
+                    "facing": "north",
+                    "powered": "false"
+                }
+            },
+            "6": {
+                "new_block": "universal_minecraft:lever",
+                "new_properties": {
+                    "face": "floor",
+                    "facing": "west",
+                    "powered": "false"
+                }
+            },
+            "7": {
+                "new_block": "universal_minecraft:lever",
+                "new_properties": {
+                    "face": "ceiling",
+                    "facing": "north",
+                    "powered": "false"
+                }
+            },
+            "8": {
+                "new_block": "universal_minecraft:lever",
+                "new_properties": {
+                    "face": "ceiling",
+                    "facing": "west",
+                    "powered": "true"
+                }
+            },
+            "9": {
+                "new_block": "universal_minecraft:lever",
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "east",
+                    "powered": "true"
+                }
+            },
+            "10": {
+                "new_block": "universal_minecraft:lever",
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "west",
+                    "powered": "true"
+                }
+            },
+            "11": {
+                "new_block": "universal_minecraft:lever",
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "south",
+                    "powered": "true"
+                }
+            },
+            "12": {
+                "new_block": "universal_minecraft:lever",
+                "new_properties": {
+                    "face": "wall",
+                    "facing": "north",
+                    "powered": "true"
+                }
+            },
+            "13": {
+                "new_block": "universal_minecraft:lever",
+                "new_properties": {
+                    "face": "floor",
+                    "facing": "north",
+                    "powered": "true"
+                }
+            },
+            "14": {
+                "new_block": "universal_minecraft:lever",
+                "new_properties": {
+                    "face": "floor",
+                    "facing": "west",
+                    "powered": "true"
+                }
+            },
+            "15": {
+                "new_block": "universal_minecraft:lever",
+                "new_properties": {
+                    "face": "ceiling",
+                    "facing": "north",
+                    "powered": "true"
+                }
+            }
+        }
+    }
+}

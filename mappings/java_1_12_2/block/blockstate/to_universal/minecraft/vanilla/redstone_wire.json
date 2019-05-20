@@ -1,0 +1,23 @@
+{
+    "new_block": "universal_minecraft:redstone_wire",
+    "carry_properties": {
+        "power": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15"
+        ]
+    }
+}

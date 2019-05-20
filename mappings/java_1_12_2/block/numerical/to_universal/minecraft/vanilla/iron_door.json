@@ -1,0 +1,669 @@
+{
+    "new_properties": {
+        "material": "iron"
+    },
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:door",
+                "new_properties": {
+                    "half": "lower",
+                    "open": "false",
+                    "facing": "east"
+                },
+                "multiblock": {
+                    "coords": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "map_block_name": {
+                        "minecraft:iron_door": {
+                            "map_properties": {
+                                "block_data": {
+                                    "8": {
+                                        "new_properties": {
+                                            "powered": "false",
+                                            "hinge": "left"
+                                        }
+                                    },
+                                    "9": {
+                                        "new_properties": {
+                                            "powered": "false",
+                                            "hinge": "right"
+                                        }
+                                    },
+                                    "10": {
+                                        "new_properties": {
+                                            "powered": "true",
+                                            "hinge": "left"
+                                        }
+                                    },
+                                    "11": {
+                                        "new_properties": {
+                                            "powered": "true",
+                                            "hinge": "right"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "1": {
+                "new_block": "universal_minecraft:door",
+                "new_properties": {
+                    "half": "lower",
+                    "open": "false",
+                    "facing": "south"
+                },
+                "multiblock": {
+                    "coords": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "map_block_name": {
+                        "minecraft:iron_door": {
+                            "map_properties": {
+                                "block_data": {
+                                    "8": {
+                                        "new_properties": {
+                                            "powered": "false",
+                                            "hinge": "left"
+                                        }
+                                    },
+                                    "9": {
+                                        "new_properties": {
+                                            "powered": "false",
+                                            "hinge": "right"
+                                        }
+                                    },
+                                    "10": {
+                                        "new_properties": {
+                                            "powered": "true",
+                                            "hinge": "left"
+                                        }
+                                    },
+                                    "11": {
+                                        "new_properties": {
+                                            "powered": "true",
+                                            "hinge": "right"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "2": {
+                "new_block": "universal_minecraft:door",
+                "new_properties": {
+                    "half": "lower",
+                    "open": "false",
+                    "facing": "west"
+                },
+                "multiblock": {
+                    "coords": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "map_block_name": {
+                        "minecraft:iron_door": {
+                            "map_properties": {
+                                "block_data": {
+                                    "8": {
+                                        "new_properties": {
+                                            "powered": "false",
+                                            "hinge": "left"
+                                        }
+                                    },
+                                    "9": {
+                                        "new_properties": {
+                                            "powered": "false",
+                                            "hinge": "right"
+                                        }
+                                    },
+                                    "10": {
+                                        "new_properties": {
+                                            "powered": "true",
+                                            "hinge": "left"
+                                        }
+                                    },
+                                    "11": {
+                                        "new_properties": {
+                                            "powered": "true",
+                                            "hinge": "right"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:door",
+                "new_properties": {
+                    "half": "lower",
+                    "open": "false",
+                    "facing": "north"
+                },
+                "multiblock": {
+                    "coords": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "map_block_name": {
+                        "minecraft:iron_door": {
+                            "map_properties": {
+                                "block_data": {
+                                    "8": {
+                                        "new_properties": {
+                                            "powered": "false",
+                                            "hinge": "left"
+                                        }
+                                    },
+                                    "9": {
+                                        "new_properties": {
+                                            "powered": "false",
+                                            "hinge": "right"
+                                        }
+                                    },
+                                    "10": {
+                                        "new_properties": {
+                                            "powered": "true",
+                                            "hinge": "left"
+                                        }
+                                    },
+                                    "11": {
+                                        "new_properties": {
+                                            "powered": "true",
+                                            "hinge": "right"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:door",
+                "new_properties": {
+                    "half": "lower",
+                    "open": "true",
+                    "facing": "east"
+                },
+                "multiblock": {
+                    "coords": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "map_block_name": {
+                        "minecraft:iron_door": {
+                            "map_properties": {
+                                "block_data": {
+                                    "8": {
+                                        "new_properties": {
+                                            "powered": "false",
+                                            "hinge": "left"
+                                        }
+                                    },
+                                    "9": {
+                                        "new_properties": {
+                                            "powered": "false",
+                                            "hinge": "right"
+                                        }
+                                    },
+                                    "10": {
+                                        "new_properties": {
+                                            "powered": "true",
+                                            "hinge": "left"
+                                        }
+                                    },
+                                    "11": {
+                                        "new_properties": {
+                                            "powered": "true",
+                                            "hinge": "right"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "5": {
+                "new_block": "universal_minecraft:door",
+                "new_properties": {
+                    "half": "lower",
+                    "open": "true",
+                    "facing": "south"
+                },
+                "multiblock": {
+                    "coords": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "map_block_name": {
+                        "minecraft:iron_door": {
+                            "map_properties": {
+                                "block_data": {
+                                    "8": {
+                                        "new_properties": {
+                                            "powered": "false",
+                                            "hinge": "left"
+                                        }
+                                    },
+                                    "9": {
+                                        "new_properties": {
+                                            "powered": "false",
+                                            "hinge": "right"
+                                        }
+                                    },
+                                    "10": {
+                                        "new_properties": {
+                                            "powered": "true",
+                                            "hinge": "left"
+                                        }
+                                    },
+                                    "11": {
+                                        "new_properties": {
+                                            "powered": "true",
+                                            "hinge": "right"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "6": {
+                "new_block": "universal_minecraft:door",
+                "new_properties": {
+                    "half": "lower",
+                    "open": "true",
+                    "facing": "west"
+                },
+                "multiblock": {
+                    "coords": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "map_block_name": {
+                        "minecraft:iron_door": {
+                            "map_properties": {
+                                "block_data": {
+                                    "8": {
+                                        "new_properties": {
+                                            "powered": "false",
+                                            "hinge": "left"
+                                        }
+                                    },
+                                    "9": {
+                                        "new_properties": {
+                                            "powered": "false",
+                                            "hinge": "right"
+                                        }
+                                    },
+                                    "10": {
+                                        "new_properties": {
+                                            "powered": "true",
+                                            "hinge": "left"
+                                        }
+                                    },
+                                    "11": {
+                                        "new_properties": {
+                                            "powered": "true",
+                                            "hinge": "right"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "7": {
+                "new_block": "universal_minecraft:door",
+                "new_properties": {
+                    "half": "lower",
+                    "open": "true",
+                    "facing": "north"
+                },
+                "multiblock": {
+                    "coords": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "map_block_name": {
+                        "minecraft:iron_door": {
+                            "map_properties": {
+                                "block_data": {
+                                    "8": {
+                                        "new_properties": {
+                                            "powered": "false",
+                                            "hinge": "left"
+                                        }
+                                    },
+                                    "9": {
+                                        "new_properties": {
+                                            "powered": "false",
+                                            "hinge": "right"
+                                        }
+                                    },
+                                    "10": {
+                                        "new_properties": {
+                                            "powered": "true",
+                                            "hinge": "left"
+                                        }
+                                    },
+                                    "11": {
+                                        "new_properties": {
+                                            "powered": "true",
+                                            "hinge": "right"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "8": {
+                "new_block": "universal_minecraft:door",
+                "new_properties": {
+                    "half": "upper",
+                    "powered": "false",
+                    "hinge": "left"
+                },
+                "multiblock": {
+                    "coords": [
+                        0,
+                        -1,
+                        0
+                    ],
+                    "map_block_name": {
+                        "minecraft:iron_door": {
+                            "map_properties": {
+                                "block_data": {
+                                    "0": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "east"
+                                        }
+                                    },
+                                    "1": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "east"
+                                        }
+                                    },
+                                    "2": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "east"
+                                        }
+                                    },
+                                    "3": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "east"
+                                        }
+                                    },
+                                    "4": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "east"
+                                        }
+                                    },
+                                    "5": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "east"
+                                        }
+                                    },
+                                    "6": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "east"
+                                        }
+                                    },
+                                    "7": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "east"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "9": {
+                "new_block": "universal_minecraft:door",
+                "new_properties": {
+                    "half": "upper",
+                    "powered": "false",
+                    "hinge": "right"
+                },
+                "multiblock": {
+                    "coords": [
+                        0,
+                        -1,
+                        0
+                    ],
+                    "map_block_name": {
+                        "minecraft:iron_door": {
+                            "map_properties": {
+                                "block_data": {
+                                    "0": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "south"
+                                        }
+                                    },
+                                    "1": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "south"
+                                        }
+                                    },
+                                    "2": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "south"
+                                        }
+                                    },
+                                    "3": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "south"
+                                        }
+                                    },
+                                    "4": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "south"
+                                        }
+                                    },
+                                    "5": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "south"
+                                        }
+                                    },
+                                    "6": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "south"
+                                        }
+                                    },
+                                    "7": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "south"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "10": {
+                "new_block": "universal_minecraft:door",
+                "new_properties": {
+                    "half": "upper",
+                    "powered": "true",
+                    "hinge": "left"
+                },
+                "multiblock": {
+                    "coords": [
+                        0,
+                        -1,
+                        0
+                    ],
+                    "map_block_name": {
+                        "minecraft:iron_door": {
+                            "map_properties": {
+                                "block_data": {
+                                    "0": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "west"
+                                        }
+                                    },
+                                    "1": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "west"
+                                        }
+                                    },
+                                    "2": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "west"
+                                        }
+                                    },
+                                    "3": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "west"
+                                        }
+                                    },
+                                    "4": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "west"
+                                        }
+                                    },
+                                    "5": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "west"
+                                        }
+                                    },
+                                    "6": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "west"
+                                        }
+                                    },
+                                    "7": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "west"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "11": {
+                "new_block": "universal_minecraft:door",
+                "new_properties": {
+                    "half": "upper",
+                    "powered": "true",
+                    "hinge": "right"
+                },
+                "multiblock": {
+                    "coords": [
+                        0,
+                        -1,
+                        0
+                    ],
+                    "map_block_name": {
+                        "minecraft:iron_door": {
+                            "map_properties": {
+                                "block_data": {
+                                    "0": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "north"
+                                        }
+                                    },
+                                    "1": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "north"
+                                        }
+                                    },
+                                    "2": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "north"
+                                        }
+                                    },
+                                    "3": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "north"
+                                        }
+                                    },
+                                    "4": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "north"
+                                        }
+                                    },
+                                    "5": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "north"
+                                        }
+                                    },
+                                    "6": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "north"
+                                        }
+                                    },
+                                    "7": {
+                                        "new_properties": {
+                                            "open": "false",
+                                            "facing": "north"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

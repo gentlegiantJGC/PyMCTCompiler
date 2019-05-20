@@ -1,0 +1,1128 @@
+{
+    "map_properties": {
+        "material": {
+            "oak": {
+                "map_properties": {
+                    "half": {
+                        "bottom": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:oak_stairs",
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:oak_stairs",
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:oak_stairs",
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:oak_stairs",
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "top": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:oak_stairs",
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:oak_stairs",
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:oak_stairs",
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:oak_stairs",
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "cobblestone": {
+                "map_properties": {
+                    "half": {
+                        "bottom": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:stone_stairs",
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:stone_stairs",
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:stone_stairs",
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:stone_stairs",
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "top": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:stone_stairs",
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:stone_stairs",
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:stone_stairs",
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:stone_stairs",
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "brick": {
+                "map_properties": {
+                    "half": {
+                        "bottom": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "top": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "stone_brick": {
+                "map_properties": {
+                    "half": {
+                        "bottom": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:stone_brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:stone_brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:stone_brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:stone_brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "top": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:stone_brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:stone_brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:stone_brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:stone_brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "nether_brick": {
+                "map_properties": {
+                    "half": {
+                        "bottom": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:nether_brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:nether_brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:nether_brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:nether_brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "top": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:nether_brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:nether_brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:nether_brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:nether_brick_stairs",
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "sandstone": {
+                "map_properties": {
+                    "half": {
+                        "bottom": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:sandstone_stairs",
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:sandstone_stairs",
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:sandstone_stairs",
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:sandstone_stairs",
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "top": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:sandstone_stairs",
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:sandstone_stairs",
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:sandstone_stairs",
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:sandstone_stairs",
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "spruce": {
+                "map_properties": {
+                    "half": {
+                        "bottom": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:spruce_stairs",
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:spruce_stairs",
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:spruce_stairs",
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:spruce_stairs",
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "top": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:spruce_stairs",
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:spruce_stairs",
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:spruce_stairs",
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:spruce_stairs",
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "birch": {
+                "map_properties": {
+                    "half": {
+                        "bottom": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:birch_stairs",
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:birch_stairs",
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:birch_stairs",
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:birch_stairs",
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "top": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:birch_stairs",
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:birch_stairs",
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:birch_stairs",
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:birch_stairs",
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "jungle": {
+                "map_properties": {
+                    "half": {
+                        "bottom": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:jungle_stairs",
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:jungle_stairs",
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:jungle_stairs",
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:jungle_stairs",
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "top": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:jungle_stairs",
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:jungle_stairs",
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:jungle_stairs",
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:jungle_stairs",
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "quartz": {
+                "map_properties": {
+                    "half": {
+                        "bottom": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:quartz_stairs",
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:quartz_stairs",
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:quartz_stairs",
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:quartz_stairs",
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "top": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:quartz_stairs",
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:quartz_stairs",
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:quartz_stairs",
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:quartz_stairs",
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "acacia": {
+                "map_properties": {
+                    "half": {
+                        "bottom": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:acacia_stairs",
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:acacia_stairs",
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:acacia_stairs",
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:acacia_stairs",
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "top": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:acacia_stairs",
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:acacia_stairs",
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:acacia_stairs",
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:acacia_stairs",
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "dark_oak": {
+                "map_properties": {
+                    "half": {
+                        "bottom": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:dark_oak_stairs",
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:dark_oak_stairs",
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:dark_oak_stairs",
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:dark_oak_stairs",
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "top": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:dark_oak_stairs",
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:dark_oak_stairs",
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:dark_oak_stairs",
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:dark_oak_stairs",
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "red_sandstone": {
+                "map_properties": {
+                    "half": {
+                        "bottom": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:red_sandstone_stairs",
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:red_sandstone_stairs",
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:red_sandstone_stairs",
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:red_sandstone_stairs",
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "top": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:red_sandstone_stairs",
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:red_sandstone_stairs",
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:red_sandstone_stairs",
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:red_sandstone_stairs",
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "purpur": {
+                "map_properties": {
+                    "half": {
+                        "bottom": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:purpur_stairs",
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:purpur_stairs",
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:purpur_stairs",
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:purpur_stairs",
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "top": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:purpur_stairs",
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:purpur_stairs",
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:purpur_stairs",
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:purpur_stairs",
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "prismarine": {
+                "map_properties": {
+                    "half": {
+                        "bottom": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:prismarine_stairs",
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:prismarine_stairs",
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:prismarine_stairs",
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:prismarine_stairs",
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "top": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:prismarine_stairs",
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:prismarine_stairs",
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:prismarine_stairs",
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:prismarine_stairs",
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "dark_prismarine": {
+                "map_properties": {
+                    "half": {
+                        "bottom": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:dark_prismarine_stairs",
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:dark_prismarine_stairs",
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:dark_prismarine_stairs",
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:dark_prismarine_stairs",
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "top": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:dark_prismarine_stairs",
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:dark_prismarine_stairs",
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:dark_prismarine_stairs",
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:dark_prismarine_stairs",
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "prismarine_brick": {
+                "map_properties": {
+                    "half": {
+                        "bottom": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:prismarine_bricks_stairs",
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:prismarine_bricks_stairs",
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:prismarine_bricks_stairs",
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:prismarine_bricks_stairs",
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "top": {
+                            "map_properties": {
+                                "facing": {
+                                    "east": {
+                                        "new_block": "minecraft:prismarine_bricks_stairs",
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_block": "minecraft:prismarine_bricks_stairs",
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "south": {
+                                        "new_block": "minecraft:prismarine_bricks_stairs",
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_block": "minecraft:prismarine_bricks_stairs",
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
