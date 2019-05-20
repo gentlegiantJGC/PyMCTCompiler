@@ -2,22 +2,22 @@
     "map_properties": {
         "type": {
             "grass": {
-                "new_block": "minecraft:tallgrass",
+                "new_block": "universal_minecraft:plant",
                 "new_properties": {
                     "type": "grass"
                 }
             },
             "fern": {
-                "new_block": "minecraft:tallgrass",
+                "new_block": "universal_minecraft:plant",
                 "new_properties": {
                     "type": "fern"
                 }
             },
             "dead_bush": {
-                "new_block": "minecraft:deadbush"
-            },
-            "dandelion": {
-                "new_block": "minecraft:yellow_flower"
+                "new_block": "universal_minecraft:plant",
+                "new_properties": {
+                    "type": "dead_bush"
+                }
             }
         }
     }
