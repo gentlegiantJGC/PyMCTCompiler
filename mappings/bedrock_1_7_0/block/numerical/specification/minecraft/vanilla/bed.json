@@ -30,6 +30,10 @@
                 "color": {
                     "type": "byte",
                     "val": 14
+                },
+                "isMovable": {
+                    "type": "byte",
+                    "val": 1
                 }
             }
         }

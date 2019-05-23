@@ -38,5 +38,17 @@
         "occupied": "false",
         "part": "foot",
         "color": "red"
+    },
+    "nbt_identifier": "minecraft:bed",
+    "nbt": {
+        "": {
+            "type": "compound",
+            "val": {
+                "isMovable": {
+                    "type": "byte",
+                    "val": 1
+                }
+            }
+        }
     }
 }

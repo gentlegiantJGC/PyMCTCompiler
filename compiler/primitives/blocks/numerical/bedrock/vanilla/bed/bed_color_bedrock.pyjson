@@ -1,1 +1,262 @@
-numerical.bed_color("bedrock")
+{
+	"specification": {
+		"properties": {
+			"block_data": [str(data) for data in range(16)]
+		},
+		"defaults": {
+			"block_data": "0"
+		},
+		"nbt_identifier": "minecraft:bed",
+		"nbt": {
+			"": {
+				"type": "compound",
+				"val": {
+					"color": {
+						"type": "byte",
+						"val": 14
+					},
+					"isMovable": {
+						"type": "byte",
+						"val": 1
+					}
+				}
+			}
+		}
+	},
+	"to_universal": {
+		"map_properties": {
+			"block_data": {
+				str(data): {
+					"new_block": "universal_minecraft:bed",
+					"new_properties": {
+						"facing": {0: "south", 1: "west", 2: "north", 3: "east"}[data & 3],
+						"occupied": {0: "false", 4: "true"}[data & 4],
+						"part": {0: "foot", 8: "head"}[data & 8]
+					}
+				} for data in range(16)
+			}
+		},
+		"map_input_nbt": {
+			"": {
+				"type": "compound",
+				"keys": {
+					"color": {
+						"type": "byte",
+						"functions": {
+							"map_nbt": {
+								"cases": {
+									str(num): {
+										"new_properties": {
+											"color": color
+										}
+									} for num, color in enumerate([
+										"white",
+										"orange",
+										"magenta",
+										"light_blue",
+										"yellow",
+										"lime",
+										"pink",
+										"gray",
+										"light_gray",
+										"cyan",
+										"purple",
+										"blue",
+										"brown",
+										"green",
+										"red",
+										"black"
+									])
+								},
+								"default": {}
+							}
+						},
+						"self_default": {}
+					}
+				}
+			}
+		}
+	},
+	"from_universal": {
+		"universal_minecraft:bed": {
+			"new_block": "minecraft:bed",
+			"map_properties": {
+				"part": {
+					part: {
+						"map_properties": {
+							"occupied": {
+								occupied: {
+									"map_properties": {
+										"facing": {
+											facing: {
+												"new_properties": {
+													"block_data": str(data8 + data4 + data3)
+												}
+											} for data3, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
+										}
+									}
+								} for data4, occupied in {0: "false", 4: "true"}.items()
+							}
+						}
+					} for data8, part in {0: "foot", 8: "head"}.items()
+				},
+				"color": {
+					color: {
+						"new_nbt": {
+							"key": "color",
+							"type": "byte",
+							"value": num
+						}
+					} for num, color in enumerate([
+						"white",
+						"orange",
+						"magenta",
+						"light_blue",
+						"yellow",
+						"lime",
+						"pink",
+						"gray",
+						"light_gray",
+						"cyan",
+						"purple",
+						"blue",
+						"brown",
+						"green",
+						"red",
+						"black"
+					])
+				}
+			}
+		}
+	},
+	"blockstate_specification": {
+		"properties": {
+			"facing": [
+				"east",
+				"north",
+				"south",
+				"west"
+			],
+			"occupied": [
+				"true",
+				"false"
+			],
+			"part": [
+				"foot",
+				"head"
+			],
+			"color": [
+				"white",
+				"orange",
+				"magenta",
+				"light_blue",
+				"yellow",
+				"lime",
+				"pink",
+				"gray",
+				"light_gray",
+				"cyan",
+				"purple",
+				"blue",
+				"brown",
+				"green",
+				"red",
+				"black"
+			]
+		},
+		"defaults": {
+			"facing": "north",
+			"occupied": "false",
+			"part": "foot",
+			"color": "red"
+		},
+		"nbt_identifier": "minecraft:bed",
+		"nbt": {
+			"": {
+				"type": "compound",
+				"val": {
+					"isMovable": {
+						"type": "byte",
+						"val": 1
+					}
+				}
+			}
+		}
+	},
+	"blockstate_to_universal": {
+		"new_block": "universal_minecraft:bed",
+		"carry_properties": {
+			"facing": [
+				"east",
+				"north",
+				"south",
+				"west"
+			],
+			"occupied": [
+				"true",
+				"false"
+			],
+			"part": [
+				"foot",
+				"head"
+			],
+			"color": [
+				"white",
+				"orange",
+				"magenta",
+				"light_blue",
+				"yellow",
+				"lime",
+				"pink",
+				"gray",
+				"light_gray",
+				"cyan",
+				"purple",
+				"blue",
+				"brown",
+				"green",
+				"red",
+				"black"
+			]
+		}
+	},
+	"blockstate_from_universal": {
+		"universal_minecraft:bed": {
+			"new_block": "minecraft:bed",
+			"carry_properties": {
+				"facing": [
+					"east",
+					"north",
+					"south",
+					"west"
+				],
+				"occupied": [
+					"true",
+					"false"
+				],
+				"part": [
+					"foot",
+					"head"
+				],
+				"color": [
+					"white",
+					"orange",
+					"magenta",
+					"light_blue",
+					"yellow",
+					"lime",
+					"pink",
+					"gray",
+					"light_gray",
+					"cyan",
+					"purple",
+					"blue",
+					"brown",
+					"green",
+					"red",
+					"black"
+				]
+			}
+		}
+	}
+}
