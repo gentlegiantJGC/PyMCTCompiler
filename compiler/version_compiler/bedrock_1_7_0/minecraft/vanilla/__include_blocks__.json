@@ -89,7 +89,7 @@
 	"netherrack": "netherrack",
 	"soul_sand": "soul_sand",
 	"glowstone": "glowstone",
-	"portal": null,
+	"portal": "nether_portal",
 	"lit_pumpkin": "lit_pumpkin",
 	"cake": "cake",
 	"unpowered_repeater": "unpowered_repeater",

@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:pumpkin",
+    "new_properties": {
+        "facing": "south"
+    }
+}

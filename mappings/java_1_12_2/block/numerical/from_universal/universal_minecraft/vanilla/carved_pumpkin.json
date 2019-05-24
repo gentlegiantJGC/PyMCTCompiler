@@ -1,0 +1,30 @@
+{
+    "map_properties": {
+        "facing": {
+            "south": {
+                "new_block": "minecraft:pumpkin",
+                "new_properties": {
+                    "block_data": "0"
+                }
+            },
+            "west": {
+                "new_block": "minecraft:pumpkin",
+                "new_properties": {
+                    "block_data": "1"
+                }
+            },
+            "north": {
+                "new_block": "minecraft:pumpkin",
+                "new_properties": {
+                    "block_data": "2"
+                }
+            },
+            "east": {
+                "new_block": "minecraft:pumpkin",
+                "new_properties": {
+                    "block_data": "3"
+                }
+            }
+        }
+    }
+}
