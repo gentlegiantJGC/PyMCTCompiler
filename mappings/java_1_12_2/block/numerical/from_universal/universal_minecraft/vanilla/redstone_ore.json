@@ -1,0 +1,18 @@
+{
+    "map_properties": {
+        "lit": {
+            "false": {
+                "new_block": "minecraft:redstone_ore",
+                "new_properties": {
+                    "block_data": "0"
+                }
+            },
+            "true": {
+                "new_block": "minecraft:lit_redstone_ore",
+                "new_properties": {
+                    "block_data": "0"
+                }
+            }
+        }
+    }
+}
