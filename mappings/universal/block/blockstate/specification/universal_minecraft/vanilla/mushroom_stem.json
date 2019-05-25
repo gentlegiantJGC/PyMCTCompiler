@@ -23,6 +23,10 @@
         "west": [
             "true",
             "false"
+        ],
+        "material": [
+            "red",
+            "brown"
         ]
     },
     "defaults": {
