@@ -1,0 +1,12 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:fence",
+                "new_properties": {
+                    "material": "birch"
+                }
+            }
+        }
+    }
+}

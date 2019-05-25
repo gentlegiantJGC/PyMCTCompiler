@@ -2040,6 +2040,58 @@ def glazed_terracotta(input_namespace: str, input_block_name: str, color: str, p
 	}
 
 
+def fence_java(input_namespace: str, input_block_name: str, material: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	return {
+		"to_universal": {
+			"map_properties": {
+				"block_data": {
+					"0": {
+						"new_block": f"{universal_namespace}:{universal_block_name}",
+						"new_properties": {
+							"material": material
+						}
+					}
+				}
+			}
+		},
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"map_properties": {
+					"material": {
+						material: {
+							"new_block": f"{input_namespace}:{input_block_name}",
+							"new_properties": {
+								"block_data": "0"
+							}
+						}
+					}
+				}
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"new_properties": {
+				"material": material
+			}
+		},
+		"blockstate_from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"map_properties": {
+					"material": {
+						material: {
+							"new_block": f"{input_namespace}:{input_block_name}"
+						}
+					}
+				}
+			}
+		}
+	}
+
+
 def fence_gate(input_namespace: str, input_block_name: str, material: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
 	if universal_namespace is None:
 		universal_namespace = input_namespace
