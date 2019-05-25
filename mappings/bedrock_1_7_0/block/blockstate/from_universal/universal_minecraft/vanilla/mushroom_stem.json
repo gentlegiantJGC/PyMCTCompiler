@@ -1,0 +1,53 @@
+{
+    "new_block": "universal_minecraft:red_mushroom_block",
+    "new_properties": {
+        "variant": "stem"
+    },
+    "map_properties": {
+        "up": {
+            "true": {
+                "map_properties": {
+                    "down": {
+                        "true": {
+                            "map_properties": {
+                                "north": {
+                                    "true": {
+                                        "map_properties": {
+                                            "east": {
+                                                "true": {
+                                                    "map_properties": {
+                                                        "south": {
+                                                            "true": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_stem"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "material": {
+            "brown": {
+                "new_block": "universal_minecraft:brown_mushroom_block"
+            },
+            "red": {
+                "new_block": "universal_minecraft:red_mushroom_block"
+            }
+        }
+    }
+}

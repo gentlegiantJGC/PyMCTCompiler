@@ -1,4 +1,5 @@
 from typing import Dict, List
+import itertools
 
 
 def default(input_namespace: str, input_block_name: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
@@ -3811,3 +3812,325 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 				}
 			}
 		}
+
+
+def mushroom_block(input_namespace: str, input_block_name: str, color: str) -> dict:
+	directions = {  # up, down, north, east, south, west
+		f'universal_minecraft:{color}_mushroom_block': {
+			0: ['false', 'false', 'false', 'false', 'false', 'false'],
+			1: ['true', 'false', 'true', 'false', 'false', 'true'],
+			2: ['true', 'false', 'true', 'false', 'false', 'false'],
+			3: ['true', 'false', 'true', 'true', 'false', 'false'],
+			4: ['true', 'false', 'false', 'false', 'false', 'true'],
+			5: ['true', 'false', 'false', 'false', 'false', 'false'],
+			6: ['true', 'false', 'false', 'true', 'false', 'false'],
+			7: ['true', 'false', 'false', 'false', 'true', 'true'],
+			8: ['true', 'false', 'false', 'false', 'true', 'false'],
+			9: ['true', 'false', 'false', 'true', 'true', 'false'],
+			14: ['true', 'true', 'true', 'true', 'true', 'true']
+		},
+		'universal_minecraft:mushroom_stem': {
+			10: ['false', 'false', 'true', 'true', 'true', 'true'],
+			15: ['true', 'true', 'true', 'true', 'true', 'true']
+		}
+	}
+
+	data_to_variant = {
+		0: "all_inside",
+		1: "north_west",
+		2: "north",
+		3: "north_east",
+		4: "west",
+		5: "center",
+		6: "east",
+		7: "south_west",
+		8: "south",
+		9: "south_east",
+		10: "stem",
+		14: "all_outside",
+		15: "all_stem",
+	}
+
+	nearest_map = {}
+	for dirs in list(itertools.product(['true', 'false'], repeat=6)):
+		count = -1
+		nearest = None
+		for data, dirs2 in directions[f'universal_minecraft:{color}_mushroom_block'].items():
+			count_temp = sum(d1 == d2 for d1, d2 in zip(dirs, dirs2))
+			if count_temp == 6:
+				nearest_map[dirs] = data
+				break
+			elif count_temp > count:
+				nearest = data
+				count = count_temp
+		else:
+			nearest_map[dirs] = nearest
+
+	return {
+		"to_universal": {
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_block": block,
+						"new_properties": {
+							f'universal_minecraft:{color}_mushroom_block': {
+								"up": dirs[0],
+								"down": dirs[1],
+								"north": dirs[2],
+								"east": dirs[3],
+								"south": dirs[4],
+								"west": dirs[5]
+							},
+							'universal_minecraft:mushroom_stem': {
+								"up": dirs[0],
+								"down": dirs[1],
+								"north": dirs[2],
+								"east": dirs[3],
+								"south": dirs[4],
+								"west": dirs[5],
+								"material": color
+							}
+						}[block]
+					} for block in directions.keys() for data, dirs in directions[block].items()
+				}
+			}
+		},
+		"from_universal": {
+			f'universal_minecraft:{color}_mushroom_block': {
+				"new_block": f'universal_minecraft:{color}_mushroom_block',
+				"map_properties": {
+					"up": {
+						up: {
+							"map_properties": {
+								"down": {
+									down: {
+										"map_properties": {
+											"north": {
+												north: {
+													"map_properties": {
+														"east": {
+															east: {
+																"map_properties": {
+																	"south": {
+																		south: {
+																			"map_properties": {
+																				"west": {
+																					west: {
+																						"new_properties": {
+																							"block_data": str(nearest_map[(up, down, north, east, south, west)])
+																						}
+																					} for west in ('true', 'false')
+																				}
+																			}
+																		} for south in ('true', 'false')
+																	}
+																}
+															} for east in ('true', 'false')
+														}
+													}
+												} for north in ('true', 'false')
+											}
+										}
+									} for down in ('true', 'false')
+								}
+							}
+						} for up in ('true', 'false')
+					}
+				}
+			},
+			'universal_minecraft:mushroom_stem': {
+				"new_block": 'universal_minecraft:red_mushroom_block',
+				"new_properties": {
+					"block_data": "10"
+				},
+				"map_properties": {
+					"up": {
+						'true': {
+							"map_properties": {
+								"down": {
+									'true': {
+										"map_properties": {
+											"north": {
+												'true': {
+													"map_properties": {
+														"east": {
+															'true': {
+																"map_properties": {
+																	"south": {
+																		'true': {
+																			"map_properties": {
+																				"west": {
+																					'true': {
+																						"new_properties": {
+																							"block_data": "15"
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"material": {
+						color: {
+							"new_block": f'universal_minecraft:{color}_mushroom_block'
+						}
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"variant": [
+					"all_inside",
+					"north_west",
+					"north",
+					"north_east",
+					"west",
+					"center",
+					"east",
+					"south_west",
+					"south",
+					"south_east",
+					"stem",
+					"all_outside",
+					"all_stem",
+				]
+			},
+			"defaults": {
+				"variant": "all_outside"
+			}
+		},
+		"blockstate_to_universal": {
+			"map_properties": {
+				"variant": {
+					data_to_variant[data]: {
+						"new_block": block,
+						"new_properties": {
+							f'universal_minecraft:{color}_mushroom_block': {
+								"up": dirs[0],
+								"down": dirs[1],
+								"north": dirs[2],
+								"east": dirs[3],
+								"south": dirs[4],
+								"west": dirs[5]
+							},
+							'universal_minecraft:mushroom_stem': {
+								"up": dirs[0],
+								"down": dirs[1],
+								"north": dirs[2],
+								"east": dirs[3],
+								"south": dirs[4],
+								"west": dirs[5],
+								"material": color
+							}
+						}[block]
+					} for block in directions.keys() for data, dirs in directions[block].items()
+				}
+			}
+		},
+		"blockstate_from_universal": {
+			f'universal_minecraft:{color}_mushroom_block': {
+				"new_block": f'universal_minecraft:{color}_mushroom_block',
+				"map_properties": {
+					"up": {
+						up: {
+							"map_properties": {
+								"down": {
+									down: {
+										"map_properties": {
+											"north": {
+												north: {
+													"map_properties": {
+														"east": {
+															east: {
+																"map_properties": {
+																	"south": {
+																		south: {
+																			"map_properties": {
+																				"west": {
+																					west: {
+																						"new_properties": {
+																							"variant": data_to_variant[nearest_map[(up, down, north, east, south, west)]]
+																						}
+																					} for west in ('true', 'false')
+																				}
+																			}
+																		} for south in ('true', 'false')
+																	}
+																}
+															} for east in ('true', 'false')
+														}
+													}
+												} for north in ('true', 'false')
+											}
+										}
+									} for down in ('true', 'false')
+								}
+							}
+						} for up in ('true', 'false')
+					}
+				}
+			},
+			'universal_minecraft:mushroom_stem': {
+				"new_block": 'universal_minecraft:red_mushroom_block',
+				"new_properties": {
+					"variant": "stem"
+				},
+				"map_properties": {
+					"up": {
+						'true': {
+							"map_properties": {
+								"down": {
+									'true': {
+										"map_properties": {
+											"north": {
+												'true': {
+													"map_properties": {
+														"east": {
+															'true': {
+																"map_properties": {
+																	"south": {
+																		'true': {
+																			"map_properties": {
+																				"west": {
+																					'true': {
+																						"new_properties": {
+																							"variant": "all_stem"
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"material": {
+						color: {
+							"new_block": f'universal_minecraft:{color}_mushroom_block'
+						}
+					}
+				}
+			}
+		}
+	}

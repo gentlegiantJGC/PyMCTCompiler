@@ -40,7 +40,8 @@
                 "north": "true",
                 "south": "true",
                 "up": "true",
-                "west": "true"
+                "west": "true",
+                "material": "red"
             }
         }
 	}

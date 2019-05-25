@@ -1,0 +1,699 @@
+{
+    "new_block": "universal_minecraft:red_mushroom_block",
+    "map_properties": {
+        "up": {
+            "true": {
+                "map_properties": {
+                    "down": {
+                        "true": {
+                            "map_properties": {
+                                "north": {
+                                    "true": {
+                                        "map_properties": {
+                                            "east": {
+                                                "true": {
+                                                    "map_properties": {
+                                                        "south": {
+                                                            "true": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_outside"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_outside"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "false": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_outside"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "north_east"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "false": {
+                                                    "map_properties": {
+                                                        "south": {
+                                                            "true": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_outside"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "north"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "false": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "north_west"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "north"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "false": {
+                                        "map_properties": {
+                                            "east": {
+                                                "true": {
+                                                    "map_properties": {
+                                                        "south": {
+                                                            "true": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_outside"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "south_east"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "false": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "west"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "east"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "false": {
+                                                    "map_properties": {
+                                                        "south": {
+                                                            "true": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "south_west"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "south"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "false": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "west"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "center"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "false": {
+                            "map_properties": {
+                                "north": {
+                                    "true": {
+                                        "map_properties": {
+                                            "east": {
+                                                "true": {
+                                                    "map_properties": {
+                                                        "south": {
+                                                            "true": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_outside"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "north_east"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "false": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "north_west"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "north_east"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "false": {
+                                                    "map_properties": {
+                                                        "south": {
+                                                            "true": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "north_west"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "north"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "false": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "north_west"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "north"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "false": {
+                                        "map_properties": {
+                                            "east": {
+                                                "true": {
+                                                    "map_properties": {
+                                                        "south": {
+                                                            "true": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "south_west"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "south_east"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "false": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "west"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "east"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "false": {
+                                                    "map_properties": {
+                                                        "south": {
+                                                            "true": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "south_west"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "south"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "false": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "west"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "center"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "false": {
+                "map_properties": {
+                    "down": {
+                        "true": {
+                            "map_properties": {
+                                "north": {
+                                    "true": {
+                                        "map_properties": {
+                                            "east": {
+                                                "true": {
+                                                    "map_properties": {
+                                                        "south": {
+                                                            "true": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_outside"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_outside"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "false": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_outside"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "north_east"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "false": {
+                                                    "map_properties": {
+                                                        "south": {
+                                                            "true": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_outside"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_inside"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "false": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "north_west"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_inside"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "false": {
+                                        "map_properties": {
+                                            "east": {
+                                                "true": {
+                                                    "map_properties": {
+                                                        "south": {
+                                                            "true": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_outside"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "south_east"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "false": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_inside"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_inside"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "false": {
+                                                    "map_properties": {
+                                                        "south": {
+                                                            "true": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "south_west"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_inside"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "false": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_inside"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_inside"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "false": {
+                            "map_properties": {
+                                "north": {
+                                    "true": {
+                                        "map_properties": {
+                                            "east": {
+                                                "true": {
+                                                    "map_properties": {
+                                                        "south": {
+                                                            "true": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_outside"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "north_east"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "false": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "north_west"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "north_east"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "false": {
+                                                    "map_properties": {
+                                                        "south": {
+                                                            "true": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "north_west"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_inside"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "false": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "north_west"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_inside"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "false": {
+                                        "map_properties": {
+                                            "east": {
+                                                "true": {
+                                                    "map_properties": {
+                                                        "south": {
+                                                            "true": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "south_west"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "south_east"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "false": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_inside"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_inside"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "false": {
+                                                    "map_properties": {
+                                                        "south": {
+                                                            "true": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "south_west"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_inside"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "false": {
+                                                                "map_properties": {
+                                                                    "west": {
+                                                                        "true": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_inside"
+                                                                            }
+                                                                        },
+                                                                        "false": {
+                                                                            "new_properties": {
+                                                                                "variant": "all_inside"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
