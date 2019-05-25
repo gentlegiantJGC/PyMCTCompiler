@@ -93,6 +93,65 @@ def direct_data(input_namespace: str, input_block_name: str, property_name: str,
 	}
 
 
+def auto_id(entity_id: str, universal_blocks: List[str]):
+	return {
+		"specification": {
+			"nbt_identifier": entity_id,
+			"nbt": {
+				"": {
+					"type": "compound",
+					"val": {}
+				}
+			}
+		},
+		"to_universal": {
+			"map_input_nbt": {
+				"": {
+					"type": "compound",
+					"keys": {}
+				}
+			}
+		},
+		"from_universal": {
+			universal_block: {
+				"map_input_nbt": {
+					"": {
+						"type": "compound",
+						"keys": {}
+					}
+				}
+			} for universal_block in universal_blocks
+		},
+		"blockstate_specification": {
+			"nbt_identifier": entity_id,
+			"nbt": {
+				"": {
+					"type": "compound",
+					"val": {}
+				}
+			}
+		},
+		"blockstate_to_universal": {
+			"map_input_nbt": {
+				"": {
+					"type": "compound",
+					"keys": {}
+				}
+			}
+		},
+		"blockstate_from_universal": {
+			universal_block: {
+				"map_input_nbt": {
+					"": {
+						"type": "compound",
+						"keys": {}
+					}
+				}
+			} for universal_block in universal_blocks
+		}
+	}
+
+
 def liquid(input_namespace: str, input_block_name: str, flowing_: bool, universal_namespace: str = None, universal_block_name: str = None) -> dict:
 	if universal_namespace is None:
 		universal_namespace = input_namespace

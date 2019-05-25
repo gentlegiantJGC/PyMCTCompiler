@@ -83,7 +83,7 @@
 	"cactus": "cactus",
 	"clay": "clay",
 	"reeds": "reeds",
-	"jukebox": null,
+	"jukebox": ["jukebox", "jukebox_nbt", "default_specification"],
 	"fence": null,
 	"pumpkin": "pumpkin_java",
 	"netherrack": "netherrack",
