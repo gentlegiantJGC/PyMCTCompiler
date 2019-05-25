@@ -1,5 +1,5 @@
 {
-    "new_block": "universal_minecraft:brown_mushroom_block",
+    "new_block": "minecraft:brown_mushroom_block",
     "map_properties": {
         "up": {
             "true": {

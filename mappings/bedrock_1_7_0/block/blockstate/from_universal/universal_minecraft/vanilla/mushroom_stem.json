@@ -1,5 +1,5 @@
 {
-    "new_block": "universal_minecraft:red_mushroom_block",
+    "new_block": "minecraft:red_mushroom_block",
     "new_properties": {
         "variant": "stem"
     },
@@ -43,10 +43,10 @@
         },
         "material": {
             "brown": {
-                "new_block": "universal_minecraft:brown_mushroom_block"
+                "new_block": "minecraft:brown_mushroom_block"
             },
             "red": {
-                "new_block": "universal_minecraft:red_mushroom_block"
+                "new_block": "minecraft:red_mushroom_block"
             }
         }
     }

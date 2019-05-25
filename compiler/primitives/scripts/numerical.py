@@ -3897,7 +3897,7 @@ def mushroom_block(input_namespace: str, input_block_name: str, color: str) -> d
 		},
 		"from_universal": {
 			f'universal_minecraft:{color}_mushroom_block': {
-				"new_block": f'universal_minecraft:{color}_mushroom_block',
+				"new_block": f'minecraft:{color}_mushroom_block',
 				"map_properties": {
 					"up": {
 						up: {
@@ -3939,7 +3939,7 @@ def mushroom_block(input_namespace: str, input_block_name: str, color: str) -> d
 				}
 			},
 			'universal_minecraft:mushroom_stem': {
-				"new_block": 'universal_minecraft:red_mushroom_block',
+				"new_block": 'minecraft:red_mushroom_block',
 				"new_properties": {
 					"block_data": "10"
 				},
@@ -3983,7 +3983,7 @@ def mushroom_block(input_namespace: str, input_block_name: str, color: str) -> d
 					},
 					"material": {
 						color: {
-							"new_block": f'universal_minecraft:{color}_mushroom_block'
+							"new_block": f'minecraft:{color}_mushroom_block'
 						}
 					}
 				}
@@ -4041,7 +4041,7 @@ def mushroom_block(input_namespace: str, input_block_name: str, color: str) -> d
 		},
 		"blockstate_from_universal": {
 			f'universal_minecraft:{color}_mushroom_block': {
-				"new_block": f'universal_minecraft:{color}_mushroom_block',
+				"new_block": f'minecraft:{color}_mushroom_block',
 				"map_properties": {
 					"up": {
 						up: {
@@ -4083,7 +4083,7 @@ def mushroom_block(input_namespace: str, input_block_name: str, color: str) -> d
 				}
 			},
 			'universal_minecraft:mushroom_stem': {
-				"new_block": 'universal_minecraft:red_mushroom_block',
+				"new_block": 'minecraft:red_mushroom_block',
 				"new_properties": {
 					"variant": "stem"
 				},
@@ -4127,7 +4127,7 @@ def mushroom_block(input_namespace: str, input_block_name: str, color: str) -> d
 					},
 					"material": {
 						color: {
-							"new_block": f'universal_minecraft:{color}_mushroom_block'
+							"new_block": f'minecraft:{color}_mushroom_block'
 						}
 					}
 				}
