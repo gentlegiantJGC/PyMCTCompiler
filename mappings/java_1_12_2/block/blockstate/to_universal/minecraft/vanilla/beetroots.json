@@ -1,11 +1,27 @@
 {
     "new_block": "universal_minecraft:beetroots",
-    "carry_properties": {
-        "age": [
-            "0",
-            "1",
-            "2",
-            "3"
-        ]
+    "map_properties": {
+        "age": {
+            "0": {
+                "new_properties": {
+                    "age": "0"
+                }
+            },
+            "1": {
+                "new_properties": {
+                    "age": "2"
+                }
+            },
+            "2": {
+                "new_properties": {
+                    "age": "4"
+                }
+            },
+            "3": {
+                "new_properties": {
+                    "age": "7"
+                }
+            }
+        }
     }
 }

@@ -2,27 +2,27 @@
     "map_properties": {
         "block_data": {
             "0": {
-                "new_block": "universal_minecraft:beetroots",
                 "new_properties": {
+                    "new_block": "universal_minecraft:beetroots",
                     "age": "0"
                 }
             },
             "1": {
-                "new_block": "universal_minecraft:beetroots",
                 "new_properties": {
-                    "age": "1"
-                }
-            },
-            "2": {
-                "new_block": "universal_minecraft:beetroots",
-                "new_properties": {
+                    "new_block": "universal_minecraft:beetroots",
                     "age": "2"
                 }
             },
-            "3": {
-                "new_block": "universal_minecraft:beetroots",
+            "2": {
                 "new_properties": {
-                    "age": "3"
+                    "new_block": "universal_minecraft:beetroots",
+                    "age": "4"
+                }
+            },
+            "3": {
+                "new_properties": {
+                    "new_block": "universal_minecraft:beetroots",
+                    "age": "7"
                 }
             }
         }
