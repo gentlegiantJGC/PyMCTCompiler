@@ -206,7 +206,7 @@
 	"purpur_double_slab": "purpur_double_slab_java",
 	"purpur_slab": "purpur_slab_java",
 	"end_bricks": "end_bricks",
-	"beetroots": null,
+	"beetroots": "beetroots_java",
 	"grass_path": "grass_path",
 	"end_gateway": null,
 	"repeating_command_block": null,

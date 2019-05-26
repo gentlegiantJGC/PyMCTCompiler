@@ -445,5 +445,6 @@
 	"dispenser": ["id_dispenser_java_1_13", "items_java_1_13", "dispenser"],
 	"stone_bricks": "stone_bricks",
 	"cracked_stone_bricks": "cracked_stone_bricks",
-	"mossy_stone_bricks": "mossy_stone_bricks"
+	"mossy_stone_bricks": "mossy_stone_bricks",
+	"beetroots": "beetroots"
 }

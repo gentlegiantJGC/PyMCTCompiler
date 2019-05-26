@@ -1,25 +1,25 @@
 {
-    "new_block": "universal_minecraft:beetroots",
+    "new_block": "minecraft:beetroot",
     "map_properties": {
         "age": {
             "0": {
                 "new_properties": {
-                    "age": "0"
+                    "block_data": "0"
                 }
             },
             "1": {
                 "new_properties": {
-                    "age": "2"
+                    "block_data": "1"
                 }
             },
             "2": {
                 "new_properties": {
-                    "age": "4"
+                    "block_data": "2"
                 }
             },
             "3": {
                 "new_properties": {
-                    "age": "7"
+                    "block_data": "3"
                 }
             }
         }

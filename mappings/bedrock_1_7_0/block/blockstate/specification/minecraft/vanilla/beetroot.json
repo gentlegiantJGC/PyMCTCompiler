@@ -1,6 +1,5 @@
 {
-    "new_block": "minecraft:beetroot",
-    "carry_properties": {
+    "properties": {
         "age": [
             "0",
             "1",
@@ -11,5 +10,8 @@
             "6",
             "7"
         ]
+    },
+    "defaults": {
+        "age": "0"
     }
 }
