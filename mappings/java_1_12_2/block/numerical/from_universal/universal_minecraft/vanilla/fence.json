@@ -7,6 +7,12 @@
                     "block_data": "0"
                 }
             },
+            "nether_brick": {
+                "new_block": "minecraft:nether_brick_fence",
+                "new_properties": {
+                    "block_data": "0"
+                }
+            },
             "spruce": {
                 "new_block": "minecraft:spruce_fence",
                 "new_properties": {

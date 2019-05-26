@@ -4,6 +4,9 @@
             "oak": {
                 "new_block": "minecraft:fence"
             },
+            "nether_brick": {
+                "new_block": "minecraft:nether_brick_fence"
+            },
             "spruce": {
                 "new_block": "minecraft:spruce_fence"
             },

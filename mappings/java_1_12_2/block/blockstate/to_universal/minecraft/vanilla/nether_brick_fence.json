@@ -1,0 +1,6 @@
+{
+    "new_block": "universal_minecraft:fence",
+    "new_properties": {
+        "material": "nether_brick"
+    }
+}
