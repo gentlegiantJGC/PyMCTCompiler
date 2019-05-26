@@ -2745,7 +2745,7 @@ def trapdoor_java(input_namespace: str, input_block_name: str, material: str) ->
 						"new_properties": {
 							"half": {0: "bottom", 8: "top"}[data & 8],
 							"open": {0: "false", 4: "true"}[data & 4],
-							"facing": {0: "south", 1: "north", 2: "east", 3: "west"}[data & 3]
+							"facing": {0: "north", 1: "south", 2: "west", 3: "east"}[data & 3]
 						}
 					} for data in range(16)
 				}
@@ -2770,7 +2770,7 @@ def trapdoor_java(input_namespace: str, input_block_name: str, material: str) ->
 													"new_properties": {
 														"block_data": str(data8 + data4 + data3)
 													}
-												} for data3, facing in {0: "south", 1: "north", 2: "east", 3: "west"}.items()
+												} for data3, facing in {0: "north", 1: "south", 2: "west", 3: "east"}.items()
 											}
 										}
 									} for data4, door_open in {0: "false", 4: "true"}.items()

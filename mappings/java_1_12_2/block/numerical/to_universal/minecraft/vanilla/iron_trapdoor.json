@@ -1,0 +1,137 @@
+{
+    "new_properties": {
+        "material": "iron"
+    },
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:trapdoor",
+                "new_properties": {
+                    "half": "bottom",
+                    "open": "false",
+                    "facing": "north"
+                }
+            },
+            "1": {
+                "new_block": "universal_minecraft:trapdoor",
+                "new_properties": {
+                    "half": "bottom",
+                    "open": "false",
+                    "facing": "south"
+                }
+            },
+            "2": {
+                "new_block": "universal_minecraft:trapdoor",
+                "new_properties": {
+                    "half": "bottom",
+                    "open": "false",
+                    "facing": "west"
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:trapdoor",
+                "new_properties": {
+                    "half": "bottom",
+                    "open": "false",
+                    "facing": "east"
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:trapdoor",
+                "new_properties": {
+                    "half": "bottom",
+                    "open": "true",
+                    "facing": "north"
+                }
+            },
+            "5": {
+                "new_block": "universal_minecraft:trapdoor",
+                "new_properties": {
+                    "half": "bottom",
+                    "open": "true",
+                    "facing": "south"
+                }
+            },
+            "6": {
+                "new_block": "universal_minecraft:trapdoor",
+                "new_properties": {
+                    "half": "bottom",
+                    "open": "true",
+                    "facing": "west"
+                }
+            },
+            "7": {
+                "new_block": "universal_minecraft:trapdoor",
+                "new_properties": {
+                    "half": "bottom",
+                    "open": "true",
+                    "facing": "east"
+                }
+            },
+            "8": {
+                "new_block": "universal_minecraft:trapdoor",
+                "new_properties": {
+                    "half": "top",
+                    "open": "false",
+                    "facing": "north"
+                }
+            },
+            "9": {
+                "new_block": "universal_minecraft:trapdoor",
+                "new_properties": {
+                    "half": "top",
+                    "open": "false",
+                    "facing": "south"
+                }
+            },
+            "10": {
+                "new_block": "universal_minecraft:trapdoor",
+                "new_properties": {
+                    "half": "top",
+                    "open": "false",
+                    "facing": "west"
+                }
+            },
+            "11": {
+                "new_block": "universal_minecraft:trapdoor",
+                "new_properties": {
+                    "half": "top",
+                    "open": "false",
+                    "facing": "east"
+                }
+            },
+            "12": {
+                "new_block": "universal_minecraft:trapdoor",
+                "new_properties": {
+                    "half": "top",
+                    "open": "true",
+                    "facing": "north"
+                }
+            },
+            "13": {
+                "new_block": "universal_minecraft:trapdoor",
+                "new_properties": {
+                    "half": "top",
+                    "open": "true",
+                    "facing": "south"
+                }
+            },
+            "14": {
+                "new_block": "universal_minecraft:trapdoor",
+                "new_properties": {
+                    "half": "top",
+                    "open": "true",
+                    "facing": "west"
+                }
+            },
+            "15": {
+                "new_block": "universal_minecraft:trapdoor",
+                "new_properties": {
+                    "half": "top",
+                    "open": "true",
+                    "facing": "east"
+                }
+            }
+        }
+    }
+}
