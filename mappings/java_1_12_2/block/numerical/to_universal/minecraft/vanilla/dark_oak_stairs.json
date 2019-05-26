@@ -1,0 +1,70 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:stairs",
+                "new_properties": {
+                    "material": "dark_oak",
+                    "facing": "east",
+                    "half": "bottom"
+                }
+            },
+            "1": {
+                "new_block": "universal_minecraft:stairs",
+                "new_properties": {
+                    "material": "dark_oak",
+                    "facing": "west",
+                    "half": "bottom"
+                }
+            },
+            "2": {
+                "new_block": "universal_minecraft:stairs",
+                "new_properties": {
+                    "material": "dark_oak",
+                    "facing": "south",
+                    "half": "bottom"
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:stairs",
+                "new_properties": {
+                    "material": "dark_oak",
+                    "facing": "north",
+                    "half": "bottom"
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:stairs",
+                "new_properties": {
+                    "material": "dark_oak",
+                    "facing": "east",
+                    "half": "top"
+                }
+            },
+            "5": {
+                "new_block": "universal_minecraft:stairs",
+                "new_properties": {
+                    "material": "dark_oak",
+                    "facing": "west",
+                    "half": "top"
+                }
+            },
+            "6": {
+                "new_block": "universal_minecraft:stairs",
+                "new_properties": {
+                    "material": "dark_oak",
+                    "facing": "south",
+                    "half": "top"
+                }
+            },
+            "7": {
+                "new_block": "universal_minecraft:stairs",
+                "new_properties": {
+                    "material": "dark_oak",
+                    "facing": "north",
+                    "half": "top"
+                }
+            }
+        }
+    }
+}

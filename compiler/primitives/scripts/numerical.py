@@ -1561,26 +1561,25 @@ def stairs(input_namespace: str, input_block_name: str, material: str, universal
 		},
 		"from_universal": {
 			f"{universal_namespace}:{universal_block_name}": {
+				"new_block": "minecraft:oak_stairs",
 				"map_properties": {
 					"material": {
 						material: {
+							"new_block": f"{input_namespace}:{input_block_name}"
+						}
+					},
+					"half": {
+						half: {
 							"map_properties": {
-								"half": {
-									half: {
-										"map_properties": {
-											"facing": {
-												facing: {
-													"new_block": f"{input_namespace}:{input_block_name}",
-													"new_properties": {
-														"block_data": str(data3 + data4 * 4)
-													}
-												} for data3, facing in enumerate(["east", "west", "south", "north"])
-											}
+								"facing": {
+									facing: {
+										"new_properties": {
+											"block_data": str(data3 + data4 * 4)
 										}
-									} for data4, half in enumerate(["bottom", "top"])
+									} for data3, facing in enumerate(["east", "west", "south", "north"])
 								}
 							}
-						}
+						} for data4, half in enumerate(["bottom", "top"])
 					}
 				}
 			}
@@ -1610,13 +1609,13 @@ def stairs(input_namespace: str, input_block_name: str, material: str, universal
 				"map_properties": {
 					"material": {
 						material: {
-							"new_block": f"{input_namespace}:{input_block_name}",
-							"carry_properties": {
-								"facing": ["north", "east", "south", "west"],
-								"half": ["bottom", "top"]
-							}
+							"new_block": f"{input_namespace}:{input_block_name}"
 						}
 					}
+				},
+				"carry_properties": {
+					"facing": ["north", "east", "south", "west"],
+					"half": ["bottom", "top"]
 				}
 			}
 		}
