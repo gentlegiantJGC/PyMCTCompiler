@@ -1,0 +1,150 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:fence_gate",
+                "new_properties": {
+                    "material": "birch",
+                    "facing": "south",
+                    "open": "false",
+                    "powered": "false"
+                }
+            },
+            "1": {
+                "new_block": "universal_minecraft:fence_gate",
+                "new_properties": {
+                    "material": "birch",
+                    "facing": "west",
+                    "open": "false",
+                    "powered": "false"
+                }
+            },
+            "2": {
+                "new_block": "universal_minecraft:fence_gate",
+                "new_properties": {
+                    "material": "birch",
+                    "facing": "north",
+                    "open": "false",
+                    "powered": "false"
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:fence_gate",
+                "new_properties": {
+                    "material": "birch",
+                    "facing": "east",
+                    "open": "false",
+                    "powered": "false"
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:fence_gate",
+                "new_properties": {
+                    "material": "birch",
+                    "facing": "south",
+                    "open": "true",
+                    "powered": "false"
+                }
+            },
+            "5": {
+                "new_block": "universal_minecraft:fence_gate",
+                "new_properties": {
+                    "material": "birch",
+                    "facing": "west",
+                    "open": "true",
+                    "powered": "false"
+                }
+            },
+            "6": {
+                "new_block": "universal_minecraft:fence_gate",
+                "new_properties": {
+                    "material": "birch",
+                    "facing": "north",
+                    "open": "true",
+                    "powered": "false"
+                }
+            },
+            "7": {
+                "new_block": "universal_minecraft:fence_gate",
+                "new_properties": {
+                    "material": "birch",
+                    "facing": "east",
+                    "open": "true",
+                    "powered": "false"
+                }
+            },
+            "8": {
+                "new_block": "universal_minecraft:fence_gate",
+                "new_properties": {
+                    "material": "birch",
+                    "facing": "south",
+                    "open": "false",
+                    "powered": "true"
+                }
+            },
+            "9": {
+                "new_block": "universal_minecraft:fence_gate",
+                "new_properties": {
+                    "material": "birch",
+                    "facing": "west",
+                    "open": "false",
+                    "powered": "true"
+                }
+            },
+            "10": {
+                "new_block": "universal_minecraft:fence_gate",
+                "new_properties": {
+                    "material": "birch",
+                    "facing": "north",
+                    "open": "false",
+                    "powered": "true"
+                }
+            },
+            "11": {
+                "new_block": "universal_minecraft:fence_gate",
+                "new_properties": {
+                    "material": "birch",
+                    "facing": "east",
+                    "open": "false",
+                    "powered": "true"
+                }
+            },
+            "12": {
+                "new_block": "universal_minecraft:fence_gate",
+                "new_properties": {
+                    "material": "birch",
+                    "facing": "south",
+                    "open": "true",
+                    "powered": "true"
+                }
+            },
+            "13": {
+                "new_block": "universal_minecraft:fence_gate",
+                "new_properties": {
+                    "material": "birch",
+                    "facing": "west",
+                    "open": "true",
+                    "powered": "true"
+                }
+            },
+            "14": {
+                "new_block": "universal_minecraft:fence_gate",
+                "new_properties": {
+                    "material": "birch",
+                    "facing": "north",
+                    "open": "true",
+                    "powered": "true"
+                }
+            },
+            "15": {
+                "new_block": "universal_minecraft:fence_gate",
+                "new_properties": {
+                    "material": "birch",
+                    "facing": "east",
+                    "open": "true",
+                    "powered": "true"
+                }
+            }
+        }
+    }
+}

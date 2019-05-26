@@ -2092,7 +2092,7 @@ def fence_java(input_namespace: str, input_block_name: str, material: str, unive
 	}
 
 
-def fence_gate(input_namespace: str, input_block_name: str, material: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+def fence_gate_bedrock(input_namespace: str, input_block_name: str, material: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
 	if universal_namespace is None:
 		universal_namespace = input_namespace
 	if universal_block_name is None:
@@ -2179,6 +2179,99 @@ def fence_gate(input_namespace: str, input_block_name: str, material: str, unive
 					"facing": ["south", "west", "north", "east"],
 					"open": ["false", "true"],
 					"in_wall": ["false", "true"]
+				}
+			}
+		}
+	}
+
+
+def fence_gate_java(input_namespace: str, input_block_name: str, material: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	return {
+		"to_universal": {
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_block": f"{universal_namespace}:{universal_block_name}",
+						"new_properties": {
+							"material": material,
+							"facing": ["south", "west", "north", "east"][data & 3],
+							"open": {0: "false", 4: "true"}[data & 4],
+							"powered": {0: "false", 8: "true"}[data & 8]
+						}
+					} for data in range(16)
+				}
+			}
+		},
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"map_properties": {
+					"material": {
+						material: {
+							"new_block": f"{input_namespace}:{input_block_name}",
+						}
+					},
+					"powered": {
+						powered: {
+							"map_properties": {
+								"open": {
+									is_open: {
+										"map_properties": {
+											"facing": {
+												facing: {
+													"new_properties": {
+														"block_data": str(data3 + data4 + data8)
+													}
+												} for data3, facing in enumerate(["south", "west", "north", "east"])
+											}
+										}
+									} for data4, is_open in {0: "false", 4: "true"}.items()
+								}
+							}
+						} for data8, powered in {0: "false", 8: "true"}.items()
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"facing": ["south", "west", "north", "east"],
+				"open": ["false", "true"],
+				"powered": ["false", "true"]
+			},
+			"defaults": {
+				"facing": "south",
+				"open": "false",
+				"powered": "false"
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": f"{universal_namespace}:{universal_block_name}",
+			"new_properties": {
+				"material": material
+			},
+			"carry_properties": {
+				"facing": ["south", "west", "north", "east"],
+				"open": ["false", "true"],
+				"powered": ["false", "true"]
+			}
+		},
+		"blockstate_from_universal": {
+			f"{universal_namespace}:{universal_block_name}": {
+				"map_properties": {
+					"material": {
+						material: {
+							"new_block": f"{input_namespace}:{input_block_name}",
+						}
+					}
+				},
+				"carry_properties": {
+					"facing": ["south", "west", "north", "east"],
+					"open": ["false", "true"],
+					"powered": ["false", "true"]
 				}
 			}
 		}

@@ -1,0 +1,22 @@
+{
+    "new_block": "universal_minecraft:fence_gate",
+    "new_properties": {
+        "material": "oak"
+    },
+    "carry_properties": {
+        "facing": [
+            "south",
+            "west",
+            "north",
+            "east"
+        ],
+        "open": [
+            "false",
+            "true"
+        ],
+        "powered": [
+            "false",
+            "true"
+        ]
+    }
+}
