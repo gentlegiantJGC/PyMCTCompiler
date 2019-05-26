@@ -131,11 +131,5 @@
 				"$ref": "#/definitions/mapping_functions"
 			}
 		}
-	},
-	"required": [
-		"to_universal",
-		"from_universal",
-		"blockstate_to_universal",
-		"blockstate_from_universal"
-	]
+	}
 }
