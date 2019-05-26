@@ -1,0 +1,48 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:cake",
+                "new_properties": {
+                    "bites": "0"
+                }
+            },
+            "1": {
+                "new_block": "universal_minecraft:cake",
+                "new_properties": {
+                    "bites": "1"
+                }
+            },
+            "2": {
+                "new_block": "universal_minecraft:cake",
+                "new_properties": {
+                    "bites": "2"
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:cake",
+                "new_properties": {
+                    "bites": "3"
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:cake",
+                "new_properties": {
+                    "bites": "4"
+                }
+            },
+            "5": {
+                "new_block": "universal_minecraft:cake",
+                "new_properties": {
+                    "bites": "5"
+                }
+            },
+            "6": {
+                "new_block": "universal_minecraft:cake",
+                "new_properties": {
+                    "bites": "6"
+                }
+            }
+        }
+    }
+}

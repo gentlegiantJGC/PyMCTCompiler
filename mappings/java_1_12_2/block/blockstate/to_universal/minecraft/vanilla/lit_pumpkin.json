@@ -1,0 +1,11 @@
+{
+    "new_block": "universal_minecraft:jack_o_lantern",
+    "carry_properties": {
+        "facing": [
+            "south",
+            "west",
+            "north",
+            "east"
+        ]
+    }
+}
