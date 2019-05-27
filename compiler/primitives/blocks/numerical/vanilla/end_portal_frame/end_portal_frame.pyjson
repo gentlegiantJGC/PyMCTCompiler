@@ -1,0 +1,85 @@
+{
+	"to_universal": {
+		"map_properties": {
+			"block_data": {
+				str(data): {
+					"new_block": "universal_minecraft:end_portal_frame",
+					"new_properties": {
+						"facing": {0: "north", 1: "south", 2: "west", 3: "east"}[data & 3],
+						"eye": {0: "true", 4: "false"}[data & 4]
+					}
+				} for data in range(8)
+			}
+		}
+	},
+	"from_universal": {
+		"universal_minecraft:end_portal_frame": {
+			"new_block": "minecraft:end_portal_frame",
+			"map_properties": {
+				"eye": {
+					eye: {
+						"map_properties": {
+							"facing": {
+								facing: {
+									"new_properties": {
+										"block_data": str(data4 + data3)
+									}
+								} for data3, facing in {0: "north", 1: "south", 2: "west", 3: "east"}.items()
+							}
+						}
+					} for data4, eye in {0: "true", 4: "false"}.items()
+				}
+			}
+		}
+	},
+	"blockstate_specification": {
+		"properties": {
+			"eye": [
+				"true",
+				"false"
+			],
+			"facing": [
+				"north",
+				"south",
+				"west",
+				"east"
+			]
+		},
+		"defaults": {
+			"facing": "south",
+			"eye": "false"
+		}
+	},
+	"blockstate_to_universal": {
+		"new_block": "universal_minecraft:end_portal_frame",
+		"carry_properties": {
+			"eye": [
+				"true",
+				"false"
+			],
+			"facing": [
+				"north",
+				"south",
+				"west",
+				"east"
+			]
+		}
+	},
+	"blockstate_from_universal": {
+		"universal_minecraft:end_portal_frame": {
+			"new_block": "minecraft:end_portal_frame",
+			"carry_properties": {
+				"eye": [
+					"true",
+					"false"
+				],
+				"facing": [
+					"north",
+					"south",
+					"west",
+					"east"
+				]
+			}
+		}
+	}
+}

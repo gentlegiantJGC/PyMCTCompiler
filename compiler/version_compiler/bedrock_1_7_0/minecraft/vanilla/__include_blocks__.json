@@ -119,7 +119,7 @@
 	"brewing_stand": null,
 	"cauldron": null,
 	"end_portal": null,
-	"end_portal_frame": null,
+	"end_portal_frame": "end_portal_frame",
 	"end_stone": "end_stone",
 	"dragon_egg": "dragon_egg",
 	"redstone_lamp": "redstone_lamp",
