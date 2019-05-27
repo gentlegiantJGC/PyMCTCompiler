@@ -1,0 +1,1 @@
+numerical.compass("minecraft", "trapped_chest", {2: "north", 3: "south", 4: "west", 5: "east"}, "universal_minecraft")

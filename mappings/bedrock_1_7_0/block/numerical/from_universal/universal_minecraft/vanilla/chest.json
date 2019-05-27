@@ -1,0 +1,30 @@
+{
+    "map_properties": {
+        "facing": {
+            "north": {
+                "new_block": "minecraft:chest",
+                "new_properties": {
+                    "block_data": "2"
+                }
+            },
+            "south": {
+                "new_block": "minecraft:chest",
+                "new_properties": {
+                    "block_data": "3"
+                }
+            },
+            "west": {
+                "new_block": "minecraft:chest",
+                "new_properties": {
+                    "block_data": "4"
+                }
+            },
+            "east": {
+                "new_block": "minecraft:chest",
+                "new_properties": {
+                    "block_data": "5"
+                }
+            }
+        }
+    }
+}
