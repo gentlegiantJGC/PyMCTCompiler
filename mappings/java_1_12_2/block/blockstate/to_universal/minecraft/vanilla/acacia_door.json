@@ -1,0 +1,30 @@
+{
+    "new_block": "universal_minecraft:door",
+    "new_properties": {
+        "material": "acacia"
+    },
+    "carry_properties": {
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ],
+        "half": [
+            "upper",
+            "lower"
+        ],
+        "hinge": [
+            "left",
+            "right"
+        ],
+        "open": [
+            "true",
+            "false"
+        ],
+        "powered": [
+            "true",
+            "false"
+        ]
+    }
+}
