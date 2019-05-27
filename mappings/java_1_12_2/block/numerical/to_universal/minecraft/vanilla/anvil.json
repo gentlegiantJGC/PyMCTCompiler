@@ -1,0 +1,90 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:anvil",
+                "new_properties": {
+                    "facing": "south",
+                    "age": "normal"
+                }
+            },
+            "1": {
+                "new_block": "universal_minecraft:anvil",
+                "new_properties": {
+                    "facing": "west",
+                    "age": "normal"
+                }
+            },
+            "2": {
+                "new_block": "universal_minecraft:anvil",
+                "new_properties": {
+                    "facing": "north",
+                    "age": "normal"
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:anvil",
+                "new_properties": {
+                    "facing": "east",
+                    "age": "normal"
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:anvil",
+                "new_properties": {
+                    "facing": "south",
+                    "age": "chipped"
+                }
+            },
+            "5": {
+                "new_block": "universal_minecraft:anvil",
+                "new_properties": {
+                    "facing": "west",
+                    "age": "chipped"
+                }
+            },
+            "6": {
+                "new_block": "universal_minecraft:anvil",
+                "new_properties": {
+                    "facing": "north",
+                    "age": "chipped"
+                }
+            },
+            "7": {
+                "new_block": "universal_minecraft:anvil",
+                "new_properties": {
+                    "facing": "east",
+                    "age": "chipped"
+                }
+            },
+            "8": {
+                "new_block": "universal_minecraft:anvil",
+                "new_properties": {
+                    "facing": "south",
+                    "age": "normal"
+                }
+            },
+            "9": {
+                "new_block": "universal_minecraft:anvil",
+                "new_properties": {
+                    "facing": "west",
+                    "age": "normal"
+                }
+            },
+            "10": {
+                "new_block": "universal_minecraft:anvil",
+                "new_properties": {
+                    "facing": "north",
+                    "age": "normal"
+                }
+            },
+            "11": {
+                "new_block": "universal_minecraft:anvil",
+                "new_properties": {
+                    "facing": "east",
+                    "age": "normal"
+                }
+            }
+        }
+    }
+}

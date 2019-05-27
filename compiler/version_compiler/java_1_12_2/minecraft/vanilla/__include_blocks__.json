@@ -144,7 +144,7 @@
 	"potatoes": "potatoes",
 	"wooden_button": "java_wooden_button",
 	"skull": null,
-	"anvil": null,
+	"anvil": "anvil",
 	"trapped_chest": null,
 	"light_weighted_pressure_plate": "light_weighted_pressure_plate",
 	"heavy_weighted_pressure_plate": "heavy_weighted_pressure_plate",
