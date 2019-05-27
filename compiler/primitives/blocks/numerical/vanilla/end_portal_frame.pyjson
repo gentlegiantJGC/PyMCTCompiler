@@ -6,7 +6,7 @@
 					"new_block": "universal_minecraft:end_portal_frame",
 					"new_properties": {
 						"facing": {0: "north", 1: "south", 2: "west", 3: "east"}[data & 3],
-						"eye": {0: "true", 4: "false"}[data & 4]
+						"eye": {0: "false", 4: "true"}[data & 4]
 					}
 				} for data in range(8)
 			}
@@ -27,7 +27,7 @@
 								} for data3, facing in {0: "north", 1: "south", 2: "west", 3: "east"}.items()
 							}
 						}
-					} for data4, eye in {0: "true", 4: "false"}.items()
+					} for data4, eye in {0: "false", 4: "true"}.items()
 				}
 			}
 		}

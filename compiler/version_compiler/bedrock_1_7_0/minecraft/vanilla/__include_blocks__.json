@@ -105,7 +105,7 @@
 	"melon_block": "melon_block",
 	"pumpkin_stem": "pumpkin_stem",
 	"melon_stem": "melon_stem",
-	"vine": null,
+	"vine": "vine",
 	"fence_gate": "fence_gate_bedrock",
 	"brick_stairs": "brick_stairs",
 	"stone_brick_stairs": "stone_brick_stairs",

@@ -1,0 +1,171 @@
+{
+    "new_block": "minecraft:vine",
+    "map_properties": {
+        "east": {
+            "false": {
+                "map_properties": {
+                    "north": {
+                        "false": {
+                            "map_properties": {
+                                "west": {
+                                    "false": {
+                                        "map_properties": {
+                                            "south": {
+                                                "false": {
+                                                    "new_properties": {
+                                                        "block_data": "0"
+                                                    }
+                                                },
+                                                "true": {
+                                                    "new_properties": {
+                                                        "block_data": "1"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "true": {
+                                        "map_properties": {
+                                            "south": {
+                                                "false": {
+                                                    "new_properties": {
+                                                        "block_data": "2"
+                                                    }
+                                                },
+                                                "true": {
+                                                    "new_properties": {
+                                                        "block_data": "3"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "map_properties": {
+                                "west": {
+                                    "false": {
+                                        "map_properties": {
+                                            "south": {
+                                                "false": {
+                                                    "new_properties": {
+                                                        "block_data": "4"
+                                                    }
+                                                },
+                                                "true": {
+                                                    "new_properties": {
+                                                        "block_data": "5"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "true": {
+                                        "map_properties": {
+                                            "south": {
+                                                "false": {
+                                                    "new_properties": {
+                                                        "block_data": "6"
+                                                    }
+                                                },
+                                                "true": {
+                                                    "new_properties": {
+                                                        "block_data": "7"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "true": {
+                "map_properties": {
+                    "north": {
+                        "false": {
+                            "map_properties": {
+                                "west": {
+                                    "false": {
+                                        "map_properties": {
+                                            "south": {
+                                                "false": {
+                                                    "new_properties": {
+                                                        "block_data": "8"
+                                                    }
+                                                },
+                                                "true": {
+                                                    "new_properties": {
+                                                        "block_data": "9"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "true": {
+                                        "map_properties": {
+                                            "south": {
+                                                "false": {
+                                                    "new_properties": {
+                                                        "block_data": "10"
+                                                    }
+                                                },
+                                                "true": {
+                                                    "new_properties": {
+                                                        "block_data": "11"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "map_properties": {
+                                "west": {
+                                    "false": {
+                                        "map_properties": {
+                                            "south": {
+                                                "false": {
+                                                    "new_properties": {
+                                                        "block_data": "12"
+                                                    }
+                                                },
+                                                "true": {
+                                                    "new_properties": {
+                                                        "block_data": "13"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "true": {
+                                        "map_properties": {
+                                            "south": {
+                                                "false": {
+                                                    "new_properties": {
+                                                        "block_data": "14"
+                                                    }
+                                                },
+                                                "true": {
+                                                    "new_properties": {
+                                                        "block_data": "15"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

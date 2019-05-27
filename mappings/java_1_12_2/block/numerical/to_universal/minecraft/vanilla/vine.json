@@ -1,0 +1,141 @@
+{
+    "map_properties": {
+        "block_data": {
+            "1": {
+                "new_block": "universal_minecraft:vine",
+                "new_properties": {
+                    "east": "false",
+                    "north": "false",
+                    "west": "false",
+                    "south": "true"
+                }
+            },
+            "2": {
+                "new_block": "universal_minecraft:vine",
+                "new_properties": {
+                    "east": "false",
+                    "north": "false",
+                    "west": "true",
+                    "south": "false"
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:vine",
+                "new_properties": {
+                    "east": "false",
+                    "north": "false",
+                    "west": "true",
+                    "south": "true"
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:vine",
+                "new_properties": {
+                    "east": "false",
+                    "north": "true",
+                    "west": "false",
+                    "south": "false"
+                }
+            },
+            "5": {
+                "new_block": "universal_minecraft:vine",
+                "new_properties": {
+                    "east": "false",
+                    "north": "true",
+                    "west": "false",
+                    "south": "true"
+                }
+            },
+            "6": {
+                "new_block": "universal_minecraft:vine",
+                "new_properties": {
+                    "east": "false",
+                    "north": "true",
+                    "west": "true",
+                    "south": "false"
+                }
+            },
+            "7": {
+                "new_block": "universal_minecraft:vine",
+                "new_properties": {
+                    "east": "false",
+                    "north": "true",
+                    "west": "true",
+                    "south": "true"
+                }
+            },
+            "8": {
+                "new_block": "universal_minecraft:vine",
+                "new_properties": {
+                    "east": "true",
+                    "north": "false",
+                    "west": "false",
+                    "south": "false"
+                }
+            },
+            "9": {
+                "new_block": "universal_minecraft:vine",
+                "new_properties": {
+                    "east": "true",
+                    "north": "false",
+                    "west": "false",
+                    "south": "true"
+                }
+            },
+            "10": {
+                "new_block": "universal_minecraft:vine",
+                "new_properties": {
+                    "east": "true",
+                    "north": "false",
+                    "west": "true",
+                    "south": "false"
+                }
+            },
+            "11": {
+                "new_block": "universal_minecraft:vine",
+                "new_properties": {
+                    "east": "true",
+                    "north": "false",
+                    "west": "true",
+                    "south": "true"
+                }
+            },
+            "12": {
+                "new_block": "universal_minecraft:vine",
+                "new_properties": {
+                    "east": "true",
+                    "north": "true",
+                    "west": "false",
+                    "south": "false"
+                }
+            },
+            "13": {
+                "new_block": "universal_minecraft:vine",
+                "new_properties": {
+                    "east": "true",
+                    "north": "true",
+                    "west": "false",
+                    "south": "true"
+                }
+            },
+            "14": {
+                "new_block": "universal_minecraft:vine",
+                "new_properties": {
+                    "east": "true",
+                    "north": "true",
+                    "west": "true",
+                    "south": "false"
+                }
+            },
+            "15": {
+                "new_block": "universal_minecraft:vine",
+                "new_properties": {
+                    "east": "true",
+                    "north": "true",
+                    "west": "true",
+                    "south": "true"
+                }
+            }
+        }
+    }
+}

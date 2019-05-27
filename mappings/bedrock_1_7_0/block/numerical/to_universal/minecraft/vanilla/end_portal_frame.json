@@ -5,56 +5,56 @@
                 "new_block": "universal_minecraft:end_portal_frame",
                 "new_properties": {
                     "facing": "north",
-                    "eye": "true"
+                    "eye": "false"
                 }
             },
             "1": {
                 "new_block": "universal_minecraft:end_portal_frame",
                 "new_properties": {
                     "facing": "south",
-                    "eye": "true"
+                    "eye": "false"
                 }
             },
             "2": {
                 "new_block": "universal_minecraft:end_portal_frame",
                 "new_properties": {
                     "facing": "west",
-                    "eye": "true"
+                    "eye": "false"
                 }
             },
             "3": {
                 "new_block": "universal_minecraft:end_portal_frame",
                 "new_properties": {
                     "facing": "east",
-                    "eye": "true"
+                    "eye": "false"
                 }
             },
             "4": {
                 "new_block": "universal_minecraft:end_portal_frame",
                 "new_properties": {
                     "facing": "north",
-                    "eye": "false"
+                    "eye": "true"
                 }
             },
             "5": {
                 "new_block": "universal_minecraft:end_portal_frame",
                 "new_properties": {
                     "facing": "south",
-                    "eye": "false"
+                    "eye": "true"
                 }
             },
             "6": {
                 "new_block": "universal_minecraft:end_portal_frame",
                 "new_properties": {
                     "facing": "west",
-                    "eye": "false"
+                    "eye": "true"
                 }
             },
             "7": {
                 "new_block": "universal_minecraft:end_portal_frame",
                 "new_properties": {
                     "facing": "east",
-                    "eye": "false"
+                    "eye": "true"
                 }
             }
         }
