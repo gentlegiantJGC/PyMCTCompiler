@@ -1,0 +1,45 @@
+{
+	"to_universal": {
+		"map_properties": {
+			"block_data": {
+				"0": {
+					"new_block": "universal_minecraft:redstone_lamp",
+					"new_properties": {
+						"lit": "true"
+					}
+				}
+			}
+		}
+	},
+	"from_universal": {
+		"universal_minecraft:redstone_lamp": {
+			"map_properties": {
+				"lit": {
+					"true": {
+						"new_block": "minecraft:lit_redstone_lamp",
+						"new_properties": {
+							"block_data": "0"
+						}
+					}
+				}
+			}
+		}
+	},
+	"blockstate_to_universal": {
+		"new_block": "universal_minecraft:redstone_lamp",
+		"new_properties": {
+			"lit": "true"
+		}
+	},
+	"blockstate_from_universal": {
+		"universal_minecraft:redstone_lamp": {
+			"map_properties": {
+				"lit": {
+					"true": {
+						"new_block": "minecraft:lit_redstone_lamp"
+					}
+				}
+			}
+		}
+	}
+}

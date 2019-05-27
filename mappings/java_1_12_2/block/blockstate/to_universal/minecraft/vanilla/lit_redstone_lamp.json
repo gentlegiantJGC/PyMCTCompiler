@@ -1,0 +1,6 @@
+{
+    "new_block": "universal_minecraft:redstone_lamp",
+    "new_properties": {
+        "lit": "true"
+    }
+}
