@@ -126,7 +126,7 @@
 	"lit_redstone_lamp": "lit_redstone_lamp",
 	"dropper": null,
 	"activator_rail": "activator_rail",
-	"cocoa": null,
+	"cocoa": "cocoa",
 	"sandstone_stairs": "sandstone_stairs",
 	"emerald_ore": "emerald_ore",
 	"ender_chest": ["ender_chest"],
