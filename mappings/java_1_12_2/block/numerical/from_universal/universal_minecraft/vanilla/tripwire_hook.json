@@ -1,0 +1,123 @@
+{
+    "new_block": "minecraft:tripwire_hook",
+    "map_properties": {
+        "powered": {
+            "false": {
+                "map_properties": {
+                    "attached": {
+                        "false": {
+                            "map_properties": {
+                                "facing": {
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "map_properties": {
+                                "facing": {
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "true": {
+                "map_properties": {
+                    "attached": {
+                        "false": {
+                            "map_properties": {
+                                "facing": {
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "8"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "9"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "10"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "11"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "map_properties": {
+                                "facing": {
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "12"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "13"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "14"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "15"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -130,7 +130,7 @@
 	"sandstone_stairs": "sandstone_stairs",
 	"emerald_ore": "emerald_ore",
 	"ender_chest": ["ender_chest"],
-	"tripwire_hook": null,
+	"tripwire_hook": "tripwire_hook",
 	"tripwire": null,
 	"emerald_block": "emerald_block",
 	"spruce_stairs": "spruce_stairs",

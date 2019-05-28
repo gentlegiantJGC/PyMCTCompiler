@@ -1,0 +1,134 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:tripwire_hook",
+                "new_properties": {
+                    "powered": "false",
+                    "attached": "false",
+                    "facing": "south"
+                }
+            },
+            "1": {
+                "new_block": "universal_minecraft:tripwire_hook",
+                "new_properties": {
+                    "powered": "false",
+                    "attached": "false",
+                    "facing": "west"
+                }
+            },
+            "2": {
+                "new_block": "universal_minecraft:tripwire_hook",
+                "new_properties": {
+                    "powered": "false",
+                    "attached": "false",
+                    "facing": "north"
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:tripwire_hook",
+                "new_properties": {
+                    "powered": "false",
+                    "attached": "false",
+                    "facing": "east"
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:tripwire_hook",
+                "new_properties": {
+                    "powered": "false",
+                    "attached": "true",
+                    "facing": "south"
+                }
+            },
+            "5": {
+                "new_block": "universal_minecraft:tripwire_hook",
+                "new_properties": {
+                    "powered": "false",
+                    "attached": "true",
+                    "facing": "west"
+                }
+            },
+            "6": {
+                "new_block": "universal_minecraft:tripwire_hook",
+                "new_properties": {
+                    "powered": "false",
+                    "attached": "true",
+                    "facing": "north"
+                }
+            },
+            "7": {
+                "new_block": "universal_minecraft:tripwire_hook",
+                "new_properties": {
+                    "powered": "false",
+                    "attached": "true",
+                    "facing": "east"
+                }
+            },
+            "8": {
+                "new_block": "universal_minecraft:tripwire_hook",
+                "new_properties": {
+                    "powered": "true",
+                    "attached": "false",
+                    "facing": "south"
+                }
+            },
+            "9": {
+                "new_block": "universal_minecraft:tripwire_hook",
+                "new_properties": {
+                    "powered": "true",
+                    "attached": "false",
+                    "facing": "west"
+                }
+            },
+            "10": {
+                "new_block": "universal_minecraft:tripwire_hook",
+                "new_properties": {
+                    "powered": "true",
+                    "attached": "false",
+                    "facing": "north"
+                }
+            },
+            "11": {
+                "new_block": "universal_minecraft:tripwire_hook",
+                "new_properties": {
+                    "powered": "true",
+                    "attached": "false",
+                    "facing": "east"
+                }
+            },
+            "12": {
+                "new_block": "universal_minecraft:tripwire_hook",
+                "new_properties": {
+                    "powered": "true",
+                    "attached": "true",
+                    "facing": "south"
+                }
+            },
+            "13": {
+                "new_block": "universal_minecraft:tripwire_hook",
+                "new_properties": {
+                    "powered": "true",
+                    "attached": "true",
+                    "facing": "west"
+                }
+            },
+            "14": {
+                "new_block": "universal_minecraft:tripwire_hook",
+                "new_properties": {
+                    "powered": "true",
+                    "attached": "true",
+                    "facing": "north"
+                }
+            },
+            "15": {
+                "new_block": "universal_minecraft:tripwire_hook",
+                "new_properties": {
+                    "powered": "true",
+                    "attached": "true",
+                    "facing": "east"
+                }
+            }
+        }
+    }
+}
