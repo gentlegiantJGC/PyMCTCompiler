@@ -1,0 +1,16 @@
+{
+    "new_block": "minecraft:hopper",
+    "carry_properties": {
+        "enabled": [
+            "true",
+            "false"
+        ],
+        "facing": [
+            "down",
+            "north",
+            "south",
+            "west",
+            "east"
+        ]
+    }
+}

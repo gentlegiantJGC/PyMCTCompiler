@@ -1,0 +1,69 @@
+{
+    "new_block": "minecraft:hopper",
+    "map_properties": {
+        "enabled": {
+            "false": {
+                "map_properties": {
+                    "facing": {
+                        "down": {
+                            "new_properties": {
+                                "block_data": "0"
+                            }
+                        },
+                        "north": {
+                            "new_properties": {
+                                "block_data": "2"
+                            }
+                        },
+                        "south": {
+                            "new_properties": {
+                                "block_data": "3"
+                            }
+                        },
+                        "west": {
+                            "new_properties": {
+                                "block_data": "4"
+                            }
+                        },
+                        "east": {
+                            "new_properties": {
+                                "block_data": "5"
+                            }
+                        }
+                    }
+                }
+            },
+            "true": {
+                "map_properties": {
+                    "facing": {
+                        "down": {
+                            "new_properties": {
+                                "block_data": "8"
+                            }
+                        },
+                        "north": {
+                            "new_properties": {
+                                "block_data": "10"
+                            }
+                        },
+                        "south": {
+                            "new_properties": {
+                                "block_data": "11"
+                            }
+                        },
+                        "west": {
+                            "new_properties": {
+                                "block_data": "12"
+                            }
+                        },
+                        "east": {
+                            "new_properties": {
+                                "block_data": "13"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

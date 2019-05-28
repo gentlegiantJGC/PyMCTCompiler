@@ -153,7 +153,7 @@
 	"daylight_detector": null,
 	"redstone_block": "redstone_block",
 	"quartz_ore": "quartz_ore",
-	"hopper": null,
+	"hopper": "hopper",
 	"quartz_block": null,
 	"quartz_stairs": "quartz_stairs",
 	"double_wooden_slab": "double_wooden_slab",
