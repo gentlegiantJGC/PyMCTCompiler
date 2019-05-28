@@ -22,7 +22,11 @@
             "brown_mushroom",
             "fern",
             "dead_bush",
-            "cactus"
+            "cactus",
+            "potted_bamboo",
+            "cornflower",
+            "lily_of_the_valley",
+            "wither_rose"
         ]
     },
     "defaults": {

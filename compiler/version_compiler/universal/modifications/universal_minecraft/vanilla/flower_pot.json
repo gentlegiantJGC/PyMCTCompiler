@@ -21,7 +21,11 @@
 		"potted_brown_mushroom",
 		"potted_fern",
 		"potted_dead_bush",
-		"potted_cactus"
+		"potted_cactus",
+		"potted_bamboo",
+		"potted_cornflower",
+		"potted_lily_of_the_valley",
+		"potted_wither_rose"
 	],
 	"add": {
 		"flower_pot": {
@@ -48,7 +52,11 @@
 					"brown_mushroom",
 					"fern",
 					"dead_bush",
-					"cactus"
+					"cactus",
+					"potted_bamboo",
+					"cornflower",
+					"lily_of_the_valley",
+					"wither_rose"
 				]
 			},
 			"defaults": {
