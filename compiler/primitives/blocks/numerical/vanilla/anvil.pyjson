@@ -6,7 +6,7 @@
 					"new_block": "universal_minecraft:anvil",
 					"new_properties": {
 						"facing": {0: "south", 1: "west", 2: "north", 3: "east"}[data & 3],
-						"age": {0: "normal", 4: "chipped", 8: "damaged"}[data & 4]
+						"damage": {0: "normal", 4: "chipped", 8: "damaged"}[data & 4]
 					}
 				} for data in range(12)
 			}
@@ -16,8 +16,8 @@
 		"universal_minecraft:anvil": {
 			"new_block": "minecraft:anvil",
 			"map_properties": {
-				"age": {
-					age: {
+				"damage": {
+					damage: {
 						"map_properties": {
 							"facing": {
 								facing: {
@@ -27,7 +27,7 @@
 								} for data3, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
 							}
 						}
-					} for data4, age in {0: "normal", 4: "chipped", 8: "damaged"}.items()
+					} for data4, damage in {0: "normal", 4: "chipped", 8: "damaged"}.items()
 				}
 			}
 		}

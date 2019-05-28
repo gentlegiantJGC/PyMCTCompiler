@@ -1,7 +1,7 @@
 {
     "new_block": "minecraft:anvil",
     "map_properties": {
-        "age": {
+        "damage": {
             "normal": {
                 "map_properties": {
                     "facing": {

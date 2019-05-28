@@ -6,7 +6,7 @@
 					"new_block": "universal_minecraft:cocoa",
 					"new_properties": {
 						"facing": {0: "north", 1: "south", 2: "west", 3: "east"}[data & 3],
-						"age": str(data & 4)
+						"age": str(data >> 2)
 					}
 				} for data in range(12)
 			}
