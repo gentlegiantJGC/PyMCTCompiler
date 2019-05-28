@@ -1,0 +1,17 @@
+{
+    "new_block": "minecraft:cobblestone_wall",
+    "map_properties": {
+        "material": {
+            "cobblestone": {
+                "new_properties": {
+                    "block_data": "0"
+                }
+            },
+            "mossy_cobblestone": {
+                "new_properties": {
+                    "block_data": "1"
+                }
+            }
+        }
+    }
+}

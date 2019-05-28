@@ -138,7 +138,7 @@
 	"jungle_stairs": "jungle_stairs",
 	"command_block": ["impulse_command_block"],
 	"beacon": null,
-	"cobblestone_wall": null,
+	"cobblestone_wall": "cobblestone_wall",
 	"flower_pot": null,
 	"carrots": "carrots",
 	"potatoes": "potatoes",

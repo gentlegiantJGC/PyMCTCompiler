@@ -1,0 +1,9 @@
+{
+    "new_block": "minecraft:cobblestone_wall",
+    "carry_properties": {
+        "material": [
+            "cobblestone",
+            "mossy_cobblestone"
+        ]
+    }
+}
