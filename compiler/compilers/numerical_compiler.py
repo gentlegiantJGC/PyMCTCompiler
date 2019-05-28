@@ -1,5 +1,5 @@
 from compiler.compile import save_json, load_file, isdir, listdir, merge_map, DiskBuffer, log_to_file
-from compiler import primitives
+from compiler import primitives, version_compiler
 import traceback
 
 
@@ -11,28 +11,27 @@ def main(version_name: str, version_str: str):
 	"""
 	# iterate through all namespaces
 	output = DiskBuffer()
-	for namespace in listdir(f'{version_name}'):
-		if isdir(f'{version_name}/{namespace}'):
-			# iterate through all sub_names ('vanilla', 'chemistry'...)
-			for sub_name in listdir(f'{version_name}/{namespace}'):
-				if isdir(f'{version_name}/{namespace}/{sub_name}'):
-					# load __include_blocks__.json if it exists and unpack those primitive files
-					if '__include_blocks__.json' in listdir(f'{version_name}/{namespace}/{sub_name}'):
-						for block_file_name, primitive_block_name in load_file(f'{version_name}/{namespace}/{sub_name}/__include_blocks__.json').items():
-							if primitive_block_name is None:
-								continue
-							try:
-								process_block(output, primitives.get_block('numerical', primitive_block_name), version_name, namespace, sub_name, block_file_name)
-							except Exception as e:
-								log_to_file(f'Failed to process {version_name}/{namespace}/{sub_name}/{block_file_name}\n{e}\n{traceback.print_exc()}')
-					if '__include_entities__.json' in listdir(f'{version_name}/{namespace}/{sub_name}'):
-						for entity_file_name, primitive_entity_name in load_file(f'{version_name}/{namespace}/{sub_name}/__include_entities__.json').items():
-							if primitive_entity_name is None:
-								continue
-							try:
-								process_entity(output, primitives.get_entity(primitive_entity_name), version_name, namespace, sub_name, entity_file_name)
-							except Exception as e:
-								log_to_file(f'Failed to process {version_name}/{namespace}/{sub_name}/{entity_file_name}\n{e}\n{traceback.print_exc()}')
+	include_data = merge_parents(version_name)
+	for namespace in include_data:
+		# iterate through all sub_names ('vanilla', 'chemistry'...)
+		for sub_name in include_data[namespace]:
+			# load __include_blocks__.json if it exists and unpack those primitive files
+			if '__include_blocks__.json' in include_data[namespace][sub_name]:
+				for block_file_name, primitive_block_name in include_data[namespace][sub_name]['__include_blocks__.json'].items():
+					if primitive_block_name is None:
+						continue
+					try:
+						process_block(output, primitives.get_block('numerical', primitive_block_name), version_name, namespace, sub_name, block_file_name)
+					except Exception as e:
+						log_to_file(f'Failed to process {version_name}/{namespace}/{sub_name}/{block_file_name}\n{e}\n{traceback.print_exc()}')
+			if '__include_entities__.json' in include_data[namespace][sub_name]:
+				for entity_file_name, primitive_entity_name in include_data[namespace][sub_name]['__include_entities__.json'].items():
+					if primitive_entity_name is None:
+						continue
+					try:
+						process_entity(output, primitives.get_entity(primitive_entity_name), version_name, namespace, sub_name, entity_file_name)
+					except Exception as e:
+						log_to_file(f'Failed to process {version_name}/{namespace}/{sub_name}/{entity_file_name}\n{e}\n{traceback.print_exc()}')
 	return output.save()
 
 
@@ -128,3 +127,29 @@ def process_entity(buffer: DiskBuffer, entity_json: dict, version_name: str, nam
 				merge_map(block_data, f'{version_name}/block/{file_format}/from_universal/{namespace_}/{sub_name}/{block_name}.json', buffer=buffer)
 	else:
 		raise Exception(f'Universal type "{universal_type}" is not known')
+
+
+def merge_parents(version_name: str):
+	if hasattr(version_compiler, version_name) and hasattr(getattr(version_compiler, version_name), 'init'):
+		init = getattr(version_compiler, version_name).init
+		if hasattr(init, 'parent_version'):
+			include_data = merge_parents(init.parent_version)
+		else:
+			include_data = {}
+	else:
+		raise Exception(f'Issue getting init file for version {version_name}')
+
+	for namespace in listdir(f'{version_name}'):
+		if isdir(f'{version_name}/{namespace}'):
+			# iterate through all sub_names ('vanilla', 'chemistry'...)
+			for sub_name in listdir(f'{version_name}/{namespace}'):
+				if isdir(f'{version_name}/{namespace}/{sub_name}'):
+					# load __include_blocks__.json if it exists and unpack those primitive files
+					if '__include_blocks__.json' in listdir(f'{version_name}/{namespace}/{sub_name}'):
+						for block_file_name, primitive_block_name in load_file(f'{version_name}/{namespace}/{sub_name}/__include_blocks__.json').items():
+							include_data.setdefault(namespace, {}).setdefault(sub_name, {}).setdefault('__include_blocks__.json', {})[block_file_name] = primitive_block_name
+					if '__include_entities__.json' in listdir(f'{version_name}/{namespace}/{sub_name}'):
+						for entity_file_name, primitive_entity_name in load_file(f'{version_name}/{namespace}/{sub_name}/__include_entities__.json').items():
+							include_data.setdefault(namespace, {}).setdefault(sub_name, {}).setdefault('__include_entities__.json', {})[entity_file_name] = primitive_entity_name
+
+	return include_data

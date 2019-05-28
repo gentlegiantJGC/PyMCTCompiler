@@ -3,7 +3,7 @@ import os
 import shutil
 import time
 from typing import Union
-from compiler import primitives, version_compiler
+from compiler import version_compiler
 from compiler.helpers import log_to_file, merge_map_, blocks_from_server_, DiskBuffer, check_formatting
 
 uncompiled_dir = './version_compiler'
@@ -144,7 +144,7 @@ def main():
 	log_to_file('\tFinished deleting the mapping directory')
 	# iterate through all versions in the uncompiled directory
 	for version_name in listdir(''):
-		if not isdir(f'./{version_name}'):
+		if not isdir(f'./{version_name}') or version_name == '__pycache__':
 			continue
 		if hasattr(version_compiler, version_name) and hasattr(getattr(version_compiler, version_name), 'init'):
 			log_to_file(f'Compiling {version_name} ...')
@@ -166,7 +166,7 @@ def main():
 			else:
 				log_to_file(f'"block_format" in __init__.json for {version_name} is either not defined or not a valid value. This version has been skipped')
 		else:
-			log_to_file(f'Could not find __init__.json file for {version_name}. This version has been skipped')
+			log_to_file(f'Could not find __init__.json file for {version_name} This version has been skipped')
 	log_to_file(f'\nFinished compiling all versions in {round(time.time() - t2, 2)}')
 
 
