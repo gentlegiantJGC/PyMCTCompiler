@@ -10,7 +10,13 @@
             "bell",
             "guitar",
             "chime",
-            "xylophone"
+            "xylophone",
+            "iron_xylophone",
+            "cow_bell",
+            "didgeridoo",
+            "bit",
+            "banjo",
+            "pling"
         ],
         "note": [
             "0",
