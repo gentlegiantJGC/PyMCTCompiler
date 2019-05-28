@@ -1,0 +1,102 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:light_weighted_pressure_plate",
+                "new_properties": {
+                    "power": "0"
+                }
+            },
+            "1": {
+                "new_block": "universal_minecraft:light_weighted_pressure_plate",
+                "new_properties": {
+                    "power": "1"
+                }
+            },
+            "2": {
+                "new_block": "universal_minecraft:light_weighted_pressure_plate",
+                "new_properties": {
+                    "power": "2"
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:light_weighted_pressure_plate",
+                "new_properties": {
+                    "power": "3"
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:light_weighted_pressure_plate",
+                "new_properties": {
+                    "power": "4"
+                }
+            },
+            "5": {
+                "new_block": "universal_minecraft:light_weighted_pressure_plate",
+                "new_properties": {
+                    "power": "5"
+                }
+            },
+            "6": {
+                "new_block": "universal_minecraft:light_weighted_pressure_plate",
+                "new_properties": {
+                    "power": "6"
+                }
+            },
+            "7": {
+                "new_block": "universal_minecraft:light_weighted_pressure_plate",
+                "new_properties": {
+                    "power": "7"
+                }
+            },
+            "8": {
+                "new_block": "universal_minecraft:light_weighted_pressure_plate",
+                "new_properties": {
+                    "power": "8"
+                }
+            },
+            "9": {
+                "new_block": "universal_minecraft:light_weighted_pressure_plate",
+                "new_properties": {
+                    "power": "9"
+                }
+            },
+            "10": {
+                "new_block": "universal_minecraft:light_weighted_pressure_plate",
+                "new_properties": {
+                    "power": "10"
+                }
+            },
+            "11": {
+                "new_block": "universal_minecraft:light_weighted_pressure_plate",
+                "new_properties": {
+                    "power": "11"
+                }
+            },
+            "12": {
+                "new_block": "universal_minecraft:light_weighted_pressure_plate",
+                "new_properties": {
+                    "power": "12"
+                }
+            },
+            "13": {
+                "new_block": "universal_minecraft:light_weighted_pressure_plate",
+                "new_properties": {
+                    "power": "13"
+                }
+            },
+            "14": {
+                "new_block": "universal_minecraft:light_weighted_pressure_plate",
+                "new_properties": {
+                    "power": "14"
+                }
+            },
+            "15": {
+                "new_block": "universal_minecraft:light_weighted_pressure_plate",
+                "new_properties": {
+                    "power": "15"
+                }
+            }
+        }
+    }
+}

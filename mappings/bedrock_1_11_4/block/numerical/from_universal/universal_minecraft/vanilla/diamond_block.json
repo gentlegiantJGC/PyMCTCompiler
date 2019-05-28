@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:diamond_block",
+    "new_properties": {
+        "block_data": "0"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "map_properties": {
+        "polished": {
+            "false": {
+                "new_block": "minecraft:stone",
+                "new_properties": {
+                    "material": "diorite"
+                }
+            },
+            "true": {
+                "new_block": "minecraft:stone",
+                "new_properties": {
+                    "material": "polished_diorite"
+                }
+            }
+        }
+    }
+}

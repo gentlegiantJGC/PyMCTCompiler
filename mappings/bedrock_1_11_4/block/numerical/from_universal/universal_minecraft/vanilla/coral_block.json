@@ -1,0 +1,69 @@
+{
+    "new_block": "minecraft:coral_block",
+    "map_properties": {
+        "dead": {
+            "false": {
+                "map_properties": {
+                    "type": {
+                        "tube": {
+                            "new_properties": {
+                                "block_data": "0"
+                            }
+                        },
+                        "brain": {
+                            "new_properties": {
+                                "block_data": "1"
+                            }
+                        },
+                        "bubble": {
+                            "new_properties": {
+                                "block_data": "2"
+                            }
+                        },
+                        "fire": {
+                            "new_properties": {
+                                "block_data": "3"
+                            }
+                        },
+                        "horn": {
+                            "new_properties": {
+                                "block_data": "4"
+                            }
+                        }
+                    }
+                }
+            },
+            "true": {
+                "map_properties": {
+                    "type": {
+                        "tube": {
+                            "new_properties": {
+                                "block_data": "8"
+                            }
+                        },
+                        "brain": {
+                            "new_properties": {
+                                "block_data": "9"
+                            }
+                        },
+                        "bubble": {
+                            "new_properties": {
+                                "block_data": "10"
+                            }
+                        },
+                        "fire": {
+                            "new_properties": {
+                                "block_data": "11"
+                            }
+                        },
+                        "horn": {
+                            "new_properties": {
+                                "block_data": "12"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

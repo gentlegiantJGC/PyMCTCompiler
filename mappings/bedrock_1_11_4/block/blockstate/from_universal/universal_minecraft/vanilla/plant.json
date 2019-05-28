@@ -1,0 +1,78 @@
+{
+    "map_properties": {
+        "type": {
+            "grass": {
+                "new_block": "minecraft:tallgrass",
+                "new_properties": {
+                    "type": "grass"
+                }
+            },
+            "fern": {
+                "new_block": "minecraft:tallgrass",
+                "new_properties": {
+                    "type": "fern"
+                }
+            },
+            "dead_bush": {
+                "new_block": "minecraft:deadbush"
+            },
+            "dandelion": {
+                "new_block": "minecraft:yellow_flower"
+            },
+            "poppy": {
+                "new_block": "minecraft:red_flower",
+                "new_properties": {
+                    "type": "poppy"
+                }
+            },
+            "blue_orchid": {
+                "new_block": "minecraft:red_flower",
+                "new_properties": {
+                    "type": "blue_orchid"
+                }
+            },
+            "allium": {
+                "new_block": "minecraft:red_flower",
+                "new_properties": {
+                    "type": "allium"
+                }
+            },
+            "azure_bluet": {
+                "new_block": "minecraft:red_flower",
+                "new_properties": {
+                    "type": "azure_bluet"
+                }
+            },
+            "red_tulip": {
+                "new_block": "minecraft:red_flower",
+                "new_properties": {
+                    "type": "red_tulip"
+                }
+            },
+            "orange_tulip": {
+                "new_block": "minecraft:red_flower",
+                "new_properties": {
+                    "type": "orange_tulip"
+                }
+            },
+            "white_tulip": {
+                "new_block": "minecraft:red_flower",
+                "new_properties": {
+                    "type": "white_tulip"
+                }
+            },
+            "pink_tulip": {
+                "new_block": "minecraft:red_flower",
+                "new_properties": {
+                    "type": "pink_tulip"
+                }
+            },
+            "oxeye_daisy": {
+                "new_block": "minecraft:red_flower",
+                "new_properties": {
+                    "type": "oxeye_daisy"
+                }
+            }
+        }
+    }
+}

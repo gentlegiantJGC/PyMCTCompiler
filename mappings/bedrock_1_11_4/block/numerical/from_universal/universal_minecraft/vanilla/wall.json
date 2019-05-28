@@ -1,0 +1,72 @@
+{
+    "new_block": "minecraft:cobblestone_wall",
+    "map_properties": {
+        "material": {
+            "cobblestone": {
+                "new_properties": {
+                    "block_data": "0"
+                }
+            },
+            "mossy_cobblestone": {
+                "new_properties": {
+                    "block_data": "1"
+                }
+            },
+            "granite": {
+                "new_properties": {
+                    "block_data": "2"
+                }
+            },
+            "diorite": {
+                "new_properties": {
+                    "block_data": "3"
+                }
+            },
+            "andesite": {
+                "new_properties": {
+                    "block_data": "4"
+                }
+            },
+            "sandstone": {
+                "new_properties": {
+                    "block_data": "5"
+                }
+            },
+            "brick": {
+                "new_properties": {
+                    "block_data": "6"
+                }
+            },
+            "stone_brickmossy_stone_brick": {
+                "new_properties": {
+                    "block_data": "7"
+                }
+            },
+            "nether_brick": {
+                "new_properties": {
+                    "block_data": "8"
+                }
+            },
+            "end_stone_brick": {
+                "new_properties": {
+                    "block_data": "9"
+                }
+            },
+            "prismarine": {
+                "new_properties": {
+                    "block_data": "10"
+                }
+            },
+            "red_sandstone": {
+                "new_properties": {
+                    "block_data": "11"
+                }
+            },
+            "red_nether_brick": {
+                "new_properties": {
+                    "block_data": "12"
+                }
+            }
+        }
+    }
+}

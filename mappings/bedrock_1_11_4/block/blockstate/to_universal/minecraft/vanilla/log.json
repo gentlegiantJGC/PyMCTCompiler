@@ -1,0 +1,34 @@
+{
+    "carry_properties": {
+        "material": [
+            "oak",
+            "spruce",
+            "birch",
+            "jungle"
+        ],
+        "axis": [
+            "x",
+            "y",
+            "z"
+        ]
+    },
+    "map_properties": {
+        "axis": {
+            "x": {
+                "new_block": "universal_minecraft:log"
+            },
+            "y": {
+                "new_block": "universal_minecraft:log"
+            },
+            "z": {
+                "new_block": "universal_minecraft:log"
+            },
+            "all": {
+                "new_block": "universal_minecraft:wood",
+                "new_properties": {
+                    "axis": "y"
+                }
+            }
+        }
+    }
+}

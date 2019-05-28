@@ -1,0 +1,37 @@
+{
+    "new_block": "minecraft:piston",
+    "map_properties": {
+        "facing": {
+            "down": {
+                "new_properties": {
+                    "block_data": "0"
+                }
+            },
+            "up": {
+                "new_properties": {
+                    "block_data": "1"
+                }
+            },
+            "south": {
+                "new_properties": {
+                    "block_data": "2"
+                }
+            },
+            "north": {
+                "new_properties": {
+                    "block_data": "3"
+                }
+            },
+            "east": {
+                "new_properties": {
+                    "block_data": "4"
+                }
+            },
+            "west": {
+                "new_properties": {
+                    "block_data": "5"
+                }
+            }
+        }
+    }
+}

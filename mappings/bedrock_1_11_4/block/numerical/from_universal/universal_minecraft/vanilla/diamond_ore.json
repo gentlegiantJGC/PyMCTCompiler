@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:diamond_ore",
+    "new_properties": {
+        "block_data": "0"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "new_block": "universal_minecraft:command_block",
+    "carry_properties": {
+        "conditional": [
+            "false",
+            "true"
+        ],
+        "facing": [
+            "north",
+            "east",
+            "south",
+            "west",
+            "up",
+            "down"
+        ]
+    },
+    "new_properties": {
+        "mode": "repeating"
+    }
+}

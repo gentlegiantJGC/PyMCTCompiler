@@ -1,0 +1,237 @@
+{
+    "new_block": "minecraft:bed",
+    "map_properties": {
+        "part": {
+            "foot": {
+                "map_properties": {
+                    "occupied": {
+                        "false": {
+                            "map_properties": {
+                                "facing": {
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "map_properties": {
+                                "facing": {
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "head": {
+                "map_properties": {
+                    "occupied": {
+                        "false": {
+                            "map_properties": {
+                                "facing": {
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "8"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "9"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "10"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "11"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "map_properties": {
+                                "facing": {
+                                    "south": {
+                                        "new_properties": {
+                                            "block_data": "12"
+                                        }
+                                    },
+                                    "west": {
+                                        "new_properties": {
+                                            "block_data": "13"
+                                        }
+                                    },
+                                    "north": {
+                                        "new_properties": {
+                                            "block_data": "14"
+                                        }
+                                    },
+                                    "east": {
+                                        "new_properties": {
+                                            "block_data": "15"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "color": {
+            "white": {
+                "new_nbt": {
+                    "key": "color",
+                    "type": "byte",
+                    "value": 0
+                }
+            },
+            "orange": {
+                "new_nbt": {
+                    "key": "color",
+                    "type": "byte",
+                    "value": 1
+                }
+            },
+            "magenta": {
+                "new_nbt": {
+                    "key": "color",
+                    "type": "byte",
+                    "value": 2
+                }
+            },
+            "light_blue": {
+                "new_nbt": {
+                    "key": "color",
+                    "type": "byte",
+                    "value": 3
+                }
+            },
+            "yellow": {
+                "new_nbt": {
+                    "key": "color",
+                    "type": "byte",
+                    "value": 4
+                }
+            },
+            "lime": {
+                "new_nbt": {
+                    "key": "color",
+                    "type": "byte",
+                    "value": 5
+                }
+            },
+            "pink": {
+                "new_nbt": {
+                    "key": "color",
+                    "type": "byte",
+                    "value": 6
+                }
+            },
+            "gray": {
+                "new_nbt": {
+                    "key": "color",
+                    "type": "byte",
+                    "value": 7
+                }
+            },
+            "light_gray": {
+                "new_nbt": {
+                    "key": "color",
+                    "type": "byte",
+                    "value": 8
+                }
+            },
+            "cyan": {
+                "new_nbt": {
+                    "key": "color",
+                    "type": "byte",
+                    "value": 9
+                }
+            },
+            "purple": {
+                "new_nbt": {
+                    "key": "color",
+                    "type": "byte",
+                    "value": 10
+                }
+            },
+            "blue": {
+                "new_nbt": {
+                    "key": "color",
+                    "type": "byte",
+                    "value": 11
+                }
+            },
+            "brown": {
+                "new_nbt": {
+                    "key": "color",
+                    "type": "byte",
+                    "value": 12
+                }
+            },
+            "green": {
+                "new_nbt": {
+                    "key": "color",
+                    "type": "byte",
+                    "value": 13
+                }
+            },
+            "red": {
+                "new_nbt": {
+                    "key": "color",
+                    "type": "byte",
+                    "value": 14
+                }
+            },
+            "black": {
+                "new_nbt": {
+                    "key": "color",
+                    "type": "byte",
+                    "value": 15
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "map_properties": {
+        "block_data": {
+            "2": {
+                "new_block": "universal_minecraft:wall_sign",
+                "new_properties": {
+                    "facing": "north"
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:wall_sign",
+                "new_properties": {
+                    "facing": "south"
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:wall_sign",
+                "new_properties": {
+                    "facing": "west"
+                }
+            },
+            "5": {
+                "new_block": "universal_minecraft:wall_sign",
+                "new_properties": {
+                    "facing": "east"
+                }
+            }
+        }
+    }
+}

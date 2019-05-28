@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:stonebrick",
+    "new_properties": {
+        "variant": "chiseled"
+    }
+}

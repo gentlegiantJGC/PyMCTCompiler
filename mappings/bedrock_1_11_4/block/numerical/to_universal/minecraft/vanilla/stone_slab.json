@@ -1,0 +1,118 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "stone",
+                    "type": "bottom"
+                }
+            },
+            "1": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "sandstone",
+                    "type": "bottom"
+                }
+            },
+            "2": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "petrified_oak_slab",
+                    "type": "bottom"
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "cobblestone",
+                    "type": "bottom"
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "brick",
+                    "type": "bottom"
+                }
+            },
+            "5": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "stone_brick",
+                    "type": "bottom"
+                }
+            },
+            "6": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "quartz",
+                    "type": "bottom"
+                }
+            },
+            "7": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "nether_brick",
+                    "type": "bottom"
+                }
+            },
+            "8": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "stone",
+                    "type": "top"
+                }
+            },
+            "9": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "sandstone",
+                    "type": "top"
+                }
+            },
+            "10": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "petrified_oak_slab",
+                    "type": "top"
+                }
+            },
+            "11": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "cobblestone",
+                    "type": "top"
+                }
+            },
+            "12": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "brick",
+                    "type": "top"
+                }
+            },
+            "13": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "stone_brick",
+                    "type": "top"
+                }
+            },
+            "14": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "quartz",
+                    "type": "top"
+                }
+            },
+            "15": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "nether_brick",
+                    "type": "top"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "map_properties": {
+        "material": {
+            "oak": {
+                "new_block": "minecraft:wooden_door"
+            },
+            "iron": {
+                "new_block": "minecraft:iron_door"
+            },
+            "spruce": {
+                "new_block": "minecraft:spruce_door"
+            },
+            "birch": {
+                "new_block": "minecraft:birch_door"
+            },
+            "jungle": {
+                "new_block": "minecraft:jungle_door"
+            },
+            "acacia": {
+                "new_block": "minecraft:acacia_door"
+            },
+            "dark_oak": {
+                "new_block": "minecraft:dark_oak_door"
+            }
+        }
+    },
+    "carry_properties": {
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ],
+        "half": [
+            "upper",
+            "lower"
+        ],
+        "hinge": [
+            "left",
+            "right"
+        ],
+        "open": [
+            "true",
+            "false"
+        ],
+        "powered": [
+            "true",
+            "false"
+        ]
+    }
+}

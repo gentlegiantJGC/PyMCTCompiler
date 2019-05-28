@@ -1,0 +1,6 @@
+{
+    "new_block": "minecraft:stone",
+    "new_properties": {
+        "material": "stone"
+    }
+}

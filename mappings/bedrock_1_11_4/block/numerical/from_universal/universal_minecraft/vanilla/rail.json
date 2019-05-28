@@ -1,0 +1,66 @@
+{
+    "map_properties": {
+        "shape": {
+            "north_south": {
+                "new_block": "minecraft:rail",
+                "new_properties": {
+                    "block_data": "0"
+                }
+            },
+            "east_west": {
+                "new_block": "minecraft:rail",
+                "new_properties": {
+                    "block_data": "1"
+                }
+            },
+            "ascending_east": {
+                "new_block": "minecraft:rail",
+                "new_properties": {
+                    "block_data": "2"
+                }
+            },
+            "ascending_west": {
+                "new_block": "minecraft:rail",
+                "new_properties": {
+                    "block_data": "3"
+                }
+            },
+            "ascending_north": {
+                "new_block": "minecraft:rail",
+                "new_properties": {
+                    "block_data": "4"
+                }
+            },
+            "ascending_south": {
+                "new_block": "minecraft:rail",
+                "new_properties": {
+                    "block_data": "5"
+                }
+            },
+            "south_east": {
+                "new_block": "minecraft:rail",
+                "new_properties": {
+                    "block_data": "6"
+                }
+            },
+            "south_west": {
+                "new_block": "minecraft:rail",
+                "new_properties": {
+                    "block_data": "7"
+                }
+            },
+            "north_west": {
+                "new_block": "minecraft:rail",
+                "new_properties": {
+                    "block_data": "8"
+                }
+            },
+            "north_east": {
+                "new_block": "minecraft:rail",
+                "new_properties": {
+                    "block_data": "9"
+                }
+            }
+        }
+    }
+}

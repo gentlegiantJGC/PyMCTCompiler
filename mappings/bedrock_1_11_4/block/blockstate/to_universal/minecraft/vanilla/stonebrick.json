@@ -1,0 +1,27 @@
+{
+    "map_properties": {
+        "variant": {
+            "normal": {
+                "new_block": "universal_minecraft:stone_bricks",
+                "new_properties": {
+                    "variant": "normal"
+                }
+            },
+            "cracked": {
+                "new_block": "universal_minecraft:stone_bricks",
+                "new_properties": {
+                    "variant": "cracked"
+                }
+            },
+            "mossy": {
+                "new_block": "universal_minecraft:stone_bricks",
+                "new_properties": {
+                    "variant": "mossy"
+                }
+            },
+            "chiseled": {
+                "new_block": "universal_minecraft:chiseled_stone_bricks"
+            }
+        }
+    }
+}

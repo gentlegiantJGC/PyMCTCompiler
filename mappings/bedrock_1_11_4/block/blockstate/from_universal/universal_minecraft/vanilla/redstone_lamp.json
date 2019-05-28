@@ -1,0 +1,12 @@
+{
+    "map_properties": {
+        "lit": {
+            "false": {
+                "new_block": "minecraft:redstone_lamp"
+            },
+            "true": {
+                "new_block": "minecraft:lit_redstone_lamp"
+            }
+        }
+    }
+}

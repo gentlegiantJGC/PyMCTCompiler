@@ -1,0 +1,36 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:coral",
+                "new_properties": {
+                    "type": "tube"
+                }
+            },
+            "1": {
+                "new_block": "universal_minecraft:coral",
+                "new_properties": {
+                    "type": "brain"
+                }
+            },
+            "2": {
+                "new_block": "universal_minecraft:coral",
+                "new_properties": {
+                    "type": "bubble"
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:coral",
+                "new_properties": {
+                    "type": "fire"
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:coral",
+                "new_properties": {
+                    "type": "horn"
+                }
+            }
+        }
+    }
+}

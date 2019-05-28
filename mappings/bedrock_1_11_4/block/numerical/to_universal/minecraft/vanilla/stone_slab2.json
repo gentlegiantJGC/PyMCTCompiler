@@ -1,0 +1,76 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "red_sandstone",
+                    "type": "bottom"
+                }
+            },
+            "1": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "purpur",
+                    "type": "bottom"
+                }
+            },
+            "2": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "prismarine",
+                    "type": "bottom"
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "prismarine_brick",
+                    "type": "bottom"
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "dark_prismarine",
+                    "type": "bottom"
+                }
+            },
+            "8": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "red_sandstone",
+                    "type": "top"
+                }
+            },
+            "9": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "purpur",
+                    "type": "top"
+                }
+            },
+            "10": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "prismarine",
+                    "type": "top"
+                }
+            },
+            "11": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "prismarine_brick",
+                    "type": "top"
+                }
+            },
+            "12": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "dark_prismarine",
+                    "type": "top"
+                }
+            }
+        }
+    }
+}

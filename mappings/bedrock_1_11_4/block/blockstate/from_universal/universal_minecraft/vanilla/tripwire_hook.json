@@ -1,0 +1,19 @@
+{
+    "new_block": "minecraft:tripwire_hook",
+    "carry_properties": {
+        "attached": [
+            "true",
+            "false"
+        ],
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ],
+        "powered": [
+            "true",
+            "false"
+        ]
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:stairs",
+                "new_properties": {
+                    "material": "quartz",
+                    "facing": "east",
+                    "half": "bottom"
+                }
+            },
+            "1": {
+                "new_block": "universal_minecraft:stairs",
+                "new_properties": {
+                    "material": "quartz",
+                    "facing": "west",
+                    "half": "bottom"
+                }
+            },
+            "2": {
+                "new_block": "universal_minecraft:stairs",
+                "new_properties": {
+                    "material": "quartz",
+                    "facing": "south",
+                    "half": "bottom"
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:stairs",
+                "new_properties": {
+                    "material": "quartz",
+                    "facing": "north",
+                    "half": "bottom"
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:stairs",
+                "new_properties": {
+                    "material": "quartz",
+                    "facing": "east",
+                    "half": "top"
+                }
+            },
+            "5": {
+                "new_block": "universal_minecraft:stairs",
+                "new_properties": {
+                    "material": "quartz",
+                    "facing": "west",
+                    "half": "top"
+                }
+            },
+            "6": {
+                "new_block": "universal_minecraft:stairs",
+                "new_properties": {
+                    "material": "quartz",
+                    "facing": "south",
+                    "half": "top"
+                }
+            },
+            "7": {
+                "new_block": "universal_minecraft:stairs",
+                "new_properties": {
+                    "material": "quartz",
+                    "facing": "north",
+                    "half": "top"
+                }
+            }
+        }
+    }
+}

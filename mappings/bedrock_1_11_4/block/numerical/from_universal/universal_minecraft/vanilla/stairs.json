@@ -1,0 +1,112 @@
+{
+    "new_block": "minecraft:oak_stairs",
+    "map_properties": {
+        "material": {
+            "oak": {
+                "new_block": "minecraft:oak_stairs"
+            },
+            "cobblestone": {
+                "new_block": "minecraft:stone_stairs"
+            },
+            "brick": {
+                "new_block": "minecraft:brick_stairs"
+            },
+            "stone_brick": {
+                "new_block": "minecraft:stone_brick_stairs"
+            },
+            "nether_brick": {
+                "new_block": "minecraft:nether_brick_stairs"
+            },
+            "sandstone": {
+                "new_block": "minecraft:sandstone_stairs"
+            },
+            "spruce": {
+                "new_block": "minecraft:spruce_stairs"
+            },
+            "birch": {
+                "new_block": "minecraft:birch_stairs"
+            },
+            "jungle": {
+                "new_block": "minecraft:jungle_stairs"
+            },
+            "quartz": {
+                "new_block": "minecraft:quartz_stairs"
+            },
+            "acacia": {
+                "new_block": "minecraft:acacia_stairs"
+            },
+            "dark_oak": {
+                "new_block": "minecraft:dark_oak_stairs"
+            },
+            "red_sandstone": {
+                "new_block": "minecraft:red_sandstone_stairs"
+            },
+            "purpur": {
+                "new_block": "minecraft:purpur_stairs"
+            },
+            "prismarine": {
+                "new_block": "minecraft:prismarine_stairs"
+            },
+            "dark_prismarine": {
+                "new_block": "minecraft:dark_prismarine_stairs"
+            },
+            "prismarine_brick": {
+                "new_block": "minecraft:prismarine_bricks_stairs"
+            }
+        },
+        "half": {
+            "bottom": {
+                "map_properties": {
+                    "facing": {
+                        "east": {
+                            "new_properties": {
+                                "block_data": "0"
+                            }
+                        },
+                        "west": {
+                            "new_properties": {
+                                "block_data": "1"
+                            }
+                        },
+                        "south": {
+                            "new_properties": {
+                                "block_data": "2"
+                            }
+                        },
+                        "north": {
+                            "new_properties": {
+                                "block_data": "3"
+                            }
+                        }
+                    }
+                }
+            },
+            "top": {
+                "map_properties": {
+                    "facing": {
+                        "east": {
+                            "new_properties": {
+                                "block_data": "4"
+                            }
+                        },
+                        "west": {
+                            "new_properties": {
+                                "block_data": "5"
+                            }
+                        },
+                        "south": {
+                            "new_properties": {
+                                "block_data": "6"
+                            }
+                        },
+                        "north": {
+                            "new_properties": {
+                                "block_data": "7"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

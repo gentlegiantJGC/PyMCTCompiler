@@ -1,0 +1,48 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "oak",
+                    "type": "double"
+                }
+            },
+            "1": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "spruce",
+                    "type": "double"
+                }
+            },
+            "2": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "birch",
+                    "type": "double"
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "jungle",
+                    "type": "double"
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "acacia",
+                    "type": "double"
+                }
+            },
+            "5": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "dark_oak",
+                    "type": "double"
+                }
+            }
+        }
+    }
+}

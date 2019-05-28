@@ -1,0 +1,84 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:wall",
+                "new_properties": {
+                    "material": "cobblestone"
+                }
+            },
+            "1": {
+                "new_block": "universal_minecraft:wall",
+                "new_properties": {
+                    "material": "mossy_cobblestone"
+                }
+            },
+            "2": {
+                "new_block": "universal_minecraft:wall",
+                "new_properties": {
+                    "material": "granite"
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:wall",
+                "new_properties": {
+                    "material": "diorite"
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:wall",
+                "new_properties": {
+                    "material": "andesite"
+                }
+            },
+            "5": {
+                "new_block": "universal_minecraft:wall",
+                "new_properties": {
+                    "material": "sandstone"
+                }
+            },
+            "6": {
+                "new_block": "universal_minecraft:wall",
+                "new_properties": {
+                    "material": "brick"
+                }
+            },
+            "7": {
+                "new_block": "universal_minecraft:wall",
+                "new_properties": {
+                    "material": "stone_brickmossy_stone_brick"
+                }
+            },
+            "8": {
+                "new_block": "universal_minecraft:wall",
+                "new_properties": {
+                    "material": "nether_brick"
+                }
+            },
+            "9": {
+                "new_block": "universal_minecraft:wall",
+                "new_properties": {
+                    "material": "end_stone_brick"
+                }
+            },
+            "10": {
+                "new_block": "universal_minecraft:wall",
+                "new_properties": {
+                    "material": "prismarine"
+                }
+            },
+            "11": {
+                "new_block": "universal_minecraft:wall",
+                "new_properties": {
+                    "material": "red_sandstone"
+                }
+            },
+            "12": {
+                "new_block": "universal_minecraft:wall",
+                "new_properties": {
+                    "material": "red_nether_brick"
+                }
+            }
+        }
+    }
+}

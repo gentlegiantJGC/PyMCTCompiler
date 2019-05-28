@@ -1,0 +1,30 @@
+{
+    "map_properties": {
+        "variant": {
+            "normal": {
+                "new_block": "minecraft:red_sandstone",
+                "new_properties": {
+                    "block_data": "0"
+                }
+            },
+            "chiseled": {
+                "new_block": "minecraft:red_sandstone",
+                "new_properties": {
+                    "block_data": "1"
+                }
+            },
+            "cut": {
+                "new_block": "minecraft:red_sandstone",
+                "new_properties": {
+                    "block_data": "2"
+                }
+            },
+            "smooth": {
+                "new_block": "minecraft:red_sandstone",
+                "new_properties": {
+                    "block_data": "3"
+                }
+            }
+        }
+    }
+}

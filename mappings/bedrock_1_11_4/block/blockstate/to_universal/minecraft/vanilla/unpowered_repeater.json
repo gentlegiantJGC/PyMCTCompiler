@@ -1,0 +1,20 @@
+{
+    "new_block": "universal_minecraft:repeater",
+    "new_properties": {
+        "powered": "false"
+    },
+    "carry_properties": {
+        "delay": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "facing": [
+            "north",
+            "south",
+            "west",
+            "east"
+        ]
+    }
+}

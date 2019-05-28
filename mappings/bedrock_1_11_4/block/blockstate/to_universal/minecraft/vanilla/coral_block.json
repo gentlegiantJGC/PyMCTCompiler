@@ -1,0 +1,16 @@
+{
+    "new_block": "universal_minecraft:coral_block",
+    "carry_properties": {
+        "type": [
+            "tube",
+            "brain",
+            "bubble",
+            "fire",
+            "horn"
+        ],
+        "dead": [
+            "true",
+            "false"
+        ]
+    }
+}

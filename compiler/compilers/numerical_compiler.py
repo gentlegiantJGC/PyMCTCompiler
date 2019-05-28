@@ -131,7 +131,7 @@ def process_entity(buffer: DiskBuffer, entity_json: dict, version_name: str, nam
 
 def merge_parents(version_name: str):
 	if hasattr(version_compiler, version_name) and hasattr(getattr(version_compiler, version_name), 'init'):
-		init = getattr(version_compiler, version_name).init
+		init = getattr(version_compiler, version_name)
 		if hasattr(init, 'parent_version'):
 			include_data = merge_parents(init.parent_version)
 		else:

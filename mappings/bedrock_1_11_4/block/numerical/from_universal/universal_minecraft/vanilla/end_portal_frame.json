@@ -1,0 +1,59 @@
+{
+    "new_block": "minecraft:end_portal_frame",
+    "map_properties": {
+        "eye": {
+            "false": {
+                "map_properties": {
+                    "facing": {
+                        "north": {
+                            "new_properties": {
+                                "block_data": "0"
+                            }
+                        },
+                        "south": {
+                            "new_properties": {
+                                "block_data": "1"
+                            }
+                        },
+                        "west": {
+                            "new_properties": {
+                                "block_data": "2"
+                            }
+                        },
+                        "east": {
+                            "new_properties": {
+                                "block_data": "3"
+                            }
+                        }
+                    }
+                }
+            },
+            "true": {
+                "map_properties": {
+                    "facing": {
+                        "north": {
+                            "new_properties": {
+                                "block_data": "4"
+                            }
+                        },
+                        "south": {
+                            "new_properties": {
+                                "block_data": "5"
+                            }
+                        },
+                        "west": {
+                            "new_properties": {
+                                "block_data": "6"
+                            }
+                        },
+                        "east": {
+                            "new_properties": {
+                                "block_data": "7"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

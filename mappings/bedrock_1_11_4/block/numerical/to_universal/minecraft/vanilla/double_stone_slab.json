@@ -1,0 +1,62 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "stone",
+                    "type": "double"
+                }
+            },
+            "1": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "sandstone",
+                    "type": "double"
+                }
+            },
+            "2": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "petrified_oak_slab",
+                    "type": "double"
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "cobblestone",
+                    "type": "double"
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "brick",
+                    "type": "double"
+                }
+            },
+            "5": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "stone_brick",
+                    "type": "double"
+                }
+            },
+            "6": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "quartz",
+                    "type": "double"
+                }
+            },
+            "7": {
+                "new_block": "universal_minecraft:slab",
+                "new_properties": {
+                    "material": "nether_brick",
+                    "type": "double"
+                }
+            }
+        }
+    }
+}

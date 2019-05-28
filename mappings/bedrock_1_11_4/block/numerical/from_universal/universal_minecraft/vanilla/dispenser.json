@@ -1,0 +1,90 @@
+{
+    "map_properties": {
+        "triggered": {
+            "false": {
+                "map_properties": {
+                    "facing": {
+                        "down": {
+                            "new_block": "minecraft:dispenser",
+                            "new_properties": {
+                                "block_data": "0"
+                            }
+                        },
+                        "up": {
+                            "new_block": "minecraft:dispenser",
+                            "new_properties": {
+                                "block_data": "1"
+                            }
+                        },
+                        "north": {
+                            "new_block": "minecraft:dispenser",
+                            "new_properties": {
+                                "block_data": "2"
+                            }
+                        },
+                        "south": {
+                            "new_block": "minecraft:dispenser",
+                            "new_properties": {
+                                "block_data": "3"
+                            }
+                        },
+                        "west": {
+                            "new_block": "minecraft:dispenser",
+                            "new_properties": {
+                                "block_data": "4"
+                            }
+                        },
+                        "east": {
+                            "new_block": "minecraft:dispenser",
+                            "new_properties": {
+                                "block_data": "5"
+                            }
+                        }
+                    }
+                }
+            },
+            "true": {
+                "map_properties": {
+                    "facing": {
+                        "down": {
+                            "new_block": "minecraft:dispenser",
+                            "new_properties": {
+                                "block_data": "8"
+                            }
+                        },
+                        "up": {
+                            "new_block": "minecraft:dispenser",
+                            "new_properties": {
+                                "block_data": "9"
+                            }
+                        },
+                        "north": {
+                            "new_block": "minecraft:dispenser",
+                            "new_properties": {
+                                "block_data": "10"
+                            }
+                        },
+                        "south": {
+                            "new_block": "minecraft:dispenser",
+                            "new_properties": {
+                                "block_data": "11"
+                            }
+                        },
+                        "west": {
+                            "new_block": "minecraft:dispenser",
+                            "new_properties": {
+                                "block_data": "12"
+                            }
+                        },
+                        "east": {
+                            "new_block": "minecraft:dispenser",
+                            "new_properties": {
+                                "block_data": "13"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

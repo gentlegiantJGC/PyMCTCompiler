@@ -1,0 +1,18 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:sponge",
+                "new_properties": {
+                    "wet": "false"
+                }
+            },
+            "1": {
+                "new_block": "universal_minecraft:sponge",
+                "new_properties": {
+                    "wet": "true"
+                }
+            }
+        }
+    }
+}
