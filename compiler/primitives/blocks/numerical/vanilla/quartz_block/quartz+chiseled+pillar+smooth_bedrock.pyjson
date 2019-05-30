@@ -1,0 +1,127 @@
+{
+	"to_universal": {
+		"map_properties": {
+			"block_data": {
+				str(data12 + data3): {
+					"new_block": block,
+					"new_properties": {
+						"axis": axis
+					}
+				} for data3, block in {
+					0: "universal_minecraft:quartz_block",
+					1: "universal_minecraft:chiseled_quartz_block",
+					2: "universal_minecraft:quartz_pillar",
+					3: "universal_minecraft:smooth_quartz"
+				}.items() for data12, axis in {
+					0: "y",
+					4: "x",
+					8: "z",
+				}.items()
+			}
+		}
+	},
+	"from_universal": {
+		block: {
+			"new_block": "minecraft:quartz_block",
+			"map_properties": {
+				"axis": {
+					axis: {
+						"new_properties": {
+							"block_data": str(data12 + data3)
+						}
+					} for data12, axis in {
+						0: "y",
+						4: "x",
+						8: "z",
+					}.items()
+				}
+			}
+		} for data3, block in {
+			0: "universal_minecraft:quartz_block",
+			1: "universal_minecraft:chiseled_quartz_block",
+			2: "universal_minecraft:quartz_pillar",
+			3: "universal_minecraft:smooth_quartz"
+		}.items()
+	},
+	"blockstate_specification": {
+		"properties": {
+			"variant": [
+				"quartz_block",
+				"chiseled_quartz_block",
+				"quartz_pillar"
+			],
+			"axis": [
+				"x",
+				"y",
+				"z",
+			]
+		},
+		"defaults": {
+			"variant": "quartz_block",
+			"axis": "y"
+		}
+	},
+	"blockstate_to_universal": {
+		"map_properties": {
+			"variant": {
+				"quartz_block": {
+					"new_block": "universal_minecraft:quartz_block"
+				},
+				"chiseled_quartz_block": {
+					"new_block": "universal_minecraft:chiseled_quartz_block"
+				},
+				"quartz_pillar": {
+					"new_block": "universal_minecraft:quartz_pillar"
+				}
+			}
+		},
+		"carry_properties": {
+			"axis": [
+				"x",
+				"y",
+				"z",
+			]
+		}
+	},
+	"blockstate_from_universal": {
+		"universal_minecraft:quartz_block": {
+			"new_block": "minecraft:quartz_block",
+			"new_properties": {
+				"variant": "quartz_block"
+			},
+			"carry_properties": {
+				"axis": [
+					"x",
+					"y",
+					"z",
+				]
+			}
+		},
+		"universal_minecraft:chiseled_quartz_block": {
+			"new_block": "minecraft:quartz_block",
+			"new_properties": {
+				"variant": "chiseled_quartz_block"
+			},
+			"carry_properties": {
+				"axis": [
+					"x",
+					"y",
+					"z",
+				]
+			}
+		},
+		"universal_minecraft:quartz_pillar": {
+			"new_block": "minecraft:quartz_block",
+			"new_properties": {
+				"variant": "quartz_pillar"
+			},
+			"carry_properties": {
+				"axis": [
+					"x",
+					"y",
+					"z",
+				]
+			}
+		}
+	}
+}

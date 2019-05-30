@@ -1,0 +1,13 @@
+{
+    "new_block": "minecraft:quartz_block",
+    "new_properties": {
+        "variant": "chiseled_quartz_block"
+    },
+    "carry_properties": {
+        "axis": [
+            "x",
+            "y",
+            "z"
+        ]
+    }
+}

@@ -154,7 +154,7 @@
 	"redstone_block": "redstone_block",
 	"quartz_ore": "quartz_ore",
 	"hopper": "hopper",
-	"quartz_block": null,
+	"quartz_block": "quartz+chiseled+pillar+smooth_bedrock",
 	"quartz_stairs": "quartz_stairs",
 	"double_wooden_slab": "double_wooden_slab",
 	"wooden_slab": "wooden_slab",

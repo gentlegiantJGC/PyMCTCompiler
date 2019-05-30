@@ -154,7 +154,7 @@
 	"redstone_block": "redstone_block",
 	"quartz_ore": "quartz_ore",
 	"hopper": "hopper",
-	"quartz_block": null,
+	"quartz_block": "quartz+chiseled+pillar_java",
 	"quartz_stairs": "quartz_stairs",
 	"activator_rail": "activator_rail",
 	"dropper": "dropper",

@@ -1,0 +1,22 @@
+{
+    "new_block": "minecraft:quartz_block",
+    "map_properties": {
+        "axis": {
+            "y": {
+                "new_properties": {
+                    "block_data": "0"
+                }
+            },
+            "x": {
+                "new_properties": {
+                    "block_data": "4"
+                }
+            },
+            "z": {
+                "new_properties": {
+                    "block_data": "8"
+                }
+            }
+        }
+    }
+}

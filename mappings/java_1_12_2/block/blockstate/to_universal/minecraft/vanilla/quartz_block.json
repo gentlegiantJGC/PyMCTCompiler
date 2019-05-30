@@ -1,0 +1,30 @@
+{
+    "map_properties": {
+        "variant": {
+            "quartz_block": {
+                "new_block": "universal_minecraft:quartz_block"
+            },
+            "chiseled_quartz_block": {
+                "new_block": "universal_minecraft:chiseled_quartz_block"
+            },
+            "quartz_pillar_y": {
+                "new_block": "universal_minecraft:quartz_pillar",
+                "new_properties": {
+                    "axis": "y"
+                }
+            },
+            "quartz_pillar_x": {
+                "new_block": "universal_minecraft:quartz_pillar",
+                "new_properties": {
+                    "axis": "x"
+                }
+            },
+            "quartz_pillar_z": {
+                "new_block": "universal_minecraft:quartz_pillar",
+                "new_properties": {
+                    "axis": "z"
+                }
+            }
+        }
+    }
+}

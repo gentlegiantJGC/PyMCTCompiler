@@ -1,0 +1,25 @@
+{
+    "new_block": "minecraft:quartz_block",
+    "new_properties": {
+        "variant": "quartz_pillar_y"
+    },
+    "map_properties": {
+        "axis": {
+            "y": {
+                "new_properties": {
+                    "variant": "quartz_pillar_y"
+                }
+            },
+            "x": {
+                "new_properties": {
+                    "variant": "quartz_pillar_x"
+                }
+            },
+            "z": {
+                "new_properties": {
+                    "variant": "quartz_pillar_z"
+                }
+            }
+        }
+    }
+}

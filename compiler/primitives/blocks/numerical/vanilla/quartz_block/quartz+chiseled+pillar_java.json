@@ -1,0 +1,154 @@
+{
+	"to_universal": {
+		"map_properties": {
+			"block_data": {
+				"0": {
+					"new_block": "universal_minecraft:quartz_block"
+				},
+				"1": {
+					"new_block": "universal_minecraft:chiseled_quartz_block"
+				},
+				"2": {
+					"new_block": "universal_minecraft:quartz_pillar",
+					"new_properties": {
+						"axis": "y"
+					}
+				},
+				"3": {
+					"new_block": "universal_minecraft:quartz_pillar",
+					"new_properties": {
+						"axis": "x"
+					}
+				},
+				"4": {
+					"new_block": "universal_minecraft:quartz_pillar",
+					"new_properties": {
+						"axis": "z"
+					}
+				}
+			}
+		}
+	},
+	"from_universal": {
+		"universal_minecraft:quartz_block": {
+			"new_block": "minecraft:quartz_block",
+			"new_properties": {
+				"block_data": "0"
+			}
+		},
+		"universal_minecraft:chiseled_quartz_block": {
+			"new_block": "minecraft:quartz_block",
+			"new_properties": {
+				"block_data": "1"
+			}
+		},
+		"universal_minecraft:quartz_pillar": {
+			"new_block": "minecraft:quartz_block",
+			"new_properties": {
+				"block_data": "2"
+			},
+			"map_properties": {
+				"axis": {
+					"y": {
+						"new_properties": {
+							"block_data": "2"
+						}
+					},
+					"x": {
+						"new_properties": {
+							"block_data": "3"
+						}
+					},
+					"z": {
+						"new_properties": {
+							"block_data": "4"
+						}
+					}
+				}
+			}
+		}
+	},
+	"blockstate_specification": {
+		"properties": {
+			"variant": [
+				"quartz_block",
+				"chiseled_quartz_block",
+				"quartz_pillar_x",
+				"quartz_pillar_y",
+				"quartz_pillar_z"
+			]
+		},
+		"defaults": {
+			"variant": "quartz_block"
+		}
+	},
+	"blockstate_to_universal": {
+		"map_properties": {
+			"variant": {
+				"quartz_block": {
+					"new_block": "universal_minecraft:quartz_block"
+				},
+				"chiseled_quartz_block": {
+					"new_block": "universal_minecraft:chiseled_quartz_block"
+				},
+				"quartz_pillar_y": {
+					"new_block": "universal_minecraft:quartz_pillar",
+					"new_properties": {
+						"axis": "y"
+					}
+				},
+				"quartz_pillar_x": {
+					"new_block": "universal_minecraft:quartz_pillar",
+					"new_properties": {
+						"axis": "x"
+					}
+				},
+				"quartz_pillar_z": {
+					"new_block": "universal_minecraft:quartz_pillar",
+					"new_properties": {
+						"axis": "z"
+					}
+				}
+			}
+		}
+	},
+	"blockstate_from_universal": {
+		"universal_minecraft:quartz_block": {
+			"new_block": "minecraft:quartz_block",
+			"new_properties": {
+				"variant": "quartz_block"
+			}
+		},
+		"universal_minecraft:chiseled_quartz_block": {
+			"new_block": "minecraft:quartz_block",
+			"new_properties": {
+				"variant": "chiseled_quartz_block"
+			}
+		},
+		"universal_minecraft:quartz_pillar": {
+			"new_block": "minecraft:quartz_block",
+			"new_properties": {
+				"variant": "quartz_pillar_y"
+			},
+			"map_properties": {
+				"axis": {
+					"y": {
+						"new_properties": {
+							"variant": "quartz_pillar_y"
+						}
+					},
+					"x": {
+						"new_properties": {
+							"variant": "quartz_pillar_x"
+						}
+					},
+					"z": {
+						"new_properties": {
+							"variant": "quartz_pillar_z"
+						}
+					}
+				}
+			}
+		}
+	}
+}
