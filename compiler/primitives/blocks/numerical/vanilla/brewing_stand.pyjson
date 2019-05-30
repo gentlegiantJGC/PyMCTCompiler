@@ -1,0 +1,99 @@
+{
+	"to_universal": {
+		"map_properties": {
+			"block_data": {
+				str(data): {
+					"new_block": "universal_minecraft:brewing_stand",
+					"new_properties": {
+						"has_bottle_0": {0: "false", 1: "true"}[data & 1],
+						"has_bottle_1": {0: "false", 2: "true"}[data & 2],
+						"has_bottle_2": {0: "false", 4: "true"}[data & 4]
+					}
+				} for data in range(8)
+			}
+		}
+	},
+	"from_universal": {
+		"universal_minecraft:brewing_stand": {
+			"map_properties": {
+				"has_bottle_2": {
+					has_bottle_2: {
+						"map_properties": {
+							"has_bottle_1": {
+								has_bottle_1: {
+									"map_properties": {
+										"has_bottle_0": {
+											has_bottle_0: {
+												"new_block": "minecraft:brewing_stand",
+												"new_properties": {
+													"block_data": str(data4 + data2 + data1)
+												}
+											} for data1, has_bottle_0 in {0: "false", 1: "true"}.items()
+										}
+									}
+								} for data2, has_bottle_1 in {0: "false", 2: "true"}.items()
+							}
+						}
+					} for data4, has_bottle_2 in {0: "false", 4: "true"}.items()
+				}
+			}
+		}
+	},
+	"blockstate_specification": {
+		"properties": {
+			"has_bottle_0": [
+				"true",
+				"false"
+			],
+			"has_bottle_1": [
+				"true",
+				"false"
+			],
+			"has_bottle_2": [
+				"true",
+				"false"
+			]
+		},
+		"defaults": {
+			"has_bottle_0": "false",
+			"has_bottle_1": "false",
+			"has_bottle_2": "false"
+		}
+	},
+	"blockstate_to_universal": {
+		"new_block": "universal_minecraft:brewing_stand",
+		"carry_properties": {
+			"has_bottle_0": [
+				"true",
+				"false"
+			],
+			"has_bottle_1": [
+				"true",
+				"false"
+			],
+			"has_bottle_2": [
+				"true",
+				"false"
+			]
+		}
+	},
+	"blockstate_from_universal": {
+		"universal_minecraft:brewing_stand": {
+			"new_block": "minecraft:brewing_stand",
+			"carry_properties": {
+				"has_bottle_0": [
+					"true",
+					"false"
+				],
+				"has_bottle_1": [
+					"true",
+					"false"
+				],
+				"has_bottle_2": [
+					"true",
+					"false"
+				]
+			}
+		}
+	}
+}

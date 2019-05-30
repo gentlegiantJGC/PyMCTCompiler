@@ -116,7 +116,7 @@
 	"nether_brick_stairs": "nether_brick_stairs",
 	"nether_wart": "nether_wart",
 	"enchanting_table": "enchanting_table",
-	"brewing_stand": null,
+	"brewing_stand": ["brewing_stand"],
 	"cauldron": null,
 	"end_portal": null,
 	"end_portal_frame": "end_portal_frame",

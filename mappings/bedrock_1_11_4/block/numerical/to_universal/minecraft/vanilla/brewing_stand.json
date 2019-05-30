@@ -1,0 +1,70 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:brewing_stand",
+                "new_properties": {
+                    "has_bottle_0": "false",
+                    "has_bottle_1": "false",
+                    "has_bottle_2": "false"
+                }
+            },
+            "1": {
+                "new_block": "universal_minecraft:brewing_stand",
+                "new_properties": {
+                    "has_bottle_0": "true",
+                    "has_bottle_1": "false",
+                    "has_bottle_2": "false"
+                }
+            },
+            "2": {
+                "new_block": "universal_minecraft:brewing_stand",
+                "new_properties": {
+                    "has_bottle_0": "false",
+                    "has_bottle_1": "true",
+                    "has_bottle_2": "false"
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:brewing_stand",
+                "new_properties": {
+                    "has_bottle_0": "true",
+                    "has_bottle_1": "true",
+                    "has_bottle_2": "false"
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:brewing_stand",
+                "new_properties": {
+                    "has_bottle_0": "false",
+                    "has_bottle_1": "false",
+                    "has_bottle_2": "true"
+                }
+            },
+            "5": {
+                "new_block": "universal_minecraft:brewing_stand",
+                "new_properties": {
+                    "has_bottle_0": "true",
+                    "has_bottle_1": "false",
+                    "has_bottle_2": "true"
+                }
+            },
+            "6": {
+                "new_block": "universal_minecraft:brewing_stand",
+                "new_properties": {
+                    "has_bottle_0": "false",
+                    "has_bottle_1": "true",
+                    "has_bottle_2": "true"
+                }
+            },
+            "7": {
+                "new_block": "universal_minecraft:brewing_stand",
+                "new_properties": {
+                    "has_bottle_0": "true",
+                    "has_bottle_1": "true",
+                    "has_bottle_2": "true"
+                }
+            }
+        }
+    }
+}

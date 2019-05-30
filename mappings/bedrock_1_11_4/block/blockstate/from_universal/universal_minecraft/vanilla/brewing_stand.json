@@ -1,0 +1,17 @@
+{
+    "new_block": "minecraft:brewing_stand",
+    "carry_properties": {
+        "has_bottle_0": [
+            "true",
+            "false"
+        ],
+        "has_bottle_1": [
+            "true",
+            "false"
+        ],
+        "has_bottle_2": [
+            "true",
+            "false"
+        ]
+    }
+}

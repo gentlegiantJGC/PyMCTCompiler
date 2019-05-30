@@ -1,0 +1,90 @@
+{
+    "map_properties": {
+        "has_bottle_2": {
+            "false": {
+                "map_properties": {
+                    "has_bottle_1": {
+                        "false": {
+                            "map_properties": {
+                                "has_bottle_0": {
+                                    "false": {
+                                        "new_block": "minecraft:brewing_stand",
+                                        "new_properties": {
+                                            "block_data": "0"
+                                        }
+                                    },
+                                    "true": {
+                                        "new_block": "minecraft:brewing_stand",
+                                        "new_properties": {
+                                            "block_data": "1"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "map_properties": {
+                                "has_bottle_0": {
+                                    "false": {
+                                        "new_block": "minecraft:brewing_stand",
+                                        "new_properties": {
+                                            "block_data": "2"
+                                        }
+                                    },
+                                    "true": {
+                                        "new_block": "minecraft:brewing_stand",
+                                        "new_properties": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "true": {
+                "map_properties": {
+                    "has_bottle_1": {
+                        "false": {
+                            "map_properties": {
+                                "has_bottle_0": {
+                                    "false": {
+                                        "new_block": "minecraft:brewing_stand",
+                                        "new_properties": {
+                                            "block_data": "4"
+                                        }
+                                    },
+                                    "true": {
+                                        "new_block": "minecraft:brewing_stand",
+                                        "new_properties": {
+                                            "block_data": "5"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "map_properties": {
+                                "has_bottle_0": {
+                                    "false": {
+                                        "new_block": "minecraft:brewing_stand",
+                                        "new_properties": {
+                                            "block_data": "6"
+                                        }
+                                    },
+                                    "true": {
+                                        "new_block": "minecraft:brewing_stand",
+                                        "new_properties": {
+                                            "block_data": "7"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
