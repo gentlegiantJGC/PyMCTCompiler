@@ -1,0 +1,65 @@
+{
+    "new_block": "minecraft:white_shulker_box",
+    "map_properties": {
+        "color": {
+            "white": {
+                "new_block": "minecraft:white_shulker_box"
+            },
+            "orange": {
+                "new_block": "minecraft:orange_shulker_box"
+            },
+            "magenta": {
+                "new_block": "minecraft:magenta_shulker_box"
+            },
+            "light_blue": {
+                "new_block": "minecraft:light_blue_shulker_box"
+            },
+            "yellow": {
+                "new_block": "minecraft:yellow_shulker_box"
+            },
+            "lime": {
+                "new_block": "minecraft:lime_shulker_box"
+            },
+            "pink": {
+                "new_block": "minecraft:pink_shulker_box"
+            },
+            "gray": {
+                "new_block": "minecraft:gray_shulker_box"
+            },
+            "light_gray": {
+                "new_block": "minecraft:silver_shulker_box"
+            },
+            "cyan": {
+                "new_block": "minecraft:cyan_shulker_box"
+            },
+            "purple": {
+                "new_block": "minecraft:purple_shulker_box"
+            },
+            "blue": {
+                "new_block": "minecraft:blue_shulker_box"
+            },
+            "brown": {
+                "new_block": "minecraft:brown_shulker_box"
+            },
+            "green": {
+                "new_block": "minecraft:green_shulker_box"
+            },
+            "red": {
+                "new_block": "minecraft:red_shulker_box"
+            },
+            "black": {
+                "new_block": "minecraft:black_shulker_box"
+            }
+        }
+    },
+    "carry_properties": {
+        "facing": [
+            "north",
+            "east",
+            "south",
+            "west",
+            "up",
+            "down"
+        ]
+    }
+}

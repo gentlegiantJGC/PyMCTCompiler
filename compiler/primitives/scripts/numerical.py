@@ -4017,7 +4017,7 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 		}
 
 
-def mushroom_block(input_namespace: str, input_block_name: str, color: str) -> dict:
+def mushroom_block(color: str) -> dict:
 	directions = {  # up, down, north, east, south, west
 		f'universal_minecraft:{color}_mushroom_block': {
 			0: ['false', 'false', 'false', 'false', 'false', 'false'],
@@ -4333,6 +4333,98 @@ def mushroom_block(input_namespace: str, input_block_name: str, color: str) -> d
 							"new_block": f'minecraft:{color}_mushroom_block'
 						}
 					}
+				}
+			}
+		}
+	}
+
+
+def shulker_box_colour_java(color: str, display_color = None) -> dict:
+	if display_color is None:
+		display_color = color
+	return {
+		"to_universal": {
+			"map_properties": {
+				"block_data": {
+					str(data): {
+						"new_block": "universal_minecraft:stained_shulker_box",
+						"new_properties": {
+							"facing": facing,
+							"color": color
+						}
+					} for data, facing in {0: "down", 1: "up", 2: "north", 3: "south", 4: "west", 5: "east"}.items()
+				}
+			}
+		},
+		"from_universal": {
+			"universal_minecraft:stained_shulker_box": {
+				"new_block": "minecraft:white_shulker_box",
+				"map_properties": {
+					"color": {
+						color: {
+							"new_block": f"minecraft:{display_color}_shulker_box"
+						}
+					},
+					"facing": {
+						facing: {
+							"new_properties": {
+								"block_data": str(data)
+							}
+						} for data, facing in {0: "down", 1: "up", 2: "north", 3: "south", 4: "west", 5: "east"}.items()
+					}
+				}
+			}
+		},
+		"blockstate_specification": {
+			"properties": {
+				"facing": [
+					"north",
+					"east",
+					"south",
+					"west",
+					"up",
+					"down"
+				]
+			},
+			"defaults": {
+				"facing": "north"
+			}
+		},
+		"blockstate_to_universal": {
+			"new_block": "universal_minecraft:stained_shulker_box",
+			"carry_properties": {
+				"facing": [
+					"north",
+					"east",
+					"south",
+					"west",
+					"up",
+					"down"
+				]
+			},
+			"new_properties": {
+				"color": color
+			}
+		},
+		"blockstate_from_universal": {
+			"universal_minecraft:stained_shulker_box": {
+				"new_block": "minecraft:white_shulker_box",
+				"map_properties": {
+					"color": {
+						color: {
+							"new_block": f"minecraft:{display_color}_shulker_box"
+						}
+					}
+				},
+				"carry_properties": {
+					"facing": [
+						"north",
+						"east",
+						"south",
+						"west",
+						"up",
+						"down"
+					]
 				}
 			}
 		}

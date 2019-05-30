@@ -1,0 +1,48 @@
+{
+    "map_properties": {
+        "block_data": {
+            "0": {
+                "new_block": "universal_minecraft:stained_shulker_box",
+                "new_properties": {
+                    "facing": "down",
+                    "color": "purple"
+                }
+            },
+            "1": {
+                "new_block": "universal_minecraft:stained_shulker_box",
+                "new_properties": {
+                    "facing": "up",
+                    "color": "purple"
+                }
+            },
+            "2": {
+                "new_block": "universal_minecraft:stained_shulker_box",
+                "new_properties": {
+                    "facing": "north",
+                    "color": "purple"
+                }
+            },
+            "3": {
+                "new_block": "universal_minecraft:stained_shulker_box",
+                "new_properties": {
+                    "facing": "south",
+                    "color": "purple"
+                }
+            },
+            "4": {
+                "new_block": "universal_minecraft:stained_shulker_box",
+                "new_properties": {
+                    "facing": "west",
+                    "color": "purple"
+                }
+            },
+            "5": {
+                "new_block": "universal_minecraft:stained_shulker_box",
+                "new_properties": {
+                    "facing": "east",
+                    "color": "purple"
+                }
+            }
+        }
+    }
+}
