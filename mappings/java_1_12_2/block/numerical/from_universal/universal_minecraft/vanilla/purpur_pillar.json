@@ -1,0 +1,24 @@
+{
+    "map_properties": {
+        "axis": {
+            "y": {
+                "new_block": "minecraft:purpur_pillar",
+                "new_properties": {
+                    "block_data": "0"
+                }
+            },
+            "x": {
+                "new_block": "minecraft:purpur_pillar",
+                "new_properties": {
+                    "block_data": "4"
+                }
+            },
+            "z": {
+                "new_block": "minecraft:purpur_pillar",
+                "new_properties": {
+                    "block_data": "8"
+                }
+            }
+        }
+    }
+}

@@ -198,7 +198,7 @@
 	"grass_path": "grass_path",
 	"frame": null,
 	"chorus_flower": "chorus_flower",
-	"purpur_block": null,
+	"purpur_block": ["purpur_block", "purpur_pillar_bedrock"],
 
 	"purpur_stairs": "purpur_stairs",
 

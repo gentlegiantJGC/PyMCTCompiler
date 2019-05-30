@@ -1,0 +1,28 @@
+{
+    "new_block": "universal_minecraft:purpur_block",
+    "map_properties": {
+        "variant": {
+            "purpur_block": {
+                "new_block": "universal_minecraft:purpur_block"
+            },
+            "purpur_pillar_x": {
+                "new_block": "universal_minecraft:purpur_pillar",
+                "new_properties": {
+                    "axis": "x"
+                }
+            },
+            "purpur_pillar_y": {
+                "new_block": "universal_minecraft:purpur_pillar",
+                "new_properties": {
+                    "axis": "y"
+                }
+            },
+            "purpur_pillar_z": {
+                "new_block": "universal_minecraft:purpur_pillar",
+                "new_properties": {
+                    "axis": "z"
+                }
+            }
+        }
+    }
+}

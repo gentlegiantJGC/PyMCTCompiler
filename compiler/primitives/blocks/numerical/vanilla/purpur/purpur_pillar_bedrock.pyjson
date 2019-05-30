@@ -1,0 +1,92 @@
+{
+	"to_universal": {
+		"map_properties": {
+			"block_data": {
+				str(data): {
+					"new_block": "universal_minecraft:purpur_pillar",
+					"new_properties": {
+						"axis": {0: "y", 4: "x", 8: "z"}[data & 12],
+					}
+				} for data in [2, 6, 10]
+			}
+		}
+	},
+	"from_universal": {
+		"universal_minecraft:purpur_pillar": {
+			"map_properties": {
+				"axis": {
+					axis: {
+						"new_block": "minecraft:purpur_block",
+						"new_properties": {
+							"block_data": str(data)
+						}
+					} for data, axis in {2: "y", 6: "x", 10: "z"}.items()
+				}
+			}
+		}
+	},
+	"blockstate_specification": {
+		"properties": {
+			"variant": [
+				"purpur_block",
+				"purpur_pillar_x",
+				"purpur_pillar_y",
+				"purpur_pillar_z"
+			]
+		},
+		"defaults": {
+			"variant": "purpur_block"
+		}
+	},
+	"blockstate_to_universal": {
+		"map_properties": {
+			"variant": {
+				"purpur_block": {
+					"new_block": "universal_minecraft:purpur_block"
+				},
+				"purpur_pillar_x": {
+					"new_block": "universal_minecraft:purpur_pillar",
+					"new_properties": {
+						"axis": "x"
+					}
+				},
+				"purpur_pillar_y": {
+					"new_block": "universal_minecraft:purpur_pillar",
+					"new_properties": {
+						"axis": "y"
+					}
+				},
+				"purpur_pillar_z": {
+					"new_block": "universal_minecraft:purpur_pillar",
+					"new_properties": {
+						"axis": "z"
+					}
+				}
+			}
+		}
+	},
+	"blockstate_from_universal": {
+		"universal_minecraft:purpur_pillar": {
+			"new_block": "minecraft:purpur_block",
+			"map_properties": {
+				"axis": {
+					"x": {
+						"new_properties": {
+							"variant": "purpur_pillar_x"
+						}
+					},
+					"y": {
+						"new_properties": {
+							"variant": "purpur_pillar_y"
+						}
+					},
+					"z": {
+						"new_properties": {
+							"variant": "purpur_pillar_z"
+						}
+					}
+				}
+			}
+		}
+	}
+}
