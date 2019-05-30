@@ -124,7 +124,7 @@
 	"dragon_egg": "dragon_egg",
 	"redstone_lamp": "redstone_lamp",
 	"lit_redstone_lamp": "lit_redstone_lamp",
-	"dropper": null,
+	"dropper": "dropper",
 	"activator_rail": "activator_rail",
 	"cocoa": "cocoa",
 	"sandstone_stairs": "sandstone_stairs",

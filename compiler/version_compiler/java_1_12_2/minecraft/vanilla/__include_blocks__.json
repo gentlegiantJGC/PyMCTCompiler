@@ -157,7 +157,7 @@
 	"quartz_block": null,
 	"quartz_stairs": "quartz_stairs",
 	"activator_rail": "activator_rail",
-	"dropper": null,
+	"dropper": "dropper",
 	"stained_hardened_clay": "stained_hardened_clay",
 	"stained_glass_pane": "stained_glass_pane",
 	"log2": "log2",
