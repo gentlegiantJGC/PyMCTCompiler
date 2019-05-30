@@ -1,0 +1,10 @@
+{
+    "new_block": "universal_minecraft:red_sandstone",
+    "carry_properties": {
+        "variant": [
+            "normal",
+            "chiseled",
+            "cut"
+        ]
+    }
+}
