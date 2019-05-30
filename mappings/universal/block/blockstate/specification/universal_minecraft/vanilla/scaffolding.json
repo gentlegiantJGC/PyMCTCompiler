@@ -13,15 +13,10 @@
             "5",
             "6",
             "7"
-        ],
-        "waterlogged": [
-            "true",
-            "false"
         ]
     },
     "defaults": {
         "bottom": "false",
-        "distance": "7",
-        "waterlogged": "false"
+        "distance": "7"
     }
 }

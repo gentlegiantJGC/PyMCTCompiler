@@ -13,16 +13,11 @@
         "signal_fire": [
             "true",
             "false"
-        ],
-        "waterlogged": [
-            "true",
-            "false"
         ]
     },
     "defaults": {
         "facing": "north",
         "lit": "true",
-        "signal_fire": "false",
-        "waterlogged": "false"
+        "signal_fire": "false"
     }
 }

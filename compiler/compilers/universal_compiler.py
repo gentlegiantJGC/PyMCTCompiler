@@ -43,6 +43,9 @@ def main(version_name: str, version_str: str):
 
 			if 'properties' in default_state:
 				states['defaults'] = default_state['properties']
+			if 'defaults' in states and 'waterlogged' in states['defaults']:
+				del states['defaults']['waterlogged']
+				del states['properties']['waterlogged']
 
 			del states['states']
 			if not(namespace in modifications and any(block_name in modifications[namespace][group_name]['remove'] for group_name in modifications[namespace])):
