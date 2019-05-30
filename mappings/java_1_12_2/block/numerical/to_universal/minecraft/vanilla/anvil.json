@@ -61,28 +61,28 @@
                 "new_block": "universal_minecraft:anvil",
                 "new_properties": {
                     "facing": "south",
-                    "damage": "normal"
+                    "damage": "damaged"
                 }
             },
             "9": {
                 "new_block": "universal_minecraft:anvil",
                 "new_properties": {
                     "facing": "west",
-                    "damage": "normal"
+                    "damage": "damaged"
                 }
             },
             "10": {
                 "new_block": "universal_minecraft:anvil",
                 "new_properties": {
                     "facing": "north",
-                    "damage": "normal"
+                    "damage": "damaged"
                 }
             },
             "11": {
                 "new_block": "universal_minecraft:anvil",
                 "new_properties": {
                     "facing": "east",
-                    "damage": "normal"
+                    "damage": "damaged"
                 }
             }
         }
