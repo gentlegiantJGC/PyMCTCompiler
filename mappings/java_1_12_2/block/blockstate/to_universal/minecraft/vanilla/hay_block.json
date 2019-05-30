@@ -1,0 +1,10 @@
+{
+    "new_block": "universal_minecraft:hay_block",
+    "carry_properties": {
+        "axis": [
+            "x",
+            "y",
+            "z"
+        ]
+    }
+}

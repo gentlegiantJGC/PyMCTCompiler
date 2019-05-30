@@ -169,7 +169,7 @@
 	"iron_trapdoor": "iron_trapdoor_bedrock",
 	"prismarine": "prismarine",
 	"sealantern": "sealantern",
-	"hay_block": null,
+	"hay_block": "hay_block",
 	"carpet": "carpet",
 	"hardened_clay": "hardened_clay",
 	"coal_block": "coal_block",
