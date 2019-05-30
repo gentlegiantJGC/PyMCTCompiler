@@ -1,0 +1,1 @@
+numerical.direct_data("minecraft", "daylight_detector", "power", list(range(16)), "universal_minecraft")
