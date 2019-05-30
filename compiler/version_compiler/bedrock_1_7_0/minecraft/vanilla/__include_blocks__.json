@@ -231,7 +231,7 @@
 	"concrete": "concrete",
 	"concretepowder": "concretepowder",
 
-	"chorus_plant": null,
+	"chorus_plant": ["chorus_plant", "chorus_plant_connected"],
 	"stained_glass": "stained_glass",
 	"podzol": "podzol",
 	"beetroot": "beetroot_bedrock",

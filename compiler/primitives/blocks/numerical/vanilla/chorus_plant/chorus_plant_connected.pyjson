@@ -1,0 +1,51 @@
+{
+	"to_universal": {
+		"map_properties": {
+			"block_data": {
+				"0": {
+					"multiblock": [
+						{
+							"coords": coords,
+							"map_block_name": {
+								block: {
+									"new_properties": {
+										direction: "true"
+									}
+								} for block in ('minecraft:chorus_plant', 'minecraft:chorus_flower')
+							}
+						} for coords, direction in [
+							[[0, -1, 0], 'down'],
+							[[0, 1, 0], 'up'],
+							[[-1, 0, 0], 'west'],
+							[[1, 0, 0], 'east'],
+							[[0, 0, -1], 'north'],
+							[[0, 0, 1], 'south']
+						]
+					]
+				}
+			}
+		}
+
+	},
+	"blockstate_to_universal": {
+		"multiblock": [
+			{
+				"coords": coords,
+				"map_block_name": {
+					block: {
+						"new_properties": {
+							direction: "true"
+						}
+					} for block in ('minecraft:chorus_plant', 'minecraft:chorus_flower')
+				}
+			} for coords, direction in [
+				[[0, -1, 0], 'down'],
+				[[0, 1, 0], 'up'],
+				[[-1, 0, 0], 'west'],
+				[[1, 0, 0], 'east'],
+				[[0, 0, -1], 'north'],
+				[[0, 0, 1], 'south']
+			]
+		]
+	}
+}
