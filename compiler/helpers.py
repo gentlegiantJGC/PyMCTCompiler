@@ -1,5 +1,5 @@
 import os
-from typing import Tuple
+from typing import Tuple, Union
 from urllib.request import urlopen
 import json
 from concurrent.futures import ThreadPoolExecutor
@@ -45,13 +45,11 @@ def log_to_file(msg: str):
 	log_file.write(f'{msg}\n')
 
 
-def merge_map_(data_: dict, data: dict) -> dict:
+def merge_map_(data_: list, data: list) -> list:
 	"""Merge new "data" object into "data_" (data loaded from disk) and return the result.
 
-	:param data_: Dict to merge with data_
-	:type data_: dict
-	:param data: Dict loaded from file
-	:type data: dict
+	:param data_: List to merge with data_
+	:param data: List loaded from file
 	:return: data_ after "data" has been merged into it
 	"""
 	check_mapping_format(data_)
@@ -59,70 +57,53 @@ def merge_map_(data_: dict, data: dict) -> dict:
 	return _merge_map(data_, data)
 
 
-def _merge_map(data_: dict, data: dict) -> dict:
-	if 'new_block' in data and 'new_block' in data_:
-		assert data_['new_block'] == data['new_block'], '"new_block" must be the same when merging'
-	else:
-		assert 'new_block' not in data and 'new_block' not in data_, '"new_block" defined in one but not the other'
+def _merge_map(data_: list, data: list) -> list:
+	assert [fun['function'] for fun in data_] == [fun['function'] for fun in data], 'The functions do not match'
 
-	if 'new_properties' in data and 'new_properties' in data_:
-		assert data_['new_properties'] == data['new_properties'], '"new_properties" must be the same when merging'
-	else:
-		assert 'new_properties' not in data and'new_properties' not in data_, '"new_properties" defined in one but not the other'
+	for fun_, fun in zip(data_, data):
+		if fun['function'] == 'new_block':
+			assert fun_['options'] == fun['options'], '"new_block" must be the same when merging'
 
-	if 'map_properties' in data and 'map_properties' in data_:
-		assert data_['map_properties'].keys() == data['map_properties'].keys(), '"map_properties" must have the same key entries when merging'
-		for key in data['map_properties'].keys():
-			for val in data['map_properties'][key].keys():
-				if val in data_['map_properties'][key].keys():
-					data_['map_properties'][key][val] = _merge_map(data_['map_properties'][key][val], data['map_properties'][key][val])
-				else:
-					data_['map_properties'][key][val] = data['map_properties'][key][val]
-	else:
-		assert 'map_properties' not in data and'map_properties' not in data_, '"map_properties" defined in one but not the other'
+		elif fun['function'] == 'new_properties':
+			assert fun_['options'] == fun['options'], '"new_properties" must be the same when merging'
 
-	if 'carry_properties' in data and 'carry_properties' in data_:
-		assert data_['carry_properties'].keys() == data['carry_properties'].keys(), '"carry_properties" must have the same key entries when merging'
-		for key in data['carry_properties'].keys():
-			data_['carry_properties'][key] = unique_merge_lists(data_['carry_properties'][key], data['carry_properties'][key])
-	else:
-		assert 'carry_properties' not in data and'carry_properties' not in data_, '"carry_properties" defined in one but not the other'
+		elif fun['function'] == 'map_properties':
+			assert fun_['options'].keys() == fun['options'].keys(), '"map_properties" must have the same key entries when merging'
+			for key in fun['options'].keys():
+				for val in fun['options'][key].keys():
+					if val in fun_['options'][key].keys():
+						fun_['options'][key][val] = _merge_map(fun_['options'][key][val], fun['options'][key][val])
+					else:
+						fun_['options'][key][val] = fun['options'][key][val]
 
-	if 'new_nbt' in data and 'new_nbt' in data_:
-		assert data_['new_nbt'] == data['new_nbt'], '"new_nbt" must be the same when merging'
-	else:
-		assert 'new_nbt' not in data and'new_nbt' not in data_, '"new_nbt" defined in one but not the other'
+		elif fun['function'] == 'carry_properties':
+			assert fun_['options'].keys() == fun['options'].keys(), '"carry_properties" must have the same key entries when merging'
+			for key in fun['options'].keys():
+				fun_['options'][key] = unique_merge_lists(fun_['options'][key], fun['options'][key])
 
-	if 'multiblock' in data and 'multiblock' in data_:
-		assert data_['multiblock'] == data['multiblock'], '"multiblock" must be the same when merging'
-	else:
-		assert 'multiblock' not in data and'multiblock' not in data_, '"multiblock" defined in one but not the other'
+		elif fun['function'] == 'new_nbt':
+			assert fun_['options'] == fun['options'], '"new_nbt" must be the same when merging'
 
-	if 'map_block_name' in data and 'map_block_name' in data_:
-		assert data_['map_block_name'].keys() == data['map_block_name'].keys(), '"map_block_name" must have the same key entries when merging'
-		for key in data['map_block_name'].keys():
-			for val in data['map_block_name'][key].keys():
-				if val in data_['map_block_name'][key].keys():
-					data_['map_block_name'][key][val] = _merge_map(data_['map_block_name'][key][val], data['map_block_name'][key][val])
-				else:
-					data_['map_block_name'][key][val] = data['map_block_name'][key][val]
-	else:
-		assert 'map_block_name' not in data and'map_block_name' not in data_, '"map_block_name" defined in one but not the other'
+		elif fun['function'] == 'multiblock':
+			assert fun_['options'] == fun['options'], '"multiblock" must be the same when merging'
 
-	if 'map_input_nbt' in data and 'map_input_nbt' in data_:
-		data_['map_input_nbt'] = merge_map_input_nbt(data_['map_input_nbt'], data['map_input_nbt'])
-	else:
-		assert 'map_input_nbt' not in data and'map_input_nbt' not in data_, '"map_input_nbt" defined in one but not the other'
+		elif fun['function'] == 'map_block_name':
+			assert fun_['options'].keys() == fun['options'].keys(), '"map_block_name" must have the same key entries when merging'
+			for key in fun['options'].keys():
+				for val in fun['options'][key].keys():
+					if val in fun_['options'][key].keys():
+						fun_['options'][key][val] = _merge_map(fun_['options'][key][val], fun['options'][key][val])
+					else:
+						fun_['options'][key][val] = fun['options'][key][val]
 
-	if 'carry_nbt' in data and 'carry_nbt' in data_:
-		assert data_['carry_nbt'] == data['carry_nbt'], '"carry_nbt" must be the same when merging'
-	else:
-		assert 'carry_nbt' not in data and'carry_nbt' not in data_, '"carry_nbt" defined in one but not the other'
+		elif fun['function'] == 'map_input_nbt':
+			fun_['options'] = merge_map_input_nbt(fun_['options'], fun['options'])
 
-	if 'map_nbt' in data and 'map_nbt' in data_:
-		assert data_['map_nbt'] == data['map_nbt'], '"map_nbt" must be the same when merging'
-	else:
-		assert 'map_nbt' not in data and'map_nbt' not in data_, '"map_nbt" defined in one but not the other'
+		elif fun['function'] == 'carry_nbt':
+			assert fun_['options'] == fun['options'], '"carry_nbt" must be the same when merging'
+
+		elif fun['function'] == 'map_nbt':
+			assert fun_['options'] == fun['options'], '"map_nbt" must be the same when merging'
 
 	return data_
 
@@ -198,7 +179,7 @@ def _merge_map_input_nbt(data_: dict, data: dict, bypass_type=False) -> dict:
 	return data_
 
 
-def check_formatting(data: dict, mode: str):
+def check_formatting(data: Union[dict, list], mode: str):
 	if mode == 'specification':
 		check_specification_format(data)
 	elif mode == 'mapping':
@@ -272,7 +253,7 @@ def _check_nbt_specification(data: dict):
 extra_feature_set_ = ('carry_nbt', 'map_nbt')
 
 
-def check_mapping_format(data: dict, extra_feature_set: Tuple[str, ...] = None):
+def check_mapping_format(data: list, extra_feature_set: Tuple[str, ...] = None):
 	"""Will verify that "data" fits the required format.
 
 	:param data: The data to verify the formatting of
