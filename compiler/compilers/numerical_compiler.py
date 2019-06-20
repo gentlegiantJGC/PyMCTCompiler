@@ -49,9 +49,10 @@ def process_block(buffer: DiskBuffer, block_json: dict, version_name: str, names
 	universal_type = block_json.get('universal_type', 'block')
 
 	for prefix in ('blockstate_', ''):
-		for key in ('to_universal', 'from_universal'):
-			assert f'{prefix}{key}' in block_json, f'Key {key} must be defined'
-			assert isinstance(block_json[f'{prefix}{key}'], dict), f'Key {key} must be a dictionary'
+		assert f'{prefix}to_universal' in block_json, f'Key to_universal must be defined'
+		assert isinstance(block_json[f'{prefix}to_universal'], list), f'Key to_universal must be a list'
+		assert f'{prefix}from_universal' in block_json, f'Key from_universal must be defined'
+		assert isinstance(block_json[f'{prefix}from_universal'], dict), f'Key from_universal must be a dictionary'
 
 	if universal_type == 'block':
 		default_spec = {'blockstate': {}, 'numerical': {"properties": {"block_data": [str(data) for data in range(16)]}, "defaults": {"block_data": "0"}}}
