@@ -198,9 +198,6 @@ def _merge_map_input_nbt(data_: dict, data: dict, bypass_type=False) -> dict:
 	return data_
 
 
-default_mapping_feature_set = ('new_block', 'new_entity', 'new_properties', 'map_properties', 'carry_properties', 'new_nbt', 'multiblock', 'map_block_name', 'map_input_nbt')
-
-
 def check_formatting(data: dict, mode: str):
 	if mode == 'specification':
 		check_specification_format(data)
@@ -272,160 +269,164 @@ def _check_nbt_specification(data: dict):
 			log_to_file(f'Extra key "{key}" found')
 
 
-def check_mapping_format(data: dict, feature_set: Tuple[str, ...] = default_mapping_feature_set, carry_feature_set: Tuple[str, ...] = None):
+extra_feature_set_ = ('carry_nbt', 'map_nbt')
+
+
+def check_mapping_format(data: dict, extra_feature_set: Tuple[str, ...] = None):
 	"""Will verify that "data" fits the required format.
 
 	:param data: The data to verify the formatting of
-	:param feature_set: List containing info on how the function should be run
-	:param carry_feature_set: Like the above but carried down through all nested functions (used for NBT)
+	:param extra_feature_set: Like the above but carried down through all nested functions (used for NBT)
 	"""
-	if carry_feature_set is None:
-		carry_feature_set = ()
-	full_feature_set = feature_set + carry_feature_set
-	assert isinstance(data, dict), 'Outer mapping data type must be a dictionary'
-	if 'new_block' in full_feature_set and 'new_block' in data:
-		assert isinstance(data['new_block'], str), '"new_block" must be a string'
 
-	if 'new_entity' in full_feature_set and 'new_entity' in data:
-		assert isinstance(data['new_entity'], str), '"new_entity" must be a string'
+	if extra_feature_set is None:
+		extra_feature_set = ()
 
-	if 'new_properties' in full_feature_set and 'new_properties' in data:
-		assert isinstance(data['new_properties'], dict), '"new_properties" must be a dictionary'
-		for key, val in data['new_properties'].items():
-			assert isinstance(key, str), '"new_properties" keys must be strings'
-			assert isinstance(val, str), '"new_properties" values must be strings'
+	assert isinstance(data, list), 'Outer mapping data type must be a list'
+	for fun in data:
+		assert isinstance(fun, dict), 'function must be a dictionary'
 
-	if 'carry_properties' in full_feature_set and 'carry_properties' in data:
-		assert isinstance(data['carry_properties'], dict), '"carry_properties" must be a dictionary'
-		for key, val_list in data['carry_properties'].items():
-			assert isinstance(key, str), '"carry_properties" keys are property names which must be strings'
-			assert isinstance(val_list, list), '"carry_properties" values must be a list of strings'
-			for val in val_list:
-				assert isinstance(val, str), '"carry_properties" property values must be strings'
+		if fun['function'] == 'new_block':
+			assert isinstance(fun['options'], str), '"options" must be a string'
 
-	if 'map_properties' in full_feature_set and 'map_properties' in data:
-		assert isinstance(data['map_properties'], dict), '"map_properties" must be a dictionary'
-		for key, val_dict in data['map_properties'].items():
-			assert isinstance(key, str), '"map_properties" keys are property names which must be strings'
-			assert isinstance(val_dict, dict), '"map_properties" values must be dictionaries'
-			for val, nest in val_dict.items():
-				assert isinstance(val, str), '"map_properties" property values must be strings'
-				check_mapping_format(nest, default_mapping_feature_set, carry_feature_set)
+		elif fun['function'] == 'new_entity':
+			assert isinstance(fun['options'], str), '"options" must be a string'
 
-	if 'multiblock' in full_feature_set and 'multiblock' in data:
-		multiblock = data['multiblock']
-		if isinstance(multiblock, dict):
-			multiblock = [multiblock]
-		assert isinstance(multiblock, list), 'multiblock must be a dictionary or a list of dictionaries'
-		for mapping in multiblock:
-			assert isinstance(mapping, dict), 'multiblock must be a dictionary or a list of dictionaries'
-			check_mapping_format(mapping, default_mapping_feature_set + ('coords',))
+		elif fun['function'] == 'new_properties':
+			assert isinstance(fun['options'], dict), '"options" must be a dictionary'
+			for key, val in fun['options'].items():
+				assert isinstance(key, str), '"options" keys must be strings'
+				assert isinstance(val, str), '"options" values must be strings'
 
-	if 'coords' in full_feature_set:
-		assert 'coords' in data, 'coords must be present in multiblock'
-		assert isinstance(data['coords'], list) and len(data['coords']) == 3 and all(isinstance(coord, int) for coord in data['coords']), f'"coords" must be a list of ints of length 3. Got {data["coords"]} instead'
+		elif fun['function'] == 'carry_properties':
+			assert isinstance(fun['options'], dict), '"options" must be a dictionary'
+			for key, val_list in fun['options'].items():
+				assert isinstance(key, str), '"options" keys are property names which must be strings'
+				assert isinstance(val_list, list), '"options" values must be a list of strings'
+				for val in val_list:
+					assert isinstance(val, str), '"options" property values must be strings'
 
-	if 'map_block_name' in full_feature_set and 'map_block_name' in data:
-		assert isinstance(data['map_block_name'], dict), f'"map_block_name" must be a dictionary. Got {data["map_block_name"]} instead'
-		for key, val in data['map_block_name'].items():
-			assert isinstance(key, str), f'Key must be a string. Got {key}'
-			check_mapping_format(val, default_mapping_feature_set, carry_feature_set)
+		elif fun['function'] == 'map_properties':
+			assert isinstance(fun['options'], dict), '"options" must be a dictionary'
+			for key, val_dict in fun['options'].items():
+				assert isinstance(key, str), '"options" keys are property names which must be strings'
+				assert isinstance(val_dict, dict), '"options" values must be dictionaries'
+				for val, nest in val_dict.items():
+					assert isinstance(val, str), '"options" property values must be strings'
+					check_mapping_format(nest)
 
-	if 'map_input_nbt' in full_feature_set and 'map_input_nbt' in data:
-		assert isinstance(data['map_input_nbt'], dict), 'map_input_nbt must be a dictionary'
-		for key, val in data['map_input_nbt'].items():
-			assert isinstance(key, str), 'All keys in the outer nbt type must be strings'
-			check_map_input_nbt_format(val)
+		elif fun['function'] == 'multiblock':
+			multiblock = fun['options']
+			if isinstance(multiblock, dict):
+				multiblock = [multiblock]
+			assert isinstance(multiblock, list), 'multiblock must be a dictionary or a list of dictionaries'
+			for mapping in multiblock:
+				assert isinstance(mapping, dict), 'multiblock must be a dictionary or a list of dictionaries'
+				assert 'coords' in fun, 'coords must be present in multiblock'
+				assert isinstance(fun['coords'], list) and len(fun['coords']) == 3 and all(isinstance(coord, int) for coord in fun['coords']), f'"coords" must be a list of ints of length 3. Got {fun["coords"]} instead'
+				assert 'options' in fun, 'coords must be present in multiblock'
+				check_mapping_format(mapping['options'])
 
-	if 'new_nbt' in full_feature_set and 'new_nbt' in data:
-		new_nbts = data['new_nbt']
-		if isinstance(new_nbts, dict):
-			new_nbts = [new_nbts]
-		assert isinstance(new_nbts, list), '"new_nbt" must be a dictionary or a list of dictionaries'
-		for new_nbt in new_nbts:
-			assert isinstance(new_nbt, dict), '"new_nbt" must be a dictionary or a list of dictionaries'
-			if 'path' in new_nbt:
-				assert isinstance(new_nbt['path'], list), '"new_nbt" path must be a list of lists'
-				for index, path in enumerate(new_nbt['path']):
-					assert isinstance(path, list), '"new_nbt" path must be a list of lists'
-					assert len(path) == 2, '"new_nbt" path must be a list of lists of length 2'
+		elif fun['function'] == 'map_block_name':
+			assert isinstance(fun['options'], dict), f'"options" must be a dictionary. Got {fun["options"]} instead'
+			for key, val in fun['options'].items():
+				assert isinstance(key, str), f'Key must be a string. Got {key}'
+				check_mapping_format(val)
+
+		elif fun['function'] == 'map_input_nbt':
+			assert isinstance(fun['options'], dict), 'options must be a dictionary'
+			for key, val in fun['options'].items():
+				assert isinstance(key, str), 'All keys in the outer nbt type must be strings'
+				check_map_input_nbt_format(val)
+
+		elif fun['function'] == 'new_nbt':
+			new_nbts = fun['options']
+			if isinstance(new_nbts, dict):
+				new_nbts = [new_nbts]
+			assert isinstance(new_nbts, list), '"new_nbt" must be a dictionary or a list of dictionaries'
+			for new_nbt in new_nbts:
+				assert isinstance(new_nbt, dict), '"new_nbt" must be a dictionary or a list of dictionaries'
+				if 'path' in new_nbt:
+					assert isinstance(new_nbt['path'], list), '"new_nbt" path must be a list of lists'
+					for index, path in enumerate(new_nbt['path']):
+						assert isinstance(path, list), '"new_nbt" path must be a list of lists'
+						assert len(path) == 2, '"new_nbt" path must be a list of lists of length 2'
+						if index == 0:
+							assert isinstance(path[0], str), '"new_nbt" path entry [0][0] must be a string because it is wrapped in an implied compound tag'
+						else:
+							if isinstance(path[0], str):
+								assert new_nbt['path'][index-1][1] == 'compound', f'Expected the previous data type to be "compound" got {path[index-1][1]}'
+							elif isinstance(path[0], int):
+								assert new_nbt['path'][index - 1][1] == 'list', f'Expected the previous data type to be "list" got {path[index-1][1]}'
+							else:
+								raise Exception('The first paramater of each entry in path must be a string or an int')
+
+				assert 'key' in new_nbt, '"key" must be present in new_nbt'
+				if isinstance(new_nbt['key'], str):
+					if 'path' in new_nbt:
+						assert new_nbt['path'][-1][1] == 'compound', f'Expected the final data type in path to be "compound" got {new_nbt["path"][-1][1]}'
+				elif isinstance(new_nbt['key'], int):
+					if 'path' in new_nbt:
+						assert new_nbt['path'][-1][1] == 'list', f'Expected the final data type in path to be "list" got {new_nbt["path"][-1][1]}'
+				else:
+					raise Exception('The first paramater of each entry in path must be a string or an int')
+
+				assert 'type' in new_nbt, '"type" must be present in new_nbt'
+				assert new_nbt['type'] in ('byte', 'short', 'int', 'long', 'float', 'double', 'string', 'byte_array', 'int_array', 'long_array'), 'datatype is not known'
+
+				assert 'value' in new_nbt, '"value" must be present in new_nbt'
+				if new_nbt['type'] in ('byte', 'short', 'int', 'long'):
+					assert isinstance(new_nbt['value'], int), f'new_nbt "value" must be an int for type {new_nbt["type"]}'
+				elif new_nbt['type'] in ('float', 'double'):
+					assert isinstance(new_nbt['value'], (int, float)), f'new_nbt "value" must be an int or float for type {new_nbt["type"]}'
+				elif new_nbt['type'] == 'string':
+					assert isinstance(new_nbt['value'], str), f'new_nbt "value" must be a string for type {new_nbt["type"]}'
+				elif new_nbt['type'] in ('byte_array', 'int_array', 'long_array'):
+					assert isinstance(new_nbt['value'], list), f'new_nbt "value" must be a list of ints for type {new_nbt["type"]}'
+					assert all(isinstance(array_val, int) for array_val in new_nbt['value']), f'new_nbt "value" must be a list of ints for type {new_nbt["type"]}'
+
+		elif fun['function'] == 'carry_nbt' and 'carry_nbt' in extra_feature_set:
+			assert isinstance(fun['options'], dict), 'options must be a dictionary'
+			if 'path' in fun['options']:
+				assert isinstance(fun['options']['path'], list), '"options" path must be a list of lists'
+				for index, path in enumerate(fun['options']['path']):
+					assert isinstance(path, list), '"options" path must be a list of lists'
+					assert len(path) == 2, '"options" path must be a list of lists of length 2'
 					if index == 0:
 						assert isinstance(path[0], str), '"new_nbt" path entry [0][0] must be a string because it is wrapped in an implied compound tag'
 					else:
 						if isinstance(path[0], str):
-							assert new_nbt['path'][index-1][1] == 'compound', f'Expected the previous data type to be "compound" got {path[index-1][1]}'
+							assert fun['options']['path'][index - 1][1] == 'compound', f'Expected the previous data type to be "compound" got {path[index-1][1]}'
 						elif isinstance(path[0], int):
-							assert new_nbt['path'][index - 1][1] == 'list', f'Expected the previous data type to be "list" got {path[index-1][1]}'
+							assert fun['options']['path'][index - 1][1] == 'list', f'Expected the previous data type to be "list" got {path[index-1][1]}'
 						else:
 							raise Exception('The first paramater of each entry in path must be a string or an int')
 
-			assert 'key' in new_nbt, '"key" must be present in new_nbt'
-			if isinstance(new_nbt['key'], str):
-				if 'path' in new_nbt:
-					assert new_nbt['path'][-1][1] == 'compound', f'Expected the final data type in path to be "compound" got {new_nbt["path"][-1][1]}'
-			elif isinstance(new_nbt['key'], int):
-				if 'path' in new_nbt:
-					assert new_nbt['path'][-1][1] == 'list', f'Expected the final data type in path to be "list" got {new_nbt["path"][-1][1]}'
-			else:
-				raise Exception('The first paramater of each entry in path must be a string or an int')
-
-			assert 'type' in new_nbt, '"type" must be present in new_nbt'
-			assert new_nbt['type'] in ('byte', 'short', 'int', 'long', 'float', 'double', 'string', 'byte_array', 'int_array', 'long_array'), 'datatype is not known'
-
-			assert 'value' in new_nbt, '"value" must be present in new_nbt'
-			if new_nbt['type'] in ('byte', 'short', 'int', 'long'):
-				assert isinstance(new_nbt['value'], int), f'new_nbt "value" must be an int for type {new_nbt["type"]}'
-			elif new_nbt['type'] in ('float', 'double'):
-				assert isinstance(new_nbt['value'], (int, float)), f'new_nbt "value" must be an int or float for type {new_nbt["type"]}'
-			elif new_nbt['type'] == 'string':
-				assert isinstance(new_nbt['value'], str), f'new_nbt "value" must be a string for type {new_nbt["type"]}'
-			elif new_nbt['type'] in ('byte_array', 'int_array', 'long_array'):
-				assert isinstance(new_nbt['value'], list), f'new_nbt "value" must be a list of ints for type {new_nbt["type"]}'
-				assert all(isinstance(array_val, int) for array_val in new_nbt['value']), f'new_nbt "value" must be a list of ints for type {new_nbt["type"]}'
-
-	if 'carry_nbt' in full_feature_set and 'carry_nbt' in data:
-		assert isinstance(data['carry_nbt'], dict), 'carry_nbt must be a dictionary'
-		if 'path' in data['carry_nbt']:
-			assert isinstance(data['carry_nbt']['path'], list), '"carry_nbt" path must be a list of lists'
-			for index, path in enumerate(data['carry_nbt']['path']):
-				assert isinstance(path, list), '"carry_nbt" path must be a list of lists'
-				assert len(path) == 2, '"carry_nbt" path must be a list of lists of length 2'
-				if index == 0:
-					assert isinstance(path[0], str), '"new_nbt" path entry [0][0] must be a string because it is wrapped in an implied compound tag'
+			if 'key' in fun['options']:
+				if isinstance(fun['options']['key'], str):
+					if 'path' in fun['options']:
+						assert fun['options']['path'][-1][1] == 'compound', f'Expected the final data type in path to be "compound" got {fun["options"]["path"][-1][1]}'
+				elif isinstance(fun['options']['key'], int):
+					if 'path' in fun['options']:
+						assert fun['options']['path'][-1][1] == 'list', f'Expected the final data type in path to be "list" got {fun["options"]["path"][-1][1]}'
 				else:
-					if isinstance(path[0], str):
-						assert data['carry_nbt']['path'][index - 1][1] == 'compound', f'Expected the previous data type to be "compound" got {path[index-1][1]}'
-					elif isinstance(path[0], int):
-						assert data['carry_nbt']['path'][index - 1][1] == 'list', f'Expected the previous data type to be "list" got {path[index-1][1]}'
-					else:
-						raise Exception('The first paramater of each entry in path must be a string or an int')
+					raise Exception('The first paramater of each entry in path must be a string or an int')
 
-		if 'key' in data['carry_nbt']:
-			if isinstance(data['carry_nbt']['key'], str):
-				if 'path' in data['carry_nbt']:
-					assert data['carry_nbt']['path'][-1][1] == 'compound', f'Expected the final data type in path to be "compound" got {data["carry_nbt"]["path"][-1][1]}'
-			elif isinstance(data['carry_nbt']['key'], int):
-				if 'path' in data['carry_nbt']:
-					assert data['carry_nbt']['path'][-1][1] == 'list', f'Expected the final data type in path to be "list" got {data["carry_nbt"]["path"][-1][1]}'
-			else:
-				raise Exception('The first paramater of each entry in path must be a string or an int')
+			if 'type' in fun['options']:
+				assert fun['options']['type'] in ('byte', 'short', 'int', 'long', 'float', 'double', 'string', 'byte_array', 'int_array', 'long_array'), 'datatype is not known'
 
-		if 'type' in data['carry_nbt']:
-			assert data['carry_nbt']['type'] in ('byte', 'short', 'int', 'long', 'float', 'double', 'string', 'byte_array', 'int_array', 'long_array'), 'datatype is not known'
+		elif fun['function'] == 'map_nbt' and 'map_nbt' in extra_feature_set:
+			if 'cases' in fun['options']:
+				assert isinstance(fun['options']['cases'], dict), 'map_nbt cases must be a dictionary if present'
+				for key, val in fun['options']['cases'].items():
+					assert isinstance(key, str), 'map_nbt cases keys must be strings. This is a limitation of JSON. numerical types are mappable but string the value'
+					check_mapping_format(val, extra_feature_set_)
 
-	if 'map_nbt' in full_feature_set and 'map_nbt' in data:
-		if 'cases' in data['map_nbt']:
-			assert isinstance(data['map_nbt']['cases'], dict), 'map_nbt cases must be a dictionary if present'
-			for key, val in data['map_nbt']['cases'].items():
-				assert isinstance(key, str), 'map_nbt cases keys must be strings. This is a limitation of JSON. numerical types are mappable but string the value'
-				check_mapping_format(val, default_mapping_feature_set, carry_feature_set)
+			if 'default' in fun['options']:
+				check_mapping_format(fun['options']['default'], extra_feature_set_)
 
-		if 'default' in data['map_nbt']:
-			check_mapping_format(data['map_nbt']['default'], default_mapping_feature_set, carry_feature_set)
-
-	for key in data.keys():
-		if key not in full_feature_set:
-			log_to_file(f'Extra key "{key}" found')
+		else:
+			log_to_file(f'Unknown/unsupported function "{fun["function"]}" found')
 
 
 def check_map_input_nbt_format(data: dict):
@@ -438,11 +439,11 @@ def check_map_input_nbt_format(data: dict):
 				assert isinstance(key, str), 'keys in nbt map compound "keys" must be strings'
 				check_map_input_nbt_format(val)
 		if 'functions' in data:
-			check_mapping_format(data['functions'], default_mapping_feature_set, ('carry_nbt',))
+			check_mapping_format(data['functions'], ('carry_nbt',))
 		if 'nested_default' in data:
-			check_mapping_format(data['nested_default'], default_mapping_feature_set, ('carry_nbt',))
+			check_mapping_format(data['nested_default'], ('carry_nbt',))
 		if 'self_default' in data:
-			check_mapping_format(data['self_default'], default_mapping_feature_set, ('carry_nbt',))
+			check_mapping_format(data['self_default'], ('carry_nbt',))
 
 		for key in data.keys():
 			if key not in ('type', 'keys', 'functions', 'nested_default', 'self_default'):
@@ -455,11 +456,11 @@ def check_map_input_nbt_format(data: dict):
 				assert isinstance(key, str) and key.isdigit(), 'all keys in nbt map list index must be an int in string form'
 				check_map_input_nbt_format(val)
 		if 'functions' in data:
-			check_mapping_format(data['functions'], default_mapping_feature_set, ('carry_nbt',))
+			check_mapping_format(data['functions'], ('carry_nbt',))
 		if 'nested_default' in data:
-			check_mapping_format(data['nested_default'], default_mapping_feature_set, ('carry_nbt',))
+			check_mapping_format(data['nested_default'], ('carry_nbt',))
 		if 'self_default' in data:
-			check_mapping_format(data['self_default'], default_mapping_feature_set, ('carry_nbt',))
+			check_mapping_format(data['self_default'], ('carry_nbt',))
 
 		for key in data.keys():
 			if key not in ('type', 'index', 'functions', 'nested_default', 'self_default'):
@@ -467,9 +468,9 @@ def check_map_input_nbt_format(data: dict):
 
 	elif data['type'] in ('byte', 'short', 'int', 'long', 'float', 'double', 'string'):
 		if 'functions' in data:
-			check_mapping_format(data['functions'], default_mapping_feature_set, ('carry_nbt', 'map_nbt'))
+			check_mapping_format(data['functions'], ('carry_nbt', 'map_nbt'))
 		if 'self_default' in data:
-			check_mapping_format(data['self_default'], default_mapping_feature_set, ('carry_nbt', 'map_nbt'))
+			check_mapping_format(data['self_default'], ('carry_nbt', 'map_nbt'))
 
 		for key in data.keys():
 			if key not in ('type', 'functions', 'self_default'):
@@ -482,18 +483,18 @@ def check_map_input_nbt_format(data: dict):
 				assert isinstance(key, str) and key.isdigit(), 'all keys in nbt map array index must be an int in string form'
 				assert isinstance(val, dict), 'all values in nbt map array index must be dictionaries'
 				if 'functions' in val:
-					check_mapping_format(val['functions'], default_mapping_feature_set, ('carry_nbt', 'map_nbt'))
+					check_mapping_format(val['functions'], ('carry_nbt', 'map_nbt'))
 
 				for key2 in data.keys():
 					if key2 not in ('type', 'functions'):
 						log_to_file(f'Extra key "{key2}" found')
 
 		if 'functions' in data:
-			check_mapping_format(data['functions'], default_mapping_feature_set, ('carry_nbt',))
+			check_mapping_format(data['functions'], ('carry_nbt',))
 		if 'nested_default' in data:
-			check_mapping_format(data['nested_default'], default_mapping_feature_set, ('carry_nbt',))
+			check_mapping_format(data['nested_default'], ('carry_nbt',))
 		if 'self_default' in data:
-			check_mapping_format(data['self_default'], default_mapping_feature_set, ('carry_nbt',))
+			check_mapping_format(data['self_default'], ('carry_nbt',))
 
 		for key in data.keys():
 			if key not in ('type', 'index', 'functions', 'nested_default', 'self_default'):
