@@ -24,14 +24,16 @@
 		},
 		"mapping_functions": {
 			"type": "array",
+			"required": ["function", "options"],
+			"additionalProperties": false,
 			"items": {
-				"anyOf": [
+				"type": "object",
+				"oneOf": [
 					{
-						"type": "object",
 						"properties": {
 							"function": {
 								"type": "string",
-								"pattern": "new_block"
+								"enum": ["new_block"]
 							},
 							"options": {
 								"type": "string"
@@ -39,11 +41,10 @@
 						}
 					},
 					{
-						"type": "object",
 						"properties": {
 							"function": {
 								"type": "string",
-								"pattern": "new_properties"
+								"enum": ["new_properties"]
 							},
 							"options": {
 								"type": "object",
@@ -54,11 +55,10 @@
 						}
 					},
 					{
-						"type": "object",
 						"properties": {
 							"function": {
 								"type": "string",
-								"pattern": "map_properties"
+								"enum": ["map_properties"]
 							},
 							"options": {
 								"type": "object",
@@ -72,11 +72,10 @@
 						}
 					},
 					{
-						"type": "object",
 						"properties": {
 							"function": {
 								"type": "string",
-								"pattern": "carry_properties"
+								"enum": ["carry_properties"]
 							},
 							"options": {
 								"type": "object",
@@ -90,24 +89,24 @@
 						}
 					},
 					{
-						"type": "object",
 						"properties": {
 							"function": {
 								"type": "string",
-								"pattern": "new_nbt"
+								"enum": ["new_nbt"]
 							},
-							"options": {}
+							"options": {
+								"type": "object"
+							}
 						}
 					},
 					{
-						"type": "object",
 						"properties": {
 							"function": {
 								"type": "string",
-								"pattern": "multiblock"
+								"enum": ["multiblock"]
 							},
 							"options": {
-								"anyOf": [
+								"oneOf": [
 									{
 										"type": "object",
 										"properties": {
@@ -148,11 +147,10 @@
 						}
 					},
 					{
-						"type": "object",
 						"properties": {
 							"function": {
 								"type": "string",
-								"pattern": "map_block_name"
+								"enum": ["map_block_name"]
 							},
 							"options": {
 								"type": "object",
@@ -163,33 +161,36 @@
 						}
 					},
 					{
-						"type": "object",
 						"properties": {
 							"function": {
 								"type": "string",
-								"pattern": "map_input_nbt"
+								"enum": ["map_input_nbt"]
 							},
-							"options": {}
+							"options": {
+								"type": "object"
+							}
 						}
 					},
 					{
-						"type": "object",
 						"properties": {
 							"function": {
 								"type": "string",
-								"pattern": "carry_nbt"
+								"enum": ["carry_nbt"]
 							},
-							"options": {}
+							"options": {
+								"type": "object"
+							}
 						}
 					},
 					{
-						"type": "object",
 						"properties": {
 							"function": {
 								"type": "string",
-								"pattern": "map_nbt"
+								"enum": ["map_nbt"]
 							},
-							"options": {}
+							"options": {
+								"type": "object"
+							}
 						}
 					}
 				]
