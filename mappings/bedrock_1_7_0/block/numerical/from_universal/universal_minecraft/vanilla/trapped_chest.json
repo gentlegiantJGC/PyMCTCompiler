@@ -1,30 +1,57 @@
-{
-    "map_properties": {
-        "facing": {
-            "north": {
-                "new_block": "minecraft:trapped_chest",
-                "new_properties": {
-                    "block_data": "2"
-                }
-            },
-            "south": {
-                "new_block": "minecraft:trapped_chest",
-                "new_properties": {
-                    "block_data": "3"
-                }
-            },
-            "west": {
-                "new_block": "minecraft:trapped_chest",
-                "new_properties": {
-                    "block_data": "4"
-                }
-            },
-            "east": {
-                "new_block": "minecraft:trapped_chest",
-                "new_properties": {
-                    "block_data": "5"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "facing": {
+                "north": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:trapped_chest"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "2"
+                        }
+                    }
+                ],
+                "south": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:trapped_chest"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "3"
+                        }
+                    }
+                ],
+                "west": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:trapped_chest"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "4"
+                        }
+                    }
+                ],
+                "east": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:trapped_chest"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "5"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

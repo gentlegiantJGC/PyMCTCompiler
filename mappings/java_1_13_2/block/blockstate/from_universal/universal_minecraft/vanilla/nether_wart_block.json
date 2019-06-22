@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:nether_wart_block"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:nether_wart_block"
+    }
+]

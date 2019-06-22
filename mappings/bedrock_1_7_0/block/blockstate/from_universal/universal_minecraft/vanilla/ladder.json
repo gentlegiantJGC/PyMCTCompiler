@@ -1,11 +1,17 @@
-{
-    "new_block": "minecraft:ladder",
-    "carry_properties": {
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:ladder"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ]
+        }
     }
-}
+]

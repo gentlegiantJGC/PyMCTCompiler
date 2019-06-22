@@ -1,6 +1,12 @@
-{
-    "new_block": "minecraft:barrier",
-    "new_properties": {
-        "block_data": "0"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:barrier"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "block_data": "0"
+        }
     }
-}
+]

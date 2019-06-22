@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:coarse_dirt"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:coarse_dirt"
+    }
+]

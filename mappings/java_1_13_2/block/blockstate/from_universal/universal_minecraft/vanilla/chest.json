@@ -1,16 +1,22 @@
-{
-    "new_block": "minecraft:chest",
-    "carry_properties": {
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ],
-        "type": [
-            "single",
-            "left",
-            "right"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:chest"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ],
+            "type": [
+                "single",
+                "left",
+                "right"
+            ]
+        }
     }
-}
+]

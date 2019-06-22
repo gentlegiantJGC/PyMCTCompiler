@@ -1,20 +1,29 @@
-{
-    "new_block": "universal_minecraft:repeater",
-    "new_properties": {
-        "powered": "false"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:repeater"
     },
-    "carry_properties": {
-        "delay": [
-            "1",
-            "2",
-            "3",
-            "4"
-        ],
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "powered": "false"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "delay": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ]
+        }
     }
-}
+]

@@ -1,16 +1,25 @@
-{
-    "new_block": "minecraft:pistonarmcollision",
-    "new_properties": {
-        "type": "sticky"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:pistonarmcollision"
     },
-    "carry_properties": {
-        "facing": [
-            "north",
-            "east",
-            "south",
-            "west",
-            "up",
-            "down"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "type": "sticky"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "east",
+                "south",
+                "west",
+                "up",
+                "down"
+            ]
+        }
     }
-}
+]

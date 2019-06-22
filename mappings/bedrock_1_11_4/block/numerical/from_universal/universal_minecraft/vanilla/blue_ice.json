@@ -1,6 +1,12 @@
-{
-    "new_block": "minecraft:blue_ice",
-    "new_properties": {
-        "block_data": "0"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:blue_ice"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "block_data": "0"
+        }
     }
-}
+]

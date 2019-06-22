@@ -1,11 +1,17 @@
-{
-    "new_block": "minecraft:wall_sign",
-    "carry_properties": {
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:wall_sign"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ]
+        }
     }
-}
+]

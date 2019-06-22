@@ -1,21 +1,39 @@
-{
-    "new_properties": {
-        "material": "spruce"
+[
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "spruce"
+        }
     },
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_block": "universal_minecraft:pressure_plate",
-                "new_properties": {
-                    "powered": "false"
-                }
-            },
-            "1": {
-                "new_block": "universal_minecraft:pressure_plate",
-                "new_properties": {
-                    "powered": "true"
-                }
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "0": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:pressure_plate"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "powered": "false"
+                        }
+                    }
+                ],
+                "1": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:pressure_plate"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "powered": "true"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

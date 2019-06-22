@@ -1,12 +1,21 @@
-{
-    "new_block": "universal_minecraft:sapling",
-    "new_properties": {
-        "material": "acacia"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:sapling"
     },
-    "carry_properties": {
-        "stage": [
-            "0",
-            "1"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "acacia"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "stage": [
+                "0",
+                "1"
+            ]
+        }
     }
-}
+]

@@ -1,15 +1,27 @@
-{
-    "map_properties": {
-        "material": {
-            "dirt": {
-                "new_block": "universal_minecraft:dirt"
-            },
-            "coarse_dirt": {
-                "new_block": "universal_minecraft:coarse_dirt"
-            },
-            "podzol": {
-                "new_block": "universal_minecraft:podzol"
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "material": {
+                "dirt": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:dirt"
+                    }
+                ],
+                "coarse_dirt": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:coarse_dirt"
+                    }
+                ],
+                "podzol": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:podzol"
+                    }
+                ]
             }
         }
     }
-}
+]

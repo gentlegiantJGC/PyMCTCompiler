@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:iron_bars"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:iron_bars"
+    }
+]

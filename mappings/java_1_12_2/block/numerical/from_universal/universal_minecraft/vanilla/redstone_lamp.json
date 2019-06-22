@@ -1,18 +1,33 @@
-{
-    "map_properties": {
-        "lit": {
-            "false": {
-                "new_block": "minecraft:redstone_lamp",
-                "new_properties": {
-                    "block_data": "0"
-                }
-            },
-            "true": {
-                "new_block": "minecraft:lit_redstone_lamp",
-                "new_properties": {
-                    "block_data": "0"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "lit": {
+                "false": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:redstone_lamp"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "0"
+                        }
+                    }
+                ],
+                "true": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:lit_redstone_lamp"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "0"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

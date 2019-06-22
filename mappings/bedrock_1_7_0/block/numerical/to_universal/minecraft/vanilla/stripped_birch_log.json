@@ -1,36 +1,66 @@
-{
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_block": "universal_minecraft:log",
-                "new_properties": {
-                    "material": "birch",
-                    "axis": "y"
-                }
-            },
-            "1": {
-                "new_block": "universal_minecraft:log",
-                "new_properties": {
-                    "material": "birch",
-                    "axis": "x"
-                }
-            },
-            "2": {
-                "new_block": "universal_minecraft:log",
-                "new_properties": {
-                    "material": "birch",
-                    "axis": "z"
-                }
-            },
-            "3": {
-                "new_block": "universal_minecraft:wood",
-                "new_properties": {
-                    "material": "birch"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "0": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:log"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "birch",
+                            "axis": "y"
+                        }
+                    }
+                ],
+                "1": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:log"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "birch",
+                            "axis": "x"
+                        }
+                    }
+                ],
+                "2": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:log"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "birch",
+                            "axis": "z"
+                        }
+                    }
+                ],
+                "3": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:wood"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "birch"
+                        }
+                    }
+                ]
             }
         }
     },
-    "new_properties": {
-        "stripped": "true"
+    {
+        "function": "new_properties",
+        "options": {
+            "stripped": "true"
+        }
     }
-}
+]

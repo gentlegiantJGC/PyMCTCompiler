@@ -1,12 +1,21 @@
-{
-    "new_block": "universal_minecraft:redstone_torch",
-    "new_properties": {
-        "facing": "up"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:redstone_torch"
     },
-    "carry_properties": {
-        "lit": [
-            "true",
-            "false"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "facing": "up"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "lit": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

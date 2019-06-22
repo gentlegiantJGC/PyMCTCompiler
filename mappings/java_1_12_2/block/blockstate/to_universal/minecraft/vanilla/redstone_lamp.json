@@ -1,6 +1,12 @@
-{
-    "new_block": "universal_minecraft:redstone_lamp",
-    "new_properties": {
-        "lit": "false"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:redstone_lamp"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "lit": "false"
+        }
     }
-}
+]

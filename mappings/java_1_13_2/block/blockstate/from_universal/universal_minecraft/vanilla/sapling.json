@@ -1,30 +1,54 @@
-{
-    "map_properties": {
-        "material": {
-            "oak": {
-                "new_block": "minecraft:oak_sapling"
-            },
-            "spruce": {
-                "new_block": "minecraft:spruce_sapling"
-            },
-            "birch": {
-                "new_block": "minecraft:birch_sapling"
-            },
-            "jungle": {
-                "new_block": "minecraft:jungle_sapling"
-            },
-            "acacia": {
-                "new_block": "minecraft:acacia_sapling"
-            },
-            "dark_oak": {
-                "new_block": "minecraft:dark_oak_sapling"
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "material": {
+                "oak": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:oak_sapling"
+                    }
+                ],
+                "spruce": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:spruce_sapling"
+                    }
+                ],
+                "birch": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:birch_sapling"
+                    }
+                ],
+                "jungle": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:jungle_sapling"
+                    }
+                ],
+                "acacia": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:acacia_sapling"
+                    }
+                ],
+                "dark_oak": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:dark_oak_sapling"
+                    }
+                ]
             }
         }
     },
-    "carry_properties": {
-        "stage": [
-            "0",
-            "1"
-        ]
+    {
+        "function": "carry_properties",
+        "options": {
+            "stage": [
+                "0",
+                "1"
+            ]
+        }
     }
-}
+]

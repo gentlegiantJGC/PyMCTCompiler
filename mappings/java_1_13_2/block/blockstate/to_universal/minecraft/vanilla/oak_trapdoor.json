@@ -1,26 +1,35 @@
-{
-    "new_block": "universal_minecraft:trapdoor",
-    "new_properties": {
-        "material": "oak"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:trapdoor"
     },
-    "carry_properties": {
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ],
-        "half": [
-            "top",
-            "bottom"
-        ],
-        "open": [
-            "true",
-            "false"
-        ],
-        "powered": [
-            "true",
-            "false"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "oak"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ],
+            "half": [
+                "top",
+                "bottom"
+            ],
+            "open": [
+                "true",
+                "false"
+            ],
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

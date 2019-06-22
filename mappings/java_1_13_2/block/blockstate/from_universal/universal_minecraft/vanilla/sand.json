@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:sand"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:sand"
+    }
+]

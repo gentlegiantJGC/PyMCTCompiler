@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:stonecutter"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:stonecutter"
+    }
+]

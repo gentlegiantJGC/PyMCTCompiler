@@ -1,13 +1,22 @@
-{
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_block": "universal_minecraft:slab",
-                "new_properties": {
-                    "material": "red_sandstone",
-                    "type": "double"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "0": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:slab"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "red_sandstone",
+                            "type": "double"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

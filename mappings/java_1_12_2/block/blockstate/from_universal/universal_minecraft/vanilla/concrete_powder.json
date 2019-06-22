@@ -1,23 +1,29 @@
-{
-    "new_block": "minecraft:concrete_powder",
-    "carry_properties": {
-        "color": [
-            "white",
-            "orange",
-            "magenta",
-            "light_blue",
-            "yellow",
-            "lime",
-            "pink",
-            "gray",
-            "light_gray",
-            "cyan",
-            "purple",
-            "blue",
-            "brown",
-            "green",
-            "red",
-            "black"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:concrete_powder"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "color": [
+                "white",
+                "orange",
+                "magenta",
+                "light_blue",
+                "yellow",
+                "lime",
+                "pink",
+                "gray",
+                "light_gray",
+                "cyan",
+                "purple",
+                "blue",
+                "brown",
+                "green",
+                "red",
+                "black"
+            ]
+        }
     }
-}
+]

@@ -1,15 +1,11 @@
-{
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_block": "universal_minecraft:jukebox"
+[
+    {
+        "function": "map_input_nbt",
+        "options": {
+            "": {
+                "type": "compound",
+                "keys": {}
             }
         }
-    },
-    "map_input_nbt": {
-        "": {
-            "type": "compound",
-            "keys": {}
-        }
     }
-}
+]

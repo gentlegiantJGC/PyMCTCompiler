@@ -1,71 +1,128 @@
-{
-    "new_block": "minecraft:white_bed",
-    "map_properties": {
-        "color": {
-            "white": {
-                "new_block": "minecraft:white_bed"
-            },
-            "orange": {
-                "new_block": "minecraft:orange_bed"
-            },
-            "magenta": {
-                "new_block": "minecraft:magenta_bed"
-            },
-            "light_blue": {
-                "new_block": "minecraft:light_blue_bed"
-            },
-            "yellow": {
-                "new_block": "minecraft:yellow_bed"
-            },
-            "lime": {
-                "new_block": "minecraft:lime_bed"
-            },
-            "pink": {
-                "new_block": "minecraft:pink_bed"
-            },
-            "gray": {
-                "new_block": "minecraft:gray_bed"
-            },
-            "light_gray": {
-                "new_block": "minecraft:light_gray_bed"
-            },
-            "cyan": {
-                "new_block": "minecraft:cyan_bed"
-            },
-            "purple": {
-                "new_block": "minecraft:purple_bed"
-            },
-            "blue": {
-                "new_block": "minecraft:blue_bed"
-            },
-            "brown": {
-                "new_block": "minecraft:brown_bed"
-            },
-            "green": {
-                "new_block": "minecraft:green_bed"
-            },
-            "red": {
-                "new_block": "minecraft:red_bed"
-            },
-            "black": {
-                "new_block": "minecraft:black_bed"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:white_bed"
+    },
+    {
+        "function": "map_properties",
+        "options": {
+            "color": {
+                "white": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:white_bed"
+                    }
+                ],
+                "orange": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:orange_bed"
+                    }
+                ],
+                "magenta": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:magenta_bed"
+                    }
+                ],
+                "light_blue": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:light_blue_bed"
+                    }
+                ],
+                "yellow": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:yellow_bed"
+                    }
+                ],
+                "lime": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:lime_bed"
+                    }
+                ],
+                "pink": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:pink_bed"
+                    }
+                ],
+                "gray": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:gray_bed"
+                    }
+                ],
+                "light_gray": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:light_gray_bed"
+                    }
+                ],
+                "cyan": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:cyan_bed"
+                    }
+                ],
+                "purple": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:purple_bed"
+                    }
+                ],
+                "blue": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:blue_bed"
+                    }
+                ],
+                "brown": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:brown_bed"
+                    }
+                ],
+                "green": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:green_bed"
+                    }
+                ],
+                "red": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:red_bed"
+                    }
+                ],
+                "black": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:black_bed"
+                    }
+                ]
             }
         }
     },
-    "carry_properties": {
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ],
-        "occupied": [
-            "true",
-            "false"
-        ],
-        "part": [
-            "head",
-            "foot"
-        ]
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ],
+            "occupied": [
+                "true",
+                "false"
+            ],
+            "part": [
+                "head",
+                "foot"
+            ]
+        }
     }
-}
+]

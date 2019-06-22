@@ -1,12 +1,21 @@
-{
-    "new_block": "universal_minecraft:pressure_plate",
-    "new_properties": {
-        "material": "acacia"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:pressure_plate"
     },
-    "carry_properties": {
-        "powered": [
-            "true",
-            "false"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "acacia"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

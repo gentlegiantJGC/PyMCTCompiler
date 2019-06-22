@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:info_update2"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:info_update2"
+    }
+]

@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:grass"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:grass"
+    }
+]

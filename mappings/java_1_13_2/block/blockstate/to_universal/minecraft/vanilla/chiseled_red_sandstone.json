@@ -1,6 +1,12 @@
-{
-    "new_block": "universal_minecraft:red_sandstone",
-    "new_properties": {
-        "variant": "chiseled"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:red_sandstone"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "variant": "chiseled"
+        }
     }
-}
+]

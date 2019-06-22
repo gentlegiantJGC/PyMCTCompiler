@@ -1,23 +1,29 @@
-{
-    "new_block": "minecraft:wool",
-    "carry_properties": {
-        "color": [
-            "white",
-            "orange",
-            "magenta",
-            "light_blue",
-            "yellow",
-            "lime",
-            "pink",
-            "gray",
-            "light_gray",
-            "cyan",
-            "purple",
-            "blue",
-            "brown",
-            "green",
-            "red",
-            "black"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:wool"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "color": [
+                "white",
+                "orange",
+                "magenta",
+                "light_blue",
+                "yellow",
+                "lime",
+                "pink",
+                "gray",
+                "light_gray",
+                "cyan",
+                "purple",
+                "blue",
+                "brown",
+                "green",
+                "red",
+                "black"
+            ]
+        }
     }
-}
+]

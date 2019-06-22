@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:hardened_clay"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:hardened_clay"
+    }
+]

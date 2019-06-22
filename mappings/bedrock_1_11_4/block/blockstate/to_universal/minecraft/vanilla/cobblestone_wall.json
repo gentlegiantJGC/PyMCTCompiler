@@ -1,20 +1,26 @@
-{
-    "new_block": "universal_minecraft:wall",
-    "carry_properties": {
-        "material": [
-            "cobblestone",
-            "mossy_cobblestone",
-            "granite",
-            "diorite",
-            "andesite",
-            "sandstone",
-            "brick",
-            "stone_brickmossy_stone_brick",
-            "nether_brick",
-            "end_stone_brick",
-            "prismarine",
-            "red_sandstone",
-            "red_nether_brick"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:wall"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "material": [
+                "cobblestone",
+                "mossy_cobblestone",
+                "granite",
+                "diorite",
+                "andesite",
+                "sandstone",
+                "brick",
+                "stone_brickmossy_stone_brick",
+                "nether_brick",
+                "end_stone_brick",
+                "prismarine",
+                "red_sandstone",
+                "red_nether_brick"
+            ]
+        }
     }
-}
+]

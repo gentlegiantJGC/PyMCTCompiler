@@ -1,14 +1,23 @@
-{
-    "new_block": "universal_minecraft:log",
-    "new_properties": {
-        "material": "dark_oak",
-        "stripped": "false"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:log"
     },
-    "carry_properties": {
-        "axis": [
-            "x",
-            "y",
-            "z"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "dark_oak",
+            "stripped": "false"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "axis": [
+                "x",
+                "y",
+                "z"
+            ]
+        }
     }
-}
+]

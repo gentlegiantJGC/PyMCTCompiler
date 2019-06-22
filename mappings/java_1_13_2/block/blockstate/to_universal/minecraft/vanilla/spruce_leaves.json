@@ -1,33 +1,51 @@
-{
-    "new_block": "universal_minecraft:leaves",
-    "new_properties": {
-        "material": "spruce"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:leaves"
     },
-    "carry_properties": {
-        "distance": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "spruce"
+        }
     },
-    "map_properties": {
-        "persistent": {
-            "true": {
-                "new_properties": {
-                    "decayable": "false",
-                    "check_decay": "false"
-                }
-            },
-            "false": {
-                "new_properties": {
-                    "decayable": "true",
-                    "check_decay": "false"
-                }
+    {
+        "function": "carry_properties",
+        "options": {
+            "distance": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ]
+        }
+    },
+    {
+        "function": "map_properties",
+        "options": {
+            "persistent": {
+                "true": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "decayable": "false",
+                            "check_decay": "false"
+                        }
+                    }
+                ],
+                "false": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "decayable": "true",
+                            "check_decay": "false"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

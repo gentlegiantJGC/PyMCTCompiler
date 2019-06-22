@@ -1,14 +1,23 @@
-{
-    "new_block": "universal_minecraft:wood",
-    "new_properties": {
-        "material": "spruce",
-        "stripped": "false"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:wood"
     },
-    "carry_properties": {
-        "axis": [
-            "x",
-            "y",
-            "z"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "spruce",
+            "stripped": "false"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "axis": [
+                "x",
+                "y",
+                "z"
+            ]
+        }
     }
-}
+]

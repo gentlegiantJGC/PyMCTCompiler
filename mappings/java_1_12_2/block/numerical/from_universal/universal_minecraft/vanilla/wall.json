@@ -1,17 +1,29 @@
-{
-    "new_block": "minecraft:cobblestone_wall",
-    "map_properties": {
-        "material": {
-            "cobblestone": {
-                "new_properties": {
-                    "block_data": "0"
-                }
-            },
-            "mossy_cobblestone": {
-                "new_properties": {
-                    "block_data": "1"
-                }
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:cobblestone_wall"
+    },
+    {
+        "function": "map_properties",
+        "options": {
+            "material": {
+                "cobblestone": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "0"
+                        }
+                    }
+                ],
+                "mossy_cobblestone": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "1"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

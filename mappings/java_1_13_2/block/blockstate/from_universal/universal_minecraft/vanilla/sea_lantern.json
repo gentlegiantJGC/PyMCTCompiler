@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:sea_lantern"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:sea_lantern"
+    }
+]

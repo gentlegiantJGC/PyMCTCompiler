@@ -1,36 +1,69 @@
-{
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_block": "universal_minecraft:coral",
-                "new_properties": {
-                    "type": "tube"
-                }
-            },
-            "1": {
-                "new_block": "universal_minecraft:coral",
-                "new_properties": {
-                    "type": "brain"
-                }
-            },
-            "2": {
-                "new_block": "universal_minecraft:coral",
-                "new_properties": {
-                    "type": "bubble"
-                }
-            },
-            "3": {
-                "new_block": "universal_minecraft:coral",
-                "new_properties": {
-                    "type": "fire"
-                }
-            },
-            "4": {
-                "new_block": "universal_minecraft:coral",
-                "new_properties": {
-                    "type": "horn"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "0": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:coral"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "type": "tube"
+                        }
+                    }
+                ],
+                "1": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:coral"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "type": "brain"
+                        }
+                    }
+                ],
+                "2": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:coral"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "type": "bubble"
+                        }
+                    }
+                ],
+                "3": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:coral"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "type": "fire"
+                        }
+                    }
+                ],
+                "4": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:coral"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "type": "horn"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

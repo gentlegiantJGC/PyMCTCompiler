@@ -1,23 +1,29 @@
-{
-    "new_block": "universal_minecraft:stained_glass_pane",
-    "carry_properties": {
-        "color": [
-            "white",
-            "orange",
-            "magenta",
-            "light_blue",
-            "yellow",
-            "lime",
-            "pink",
-            "gray",
-            "light_gray",
-            "cyan",
-            "purple",
-            "blue",
-            "brown",
-            "green",
-            "red",
-            "black"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:stained_glass_pane"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "color": [
+                "white",
+                "orange",
+                "magenta",
+                "light_blue",
+                "yellow",
+                "lime",
+                "pink",
+                "gray",
+                "light_gray",
+                "cyan",
+                "purple",
+                "blue",
+                "brown",
+                "green",
+                "red",
+                "black"
+            ]
+        }
     }
-}
+]

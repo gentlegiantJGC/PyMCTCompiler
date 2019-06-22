@@ -1,33 +1,60 @@
-{
-    "new_block": "minecraft:skeleton_wall_skull",
-    "map_properties": {
-        "mob": {
-            "skeleton": {
-                "new_block": "minecraft:skeleton_wall_skull"
-            },
-            "wither_skeleton": {
-                "new_block": "minecraft:wither_skeleton_wall_skull"
-            },
-            "zombie": {
-                "new_block": "minecraft:zombie_wall_head"
-            },
-            "player": {
-                "new_block": "minecraft:player_wall_head"
-            },
-            "creeper": {
-                "new_block": "minecraft:creeper_wall_head"
-            },
-            "dragon": {
-                "new_block": "minecraft:dragon_wall_head"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:skeleton_wall_skull"
+    },
+    {
+        "function": "map_properties",
+        "options": {
+            "mob": {
+                "skeleton": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:skeleton_wall_skull"
+                    }
+                ],
+                "wither_skeleton": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:wither_skeleton_wall_skull"
+                    }
+                ],
+                "zombie": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:zombie_wall_head"
+                    }
+                ],
+                "player": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:player_wall_head"
+                    }
+                ],
+                "creeper": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:creeper_wall_head"
+                    }
+                ],
+                "dragon": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:dragon_wall_head"
+                    }
+                ]
             }
         }
     },
-    "carry_properties": {
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ]
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ]
+        }
     }
-}
+]

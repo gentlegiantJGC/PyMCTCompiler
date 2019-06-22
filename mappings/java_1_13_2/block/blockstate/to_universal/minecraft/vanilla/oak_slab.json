@@ -1,13 +1,22 @@
-{
-    "new_block": "universal_minecraft:slab",
-    "new_properties": {
-        "material": "oak"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:slab"
     },
-    "carry_properties": {
-        "type": [
-            "top",
-            "bottom",
-            "double"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "oak"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "type": [
+                "top",
+                "bottom",
+                "double"
+            ]
+        }
     }
-}
+]

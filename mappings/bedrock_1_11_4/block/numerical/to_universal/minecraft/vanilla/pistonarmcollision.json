@@ -1,132 +1,255 @@
-{
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_block": "universal_minecraft:piston_head",
-                "new_properties": {
-                    "facing": "down"
-                },
-                "multiblock": {
-                    "coords": [
-                        0,
-                        1,
-                        0
-                    ],
-                    "map_block_name": {
-                        "minecraft:piston": {
-                            "new_block": "universal_minecraft:piston_head"
-                        },
-                        "minecraft:sticky_piston": {
-                            "new_block": "universal_minecraft:sticky_piston_head"
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "0": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:piston_head"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "down"
+                        }
+                    },
+                    {
+                        "function": "multiblock",
+                        "options": {
+                            "coords": [
+                                0,
+                                1,
+                                0
+                            ],
+                            "functions": [
+                                {
+                                    "function": "map_block_name",
+                                    "options": {
+                                        "minecraft:piston": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "universal_minecraft:piston_head"
+                                            }
+                                        ],
+                                        "minecraft:sticky_piston": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "universal_minecraft:sticky_piston_head"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
                         }
                     }
-                }
-            },
-            "1": {
-                "new_block": "universal_minecraft:piston_head",
-                "new_properties": {
-                    "facing": "up"
-                },
-                "multiblock": {
-                    "coords": [
-                        0,
-                        -1,
-                        0
-                    ],
-                    "map_block_name": {
-                        "minecraft:piston": {
-                            "new_block": "universal_minecraft:piston_head"
-                        },
-                        "minecraft:sticky_piston": {
-                            "new_block": "universal_minecraft:sticky_piston_head"
+                ],
+                "1": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:piston_head"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "up"
+                        }
+                    },
+                    {
+                        "function": "multiblock",
+                        "options": {
+                            "coords": [
+                                0,
+                                -1,
+                                0
+                            ],
+                            "functions": [
+                                {
+                                    "function": "map_block_name",
+                                    "options": {
+                                        "minecraft:piston": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "universal_minecraft:piston_head"
+                                            }
+                                        ],
+                                        "minecraft:sticky_piston": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "universal_minecraft:sticky_piston_head"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
                         }
                     }
-                }
-            },
-            "2": {
-                "new_block": "universal_minecraft:piston_head",
-                "new_properties": {
-                    "facing": "south"
-                },
-                "multiblock": {
-                    "coords": [
-                        0,
-                        0,
-                        -1
-                    ],
-                    "map_block_name": {
-                        "minecraft:piston": {
-                            "new_block": "universal_minecraft:piston_head"
-                        },
-                        "minecraft:sticky_piston": {
-                            "new_block": "universal_minecraft:sticky_piston_head"
+                ],
+                "2": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:piston_head"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "south"
+                        }
+                    },
+                    {
+                        "function": "multiblock",
+                        "options": {
+                            "coords": [
+                                0,
+                                0,
+                                -1
+                            ],
+                            "functions": [
+                                {
+                                    "function": "map_block_name",
+                                    "options": {
+                                        "minecraft:piston": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "universal_minecraft:piston_head"
+                                            }
+                                        ],
+                                        "minecraft:sticky_piston": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "universal_minecraft:sticky_piston_head"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
                         }
                     }
-                }
-            },
-            "3": {
-                "new_block": "universal_minecraft:piston_head",
-                "new_properties": {
-                    "facing": "north"
-                },
-                "multiblock": {
-                    "coords": [
-                        0,
-                        0,
-                        1
-                    ],
-                    "map_block_name": {
-                        "minecraft:piston": {
-                            "new_block": "universal_minecraft:piston_head"
-                        },
-                        "minecraft:sticky_piston": {
-                            "new_block": "universal_minecraft:sticky_piston_head"
+                ],
+                "3": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:piston_head"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "north"
+                        }
+                    },
+                    {
+                        "function": "multiblock",
+                        "options": {
+                            "coords": [
+                                0,
+                                0,
+                                1
+                            ],
+                            "functions": [
+                                {
+                                    "function": "map_block_name",
+                                    "options": {
+                                        "minecraft:piston": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "universal_minecraft:piston_head"
+                                            }
+                                        ],
+                                        "minecraft:sticky_piston": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "universal_minecraft:sticky_piston_head"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
                         }
                     }
-                }
-            },
-            "4": {
-                "new_block": "universal_minecraft:piston_head",
-                "new_properties": {
-                    "facing": "east"
-                },
-                "multiblock": {
-                    "coords": [
-                        -1,
-                        0,
-                        0
-                    ],
-                    "map_block_name": {
-                        "minecraft:piston": {
-                            "new_block": "universal_minecraft:piston_head"
-                        },
-                        "minecraft:sticky_piston": {
-                            "new_block": "universal_minecraft:sticky_piston_head"
+                ],
+                "4": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:piston_head"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "east"
+                        }
+                    },
+                    {
+                        "function": "multiblock",
+                        "options": {
+                            "coords": [
+                                -1,
+                                0,
+                                0
+                            ],
+                            "functions": [
+                                {
+                                    "function": "map_block_name",
+                                    "options": {
+                                        "minecraft:piston": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "universal_minecraft:piston_head"
+                                            }
+                                        ],
+                                        "minecraft:sticky_piston": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "universal_minecraft:sticky_piston_head"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
                         }
                     }
-                }
-            },
-            "5": {
-                "new_block": "universal_minecraft:piston_head",
-                "new_properties": {
-                    "facing": "west"
-                },
-                "multiblock": {
-                    "coords": [
-                        1,
-                        0,
-                        0
-                    ],
-                    "map_block_name": {
-                        "minecraft:piston": {
-                            "new_block": "universal_minecraft:piston_head"
-                        },
-                        "minecraft:sticky_piston": {
-                            "new_block": "universal_minecraft:sticky_piston_head"
+                ],
+                "5": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:piston_head"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "west"
+                        }
+                    },
+                    {
+                        "function": "multiblock",
+                        "options": {
+                            "coords": [
+                                1,
+                                0,
+                                0
+                            ],
+                            "functions": [
+                                {
+                                    "function": "map_block_name",
+                                    "options": {
+                                        "minecraft:piston": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "universal_minecraft:piston_head"
+                                            }
+                                        ],
+                                        "minecraft:sticky_piston": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "universal_minecraft:sticky_piston_head"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
                         }
                     }
-                }
+                ]
             }
         }
     }
-}
+]

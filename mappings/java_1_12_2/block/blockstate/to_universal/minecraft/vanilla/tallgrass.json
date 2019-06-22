@@ -1,24 +1,45 @@
-{
-    "map_properties": {
-        "type": {
-            "grass": {
-                "new_block": "universal_minecraft:plant",
-                "new_properties": {
-                    "type": "grass"
-                }
-            },
-            "fern": {
-                "new_block": "universal_minecraft:plant",
-                "new_properties": {
-                    "type": "fern"
-                }
-            },
-            "dead_bush": {
-                "new_block": "universal_minecraft:plant",
-                "new_properties": {
-                    "type": "dead_bush"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "type": {
+                "grass": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:plant"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "type": "grass"
+                        }
+                    }
+                ],
+                "fern": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:plant"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "type": "fern"
+                        }
+                    }
+                ],
+                "dead_bush": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:plant"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "type": "dead_bush"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

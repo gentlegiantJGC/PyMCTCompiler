@@ -1,20 +1,35 @@
-{
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_block": "universal_minecraft:slab",
-                "new_properties": {
-                    "material": "purpur",
-                    "type": "bottom"
-                }
-            },
-            "8": {
-                "new_block": "universal_minecraft:slab",
-                "new_properties": {
-                    "material": "purpur",
-                    "type": "top"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "0": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:slab"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "purpur",
+                            "type": "bottom"
+                        }
+                    }
+                ],
+                "8": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:slab"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "purpur",
+                            "type": "top"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

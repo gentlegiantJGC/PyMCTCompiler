@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:structure_void"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:structure_void"
+    }
+]

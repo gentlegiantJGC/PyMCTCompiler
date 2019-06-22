@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:prismarine_bricks"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:prismarine_bricks"
+    }
+]

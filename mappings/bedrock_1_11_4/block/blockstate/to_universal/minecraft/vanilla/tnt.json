@@ -1,8 +1,11 @@
-{
-    "carry_properties": {
-        "unstable": [
-            "true",
-            "false"
-        ]
+[
+    {
+        "function": "carry_properties",
+        "options": {
+            "unstable": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

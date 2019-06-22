@@ -1,53 +1,86 @@
-{
-    "new_block": "minecraft:red_mushroom_block",
-    "new_properties": {
-        "block_data": "10"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:red_mushroom_block"
     },
-    "map_properties": {
-        "up": {
-            "true": {
-                "map_properties": {
-                    "down": {
-                        "true": {
-                            "map_properties": {
-                                "north": {
-                                    "true": {
-                                        "map_properties": {
-                                            "east": {
-                                                "true": {
-                                                    "map_properties": {
-                                                        "south": {
-                                                            "true": {
-                                                                "map_properties": {
-                                                                    "west": {
-                                                                        "true": {
-                                                                            "new_properties": {
-                                                                                "block_data": "15"
+    {
+        "function": "new_properties",
+        "options": {
+            "block_data": "10"
+        }
+    },
+    {
+        "function": "map_properties",
+        "options": {
+            "up": {
+                "true": [
+                    {
+                        "function": "map_properties",
+                        "options": {
+                            "down": {
+                                "true": [
+                                    {
+                                        "function": "map_properties",
+                                        "options": {
+                                            "north": {
+                                                "true": [
+                                                    {
+                                                        "function": "map_properties",
+                                                        "options": {
+                                                            "east": {
+                                                                "true": [
+                                                                    {
+                                                                        "function": "map_properties",
+                                                                        "options": {
+                                                                            "south": {
+                                                                                "true": [
+                                                                                    {
+                                                                                        "function": "map_properties",
+                                                                                        "options": {
+                                                                                            "west": {
+                                                                                                "true": [
+                                                                                                    {
+                                                                                                        "function": "new_properties",
+                                                                                                        "options": {
+                                                                                                            "block_data": "15"
+                                                                                                        }
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                ]
                                                                             }
                                                                         }
                                                                     }
-                                                                }
+                                                                ]
                                                             }
                                                         }
                                                     }
-                                                }
+                                                ]
                                             }
                                         }
                                     }
-                                }
+                                ]
                             }
                         }
                     }
-                }
-            }
-        },
-        "material": {
-            "brown": {
-                "new_block": "minecraft:brown_mushroom_block"
+                ]
             },
-            "red": {
-                "new_block": "minecraft:red_mushroom_block"
+            "material": {
+                "brown": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:brown_mushroom_block"
+                    }
+                ],
+                "red": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:red_mushroom_block"
+                    }
+                ]
             }
         }
     }
-}
+]

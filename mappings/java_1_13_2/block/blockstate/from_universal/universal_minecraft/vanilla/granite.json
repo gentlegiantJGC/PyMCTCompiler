@@ -1,13 +1,25 @@
-{
-    "new_block": "minecraft:granite",
-    "map_properties": {
-        "polished": {
-            "false": {
-                "new_block": "minecraft:granite"
-            },
-            "true": {
-                "new_block": "minecraft:polished_granite"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:granite"
+    },
+    {
+        "function": "map_properties",
+        "options": {
+            "polished": {
+                "false": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:granite"
+                    }
+                ],
+                "true": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:polished_granite"
+                    }
+                ]
             }
         }
     }
-}
+]

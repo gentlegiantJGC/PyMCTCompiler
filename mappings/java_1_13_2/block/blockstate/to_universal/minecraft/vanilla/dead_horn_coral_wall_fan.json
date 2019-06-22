@@ -1,15 +1,24 @@
-{
-    "new_block": "universal_minecraft:coral_fan",
-    "new_properties": {
-        "type": "horn",
-        "dead": "true"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:coral_fan"
     },
-    "carry_properties": {
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "type": "horn",
+            "dead": "true"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ]
+        }
     }
-}
+]

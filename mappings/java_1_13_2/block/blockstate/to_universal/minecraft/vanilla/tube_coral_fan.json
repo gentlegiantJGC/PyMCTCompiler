@@ -1,8 +1,14 @@
-{
-    "new_block": "universal_minecraft:coral_fan",
-    "new_properties": {
-        "type": "tube",
-        "dead": "false",
-        "facing": "up"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:coral_fan"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "type": "tube",
+            "dead": "false",
+            "facing": "up"
+        }
     }
-}
+]

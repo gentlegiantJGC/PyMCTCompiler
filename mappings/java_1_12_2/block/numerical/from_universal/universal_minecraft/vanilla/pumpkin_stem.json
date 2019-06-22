@@ -1,47 +1,77 @@
-{
-    "new_block": "minecraft:pumpkin_stem",
-    "map_properties": {
-        "age": {
-            "0": {
-                "new_properties": {
-                    "block_data": "0"
-                }
-            },
-            "1": {
-                "new_properties": {
-                    "block_data": "1"
-                }
-            },
-            "2": {
-                "new_properties": {
-                    "block_data": "2"
-                }
-            },
-            "3": {
-                "new_properties": {
-                    "block_data": "3"
-                }
-            },
-            "4": {
-                "new_properties": {
-                    "block_data": "4"
-                }
-            },
-            "5": {
-                "new_properties": {
-                    "block_data": "5"
-                }
-            },
-            "6": {
-                "new_properties": {
-                    "block_data": "6"
-                }
-            },
-            "7": {
-                "new_properties": {
-                    "block_data": "7"
-                }
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:pumpkin_stem"
+    },
+    {
+        "function": "map_properties",
+        "options": {
+            "age": {
+                "0": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "0"
+                        }
+                    }
+                ],
+                "1": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "1"
+                        }
+                    }
+                ],
+                "2": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "2"
+                        }
+                    }
+                ],
+                "3": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "3"
+                        }
+                    }
+                ],
+                "4": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "4"
+                        }
+                    }
+                ],
+                "5": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "5"
+                        }
+                    }
+                ],
+                "6": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "6"
+                        }
+                    }
+                ],
+                "7": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "7"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

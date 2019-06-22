@@ -1,20 +1,32 @@
-{
-    "map_properties": {
-        "lit": {
-            "false": {
-                "new_block": "minecraft:furnace"
-            },
-            "true": {
-                "new_block": "minecraft:lit_furnace"
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "lit": {
+                "false": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:furnace"
+                    }
+                ],
+                "true": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:lit_furnace"
+                    }
+                ]
             }
         }
     },
-    "carry_properties": {
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ]
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ]
+        }
     }
-}
+]

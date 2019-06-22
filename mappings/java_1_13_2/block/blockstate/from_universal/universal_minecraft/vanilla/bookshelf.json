@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:bookshelf"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:bookshelf"
+    }
+]

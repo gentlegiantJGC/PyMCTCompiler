@@ -1,23 +1,23 @@
-{
-    "map_input_nbt": {
-        "": {
-            "type": "compound",
-            "keys": {}
-        }
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:dispenser"
     },
-    "new_block": "minecraft:dispenser",
-    "carry_properties": {
-        "facing": [
-            "north",
-            "east",
-            "south",
-            "west",
-            "up",
-            "down"
-        ],
-        "triggered": [
-            "true",
-            "false"
-        ]
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "east",
+                "south",
+                "west",
+                "up",
+                "down"
+            ],
+            "triggered": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:bedrock"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:bedrock"
+    }
+]

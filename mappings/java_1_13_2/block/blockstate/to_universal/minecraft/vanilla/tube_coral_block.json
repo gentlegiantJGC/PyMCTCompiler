@@ -1,7 +1,13 @@
-{
-    "new_block": "universal_minecraft:coral_block",
-    "new_properties": {
-        "type": "tube",
-        "dead": "false"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:coral_block"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "type": "tube",
+            "dead": "false"
+        }
     }
-}
+]

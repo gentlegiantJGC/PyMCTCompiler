@@ -1,32 +1,35 @@
-{
-    "map_input_nbt": {
-        "": {
-            "type": "compound",
-            "keys": {}
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:banner"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "color": "lime"
         }
     },
-    "new_block": "universal_minecraft:banner",
-    "new_properties": {
-        "color": "lime"
-    },
-    "carry_properties": {
-        "rotation": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15"
-        ]
+    {
+        "function": "carry_properties",
+        "options": {
+            "rotation": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15"
+            ]
+        }
     }
-}
+]

@@ -1,125 +1,196 @@
-{
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_block": "universal_minecraft:chorus_plant",
-                "multiblock": [
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "0": [
                     {
-                        "coords": [
-                            0,
-                            -1,
-                            0
-                        ],
-                        "map_block_name": {
-                            "minecraft:chorus_plant": {
-                                "new_properties": {
-                                    "down": "true"
-                                }
+                        "function": "multiblock",
+                        "options": [
+                            {
+                                "coords": [
+                                    0,
+                                    -1,
+                                    0
+                                ],
+                                "functions": [
+                                    {
+                                        "function": "map_block_name",
+                                        "options": {
+                                            "minecraft:chorus_plant": [
+                                                {
+                                                    "function": "new_properties",
+                                                    "options": {
+                                                        "down": "true"
+                                                    }
+                                                }
+                                            ],
+                                            "minecraft:chorus_flower": [
+                                                {
+                                                    "function": "new_properties",
+                                                    "options": {
+                                                        "down": "true"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
                             },
-                            "minecraft:chorus_flower": {
-                                "new_properties": {
-                                    "down": "true"
-                                }
-                            }
-                        }
-                    },
-                    {
-                        "coords": [
-                            0,
-                            1,
-                            0
-                        ],
-                        "map_block_name": {
-                            "minecraft:chorus_plant": {
-                                "new_properties": {
-                                    "up": "true"
-                                }
+                            {
+                                "coords": [
+                                    0,
+                                    1,
+                                    0
+                                ],
+                                "functions": [
+                                    {
+                                        "function": "map_block_name",
+                                        "options": {
+                                            "minecraft:chorus_plant": [
+                                                {
+                                                    "function": "new_properties",
+                                                    "options": {
+                                                        "up": "true"
+                                                    }
+                                                }
+                                            ],
+                                            "minecraft:chorus_flower": [
+                                                {
+                                                    "function": "new_properties",
+                                                    "options": {
+                                                        "up": "true"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
                             },
-                            "minecraft:chorus_flower": {
-                                "new_properties": {
-                                    "up": "true"
-                                }
-                            }
-                        }
-                    },
-                    {
-                        "coords": [
-                            -1,
-                            0,
-                            0
-                        ],
-                        "map_block_name": {
-                            "minecraft:chorus_plant": {
-                                "new_properties": {
-                                    "west": "true"
-                                }
+                            {
+                                "coords": [
+                                    -1,
+                                    0,
+                                    0
+                                ],
+                                "functions": [
+                                    {
+                                        "function": "map_block_name",
+                                        "options": {
+                                            "minecraft:chorus_plant": [
+                                                {
+                                                    "function": "new_properties",
+                                                    "options": {
+                                                        "west": "true"
+                                                    }
+                                                }
+                                            ],
+                                            "minecraft:chorus_flower": [
+                                                {
+                                                    "function": "new_properties",
+                                                    "options": {
+                                                        "west": "true"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
                             },
-                            "minecraft:chorus_flower": {
-                                "new_properties": {
-                                    "west": "true"
-                                }
-                            }
-                        }
-                    },
-                    {
-                        "coords": [
-                            1,
-                            0,
-                            0
-                        ],
-                        "map_block_name": {
-                            "minecraft:chorus_plant": {
-                                "new_properties": {
-                                    "east": "true"
-                                }
+                            {
+                                "coords": [
+                                    1,
+                                    0,
+                                    0
+                                ],
+                                "functions": [
+                                    {
+                                        "function": "map_block_name",
+                                        "options": {
+                                            "minecraft:chorus_plant": [
+                                                {
+                                                    "function": "new_properties",
+                                                    "options": {
+                                                        "east": "true"
+                                                    }
+                                                }
+                                            ],
+                                            "minecraft:chorus_flower": [
+                                                {
+                                                    "function": "new_properties",
+                                                    "options": {
+                                                        "east": "true"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
                             },
-                            "minecraft:chorus_flower": {
-                                "new_properties": {
-                                    "east": "true"
-                                }
-                            }
-                        }
-                    },
-                    {
-                        "coords": [
-                            0,
-                            0,
-                            -1
-                        ],
-                        "map_block_name": {
-                            "minecraft:chorus_plant": {
-                                "new_properties": {
-                                    "north": "true"
-                                }
+                            {
+                                "coords": [
+                                    0,
+                                    0,
+                                    -1
+                                ],
+                                "functions": [
+                                    {
+                                        "function": "map_block_name",
+                                        "options": {
+                                            "minecraft:chorus_plant": [
+                                                {
+                                                    "function": "new_properties",
+                                                    "options": {
+                                                        "north": "true"
+                                                    }
+                                                }
+                                            ],
+                                            "minecraft:chorus_flower": [
+                                                {
+                                                    "function": "new_properties",
+                                                    "options": {
+                                                        "north": "true"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
                             },
-                            "minecraft:chorus_flower": {
-                                "new_properties": {
-                                    "north": "true"
-                                }
+                            {
+                                "coords": [
+                                    0,
+                                    0,
+                                    1
+                                ],
+                                "functions": [
+                                    {
+                                        "function": "map_block_name",
+                                        "options": {
+                                            "minecraft:chorus_plant": [
+                                                {
+                                                    "function": "new_properties",
+                                                    "options": {
+                                                        "south": "true"
+                                                    }
+                                                }
+                                            ],
+                                            "minecraft:chorus_flower": [
+                                                {
+                                                    "function": "new_properties",
+                                                    "options": {
+                                                        "south": "true"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
                             }
-                        }
-                    },
-                    {
-                        "coords": [
-                            0,
-                            0,
-                            1
-                        ],
-                        "map_block_name": {
-                            "minecraft:chorus_plant": {
-                                "new_properties": {
-                                    "south": "true"
-                                }
-                            },
-                            "minecraft:chorus_flower": {
-                                "new_properties": {
-                                    "south": "true"
-                                }
-                            }
-                        }
+                        ]
                     }
                 ]
             }
         }
     }
-}
+]

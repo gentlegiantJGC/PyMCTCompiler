@@ -1,6 +1,12 @@
-{
-    "new_block": "minecraft:packed_ice",
-    "new_properties": {
-        "block_data": "0"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:packed_ice"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "block_data": "0"
+        }
     }
-}
+]

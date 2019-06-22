@@ -1,36 +1,66 @@
-{
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_block": "universal_minecraft:log",
-                "new_properties": {
-                    "material": "jungle",
-                    "axis": "y"
-                }
-            },
-            "1": {
-                "new_block": "universal_minecraft:log",
-                "new_properties": {
-                    "material": "jungle",
-                    "axis": "x"
-                }
-            },
-            "2": {
-                "new_block": "universal_minecraft:log",
-                "new_properties": {
-                    "material": "jungle",
-                    "axis": "z"
-                }
-            },
-            "3": {
-                "new_block": "universal_minecraft:wood",
-                "new_properties": {
-                    "material": "jungle"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "0": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:log"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "jungle",
+                            "axis": "y"
+                        }
+                    }
+                ],
+                "1": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:log"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "jungle",
+                            "axis": "x"
+                        }
+                    }
+                ],
+                "2": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:log"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "jungle",
+                            "axis": "z"
+                        }
+                    }
+                ],
+                "3": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:wood"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "jungle"
+                        }
+                    }
+                ]
             }
         }
     },
-    "new_properties": {
-        "stripped": "true"
+    {
+        "function": "new_properties",
+        "options": {
+            "stripped": "true"
+        }
     }
-}
+]

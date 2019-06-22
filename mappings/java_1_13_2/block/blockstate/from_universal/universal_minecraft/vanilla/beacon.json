@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:beacon"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:beacon"
+    }
+]

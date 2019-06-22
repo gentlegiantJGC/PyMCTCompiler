@@ -1,25 +1,34 @@
-{
-    "new_block": "universal_minecraft:stairs",
-    "new_properties": {
-        "material": "prismarine_brick"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:stairs"
     },
-    "carry_properties": {
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ],
-        "half": [
-            "top",
-            "bottom"
-        ],
-        "shape": [
-            "straight",
-            "inner_left",
-            "inner_right",
-            "outer_left",
-            "outer_right"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "prismarine_brick"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ],
+            "half": [
+                "top",
+                "bottom"
+            ],
+            "shape": [
+                "straight",
+                "inner_left",
+                "inner_right",
+                "outer_left",
+                "outer_right"
+            ]
+        }
     }
-}
+]

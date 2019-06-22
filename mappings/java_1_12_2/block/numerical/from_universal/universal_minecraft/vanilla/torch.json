@@ -1,32 +1,53 @@
-{
-    "new_block": "minecraft:torch",
-    "map_properties": {
-        "facing": {
-            "east": {
-                "new_properties": {
-                    "block_data": "1"
-                }
-            },
-            "west": {
-                "new_properties": {
-                    "block_data": "2"
-                }
-            },
-            "south": {
-                "new_properties": {
-                    "block_data": "3"
-                }
-            },
-            "north": {
-                "new_properties": {
-                    "block_data": "4"
-                }
-            },
-            "up": {
-                "new_properties": {
-                    "block_data": "5"
-                }
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:torch"
+    },
+    {
+        "function": "map_properties",
+        "options": {
+            "facing": {
+                "east": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "1"
+                        }
+                    }
+                ],
+                "west": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "2"
+                        }
+                    }
+                ],
+                "south": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "3"
+                        }
+                    }
+                ],
+                "north": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "4"
+                        }
+                    }
+                ],
+                "up": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "5"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

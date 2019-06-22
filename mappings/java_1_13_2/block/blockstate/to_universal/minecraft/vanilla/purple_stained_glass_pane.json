@@ -1,24 +1,33 @@
-{
-    "new_block": "universal_minecraft:stained_glass_pane",
-    "new_properties": {
-        "color": "purple"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:stained_glass_pane"
     },
-    "carry_properties": {
-        "east": [
-            "true",
-            "false"
-        ],
-        "north": [
-            "true",
-            "false"
-        ],
-        "south": [
-            "true",
-            "false"
-        ],
-        "west": [
-            "true",
-            "false"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "color": "purple"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "east": [
+                "true",
+                "false"
+            ],
+            "north": [
+                "true",
+                "false"
+            ],
+            "south": [
+                "true",
+                "false"
+            ],
+            "west": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

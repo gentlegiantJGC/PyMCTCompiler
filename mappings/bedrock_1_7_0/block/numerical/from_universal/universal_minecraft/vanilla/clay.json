@@ -1,6 +1,12 @@
-{
-    "new_block": "minecraft:clay",
-    "new_properties": {
-        "block_data": "0"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:clay"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "block_data": "0"
+        }
     }
-}
+]

@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:stone"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:stone"
+    }
+]

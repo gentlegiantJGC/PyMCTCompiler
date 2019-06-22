@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:diamond_block"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:diamond_block"
+    }
+]

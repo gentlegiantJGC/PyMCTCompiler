@@ -1,6 +1,12 @@
-{
-    "new_block": "universal_minecraft:sponge",
-    "new_properties": {
-        "wet": "false"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:sponge"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "wet": "false"
+        }
     }
-}
+]

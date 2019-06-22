@@ -1,28 +1,51 @@
-{
-    "new_block": "universal_minecraft:purpur_block",
-    "map_properties": {
-        "variant": {
-            "purpur_block": {
-                "new_block": "universal_minecraft:purpur_block"
-            },
-            "purpur_pillar_x": {
-                "new_block": "universal_minecraft:purpur_pillar",
-                "new_properties": {
-                    "axis": "x"
-                }
-            },
-            "purpur_pillar_y": {
-                "new_block": "universal_minecraft:purpur_pillar",
-                "new_properties": {
-                    "axis": "y"
-                }
-            },
-            "purpur_pillar_z": {
-                "new_block": "universal_minecraft:purpur_pillar",
-                "new_properties": {
-                    "axis": "z"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "variant": {
+                "purpur_block": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:purpur_block"
+                    }
+                ],
+                "purpur_pillar_x": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:purpur_pillar"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "axis": "x"
+                        }
+                    }
+                ],
+                "purpur_pillar_y": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:purpur_pillar"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "axis": "y"
+                        }
+                    }
+                ],
+                "purpur_pillar_z": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:purpur_pillar"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "axis": "z"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

@@ -1,30 +1,57 @@
-{
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_properties": {
-                    "new_block": "universal_minecraft:beetroots",
-                    "age": "0"
-                }
-            },
-            "1": {
-                "new_properties": {
-                    "new_block": "universal_minecraft:beetroots",
-                    "age": "2"
-                }
-            },
-            "2": {
-                "new_properties": {
-                    "new_block": "universal_minecraft:beetroots",
-                    "age": "4"
-                }
-            },
-            "3": {
-                "new_properties": {
-                    "new_block": "universal_minecraft:beetroots",
-                    "age": "7"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "0": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:beetroots"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "age": "0"
+                        }
+                    }
+                ],
+                "1": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:beetroots"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "age": "2"
+                        }
+                    }
+                ],
+                "2": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:beetroots"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "age": "4"
+                        }
+                    }
+                ],
+                "3": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:beetroots"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "age": "7"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

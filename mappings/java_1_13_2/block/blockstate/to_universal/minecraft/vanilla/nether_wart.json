@@ -1,11 +1,17 @@
-{
-    "new_block": "universal_minecraft:nether_wart",
-    "carry_properties": {
-        "age": [
-            "0",
-            "1",
-            "2",
-            "3"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:nether_wart"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "age": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
+        }
     }
-}
+]

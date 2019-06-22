@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:podzol"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:podzol"
+    }
+]

@@ -1,6 +1,12 @@
-{
-    "new_block": "universal_minecraft:plant",
-    "new_properties": {
-        "type": "poppy"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:plant"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "type": "poppy"
+        }
     }
-}
+]

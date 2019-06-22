@@ -1,15 +1,21 @@
-{
-    "new_block": "universal_minecraft:furnace",
-    "carry_properties": {
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ],
-        "lit": [
-            "true",
-            "false"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:furnace"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ],
+            "lit": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

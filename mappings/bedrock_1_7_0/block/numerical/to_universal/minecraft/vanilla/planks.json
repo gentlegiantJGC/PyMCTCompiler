@@ -1,42 +1,81 @@
-{
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_block": "universal_minecraft:planks",
-                "new_properties": {
-                    "material": "oak"
-                }
-            },
-            "1": {
-                "new_block": "universal_minecraft:planks",
-                "new_properties": {
-                    "material": "spruce"
-                }
-            },
-            "2": {
-                "new_block": "universal_minecraft:planks",
-                "new_properties": {
-                    "material": "birch"
-                }
-            },
-            "3": {
-                "new_block": "universal_minecraft:planks",
-                "new_properties": {
-                    "material": "jungle"
-                }
-            },
-            "4": {
-                "new_block": "universal_minecraft:planks",
-                "new_properties": {
-                    "material": "acacia"
-                }
-            },
-            "5": {
-                "new_block": "universal_minecraft:planks",
-                "new_properties": {
-                    "material": "dark_oak"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "0": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:planks"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "oak"
+                        }
+                    }
+                ],
+                "1": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:planks"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "spruce"
+                        }
+                    }
+                ],
+                "2": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:planks"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "birch"
+                        }
+                    }
+                ],
+                "3": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:planks"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "jungle"
+                        }
+                    }
+                ],
+                "4": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:planks"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "acacia"
+                        }
+                    }
+                ],
+                "5": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:planks"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "dark_oak"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

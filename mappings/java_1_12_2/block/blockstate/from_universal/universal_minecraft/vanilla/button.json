@@ -1,40 +1,61 @@
-{
-    "carry_properties": {
-        "powered": [
-            "false",
-            "true"
-        ]
+[
+    {
+        "function": "carry_properties",
+        "options": {
+            "powered": [
+                "false",
+                "true"
+            ]
+        }
     },
-    "map_properties": {
-        "material": {
-            "stone": {
-                "new_block": "minecraft:stone_button"
+    {
+        "function": "map_properties",
+        "options": {
+            "material": {
+                "stone": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:stone_button"
+                    }
+                ],
+                "oak": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:wooden_button"
+                    }
+                ]
             },
-            "oak": {
-                "new_block": "minecraft:wooden_button"
-            }
-        },
-        "face": {
-            "ceiling": {
-                "new_properties": {
-                    "facing": "down"
-                }
-            },
-            "floor": {
-                "new_properties": {
-                    "facing": "up"
-                }
-            },
-            "wall": {
-                "carry_properties": {
-                    "facing": [
-                        "north",
-                        "south",
-                        "west",
-                        "east"
-                    ]
-                }
+            "face": {
+                "ceiling": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "down"
+                        }
+                    }
+                ],
+                "floor": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "up"
+                        }
+                    }
+                ],
+                "wall": [
+                    {
+                        "function": "carry_properties",
+                        "options": {
+                            "facing": [
+                                "north",
+                                "south",
+                                "west",
+                                "east"
+                            ]
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

@@ -1,101 +1,179 @@
-{
-    "new_properties": {
-        "material": "oak"
+[
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "oak"
+        }
     },
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_block": "universal_minecraft:button",
-                "new_properties": {
-                    "face": "ceiling",
-                    "powered": "false"
-                }
-            },
-            "1": {
-                "new_block": "universal_minecraft:button",
-                "new_properties": {
-                    "face": "wall",
-                    "facing": "east",
-                    "powered": "false"
-                }
-            },
-            "2": {
-                "new_block": "universal_minecraft:button",
-                "new_properties": {
-                    "face": "wall",
-                    "facing": "west",
-                    "powered": "false"
-                }
-            },
-            "3": {
-                "new_block": "universal_minecraft:button",
-                "new_properties": {
-                    "face": "wall",
-                    "facing": "south",
-                    "powered": "false"
-                }
-            },
-            "4": {
-                "new_block": "universal_minecraft:button",
-                "new_properties": {
-                    "face": "wall",
-                    "facing": "north",
-                    "powered": "false"
-                }
-            },
-            "5": {
-                "new_block": "universal_minecraft:button",
-                "new_properties": {
-                    "face": "floor",
-                    "powered": "false"
-                }
-            },
-            "8": {
-                "new_block": "universal_minecraft:button",
-                "new_properties": {
-                    "face": "ceiling",
-                    "powered": "true"
-                }
-            },
-            "9": {
-                "new_block": "universal_minecraft:button",
-                "new_properties": {
-                    "face": "wall",
-                    "facing": "east",
-                    "powered": "true"
-                }
-            },
-            "10": {
-                "new_block": "universal_minecraft:button",
-                "new_properties": {
-                    "face": "wall",
-                    "facing": "west",
-                    "powered": "true"
-                }
-            },
-            "11": {
-                "new_block": "universal_minecraft:button",
-                "new_properties": {
-                    "face": "wall",
-                    "facing": "south",
-                    "powered": "true"
-                }
-            },
-            "12": {
-                "new_block": "universal_minecraft:button",
-                "new_properties": {
-                    "face": "wall",
-                    "facing": "north",
-                    "powered": "true"
-                }
-            },
-            "13": {
-                "new_block": "universal_minecraft:button",
-                "new_properties": {
-                    "face": "floor",
-                    "powered": "true"
-                }
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "0": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:button"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "face": "ceiling",
+                            "powered": "false"
+                        }
+                    }
+                ],
+                "1": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:button"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "face": "wall",
+                            "facing": "east",
+                            "powered": "false"
+                        }
+                    }
+                ],
+                "2": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:button"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "face": "wall",
+                            "facing": "west",
+                            "powered": "false"
+                        }
+                    }
+                ],
+                "3": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:button"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "face": "wall",
+                            "facing": "south",
+                            "powered": "false"
+                        }
+                    }
+                ],
+                "4": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:button"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "face": "wall",
+                            "facing": "north",
+                            "powered": "false"
+                        }
+                    }
+                ],
+                "5": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:button"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "face": "floor",
+                            "powered": "false"
+                        }
+                    }
+                ],
+                "8": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:button"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "face": "ceiling",
+                            "powered": "true"
+                        }
+                    }
+                ],
+                "9": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:button"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "face": "wall",
+                            "facing": "east",
+                            "powered": "true"
+                        }
+                    }
+                ],
+                "10": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:button"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "face": "wall",
+                            "facing": "west",
+                            "powered": "true"
+                        }
+                    }
+                ],
+                "11": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:button"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "face": "wall",
+                            "facing": "south",
+                            "powered": "true"
+                        }
+                    }
+                ],
+                "12": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:button"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "face": "wall",
+                            "facing": "north",
+                            "powered": "true"
+                        }
+                    }
+                ],
+                "13": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:button"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "face": "floor",
+                            "powered": "true"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

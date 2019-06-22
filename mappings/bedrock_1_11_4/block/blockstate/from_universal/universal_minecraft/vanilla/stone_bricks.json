@@ -1,10 +1,16 @@
-{
-    "new_block": "minecraft:stonebrick",
-    "carry_properties": {
-        "variant": [
-            "normal",
-            "cracked",
-            "mossy"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:stonebrick"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "variant": [
+                "normal",
+                "cracked",
+                "mossy"
+            ]
+        }
     }
-}
+]

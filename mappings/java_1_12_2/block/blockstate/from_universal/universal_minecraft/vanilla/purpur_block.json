@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:purpur_block"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:purpur_block"
+    }
+]

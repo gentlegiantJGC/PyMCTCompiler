@@ -1,34 +1,55 @@
-{
-    "map_properties": {
-        "lit": {
-            "false": {
-                "new_block": "minecraft:furnace"
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "lit": {
+                "false": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:furnace"
+                    }
+                ],
+                "true": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:lit_furnace"
+                    }
+                ]
             },
-            "true": {
-                "new_block": "minecraft:lit_furnace"
-            }
-        },
-        "facing": {
-            "north": {
-                "new_properties": {
-                    "block_data": "2"
-                }
-            },
-            "south": {
-                "new_properties": {
-                    "block_data": "3"
-                }
-            },
-            "west": {
-                "new_properties": {
-                    "block_data": "4"
-                }
-            },
-            "east": {
-                "new_properties": {
-                    "block_data": "5"
-                }
+            "facing": {
+                "north": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "2"
+                        }
+                    }
+                ],
+                "south": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "3"
+                        }
+                    }
+                ],
+                "west": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "4"
+                        }
+                    }
+                ],
+                "east": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "5"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

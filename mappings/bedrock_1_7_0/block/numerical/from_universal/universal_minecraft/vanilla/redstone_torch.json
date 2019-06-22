@@ -1,39 +1,63 @@
-{
-    "map_properties": {
-        "lit": {
-            "false": {
-                "new_block": "minecraft:unlit_redstone_torch"
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "lit": {
+                "false": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:unlit_redstone_torch"
+                    }
+                ],
+                "true": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:redstone_torch"
+                    }
+                ]
             },
-            "true": {
-                "new_block": "minecraft:redstone_torch"
-            }
-        },
-        "facing": {
-            "east": {
-                "new_properties": {
-                    "block_data": "1"
-                }
-            },
-            "west": {
-                "new_properties": {
-                    "block_data": "2"
-                }
-            },
-            "south": {
-                "new_properties": {
-                    "block_data": "3"
-                }
-            },
-            "north": {
-                "new_properties": {
-                    "block_data": "4"
-                }
-            },
-            "up": {
-                "new_properties": {
-                    "block_data": "5"
-                }
+            "facing": {
+                "east": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "1"
+                        }
+                    }
+                ],
+                "west": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "2"
+                        }
+                    }
+                ],
+                "south": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "3"
+                        }
+                    }
+                ],
+                "north": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "4"
+                        }
+                    }
+                ],
+                "up": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "5"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

@@ -1,18 +1,33 @@
-{
-    "map_properties": {
-        "axis": {
-            "x": {
-                "new_block": "minecraft:portal",
-                "new_properties": {
-                    "block_data": "1"
-                }
-            },
-            "z": {
-                "new_block": "minecraft:portal",
-                "new_properties": {
-                    "block_data": "2"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "axis": {
+                "x": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:portal"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "1"
+                        }
+                    }
+                ],
+                "z": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:portal"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "2"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

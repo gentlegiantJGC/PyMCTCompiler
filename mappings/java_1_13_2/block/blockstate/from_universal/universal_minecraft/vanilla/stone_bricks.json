@@ -1,15 +1,27 @@
-{
-    "map_properties": {
-        "variant": {
-            "normal": {
-                "new_block": "minecraft:stone_bricks"
-            },
-            "cracked": {
-                "new_block": "minecraft:cracked_stone_bricks"
-            },
-            "mossy": {
-                "new_block": "minecraft:mossy_stone_bricks"
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "variant": {
+                "normal": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:stone_bricks"
+                    }
+                ],
+                "cracked": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:cracked_stone_bricks"
+                    }
+                ],
+                "mossy": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:mossy_stone_bricks"
+                    }
+                ]
             }
         }
     }
-}
+]

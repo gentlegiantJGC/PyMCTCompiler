@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:dragon_egg"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:dragon_egg"
+    }
+]

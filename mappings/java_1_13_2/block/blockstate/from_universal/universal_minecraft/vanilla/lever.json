@@ -1,20 +1,26 @@
-{
-    "new_block": "minecraft:lever",
-    "carry_properties": {
-        "face": [
-            "floor",
-            "wall",
-            "ceiling"
-        ],
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ],
-        "powered": [
-            "true",
-            "false"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:lever"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "face": [
+                "floor",
+                "wall",
+                "ceiling"
+            ],
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ],
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

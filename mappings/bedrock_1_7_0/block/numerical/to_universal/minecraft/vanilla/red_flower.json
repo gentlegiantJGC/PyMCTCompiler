@@ -1,60 +1,117 @@
-{
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_block": "universal_minecraft:plant",
-                "new_properties": {
-                    "type": "poppy"
-                }
-            },
-            "1": {
-                "new_block": "universal_minecraft:plant",
-                "new_properties": {
-                    "type": "blue_orchid"
-                }
-            },
-            "2": {
-                "new_block": "universal_minecraft:plant",
-                "new_properties": {
-                    "type": "allium"
-                }
-            },
-            "3": {
-                "new_block": "universal_minecraft:plant",
-                "new_properties": {
-                    "type": "azure_bluet"
-                }
-            },
-            "4": {
-                "new_block": "universal_minecraft:plant",
-                "new_properties": {
-                    "type": "red_tulip"
-                }
-            },
-            "5": {
-                "new_block": "universal_minecraft:plant",
-                "new_properties": {
-                    "type": "orange_tulip"
-                }
-            },
-            "6": {
-                "new_block": "universal_minecraft:plant",
-                "new_properties": {
-                    "type": "white_tulip"
-                }
-            },
-            "7": {
-                "new_block": "universal_minecraft:plant",
-                "new_properties": {
-                    "type": "pink_tulip"
-                }
-            },
-            "8": {
-                "new_block": "universal_minecraft:plant",
-                "new_properties": {
-                    "type": "oxeye_daisy"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "0": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:plant"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "type": "poppy"
+                        }
+                    }
+                ],
+                "1": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:plant"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "type": "blue_orchid"
+                        }
+                    }
+                ],
+                "2": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:plant"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "type": "allium"
+                        }
+                    }
+                ],
+                "3": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:plant"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "type": "azure_bluet"
+                        }
+                    }
+                ],
+                "4": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:plant"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "type": "red_tulip"
+                        }
+                    }
+                ],
+                "5": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:plant"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "type": "orange_tulip"
+                        }
+                    }
+                ],
+                "6": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:plant"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "type": "white_tulip"
+                        }
+                    }
+                ],
+                "7": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:plant"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "type": "pink_tulip"
+                        }
+                    }
+                ],
+                "8": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:plant"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "type": "oxeye_daisy"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

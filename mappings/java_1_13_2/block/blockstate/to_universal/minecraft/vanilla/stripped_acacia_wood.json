@@ -1,14 +1,23 @@
-{
-    "new_block": "universal_minecraft:wood",
-    "new_properties": {
-        "material": "acacia",
-        "stripped": "true"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:wood"
     },
-    "carry_properties": {
-        "axis": [
-            "x",
-            "y",
-            "z"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "acacia",
+            "stripped": "true"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "axis": [
+                "x",
+                "y",
+                "z"
+            ]
+        }
     }
-}
+]

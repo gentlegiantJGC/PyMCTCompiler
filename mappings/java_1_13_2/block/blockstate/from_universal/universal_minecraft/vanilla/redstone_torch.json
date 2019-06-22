@@ -1,40 +1,76 @@
-{
-    "new_block": "minecraft:redstone_torch",
-    "map_properties": {
-        "facing": {
-            "up": {
-                "new_block": "minecraft:redstone_torch"
-            },
-            "north": {
-                "new_block": "minecraft:redstone_wall_torch",
-                "new_properties": {
-                    "facing": "north"
-                }
-            },
-            "south": {
-                "new_block": "minecraft:redstone_wall_torch",
-                "new_properties": {
-                    "facing": "south"
-                }
-            },
-            "west": {
-                "new_block": "minecraft:redstone_wall_torch",
-                "new_properties": {
-                    "facing": "west"
-                }
-            },
-            "east": {
-                "new_block": "minecraft:redstone_wall_torch",
-                "new_properties": {
-                    "facing": "east"
-                }
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:redstone_torch"
+    },
+    {
+        "function": "map_properties",
+        "options": {
+            "facing": {
+                "up": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:redstone_torch"
+                    }
+                ],
+                "north": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:redstone_wall_torch"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "north"
+                        }
+                    }
+                ],
+                "south": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:redstone_wall_torch"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "south"
+                        }
+                    }
+                ],
+                "west": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:redstone_wall_torch"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "west"
+                        }
+                    }
+                ],
+                "east": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:redstone_wall_torch"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "east"
+                        }
+                    }
+                ]
             }
         }
     },
-    "carry_properties": {
-        "lit": [
-            "true",
-            "false"
-        ]
+    {
+        "function": "carry_properties",
+        "options": {
+            "lit": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

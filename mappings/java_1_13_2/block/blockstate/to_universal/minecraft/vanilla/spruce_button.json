@@ -1,23 +1,32 @@
-{
-    "new_block": "universal_minecraft:button",
-    "new_properties": {
-        "material": "spruce"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:button"
     },
-    "carry_properties": {
-        "face": [
-            "floor",
-            "wall",
-            "ceiling"
-        ],
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ],
-        "powered": [
-            "true",
-            "false"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "spruce"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "face": [
+                "floor",
+                "wall",
+                "ceiling"
+            ],
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ],
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

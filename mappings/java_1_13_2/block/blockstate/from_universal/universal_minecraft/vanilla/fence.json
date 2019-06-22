@@ -1,45 +1,72 @@
-{
-    "map_properties": {
-        "material": {
-            "oak": {
-                "new_block": "minecraft:oak_fence"
-            },
-            "spruce": {
-                "new_block": "minecraft:spruce_fence"
-            },
-            "birch": {
-                "new_block": "minecraft:birch_fence"
-            },
-            "jungle": {
-                "new_block": "minecraft:jungle_fence"
-            },
-            "acacia": {
-                "new_block": "minecraft:acacia_fence"
-            },
-            "dark_oak": {
-                "new_block": "minecraft:dark_oak_fence"
-            },
-            "nether_brick": {
-                "new_block": "minecraft:nether_brick_fence"
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "material": {
+                "oak": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:oak_fence"
+                    }
+                ],
+                "spruce": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:spruce_fence"
+                    }
+                ],
+                "birch": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:birch_fence"
+                    }
+                ],
+                "jungle": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:jungle_fence"
+                    }
+                ],
+                "acacia": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:acacia_fence"
+                    }
+                ],
+                "dark_oak": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:dark_oak_fence"
+                    }
+                ],
+                "nether_brick": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:nether_brick_fence"
+                    }
+                ]
             }
         }
     },
-    "carry_properties": {
-        "east": [
-            "true",
-            "false"
-        ],
-        "north": [
-            "true",
-            "false"
-        ],
-        "south": [
-            "true",
-            "false"
-        ],
-        "west": [
-            "true",
-            "false"
-        ]
+    {
+        "function": "carry_properties",
+        "options": {
+            "east": [
+                "true",
+                "false"
+            ],
+            "north": [
+                "true",
+                "false"
+            ],
+            "south": [
+                "true",
+                "false"
+            ],
+            "west": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

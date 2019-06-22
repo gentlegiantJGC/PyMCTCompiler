@@ -1,3 +1,6 @@
-{
-    "new_block": "universal_minecraft:terracotta"
-}
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:terracotta"
+    }
+]

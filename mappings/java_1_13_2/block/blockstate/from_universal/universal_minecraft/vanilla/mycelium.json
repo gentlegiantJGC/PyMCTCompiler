@@ -1,9 +1,15 @@
-{
-    "new_block": "minecraft:mycelium",
-    "carry_properties": {
-        "snowy": [
-            "true",
-            "false"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:mycelium"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "snowy": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

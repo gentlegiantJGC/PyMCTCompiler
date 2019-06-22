@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:glowingobsidian"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:glowingobsidian"
+    }
+]

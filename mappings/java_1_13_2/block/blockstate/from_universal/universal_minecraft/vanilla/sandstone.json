@@ -1,19 +1,37 @@
-{
-    "new_block": "minecraft:sandstone",
-    "map_properties": {
-        "variant": {
-            "normal": {
-                "new_block": "minecraft:sandstone"
-            },
-            "chiseled": {
-                "new_block": "minecraft:chiseled_sandstone"
-            },
-            "cut": {
-                "new_block": "minecraft:cut_sandstone"
-            },
-            "smooth": {
-                "new_block": "minecraft:smooth_sandstone"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:sandstone"
+    },
+    {
+        "function": "map_properties",
+        "options": {
+            "variant": {
+                "normal": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:sandstone"
+                    }
+                ],
+                "chiseled": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:chiseled_sandstone"
+                    }
+                ],
+                "cut": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:cut_sandstone"
+                    }
+                ],
+                "smooth": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:smooth_sandstone"
+                    }
+                ]
             }
         }
     }
-}
+]

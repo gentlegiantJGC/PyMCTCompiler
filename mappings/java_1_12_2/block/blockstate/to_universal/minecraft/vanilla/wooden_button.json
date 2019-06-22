@@ -1,50 +1,80 @@
-{
-    "new_block": "universal_minecraft:button",
-    "new_properties": {
-        "material": "oak"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:button"
     },
-    "carry_properties": {
-        "powered": [
-            "false",
-            "true"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "oak"
+        }
     },
-    "map_properties": {
-        "facing": {
-            "down": {
-                "new_properties": {
-                    "face": "ceiling"
-                }
-            },
-            "up": {
-                "new_properties": {
-                    "face": "floor"
-                }
-            },
-            "north": {
-                "new_properties": {
-                    "face": "wall",
-                    "facing": "north"
-                }
-            },
-            "south": {
-                "new_properties": {
-                    "face": "wall",
-                    "facing": "south"
-                }
-            },
-            "west": {
-                "new_properties": {
-                    "face": "wall",
-                    "facing": "west"
-                }
-            },
-            "east": {
-                "new_properties": {
-                    "face": "wall",
-                    "facing": "east"
-                }
+    {
+        "function": "carry_properties",
+        "options": {
+            "powered": [
+                "false",
+                "true"
+            ]
+        }
+    },
+    {
+        "function": "map_properties",
+        "options": {
+            "facing": {
+                "down": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "face": "ceiling"
+                        }
+                    }
+                ],
+                "up": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "face": "floor"
+                        }
+                    }
+                ],
+                "north": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "face": "wall",
+                            "facing": "north"
+                        }
+                    }
+                ],
+                "south": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "face": "wall",
+                            "facing": "south"
+                        }
+                    }
+                ],
+                "west": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "face": "wall",
+                            "facing": "west"
+                        }
+                    }
+                ],
+                "east": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "face": "wall",
+                            "facing": "east"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

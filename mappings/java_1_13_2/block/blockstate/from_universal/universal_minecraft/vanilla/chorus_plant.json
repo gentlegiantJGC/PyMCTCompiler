@@ -1,29 +1,35 @@
-{
-    "new_block": "minecraft:chorus_plant",
-    "carry_properties": {
-        "down": [
-            "true",
-            "false"
-        ],
-        "east": [
-            "true",
-            "false"
-        ],
-        "north": [
-            "true",
-            "false"
-        ],
-        "south": [
-            "true",
-            "false"
-        ],
-        "up": [
-            "true",
-            "false"
-        ],
-        "west": [
-            "true",
-            "false"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:chorus_plant"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "down": [
+                "true",
+                "false"
+            ],
+            "east": [
+                "true",
+                "false"
+            ],
+            "north": [
+                "true",
+                "false"
+            ],
+            "south": [
+                "true",
+                "false"
+            ],
+            "up": [
+                "true",
+                "false"
+            ],
+            "west": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

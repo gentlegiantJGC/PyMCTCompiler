@@ -1,4 +1,10 @@
-{
-    "new_block": "minecraft:conduit",
-    "carry_properties": {}
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:conduit"
+    },
+    {
+        "function": "carry_properties",
+        "options": {}
+    }
+]

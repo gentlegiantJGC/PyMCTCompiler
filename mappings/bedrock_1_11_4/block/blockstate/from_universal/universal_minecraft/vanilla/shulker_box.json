@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:undyed_shulker_box"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:undyed_shulker_box"
+    }
+]

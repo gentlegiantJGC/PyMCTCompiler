@@ -1,22 +1,31 @@
-{
-    "new_block": "universal_minecraft:trapdoor",
-    "new_properties": {
-        "material": "jungle"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:trapdoor"
     },
-    "carry_properties": {
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ],
-        "half": [
-            "top",
-            "bottom"
-        ],
-        "open": [
-            "true",
-            "false"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "jungle"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ],
+            "half": [
+                "top",
+                "bottom"
+            ],
+            "open": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

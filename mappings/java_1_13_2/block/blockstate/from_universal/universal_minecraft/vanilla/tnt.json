@@ -1,9 +1,15 @@
-{
-    "new_block": "minecraft:tnt",
-    "carry_properties": {
-        "unstable": [
-            "true",
-            "false"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:tnt"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "unstable": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

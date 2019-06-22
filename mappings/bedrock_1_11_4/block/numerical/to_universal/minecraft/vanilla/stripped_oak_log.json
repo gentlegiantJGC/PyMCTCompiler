@@ -1,36 +1,66 @@
-{
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_block": "universal_minecraft:log",
-                "new_properties": {
-                    "material": "oak",
-                    "axis": "y"
-                }
-            },
-            "1": {
-                "new_block": "universal_minecraft:log",
-                "new_properties": {
-                    "material": "oak",
-                    "axis": "x"
-                }
-            },
-            "2": {
-                "new_block": "universal_minecraft:log",
-                "new_properties": {
-                    "material": "oak",
-                    "axis": "z"
-                }
-            },
-            "3": {
-                "new_block": "universal_minecraft:wood",
-                "new_properties": {
-                    "material": "oak"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "0": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:log"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "oak",
+                            "axis": "y"
+                        }
+                    }
+                ],
+                "1": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:log"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "oak",
+                            "axis": "x"
+                        }
+                    }
+                ],
+                "2": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:log"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "oak",
+                            "axis": "z"
+                        }
+                    }
+                ],
+                "3": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:wood"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "oak"
+                        }
+                    }
+                ]
             }
         }
     },
-    "new_properties": {
-        "stripped": "true"
+    {
+        "function": "new_properties",
+        "options": {
+            "stripped": "true"
+        }
     }
-}
+]

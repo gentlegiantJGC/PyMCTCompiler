@@ -1,12 +1,21 @@
-{
-    "new_block": "universal_minecraft:double_plant",
-    "new_properties": {
-        "type": "tall_grass"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:double_plant"
     },
-    "carry_properties": {
-        "half": [
-            "upper",
-            "lower"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "type": "tall_grass"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "half": [
+                "upper",
+                "lower"
+            ]
+        }
     }
-}
+]

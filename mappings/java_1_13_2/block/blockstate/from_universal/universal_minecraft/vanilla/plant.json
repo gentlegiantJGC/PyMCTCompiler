@@ -1,46 +1,91 @@
-{
-    "new_block": "minecraft:dandelion",
-    "map_properties": {
-        "type": {
-            "dandelion": {
-                "new_block": "minecraft:dandelion"
-            },
-            "poppy": {
-                "new_block": "minecraft:poppy"
-            },
-            "blue_orchid": {
-                "new_block": "minecraft:blue_orchid"
-            },
-            "allium": {
-                "new_block": "minecraft:allium"
-            },
-            "azure_bluet": {
-                "new_block": "minecraft:azure_bluet"
-            },
-            "red_tulip": {
-                "new_block": "minecraft:red_tulip"
-            },
-            "orange_tulip": {
-                "new_block": "minecraft:orange_tulip"
-            },
-            "white_tulip": {
-                "new_block": "minecraft:white_tulip"
-            },
-            "pink_tulip": {
-                "new_block": "minecraft:pink_tulip"
-            },
-            "oxeye_daisy": {
-                "new_block": "minecraft:oxeye_daisy"
-            },
-            "grass": {
-                "new_block": "minecraft:grass"
-            },
-            "fern": {
-                "new_block": "minecraft:fern"
-            },
-            "dead_bush": {
-                "new_block": "minecraft:dead_bush"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:dandelion"
+    },
+    {
+        "function": "map_properties",
+        "options": {
+            "type": {
+                "dandelion": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:dandelion"
+                    }
+                ],
+                "poppy": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:poppy"
+                    }
+                ],
+                "blue_orchid": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:blue_orchid"
+                    }
+                ],
+                "allium": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:allium"
+                    }
+                ],
+                "azure_bluet": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:azure_bluet"
+                    }
+                ],
+                "red_tulip": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:red_tulip"
+                    }
+                ],
+                "orange_tulip": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:orange_tulip"
+                    }
+                ],
+                "white_tulip": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:white_tulip"
+                    }
+                ],
+                "pink_tulip": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:pink_tulip"
+                    }
+                ],
+                "oxeye_daisy": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:oxeye_daisy"
+                    }
+                ],
+                "grass": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:grass"
+                    }
+                ],
+                "fern": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:fern"
+                    }
+                ],
+                "dead_bush": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:dead_bush"
+                    }
+                ]
             }
         }
     }
-}
+]

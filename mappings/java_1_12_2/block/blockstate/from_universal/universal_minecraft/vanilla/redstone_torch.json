@@ -1,21 +1,33 @@
-{
-    "map_properties": {
-        "lit": {
-            "false": {
-                "new_block": "minecraft:unlit_redstone_torch"
-            },
-            "true": {
-                "new_block": "minecraft:redstone_torch"
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "lit": {
+                "false": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:unlit_redstone_torch"
+                    }
+                ],
+                "true": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:redstone_torch"
+                    }
+                ]
             }
         }
     },
-    "carry_properties": {
-        "facing": [
-            "east",
-            "west",
-            "south",
-            "north",
-            "up"
-        ]
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "east",
+                "west",
+                "south",
+                "north",
+                "up"
+            ]
+        }
     }
-}
+]

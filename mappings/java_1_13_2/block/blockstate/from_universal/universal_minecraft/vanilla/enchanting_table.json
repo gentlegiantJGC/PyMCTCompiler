@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:enchanting_table"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:enchanting_table"
+    }
+]

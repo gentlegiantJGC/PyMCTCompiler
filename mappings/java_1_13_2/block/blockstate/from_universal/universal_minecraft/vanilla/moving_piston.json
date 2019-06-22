@@ -1,16 +1,25 @@
-{
-    "new_block": "minecraft:moving_piston",
-    "new_properties": {
-        "type": "normal"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:moving_piston"
     },
-    "carry_properties": {
-        "facing": [
-            "north",
-            "east",
-            "south",
-            "west",
-            "up",
-            "down"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "type": "normal"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "east",
+                "south",
+                "west",
+                "up",
+                "down"
+            ]
+        }
     }
-}
+]

@@ -1,6 +1,12 @@
-{
-    "new_block": "universal_minecraft:stained_terracotta",
-    "new_properties": {
-        "color": "magenta"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:stained_terracotta"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "color": "magenta"
+        }
     }
-}
+]

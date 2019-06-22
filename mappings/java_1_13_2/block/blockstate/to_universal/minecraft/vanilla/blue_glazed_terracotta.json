@@ -1,14 +1,23 @@
-{
-    "new_block": "universal_minecraft:glazed_terracotta",
-    "new_properties": {
-        "color": "blue"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:glazed_terracotta"
     },
-    "carry_properties": {
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "color": "blue"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ]
+        }
     }
-}
+]

@@ -1,13 +1,19 @@
-{
-    "new_block": "universal_minecraft:fence",
-    "carry_properties": {
-        "material": [
-            "oak",
-            "spruce",
-            "birch",
-            "jungle",
-            "acacia",
-            "dark_oak"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:fence"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "material": [
+                "oak",
+                "spruce",
+                "birch",
+                "jungle",
+                "acacia",
+                "dark_oak"
+            ]
+        }
     }
-}
+]

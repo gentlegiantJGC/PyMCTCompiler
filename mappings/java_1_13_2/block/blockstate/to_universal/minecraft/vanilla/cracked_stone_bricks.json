@@ -1,6 +1,12 @@
-{
-    "new_block": "universal_minecraft:stone_bricks",
-    "new_properties": {
-        "variant": "cracked"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:stone_bricks"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "variant": "cracked"
+        }
     }
-}
+]

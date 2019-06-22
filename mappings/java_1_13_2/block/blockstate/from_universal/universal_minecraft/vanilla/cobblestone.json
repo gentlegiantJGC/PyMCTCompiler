@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:cobblestone"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:cobblestone"
+    }
+]

@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:netherreactor"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:netherreactor"
+    }
+]

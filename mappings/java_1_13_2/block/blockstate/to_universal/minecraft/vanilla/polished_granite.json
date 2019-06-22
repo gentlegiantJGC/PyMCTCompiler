@@ -1,6 +1,12 @@
-{
-    "new_block": "universal_minecraft:granite",
-    "new_properties": {
-        "polished": "true"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:granite"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "polished": "true"
+        }
     }
-}
+]

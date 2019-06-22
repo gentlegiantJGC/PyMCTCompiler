@@ -1,9 +1,15 @@
-{
-    "new_block": "minecraft:sponge",
-    "carry_properties": {
-        "wet": [
-            "false",
-            "true"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:sponge"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "wet": [
+                "false",
+                "true"
+            ]
+        }
     }
-}
+]

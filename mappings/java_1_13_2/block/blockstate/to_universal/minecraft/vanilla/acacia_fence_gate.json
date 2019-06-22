@@ -1,26 +1,35 @@
-{
-    "new_block": "universal_minecraft:fence_gate",
-    "new_properties": {
-        "material": "acacia"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:fence_gate"
     },
-    "carry_properties": {
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ],
-        "in_wall": [
-            "true",
-            "false"
-        ],
-        "open": [
-            "true",
-            "false"
-        ],
-        "powered": [
-            "true",
-            "false"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "acacia"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ],
+            "in_wall": [
+                "true",
+                "false"
+            ],
+            "open": [
+                "true",
+                "false"
+            ],
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

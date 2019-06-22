@@ -1,55 +1,91 @@
-{
-    "carry_properties": {
-        "powered": [
-            "false",
-            "true"
-        ]
+[
+    {
+        "function": "carry_properties",
+        "options": {
+            "powered": [
+                "false",
+                "true"
+            ]
+        }
     },
-    "map_properties": {
-        "material": {
-            "stone": {
-                "new_block": "minecraft:stone_button"
+    {
+        "function": "map_properties",
+        "options": {
+            "material": {
+                "stone": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:stone_button"
+                    }
+                ],
+                "oak": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:wooden_button"
+                    }
+                ],
+                "acacia": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:acacia_button"
+                    }
+                ],
+                "birch": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:birch_button"
+                    }
+                ],
+                "dark_oak": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:dark_oak_button"
+                    }
+                ],
+                "jungle": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:jungle_button"
+                    }
+                ],
+                "spruce": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:spruce_button"
+                    }
+                ]
             },
-            "oak": {
-                "new_block": "minecraft:wooden_button"
-            },
-            "acacia": {
-                "new_block": "minecraft:acacia_button"
-            },
-            "birch": {
-                "new_block": "minecraft:birch_button"
-            },
-            "dark_oak": {
-                "new_block": "minecraft:dark_oak_button"
-            },
-            "jungle": {
-                "new_block": "minecraft:jungle_button"
-            },
-            "spruce": {
-                "new_block": "minecraft:spruce_button"
-            }
-        },
-        "face": {
-            "ceiling": {
-                "new_properties": {
-                    "facing": "down"
-                }
-            },
-            "floor": {
-                "new_properties": {
-                    "facing": "up"
-                }
-            },
-            "wall": {
-                "carry_properties": {
-                    "facing": [
-                        "north",
-                        "south",
-                        "west",
-                        "east"
-                    ]
-                }
+            "face": {
+                "ceiling": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "down"
+                        }
+                    }
+                ],
+                "floor": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "up"
+                        }
+                    }
+                ],
+                "wall": [
+                    {
+                        "function": "carry_properties",
+                        "options": {
+                            "facing": [
+                                "north",
+                                "south",
+                                "west",
+                                "east"
+                            ]
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

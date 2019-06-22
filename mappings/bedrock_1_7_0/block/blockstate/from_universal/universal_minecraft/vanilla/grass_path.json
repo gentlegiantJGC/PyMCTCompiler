@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:grass_path"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:grass_path"
+    }
+]

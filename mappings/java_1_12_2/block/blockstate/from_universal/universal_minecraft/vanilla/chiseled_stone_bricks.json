@@ -1,6 +1,12 @@
-{
-    "new_block": "minecraft:stonebrick",
-    "new_properties": {
-        "variant": "chiseled"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:stonebrick"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "variant": "chiseled"
+        }
     }
-}
+]

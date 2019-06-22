@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:clay"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:clay"
+    }
+]

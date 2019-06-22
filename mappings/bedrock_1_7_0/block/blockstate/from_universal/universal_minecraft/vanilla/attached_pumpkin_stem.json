@@ -1,6 +1,12 @@
-{
-    "new_block": "minecraft:pumpkin_stem",
-    "new_properties": {
-        "age": "7"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:pumpkin_stem"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "age": "7"
+        }
     }
-}
+]

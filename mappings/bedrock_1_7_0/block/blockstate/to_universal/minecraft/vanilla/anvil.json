@@ -1,16 +1,22 @@
-{
-    "new_block": "universal_minecraft:anvil",
-    "carry_properties": {
-        "damage": [
-            "normal",
-            "chipped",
-            "damaged"
-        ],
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:anvil"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "damage": [
+                "normal",
+                "chipped",
+                "damaged"
+            ],
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ]
+        }
     }
-}
+]

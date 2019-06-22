@@ -1,45 +1,87 @@
-{
-    "map_properties": {
-        "material": {
-            "oak": {
-                "new_block": "minecraft:fence",
-                "new_properties": {
-                    "material": "oak"
-                }
-            },
-            "spruce": {
-                "new_block": "minecraft:fence",
-                "new_properties": {
-                    "material": "spruce"
-                }
-            },
-            "birch": {
-                "new_block": "minecraft:fence",
-                "new_properties": {
-                    "material": "birch"
-                }
-            },
-            "jungle": {
-                "new_block": "minecraft:fence",
-                "new_properties": {
-                    "material": "jungle"
-                }
-            },
-            "acacia": {
-                "new_block": "minecraft:fence",
-                "new_properties": {
-                    "material": "acacia"
-                }
-            },
-            "dark_oak": {
-                "new_block": "minecraft:fence",
-                "new_properties": {
-                    "material": "dark_oak"
-                }
-            },
-            "nether_brick": {
-                "new_block": "minecraft:nether_brick_fence"
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "material": {
+                "oak": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:fence"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "oak"
+                        }
+                    }
+                ],
+                "spruce": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:fence"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "spruce"
+                        }
+                    }
+                ],
+                "birch": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:fence"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "birch"
+                        }
+                    }
+                ],
+                "jungle": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:fence"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "jungle"
+                        }
+                    }
+                ],
+                "acacia": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:fence"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "acacia"
+                        }
+                    }
+                ],
+                "dark_oak": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:fence"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "dark_oak"
+                        }
+                    }
+                ],
+                "nether_brick": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:nether_brick_fence"
+                    }
+                ]
             }
         }
     }
-}
+]

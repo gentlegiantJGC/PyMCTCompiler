@@ -1,22 +1,37 @@
-{
-    "map_properties": {
-        "variant": {
-            "quartz_block": {
-                "new_block": "universal_minecraft:quartz_block"
-            },
-            "chiseled_quartz_block": {
-                "new_block": "universal_minecraft:chiseled_quartz_block"
-            },
-            "quartz_pillar": {
-                "new_block": "universal_minecraft:quartz_pillar"
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "variant": {
+                "quartz_block": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:quartz_block"
+                    }
+                ],
+                "chiseled_quartz_block": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:chiseled_quartz_block"
+                    }
+                ],
+                "quartz_pillar": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:quartz_pillar"
+                    }
+                ]
             }
         }
     },
-    "carry_properties": {
-        "axis": [
-            "x",
-            "y",
-            "z"
-        ]
+    {
+        "function": "carry_properties",
+        "options": {
+            "axis": [
+                "x",
+                "y",
+                "z"
+            ]
+        }
     }
-}
+]

@@ -1,27 +1,51 @@
-{
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_block": "universal_minecraft:stone_bricks",
-                "new_properties": {
-                    "variant": "normal"
-                }
-            },
-            "1": {
-                "new_block": "universal_minecraft:stone_bricks",
-                "new_properties": {
-                    "variant": "mossy"
-                }
-            },
-            "2": {
-                "new_block": "universal_minecraft:stone_bricks",
-                "new_properties": {
-                    "variant": "cracked"
-                }
-            },
-            "3": {
-                "new_block": "universal_minecraft:chiseled_stone_bricks"
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "0": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:stone_bricks"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "variant": "normal"
+                        }
+                    }
+                ],
+                "1": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:stone_bricks"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "variant": "mossy"
+                        }
+                    }
+                ],
+                "2": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:stone_bricks"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "variant": "cracked"
+                        }
+                    }
+                ],
+                "3": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:chiseled_stone_bricks"
+                    }
+                ]
             }
         }
     }
-}
+]

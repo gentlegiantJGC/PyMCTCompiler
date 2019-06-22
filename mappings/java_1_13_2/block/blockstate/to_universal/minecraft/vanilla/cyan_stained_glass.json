@@ -1,6 +1,12 @@
-{
-    "new_block": "universal_minecraft:stained_glass",
-    "new_properties": {
-        "color": "cyan"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:stained_glass"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "color": "cyan"
+        }
     }
-}
+]

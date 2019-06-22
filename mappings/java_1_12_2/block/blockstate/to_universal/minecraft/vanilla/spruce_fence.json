@@ -1,6 +1,12 @@
-{
-    "new_block": "universal_minecraft:fence",
-    "new_properties": {
-        "material": "spruce"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:fence"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "spruce"
+        }
     }
-}
+]

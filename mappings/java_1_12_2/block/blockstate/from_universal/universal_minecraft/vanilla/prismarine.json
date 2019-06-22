@@ -1,6 +1,12 @@
-{
-    "new_block": "minecraft:prismarine",
-    "new_properties": {
-        "variant": "normal"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:prismarine"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "variant": "normal"
+        }
     }
-}
+]

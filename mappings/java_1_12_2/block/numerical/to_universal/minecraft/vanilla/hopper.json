@@ -1,76 +1,139 @@
-{
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_block": "universal_minecraft:hopper",
-                "new_properties": {
-                    "facing": "down",
-                    "enabled": "false"
-                }
-            },
-            "2": {
-                "new_block": "universal_minecraft:hopper",
-                "new_properties": {
-                    "facing": "north",
-                    "enabled": "false"
-                }
-            },
-            "3": {
-                "new_block": "universal_minecraft:hopper",
-                "new_properties": {
-                    "facing": "south",
-                    "enabled": "false"
-                }
-            },
-            "4": {
-                "new_block": "universal_minecraft:hopper",
-                "new_properties": {
-                    "facing": "west",
-                    "enabled": "false"
-                }
-            },
-            "5": {
-                "new_block": "universal_minecraft:hopper",
-                "new_properties": {
-                    "facing": "east",
-                    "enabled": "false"
-                }
-            },
-            "8": {
-                "new_block": "universal_minecraft:hopper",
-                "new_properties": {
-                    "facing": "down",
-                    "enabled": "true"
-                }
-            },
-            "10": {
-                "new_block": "universal_minecraft:hopper",
-                "new_properties": {
-                    "facing": "north",
-                    "enabled": "true"
-                }
-            },
-            "11": {
-                "new_block": "universal_minecraft:hopper",
-                "new_properties": {
-                    "facing": "south",
-                    "enabled": "true"
-                }
-            },
-            "12": {
-                "new_block": "universal_minecraft:hopper",
-                "new_properties": {
-                    "facing": "west",
-                    "enabled": "true"
-                }
-            },
-            "13": {
-                "new_block": "universal_minecraft:hopper",
-                "new_properties": {
-                    "facing": "east",
-                    "enabled": "true"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "0": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:hopper"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "down",
+                            "enabled": "false"
+                        }
+                    }
+                ],
+                "2": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:hopper"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "north",
+                            "enabled": "false"
+                        }
+                    }
+                ],
+                "3": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:hopper"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "south",
+                            "enabled": "false"
+                        }
+                    }
+                ],
+                "4": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:hopper"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "west",
+                            "enabled": "false"
+                        }
+                    }
+                ],
+                "5": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:hopper"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "east",
+                            "enabled": "false"
+                        }
+                    }
+                ],
+                "8": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:hopper"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "down",
+                            "enabled": "true"
+                        }
+                    }
+                ],
+                "10": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:hopper"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "north",
+                            "enabled": "true"
+                        }
+                    }
+                ],
+                "11": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:hopper"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "south",
+                            "enabled": "true"
+                        }
+                    }
+                ],
+                "12": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:hopper"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "west",
+                            "enabled": "true"
+                        }
+                    }
+                ],
+                "13": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:hopper"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "east",
+                            "enabled": "true"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

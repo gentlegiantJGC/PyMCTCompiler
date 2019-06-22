@@ -1,6 +1,12 @@
-{
-    "new_block": "minecraft:lapis_ore",
-    "new_properties": {
-        "block_data": "0"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:lapis_ore"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "block_data": "0"
+        }
     }
-}
+]

@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:seagrass"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:seagrass"
+    }
+]

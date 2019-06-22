@@ -1,16 +1,25 @@
-{
-    "new_block": "universal_minecraft:slab",
-    "carry_properties": {
-        "material": [
-            "oak",
-            "spruce",
-            "birch",
-            "jungle",
-            "acacia",
-            "dark_oak"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:slab"
     },
-    "new_properties": {
-        "type": "double"
+    {
+        "function": "carry_properties",
+        "options": {
+            "material": [
+                "oak",
+                "spruce",
+                "birch",
+                "jungle",
+                "acacia",
+                "dark_oak"
+            ]
+        }
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "type": "double"
+        }
     }
-}
+]

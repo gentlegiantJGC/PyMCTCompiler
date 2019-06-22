@@ -1,48 +1,93 @@
-{
-    "map_properties": {
-        "material": {
-            "oak": {
-                "new_block": "minecraft:fence",
-                "new_properties": {
-                    "block_data": "0"
-                }
-            },
-            "spruce": {
-                "new_block": "minecraft:fence",
-                "new_properties": {
-                    "block_data": "1"
-                }
-            },
-            "birch": {
-                "new_block": "minecraft:fence",
-                "new_properties": {
-                    "block_data": "2"
-                }
-            },
-            "jungle": {
-                "new_block": "minecraft:fence",
-                "new_properties": {
-                    "block_data": "3"
-                }
-            },
-            "acacia": {
-                "new_block": "minecraft:fence",
-                "new_properties": {
-                    "block_data": "4"
-                }
-            },
-            "dark_oak": {
-                "new_block": "minecraft:fence",
-                "new_properties": {
-                    "block_data": "5"
-                }
-            },
-            "nether_brick": {
-                "new_block": "minecraft:nether_brick_fence",
-                "new_properties": {
-                    "block_data": "0"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "material": {
+                "oak": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:fence"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "0"
+                        }
+                    }
+                ],
+                "spruce": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:fence"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "1"
+                        }
+                    }
+                ],
+                "birch": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:fence"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "2"
+                        }
+                    }
+                ],
+                "jungle": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:fence"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "3"
+                        }
+                    }
+                ],
+                "acacia": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:fence"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "4"
+                        }
+                    }
+                ],
+                "dark_oak": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:fence"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "5"
+                        }
+                    }
+                ],
+                "nether_brick": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:nether_brick_fence"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "0"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

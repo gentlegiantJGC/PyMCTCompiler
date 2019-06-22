@@ -1,15 +1,27 @@
-{
-    "map_properties": {
-        "variant": {
-            "normal": {
-                "new_block": "universal_minecraft:prismarine"
-            },
-            "dark": {
-                "new_block": "universal_minecraft:dark_prismarine"
-            },
-            "bricks": {
-                "new_block": "universal_minecraft:prismarine_bricks"
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "variant": {
+                "normal": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:prismarine"
+                    }
+                ],
+                "dark": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:dark_prismarine"
+                    }
+                ],
+                "bricks": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:prismarine_bricks"
+                    }
+                ]
             }
         }
     }
-}
+]

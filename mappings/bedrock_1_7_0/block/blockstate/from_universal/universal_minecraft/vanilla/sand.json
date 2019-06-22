@@ -1,6 +1,12 @@
-{
-    "new_block": "minecraft:sand",
-    "new_properties": {
-        "material": "sand"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:sand"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "sand"
+        }
     }
-}
+]

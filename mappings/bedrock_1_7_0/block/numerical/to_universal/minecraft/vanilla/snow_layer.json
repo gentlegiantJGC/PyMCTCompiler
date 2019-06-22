@@ -1,54 +1,105 @@
-{
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_block": "universal_minecraft:snow",
-                "new_properties": {
-                    "layers": "1"
-                }
-            },
-            "1": {
-                "new_block": "universal_minecraft:snow",
-                "new_properties": {
-                    "layers": "2"
-                }
-            },
-            "2": {
-                "new_block": "universal_minecraft:snow",
-                "new_properties": {
-                    "layers": "3"
-                }
-            },
-            "3": {
-                "new_block": "universal_minecraft:snow",
-                "new_properties": {
-                    "layers": "4"
-                }
-            },
-            "4": {
-                "new_block": "universal_minecraft:snow",
-                "new_properties": {
-                    "layers": "5"
-                }
-            },
-            "5": {
-                "new_block": "universal_minecraft:snow",
-                "new_properties": {
-                    "layers": "6"
-                }
-            },
-            "6": {
-                "new_block": "universal_minecraft:snow",
-                "new_properties": {
-                    "layers": "7"
-                }
-            },
-            "7": {
-                "new_block": "universal_minecraft:snow",
-                "new_properties": {
-                    "layers": "8"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "0": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:snow"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "layers": "1"
+                        }
+                    }
+                ],
+                "1": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:snow"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "layers": "2"
+                        }
+                    }
+                ],
+                "2": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:snow"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "layers": "3"
+                        }
+                    }
+                ],
+                "3": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:snow"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "layers": "4"
+                        }
+                    }
+                ],
+                "4": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:snow"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "layers": "5"
+                        }
+                    }
+                ],
+                "5": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:snow"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "layers": "6"
+                        }
+                    }
+                ],
+                "6": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:snow"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "layers": "7"
+                        }
+                    }
+                ],
+                "7": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:snow"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "layers": "8"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

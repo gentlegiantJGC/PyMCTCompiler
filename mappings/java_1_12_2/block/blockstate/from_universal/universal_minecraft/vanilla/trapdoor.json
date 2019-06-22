@@ -1,28 +1,40 @@
-{
-    "map_properties": {
-        "material": {
-            "oak": {
-                "new_block": "minecraft:trapdoor"
-            },
-            "iron": {
-                "new_block": "minecraft:iron_trapdoor"
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "material": {
+                "oak": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:trapdoor"
+                    }
+                ],
+                "iron": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:iron_trapdoor"
+                    }
+                ]
             }
         }
     },
-    "carry_properties": {
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ],
-        "half": [
-            "top",
-            "bottom"
-        ],
-        "open": [
-            "true",
-            "false"
-        ]
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ],
+            "half": [
+                "top",
+                "bottom"
+            ],
+            "open": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

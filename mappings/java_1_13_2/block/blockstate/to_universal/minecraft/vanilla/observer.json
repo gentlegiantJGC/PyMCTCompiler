@@ -1,17 +1,23 @@
-{
-    "new_block": "universal_minecraft:observer",
-    "carry_properties": {
-        "facing": [
-            "north",
-            "east",
-            "south",
-            "west",
-            "up",
-            "down"
-        ],
-        "powered": [
-            "true",
-            "false"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:observer"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "east",
+                "south",
+                "west",
+                "up",
+                "down"
+            ],
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

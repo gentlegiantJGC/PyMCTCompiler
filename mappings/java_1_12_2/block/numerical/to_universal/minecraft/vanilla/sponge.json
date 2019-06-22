@@ -1,18 +1,33 @@
-{
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_block": "universal_minecraft:sponge",
-                "new_properties": {
-                    "wet": "false"
-                }
-            },
-            "1": {
-                "new_block": "universal_minecraft:sponge",
-                "new_properties": {
-                    "wet": "true"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "0": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:sponge"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "wet": "false"
+                        }
+                    }
+                ],
+                "1": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:sponge"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "wet": "true"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

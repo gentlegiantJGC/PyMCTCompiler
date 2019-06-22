@@ -1,17 +1,29 @@
-{
-    "new_block": "minecraft:tnt",
-    "map_properties": {
-        "unstable": {
-            "false": {
-                "new_properties": {
-                    "block_data": "0"
-                }
-            },
-            "true": {
-                "new_properties": {
-                    "block_data": "1"
-                }
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:tnt"
+    },
+    {
+        "function": "map_properties",
+        "options": {
+            "unstable": {
+                "false": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "0"
+                        }
+                    }
+                ],
+                "true": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "1"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

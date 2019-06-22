@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:brown_mushroom"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:brown_mushroom"
+    }
+]

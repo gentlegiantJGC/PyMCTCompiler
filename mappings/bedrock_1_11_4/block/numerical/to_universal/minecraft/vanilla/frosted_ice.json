@@ -1,30 +1,57 @@
-{
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_block": "universal_minecraft:frosted_ice",
-                "new_properties": {
-                    "age": "0"
-                }
-            },
-            "1": {
-                "new_block": "universal_minecraft:frosted_ice",
-                "new_properties": {
-                    "age": "1"
-                }
-            },
-            "2": {
-                "new_block": "universal_minecraft:frosted_ice",
-                "new_properties": {
-                    "age": "2"
-                }
-            },
-            "3": {
-                "new_block": "universal_minecraft:frosted_ice",
-                "new_properties": {
-                    "age": "3"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "0": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:frosted_ice"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "age": "0"
+                        }
+                    }
+                ],
+                "1": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:frosted_ice"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "age": "1"
+                        }
+                    }
+                ],
+                "2": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:frosted_ice"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "age": "2"
+                        }
+                    }
+                ],
+                "3": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:frosted_ice"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "age": "3"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

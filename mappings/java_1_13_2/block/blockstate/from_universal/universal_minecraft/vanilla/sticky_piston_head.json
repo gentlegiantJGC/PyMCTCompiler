@@ -1,20 +1,29 @@
-{
-    "new_block": "minecraft:piston_head",
-    "new_properties": {
-        "type": "sticky"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:piston_head"
     },
-    "carry_properties": {
-        "facing": [
-            "north",
-            "east",
-            "south",
-            "west",
-            "up",
-            "down"
-        ],
-        "short": [
-            "true",
-            "false"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "type": "sticky"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "east",
+                "south",
+                "west",
+                "up",
+                "down"
+            ],
+            "short": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

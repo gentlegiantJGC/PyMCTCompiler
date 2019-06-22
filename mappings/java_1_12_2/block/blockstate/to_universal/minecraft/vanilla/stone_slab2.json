@@ -1,12 +1,18 @@
-{
-    "new_block": "universal_minecraft:slab",
-    "carry_properties": {
-        "material": [
-            "red_sandstone"
-        ],
-        "type": [
-            "bottom",
-            "top"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:slab"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "material": [
+                "red_sandstone"
+            ],
+            "type": [
+                "bottom",
+                "top"
+            ]
+        }
     }
-}
+]

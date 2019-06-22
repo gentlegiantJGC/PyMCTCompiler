@@ -1,37 +1,61 @@
-{
-    "new_block": "minecraft:piston",
-    "map_properties": {
-        "facing": {
-            "down": {
-                "new_properties": {
-                    "block_data": "0"
-                }
-            },
-            "up": {
-                "new_properties": {
-                    "block_data": "1"
-                }
-            },
-            "south": {
-                "new_properties": {
-                    "block_data": "2"
-                }
-            },
-            "north": {
-                "new_properties": {
-                    "block_data": "3"
-                }
-            },
-            "east": {
-                "new_properties": {
-                    "block_data": "4"
-                }
-            },
-            "west": {
-                "new_properties": {
-                    "block_data": "5"
-                }
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:piston"
+    },
+    {
+        "function": "map_properties",
+        "options": {
+            "facing": {
+                "down": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "0"
+                        }
+                    }
+                ],
+                "up": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "1"
+                        }
+                    }
+                ],
+                "south": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "2"
+                        }
+                    }
+                ],
+                "north": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "3"
+                        }
+                    }
+                ],
+                "east": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "4"
+                        }
+                    }
+                ],
+                "west": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "5"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

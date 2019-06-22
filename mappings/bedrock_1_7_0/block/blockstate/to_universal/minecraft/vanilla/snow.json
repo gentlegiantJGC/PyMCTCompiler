@@ -1,3 +1,6 @@
-{
-    "new_block": "universal_minecraft:snow_block"
-}
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:snow_block"
+    }
+]

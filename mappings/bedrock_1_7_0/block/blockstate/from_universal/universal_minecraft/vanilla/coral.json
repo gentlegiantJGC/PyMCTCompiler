@@ -1,12 +1,18 @@
-{
-    "new_block": "minecraft:coral",
-    "carry_properties": {
-        "type": [
-            "tube",
-            "brain",
-            "bubble",
-            "fire",
-            "horn"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:coral"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "type": [
+                "tube",
+                "brain",
+                "bubble",
+                "fire",
+                "horn"
+            ]
+        }
     }
-}
+]

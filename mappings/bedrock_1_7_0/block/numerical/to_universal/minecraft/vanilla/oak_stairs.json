@@ -1,70 +1,121 @@
-{
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_block": "universal_minecraft:stairs",
-                "new_properties": {
-                    "material": "oak",
-                    "facing": "east",
-                    "half": "bottom"
-                }
-            },
-            "1": {
-                "new_block": "universal_minecraft:stairs",
-                "new_properties": {
-                    "material": "oak",
-                    "facing": "west",
-                    "half": "bottom"
-                }
-            },
-            "2": {
-                "new_block": "universal_minecraft:stairs",
-                "new_properties": {
-                    "material": "oak",
-                    "facing": "south",
-                    "half": "bottom"
-                }
-            },
-            "3": {
-                "new_block": "universal_minecraft:stairs",
-                "new_properties": {
-                    "material": "oak",
-                    "facing": "north",
-                    "half": "bottom"
-                }
-            },
-            "4": {
-                "new_block": "universal_minecraft:stairs",
-                "new_properties": {
-                    "material": "oak",
-                    "facing": "east",
-                    "half": "top"
-                }
-            },
-            "5": {
-                "new_block": "universal_minecraft:stairs",
-                "new_properties": {
-                    "material": "oak",
-                    "facing": "west",
-                    "half": "top"
-                }
-            },
-            "6": {
-                "new_block": "universal_minecraft:stairs",
-                "new_properties": {
-                    "material": "oak",
-                    "facing": "south",
-                    "half": "top"
-                }
-            },
-            "7": {
-                "new_block": "universal_minecraft:stairs",
-                "new_properties": {
-                    "material": "oak",
-                    "facing": "north",
-                    "half": "top"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "0": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:stairs"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "oak",
+                            "facing": "east",
+                            "half": "bottom"
+                        }
+                    }
+                ],
+                "1": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:stairs"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "oak",
+                            "facing": "west",
+                            "half": "bottom"
+                        }
+                    }
+                ],
+                "2": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:stairs"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "oak",
+                            "facing": "south",
+                            "half": "bottom"
+                        }
+                    }
+                ],
+                "3": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:stairs"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "oak",
+                            "facing": "north",
+                            "half": "bottom"
+                        }
+                    }
+                ],
+                "4": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:stairs"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "oak",
+                            "facing": "east",
+                            "half": "top"
+                        }
+                    }
+                ],
+                "5": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:stairs"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "oak",
+                            "facing": "west",
+                            "half": "top"
+                        }
+                    }
+                ],
+                "6": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:stairs"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "oak",
+                            "facing": "south",
+                            "half": "top"
+                        }
+                    }
+                ],
+                "7": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:stairs"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "material": "oak",
+                            "facing": "north",
+                            "half": "top"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

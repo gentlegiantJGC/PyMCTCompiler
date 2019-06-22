@@ -1,25 +1,43 @@
-{
-    "new_block": "minecraft:quartz_block",
-    "new_properties": {
-        "block_data": "2"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:quartz_block"
     },
-    "map_properties": {
-        "axis": {
-            "y": {
-                "new_properties": {
-                    "block_data": "2"
-                }
-            },
-            "x": {
-                "new_properties": {
-                    "block_data": "3"
-                }
-            },
-            "z": {
-                "new_properties": {
-                    "block_data": "4"
-                }
+    {
+        "function": "new_properties",
+        "options": {
+            "block_data": "2"
+        }
+    },
+    {
+        "function": "map_properties",
+        "options": {
+            "axis": {
+                "y": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "2"
+                        }
+                    }
+                ],
+                "x": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "3"
+                        }
+                    }
+                ],
+                "z": [
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "4"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

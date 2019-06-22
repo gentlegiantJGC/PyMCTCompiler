@@ -1,6 +1,12 @@
-{
-    "new_block": "minecraft:stonebrick",
-    "new_properties": {
-        "block_data": "3"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:stonebrick"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "block_data": "3"
+        }
     }
-}
+]

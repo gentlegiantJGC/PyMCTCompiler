@@ -1,6 +1,12 @@
-{
-    "new_block": "universal_minecraft:wool",
-    "new_properties": {
-        "color": "orange"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:wool"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "color": "orange"
+        }
     }
-}
+]

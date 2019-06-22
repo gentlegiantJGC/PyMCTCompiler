@@ -1,19 +1,25 @@
-{
-    "new_block": "universal_minecraft:tripwire_hook",
-    "carry_properties": {
-        "attached": [
-            "true",
-            "false"
-        ],
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ],
-        "powered": [
-            "true",
-            "false"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:tripwire_hook"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "attached": [
+                "true",
+                "false"
+            ],
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ],
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

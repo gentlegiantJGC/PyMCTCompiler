@@ -1,6 +1,12 @@
-{
-    "new_block": "minecraft:enchanting_table",
-    "new_properties": {
-        "block_data": "0"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:enchanting_table"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "block_data": "0"
+        }
     }
-}
+]

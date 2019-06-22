@@ -1,26 +1,38 @@
-{
-    "map_properties": {
-        "powered": {
-            "false": {
-                "new_block": "minecraft:unpowered_repeater"
-            },
-            "true": {
-                "new_block": "minecraft:powered_repeater"
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "powered": {
+                "false": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:unpowered_repeater"
+                    }
+                ],
+                "true": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:powered_repeater"
+                    }
+                ]
             }
         }
     },
-    "carry_properties": {
-        "delay": [
-            "1",
-            "2",
-            "3",
-            "4"
-        ],
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ]
+    {
+        "function": "carry_properties",
+        "options": {
+            "delay": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ]
+        }
     }
-}
+]

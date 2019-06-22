@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:nether_brick"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:nether_brick"
+    }
+]

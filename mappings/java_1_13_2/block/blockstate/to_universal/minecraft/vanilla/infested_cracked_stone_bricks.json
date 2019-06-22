@@ -1,6 +1,12 @@
-{
-    "new_block": "universal_minecraft:infested_block",
-    "new_properties": {
-        "material": "cracked_stone_bricks"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:infested_block"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "cracked_stone_bricks"
+        }
     }
-}
+]

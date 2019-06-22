@@ -1,22 +1,31 @@
-{
-    "new_block": "universal_minecraft:bed",
-    "new_properties": {
-        "color": "gray"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:bed"
     },
-    "carry_properties": {
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ],
-        "occupied": [
-            "true",
-            "false"
-        ],
-        "part": [
-            "head",
-            "foot"
-        ]
+    {
+        "function": "new_properties",
+        "options": {
+            "color": "gray"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ],
+            "occupied": [
+                "true",
+                "false"
+            ],
+            "part": [
+                "head",
+                "foot"
+            ]
+        }
     }
-}
+]

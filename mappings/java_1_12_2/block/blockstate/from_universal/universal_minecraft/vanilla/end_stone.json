@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:end_stone"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:end_stone"
+    }
+]

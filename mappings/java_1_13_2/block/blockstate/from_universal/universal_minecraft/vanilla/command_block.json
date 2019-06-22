@@ -1,30 +1,48 @@
-{
-    "new_block": "minecraft:command_block",
-    "map_properties": {
-        "mode": {
-            "impulse": {
-                "new_block": "minecraft:command_block"
-            },
-            "chain": {
-                "new_block": "minecraft:chain_command_block"
-            },
-            "repeating": {
-                "new_block": "minecraft:repeating_command_block"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:command_block"
+    },
+    {
+        "function": "map_properties",
+        "options": {
+            "mode": {
+                "impulse": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:command_block"
+                    }
+                ],
+                "chain": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:chain_command_block"
+                    }
+                ],
+                "repeating": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:repeating_command_block"
+                    }
+                ]
             }
         }
     },
-    "carry_properties": {
-        "conditional": [
-            "true",
-            "false"
-        ],
-        "facing": [
-            "north",
-            "east",
-            "south",
-            "west",
-            "up",
-            "down"
-        ]
+    {
+        "function": "carry_properties",
+        "options": {
+            "conditional": [
+                "true",
+                "false"
+            ],
+            "facing": [
+                "north",
+                "east",
+                "south",
+                "west",
+                "up",
+                "down"
+            ]
+        }
     }
-}
+]

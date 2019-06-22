@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:emerald_ore"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:emerald_ore"
+    }
+]

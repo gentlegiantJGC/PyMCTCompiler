@@ -1,6 +1,12 @@
-{
-    "new_block": "universal_minecraft:planks",
-    "new_properties": {
-        "material": "oak"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:planks"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "oak"
+        }
     }
-}
+]

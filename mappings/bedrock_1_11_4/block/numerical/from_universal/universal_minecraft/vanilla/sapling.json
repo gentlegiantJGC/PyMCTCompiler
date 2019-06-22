@@ -1,90 +1,171 @@
-{
-    "map_properties": {
-        "stage": {
-            "0": {
-                "map_properties": {
-                    "material": {
-                        "oak": {
-                            "new_block": "minecraft:sapling",
-                            "new_properties": {
-                                "block_data": "0"
-                            }
-                        },
-                        "spruce": {
-                            "new_block": "minecraft:sapling",
-                            "new_properties": {
-                                "block_data": "1"
-                            }
-                        },
-                        "birch": {
-                            "new_block": "minecraft:sapling",
-                            "new_properties": {
-                                "block_data": "2"
-                            }
-                        },
-                        "jungle": {
-                            "new_block": "minecraft:sapling",
-                            "new_properties": {
-                                "block_data": "3"
-                            }
-                        },
-                        "acacia": {
-                            "new_block": "minecraft:sapling",
-                            "new_properties": {
-                                "block_data": "4"
-                            }
-                        },
-                        "dark_oak": {
-                            "new_block": "minecraft:sapling",
-                            "new_properties": {
-                                "block_data": "5"
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "stage": {
+                "0": [
+                    {
+                        "function": "map_properties",
+                        "options": {
+                            "material": {
+                                "oak": [
+                                    {
+                                        "function": "new_block",
+                                        "options": "minecraft:sapling"
+                                    },
+                                    {
+                                        "function": "new_properties",
+                                        "options": {
+                                            "block_data": "0"
+                                        }
+                                    }
+                                ],
+                                "spruce": [
+                                    {
+                                        "function": "new_block",
+                                        "options": "minecraft:sapling"
+                                    },
+                                    {
+                                        "function": "new_properties",
+                                        "options": {
+                                            "block_data": "1"
+                                        }
+                                    }
+                                ],
+                                "birch": [
+                                    {
+                                        "function": "new_block",
+                                        "options": "minecraft:sapling"
+                                    },
+                                    {
+                                        "function": "new_properties",
+                                        "options": {
+                                            "block_data": "2"
+                                        }
+                                    }
+                                ],
+                                "jungle": [
+                                    {
+                                        "function": "new_block",
+                                        "options": "minecraft:sapling"
+                                    },
+                                    {
+                                        "function": "new_properties",
+                                        "options": {
+                                            "block_data": "3"
+                                        }
+                                    }
+                                ],
+                                "acacia": [
+                                    {
+                                        "function": "new_block",
+                                        "options": "minecraft:sapling"
+                                    },
+                                    {
+                                        "function": "new_properties",
+                                        "options": {
+                                            "block_data": "4"
+                                        }
+                                    }
+                                ],
+                                "dark_oak": [
+                                    {
+                                        "function": "new_block",
+                                        "options": "minecraft:sapling"
+                                    },
+                                    {
+                                        "function": "new_properties",
+                                        "options": {
+                                            "block_data": "5"
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
-                }
-            },
-            "1": {
-                "map_properties": {
-                    "material": {
-                        "oak": {
-                            "new_block": "minecraft:sapling",
-                            "new_properties": {
-                                "block_data": "8"
-                            }
-                        },
-                        "spruce": {
-                            "new_block": "minecraft:sapling",
-                            "new_properties": {
-                                "block_data": "9"
-                            }
-                        },
-                        "birch": {
-                            "new_block": "minecraft:sapling",
-                            "new_properties": {
-                                "block_data": "10"
-                            }
-                        },
-                        "jungle": {
-                            "new_block": "minecraft:sapling",
-                            "new_properties": {
-                                "block_data": "11"
-                            }
-                        },
-                        "acacia": {
-                            "new_block": "minecraft:sapling",
-                            "new_properties": {
-                                "block_data": "12"
-                            }
-                        },
-                        "dark_oak": {
-                            "new_block": "minecraft:sapling",
-                            "new_properties": {
-                                "block_data": "13"
+                ],
+                "1": [
+                    {
+                        "function": "map_properties",
+                        "options": {
+                            "material": {
+                                "oak": [
+                                    {
+                                        "function": "new_block",
+                                        "options": "minecraft:sapling"
+                                    },
+                                    {
+                                        "function": "new_properties",
+                                        "options": {
+                                            "block_data": "8"
+                                        }
+                                    }
+                                ],
+                                "spruce": [
+                                    {
+                                        "function": "new_block",
+                                        "options": "minecraft:sapling"
+                                    },
+                                    {
+                                        "function": "new_properties",
+                                        "options": {
+                                            "block_data": "9"
+                                        }
+                                    }
+                                ],
+                                "birch": [
+                                    {
+                                        "function": "new_block",
+                                        "options": "minecraft:sapling"
+                                    },
+                                    {
+                                        "function": "new_properties",
+                                        "options": {
+                                            "block_data": "10"
+                                        }
+                                    }
+                                ],
+                                "jungle": [
+                                    {
+                                        "function": "new_block",
+                                        "options": "minecraft:sapling"
+                                    },
+                                    {
+                                        "function": "new_properties",
+                                        "options": {
+                                            "block_data": "11"
+                                        }
+                                    }
+                                ],
+                                "acacia": [
+                                    {
+                                        "function": "new_block",
+                                        "options": "minecraft:sapling"
+                                    },
+                                    {
+                                        "function": "new_properties",
+                                        "options": {
+                                            "block_data": "12"
+                                        }
+                                    }
+                                ],
+                                "dark_oak": [
+                                    {
+                                        "function": "new_block",
+                                        "options": "minecraft:sapling"
+                                    },
+                                    {
+                                        "function": "new_properties",
+                                        "options": {
+                                            "block_data": "13"
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
-                }
+                ]
             }
         }
     }
-}
+]

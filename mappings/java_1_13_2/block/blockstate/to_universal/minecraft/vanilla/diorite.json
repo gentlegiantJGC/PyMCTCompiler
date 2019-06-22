@@ -1,6 +1,12 @@
-{
-    "new_block": "universal_minecraft:diorite",
-    "new_properties": {
-        "polished": "false"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:diorite"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "polished": "false"
+        }
     }
-}
+]

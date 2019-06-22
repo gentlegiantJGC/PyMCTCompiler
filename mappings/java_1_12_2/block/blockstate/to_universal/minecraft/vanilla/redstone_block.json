@@ -1,3 +1,6 @@
-{
-    "new_block": "universal_minecraft:redstone_block"
-}
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:redstone_block"
+    }
+]

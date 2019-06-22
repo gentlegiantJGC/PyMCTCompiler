@@ -1,9 +1,15 @@
-{
-    "new_block": "universal_minecraft:tall_seagrass",
-    "carry_properties": {
-        "half": [
-            "upper",
-            "lower"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:tall_seagrass"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "half": [
+                "upper",
+                "lower"
+            ]
+        }
     }
-}
+]

@@ -1,125 +1,203 @@
-{
-    "map_properties": {
-        "material": {
-            "oak": {
-                "new_block": "minecraft:wooden_door"
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "material": {
+                "oak": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:wooden_door"
+                    }
+                ],
+                "iron": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:iron_door"
+                    }
+                ],
+                "spruce": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:spruce_door"
+                    }
+                ],
+                "birch": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:birch_door"
+                    }
+                ],
+                "jungle": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:jungle_door"
+                    }
+                ],
+                "acacia": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:acacia_door"
+                    }
+                ],
+                "dark_oak": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:dark_oak_door"
+                    }
+                ]
             },
-            "iron": {
-                "new_block": "minecraft:iron_door"
-            },
-            "spruce": {
-                "new_block": "minecraft:spruce_door"
-            },
-            "birch": {
-                "new_block": "minecraft:birch_door"
-            },
-            "jungle": {
-                "new_block": "minecraft:jungle_door"
-            },
-            "acacia": {
-                "new_block": "minecraft:acacia_door"
-            },
-            "dark_oak": {
-                "new_block": "minecraft:dark_oak_door"
-            }
-        },
-        "half": {
-            "lower": {
-                "map_properties": {
-                    "open": {
-                        "false": {
-                            "map_properties": {
-                                "facing": {
-                                    "east": {
-                                        "new_properties": {
-                                            "block_data": "0"
-                                        }
-                                    },
-                                    "south": {
-                                        "new_properties": {
-                                            "block_data": "1"
-                                        }
-                                    },
-                                    "west": {
-                                        "new_properties": {
-                                            "block_data": "2"
-                                        }
-                                    },
-                                    "north": {
-                                        "new_properties": {
-                                            "block_data": "3"
+            "half": {
+                "lower": [
+                    {
+                        "function": "map_properties",
+                        "options": {
+                            "open": {
+                                "false": [
+                                    {
+                                        "function": "map_properties",
+                                        "options": {
+                                            "facing": {
+                                                "east": [
+                                                    {
+                                                        "function": "new_properties",
+                                                        "options": {
+                                                            "block_data": "0"
+                                                        }
+                                                    }
+                                                ],
+                                                "south": [
+                                                    {
+                                                        "function": "new_properties",
+                                                        "options": {
+                                                            "block_data": "1"
+                                                        }
+                                                    }
+                                                ],
+                                                "west": [
+                                                    {
+                                                        "function": "new_properties",
+                                                        "options": {
+                                                            "block_data": "2"
+                                                        }
+                                                    }
+                                                ],
+                                                "north": [
+                                                    {
+                                                        "function": "new_properties",
+                                                        "options": {
+                                                            "block_data": "3"
+                                                        }
+                                                    }
+                                                ]
+                                            }
                                         }
                                     }
-                                }
-                            }
-                        },
-                        "true": {
-                            "map_properties": {
-                                "facing": {
-                                    "east": {
-                                        "new_properties": {
-                                            "block_data": "4"
-                                        }
-                                    },
-                                    "south": {
-                                        "new_properties": {
-                                            "block_data": "5"
-                                        }
-                                    },
-                                    "west": {
-                                        "new_properties": {
-                                            "block_data": "6"
-                                        }
-                                    },
-                                    "north": {
-                                        "new_properties": {
-                                            "block_data": "7"
+                                ],
+                                "true": [
+                                    {
+                                        "function": "map_properties",
+                                        "options": {
+                                            "facing": {
+                                                "east": [
+                                                    {
+                                                        "function": "new_properties",
+                                                        "options": {
+                                                            "block_data": "4"
+                                                        }
+                                                    }
+                                                ],
+                                                "south": [
+                                                    {
+                                                        "function": "new_properties",
+                                                        "options": {
+                                                            "block_data": "5"
+                                                        }
+                                                    }
+                                                ],
+                                                "west": [
+                                                    {
+                                                        "function": "new_properties",
+                                                        "options": {
+                                                            "block_data": "6"
+                                                        }
+                                                    }
+                                                ],
+                                                "north": [
+                                                    {
+                                                        "function": "new_properties",
+                                                        "options": {
+                                                            "block_data": "7"
+                                                        }
+                                                    }
+                                                ]
+                                            }
                                         }
                                     }
-                                }
+                                ]
                             }
                         }
                     }
-                }
-            },
-            "upper": {
-                "map_properties": {
-                    "powered": {
-                        "false": {
-                            "map_properties": {
-                                "hinge": {
-                                    "left": {
-                                        "new_properties": {
-                                            "block_data": "8"
-                                        }
-                                    },
-                                    "right": {
-                                        "new_properties": {
-                                            "block_data": "9"
-                                        }
-                                    }
-                                }
-                            }
-                        },
-                        "true": {
-                            "map_properties": {
-                                "hinge": {
-                                    "left": {
-                                        "new_properties": {
-                                            "block_data": "10"
-                                        }
-                                    },
-                                    "right": {
-                                        "new_properties": {
-                                            "block_data": "11"
+                ],
+                "upper": [
+                    {
+                        "function": "map_properties",
+                        "options": {
+                            "powered": {
+                                "false": [
+                                    {
+                                        "function": "map_properties",
+                                        "options": {
+                                            "hinge": {
+                                                "left": [
+                                                    {
+                                                        "function": "new_properties",
+                                                        "options": {
+                                                            "block_data": "8"
+                                                        }
+                                                    }
+                                                ],
+                                                "right": [
+                                                    {
+                                                        "function": "new_properties",
+                                                        "options": {
+                                                            "block_data": "9"
+                                                        }
+                                                    }
+                                                ]
+                                            }
                                         }
                                     }
-                                }
+                                ],
+                                "true": [
+                                    {
+                                        "function": "map_properties",
+                                        "options": {
+                                            "hinge": {
+                                                "left": [
+                                                    {
+                                                        "function": "new_properties",
+                                                        "options": {
+                                                            "block_data": "10"
+                                                        }
+                                                    }
+                                                ],
+                                                "right": [
+                                                    {
+                                                        "function": "new_properties",
+                                                        "options": {
+                                                            "block_data": "11"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
-                }
+                ]
             }
         }
     }
-}
+]

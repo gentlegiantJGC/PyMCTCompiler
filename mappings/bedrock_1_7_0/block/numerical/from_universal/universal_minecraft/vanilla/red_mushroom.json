@@ -1,6 +1,12 @@
-{
-    "new_block": "minecraft:red_mushroom",
-    "new_properties": {
-        "block_data": "0"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:red_mushroom"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "block_data": "0"
+        }
     }
-}
+]

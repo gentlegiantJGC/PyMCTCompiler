@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:cave_air"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:cave_air"
+    }
+]

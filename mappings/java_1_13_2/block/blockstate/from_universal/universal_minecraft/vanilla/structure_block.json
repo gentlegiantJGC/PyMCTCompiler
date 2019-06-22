@@ -1,11 +1,17 @@
-{
-    "new_block": "minecraft:structure_block",
-    "carry_properties": {
-        "mode": [
-            "save",
-            "load",
-            "corner",
-            "data"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:structure_block"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "mode": [
+                "save",
+                "load",
+                "corner",
+                "data"
+            ]
+        }
     }
-}
+]

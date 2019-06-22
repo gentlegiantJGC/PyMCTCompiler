@@ -1,33 +1,63 @@
-{
-    "new_properties": {
-        "color": "pink"
+[
+    {
+        "function": "new_properties",
+        "options": {
+            "color": "pink"
+        }
     },
-    "map_properties": {
-        "block_data": {
-            "2": {
-                "new_block": "universal_minecraft:glazed_terracotta",
-                "new_properties": {
-                    "facing": "north"
-                }
-            },
-            "3": {
-                "new_block": "universal_minecraft:glazed_terracotta",
-                "new_properties": {
-                    "facing": "south"
-                }
-            },
-            "4": {
-                "new_block": "universal_minecraft:glazed_terracotta",
-                "new_properties": {
-                    "facing": "west"
-                }
-            },
-            "5": {
-                "new_block": "universal_minecraft:glazed_terracotta",
-                "new_properties": {
-                    "facing": "east"
-                }
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "2": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:glazed_terracotta"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "north"
+                        }
+                    }
+                ],
+                "3": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:glazed_terracotta"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "south"
+                        }
+                    }
+                ],
+                "4": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:glazed_terracotta"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "west"
+                        }
+                    }
+                ],
+                "5": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:glazed_terracotta"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "facing": "east"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

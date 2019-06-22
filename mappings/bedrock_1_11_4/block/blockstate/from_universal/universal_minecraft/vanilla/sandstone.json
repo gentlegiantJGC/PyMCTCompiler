@@ -1,11 +1,17 @@
-{
-    "new_block": "minecraft:sandstone",
-    "carry_properties": {
-        "variant": [
-            "normal",
-            "chiseled",
-            "cut",
-            "smooth"
-        ]
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:sandstone"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "variant": [
+                "normal",
+                "chiseled",
+                "cut",
+                "smooth"
+            ]
+        }
     }
-}
+]
