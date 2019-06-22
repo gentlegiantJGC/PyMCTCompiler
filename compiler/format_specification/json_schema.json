@@ -24,45 +24,187 @@
 		},
 		"mapping_functions": {
 			"type": "array",
-			"required": ["function", "options"],
-			"additionalProperties": false,
 			"items": {
 				"type": "object",
+				"properties": {
+					"function": {
+						"type": "string",
+						"enum": [
+							"new_block",
+							"new_properties",
+							"map_properties",
+							"carry_properties",
+							"new_nbt",
+							"multiblock",
+							"map_block_name",
+							"map_input_nbt",
+							"carry_nbt",
+							"map_nbt"
+						]
+					},
+					"options": {}
+				},
+				"required": ["function", "options"],
+				"additionalProperties": false,
 				"oneOf": [
 					{
-						"properties": {
-							"function": {
-								"type": "string",
-								"enum": ["new_block"]
-							},
-							"options": {
-								"type": "string"
+						"if": {
+							"properties": {
+								"function": {
+									"pattern": "new_block"
+								}
 							}
-						}
-					},
-					{
-						"properties": {
-							"function": {
-								"type": "string",
-								"enum": ["new_properties"]
-							},
-							"options": {
-								"type": "object",
-								"additionalProperties": {
+						},
+						"then": {
+							"properties": {
+								"options": {
 									"type": "string"
 								}
 							}
 						}
 					},
 					{
-						"properties": {
-							"function": {
-								"type": "string",
-								"enum": ["map_properties"]
-							},
-							"options": {
-								"type": "object",
-								"additionalProperties": {
+						"if": {
+							"properties": {
+								"function": {
+									"pattern": "new_properties"
+								}
+							}
+						},
+						"then": {
+							"properties": {
+								"options": {
+									"type": "object",
+									"additionalProperties": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					},
+					{
+						"if": {
+							"properties": {
+								"function": {
+									"pattern": "map_properties"
+								}
+							}
+						},
+						"then": {
+							"properties": {
+								"options": {
+									"type": "object",
+									"additionalProperties": {
+										"type": "object",
+										"additionalProperties": {
+											"$ref": "#/definitions/mapping_functions"
+										}
+									}
+								}
+							}
+						}
+					},
+					{
+						"if": {
+							"properties": {
+								"function": {
+									"pattern": "carry_properties"
+								}
+							}
+						},
+						"then": {
+							"properties": {
+								"options": {
+									"type": "object",
+									"additionalProperties": {
+										"type": "array",
+										"items": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					},
+					{
+						"if": {
+							"properties": {
+								"function": {
+									"pattern": "new_nbt"
+								}
+							}
+						},
+						"then": {
+							"properties": {
+								"options": {
+									"type": "object"
+								}
+							}
+						}
+					},
+					{
+						"if": {
+							"properties": {
+								"function": {
+									"pattern": "multiblock"
+								}
+							}
+						},
+						"then": {
+							"properties": {
+								"options": {
+									"oneOf": [
+										{
+											"type": "object",
+											"properties": {
+												"coords": {
+													"type": "array",
+													"items": {
+														"type": "integer"
+													},
+													"minLength": 3,
+													"maxLength": 3
+												}
+											},
+											"required": ["coords"],
+											"$ref": "#/definitions/mapping_functions"
+										},
+										{
+											"type": "array",
+											"items": [
+												{
+													"type": "object",
+													"properties": {
+														"coords": {
+															"type": "array",
+															"items": {
+																"type": "integer"
+															},
+															"minLength": 3,
+															"maxLength": 3
+														}
+													},
+													"required": ["coords"],
+													"$ref": "#/definitions/mapping_functions"
+												}
+											]
+										}
+									]
+								}
+							}
+						}
+					},
+					{
+						"if": {
+							"properties": {
+								"function": {
+									"pattern": "map_block_name"
+								}
+							}
+						},
+						"then": {
+							"properties": {
+								"options": {
 									"type": "object",
 									"additionalProperties": {
 										"$ref": "#/definitions/mapping_functions"
@@ -72,124 +214,50 @@
 						}
 					},
 					{
-						"properties": {
-							"function": {
-								"type": "string",
-								"enum": ["carry_properties"]
-							},
-							"options": {
-								"type": "object",
-								"additionalProperties": {
-									"type": "array",
-									"items": {
-										"type": "string"
-									}
+						"if": {
+							"properties": {
+								"function": {
+									"pattern": "map_input_nbt"
+								}
+							}
+						},
+						"then": {
+							"properties": {
+								"options": {
+									"type": "object"
 								}
 							}
 						}
 					},
 					{
-						"properties": {
-							"function": {
-								"type": "string",
-								"enum": ["new_nbt"]
-							},
-							"options": {
-								"type": "object"
+						"if": {
+							"properties": {
+								"function": {
+									"pattern": "carry_nbt"
+								}
 							}
-						}
-					},
-					{
-						"properties": {
-							"function": {
-								"type": "string",
-								"enum": ["multiblock"]
-							},
-							"options": {
-								"oneOf": [
-									{
-										"type": "object",
-										"properties": {
-											"coords": {
-												"type": "array",
-												"items": {
-													"type": "integer"
-												},
-												"minLength": 3,
-												"maxLength": 3
-											}
-										},
-										"required": ["coords"],
-										"$ref": "#/definitions/mapping_functions"
-									},
-									{
-										"type": "array",
-										"items": [
-											{
-												"type": "object",
-												"properties": {
-													"coords": {
-														"type": "array",
-														"items": {
-															"type": "integer"
-														},
-														"minLength": 3,
-														"maxLength": 3
-													}
-												},
-												"required": ["coords"],
-												"$ref": "#/definitions/mapping_functions"
-											}
-										]
-									}
-								]
-							}
-						}
-					},
-					{
-						"properties": {
-							"function": {
-								"type": "string",
-								"enum": ["map_block_name"]
-							},
-							"options": {
-								"type": "object",
-								"additionalProperties": {
-									"$ref": "#/definitions/mapping_functions"
+						},
+						"then": {
+							"properties": {
+								"options": {
+									"type": "object"
 								}
 							}
 						}
 					},
 					{
-						"properties": {
-							"function": {
-								"type": "string",
-								"enum": ["map_input_nbt"]
-							},
-							"options": {
-								"type": "object"
+						"if": {
+							"properties": {
+								"function": {
+									"pattern": "map_nbt"
+								}
 							}
-						}
-					},
-					{
-						"properties": {
-							"function": {
-								"type": "string",
-								"enum": ["carry_nbt"]
-							},
-							"options": {
-								"type": "object"
-							}
-						}
-					},
-					{
-						"properties": {
-							"function": {
-								"type": "string",
-								"enum": ["map_nbt"]
-							},
-							"options": {
-								"type": "object"
+						},
+						"then": {
+							"properties": {
+								"options": {
+									"type": "object"
+								}
 							}
 						}
 					}
