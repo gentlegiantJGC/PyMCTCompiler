@@ -73,21 +73,39 @@ def main(version_name: str, version_str: str):
 					if 'waterlogged' in default_state['properties']:
 						states = copy.deepcopy(states)
 						del states['properties']['waterlogged']
-					to_universal = {
-						"new_block": f"universal_{block_string}",
-						"carry_properties": states['properties']
-					}
-					from_universal = {
-						"new_block": block_string,
-						"carry_properties": states['properties']
-					}
+					to_universal = [
+						{
+							"function":"new_block",
+							"options":  f"universal_{block_string}"
+						},
+						{
+							"function":"carry_properties",
+							"options":  states['properties']
+						}
+					]
+					from_universal = [
+						{
+							"function":"new_block",
+							"options":  block_string
+						},
+						{
+							"function":"carry_properties",
+							"options":  states['properties']
+						}
+					]
 				else:
-					to_universal = {
-						"new_block": f"universal_{block_string}"
-					}
-					from_universal = {
-						"new_block": block_string
-					}
+					to_universal = [
+						{
+							"function":"new_block",
+							"options":  f"universal_{block_string}"
+						}
+					]
+					from_universal = [
+						{
+							"function":"new_block",
+							"options":  block_string
+						}
+					]
 
 				save_json(f'{version_name}/block/blockstate/to_universal/{namespace}/vanilla/{block_name}.json', to_universal, buffer=output)
 				save_json(f'{version_name}/block/blockstate/from_universal/universal_{namespace}/vanilla/{block_name}.json', from_universal, buffer=output)
