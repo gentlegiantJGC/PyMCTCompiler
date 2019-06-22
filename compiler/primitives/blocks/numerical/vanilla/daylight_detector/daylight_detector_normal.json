@@ -1,41 +1,65 @@
 {
-	"to_universal": {
-		"new_properties": {
-			"inverted": "false"
+	"to_universal": [
+		{
+			"function": "new_properties",
+			"options": {
+				"inverted": "false"
+			}
 		}
-	},
+	],
 	"from_universal": {
-		"universal_minecraft:daylight_detector": {
-			"map_properties": {
-				"inverted": {
-					"true": {
-						"new_block": "minecraft:daylight_detector_inverted"
-					},
-					"false": {
-						"new_block": "minecraft:daylight_detector"
+		"universal_minecraft:daylight_detector": [
+			{
+				"function": "map_properties",
+				"options": {
+					"inverted": {
+						"true": [
+							{
+								"function": "new_block",
+								"options": "minecraft:daylight_detector_inverted"
+							}
+						],
+						"false": [
+							{
+								"function": "new_block",
+								"options": "minecraft:daylight_detector"
+							}
+						]
 					}
 				}
 			}
-		}
+		]
 	},
 	"blockstate_specification": {},
-	"blockstate_to_universal": {
-		"new_properties": {
-			"inverted": "false"
+	"blockstate_to_universal": [
+		{
+			"function": "new_properties",
+			"options": {
+				"inverted": "false"
+			}
 		}
-	},
+	],
 	"blockstate_from_universal": {
-		"universal_minecraft:daylight_detector": {
-			"map_properties": {
-				"inverted": {
-					"true": {
-						"new_block": "minecraft:daylight_detector_inverted"
-					},
-					"false": {
-						"new_block": "minecraft:daylight_detector"
+		"universal_minecraft:daylight_detector": [
+			{
+				"function": "map_properties",
+				"options": {
+					"inverted": {
+						"true": [
+							{
+								"function": "new_block",
+								"options": "minecraft:daylight_detector_inverted"
+							}
+						],
+						"false": [
+							{
+								"function": "new_block",
+								"options": "minecraft:daylight_detector"
+							}
+						]
 					}
 				}
 			}
-		}
+		]
 	}
 }

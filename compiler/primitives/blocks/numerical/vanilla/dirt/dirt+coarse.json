@@ -1,29 +1,50 @@
 {
-	"to_universal" :{
-		"map_properties": {
-			"block_data": {
-				"0": {
-					"new_block": "universal_minecraft:dirt"
-				},
-				"1": {
-					"new_block": "universal_minecraft:coarse_dirt"
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					"0": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:dirt"
+						}
+					],
+					"1": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:coarse_dirt"
+						}
+					]
 				}
 			}
 		}
-	},
-	"from_universal" :{
-		"universal_minecraft:dirt": {
-			"new_block": "minecraft:dirt",
-			"new_properties": {
-				"block_data": "0"
+	],
+	"from_universal": {
+		"universal_minecraft:dirt": [
+			{
+				"function": "new_block",
+				"options": "minecraft:dirt"
+			},
+			{
+				"function": "new_properties",
+				"options": {
+					"block_data": "0"
+				}
 			}
-		},
-		"universal_minecraft:coarse_dirt": {
-			"new_block": "minecraft:dirt",
-			"new_properties": {
-				"block_data": "1"
+		],
+		"universal_minecraft:coarse_dirt": [
+			{
+				"function": "new_block",
+				"options": "minecraft:dirt"
+			},
+			{
+				"function": "new_properties",
+				"options": {
+					"block_data": "1"
+				}
 			}
-		}
+		]
 	},
 	"blockstate_specification": {
 		"properties": {
@@ -36,30 +57,51 @@
 			"material": "dirt"
 		}
 	},
-	"blockstate_to_universal" :{
-		"map_properties": {
-			"material": {
-				"dirt": {
-					"new_block": "universal_minecraft:dirt"
-				},
-				"coarse_dirt": {
-					"new_block": "universal_minecraft:coarse_dirt"
+	"blockstate_to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"material": {
+					"dirt": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:dirt"
+						}
+					],
+					"coarse_dirt": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:coarse_dirt"
+						}
+					]
 				}
 			}
 		}
-	},
-	"blockstate_from_universal" :{
-		"universal_minecraft:dirt": {
-			"new_block": "minecraft:dirt",
-			"new_properties": {
-				"material": "dirt"
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:dirt": [
+			{
+				"function": "new_block",
+				"options": "minecraft:dirt"
+			},
+			{
+				"function": "new_properties",
+				"options": {
+					"material": "dirt"
+				}
 			}
-		},
-		"universal_minecraft:coarse_dirt": {
-			"new_block": "minecraft:dirt",
-			"new_properties": {
-				"material": "coarse_dirt"
+		],
+		"universal_minecraft:coarse_dirt": [
+			{
+				"function": "new_block",
+				"options": "minecraft:dirt"
+			},
+			{
+				"function": "new_properties",
+				"options": {
+					"material": "coarse_dirt"
+				}
 			}
-		}
+		]
 	}
 }

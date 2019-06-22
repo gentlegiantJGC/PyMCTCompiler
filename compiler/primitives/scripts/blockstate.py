@@ -9,46 +9,82 @@ def single_map(input_namespace: str, input_block_name: str, key: str, val: str, 
 		universal_block_name = input_block_name
 	if carry_properties is None:
 		return {
-			"to_universal": {
-				"new_block": f"{universal_namespace}:{universal_block_name}",
-				"new_properties": {
-					key: val
+			"to_universal": [
+				{
+					"function": "new_block",
+					"options": f"{universal_namespace}:{universal_block_name}"
+				},
+				{
+					"function": "new_properties",
+					"options": {
+						key: val
+					}
 				}
-			},
+			],
 			"from_universal": {
-				f"{universal_namespace}:{universal_block_name}": {
-					"new_block": default_block,
-					"map_properties": {
-						key: {
-							val: {
-								"new_block": f"{input_namespace}:{input_block_name}"
+				f"{universal_namespace}:{universal_block_name}": [
+					{
+						"function": "new_block",
+						"options": default_block
+					},
+					{
+						"function": "map_properties",
+						"options": {
+							key: {
+								val: [
+									{
+										"function":"new_block",
+										"options":  f"{input_namespace}:{input_block_name}"
+									}
+								]
 							}
 						}
 					}
-				}
+				]
 			}
 		}
 	else:
 		return {
-			"to_universal": {
-				"new_block": f"{universal_namespace}:{universal_block_name}",
-				"new_properties": {
-					key: val
+			"to_universal": [
+				{
+					"function": "new_block",
+					"options": f"{universal_namespace}:{universal_block_name}"
 				},
-				"carry_properties": carry_properties
-			},
+				{
+					"function": "new_properties",
+					"options": {
+						key: val
+					}
+				},
+				{
+					"function": "carry_properties",
+					"options": carry_properties
+				}
+			],
 			"from_universal": {
-				f"{universal_namespace}:{universal_block_name}": {
-					"new_block": default_block,
-					"map_properties": {
-						key: {
-							val: {
-								"new_block": f"{input_namespace}:{input_block_name}"
+				f"{universal_namespace}:{universal_block_name}": [
+					{
+						"function": "new_block",
+						"options": default_block
+					},
+					{
+						"function": "map_properties",
+						"options": {
+							key: {
+								val: [
+									{
+										"function": "new_block",
+										"options": f"{input_namespace}:{input_block_name}"
+									}
+								]
 							}
 						}
 					},
-					"carry_properties": carry_properties
-				}
+					{
+						"function": "carry_properties",
+						"options": carry_properties
+					}
+				]
 			}
 		}
 
@@ -61,7 +97,7 @@ def nbt_from_hex(hex_str: str):
 	}
 
 
-def _nbt_spec_from_hex(nbt_bin: bytes, endianness = '>', nbt_type: bytes = None) -> Union[Tuple[str, dict, bytes], None]:
+def _nbt_spec_from_hex(nbt_bin: bytes, endianness='>', nbt_type: bytes = None) -> Union[Tuple[str, dict, bytes], None]:
 	name = None
 	if nbt_type is None:
 		# TYPE(byte)
@@ -71,8 +107,8 @@ def _nbt_spec_from_hex(nbt_bin: bytes, endianness = '>', nbt_type: bytes = None)
 		else:
 			# NAME_LEN(short) NAME(str(NAME_LEN))
 			name_length = struct.unpack(f'{endianness}h', nbt_bin[1:3])[0]
-			name = struct.unpack(f'{endianness}{name_length}s', nbt_bin[3:3+name_length])[0].decode("utf-8")
-			nbt_bin = nbt_bin[3+name_length:]
+			name = struct.unpack(f'{endianness}{name_length}s', nbt_bin[3:3 + name_length])[0].decode("utf-8")
+			nbt_bin = nbt_bin[3 + name_length:]
 	if nbt_type == b'\x00':
 		return
 	elif nbt_type == b'\x01':
@@ -104,13 +140,13 @@ def _nbt_spec_from_hex(nbt_bin: bytes, endianness = '>', nbt_type: bytes = None)
 		return name, {"type": "double", "val": payload}, nbt_bin
 	elif nbt_type == b'\x07':
 		array_length = struct.unpack(f'{endianness}i', nbt_bin[:4])[0]
-		payload = list(struct.unpack(f'{endianness}{array_length}b', nbt_bin[4:4+array_length]))
-		nbt_bin = nbt_bin[4+array_length:]
+		payload = list(struct.unpack(f'{endianness}{array_length}b', nbt_bin[4:4 + array_length]))
+		nbt_bin = nbt_bin[4 + array_length:]
 		return name, {"type": "byte_array", "val": payload}, nbt_bin
 	elif nbt_type == b'\x08':
 		payload_length = struct.unpack(f'{endianness}H', nbt_bin[:2])[0]
-		payload = struct.unpack(f'{endianness}{payload_length}s', nbt_bin[2:2+payload_length])[0].decode("utf-8")
-		nbt_bin = nbt_bin[2+payload_length:]
+		payload = struct.unpack(f'{endianness}{payload_length}s', nbt_bin[2:2 + payload_length])[0].decode("utf-8")
+		nbt_bin = nbt_bin[2 + payload_length:]
 		return name, {"type": "string", "val": payload}, nbt_bin
 	elif nbt_type == b'\x09':
 		payload = []
@@ -254,23 +290,29 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 				}
 			}
 		},
-		"to_universal": {
-			"map_input_nbt": {
-				"": {
-					"type": "compound",
-					"keys": {}
-				}
-			}
-		},
-		"from_universal": {
-			universal_block: {
-				"map_input_nbt": {
+		"to_universal": [
+			{
+				"function": "map_input_nbt",
+				"options": {
 					"": {
 						"type": "compound",
 						"keys": {}
 					}
 				}
-			} for universal_block in universal_blocks
+			}
+		],
+		"from_universal": {
+			universal_block: [
+				{
+					"function": "map_input_nbt",
+					"options": {
+						"": {
+							"type": "compound",
+							"keys": {}
+						}
+					}
+				}
+			] for universal_block in universal_blocks
 		}
 	}
 
@@ -360,31 +402,52 @@ def coral(input_namespace: str, input_block_name: str, material: str, dead: bool
 		universal_block_name = input_block_name
 	dead = 'true' if dead else 'false'
 	return {
-		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
-			"new_properties": {
-				"type": material,
-				"dead": dead
+		"to_universal": [
+			{
+				"function": "new_block",
+				"options": f"{universal_namespace}:{universal_block_name}"
+			},
+			{
+				"function": "new_properties",
+				"options": {
+					"type": material,
+					"dead": dead
+				}
 			}
-		},
+		],
 		"from_universal": {
-			f"{universal_namespace}:{universal_block_name}": {
-				"new_block": "minecraft:tube_coral",
-				"map_properties": {
-					"type": {
-						material: {
-							"new_block": f"minecraft:{material}_coral",
-							"map_properties": {
-								"dead": {
-									dead: {
-										"new_block": f"{input_namespace}:{input_block_name}"
+			f"{universal_namespace}:{universal_block_name}": [
+				{
+					"function": "new_block",
+					"options": "minecraft:tube_coral"
+				},
+				{
+					"function": "map_properties",
+					"options": {
+						"type": {
+							material: [
+								{
+									"function": "new_block",
+									"options": f"minecraft:{material}_coral"
+								},
+								{
+									"function": "map_properties",
+									"options": {
+										"dead": {
+											dead: [
+												{
+													"function":"new_block",
+													"options":  f"{input_namespace}:{input_block_name}"
+												}
+											]
+										}
 									}
 								}
-							}
+							]
 						}
 					}
 				}
-			}
+			]
 		}
 	}
 
@@ -397,86 +460,146 @@ def coral_fan(input_namespace: str, input_block_name: str, material: str, dead: 
 	dead, dead_str = ('true', 'dead_') if dead else ('false', '')
 	if wall:
 		return {
-			"to_universal": {
-				"new_block": f"{universal_namespace}:{universal_block_name}",
-				"new_properties": {
-					"type": material,
-					"dead": dead
+			"to_universal": [
+				{
+					"function": "new_block",
+					"options": f"{universal_namespace}:{universal_block_name}"
 				},
-				"carry_properties": {
-					"facing": [
-						"north",
-						"south",
-						"west",
-						"east"
-					]
+				{
+					"function": "new_properties",
+					"options": {
+						"type": material,
+						"dead": dead
+					}
+				},
+				{
+					"function": "carry_properties",
+					"options": {
+						"facing": [
+							"north",
+							"south",
+							"west",
+							"east"
+						]
+					}
 				}
-			},
+			],
 			"from_universal": {
-				f"{universal_namespace}:{universal_block_name}": {
-					"new_block": "minecraft:tube_coral_fan",
-					"map_properties": {
-						"type": {
-							material: {
-								"new_block": f"minecraft:{material}_coral_fan",
-								"map_properties": {
-									"dead": {
-										dead: {
-											"new_block": f"minecraft:{dead_str}{material}_coral_fan",
-											"map_properties": {
-												"facing": {
-													facing: {
-														"new_block": f"{input_namespace}:{input_block_name}",
-														"new_properties": {
-															"facing": facing
+				f"{universal_namespace}:{universal_block_name}": [
+					{
+						"function": "new_block",
+						"options": "minecraft:tube_coral_fan",
+					},
+					{
+						"function": "map_properties",
+						"options": {
+							"type": {
+								material: [
+									{
+										"function": "new_block",
+										"options": f"minecraft:{material}_coral_fan"
+									},
+									{
+										"function": "map_properties",
+										"options": {
+											"dead": {
+												dead: [
+													{
+														"function": "new_block",
+														"options": f"minecraft:{dead_str}{material}_coral_fan"
+													},
+													{
+														"function": "map_properties",
+														"options": {
+															"facing": {
+																facing: [
+																	{
+																		"function": "new_block",
+																		"options": f"{input_namespace}:{input_block_name}"
+																	},
+																	{
+																		"function": "new_properties",
+																		"options": {
+																			"facing": facing
+																		}
+																	}
+																] for facing in ["north", "south", "west", "east"]
+															}
 														}
-													} for facing in ["north", "south", "west", "east"]
-												}
+													}
+												]
 											}
 										}
 									}
-								}
+								]
 							}
 						}
 					}
-				}
+				]
 			}
 		}
 	else:
 		return {
-			"to_universal": {
-				"new_block": f"{universal_namespace}:{universal_block_name}",
-				"new_properties": {
-					"type": material,
-					"dead": dead,
-					"facing": "up"
+			"to_universal": [
+				{
+					"function": "new_block",
+					"options": f"{universal_namespace}:{universal_block_name}"
+				},
+				{
+					"function": "new_properties",
+					"options": {
+						"type": material,
+						"dead": dead,
+						"facing": "up"
+					}
 				}
-			},
+			],
 			"from_universal": {
-				f"{universal_namespace}:{universal_block_name}": {
-					"new_block": "minecraft:tube_coral_fan",
-					"map_properties": {
-						"type": {
-							material: {
-								"new_block": f"minecraft:{material}_coral_fan",
-								"map_properties": {
-									"dead": {
-										dead: {
-											"new_block": f"minecraft:{dead_str}{material}_coral_fan",
-											"map_properties": {
-												"facing": {
-													"up": {
-														"new_block": f"{input_namespace}:{input_block_name}"
+				f"{universal_namespace}:{universal_block_name}": [
+					{
+						"function": "new_block",
+						"options": "minecraft:tube_coral_fan"
+					},
+					{
+						"function": "map_properties",
+						"options": {
+							"type": {
+								material: [
+									{
+										"function": "new_block",
+										"options": f"minecraft:{material}_coral_fan"
+									},
+									{
+										"function": "map_properties",
+										"options": {
+											"dead": {
+												dead: [
+													{
+														"function": "new_block",
+														"options": f"minecraft:{dead_str}{material}_coral_fan"
+													},
+													{
+														"function": "map_properties",
+														"options": {
+															"facing": {
+																"up": [
+																	{
+																		"function": "new_block",
+																		"options": f"{input_namespace}:{input_block_name}"
+																	}
+																]
+															}
+														}
 													}
-												}
+												]
 											}
 										}
 									}
-								}
+								]
 							}
 						}
 					}
-				}
+				]
 			}
 		}
 
@@ -488,44 +611,74 @@ def material_helper(input_namespace: str, input_block_name: str, material: str, 
 		universal_block_name = input_block_name
 	if carry_properties is None:
 		return {
-			"to_universal": {
-				"new_block": f"{universal_namespace}:{universal_block_name}",
-				"new_properties": {
-					"material": material
+			"to_universal": [
+				{
+					"function": "new_block",
+					"options": f"{universal_namespace}:{universal_block_name}"
+				},
+				{
+					"function": "new_properties",
+					"options": {
+						"material": material
+					}
 				}
-			},
+			],
 			"from_universal": {
-				f"{universal_namespace}:{universal_block_name}": {
-					"map_properties": {
-						"material": {
-							material: {
-								"new_block": f"{input_namespace}:{input_block_name}"
+				f"{universal_namespace}:{universal_block_name}": [
+					{
+						"function": "map_properties",
+						"options": {
+							"material": {
+								material: [
+									{
+										"function": "new_block",
+										"options": f"{input_namespace}:{input_block_name}"
+									}
+								]
 							}
 						}
 					}
-				}
+				]
 			}
 		}
 	else:
 		return {
-			"to_universal": {
-				"new_block": f"{universal_namespace}:{universal_block_name}",
-				"new_properties": {
-					"material": material
+			"to_universal": [
+				{
+					"function": "new_block",
+					"options": f"{universal_namespace}:{universal_block_name}"
 				},
-				"carry_properties": carry_properties
-			},
+				{
+					"function": "new_properties",
+					"options": {
+						"material": material
+					}
+				},
+				{
+					"function": "carry_properties",
+					"options": carry_properties
+				}
+			],
 			"from_universal": {
-				f"{universal_namespace}:{universal_block_name}": {
-					"map_properties": {
-						"material": {
-							material: {
-								"new_block": f"{input_namespace}:{input_block_name}"
+				f"{universal_namespace}:{universal_block_name}": [
+					{
+						"function": "map_properties",
+						"options": {
+							"material": {
+								material: [
+									{
+										"function": "new_block",
+										"options": f"{input_namespace}:{input_block_name}"
+									}
+								]
 							}
 						}
 					},
-					"carry_properties": carry_properties
-				}
+					{
+						"function": "carry_properties",
+						"options": carry_properties
+					}
+				]
 			}
 		}
 
@@ -548,61 +701,20 @@ def leaves(input_namespace: str, input_block_name: str, material: str, universal
 	if universal_block_name is None:
 		universal_block_name = input_block_name
 	return {
-		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
-			"new_properties": {
-				"material": material
+		"to_universal": [
+			{
+				"function": "new_block",
+				"options": f"{universal_namespace}:{universal_block_name}"
 			},
-			"carry_properties": {
-				"distance": [
-					"1",
-					"2",
-					"3",
-					"4",
-					"5",
-					"6",
-					"7"
-				]
-			},
-			"map_properties": {
-				"persistent": {
-					"true": {
-						"new_properties": {
-							"decayable": "false",
-							"check_decay": "false"
-						}
-					},
-					"false": {
-						"new_properties": {
-							"decayable": "true",
-							"check_decay": "false"
-						}
-					}
+			{
+				"function": "new_properties",
+				"options": {
+					"material": material
 				}
-			}
-		},
-		"from_universal": {
-			f"{universal_namespace}:{universal_block_name}": {
-				"map_properties": {
-					"material": {
-						material: {
-							"new_block": f"{input_namespace}:{input_block_name}"
-						}
-					},
-					"decayable": {
-						"true": {
-							"new_properties": {
-								"persistent": "false"
-							}
-						},
-						"false": {
-							"new_properties": {
-								"persistent": "true"
-							}
-						}
-					}
-				},
-				"carry_properties": {
+			},
+			{
+				"function": "carry_properties",
+				"options": {
 					"distance": [
 						"1",
 						"2",
@@ -613,7 +725,81 @@ def leaves(input_namespace: str, input_block_name: str, material: str, universal
 						"7"
 					]
 				}
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"persistent": {
+						"true": [
+							{
+								"function": "new_properties",
+								"options": {
+									"decayable": "false",
+									"check_decay": "false"
+								}
+							}
+						],
+						"false": [
+							{
+								"function": "new_properties",
+								"options": {
+									"decayable": "true",
+									"check_decay": "false"
+								}
+							}
+						]
+					}
+				}
 			}
+		],
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": [
+				{
+					"function": "map_properties",
+					"options": {
+						"material": {
+							material: [
+								{
+									"function": "new_block",
+									"options": f"{input_namespace}:{input_block_name}"
+								}
+							]
+						},
+						"decayable": {
+							"true": [
+								{
+									"function": "new_properties",
+									"options": {
+										"persistent": "false"
+									}
+								}
+							],
+							"false": [
+								{
+									"function": "new_properties",
+									"options": {
+										"persistent": "true"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"function": "carry_properties",
+					"options": {
+						"distance": [
+							"1",
+							"2",
+							"3",
+							"4",
+							"5",
+							"6",
+							"7"
+						]
+					}
+				}
+			]
 		}
 	}
 
@@ -625,36 +811,21 @@ def wood(input_namespace: str, input_block_name: str, material: str, stripped: b
 		universal_block_name = input_block_name
 	stripped = 'true' if stripped else 'false'
 	return {
-		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
-			"new_properties": {
-				"material": material,
-				"stripped": stripped
+		"to_universal": [
+			{
+				"function": "new_block",
+				"options": f"{universal_namespace}:{universal_block_name}"
 			},
-			"carry_properties": {
-				"axis": [
-					"x",
-					"y",
-					"z"
-				]
-			}
-		},
-		"from_universal": {
-			f"{universal_namespace}:{universal_block_name}": {
-				"map_properties": {
-					"material": {
-						material: {
-							"map_properties": {
-								"stripped": {
-									stripped: {
-										"new_block": f"{input_namespace}:{input_block_name}"
-									}
-								}
-							}
-						}
-					}
-				},
-				"carry_properties": {
+			{
+				"function": "new_properties",
+				"options": {
+					"material": material,
+					"stripped": stripped
+				}
+			},
+			{
+				"function": "carry_properties",
+				"options": {
 					"axis": [
 						"x",
 						"y",
@@ -662,6 +833,42 @@ def wood(input_namespace: str, input_block_name: str, material: str, stripped: b
 					]
 				}
 			}
+		],
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": [
+				{
+					"function": "map_properties",
+					"options": {
+						"material": {
+							material: [
+								{
+									"function": "map_properties",
+									"options": {
+										"stripped": {
+											stripped: [
+												{
+													"function": "new_block",
+													"options": f"{input_namespace}:{input_block_name}"
+												}
+											]
+										}
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"function": "carry_properties",
+					"options": {
+						"axis": [
+							"x",
+							"y",
+							"z"
+						]
+					}
+				}
+			]
 		}
 	}
 
@@ -708,38 +915,59 @@ def fluid(input_namespace: str, input_block_name: str, universal_namespace: str 
 	if universal_block_name is None:
 		universal_block_name = input_block_name
 	return {
-		"to_universal": {
-			"new_block": f"{universal_namespace}:{universal_block_name}",
-			"map_properties": {
-				"level": {
-					str(level): {
-						"new_properties": {
-							"falling": {0: "false", 8: "true"}[level & 8],
-							"level": str(level & 7)
-						}
-					} for level in range(16)
-				}
+		"to_universal": [
+			{
+				"function": "new_block",
+				"options": f"{universal_namespace}:{universal_block_name}"
 			},
-		},
-		"from_universal": {
-			f"{universal_namespace}:{universal_block_name}": {
-				"new_block": f"{input_namespace}:{input_block_name}",
-				"map_properties": {
-					"falling": {
-						falling: {
-							"map_properties": {
-								"level": {
-									str(level): {
-										"new_properties": {
-											"level": str(level + data8)
-										}
-									} for level in range(8)
+			{
+				"function": "map_properties",
+				"options": {
+					"level": {
+						str(level): [
+							{
+								"function": "new_properties",
+								"options": {
+									"falling": {0: "false", 8: "true"}[level & 8],
+									"level": str(level & 7)
 								}
 							}
-						} for data8, falling in {0: "false", 8: "true"}.items()
+						] for level in range(16)
 					}
 				}
 			}
+		],
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": [
+				{
+					"function": "new_block",
+					"options": f"{input_namespace}:{input_block_name}"
+				},
+				{
+					"function": "map_properties",
+					"options": {
+						"falling": {
+							falling: [
+								{
+									"function": "map_properties",
+									"options": {
+										"level": {
+											str(level): [
+												{
+													"function": "new_properties",
+													"options": {
+														"level": str(level + data8)
+													}
+												}
+											] for level in range(8)
+										}
+									}
+								}
+							] for data8, falling in {0: "false", 8: "true"}.items()
+						}
+					}
+				}
+			]
 		}
 	}
 
@@ -752,47 +980,80 @@ def torch(input_namespace: str, input_block_name: str, wall: bool, default_block
 	if carry_properties is None:
 		if wall:
 			return {
-				"to_universal": {
-					"new_block": f"{universal_namespace}:{universal_block_name}",
-					"carry_properties": {
-						"facing": ["north", "south", "west", "east"]
-					}
-				},
-				"from_universal": {
-					f"{universal_namespace}:{universal_block_name}": {
-						"new_block": default_block,
-						"map_properties": {
-							"facing": {
-								facing: {
-									"new_block": f"{input_namespace}:{input_block_name}",
-									"new_properties": {
-										"facing": facing
-									}
-								} for facing in ["north", "south", "west", "east"]
-							}
+				"to_universal": [
+					{
+						"function": "new_block",
+						"options": f"{universal_namespace}:{universal_block_name}"
+					},
+					{
+						"function": "carry_properties",
+						"options": {
+							"facing": ["north", "south", "west", "east"]
 						}
 					}
+				],
+				"from_universal": {
+					f"{universal_namespace}:{universal_block_name}": [
+						{
+							"function": "new_block",
+							"options": default_block
+						},
+						{
+							"function": "map_properties",
+							"options": {
+								"facing": {
+									facing: [
+										{
+											"function": "new_block",
+											"options": f"{input_namespace}:{input_block_name}"
+										},
+										{
+											"function": "new_properties",
+											"options": {
+												"facing": facing
+											}
+										}
+									] for facing in ["north", "south", "west", "east"]
+								}
+							}
+						}
+					]
 				}
 			}
 		else:
 			return {
-				"to_universal": {
-					"new_block": f"{universal_namespace}:{universal_block_name}",
-					"new_properties": {
-						"facing": "up"
+				"to_universal": [
+					{
+						"function": "new_block",
+						"options": f"{universal_namespace}:{universal_block_name}"
+					},
+					{
+						"function": "new_properties",
+						"options": {
+							"facing": "up"
+						}
 					}
-				},
+				],
 				"from_universal": {
-					f"{universal_namespace}:{universal_block_name}": {
-						"new_block": default_block,
-						"map_properties": {
-							"facing": {
-								"up": {
-									"new_block": f"{input_namespace}:{input_block_name}"
+					f"{universal_namespace}:{universal_block_name}": [
+						{
+							"function": "new_block",
+							"options": default_block
+						},
+						{
+							"function": "map_properties",
+							"options": {
+								"facing": {
+									"up": [
+										{
+											"function": "new_block",
+											"options": f"{input_namespace}:{input_block_name}"
+										}
+									]
 								}
 							}
 						}
-					}
+					]
 				}
 			}
 	else:
@@ -800,47 +1061,89 @@ def torch(input_namespace: str, input_block_name: str, wall: bool, default_block
 			carry_properties_merge = carry_properties.copy()
 			carry_properties_merge["facing"] = ["north", "south", "west", "east"]
 			return {
-				"to_universal": {
-					"new_block": f"{universal_namespace}:{universal_block_name}",
-					"carry_properties": carry_properties_merge
-				},
+				"to_universal": [
+					{
+						"function": "new_block",
+						"options": f"{universal_namespace}:{universal_block_name}"
+					},
+					{
+						"function": "carry_properties",
+						"options": carry_properties_merge
+					}
+				],
 				"from_universal": {
-					f"{universal_namespace}:{universal_block_name}": {
-						"new_block": default_block,
-						"map_properties": {
-							"facing": {
-								facing: {
-									"new_block": f"{input_namespace}:{input_block_name}",
-									"new_properties": {
-										"facing": facing
-									}
-								} for facing in ["north", "south", "west", "east"]
+					f"{universal_namespace}:{universal_block_name}": [
+						{
+							"function": "new_block",
+							"options": default_block
+						},
+						{
+							"function": "map_properties",
+							"options": {
+								"facing": {
+									facing: [
+										{
+											"function": "new_block",
+											"options": f"{input_namespace}:{input_block_name}"
+										},
+										{
+											"function": "new_properties",
+											"options": {
+												"facing": facing
+											}
+										}
+									] for facing in ["north", "south", "west", "east"]
+								}
 							}
 						},
-						"carry_properties": carry_properties
-					}
+						{
+							"function": "carry_properties",
+							"options": carry_properties
+						}
+					]
 				}
 			}
 		else:
 			return {
-				"to_universal": {
-					"new_block": f"{universal_namespace}:{universal_block_name}",
-					"new_properties": {
-						"facing": "up"
+				"to_universal": [
+					{
+						"function": "new_block",
+						"options": f"{universal_namespace}:{universal_block_name}"
 					},
-					"carry_properties": carry_properties
-				},
+					{
+						"function": "new_properties",
+						"options": {
+							"facing": "up"
+						}
+					},
+					{
+						"function": "carry_properties",
+						"options": carry_properties
+					}
+				],
 				"from_universal": {
-					f"{universal_namespace}:{universal_block_name}": {
-						"new_block": default_block,
-						"map_properties": {
-							"facing": {
-								"up": {
-									"new_block": f"{input_namespace}:{input_block_name}"
+					f"{universal_namespace}:{universal_block_name}": [
+						{
+							"function": "new_block",
+							"options": default_block
+						},
+						{
+							"function": "map_properties",
+							"options": {
+								"facing": {
+									"up": [
+										{
+											"function":"new_block",
+											"options":  f"{input_namespace}:{input_block_name}"
+										}
+									]
 								}
 							}
 						},
-						"carry_properties": carry_properties
-					}
+						{
+							"function": "carry_properties",
+							"options": carry_properties
+						}
+					]
 				}
 			}

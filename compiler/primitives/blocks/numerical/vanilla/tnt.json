@@ -1,40 +1,67 @@
 {
-	"to_universal": {
-		"map_properties": {
-			"block_data": {
-				"0": {
-					"new_block": "universal_minecraft:tnt",
-					"new_properties": {
-						"unstable": "false"
-					}
-				},
-				"1": {
-					"new_block": "universal_minecraft:tnt",
-					"new_properties": {
-						"unstable": "true"
-					}
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					"0": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:tnt"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"unstable": "false"
+							}
+						}
+					],
+					"1": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:tnt"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"unstable": "true"
+							}
+						}
+					]
 				}
 			}
 		}
-	},
+	],
 	"from_universal": {
-		"universal_minecraft:tnt": {
-			"new_block": "minecraft:tnt",
-			"map_properties": {
-				"unstable": {
-					"false": {
-						"new_properties": {
-							"block_data": "0"
-						}
-					},
-					"true": {
-						"new_properties": {
-							"block_data": "1"
-						}
+		"universal_minecraft:tnt": [
+			{
+				"function": "new_block",
+				"options": "minecraft:tnt"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"unstable": {
+						"false": [
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "0"
+								}
+							}
+						],
+						"true": [
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "1"
+								}
+							}
+						]
 					}
 				}
 			}
-		}
+		]
 	},
 	"blockstate_specification": {
 		"properties": {
@@ -47,22 +74,28 @@
 			"unstable": "false"
 		}
 	},
-	"blockstate_to_universal": {
-		"carry_properties": {
-			"unstable": [
-				"true",
-				"false"
-			]
-		}
-	},
-	"blockstate_from_universal": {
-		"universal_minecraft:tnt": {
-			"carry_properties": {
+	"blockstate_to_universal": [
+		{
+			"function": "carry_properties",
+			"options": {
 				"unstable": [
 					"true",
 					"false"
 				]
 			}
 		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:tnt": [
+			{
+				"function": "carry_properties",
+				"options": {
+					"unstable": [
+						"true",
+						"false"
+					]
+				}
+			}
+		]
 	}
 }

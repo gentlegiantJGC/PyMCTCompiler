@@ -1,19 +1,31 @@
 {
-	"to_universal": {
-		"new_block": "universal_minecraft:stone_bricks",
-		"new_properties": {
-			"variant": "cracked"
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:stone_bricks"
+		},
+		{
+			"function": "new_properties",
+			"options": {
+				"variant": "cracked"
+			}
 		}
-	},
+	],
 	"from_universal": {
-		"universal_minecraft:stone_bricks": {
-			"map_properties": {
-				"variant": {
-					"cracked": {
-						"new_block": "minecraft:cracked_stone_bricks"
+		"universal_minecraft:stone_bricks": [
+			{
+				"function": "map_properties",
+				"options": {
+					"variant": {
+						"cracked": [
+							{
+								"function": "new_block",
+								"options": "minecraft:cracked_stone_bricks"
+							}
+						]
 					}
 				}
 			}
-		}
+		]
 	}
 }

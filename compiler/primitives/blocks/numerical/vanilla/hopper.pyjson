@@ -1,36 +1,57 @@
 {
-	"to_universal": {
-		"map_properties": {
-			"block_data": {
-				str(data8 + data7): {
-					"new_block": "universal_minecraft:hopper",
-					"new_properties": {
-						"facing": facing,
-						"enabled": enabled
-					}
-				} for data8, enabled in {0: "false", 8: "true"}.items() for data7, facing in {0: "down", 2: "north", 3: "south", 4: "west", 5: "east"}.items()
-			}
-		}
-	},
-	"from_universal": {
-		"universal_minecraft:hopper": {
-			"new_block": "minecraft:hopper",
-			"map_properties": {
-				"enabled": {
-					enabled: {
-						"map_properties": {
-							"facing": {
-								facing: {
-									"new_properties": {
-										"block_data": str(data8 + data7)
-									}
-								} for data7, facing in {0: "down", 2: "north", 3: "south", 4: "west", 5: "east"}.items()
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					str(data8 + data7): [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:hopper"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"facing": facing,
+								"enabled": enabled
 							}
 						}
-					} for data8, enabled in {0: "false", 8: "true"}.items()
+					] for data8, enabled in {0: "false", 8: "true"}.items() for data7, facing in {0: "down", 2: "north", 3: "south", 4: "west", 5: "east"}.items()
 				}
 			}
 		}
+	],
+	"from_universal": {
+		"universal_minecraft:hopper": [
+			{
+				"function": "new_block",
+				"options": "minecraft:hopper"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"enabled": {
+						enabled: [
+							{
+								"function": "map_properties",
+								"options": {
+									"facing": {
+										facing: [
+											{
+												"function": "new_properties",
+												"options": {
+													"block_data": str(data8 + data7)
+												}
+											}
+										] for data7, facing in {0: "down", 2: "north", 3: "south", 4: "west", 5: "east"}.items()
+									}
+								}
+							}
+						] for data8, enabled in {0: "false", 8: "true"}.items()
+					}
+				}
+			}
+		]
 	},
 	"blockstate_specification": {
 		"properties": {
@@ -51,26 +72,14 @@
 			"facing": "down"
 		}
 	},
-	"blockstate_to_universal": {
-		"new_block": "universal_minecraft:hopper",
-		"carry_properties": {
-			"enabled": [
-				"true",
-				"false"
-			],
-			"facing": [
-				"down",
-				"north",
-				"south",
-				"west",
-				"east"
-			]
-		}
-	},
-	"blockstate_from_universal": {
-		"universal_minecraft:hopper": {
-			"new_block": "minecraft:hopper",
-			"carry_properties": {
+	"blockstate_to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:hopper"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
 				"enabled": [
 					"true",
 					"false"
@@ -84,5 +93,29 @@
 				]
 			}
 		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:hopper": [
+			{
+				"function": "new_block",
+				"options": "minecraft:hopper"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"enabled": [
+						"true",
+						"false"
+					],
+					"facing": [
+						"down",
+						"north",
+						"south",
+						"west",
+						"east"
+					]
+				}
+			}
+		]
 	}
 }

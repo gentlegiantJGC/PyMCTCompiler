@@ -1,29 +1,47 @@
 {
-	"to_universal": {
-		"map_properties": {
-			"block_data": {
-				str(data): {
-					"new_block": "universal_minecraft:planks",
-					"new_properties": {
-						"material": {0: "oak", 1: "spruce", 2: "birch", 3: "jungle", 4: "acacia", 5: "dark_oak"}[data],
-					}
-				} for data in range(6)
-			}
-		}
-	},
-	"from_universal": {
-		"universal_minecraft:planks": {
-			"map_properties": {
-				"material": {
-					block: {
-						"new_block": "minecraft:planks",
-						"new_properties": {
-							"block_data": str(data)
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					str(data): [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:planks"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"material": {0: "oak", 1: "spruce", 2: "birch", 3: "jungle", 4: "acacia", 5: "dark_oak"}[data],
+							}
 						}
-					} for data, block in {0: "oak", 1: "spruce", 2: "birch", 3: "jungle", 4: "acacia", 5: "dark_oak"}.items()
+					] for data in range(6)
 				}
 			}
 		}
+	],
+	"from_universal": {
+		"universal_minecraft:planks": [
+			{
+				"function": "map_properties",
+				"options": {
+					"material": {
+						block: [
+							{
+								"function": "new_block",
+								"options": "minecraft:planks"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": str(data)
+								}
+							}
+						] for data, block in {0: "oak", 1: "spruce", 2: "birch", 3: "jungle", 4: "acacia", 5: "dark_oak"}.items()
+					}
+				}
+			}
+		]
 	},
 	"blockstate_specification": {
 		"properties": {
@@ -40,23 +58,14 @@
 			"material": "oak"
 		}
 	},
-	"blockstate_to_universal": {
-		"new_block": "universal_minecraft:planks",
-		"carry_properties": {
-			"material": [
-				"oak",
-				"spruce",
-				"birch",
-				"jungle",
-				"acacia",
-				"dark_oak"
-			]
-		}
-	},
-	"blockstate_from_universal": {
-		"universal_minecraft:planks": {
-			"new_block": "minecraft:planks",
-			"carry_properties": {
+	"blockstate_to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:planks"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
 				"material": [
 					"oak",
 					"spruce",
@@ -67,5 +76,26 @@
 				]
 			}
 		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:planks": [
+			{
+				"function": "new_block",
+				"options": "minecraft:planks"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"material": [
+						"oak",
+						"spruce",
+						"birch",
+						"jungle",
+						"acacia",
+						"dark_oak"
+					]
+				}
+			}
+		]
 	}
 }

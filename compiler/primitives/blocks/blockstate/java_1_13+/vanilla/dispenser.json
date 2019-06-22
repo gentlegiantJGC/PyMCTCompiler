@@ -19,27 +19,14 @@
 			"triggered": "false"
 		}
 	},
-	"to_universal": {
-		"new_block": "universal_minecraft:dispenser",
-		"carry_properties": {
-			"facing": [
-				"north",
-				"east",
-				"south",
-				"west",
-				"up",
-				"down"
-			],
-			"triggered": [
-				"true",
-				"false"
-			]
-		}
-	},
-	"from_universal": {
-		"universal_minecraft:dispenser": {
-			"new_block": "minecraft:dispenser",
-			"carry_properties": {
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:dispenser"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
 				"facing": [
 					"north",
 					"east",
@@ -54,5 +41,30 @@
 				]
 			}
 		}
+	],
+	"from_universal": {
+		"universal_minecraft:dispenser": [
+			{
+				"function": "new_block",
+				"options": "minecraft:dispenser"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"facing": [
+						"north",
+						"east",
+						"south",
+						"west",
+						"up",
+						"down"
+					],
+					"triggered": [
+						"true",
+						"false"
+					]
+				}
+			}
+		]
 	}
 }

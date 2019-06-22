@@ -241,19 +241,9 @@
 			}
 		}
 	},
-	"to_universal": {
-
-	},
-	"from_universal": {
-
-	},
-	"blockstate_specification": {
-
-	},
-	"blockstate_to_universal": {
-
-	},
-	"blockstate_from_universal": {
-
-	}
+	"to_universal": [],
+	"from_universal": [],
+	"blockstate_specification": {},
+	"blockstate_to_universal": [],
+	"blockstate_from_universal": []
 }

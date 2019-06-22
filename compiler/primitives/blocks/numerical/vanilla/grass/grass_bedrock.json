@@ -1,41 +1,71 @@
 {
-	"to_universal": {
-		"map_properties": {
-			"block_data": {
-				"0": {
-					"new_block": "universal_minecraft:plant",
-					"new_properties": {
-						"type": "grass"
-					}
-				},
-				"2": {
-					"new_block": "universal_minecraft:plant",
-					"new_properties": {
-						"type": "fern"
-					}
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					"0": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:plant"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"type": "grass"
+							}
+						}
+					],
+					"2": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:plant"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"type": "fern"
+							}
+						}
+					]
 				}
 			}
 		}
-	},
+	],
 	"from_universal": {
-		"universal_minecraft:plant": {
-			"map_properties": {
-				"type": {
-					"grass": {
-						"new_block": "minecraft:tallgrass",
-						"new_properties": {
-							"block_data": "0"
-						}
-					},
-					"fern": {
-						"new_block": "minecraft:tallgrass",
-						"new_properties": {
-							"block_data": "2"
-						}
+		"universal_minecraft:plant": [
+			{
+				"function": "map_properties",
+				"options": {
+					"type": {
+						"grass": [
+							{
+								"function": "new_block",
+								"options": "minecraft:tallgrass"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "0"
+								}
+							}
+						],
+						"fern": [
+							{
+								"function": "new_block",
+								"options": "minecraft:tallgrass"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "2"
+								}
+							}
+						]
 					}
 				}
 			}
-		}
+		]
 	},
 	"blockstate_specification": {
 		"properties": {
@@ -48,42 +78,72 @@
 			"type": "grass"
 		}
 	},
-	"blockstate_to_universal": {
-		"map_properties": {
-			"type": {
-				"grass": {
-					"new_block": "universal_minecraft:plant",
-					"new_properties": {
-						"type": "grass"
-					}
-				},
-				"fern": {
-					"new_block": "universal_minecraft:plant",
-					"new_properties": {
-						"type": "fern"
-					}
-				}
-			}
-		}
-	},
-	"blockstate_from_universal": {
-		"universal_minecraft:plant": {
-			"map_properties": {
+	"blockstate_to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
 				"type": {
-					"grass": {
-						"new_block": "minecraft:tallgrass",
-						"new_properties": {
-							"type": "grass"
+					"grass": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:plant"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"type": "grass"
+							}
 						}
-					},
-					"fern": {
-						"new_block": "minecraft:tallgrass",
-						"new_properties": {
-							"type": "fern"
+					],
+					"fern": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:plant"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"type": "fern"
+							}
 						}
-					}
+					]
 				}
 			}
 		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:plant": [
+			{
+				"function": "map_properties",
+				"options": {
+					"type": {
+						"grass": [
+							{
+								"function": "new_block",
+								"options": "minecraft:tallgrass"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"type": "grass"
+								}
+							}
+						],
+						"fern": [
+							{
+								"function": "new_block",
+								"options": "minecraft:tallgrass"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"type": "fern"
+								}
+							}
+						]
+					}
+				}
+			}
+		]
 	}
 }

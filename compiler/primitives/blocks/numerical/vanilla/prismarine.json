@@ -1,38 +1,68 @@
 {
-	"to_universal": {
-		"map_properties": {
-			"block_data": {
-				"0": {
-					"new_block": "universal_minecraft:prismarine"
-				},
-				"1": {
-					"new_block": "universal_minecraft:dark_prismarine"
-				},
-				"2": {
-					"new_block": "universal_minecraft:prismarine_bricks"
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					"0": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:prismarine"
+						}
+					],
+					"1": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:dark_prismarine"
+						}
+					],
+					"2": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:prismarine_bricks"
+						}
+					]
 				}
 			}
 		}
-	},
+	],
 	"from_universal": {
-		"universal_minecraft:prismarine": {
-			"new_block": "minecraft:prismarine",
-			"new_properties": {
-				"block_data": "0"
+		"universal_minecraft:prismarine": [
+			{
+				"function": "new_block",
+				"options": "minecraft:prismarine"
+			},
+			{
+				"function": "new_properties",
+				"options": {
+					"block_data": "0"
+				}
 			}
-		},
-		"universal_minecraft:dark_prismarine": {
-			"new_block": "minecraft:prismarine",
-			"new_properties": {
-				"block_data": "1"
+		],
+		"universal_minecraft:dark_prismarine": [
+			{
+				"function": "new_block",
+				"options": "minecraft:prismarine"
+			},
+			{
+				"function": "new_properties",
+				"options": {
+					"block_data": "1"
+				}
 			}
-		},
-		"universal_minecraft:prismarine_bricks": {
-			"new_block": "minecraft:prismarine",
-			"new_properties": {
-				"block_data": "2"
+		],
+		"universal_minecraft:prismarine_bricks": [
+			{
+				"function": "new_block",
+				"options": "minecraft:prismarine"
+			},
+			{
+				"function": "new_properties",
+				"options": {
+					"block_data": "2"
+				}
 			}
-		}
+		]
 	},
 	"blockstate_specification": {
 		"properties": {
@@ -46,39 +76,69 @@
 			"variant": "normal"
 		}
 	},
-	"blockstate_to_universal": {
-		"map_properties": {
-			"variant": {
-				"normal": {
-					"new_block": "universal_minecraft:prismarine"
-				},
-				"dark": {
-					"new_block": "universal_minecraft:dark_prismarine"
-				},
-				"bricks": {
-					"new_block": "universal_minecraft:prismarine_bricks"
+	"blockstate_to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"variant": {
+					"normal": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:prismarine"
+						}
+					],
+					"dark": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:dark_prismarine"
+						}
+					],
+					"bricks": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:prismarine_bricks"
+						}
+					]
 				}
 			}
 		}
-	},
+	],
 	"blockstate_from_universal": {
-		"universal_minecraft:prismarine": {
-			"new_block": "minecraft:prismarine",
-			"new_properties": {
-				"variant": "normal"
+		"universal_minecraft:prismarine": [
+			{
+				"function": "new_block",
+				"options": "minecraft:prismarine"
+			},
+			{
+				"function": "new_properties",
+				"options": {
+					"variant": "normal"
+				}
 			}
-		},
-		"universal_minecraft:dark_prismarine": {
-			"new_block": "minecraft:prismarine",
-			"new_properties": {
-				"variant": "dark"
+		],
+		"universal_minecraft:dark_prismarine": [
+			{
+				"function": "new_block",
+				"options": "minecraft:prismarine"
+			},
+			{
+				"function": "new_properties",
+				"options": {
+					"variant": "dark"
+				}
 			}
-		},
-		"universal_minecraft:prismarine_bricks": {
-			"new_block": "minecraft:prismarine",
-			"new_properties": {
-				"variant": "bricks"
+		],
+		"universal_minecraft:prismarine_bricks": [
+			{
+				"function": "new_block",
+				"options": "minecraft:prismarine"
+			},
+			{
+				"function": "new_properties",
+				"options": {
+					"variant": "bricks"
+				}
 			}
-		}
+		]
 	}
 }

@@ -1,43 +1,67 @@
 {
-	"to_universal": {
-		"map_properties": {
-			"block_data": {
-				str(data): {
-					"new_block": "universal_minecraft:tripwire_hook",
-					"new_properties": {
-						"powered": {0: "false", 8: "true"}[data & 8],
-						"attached": {0: "false", 4: "true"}[data & 4],
-						"facing": {0: "south", 1: "west", 2: "north", 3: "east"}[data & 3]
-					}
-				} for data in range(16)
-			}
-		}
-	},
-	"from_universal": {
-		"universal_minecraft:tripwire_hook": {
-			"new_block": "minecraft:tripwire_hook",
-			"map_properties": {
-				"powered": {
-					powered: {
-						"map_properties": {
-							"attached": {
-								attached: {
-									"map_properties": {
-										"facing": {
-											facing: {
-												"new_properties": {
-													"block_data": str(data8 + data4 + data3)
-												}
-											} for data3, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
-										}
-									}
-								} for data4, attached in {0: "false", 4: "true"}.items()
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					str(data): [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:tripwire_hook"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"powered": {0: "false", 8: "true"}[data & 8],
+								"attached": {0: "false", 4: "true"}[data & 4],
+								"facing": {0: "south", 1: "west", 2: "north", 3: "east"}[data & 3]
 							}
 						}
-					} for data8, powered in {0: "false", 8: "true"}.items()
+					] for data in range(16)
 				}
 			}
 		}
+	],
+	"from_universal": {
+		"universal_minecraft:tripwire_hook": [
+			{
+				"function": "new_block",
+				"options": "minecraft:tripwire_hook"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"powered": {
+						powered: [
+							{
+								"function": "map_properties",
+								"options": {
+									"attached": {
+										attached: [
+											{
+												"function": "map_properties",
+												"options": {
+													"facing": {
+														facing: [
+															{
+																"function": "new_properties",
+																"options": {
+																	"block_data": str(data8 + data4 + data3)
+																}
+															}
+														] for data3, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
+													}
+												}
+											}
+										] for data4, attached in {0: "false", 4: "true"}.items()
+									}
+								}
+							}
+						] for data8, powered in {0: "false", 8: "true"}.items()
+					}
+				}
+			}
+		]
 	},
 	"blockstate_specification": {
 		"properties": {
@@ -62,29 +86,14 @@
 			"powered": "false"
 		}
 	},
-	"blockstate_to_universal": {
-		"new_block": "universal_minecraft:tripwire_hook",
-		"carry_properties": {
-			"attached": [
-				"true",
-				"false"
-			],
-			"facing": [
-				"north",
-				"south",
-				"west",
-				"east"
-			],
-			"powered": [
-				"true",
-				"false"
-			]
-		}
-	},
-	"blockstate_from_universal": {
-		"universal_minecraft:tripwire_hook": {
-			"new_block": "minecraft:tripwire_hook",
-			"carry_properties": {
+	"blockstate_to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:tripwire_hook"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
 				"attached": [
 					"true",
 					"false"
@@ -101,5 +110,32 @@
 				]
 			}
 		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:tripwire_hook": [
+			{
+				"function": "new_block",
+				"options": "minecraft:tripwire_hook"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"attached": [
+						"true",
+						"false"
+					],
+					"facing": [
+						"north",
+						"south",
+						"west",
+						"east"
+					],
+					"powered": [
+						"true",
+						"false"
+					]
+				}
+			}
+		]
 	}
 }

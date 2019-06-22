@@ -1,35 +1,59 @@
 {
-	"to_universal": {
-		"map_properties": {
-			"block_data": {
-				str(data): {
-					"new_block": "universal_minecraft:carved_pumpkin",
-					"new_properties": {
-						"facing": facing
-					}
-				} for data, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
-			}
-		}
-	},
-	"from_universal": {
-		"universal_minecraft:carved_pumpkin": {
-			"map_properties": {
-				"facing": {
-					facing: {
-						"new_block": "minecraft:pumpkin",
-						"new_properties": {
-							"block_data": str(data)
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					str(data): [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:carved_pumpkin"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"facing": facing
+							}
 						}
-					} for data, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
+					] for data, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
 				}
 			}
-		},
-		"universal_minecraft:pumpkin": {
-			"new_block": "minecraft:pumpkin",
-			"new_properties": {
-				"block_data": "0"
-			}
 		}
+	],
+	"from_universal": {
+		"universal_minecraft:carved_pumpkin": [
+			{
+				"function": "map_properties",
+				"options": {
+					"facing": {
+						facing: [
+							{
+								"function": "new_block",
+								"options": "minecraft:pumpkin"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": str(data)
+								}
+							}
+						] for data, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
+					}
+				}
+			}
+		],
+		"universal_minecraft:pumpkin": [
+			{
+				"function": "new_block",
+				"options": "minecraft:pumpkin"
+			},
+			{
+				"function": "new_properties",
+				"options": {
+					"block_data": "0"
+				}
+			}
+		]
 	},
 	"blockstate_specification": {
 		"properties": {
@@ -39,24 +63,42 @@
 			"facing": list({0: "south", 1: "west", 2: "north", 3: "east"}.values())[0]
 		}
 	},
-	"blockstate_to_universal": {
-		"new_block": "universal_minecraft:carved_pumpkin",
-		"carry_properties": {
-			"facing": list({0: "south", 1: "west", 2: "north", 3: "east"}.values())
-		}
-	},
-	"blockstate_from_universal": {
-		"universal_minecraft:carved_pumpkin": {
-			"new_block": "minecraft:pumpkin",
-			"carry_properties": {
+	"blockstate_to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:carved_pumpkin"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
 				"facing": list({0: "south", 1: "west", 2: "north", 3: "east"}.values())
 			}
-		},
-		"universal_minecraft:pumpkin": {
-			"new_block": "minecraft:pumpkin",
-			"new_properties": {
-				"facing": "south"
-			}
 		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:carved_pumpkin": [
+			{
+				"function": "new_block",
+				"options": "minecraft:pumpkin"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"facing": list({0: "south", 1: "west", 2: "north", 3: "east"}.values())
+				}
+			}
+		],
+		"universal_minecraft:pumpkin": [
+			{
+				"function": "new_block",
+				"options": "minecraft:pumpkin"
+			},
+			{
+				"function": "new_properties",
+				"options": {
+					"facing": "south"
+				}
+			}
+		]
 	}
 }

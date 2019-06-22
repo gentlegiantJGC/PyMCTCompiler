@@ -946,9 +946,12 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 									"function": "map_properties",
 									"options": {
 										"material": {
-											material: {
-												"new_block": f"{input_namespace}:{input_block_name}"
-											} for material in material_pallet.values()
+											material: [
+												{
+													"function":"new_block",
+													"options":  f"{input_namespace}:{input_block_name}"
+												}
+											] for material in material_pallet.values()
 										}
 									}
 								}
@@ -3643,7 +3646,7 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 								"function": "multiblock",
 								"options": {
 									"coords": [0, 1, 0],
-									"options": [
+									"functions": [
 										{
 											"function": "map_block_name",
 											"options": {
@@ -3689,7 +3692,7 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 								"function": "multiblock",
 								"options": {
 									"coords": [0, -1, 0],
-									"options": [
+									"functions": [
 										{
 											"function": "map_block_name",
 											"options": {
@@ -4346,9 +4349,12 @@ def pressure_plate(input_namespace: str, input_block_name: str, material: str) -
 					"function": "map_properties",
 					"options": {
 						"material": {
-							material: {
-								"new_block": f"{input_namespace}:{input_block_name}"
-							}
+							material: [
+								{
+									"function":"new_block",
+									"options":  f"{input_namespace}:{input_block_name}"
+								}
+							]
 						}
 					}
 				},
@@ -4397,7 +4403,7 @@ def repeater(input_namespace: str, input_block_name: str, powered: bool) -> dict
 								"options": [
 									{
 										"coords": coords,
-										"options": [
+										"functions": [
 											{
 												"function": "map_block_name",
 												"options": {
@@ -4520,9 +4526,12 @@ def repeater(input_namespace: str, input_block_name: str, powered: bool) -> dict
 					"function": "map_properties",
 					"options": {
 						"powered": {
-							powered_str: {
-								"new_block": f"{input_namespace}:{input_block_name}"
-							}
+							powered_str: [
+								{
+									"function":"new_block",
+									"options":  f"{input_namespace}:{input_block_name}"
+								}
+							]
 						}
 					}
 				},

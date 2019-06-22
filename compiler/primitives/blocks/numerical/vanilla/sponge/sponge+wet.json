@@ -1,40 +1,67 @@
 {
-	"to_universal" :{
-		"map_properties": {
-			"block_data": {
-				"0": {
-					"new_block": "universal_minecraft:sponge",
-					"new_properties": {
-						"wet": "false"
-					}
-				},
-				"1": {
-					"new_block": "universal_minecraft:sponge",
-					"new_properties": {
-						"wet": "true"
-					}
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					"0": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:sponge"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"wet": "false"
+							}
+						}
+					],
+					"1": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:sponge"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"wet": "true"
+							}
+						}
+					]
 				}
 			}
 		}
-	},
-	"from_universal" :{
-		"universal_minecraft:sponge": {
-			"new_block": "minecraft:sponge",
-			"map_properties": {
-				"wet": {
-					"false": {
-						"new_properties": {
-							"block_data": "0"
-						}
-					},
-					"true": {
-						"new_properties": {
-							"block_data": "1"
-						}
+	],
+	"from_universal": {
+		"universal_minecraft:sponge": [
+			{
+				"function": "new_block",
+				"options": "minecraft:sponge"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"wet": {
+						"false": [
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "0"
+								}
+							}
+						],
+						"true": [
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "1"
+								}
+							}
+						]
 					}
 				}
 			}
-		}
+		]
 	},
 	"blockstate_specification": {
 		"properties": {
@@ -47,24 +74,36 @@
 			"wet": "false"
 		}
 	},
-	"blockstate_to_universal": {
-		"new_block": "universal_minecraft:sponge",
-		"carry_properties": {
-			"wet": [
-				"false",
-				"true"
-			]
-		}
-	},
-	"blockstate_from_universal": {
-		"universal_minecraft:sponge": {
-			"new_block": "minecraft:sponge",
-			"carry_properties": {
+	"blockstate_to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:sponge"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
 				"wet": [
 					"false",
 					"true"
 				]
 			}
 		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:sponge": [
+			{
+				"function": "new_block",
+				"options": "minecraft:sponge"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"wet": [
+						"false",
+						"true"
+					]
+				}
+			}
+		]
 	}
 }

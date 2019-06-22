@@ -1,36 +1,57 @@
 {
-	"to_universal": {
-		"map_properties": {
-			"block_data": {
-				str(data): {
-					"new_block": "universal_minecraft:cocoa",
-					"new_properties": {
-						"facing": {0: "north", 1: "south", 2: "west", 3: "east"}[data & 3],
-						"age": str(data >> 2)
-					}
-				} for data in range(12)
-			}
-		}
-	},
-	"from_universal": {
-		"universal_minecraft:cocoa": {
-			"new_block": "minecraft:cocoa",
-			"map_properties": {
-				"age": {
-					age: {
-						"map_properties": {
-							"facing": {
-								facing: {
-									"new_properties": {
-										"block_data": str(data4 + data3)
-									}
-								} for data3, facing in {0: "north", 1: "south", 2: "west", 3: "east"}.items()
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					str(data): [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:cocoa"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"facing": {0: "north", 1: "south", 2: "west", 3: "east"}[data & 3],
+								"age": str(data >> 2)
 							}
 						}
-					} for data4, age in {0: "0", 4: "1", 8: "2"}.items()
+					] for data in range(12)
 				}
 			}
 		}
+	],
+	"from_universal": {
+		"universal_minecraft:cocoa": [
+			{
+				"function": "new_block",
+				"options": "minecraft:cocoa"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"age": {
+						age: [
+							{
+								"function": "map_properties",
+								"options": {
+									"facing": {
+										facing: [
+											{
+												"function": "new_properties",
+												"options": {
+													"block_data": str(data4 + data3)
+												}
+											}
+										] for data3, facing in {0: "north", 1: "south", 2: "west", 3: "east"}.items()
+									}
+								}
+							}
+						] for data4, age in {0: "0", 4: "1", 8: "2"}.items()
+					}
+				}
+			}
+		]
 	},
 	"blockstate_specification": {
 		"properties": {
@@ -51,26 +72,14 @@
 			"facing": "north"
 		}
 	},
-	"blockstate_to_universal": {
-		"new_block": "universal_minecraft:cocoa",
-		"carry_properties": {
-			"age": [
-				"0",
-				"1",
-				"2"
-			],
-			"facing": [
-				"north",
-				"south",
-				"west",
-				"east"
-			]
-		}
-	},
-	"blockstate_from_universal": {
-		"universal_minecraft:cocoa": {
-			"new_block": "minecraft:cocoa",
-			"carry_properties": {
+	"blockstate_to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:cocoa"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
 				"age": [
 					"0",
 					"1",
@@ -84,5 +93,29 @@
 				]
 			}
 		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:cocoa": [
+			{
+				"function": "new_block",
+				"options": "minecraft:cocoa"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"age": [
+						"0",
+						"1",
+						"2"
+					],
+					"facing": [
+						"north",
+						"south",
+						"west",
+						"east"
+					]
+				}
+			}
+		]
 	}
 }

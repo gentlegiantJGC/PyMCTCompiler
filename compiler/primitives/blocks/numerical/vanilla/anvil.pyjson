@@ -1,36 +1,57 @@
 {
-	"to_universal": {
-		"map_properties": {
-			"block_data": {
-				str(data): {
-					"new_block": "universal_minecraft:anvil",
-					"new_properties": {
-						"facing": {0: "south", 1: "west", 2: "north", 3: "east"}[data & 3],
-						"damage": {0: "normal", 1: "chipped", 2: "damaged"}[data >> 2]
-					}
-				} for data in range(12)
-			}
-		}
-	},
-	"from_universal": {
-		"universal_minecraft:anvil": {
-			"new_block": "minecraft:anvil",
-			"map_properties": {
-				"damage": {
-					damage: {
-						"map_properties": {
-							"facing": {
-								facing: {
-									"new_properties": {
-										"block_data": str(data4 + data3)
-									}
-								} for data3, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					str(data): [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:anvil"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"facing": {0: "south", 1: "west", 2: "north", 3: "east"}[data & 3],
+								"damage": {0: "normal", 1: "chipped", 2: "damaged"}[data >> 2]
 							}
 						}
-					} for data4, damage in {0: "normal", 4: "chipped", 8: "damaged"}.items()
+					] for data in range(12)
 				}
 			}
 		}
+	],
+	"from_universal": {
+		"universal_minecraft:anvil": [
+			{
+				"function": "new_block",
+				"options": "minecraft:anvil"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"damage": {
+						damage: [
+							{
+								"function": "map_properties",
+								"options": {
+									"facing": {
+										facing: [
+											{
+												"function": "new_properties",
+												"options": {
+													"block_data": str(data4 + data3)
+												}
+											}
+										] for data3, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
+									}
+								}
+							}
+						] for data4, damage in {0: "normal", 4: "chipped", 8: "damaged"}.items()
+					}
+				}
+			}
+		]
 	},
 	"blockstate_specification": {
 		"properties": {
@@ -51,26 +72,14 @@
 			"facing": "north"
 		}
 	},
-	"blockstate_to_universal": {
-		"new_block": "universal_minecraft:anvil",
-		"carry_properties": {
-			"damage": [
-				"normal",
-				"chipped",
-				"damaged"
-			],
-			"facing": [
-				"north",
-				"south",
-				"west",
-				"east"
-			]
-		}
-	},
-	"blockstate_from_universal": {
-		"universal_minecraft:anvil": {
-			"new_block": "minecraft:anvil",
-			"carry_properties": {
+	"blockstate_to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:anvil"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
 				"damage": [
 					"normal",
 					"chipped",
@@ -84,5 +93,29 @@
 				]
 			}
 		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:anvil": [
+			{
+				"function": "new_block",
+				"options": "minecraft:anvil"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"damage": [
+						"normal",
+						"chipped",
+						"damaged"
+					],
+					"facing": [
+						"north",
+						"south",
+						"west",
+						"east"
+					]
+				}
+			}
+		]
 	}
 }

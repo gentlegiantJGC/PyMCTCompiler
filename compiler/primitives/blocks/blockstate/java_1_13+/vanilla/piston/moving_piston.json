@@ -1,58 +1,88 @@
 {
-	"to_universal": {
-		"map_properties": {
-			"type": {
-				"normal": {
-					"new_block": "universal_minecraft:moving_piston"
-				},
-				"sticky": {
-					"new_block": "universal_minecraft:moving_sticky_piston"
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"type": {
+					"normal": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:moving_piston"
+						}
+					],
+					"sticky": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:moving_sticky_piston"
+						}
+					]
 				}
 			}
 		},
-		"carry_properties": {
-			"facing": [
-				"north",
-				"east",
-				"south",
-				"west",
-				"up",
-				"down"
-			]
+		{
+			"function": "carry_properties",
+			"options": {
+				"facing": [
+					"north",
+					"east",
+					"south",
+					"west",
+					"up",
+					"down"
+				]
+			}
 		}
-	},
+	],
 	"from_universal": {
-		"universal_minecraft:moving_piston": {
-			"new_block": "minecraft:moving_piston",
-			"new_properties": {
-				"type": "normal"
+		"universal_minecraft:moving_piston": [
+			{
+				"function": "new_block",
+				"options": "minecraft:moving_piston"
 			},
-			"carry_properties": {
-				"facing": [
-					"north",
-					"east",
-					"south",
-					"west",
-					"up",
-					"down"
-				]
-			}
-		},
-		"universal_minecraft:moving_sticky_piston": {
-			"new_block": "minecraft:moving_piston",
-			"new_properties": {
-				"type": "sticky"
+			{
+				"function": "new_properties",
+				"options": {
+					"type": "normal"
+				}
 			},
-			"carry_properties": {
-				"facing": [
-					"north",
-					"east",
-					"south",
-					"west",
-					"up",
-					"down"
-				]
+			{
+				"function": "carry_properties",
+				"options": {
+					"facing": [
+						"north",
+						"east",
+						"south",
+						"west",
+						"up",
+						"down"
+					]
+				}
 			}
-		}
+		],
+		"universal_minecraft:moving_sticky_piston": [
+			{
+				"function": "new_block",
+				"options": "minecraft:moving_piston"
+			},
+			{
+				"function": "new_properties",
+				"options": {
+					"type": "sticky"
+				}
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"facing": [
+						"north",
+						"east",
+						"south",
+						"west",
+						"up",
+						"down"
+					]
+				}
+			}
+		]
 	}
 }

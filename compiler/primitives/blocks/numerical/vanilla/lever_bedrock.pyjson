@@ -1,84 +1,126 @@
 {
-	"to_universal": {
-		"map_properties": {
-			"block_data": {
-				str(data): {
-					"new_block": "universal_minecraft:lever",
-					"new_properties": properties
-				} for data, properties in {
-					0: {"face": "ceiling", "facing": "west", "powered": "false"},
-					1: {"face": "wall", "facing": "east", "powered": "false"},
-					2: {"face": "wall", "facing": "west", "powered": "false"},
-					3: {"face": "wall", "facing": "south", "powered": "false"},
-					4: {"face": "wall", "facing": "north", "powered": "false"},
-					5: {"face": "floor", "facing": "north", "powered": "false"},
-					6: {"face": "floor", "facing": "west", "powered": "false"},
-					7: {"face": "ceiling", "facing": "north", "powered": "false"},
-					8: {"face": "ceiling", "facing": "west", "powered": "true"},
-					9: {"face": "wall", "facing": "east", "powered": "true"},
-					10: {"face": "wall", "facing": "west", "powered": "true"},
-					11: {"face": "wall", "facing": "south", "powered": "true"},
-					12: {"face": "wall", "facing": "north", "powered": "true"},
-					13: {"face": "floor", "facing": "north", "powered": "true"},
-					14: {"face": "floor", "facing": "west", "powered": "true"},
-					15: {"face": "ceiling", "facing": "north", "powered": "true"},
-				}.items()
-			}
-		}
-	},
-	"from_universal": {
-		"universal_minecraft:lever": {
-			"new_block": "minecraft:lever",
-			"map_properties": {
-				"powered": {
-					powered: {
-						"map_properties": {
-							"face": {
-								"ceiling": {
-									"new_properties": {
-										"block_data": str(5 + data8)
-									},
-									"map_properties": {
-										"facing": {
-											facing: {
-												"new_properties": {
-													"block_data": str(data7 + data8)
-												}
-											} for facing, data7 in {"north": 7, "south": 7, "west": 0, "east": 0}.items()
-										}
-									}
-								},
-								"floor": {
-									"new_properties": {
-										"block_data": str(7 + data8)
-									},
-									"map_properties": {
-										"facing": {
-											facing: {
-												"new_properties": {
-													"block_data": str(data7 + data8)
-												}
-											} for facing, data7 in {"north": 5, "south": 5, "west": 6, "east": 6}.items()
-										}
-									}
-								},
-								"wall": {
-									"map_properties": {
-										"facing": {
-											facing: {
-												"new_properties": {
-													"block_data": str(data7 + data8)
-												}
-											} for data7, facing in {1: "east", 2: "west", 3: "south", 4: "north"}.items()
-										}
-									}
-								}
-							}
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					str(data): [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:lever"
+						},
+						{
+							"function": "new_properties",
+							"options": properties
 						}
-					} for data8, powered in {0: "false", 8: "true"}.items()
+					] for data, properties in {
+						0: {"face": "ceiling", "facing": "west", "powered": "false"},
+						1: {"face": "wall", "facing": "east", "powered": "false"},
+						2: {"face": "wall", "facing": "west", "powered": "false"},
+						3: {"face": "wall", "facing": "south", "powered": "false"},
+						4: {"face": "wall", "facing": "north", "powered": "false"},
+						5: {"face": "floor", "facing": "north", "powered": "false"},
+						6: {"face": "floor", "facing": "west", "powered": "false"},
+						7: {"face": "ceiling", "facing": "north", "powered": "false"},
+						8: {"face": "ceiling", "facing": "west", "powered": "true"},
+						9: {"face": "wall", "facing": "east", "powered": "true"},
+						10: {"face": "wall", "facing": "west", "powered": "true"},
+						11: {"face": "wall", "facing": "south", "powered": "true"},
+						12: {"face": "wall", "facing": "north", "powered": "true"},
+						13: {"face": "floor", "facing": "north", "powered": "true"},
+						14: {"face": "floor", "facing": "west", "powered": "true"},
+						15: {"face": "ceiling", "facing": "north", "powered": "true"},
+					}.items()
 				}
 			}
 		}
+	],
+	"from_universal": {
+		"universal_minecraft:lever": [
+			{
+				"function": "new_block",
+				"options": "minecraft:lever"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"powered": {
+						powered: [
+							{
+								"function": "map_properties",
+								"options": {
+									"face": {
+										"ceiling": [
+											{
+												"function": "new_properties",
+												"options": {
+													"block_data": str(5 + data8)
+												}
+											},
+											{
+												"function": "map_properties",
+												"options": {
+													"facing": {
+														facing: [
+															{
+																"function": "new_properties",
+																"options": {
+																	"block_data": str(data7 + data8)
+																}
+															}
+														] for facing, data7 in {"north": 7, "south": 7, "west": 0, "east": 0}.items()
+													}
+												}
+											}
+										],
+										"floor": [
+											{
+												"function": "new_properties",
+												"options": {
+													"block_data": str(7 + data8)
+												}
+											},
+											{
+												"function": "map_properties",
+												"options": {
+													"facing": {
+														facing: [
+															{
+																"function": "new_properties",
+																"options": {
+																	"block_data": str(data7 + data8)
+																}
+															}
+														] for facing, data7 in {"north": 5, "south": 5, "west": 6, "east": 6}.items()
+													}
+												}
+											}
+										],
+										"wall": [
+											{
+												"function": "map_properties",
+												"options": {
+													"facing": {
+														facing: [
+															{
+																"function": "new_properties",
+																"options": {
+																	"block_data": str(data7 + data8)
+																}
+															}
+														] for data7, facing in {1: "east", 2: "west", 3: "south", 4: "north"}.items()
+													}
+												}
+											}
+										]
+									}
+								}
+							}
+						] for data8, powered in {0: "false", 8: "true"}.items()
+					}
+				}
+			}
+		]
 	},
 	"blockstate_specification": {
 		"properties": {
@@ -90,77 +132,122 @@
 			"powered": "false"
 		}
 	},
-	"blockstate_to_universal": {
-		"new_block": "universal_minecraft:lever",
-		"carry_properties": {
-			"powered": ["false", "true"]
+	"blockstate_to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:lever",
 		},
-		"map_properties": {
-			"position": {
-				position: {
-					"new_properties": properties
-				} for position, properties in {
-					"floor_south": {"face": "floor", "facing": "south"},
-					"floor_east": {"face": "floor", "facing": "east"},
-					"wall_east": {"face": "wall", "facing": "east"},
-					"wall_west": {"face": "wall", "facing": "west"},
-					"wall_south": {"face": "wall", "facing": "south"},
-					"wall_north": {"face": "wall", "facing": "north"},
-					"ceiling_south": {"face": "ceiling", "facing": "south"},
-					"ceiling_east": {"face": "ceiling", "facing": "east"}
-				}.items()
-			}
-		}
-	},
-	"blockstate_from_universal": {
-		"universal_minecraft:lever": {
-			"new_block": "minecraft:lever",
-			"carry_properties": {
+		{
+			"function": "carry_properties",
+			"options": {
 				"powered": ["false", "true"]
-			},
-			"map_properties": {
-				"face": {
-					"ceiling": {
-						"new_properties": {
-							"position": "ceiling_south"
-						},
-						"map_properties": {
-							"facing": {
-								facing: {
-									"new_properties": {
-										"position": position
-									}
-								} for facing, position in {"north": "ceiling_south", "south": "ceiling_south", "west": "ceiling_east", "east": "ceiling_east"}.items()
-							}
+			}
+		},
+		{
+			"function": "map_properties",
+			"options": {
+				"position": {
+					position: [
+						{
+							"function": "new_properties",
+							"options": properties
 						}
-					},
-					"floor": {
-						"new_properties": {
-							"position": "floor_south"
-						},
-						"map_properties": {
-							"facing": {
-								facing: {
-									"new_properties": {
-										"position": position
-									}
-								} for facing, position in {"north": "floor_south", "south": "floor_south", "west": "floor_east", "east": "floor_east"}.items()
-							}
-						}
-					},
-					"wall": {
-						"map_properties": {
-							"facing": {
-								facing: {
-									"new_properties": {
-										"position": position
-									}
-								} for facing, position in {"north": "wall_north", "south": "wall_south", "west": "wall_west", "east": "wall_east"}.items()
-							}
-						}
-					}
+					] for position, properties in {
+						"floor_south": {"face": "floor", "facing": "south"},
+						"floor_east": {"face": "floor", "facing": "east"},
+						"wall_east": {"face": "wall", "facing": "east"},
+						"wall_west": {"face": "wall", "facing": "west"},
+						"wall_south": {"face": "wall", "facing": "south"},
+						"wall_north": {"face": "wall", "facing": "north"},
+						"ceiling_south": {"face": "ceiling", "facing": "south"},
+						"ceiling_east": {"face": "ceiling", "facing": "east"}
+					}.items()
 				}
 			}
 		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:lever": [
+			{
+				"function": "new_block",
+				"options": "minecraft:lever"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"powered": ["false", "true"]
+				}
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"face": {
+						"ceiling": [
+							{
+								"function": "new_properties",
+								"options": {
+									"position": "ceiling_south"
+								}
+							},
+							{
+								"function": "map_properties",
+								"options": {
+									"facing": {
+										facing: [
+											{
+												"function": "new_properties",
+												"options": {
+													"position": position
+												}
+											}
+										] for facing, position in {"north": "ceiling_south", "south": "ceiling_south", "west": "ceiling_east", "east": "ceiling_east"}.items()
+									}
+								}
+							}
+						],
+						"floor": [
+							{
+								"function": "new_properties",
+								"options": {
+									"position": "floor_south"
+								}
+							},
+							{
+								"function": "map_properties",
+								"options": {
+									"facing": {
+										facing: [
+											{
+												"function": "new_properties",
+												"options": {
+													"position": position
+												}
+											}
+										] for facing, position in {"north": "floor_south", "south": "floor_south", "west": "floor_east", "east": "floor_east"}.items()
+									}
+								}
+							}
+						],
+						"wall": [
+							{
+								"function": "map_properties",
+								"options": {
+									"facing": {
+										facing: [
+											{
+												"function": "new_properties",
+												"options": {
+													"position": position
+												}
+											}
+										] for facing, position in {"north": "wall_north", "south": "wall_south", "west": "wall_west", "east": "wall_east"}.items()
+									}
+								}
+							}
+						]
+					}
+				}
+			}
+		]
 	}
 }

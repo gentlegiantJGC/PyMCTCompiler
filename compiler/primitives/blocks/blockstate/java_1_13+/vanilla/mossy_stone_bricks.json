@@ -1,19 +1,31 @@
 {
-	"to_universal": {
-		"new_block": "universal_minecraft:stone_bricks",
-		"new_properties": {
-			"variant": "mossy"
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:stone_bricks"
+		},
+		{
+			"function": "new_properties",
+			"options": {
+				"variant": "mossy"
+			}
 		}
-	},
+	],
 	"from_universal": {
-		"universal_minecraft:stone_bricks": {
-			"map_properties": {
-				"variant": {
-					"mossy": {
-						"new_block": "minecraft:mossy_stone_bricks"
+		"universal_minecraft:stone_bricks": [
+			{
+				"function": "map_properties",
+				"options": {
+					"variant": {
+						"mossy": [
+							{
+								"function": "new_block",
+								"options": "minecraft:mossy_stone_bricks"
+							}
+						]
 					}
 				}
 			}
-		}
+		]
 	}
 }

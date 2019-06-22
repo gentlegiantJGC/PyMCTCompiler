@@ -1,29 +1,47 @@
 {
-	"to_universal": {
-		"map_properties": {
-			"block_data": {
-				str(data): {
-					"new_block": "universal_minecraft:snow",
-					"new_properties": {
-						"layers": str(data + 1)
-					}
-				} for data in range(8)
-			}
-		}
-	},
-	"from_universal": {
-		"universal_minecraft:snow": {
-			"new_block": "minecraft:snow_layer",
-			"map_properties": {
-				"layers": {
-					str(data + 1): {
-						"new_properties": {
-							"block_data": str(data)
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					str(data): [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:snow"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"layers": str(data + 1)
+							}
 						}
-					} for data in range(8)
+					] for data in range(8)
 				}
 			}
 		}
+	],
+	"from_universal": {
+		"universal_minecraft:snow": [
+			{
+				"function": "new_block",
+				"options": "minecraft:snow_layer"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"layers": {
+						str(data + 1): [
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": str(data)
+								}
+							}
+						] for data in range(8)
+					}
+				}
+			}
+		]
 	},
 	"blockstate_specification": {
 		"properties": {
@@ -33,18 +51,30 @@
 			"layers": "1"
 		}
 	},
-	"blockstate_to_universal": {
-		"new_block": "universal_minecraft:snow",
-		"carry_properties": {
-			"layers": [str(data) for data in range(1, 9)]
-		}
-	},
-	"blockstate_from_universal": {
-		"universal_minecraft:snow": {
-			"new_block": "minecraft:snow_layer",
-			"carry_properties": {
+	"blockstate_to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:snow"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
 				"layers": [str(data) for data in range(1, 9)]
 			}
 		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:snow": [
+			{
+				"function": "new_block",
+				"options": "minecraft:snow_layer"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"layers": [str(data) for data in range(1, 9)]
+				}
+			}
+		]
 	}
 }

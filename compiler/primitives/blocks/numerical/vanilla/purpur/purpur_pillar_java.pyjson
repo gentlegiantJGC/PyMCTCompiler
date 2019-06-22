@@ -1,29 +1,47 @@
 {
-	"to_universal": {
-		"map_properties": {
-			"block_data": {
-				str(data): {
-					"new_block": "universal_minecraft:purpur_pillar",
-					"new_properties": {
-						"axis": {0: "y", 4: "x", 8: "z"}[data & 12],
-					}
-				} for data in [0, 4, 8]
-			}
-		}
-	},
-	"from_universal": {
-		"universal_minecraft:purpur_pillar": {
-			"map_properties": {
-				"axis": {
-					axis: {
-						"new_block": "minecraft:purpur_pillar",
-						"new_properties": {
-							"block_data": str(data)
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					str(data): [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:purpur_pillar"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"axis": {0: "y", 4: "x", 8: "z"}[data & 12],
+							}
 						}
-					} for data, axis in {0: "y", 4: "x", 8: "z"}.items()
+					] for data in [0, 4, 8]
 				}
 			}
 		}
+	],
+	"from_universal": {
+		"universal_minecraft:purpur_pillar": [
+			{
+				"function": "map_properties",
+				"options": {
+					"axis": {
+						axis: [
+							{
+								"function": "new_block",
+								"options": "minecraft:purpur_pillar"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": str(data)
+								}
+							}
+						] for data, axis in {0: "y", 4: "x", 8: "z"}.items()
+					}
+				}
+			}
+		]
 	},
 	"blockstate_specification": {
 		"properties": {
@@ -37,20 +55,14 @@
 			"axis": "y"
 		}
 	},
-	"blockstate_to_universal": {
-		"new_block": "universal_minecraft:purpur_pillar",
-		"carry_properties": {
-			"axis": [
-				"x",
-				"y",
-				"z"
-			]
-		}
-	},
-	"blockstate_from_universal": {
-		"universal_minecraft:purpur_pillar": {
-			"new_block": "minecraft:purpur_pillar",
-			"carry_properties": {
+	"blockstate_to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:purpur_pillar"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
 				"axis": [
 					"x",
 					"y",
@@ -58,5 +70,23 @@
 				]
 			}
 		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:purpur_pillar": [
+			{
+				"function": "new_block",
+				"options": "minecraft:purpur_pillar"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"axis": [
+						"x",
+						"y",
+						"z"
+					]
+				}
+			}
+		]
 	}
 }

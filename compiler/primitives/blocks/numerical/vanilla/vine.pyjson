@@ -1,50 +1,77 @@
 {
-	"to_universal": {
-		"map_properties": {
-			"block_data": {
-				str(data): {
-					"new_block": "universal_minecraft:vine",
-					"new_properties": {
-						"east": {0: "false", 8: "true"}[data & 8],
-						"north": {0: "false", 4: "true"}[data & 4],
-						"west": {0: "false", 2: "true"}[data & 2],
-						"south": {0: "false", 1: "true"}[data & 1],
-					}
-				} for data in range(1, 16)
-			}
-		}
-	},
-	"from_universal": {
-		"universal_minecraft:vine": {
-			"new_block": "minecraft:vine",
-			"map_properties": {
-				"east": {
-					east: {
-						"map_properties": {
-							"north": {
-								north: {
-									"map_properties": {
-										"west": {
-											west: {
-												"map_properties": {
-													"south": {
-														south: {
-															"new_properties": {
-																"block_data": str(data8 + data4 + data2 + data1)
-															}
-														} for data1, south in {0: "false", 1: "true"}.items()
-													}
-												}
-											} for data2, west in {0: "false", 2: "true"}.items()
-										}
-									}
-								} for data4, north in {0: "false", 4: "true"}.items()
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					str(data): [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:vine"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"east": {0: "false", 8: "true"}[data & 8],
+								"north": {0: "false", 4: "true"}[data & 4],
+								"west": {0: "false", 2: "true"}[data & 2],
+								"south": {0: "false", 1: "true"}[data & 1],
 							}
 						}
-					} for data8, east in {0: "false", 8: "true"}.items()
+					] for data in range(1, 16)
 				}
 			}
 		}
+	],
+	"from_universal": {
+		"universal_minecraft:vine": [
+			{
+				"function": "new_block",
+				"options": "minecraft:vine"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"east": {
+						east: [
+							{
+								"function": "map_properties",
+								"options": {
+									"north": {
+										north: [
+											{
+												"function": "map_properties",
+												"options": {
+													"west": {
+														west: [
+															{
+																"function": "map_properties",
+																"options": {
+																	"south": {
+																		south: [
+																			{
+																				"function": "new_properties",
+																				"options": {
+																					"block_data": str(data8 + data4 + data2 + data1)
+																				}
+																			}
+																		] for data1, south in {0: "false", 1: "true"}.items()
+																	}
+																}
+															}
+														] for data2, west in {0: "false", 2: "true"}.items()
+													}
+												}
+											}
+										] for data4, north in {0: "false", 4: "true"}.items()
+									}
+								}
+							}
+						] for data8, east in {0: "false", 8: "true"}.items()
+					}
+				}
+			}
+		]
 	},
 	"blockstate_specification": {
 		"properties": {
@@ -72,31 +99,14 @@
 			"west": "false"
 		}
 	},
-	"blockstate_to_universal": {
-		"new_block": "universal_minecraft:vine",
-		"carry_properties": {
-			"east": [
-				"true",
-				"false"
-			],
-			"north": [
-				"true",
-				"false"
-			],
-			"south": [
-				"true",
-				"false"
-			],
-			"west": [
-				"true",
-				"false"
-			]
-		}
-	},
-	"blockstate_from_universal": {
-		"universal_minecraft:vine": {
-			"new_block": "minecraft:vine",
-			"carry_properties": {
+	"blockstate_to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:vine"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
 				"east": [
 					"true",
 					"false"
@@ -115,5 +125,34 @@
 				]
 			}
 		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:vine": [
+			{
+				"function": "new_block",
+				"options": "minecraft:vine"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"east": [
+						"true",
+						"false"
+					],
+					"north": [
+						"true",
+						"false"
+					],
+					"south": [
+						"true",
+						"false"
+					],
+					"west": [
+						"true",
+						"false"
+					]
+				}
+			}
+		]
 	}
 }

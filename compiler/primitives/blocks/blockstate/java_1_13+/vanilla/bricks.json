@@ -1,10 +1,16 @@
 {
-	"to_universal": {
-		"new_block": "universal_minecraft:brick_block"
-	},
-	"from_universal": {
-		"universal_minecraft:brick_block": {
-			"new_block": "minecraft:bricks"
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:brick_block"
 		}
+	],
+	"from_universal": {
+		"universal_minecraft:brick_block": [
+			{
+				"function": "new_block",
+				"options": "minecraft:bricks"
+			}
+		]
 	}
 }

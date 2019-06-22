@@ -1,13 +1,21 @@
 {
-	"to_universal": {
-		"map_properties": {
-			"block_data": {
-				str(data): {
-					"new_block": "universal_minecraft:wall",
-					"new_properties": {
-						"material": material
-					}
-				} for data, material in enumerate([
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					str(data): [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:wall"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"material": material
+							}
+						}
+					] for data, material in enumerate([
 					"cobblestone",
 					"mossy_cobblestone",
 					"granite",
@@ -23,19 +31,28 @@
 					"red_sandstone",
 					"red_nether_brick"
 				])
+				}
 			}
 		}
-	},
+	],
 	"from_universal": {
-		"universal_minecraft:wall": {
-			"new_block": "minecraft:cobblestone_wall",
-			"map_properties": {
-				"material": {
-					material: {
-						"new_properties": {
-							"block_data": str(data)
-						}
-					} for data, material in enumerate([
+		"universal_minecraft:wall": [
+			{
+				"function": "new_block",
+				"options": "minecraft:cobblestone_wall"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"material": {
+						material: [
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": str(data)
+								}
+							}
+						] for data, material in enumerate([
 						"cobblestone",
 						"mossy_cobblestone",
 						"granite",
@@ -51,9 +68,10 @@
 						"red_sandstone",
 						"red_nether_brick"
 					])
+					}
 				}
 			}
-		}
+		]
 	},
 	"blockstate_specification": {
 		"properties": {
@@ -78,31 +96,14 @@
 			"material": "cobblestone"
 		}
 	},
-	"blockstate_to_universal": {
-		"new_block": "universal_minecraft:wall",
-		"carry_properties": {
-			"material": [
-				"cobblestone",
-				"mossy_cobblestone",
-				"granite",
-				"diorite",
-				"andesite",
-				"sandstone",
-				"brick",
-				"stone_brick"
-				"mossy_stone_brick",
-				"nether_brick",
-				"end_stone_brick",
-				"prismarine",
-				"red_sandstone",
-				"red_nether_brick"
-			]
-		}
-	},
-	"blockstate_from_universal": {
-		"universal_minecraft:wall": {
-			"new_block": "minecraft:cobblestone_wall",
-			"carry_properties": {
+	"blockstate_to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:wall"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
 				"material": [
 					"cobblestone",
 					"mossy_cobblestone",
@@ -121,5 +122,34 @@
 				]
 			}
 		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:wall": [
+			{
+				"function": "new_block",
+				"options": "minecraft:cobblestone_wall"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"material": [
+						"cobblestone",
+						"mossy_cobblestone",
+						"granite",
+						"diorite",
+						"andesite",
+						"sandstone",
+						"brick",
+						"stone_brick"
+						"mossy_stone_brick",
+						"nether_brick",
+						"end_stone_brick",
+						"prismarine",
+						"red_sandstone",
+						"red_nether_brick"
+					]
+				}
+			}
+		]
 	}
 }
