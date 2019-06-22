@@ -303,10 +303,10 @@ def check_mapping_format(data: list, extra_feature_set: Tuple[str, ...] = None):
 			assert isinstance(multiblock, list), 'multiblock must be a dictionary or a list of dictionaries'
 			for mapping in multiblock:
 				assert isinstance(mapping, dict), 'multiblock must be a dictionary or a list of dictionaries'
-				assert 'coords' in fun, 'coords must be present in multiblock'
-				assert isinstance(fun['coords'], list) and len(fun['coords']) == 3 and all(isinstance(coord, int) for coord in fun['coords']), f'"coords" must be a list of ints of length 3. Got {fun["coords"]} instead'
-				assert 'options' in fun, 'coords must be present in multiblock'
-				check_mapping_format(mapping['options'])
+				assert 'coords' in mapping, 'coords must be present in multiblock'
+				assert isinstance(mapping['coords'], list) and len(mapping['coords']) == 3 and all(isinstance(coord, int) for coord in mapping['coords']), f'"coords" must be a list of ints of length 3. Got {mapping["coords"]} instead'
+				assert 'functions' in mapping, 'functions must be present in multiblock'
+				check_mapping_format(mapping['functions'])
 
 		elif fun['function'] == 'map_block_name':
 			assert isinstance(fun['options'], dict), f'"options" must be a dictionary. Got {fun["options"]} instead'
