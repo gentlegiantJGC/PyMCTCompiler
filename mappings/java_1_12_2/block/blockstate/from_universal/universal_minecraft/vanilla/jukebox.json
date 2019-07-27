@@ -1,5 +1,9 @@
 [
     {
+        "function": "new_block",
+        "options": "minecraft:jukebox"
+    },
+    {
         "function": "map_input_nbt",
         "options": {
             "": {

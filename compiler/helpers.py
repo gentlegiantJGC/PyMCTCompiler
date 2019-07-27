@@ -58,7 +58,7 @@ def merge_map_(data_: list, data: list) -> list:
 
 
 def _merge_map(data_: list, data: list) -> list:
-	assert [fun['function'] for fun in data_] == [fun['function'] for fun in data], 'The functions do not match'
+	assert [fun['function'] for fun in data_] == [fun['function'] for fun in data], f'The functions do not match\n{data_}\n{data}'
 
 	for fun_, fun in zip(data_, data):
 		if fun['function'] == 'new_block':

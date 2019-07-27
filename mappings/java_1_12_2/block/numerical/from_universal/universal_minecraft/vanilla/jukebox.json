@@ -1,5 +1,15 @@
 [
     {
+        "function": "new_block",
+        "options": "minecraft:jukebox"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "block_data": "0"
+        }
+    },
+    {
         "function": "map_input_nbt",
         "options": {
             "": {

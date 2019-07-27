@@ -1,16 +1,4 @@
 {
-    "nbt_identifier": "minecraft:dispenser",
-    "nbt": {
-        "": {
-            "type": "compound",
-            "val": {
-                "Items": {
-                    "type": "list",
-                    "val": []
-                }
-            }
-        }
-    },
     "properties": {
         "facing": [
             "north",

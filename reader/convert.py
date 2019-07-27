@@ -318,9 +318,9 @@ def _convert_map_input_nbt(level, block_input: Union[Block, None], nbt_input: Un
 			# TODO: needs some work as the contained object is not a seperate NBT type
 			for index, val in enumerate(nbt.val):
 				if str(index) in mappings.get('index', {}):
-					output_name, output_type, new, extra_needed, cacheable = _convert_map_input_nbt(level, block_input, nbt_input, mappings['index'][str(index)], location, nbt_path + [index, nbt.val[index].datatype], (output_name, output_type, new, extra_needed, cacheable))
+					output_name, output_type, new, extra_needed, cacheable = _convert_map_input_nbt(level, block_input, nbt_input, mappings['index'][str(index)], location, nbt_path + [index, datatype.replace('_array', '')], (output_name, output_type, new, extra_needed, cacheable))
 				else:
-					output_name, output_type, new, extra_needed, cacheable = _convert(level, block_input, nbt_input, mappings.get('nested_default', {"carry_nbt": {}}), location, nbt_path + [[index, '']], (output_name, output_type, new, extra_needed, cacheable))
+					output_name, output_type, new, extra_needed, cacheable = _convert(level, block_input, nbt_input, mappings.get('nested_default', {"carry_nbt": {}}), location, nbt_path + [[index, datatype.replace('_array', '')]], (output_name, output_type, new, extra_needed, cacheable))
 
 	else:
 		output_name, output_type, new, extra_needed, cacheable = _convert(level, block_input, nbt_input, mappings.get('self_default', {"carry_nbt": {}}), location, nbt_path, (output_name, output_type, new, extra_needed, cacheable))

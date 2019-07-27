@@ -5,6 +5,10 @@
             "block_data": {
                 "0": [
                     {
+                        "function": "new_block",
+                        "options": "universal_minecraft:chorus_plant"
+                    },
+                    {
                         "function": "multiblock",
                         "options": [
                             {
