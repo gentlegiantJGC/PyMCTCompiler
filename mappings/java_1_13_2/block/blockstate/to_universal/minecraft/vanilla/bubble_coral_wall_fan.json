@@ -1,6 +1,24 @@
-{
-    "new_block": "universal_minecraft:bubble_coral_wall_fan",
-    "carry_properties": {
-        "facing": "north"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:coral_fan"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "type": "bubble",
+            "dead": "false"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ]
+        }
     }
-}
+]

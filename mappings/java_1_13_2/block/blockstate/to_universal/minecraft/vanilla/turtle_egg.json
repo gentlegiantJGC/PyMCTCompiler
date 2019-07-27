@@ -1,7 +1,22 @@
-{
-    "new_block": "universal_minecraft:turtle_egg",
-    "carry_properties": {
-        "eggs": "1",
-        "hatch": "0"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:turtle_egg"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "eggs": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "hatch": [
+                "0",
+                "1",
+                "2"
+            ]
+        }
     }
-}
+]

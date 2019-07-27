@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "dark_oak_button", "dark_oak", "universal_minecraft", "button", {"face": ["floor","wall","ceiling"],"facing": ["north","south","west","east"],"powered": ["true","false"]})

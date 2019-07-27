@@ -1,10 +1,31 @@
-{
-    "new_block": "universal_minecraft:cobblestone_wall",
-    "carry_properties": {
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "true",
-        "west": "false"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:cobblestone_wall"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "east": [
+                "true",
+                "false"
+            ],
+            "north": [
+                "true",
+                "false"
+            ],
+            "south": [
+                "true",
+                "false"
+            ],
+            "up": [
+                "true",
+                "false"
+            ],
+            "west": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

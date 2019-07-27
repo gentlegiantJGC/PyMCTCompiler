@@ -1,0 +1,295 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://raw.githubusercontent.com/gentlegiantJGC/Minecraft-Universal-Conversion-Mappings/master/compiler/format_specification/json_schema.json",
+	"definitions": {
+		"specification": {
+			"type": "object",
+			"properties": {
+				"properties": {
+					"type": "object",
+					"additionalProperties": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					}
+				},
+				"defaults": {
+					"type": "object",
+					"additionalProperties": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"mapping_functions": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"function": {
+						"type": "string",
+						"enum": [
+							"new_block",
+							"new_properties",
+							"map_properties",
+							"carry_properties",
+							"new_nbt",
+							"multiblock",
+							"map_block_name",
+							"map_input_nbt",
+							"carry_nbt",
+							"map_nbt"
+						]
+					},
+					"options": {}
+				},
+				"required": ["function", "options"],
+				"additionalProperties": false,
+				"oneOf": [
+					{
+						"if": {
+							"properties": {
+								"function": {
+									"pattern": "new_block"
+								}
+							}
+						},
+						"then": {
+							"properties": {
+								"options": {
+									"type": "string"
+								}
+							}
+						}
+					},
+					{
+						"if": {
+							"properties": {
+								"function": {
+									"pattern": "new_properties"
+								}
+							}
+						},
+						"then": {
+							"properties": {
+								"options": {
+									"type": "object",
+									"additionalProperties": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					},
+					{
+						"if": {
+							"properties": {
+								"function": {
+									"pattern": "map_properties"
+								}
+							}
+						},
+						"then": {
+							"properties": {
+								"options": {
+									"type": "object",
+									"additionalProperties": {
+										"type": "object",
+										"additionalProperties": {
+											"$ref": "#/definitions/mapping_functions"
+										}
+									}
+								}
+							}
+						}
+					},
+					{
+						"if": {
+							"properties": {
+								"function": {
+									"pattern": "carry_properties"
+								}
+							}
+						},
+						"then": {
+							"properties": {
+								"options": {
+									"type": "object",
+									"additionalProperties": {
+										"type": "array",
+										"items": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					},
+					{
+						"if": {
+							"properties": {
+								"function": {
+									"pattern": "new_nbt"
+								}
+							}
+						},
+						"then": {
+							"properties": {
+								"options": {
+									"type": "object"
+								}
+							}
+						}
+					},
+					{
+						"if": {
+							"properties": {
+								"function": {
+									"pattern": "multiblock"
+								}
+							}
+						},
+						"then": {
+							"properties": {
+								"options": {
+									"oneOf": [
+										{
+											"type": "object",
+											"properties": {
+												"coords": {
+													"type": "array",
+													"items": {
+														"type": "integer"
+													},
+													"minLength": 3,
+													"maxLength": 3
+												}
+											},
+											"required": ["coords"],
+											"$ref": "#/definitions/mapping_functions"
+										},
+										{
+											"type": "array",
+											"items": [
+												{
+													"type": "object",
+													"properties": {
+														"coords": {
+															"type": "array",
+															"items": {
+																"type": "integer"
+															},
+															"minLength": 3,
+															"maxLength": 3
+														}
+													},
+													"required": ["coords"],
+													"$ref": "#/definitions/mapping_functions"
+												}
+											]
+										}
+									]
+								}
+							}
+						}
+					},
+					{
+						"if": {
+							"properties": {
+								"function": {
+									"pattern": "map_block_name"
+								}
+							}
+						},
+						"then": {
+							"properties": {
+								"options": {
+									"type": "object",
+									"additionalProperties": {
+										"$ref": "#/definitions/mapping_functions"
+									}
+								}
+							}
+						}
+					},
+					{
+						"if": {
+							"properties": {
+								"function": {
+									"pattern": "map_input_nbt"
+								}
+							}
+						},
+						"then": {
+							"properties": {
+								"options": {
+									"type": "object"
+								}
+							}
+						}
+					},
+					{
+						"if": {
+							"properties": {
+								"function": {
+									"pattern": "carry_nbt"
+								}
+							}
+						},
+						"then": {
+							"properties": {
+								"options": {
+									"type": "object"
+								}
+							}
+						}
+					},
+					{
+						"if": {
+							"properties": {
+								"function": {
+									"pattern": "map_nbt"
+								}
+							}
+						},
+						"then": {
+							"properties": {
+								"options": {
+									"type": "object"
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"type": "object",
+	"properties": {
+		"specification": {
+			"$ref": "#/definitions/specification"
+		},
+		"to_universal": {
+			"$ref": "#/definitions/mapping_functions"
+		},
+		"from_universal": {
+			"type": "object",
+			"additionalProperties": {
+				"$ref": "#/definitions/mapping_functions"
+			}
+		},
+		"blockstate_specification": {
+			"$ref": "#/definitions/specification"
+		},
+		"blockstate_to_universal": {
+			"$ref": "#/definitions/mapping_functions"
+		},
+		"blockstate_from_universal": {
+			"type": "object",
+			"additionalProperties": {
+				"$ref": "#/definitions/mapping_functions"
+			}
+		}
+	}
+}

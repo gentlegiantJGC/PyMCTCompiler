@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:quartz_block"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:quartz_block"
+    }
+]

@@ -1,6 +1,15 @@
-{
-    "new_block": "universal_minecraft:jukebox",
-    "carry_properties": {
-        "has_record": "false"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:jukebox"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "has_record": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

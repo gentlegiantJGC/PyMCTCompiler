@@ -1,6 +1,25 @@
-{
-    "new_block": "universal_minecraft:magenta_shulker_box",
-    "carry_properties": {
-        "facing": "up"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:stained_shulker_box"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "color": "magenta"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "east",
+                "south",
+                "west",
+                "up",
+                "down"
+            ]
+        }
     }
-}
+]

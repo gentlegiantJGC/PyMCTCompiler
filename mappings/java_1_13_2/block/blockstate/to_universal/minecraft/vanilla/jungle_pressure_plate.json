@@ -1,6 +1,21 @@
-{
-    "new_block": "universal_minecraft:jungle_pressure_plate",
-    "carry_properties": {
-        "powered": "false"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:pressure_plate"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "jungle"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

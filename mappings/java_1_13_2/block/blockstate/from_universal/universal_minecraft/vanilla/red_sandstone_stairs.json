@@ -1,8 +1,0 @@
-{
-    "new_block": "minecraft:red_sandstone_stairs",
-    "carry_properties": {
-        "facing": "north",
-        "half": "bottom",
-        "shape": "straight"
-    }
-}

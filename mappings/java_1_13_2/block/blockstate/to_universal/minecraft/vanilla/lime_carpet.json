@@ -1,3 +1,12 @@
-{
-    "new_block": "universal_minecraft:lime_carpet"
-}
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:carpet"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "color": "lime"
+        }
+    }
+]

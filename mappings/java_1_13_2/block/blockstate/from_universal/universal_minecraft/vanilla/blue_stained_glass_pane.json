@@ -1,9 +1,0 @@
-{
-    "new_block": "minecraft:blue_stained_glass_pane",
-    "carry_properties": {
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "west": "false"
-    }
-}

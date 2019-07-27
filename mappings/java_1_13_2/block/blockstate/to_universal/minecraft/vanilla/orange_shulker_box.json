@@ -1,6 +1,25 @@
-{
-    "new_block": "universal_minecraft:orange_shulker_box",
-    "carry_properties": {
-        "facing": "up"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:stained_shulker_box"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "color": "orange"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "east",
+                "south",
+                "west",
+                "up",
+                "down"
+            ]
+        }
     }
-}
+]

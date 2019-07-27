@@ -16,6 +16,10 @@
             "true",
             "false"
         ],
+        "waterlogged": [
+            "true",
+            "false"
+        ],
         "west": [
             "true",
             "false"
@@ -26,6 +30,7 @@
         "north": "false",
         "south": "false",
         "up": "true",
+        "waterlogged": "false",
         "west": "false"
     }
 }

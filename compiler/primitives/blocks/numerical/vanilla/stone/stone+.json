@@ -1,0 +1,418 @@
+{
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					"0": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:stone"
+						}
+					],
+					"1": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:granite"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"polished": "false"
+							}
+						}
+					],
+					"2": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:granite"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"polished": "true"
+							}
+						}
+					],
+					"3": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:diorite"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"polished": "false"
+							}
+						}
+					],
+					"4": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:diorite"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"polished": "true"
+							}
+						}
+					],
+					"5": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:andesite"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"polished": "false"
+							}
+						}
+					],
+					"6": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:andesite"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"polished": "true"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:stone": [
+			{
+				"function": "new_block",
+				"options": "minecraft:stone"
+			},
+			{
+				"function": "new_properties",
+				"options": {
+					"block_data": "0"
+				}
+			}
+		],
+		"universal_minecraft:granite": [
+			{
+				"function": "map_properties",
+				"options": {
+					"polished": {
+						"false": [
+							{
+								"function": "new_block",
+								"options": "minecraft:stone"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "1"
+								}
+							}
+						],
+						"true": [
+							{
+								"function": "new_block",
+								"options": "minecraft:stone"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "2"
+								}
+							}
+						]
+					}
+				}
+			}
+		],
+		"universal_minecraft:diorite": [
+			{
+				"function": "map_properties",
+				"options": {
+					"polished": {
+						"false": [
+							{
+								"function": "new_block",
+								"options": "minecraft:stone"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "3"
+								}
+							}
+						],
+						"true": [
+							{
+								"function": "new_block",
+								"options": "minecraft:stone"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "4"
+								}
+							}
+						]
+					}
+				}
+			}
+		],
+		"universal_minecraft:andesite": [
+			{
+				"function": "map_properties",
+				"options": {
+					"polished": {
+						"false": [
+							{
+								"function": "new_block",
+								"options": "minecraft:stone"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "5"
+								}
+							}
+						],
+						"true": [
+							{
+								"function": "new_block",
+								"options": "minecraft:stone"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "6"
+								}
+							}
+						]
+					}
+				}
+			}
+		]
+	},
+	"blockstate_specification": {
+		"properties": {
+			"material": [
+				"stone",
+				"granite",
+				"polished_granite",
+				"diorite",
+				"polished_diorite",
+				"andesite",
+				"polished_andesite"
+			]
+		},
+		"defaults": {
+			"material": "stone"
+		}
+	},
+	"blockstate_to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"material": {
+					"stone": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:stone"
+						}
+					],
+					"granite": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:granite"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"polished": "false"
+							}
+						}
+					],
+					"polished_granite": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:granite"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"polished": "true"
+							}
+						}
+					],
+					"diorite": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:diorite"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"polished": "false"
+							}
+						}
+					],
+					"polished_diorite": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:diorite"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"polished": "true"
+							}
+						}
+					],
+					"andesite": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:andesite"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"polished": "false"
+							}
+						}
+					],
+					"polished_andesite": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:andesite"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"polished": "true"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:stone": [
+			{
+				"function": "new_block",
+				"options": "minecraft:stone"
+			},
+			{
+				"function": "new_properties",
+				"options": {
+					"material": "stone"
+				}
+			}
+		],
+		"universal_minecraft:granite": [
+			{
+				"function": "map_properties",
+				"options": {
+					"polished": {
+						"false": [
+							{
+								"function": "new_block",
+								"options": "minecraft:stone"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"material": "granite"
+								}
+							}
+						],
+						"true": [
+							{
+								"function": "new_block",
+								"options": "minecraft:stone"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"material": "polished_granite"
+								}
+							}
+						]
+					}
+				}
+			}
+		],
+		"universal_minecraft:diorite": [
+			{
+				"function": "map_properties",
+				"options": {
+					"polished": {
+						"false": [
+							{
+								"function": "new_block",
+								"options": "minecraft:stone"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"material": "diorite"
+								}
+							}
+						],
+						"true": [
+							{
+								"function": "new_block",
+								"options": "minecraft:stone"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"material": "polished_diorite"
+								}
+							}
+						]
+					}
+				}
+			}
+		],
+		"universal_minecraft:andesite": [
+			{
+				"function": "map_properties",
+				"options": {
+					"polished": {
+						"false": [
+							{
+								"function": "new_block",
+								"options": "minecraft:stone"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"material": "andesite"
+								}
+							}
+						],
+						"true": [
+							{
+								"function": "new_block",
+								"options": "minecraft:stone"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"material": "polished_andesite"
+								}
+							}
+						]
+					}
+				}
+			}
+		]
+	}
+}

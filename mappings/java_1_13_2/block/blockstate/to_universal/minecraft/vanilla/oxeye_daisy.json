@@ -1,3 +1,12 @@
-{
-    "new_block": "universal_minecraft:oxeye_daisy"
-}
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:plant"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "type": "oxeye_daisy"
+        }
+    }
+]

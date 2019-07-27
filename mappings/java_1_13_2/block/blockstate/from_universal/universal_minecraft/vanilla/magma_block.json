@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:magma_block"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:magma_block"
+    }
+]

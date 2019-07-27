@@ -1,1 +1,9 @@
-from . import java_1_12_2, java_1_13_2, bedrock_1_7_0, universal
+import os
+__all__ = [
+	version for version in os.listdir(os.path.dirname(__file__))
+	if
+	version != '__pycache__'
+	and
+	os.path.isdir(os.path.join(os.path.dirname(__file__), version))
+]
+from . import *

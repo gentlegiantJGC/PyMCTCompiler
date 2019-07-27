@@ -1,6 +1,17 @@
-{
-    "new_block": "universal_minecraft:ender_chest",
-    "carry_properties": {
-        "facing": "north"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:ender_chest"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ]
+        }
     }
-}
+]

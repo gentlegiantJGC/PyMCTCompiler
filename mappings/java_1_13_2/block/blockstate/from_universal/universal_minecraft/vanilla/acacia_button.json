@@ -1,8 +1,0 @@
-{
-    "new_block": "minecraft:acacia_button",
-    "carry_properties": {
-        "face": "wall",
-        "facing": "north",
-        "powered": "false"
-    }
-}

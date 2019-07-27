@@ -1,24 +1,45 @@
-{
-    "map_properties": {
-        "block_data": {
-            "0": {
-                "new_block": "universal_minecraft:sandstone",
-                "new_properties": {
-                    "variant": "normal"
-                }
-            },
-            "1": {
-                "new_block": "universal_minecraft:sandstone",
-                "new_properties": {
-                    "variant": "chiseled"
-                }
-            },
-            "2": {
-                "new_block": "universal_minecraft:sandstone",
-                "new_properties": {
-                    "variant": "cut"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "block_data": {
+                "0": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:sandstone"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "variant": "normal"
+                        }
+                    }
+                ],
+                "1": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:sandstone"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "variant": "chiseled"
+                        }
+                    }
+                ],
+                "2": [
+                    {
+                        "function": "new_block",
+                        "options": "universal_minecraft:sandstone"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "variant": "cut"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

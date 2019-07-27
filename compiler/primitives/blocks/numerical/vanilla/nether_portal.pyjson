@@ -1,0 +1,80 @@
+{
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					str(data): [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:nether_portal"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"axis": axis
+							}
+						}
+					] for data, axis in {1: "x", 2: "z"}.items()
+				}
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:nether_portal": [
+			{
+				"function": "map_properties",
+				"options": {
+					"axis": {
+						axis: [
+							{
+								"function": "new_block",
+								"options": "minecraft:portal"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": str(data)
+								}
+							}
+						] for data, axis in {1: "x", 2: "z"}.items()
+					}
+				}
+			}
+		]
+	},
+	"blockstate_specification": {
+		"properties": {
+			"axis": list({1: "x", 2: "z"}.values())
+		},
+		"defaults": {
+			"axis": list({1: "x", 2: "z"}.values())[0]
+		}
+	},
+	"blockstate_to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:nether_portal"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
+				"axis": list({1: "x", 2: "z"}.values())
+			}
+		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:nether_portal": [
+			{
+				"function": "new_block",
+				"options": "minecraft:portal"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"axis": list({1: "x", 2: "z"}.values())
+				}
+			}
+		]
+	}
+}

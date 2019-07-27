@@ -17,9 +17,14 @@
             "13",
             "14",
             "15"
+        ],
+        "waterlogged": [
+            "true",
+            "false"
         ]
     },
     "defaults": {
-        "rotation": "0"
+        "rotation": "0",
+        "waterlogged": "false"
     }
 }

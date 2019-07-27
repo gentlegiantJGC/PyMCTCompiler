@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:terracotta"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:terracotta"
+    }
+]

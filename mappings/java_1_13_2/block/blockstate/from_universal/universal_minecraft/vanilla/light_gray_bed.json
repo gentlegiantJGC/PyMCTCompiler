@@ -1,8 +1,0 @@
-{
-    "new_block": "minecraft:light_gray_bed",
-    "carry_properties": {
-        "facing": "north",
-        "occupied": "false",
-        "part": "foot"
-    }
-}

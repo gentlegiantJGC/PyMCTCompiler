@@ -1,0 +1,1 @@
+blockstate.single_map("minecraft", "wither_skeleton_wall_skull", "mob", "wither_skeleton", "minecraft:skeleton_wall_skull", "universal_minecraft", "wall_head", {"facing": ["north","south","west","east"]})

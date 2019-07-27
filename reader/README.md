@@ -1,6 +1,6 @@
 # Reader
 
-This is a simple runthrough of how to read the mappings and convert a block. For a code implimentation see [read.py](read.py) which may be more up to date. It is advised to pre-load all these files rather than reading them from disk each time.
+This is a simple runthrough of how to read the mappings and convert a block. For a code implimentation see [read.py](data_version_handler.py) which may be more up to date. It is advised to pre-load all these files rather than reading them from disk each time.
 
 
 ## Folder Structure
@@ -34,14 +34,14 @@ The folders are structured like this: (See [the compiler](/compiler) for more in
                     - <group_name2>
                 - <namespace2>
     __init__.json
-    __numerical_map__.json (needed only for the "numerical" format)
+    __numerical_block_map__.json (needed only for the "numerical" format)
 ~~~~
 
 ## Setting up for Conversion to Universal
 
 1. Find the version for the format the block is coming from. Check the 'format' key in the `__init__.json` file.
 
-2. If the format is numerical then look up the numerical id in `__numerical_map__.json` to convert to a string id (used to put meaning to the numbers).
+2. If the format is numerical then look up the numerical id in `__numerical_block_map__.json` to convert to a string id (used to put meaning to the numbers).
 
     * Pass if psudo-numerical or blockstate format.
     

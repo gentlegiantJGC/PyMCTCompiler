@@ -1,8 +1,31 @@
-{
-    "new_block": "universal_minecraft:light_gray_bed",
-    "carry_properties": {
-        "facing": "north",
-        "occupied": "false",
-        "part": "foot"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:bed"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "color": "light_gray"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ],
+            "occupied": [
+                "true",
+                "false"
+            ],
+            "part": [
+                "head",
+                "foot"
+            ]
+        }
     }
-}
+]

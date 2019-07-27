@@ -17,12 +17,17 @@
         "powered": [
             "true",
             "false"
+        ],
+        "waterlogged": [
+            "true",
+            "false"
         ]
     },
     "defaults": {
         "facing": "north",
         "half": "bottom",
         "open": "false",
-        "powered": "false"
+        "powered": "false",
+        "waterlogged": "false"
     }
 }

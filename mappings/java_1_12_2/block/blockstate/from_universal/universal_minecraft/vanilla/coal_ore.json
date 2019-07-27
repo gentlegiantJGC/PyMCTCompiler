@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:coal_ore"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:coal_ore"
+    }
+]

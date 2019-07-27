@@ -1,6 +1,22 @@
-{
-    "new_block": "universal_minecraft:dark_prismarine_slab",
-    "carry_properties": {
-        "type": "bottom"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:slab"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "dark_prismarine"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "type": [
+                "top",
+                "bottom",
+                "double"
+            ]
+        }
     }
-}
+]

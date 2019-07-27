@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:cobweb"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:cobweb"
+    }
+]

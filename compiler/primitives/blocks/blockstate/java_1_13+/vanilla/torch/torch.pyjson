@@ -1,0 +1,1 @@
+blockstate.torch("minecraft", "torch", False, "minecraft:torch", "universal_minecraft", "torch")

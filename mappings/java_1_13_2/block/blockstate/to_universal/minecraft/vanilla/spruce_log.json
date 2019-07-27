@@ -1,6 +1,23 @@
-{
-    "new_block": "universal_minecraft:spruce_log",
-    "carry_properties": {
-        "axis": "y"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:log"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "spruce",
+            "stripped": "false"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "axis": [
+                "x",
+                "y",
+                "z"
+            ]
+        }
     }
-}
+]

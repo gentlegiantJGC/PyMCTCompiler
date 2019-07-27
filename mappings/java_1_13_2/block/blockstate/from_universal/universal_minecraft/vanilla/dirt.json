@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:dirt"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:dirt"
+    }
+]

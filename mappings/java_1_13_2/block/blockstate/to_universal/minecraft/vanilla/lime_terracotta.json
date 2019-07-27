@@ -1,3 +1,12 @@
-{
-    "new_block": "universal_minecraft:lime_terracotta"
-}
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:stained_terracotta"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "color": "lime"
+        }
+    }
+]

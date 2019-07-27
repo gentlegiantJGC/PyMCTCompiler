@@ -1,6 +1,12 @@
-{
-    "new_block": "minecraft:dirt",
-    "new_properties": {
-        "material": "dirt"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:dirt"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "dirt"
+        }
     }
-}
+]

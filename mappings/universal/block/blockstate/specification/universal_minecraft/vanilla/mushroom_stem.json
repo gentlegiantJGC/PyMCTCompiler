@@ -23,6 +23,10 @@
         "west": [
             "true",
             "false"
+        ],
+        "material": [
+            "red",
+            "brown"
         ]
     },
     "defaults": {
@@ -31,6 +35,7 @@
         "north": "true",
         "south": "true",
         "up": "true",
-        "west": "true"
+        "west": "true",
+        "material": "red"
     }
 }

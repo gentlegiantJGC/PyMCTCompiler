@@ -1,18 +1,33 @@
-{
-    "map_properties": {
-        "polished": {
-            "false": {
-                "new_block": "minecraft:stone",
-                "new_properties": {
-                    "block_data": "5"
-                }
-            },
-            "true": {
-                "new_block": "minecraft:stone",
-                "new_properties": {
-                    "block_data": "6"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "polished": {
+                "false": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:stone"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "5"
+                        }
+                    }
+                ],
+                "true": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:stone"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "6"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

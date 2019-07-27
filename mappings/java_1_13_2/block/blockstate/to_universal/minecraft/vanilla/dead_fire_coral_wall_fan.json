@@ -1,6 +1,24 @@
-{
-    "new_block": "universal_minecraft:dead_fire_coral_wall_fan",
-    "carry_properties": {
-        "facing": "north"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:coral_fan"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "type": "fire",
+            "dead": "true"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ]
+        }
     }
-}
+]

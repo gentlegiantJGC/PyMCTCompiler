@@ -1,0 +1,201 @@
+{
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					"0": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:infested_block"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"material": "stone"
+							}
+						}
+					],
+					"1": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:infested_block"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"material": "cobblestone"
+							}
+						}
+					],
+					"2": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:infested_block"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"material": "stone_bricks"
+							}
+						}
+					],
+					"3": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:infested_block"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"material": "mossy_stone_bricks"
+							}
+						}
+					],
+					"4": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:infested_block"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"material": "cracked_stone_bricks"
+							}
+						}
+					],
+					"5": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:infested_block"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"material": "chiseled_stone_bricks"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:infested_block": [
+			{
+				"function": "new_block",
+				"options": "minecraft:monster_egg"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"material": {
+						"stone": [
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "0"
+								}
+							}
+						],
+						"cobblestone": [
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "1"
+								}
+							}
+						],
+						"stone_bricks": [
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "2"
+								}
+							}
+						],
+						"mossy_stone_bricks": [
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "3"
+								}
+							}
+						],
+						"cracked_stone_bricks": [
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "4"
+								}
+							}
+						],
+						"chiseled_stone_bricks": [
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "5"
+								}
+							}
+						]
+					}
+				}
+			}
+		]
+	},
+	"blockstate_specification": {
+		"properties": {
+			"material": [
+				"cobblestone",
+				"stone",
+				"stone_bricks",
+				"cracked_stone_bricks",
+				"mossy_stone_bricks",
+				"chiseled_stone_bricks"
+			]
+		},
+		"defaults": {
+			"material": "stone"
+		}
+	},
+	"blockstate_to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:infested_block"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
+				"material": [
+					"cobblestone",
+					"stone",
+					"stone_bricks",
+					"cracked_stone_bricks",
+					"mossy_stone_bricks",
+					"chiseled_stone_bricks"
+				]
+			}
+		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:infested_block": [
+			{
+				"function": "new_block",
+				"options": "minecraft:monster_egg"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"material": [
+						"cobblestone",
+						"stone",
+						"stone_bricks",
+						"cracked_stone_bricks",
+						"mossy_stone_bricks",
+						"chiseled_stone_bricks"
+					]
+				}
+			}
+		]
+	}
+}

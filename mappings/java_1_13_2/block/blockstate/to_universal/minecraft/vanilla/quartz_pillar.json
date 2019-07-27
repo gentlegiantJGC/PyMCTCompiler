@@ -1,6 +1,16 @@
-{
-    "new_block": "universal_minecraft:quartz_pillar",
-    "carry_properties": {
-        "axis": "y"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:quartz_pillar"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "axis": [
+                "x",
+                "y",
+                "z"
+            ]
+        }
     }
-}
+]

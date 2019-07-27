@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:soul_sand"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:soul_sand"
+    }
+]

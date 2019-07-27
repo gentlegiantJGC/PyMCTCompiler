@@ -1,0 +1,249 @@
+{
+	"specification": {
+		"nbt": {
+			"type": "compound",
+			"val": {
+				"Health": {
+					"type": "float",
+					"val": 20.0
+				},
+				"AbsorptionAmount": {
+					"type": "float",
+					"val": 0.0
+				},
+				"HurtTime": {
+					"type": "short",
+					"val": 0.0
+				},
+				"HurtByTimestamp": {
+					"type": "int",
+					"val": 0.0
+				},
+				"DeathTime": {
+					"type": "short",
+					"val": 0.0
+				},
+				"FallFlying": {
+					"type": "byte",
+					"val": 0
+				},
+				"Attributes": {
+					"type": "list",
+					"val": [
+						{
+							"type": "compound",
+							"val": {
+								"Name": {
+									"type": "string",
+									"val": "generic.maxHealth"
+								},
+								"Base": {
+									"type": "double",
+									"val": 20.0
+								}
+							}
+						},
+						{
+							"type": "compound",
+							"val": {
+								"Name": {
+									"type": "string",
+									"val": "generic.knockbackResistance"
+								},
+								"Base": {
+									"type": "double",
+									"val": 0.0
+								}
+							}
+						},
+						{
+							"type": "compound",
+							"val": {
+								"Name": {
+									"type": "string",
+									"val": "generic.movementSpeed"
+								},
+								"Base": {
+									"type": "double",
+									"val": 0.25
+								}
+							}
+						},
+						{
+							"type": "compound",
+							"val": {
+								"Name": {
+									"type": "string",
+									"val": "generic.armor"
+								},
+								"Base": {
+									"type": "double",
+									"val": 0.0
+								}
+							}
+						},
+						{
+							"type": "compound",
+							"val": {
+								"Name": {
+									"type": "string",
+									"val": "generic.armorToughness"
+								},
+								"Base": {
+									"type": "double",
+									"val": 0.0
+								}
+							}
+						},
+						{
+							"type": "compound",
+							"val": {
+								"Name": {
+									"type": "string",
+									"val": "generic.followRange"
+								},
+								"Base": {
+									"type": "double",
+									"val": 16.0
+								},
+								"Modifiers": {
+									"type": "list",
+									"val": [
+										{
+											"type": "compound",
+											"val": {
+												"Amount": {
+													"type": "double",
+													"val": 0.0251335916335
+												},
+
+												"Name": {
+													"type": "string",
+													"val": "Random spawn bonus"
+												},
+												"Operation": {
+													"type": "int",
+													"val": 1
+												},
+												"UUIDLeast": {
+													"type": "long",
+													"val": -8076226499038853654
+												},
+												"UUIDMost": {
+													"type": "long",
+													"val": -3541095603462256090
+												}
+											}
+										}
+									]
+								}
+							}
+						},
+						{
+							"type": "compound",
+							"val": {
+								"Name": {
+									"type": "string",
+									"val": "generic.attackDamage"
+								},
+								"Base": {
+									"type": "double",
+									"val": 2.0
+								}
+							}
+						}
+					]
+				},
+				"HandItems": {
+					"type": "list",
+					"val": [
+						{
+							"type": "compound",
+							"val": {}
+						}
+					]
+				},
+				"ArmorItems": {
+					"type": "list",
+					"val": [
+						{
+							"type": "compound",
+							"val": {}
+						},
+						{
+							"type": "compound",
+							"val": {}
+						},
+						{
+							"type": "compound",
+							"val": {}
+						},
+						{
+							"type": "compound",
+							"val": {}
+						}
+					]
+				},
+				"HandDropChances": {
+					"type": "list",
+					"val": [
+						{
+							"type": "float",
+							"val": 0.0850000008941
+						},
+						{
+							"type": "float",
+							"val": 0.0850000008941
+						}
+					]
+				},
+				"ArmorDropChances": {
+					"type": "list",
+					"val": [
+						{
+							"type": "float",
+							"val": 0.0850000008941
+						},
+						{
+							"type": "float",
+							"val": 0.0850000008941
+						},
+						{
+							"type": "float",
+							"val": 0.0850000008941
+						},
+						{
+							"type": "float",
+							"val": 0.0850000008941
+						}
+					]
+				},
+				"CanPickUpLoot": {
+					"type": "byte",
+					"val": 0
+				},
+				"NoAI": {
+					"type": "byte",
+					"val": 0
+				},
+				"PersistenceRequired": {
+					"type": "byte",
+					"val": 0
+				},
+				"LeftHanded": {
+					"type": "byte",
+					"val": 0
+				},
+				"Leashed": {
+					"type": "byte",
+					"val": 0
+				}
+			}
+		}
+	},
+	"to_universal": [],
+	"from_universal": [],
+	"blockstate_specification": {},
+	"blockstate_to_universal": [],
+	"blockstate_from_universal": []
+}

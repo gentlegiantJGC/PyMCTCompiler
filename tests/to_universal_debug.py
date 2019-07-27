@@ -1,4 +1,4 @@
-from reader.read import VersionContainer, Block
+from reader.data_version_handler import VersionContainer, Block
 import itertools
 import os
 
@@ -9,7 +9,7 @@ if __name__ == '__main__':
 	for platform_name in block_mappings.platforms:
 		for version_number in block_mappings.version_numbers(platform_name):
 			version = block_mappings.get(platform_name, version_number)
-			if not version.format == 'pseudo-numerical':
+			if not version.block_format == 'pseudo-numerical':
 				print(f'skipping {platform_name} {version_number}. Not pseudo-numerical format')
 				continue
 			input_version = version.get()
@@ -23,7 +23,7 @@ if __name__ == '__main__':
 					for spec_ in itertools.product(*values):
 						spec = dict(zip(keys, spec_))
 						try:
-							output, extra_output, extra_needed = input_version.to_universal(None, Block(namespace_str, block_name, spec))
+							output, extra_output, extra_needed = input_version.to_universal(None, Block(None, namespace_str, block_name, spec))
 						except:
 							output = extra_output = None
 							print({'block_name': f'{namespace_str}:{block_name}', 'properties': spec})

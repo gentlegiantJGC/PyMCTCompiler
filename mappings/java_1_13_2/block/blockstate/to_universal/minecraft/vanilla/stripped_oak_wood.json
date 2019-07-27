@@ -1,6 +1,23 @@
-{
-    "new_block": "universal_minecraft:stripped_oak_wood",
-    "carry_properties": {
-        "axis": "y"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:wood"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "oak",
+            "stripped": "true"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "axis": [
+                "x",
+                "y",
+                "z"
+            ]
+        }
     }
-}
+]

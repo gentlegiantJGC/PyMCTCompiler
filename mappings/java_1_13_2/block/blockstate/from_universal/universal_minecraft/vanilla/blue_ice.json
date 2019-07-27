@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:blue_ice"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:blue_ice"
+    }
+]

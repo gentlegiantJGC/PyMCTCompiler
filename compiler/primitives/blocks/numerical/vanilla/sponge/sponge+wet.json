@@ -1,0 +1,109 @@
+{
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					"0": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:sponge"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"wet": "false"
+							}
+						}
+					],
+					"1": [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:sponge"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"wet": "true"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:sponge": [
+			{
+				"function": "new_block",
+				"options": "minecraft:sponge"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"wet": {
+						"false": [
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "0"
+								}
+							}
+						],
+						"true": [
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "1"
+								}
+							}
+						]
+					}
+				}
+			}
+		]
+	},
+	"blockstate_specification": {
+		"properties": {
+			"wet": [
+				"false",
+				"true"
+			]
+		},
+		"defaults": {
+			"wet": "false"
+		}
+	},
+	"blockstate_to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:sponge"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
+				"wet": [
+					"false",
+					"true"
+				]
+			}
+		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:sponge": [
+			{
+				"function": "new_block",
+				"options": "minecraft:sponge"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"wet": [
+						"false",
+						"true"
+					]
+				}
+			}
+		]
+	}
+}

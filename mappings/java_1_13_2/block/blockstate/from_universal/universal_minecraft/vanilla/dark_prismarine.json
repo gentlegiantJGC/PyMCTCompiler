@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:dark_prismarine"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:dark_prismarine"
+    }
+]

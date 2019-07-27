@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:lapis_block"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:lapis_block"
+    }
+]

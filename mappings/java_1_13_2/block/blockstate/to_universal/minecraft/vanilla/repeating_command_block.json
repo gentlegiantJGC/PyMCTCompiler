@@ -1,7 +1,29 @@
-{
-    "new_block": "universal_minecraft:repeating_command_block",
-    "carry_properties": {
-        "conditional": "false",
-        "facing": "north"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:command_block"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "mode": "repeating"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "conditional": [
+                "true",
+                "false"
+            ],
+            "facing": [
+                "north",
+                "east",
+                "south",
+                "west",
+                "up",
+                "down"
+            ]
+        }
     }
-}
+]

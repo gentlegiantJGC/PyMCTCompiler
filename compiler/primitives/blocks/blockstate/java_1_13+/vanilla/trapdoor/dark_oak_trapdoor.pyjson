@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "dark_oak_trapdoor", "dark_oak", "universal_minecraft", "trapdoor", {"facing": ["north","south","west","east"],"half": ["top","bottom"],"open": ["true","false"],"powered": ["true","false"]})

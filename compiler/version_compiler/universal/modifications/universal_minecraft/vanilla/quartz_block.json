@@ -1,0 +1,19 @@
+{
+	"remove": [
+		"quartz_block"
+	],
+	"add": {
+		"quartz_block": {
+			"properties": {
+				"axis": [
+					"x",
+					"y",
+					"z"
+				]
+			},
+			"defaults": {
+				"axis": "y"
+			}
+		}
+	}
+}

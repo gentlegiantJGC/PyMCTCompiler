@@ -1,6 +1,15 @@
-{
-    "new_block": "universal_minecraft:podzol",
-    "carry_properties": {
-        "snowy": "false"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:podzol"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "snowy": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

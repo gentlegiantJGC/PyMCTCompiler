@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:dried_kelp_block"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:dried_kelp_block"
+    }
+]

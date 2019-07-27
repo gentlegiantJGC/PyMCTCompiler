@@ -1,24 +1,45 @@
-{
-    "map_properties": {
-        "variant": {
-            "normal": {
-                "new_block": "minecraft:sandstone",
-                "new_properties": {
-                    "block_data": "0"
-                }
-            },
-            "chiseled": {
-                "new_block": "minecraft:sandstone",
-                "new_properties": {
-                    "block_data": "1"
-                }
-            },
-            "cut": {
-                "new_block": "minecraft:sandstone",
-                "new_properties": {
-                    "block_data": "2"
-                }
+[
+    {
+        "function": "map_properties",
+        "options": {
+            "variant": {
+                "normal": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:sandstone"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "0"
+                        }
+                    }
+                ],
+                "chiseled": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:sandstone"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "1"
+                        }
+                    }
+                ],
+                "cut": [
+                    {
+                        "function": "new_block",
+                        "options": "minecraft:sandstone"
+                    },
+                    {
+                        "function": "new_properties",
+                        "options": {
+                            "block_data": "2"
+                        }
+                    }
+                ]
             }
         }
     }
-}
+]

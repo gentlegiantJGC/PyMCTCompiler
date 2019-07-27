@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:glass"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:glass"
+    }
+]

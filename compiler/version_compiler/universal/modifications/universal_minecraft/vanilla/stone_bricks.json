@@ -1,0 +1,21 @@
+{
+	"remove": [
+		"stone_bricks",
+		"cracked_stone_bricks",
+		"mossy_stone_bricks"
+	],
+	"add": {
+		"stone_bricks": {
+			"properties": {
+				"variant": [
+					"normal",
+					"cracked",
+					"mossy"
+				]
+			},
+			"defaults": {
+				"variant": "normal"
+			}
+		}
+	}
+}

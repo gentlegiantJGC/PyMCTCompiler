@@ -1,6 +1,23 @@
-{
-    "new_block": "universal_minecraft:yellow_wall_banner",
-    "carry_properties": {
-        "facing": "north"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:wall_banner"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "color": "yellow"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ]
+        }
     }
-}
+]

@@ -1,3 +1,13 @@
-{
-    "new_block": "universal_minecraft:dead_tube_coral_block"
-}
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:coral_block"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "type": "tube",
+            "dead": "true"
+        }
+    }
+]

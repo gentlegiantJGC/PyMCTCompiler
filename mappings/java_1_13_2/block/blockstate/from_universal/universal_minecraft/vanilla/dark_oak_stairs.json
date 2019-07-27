@@ -1,8 +1,0 @@
-{
-    "new_block": "minecraft:dark_oak_stairs",
-    "carry_properties": {
-        "facing": "north",
-        "half": "bottom",
-        "shape": "straight"
-    }
-}

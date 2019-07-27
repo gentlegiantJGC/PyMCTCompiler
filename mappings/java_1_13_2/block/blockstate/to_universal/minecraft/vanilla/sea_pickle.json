@@ -1,6 +1,17 @@
-{
-    "new_block": "universal_minecraft:sea_pickle",
-    "carry_properties": {
-        "pickles": "1"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:sea_pickle"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "pickles": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ]
+        }
     }
-}
+]

@@ -1,0 +1,21 @@
+Java - Numbers at the end are chunk DataVersion
+	Block
+		1.12 and below - numerical
+		1.13 and above - blockstate
+	BlockEntity
+		1.8 - str-id
+		1.9.2 - str-id	176
+		1.10.2 - str-id	512
+		1.11 - namespace-str-id	819
+		1.11.2 - namespace-str-id	922
+	Entity
+		1.10-pre1 - str-id	506
+		1.11.2 - namespace-str-id	922
+
+Bedrock
+	Block
+		numerical
+		psuudo-numerical
+	BlockEntity
+		1.11 - str-id
+	Entity

@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:melon"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:melon"
+    }
+]

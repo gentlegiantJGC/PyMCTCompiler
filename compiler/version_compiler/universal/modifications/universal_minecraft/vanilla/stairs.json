@@ -16,7 +16,21 @@
 		"purpur_stairs",
 		"prismarine_stairs",
 		"prismarine_brick_stairs",
-		"dark_prismarine_stairs"
+		"dark_prismarine_stairs",
+		"andesite_stairs",
+		"diorite_stairs",
+		"end_stone_brick_stairs",
+		"granite_stairs",
+		"mossy_cobblestone_stairs",
+		"mossy_stone_brick_stairs",
+		"polished_andesite_stairs",
+		"polished_diorite_stairs",
+		"polished_granite_stairs",
+		"red_nether_brick_stairs",
+		"smooth_quartz_stairs",
+		"smooth_red_sandstone_stairs",
+		"smooth_sandstone_stairs",
+		"stone_stairs"
 	],
 	"add": {
 		"stairs": {
@@ -38,7 +52,21 @@
 					"purpur",
 					"prismarine",
 					"prismarine_brick",
-					"dark_prismarine"
+					"dark_prismarine",
+					"andesite",
+					"diorite",
+					"end_stone_brick",
+					"granite",
+					"mossy_cobblestone",
+					"mossy_stone_brick",
+					"polished_andesite",
+					"polished_diorite",
+					"polished_granite",
+					"red_nether_brick",
+					"smooth_quartz",
+					"smooth_red_sandstone",
+					"smooth_sandstone",
+					"stone"
 				],
 				"facing": [
 					"north",

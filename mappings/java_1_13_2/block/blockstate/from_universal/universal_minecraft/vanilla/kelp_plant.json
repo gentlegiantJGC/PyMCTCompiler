@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:kelp_plant"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:kelp_plant"
+    }
+]

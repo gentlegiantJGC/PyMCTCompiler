@@ -1,6 +1,15 @@
-{
-    "new_block": "minecraft:redstone_ore",
-    "carry_properties": {
-        "lit": "false"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:redstone_ore"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "lit": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

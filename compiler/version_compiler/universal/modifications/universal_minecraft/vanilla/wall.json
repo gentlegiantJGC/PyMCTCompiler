@@ -1,0 +1,68 @@
+{
+	"remove": [
+		"cobblestone_wall",
+		"mossy_cobblestone_wall",
+		"andesite_wall",
+		"brick_wall",
+		"diorite_wall",
+		"end_stone_brick_wall",
+		"granite_wall",
+		"mossy_stone_brick_wall",
+		"nether_brick_wall",
+		"prismarine_wall",
+		"red_nether_brick_wall",
+		"red_sandstone_wall",
+		"sandstone_wall",
+		"stone_brick_wall"
+	],
+	"add": {
+		"wall": {
+			"properties": {
+				"material": [
+					"cobblestone",
+					"mossy_cobblestone",
+					"andesite",
+					"brick",
+					"diorite",
+					"end_stone_brick",
+					"granite",
+					"mossy_stone_brick",
+					"nether_brick",
+					"prismarine",
+					"red_nether_brick",
+					"red_sandstone",
+					"sandstone",
+					"stone_brick"
+				],
+				"east": [
+					"true",
+					"false"
+				],
+				"north": [
+					"true",
+					"false"
+				],
+				"south": [
+					"true",
+					"false"
+				],
+				"up": [
+					"true",
+					"false"
+				],
+				"west": [
+					"true",
+					"false"
+				]
+			},
+			"defaults": {
+				"material": "cobblestone",
+				"east": "false",
+				"north": "false",
+				"south": "false",
+				"up": "true",
+				"west": "false"
+			}
+		}
+	}
+}

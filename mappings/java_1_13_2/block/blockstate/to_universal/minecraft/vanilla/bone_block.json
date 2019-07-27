@@ -1,6 +1,16 @@
-{
-    "new_block": "universal_minecraft:bone_block",
-    "carry_properties": {
-        "axis": "y"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:bone_block"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "axis": [
+                "x",
+                "y",
+                "z"
+            ]
+        }
     }
-}
+]

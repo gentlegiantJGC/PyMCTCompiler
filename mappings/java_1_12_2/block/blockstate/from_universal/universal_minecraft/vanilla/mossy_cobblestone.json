@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:mossy_cobblestone"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:mossy_cobblestone"
+    }
+]

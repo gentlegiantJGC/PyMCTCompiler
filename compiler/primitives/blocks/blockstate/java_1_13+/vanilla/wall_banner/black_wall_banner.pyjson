@@ -1,0 +1,1 @@
+blockstate.colour("minecraft", "black_wall_banner", "black", "universal_minecraft", "wall_banner", {"facing": ["north","south","west","east"]})

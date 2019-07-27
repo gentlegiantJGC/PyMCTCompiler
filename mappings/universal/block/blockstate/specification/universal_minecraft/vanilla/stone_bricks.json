@@ -1,1 +1,12 @@
-{}
+{
+    "properties": {
+        "variant": [
+            "normal",
+            "cracked",
+            "mossy"
+        ]
+    },
+    "defaults": {
+        "variant": "normal"
+    }
+}

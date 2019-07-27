@@ -1,0 +1,105 @@
+# TODO: sort out multiblock lookup for connected pumpkin stems
+{
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					str(data): [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:pumpkin_stem"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"age": str(data)
+							}
+						}
+					] for data in range(8)
+				}
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:pumpkin_stem": [
+			{
+				"function": "new_block",
+				"options": "minecraft:pumpkin_stem"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"age": {
+						str(data): [
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": str(data)
+								}
+							}
+						] for data in range(8)
+					}
+				}
+			}
+		],
+		"universal_minecraft:attached_pumpkin_stem": [
+			{
+				"function": "new_block",
+				"options": "minecraft:pumpkin_stem"
+			},
+			{
+				"function": "new_properties",
+				"options": {
+					"block_data": "7"
+				}
+			}
+		]
+	},
+	"blockstate_specification": {
+		"properties": {
+			"age": [str(data) for data in range(8)]
+		},
+		"defaults": {
+			"age": "0"
+		}
+	},
+	"blockstate_to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:pumpkin_stem"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
+				"age": [str(data) for data in range(8)]
+			}
+		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:pumpkin_stem": [
+			{
+				"function": "new_block",
+				"options": "minecraft:pumpkin_stem"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"age": [str(data) for data in range(8)]
+				}
+			}
+		],
+		"universal_minecraft:attached_pumpkin_stem": [
+			{
+				"function": "new_block",
+				"options": "minecraft:pumpkin_stem"
+			},
+			{
+				"function": "new_properties",
+				"options": {
+					"age": "7"
+				}
+			}
+		]
+	}
+}

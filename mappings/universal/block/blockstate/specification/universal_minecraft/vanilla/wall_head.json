@@ -2,7 +2,7 @@
     "properties": {
         "mob": [
             "skeleton",
-            "wither",
+            "wither_skeleton",
             "zombie",
             "player",
             "creeper",

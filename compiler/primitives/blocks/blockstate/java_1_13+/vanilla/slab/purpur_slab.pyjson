@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "purpur_slab", "purpur", "universal_minecraft", "slab", {"type": ["top","bottom","double"]})

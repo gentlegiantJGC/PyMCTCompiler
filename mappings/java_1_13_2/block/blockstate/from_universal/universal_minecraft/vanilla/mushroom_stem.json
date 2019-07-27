@@ -1,11 +1,35 @@
-{
-    "new_block": "minecraft:mushroom_stem",
-    "carry_properties": {
-        "down": "true",
-        "east": "true",
-        "north": "true",
-        "south": "true",
-        "up": "true",
-        "west": "true"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:mushroom_stem"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "down": [
+                "true",
+                "false"
+            ],
+            "east": [
+                "true",
+                "false"
+            ],
+            "north": [
+                "true",
+                "false"
+            ],
+            "south": [
+                "true",
+                "false"
+            ],
+            "up": [
+                "true",
+                "false"
+            ],
+            "west": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

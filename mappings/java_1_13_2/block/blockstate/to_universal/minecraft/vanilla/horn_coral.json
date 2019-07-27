@@ -1,4 +1,13 @@
-{
-    "new_block": "universal_minecraft:horn_coral",
-    "carry_properties": {}
-}
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:coral"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "type": "horn",
+            "dead": "false"
+        }
+    }
+]

@@ -1,7 +1,23 @@
-{
-    "new_block": "minecraft:piston",
-    "carry_properties": {
-        "extended": "false",
-        "facing": "north"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:piston"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "extended": [
+                "true",
+                "false"
+            ],
+            "facing": [
+                "north",
+                "east",
+                "south",
+                "west",
+                "up",
+                "down"
+            ]
+        }
     }
-}
+]

@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "jungle_slab", "jungle", "universal_minecraft", "slab", {"type": ["top","bottom","double"]})

@@ -1,7 +1,0 @@
-{
-    "new_block": "minecraft:redstone_wall_torch",
-    "carry_properties": {
-        "facing": "north",
-        "lit": "true"
-    }
-}

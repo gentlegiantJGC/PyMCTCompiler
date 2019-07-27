@@ -1,6 +1,21 @@
-{
-    "new_block": "universal_minecraft:sunflower",
-    "carry_properties": {
-        "half": "lower"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:double_plant"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "type": "sunflower"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "half": [
+                "upper",
+                "lower"
+            ]
+        }
     }
-}
+]

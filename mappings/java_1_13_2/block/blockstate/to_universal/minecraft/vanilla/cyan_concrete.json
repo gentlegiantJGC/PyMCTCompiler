@@ -1,3 +1,12 @@
-{
-    "new_block": "universal_minecraft:cyan_concrete"
-}
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:concrete"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "color": "cyan"
+        }
+    }
+]

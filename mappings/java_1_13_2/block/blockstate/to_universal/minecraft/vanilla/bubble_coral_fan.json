@@ -1,4 +1,14 @@
-{
-    "new_block": "universal_minecraft:bubble_coral_fan",
-    "carry_properties": {}
-}
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:coral_fan"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "type": "bubble",
+            "dead": "false",
+            "facing": "up"
+        }
+    }
+]

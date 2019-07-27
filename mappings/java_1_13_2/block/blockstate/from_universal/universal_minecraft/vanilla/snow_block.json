@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:snow_block"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:snow_block"
+    }
+]

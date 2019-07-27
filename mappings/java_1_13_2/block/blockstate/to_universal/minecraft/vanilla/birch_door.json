@@ -1,10 +1,39 @@
-{
-    "new_block": "universal_minecraft:birch_door",
-    "carry_properties": {
-        "facing": "north",
-        "half": "lower",
-        "hinge": "left",
-        "open": "false",
-        "powered": "false"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:door"
+    },
+    {
+        "function": "new_properties",
+        "options": {
+            "material": "birch"
+        }
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "facing": [
+                "north",
+                "south",
+                "west",
+                "east"
+            ],
+            "half": [
+                "upper",
+                "lower"
+            ],
+            "hinge": [
+                "left",
+                "right"
+            ],
+            "open": [
+                "true",
+                "false"
+            ],
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

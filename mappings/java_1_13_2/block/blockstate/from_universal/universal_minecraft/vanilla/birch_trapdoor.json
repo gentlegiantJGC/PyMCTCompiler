@@ -1,9 +1,0 @@
-{
-    "new_block": "minecraft:birch_trapdoor",
-    "carry_properties": {
-        "facing": "north",
-        "half": "bottom",
-        "open": "false",
-        "powered": "false"
-    }
-}

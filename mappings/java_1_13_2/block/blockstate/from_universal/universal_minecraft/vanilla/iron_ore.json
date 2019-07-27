@@ -1,3 +1,6 @@
-{
-    "new_block": "minecraft:iron_ore"
-}
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:iron_ore"
+    }
+]

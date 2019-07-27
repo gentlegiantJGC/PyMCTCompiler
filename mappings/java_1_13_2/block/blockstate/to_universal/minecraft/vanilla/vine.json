@@ -1,10 +1,31 @@
-{
-    "new_block": "universal_minecraft:vine",
-    "carry_properties": {
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "false",
-        "west": "false"
+[
+    {
+        "function": "new_block",
+        "options": "universal_minecraft:vine"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "east": [
+                "true",
+                "false"
+            ],
+            "north": [
+                "true",
+                "false"
+            ],
+            "south": [
+                "true",
+                "false"
+            ],
+            "up": [
+                "true",
+                "false"
+            ],
+            "west": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]

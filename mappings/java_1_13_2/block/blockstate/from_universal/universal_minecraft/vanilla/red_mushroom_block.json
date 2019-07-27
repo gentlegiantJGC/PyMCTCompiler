@@ -1,11 +1,35 @@
-{
-    "new_block": "minecraft:red_mushroom_block",
-    "carry_properties": {
-        "down": "true",
-        "east": "true",
-        "north": "true",
-        "south": "true",
-        "up": "true",
-        "west": "true"
+[
+    {
+        "function": "new_block",
+        "options": "minecraft:red_mushroom_block"
+    },
+    {
+        "function": "carry_properties",
+        "options": {
+            "down": [
+                "true",
+                "false"
+            ],
+            "east": [
+                "true",
+                "false"
+            ],
+            "north": [
+                "true",
+                "false"
+            ],
+            "south": [
+                "true",
+                "false"
+            ],
+            "up": [
+                "true",
+                "false"
+            ],
+            "west": [
+                "true",
+                "false"
+            ]
+        }
     }
-}
+]
