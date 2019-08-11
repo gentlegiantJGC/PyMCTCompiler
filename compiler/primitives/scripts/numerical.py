@@ -1139,18 +1139,36 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 							{
 								"function": "new_block",
 								"options": "universal_minecraft:log"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"material": material
+								}
 							}
 						],
 						"y": [
 							{
 								"function": "new_block",
 								"options": "universal_minecraft:log"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"material": material
+								}
 							}
 						],
 						"z": [
 							{
 								"function": "new_block",
 								"options": "universal_minecraft:log"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"material": material
+								}
 							}
 						],
 						"all": [
@@ -1161,7 +1179,8 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 							{
 								"function": "new_properties",
 								"options": {
-									"axis": "y"
+									"axis": "y",
+									"material": material
 								}
 							}
 						]

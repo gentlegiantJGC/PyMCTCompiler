@@ -7,7 +7,7 @@ from compiler import version_compiler
 from compiler.helpers import log_to_file, merge_map_, blocks_from_server_, DiskBuffer, check_formatting
 
 uncompiled_dir = './version_compiler'
-compiled_dir = '../mappings'
+compiled_dir = '../../PyMCTranslate/PyMCTranslate/mappings'
 
 
 def isfile(path: str, prefix: str = uncompiled_dir, buffer: DiskBuffer = None) -> bool:
