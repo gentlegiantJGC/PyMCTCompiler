@@ -735,6 +735,12 @@ def log(input_namespace: str, input_block_name: str) -> dict:
 							] for material in material_pallet.values()
 						}
 					}
+				},
+				{
+					"function": "new_properties",
+					"options": {
+						"axis": "all"
+					}
 				}
 			]
 		}
