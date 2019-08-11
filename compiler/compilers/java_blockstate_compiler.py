@@ -64,15 +64,14 @@ def main(version_name: str, version_str: str):
 				if 'waterlogged' in states['properties']:
 					if block_string not in waterlogable:
 						waterlogable.append(block_string)
+					del states['properties']['waterlogged']
+					del states['defaults']['waterlogged']
 			del states['states']
 			save_json(f'{version_name}/block/blockstate/specification/{namespace}/vanilla/{block_name}.json', states, buffer=output)
 			if not(namespace in modifications['block'] and any(block_name in modifications['block'][namespace][group_name]['remove'] for group_name in modifications['block'][namespace])):
 				# the block is not marked for removal
 
 				if 'properties' in default_state:
-					if 'waterlogged' in default_state['properties']:
-						states = copy.deepcopy(states)
-						del states['properties']['waterlogged']
 					to_universal = [
 						{
 							"function":"new_block",
@@ -124,6 +123,8 @@ def main(version_name: str, version_str: str):
 							if 'properties' in specification and 'waterlogged' in specification['properties']:
 								if f'{namespace}:{block_name}' not in waterlogable:
 									waterlogable.append(f'{namespace}:{block_name}')
+								del specification['properties']['waterlogged']
+								del specification['defaults']['waterlogged']
 							save_json(f'{version_name}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', specification, True, buffer=output)
 
 						assert 'to_universal' in block_data, f'"to_universal" must be present. Was missing for {version_name} {namespace}:{block_name}'
