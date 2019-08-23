@@ -1,6 +1,14 @@
 from PyMCTCompiler.compile import save_json, load_file, isfile, isdir, listdir, merge_map, blocks_from_server, compiled_dir, DiskBuffer
 from PyMCTCompiler import primitives
 
+"""
+Summary
+
+Similar to the universal compiler.
+It uses the blocks.json from the server for each block unless it is defined in the include files in which case it uses that.
+Generates the specification and mappings based on this data.
+"""
+
 
 def main(version_name: str, version_str: str):
 	"""Custom compiler for the Java 1.13+ versions.

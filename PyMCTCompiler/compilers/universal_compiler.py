@@ -1,5 +1,15 @@
 from PyMCTCompiler.compile import save_json, load_file, isfile, isdir, listdir, blocks_from_server, compiled_dir, DiskBuffer
 
+"""
+Summary
+
+This compiler is designed only for the universal format.
+It will get the blocks.json file from the server.jar (downloading the latest if needed)
+It will load the modifications defined in /modifications
+It will populate the output with the data from blocks.json unless the modifications say otherwise
+It will then merge the data from the modifications over the vanilla data to get a universal format based on J1.13+ but modified to fit everything.
+"""
+
 
 def main(version_name: str, version_str: str):
 	"""Custom compiler for the universal version.

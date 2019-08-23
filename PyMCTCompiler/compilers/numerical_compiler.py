@@ -2,12 +2,21 @@ from PyMCTCompiler.compile import save_json, load_file, isdir, listdir, merge_ma
 from PyMCTCompiler import primitives, version_compiler
 import traceback
 
+"""
+Summary
+
+This compiler is used by the old Java and Bedrock numerical formats and the Bedrock psudo-numerical format.
+It loads data from __include_blocks__.json and __include_entities__.json and pulls the data from primitives
+"""
+
 
 def main(version_name: str, version_str: str):
 	"""Will bake out the files in uncompiled_dir/version_name into compiled_dir/version_name
 
 	:param version_name: A version name found in uncompiled_dir
 	:param version_str: The string form of the version name "x.x.x" not used in this compiler
+
+	This function finds each of the json files and calls the respective function to get the data
 	"""
 	# iterate through all namespaces
 	output = DiskBuffer()
