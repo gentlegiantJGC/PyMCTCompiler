@@ -3,8 +3,8 @@ import os
 import shutil
 import time
 from typing import Union
-from compiler import version_compiler
-from compiler.helpers import log_to_file, merge_map_, blocks_from_server_, DiskBuffer, check_formatting
+from PyMCTCompiler import version_compiler
+from PyMCTCompiler.helpers import log_to_file, merge_map_, blocks_from_server_, DiskBuffer, check_formatting
 
 uncompiled_dir = './version_compiler'
 compiled_dir = '../../PyMCTranslate/PyMCTranslate/mappings'

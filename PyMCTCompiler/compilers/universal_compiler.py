@@ -1,4 +1,4 @@
-from compiler.compile import save_json, load_file, isfile, isdir, listdir, blocks_from_server, compiled_dir, DiskBuffer
+from PyMCTCompiler.compile import save_json, load_file, isfile, isdir, listdir, blocks_from_server, compiled_dir, DiskBuffer
 
 
 def main(version_name: str, version_str: str):

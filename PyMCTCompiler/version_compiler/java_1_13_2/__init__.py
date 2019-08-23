@@ -1,4 +1,4 @@
-from compiler.compilers import java_blockstate_compiler
+from PyMCTCompiler.compilers import java_blockstate_compiler
 
 init = {
 	"block_format": "blockstate",

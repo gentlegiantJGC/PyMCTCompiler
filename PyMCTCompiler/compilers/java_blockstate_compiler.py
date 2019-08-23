@@ -1,5 +1,5 @@
-from compiler.compile import save_json, load_file, isfile, isdir, listdir, merge_map, blocks_from_server, compiled_dir, DiskBuffer
-from compiler import primitives
+from PyMCTCompiler.compile import save_json, load_file, isfile, isdir, listdir, merge_map, blocks_from_server, compiled_dir, DiskBuffer
+from PyMCTCompiler import primitives
 
 
 def main(version_name: str, version_str: str):

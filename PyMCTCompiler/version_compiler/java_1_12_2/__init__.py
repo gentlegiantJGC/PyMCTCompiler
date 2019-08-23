@@ -1,4 +1,4 @@
-from compiler.compilers import numerical_compiler
+from PyMCTCompiler.compilers import numerical_compiler
 
 init = {
 	"block_format": "numerical",

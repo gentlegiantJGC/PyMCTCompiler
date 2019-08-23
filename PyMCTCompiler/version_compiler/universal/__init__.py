@@ -1,4 +1,4 @@
-from compiler.compilers import universal_compiler
+from PyMCTCompiler.compilers import universal_compiler
 
 init = {
 	"block_format": "blockstate",
