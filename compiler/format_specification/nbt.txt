@@ -120,39 +120,37 @@ main functions
 
 	# an example of this nested
 	"map_input_nbt": {
-		"": {
-			"type": "compound",
-			"keys": {
-				"Air": {  # copy "Air": TAG_Short as it is
-					"type": "short"
-					"functions": {
-						"carry_nbt": {}
+		"type": "compound",
+		"keys": {
+			"Air": {  # copy "Air": TAG_Short as it is
+				"type": "short"
+				"functions": {
+					"carry_nbt": {}
+				}
+			},
+			"Dimension": {  # copy "Dimension": TAG_Int in the same place but change its key
+				"type": "int",
+				"functions": {
+					"carry_nbt": {
+						"key": "LastDimensionId"
 					}
-				},
-				"Dimension": {  # copy "Dimension": TAG_Int in the same place but change its key
-					"type": "int",
-					"functions": {
-						"carry_nbt": {
-							"key": "LastDimensionId"
-						}
-					}
-				},
-				"Unused_Key": { # do not copy over "Unused_Key"
-					"type": "int",
-					"functions": {}
-				},
-				"Fire": {
-					"type": "short",
-					"functions": {
-						"map_nbt": {
-							"default": {
-								"carry_nbt": {}
-							},
-							"cases": {
-								"-1": {
-									"new_nbt": {
-										"value": 0
-									}
+				}
+			},
+			"Unused_Key": { # do not copy over "Unused_Key"
+				"type": "int",
+				"functions": {}
+			},
+			"Fire": {
+				"type": "short",
+				"functions": {
+					"map_nbt": {
+						"default": {
+							"carry_nbt": {}
+						},
+						"cases": {
+							"-1": {
+								"new_nbt": {
+									"value": 0
 								}
 							}
 						}

@@ -3,6 +3,7 @@ from typing import Tuple, Union
 from urllib.request import urlopen
 import json
 from concurrent.futures import ThreadPoolExecutor
+import amulet_nbt
 
 log_file = open('log.txt', 'w')
 
@@ -200,53 +201,18 @@ def check_specification_format(data: dict):
 		assert isinstance(defaults[key], str), 'All default property values must be strings'
 		assert defaults[key] in val, 'Default property value must be in the property list'
 
-	if 'nbt' in data:
-		assert isinstance(data['nbt'], dict), 'Specification "nbt" must be a dictionary'
-		for key, val in data['nbt'].items():
-			assert isinstance(key, str), 'All keys in the outer nbt type must be strings'
-			_check_nbt_specification(val)
-		assert 'nbt_identifier' in data and isinstance(data['nbt_identifier'], str), 'if "nbt" is defined then "nbt_identifier" must be defined and be a string'
+	if 'snbt' in data:
+		assert isinstance(data['snbt'], str), 'Specification "snbt" must be a string'
+		try:
+			amulet_nbt.from_snbt(data['snbt'])
+		except:
+			raise Exception(f'Error in snbt')
+		assert 'nbt_identifier' in data and isinstance(data['nbt_identifier'], list) and len(data['nbt_identifier']) == 2 and all(isinstance(a, str) for a in data['nbt_identifier']), 'if "snbt" is defined then "nbt_identifier" must be defined and be [namespace, base_name]'
 	else:
-		assert 'nbt_identifier' not in data, '"nbt_identifier" should only be defined if "nbt" is defined'
+		assert 'nbt_identifier' not in data, '"nbt_identifier" should only be defined if "snbt" is defined'
 
 	for key in data.keys():
-		if key not in ('properties', 'defaults', 'nbt', "nbt_identifier"):
-			log_to_file(f'Extra key "{key}" found')
-
-
-def _check_nbt_specification(data: dict):
-	assert isinstance(data, dict), 'NBT entries must be dictionaries'
-	assert 'type' in data, '"type" must be defined for each NBT declaration'
-	assert 'val' in data, '"val" must be defined for each NBT declaration'
-	if data['type'] == 'compound':
-		assert isinstance(data['val'], dict), '"val" of a compound type must be a dictionary'
-		for key, val in data['val'].items():
-			assert isinstance(key, str), 'All keys in the compound type must be strings'
-			_check_nbt_specification(val)
-
-	elif data['type'] == 'list':
-		assert isinstance(data['val'], list), '"val" of a list type must be a list'
-		for val in data['val']:
-			_check_nbt_specification(val)
-
-	elif data['type'] in ('byte', 'short', 'int', 'long'):
-		assert isinstance(data['val'], int), '"val" of a byte/short/int/long type must be a int'
-
-	elif data['type'] in ('float', 'double'):
-		assert isinstance(data['val'], (int, float)), '"val" of a float/double type must be a float or an int'
-
-	elif data['type'] == 'string':
-		assert isinstance(data['val'], str), '"val" of a string type must be a string'
-
-	elif data['type'] in ('byte_array', 'int_array', 'long_array'):
-		assert isinstance(data['val'], list), '"val" of a byte/int/long array type must be a list of ints'
-		assert all(isinstance(entry, int) for entry in data['val']), 'All values in the array type list must be an int'
-
-	else:
-		raise Exception(f'Type {data["type"]} is not supported')
-
-	for key in data.keys():
-		if key not in ('type', 'val'):
+		if key not in ('properties', 'defaults', 'snbt', "nbt_identifier"):
 			log_to_file(f'Extra key "{key}" found')
 
 

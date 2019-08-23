@@ -112,3 +112,5 @@ log.txt
 *.log.gz
 **/generated/reports/
 tests/logs/
+
+amulet_nbt

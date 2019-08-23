@@ -92,12 +92,13 @@ def single_map(input_namespace: str, input_block_name: str, key: str, val: str, 
 def nbt_from_hex(hex_str: str):
 	return {
 		"specification": {
-			"nbt": _nbt_spec_from_hex(bytes.fromhex(hex_str))[1]
+			"snbt": _snbt_spec_from_hex(bytes.fromhex(hex_str))[1]
 		}
 	}
 
 
-def _nbt_spec_from_hex(nbt_bin: bytes, endianness='>', nbt_type: bytes = None) -> Union[Tuple[str, dict, bytes], None]:
+def _snbt_spec_from_hex(nbt_bin: bytes, endianness='>', nbt_type: bytes = None) -> Union[Tuple[str, dict, bytes], None]:
+	# TODO: turn this into SNBT
 	name = None
 	if nbt_type is None:
 		# TYPE(byte)
@@ -282,13 +283,8 @@ def _nbt_mapping_from_hex(nbt_bin: bytes):
 def auto_id(entity_id: str, universal_blocks: List[str]):
 	return {
 		"specification": {
-			"nbt_identifier": entity_id,
-			"nbt": {
-				"": {
-					"type": "compound",
-					"val": {}
-				}
-			}
+			"nbt_identifier": entity_id.split(':', 1),
+			"snbt": "{}"
 		},
 		"to_universal": [
 			{

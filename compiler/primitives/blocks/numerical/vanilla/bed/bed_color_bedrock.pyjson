@@ -6,22 +6,8 @@
 		"defaults": {
 			"block_data": "0"
 		},
-		"nbt_identifier": "minecraft:bed",
-		"nbt": {
-			"": {
-				"type": "compound",
-				"val": {
-					"color": {
-						"type": "byte",
-						"val": 14
-					},
-					"isMovable": {
-						"type": "byte",
-						"val": 1
-					}
-				}
-			}
-		}
+		"nbt_identifier": ["minecraft", "bed"],
+		"snbt": "{color:14b,isMovable:1b}"
 	},
 	"to_universal": [
 		{
@@ -206,18 +192,8 @@
 			"part": "foot",
 			"color": "red"
 		},
-		"nbt_identifier": "minecraft:bed",
-		"nbt": {
-			"": {
-				"type": "compound",
-				"val": {
-					"isMovable": {
-						"type": "byte",
-						"val": 1
-					}
-				}
-			}
-		}
+		"nbt_identifier": ["minecraft", "bed"],
+		"snbt": "{isMovable:1b}"
 	},
 	"blockstate_to_universal": [
 		{

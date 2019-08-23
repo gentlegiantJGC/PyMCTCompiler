@@ -144,13 +144,8 @@ def direct_data(input_namespace: str, input_block_name: str, property_name: str,
 def auto_id(entity_id: str, universal_blocks: List[str]):
 	return {
 		"specification": {
-			"nbt_identifier": entity_id,
-			"nbt": {
-				"": {
-					"type": "compound",
-					"val": {}
-				}
-			}
+			"nbt_identifier": entity_id.split(':', 1),
+			"snbt": "{}"
 		},
 		"to_universal": [
 			{
@@ -177,13 +172,8 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 			] for universal_block in universal_blocks
 		},
 		"blockstate_specification": {
-			"nbt_identifier": entity_id,
-			"nbt": {
-				"": {
-					"type": "compound",
-					"val": {}
-				}
-			}
+			"nbt_identifier": entity_id.split(':', 1),
+			"snbt": "{}"
 		},
 		"blockstate_to_universal": [
 			{
@@ -5388,22 +5378,8 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 				"defaults": {
 					"block_data": "0"
 				},
-				"nbt_identifier": "minecraft:noteblock",
-				"nbt": {
-					"": {
-						"type": "compound",
-						"val": {
-							"note": {
-								"type": "byte",
-								"val": 0
-							},
-							"powered": {
-								"type": "byte",
-								"val": 0
-							}
-						}
-					}
-				}
+				"nbt_identifier": ["minecraft", "noteblock"],
+				"snbt": "{note:0b,powered:0b}"
 			},
 			"to_universal": [
 				{
@@ -5568,18 +5544,8 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 				"defaults": {
 					"block_data": "0"
 				},
-				"nbt_identifier": "minecraft:noteblock",
-				"nbt": {
-					"": {
-						"type": "compound",
-						"val": {
-							"note": {
-								"type": "byte",
-								"val": 0
-							}
-						}
-					}
-				}
+				"nbt_identifier": ["minecraft", "noteblock"],
+				"snbt": "{note:0b}"
 			},
 			"to_universal": [
 				{

@@ -1,15 +1,5 @@
 {
 	"specification": {
-		"nbt": {
-			"": {
-				"type": "compound",
-				"val": {
-					"Items": {
-						"type": "list",
-						"val": []
-					}
-				}
-			}
-		}
+		"snbt": "{Items:[]}"
 	}
 }
