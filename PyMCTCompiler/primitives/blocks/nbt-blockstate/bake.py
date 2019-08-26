@@ -1,5 +1,24 @@
 import json
-from PyMCTCompiler.compilers.nbt_blockstate_compiler import to_snbt
+
+
+def to_snbt(nbt_type, value):
+	if nbt_type == 'byte':
+		return f'{value}b'
+	elif nbt_type == 'short':
+		return f'{value}s'
+	elif nbt_type == 'int':
+		return f'{value}'
+	elif nbt_type == 'long':
+		return f'{value}l'
+	elif nbt_type == 'float':
+		return f'{value}f'
+	elif nbt_type == 'double':
+		return f'{value}d'
+	elif nbt_type == 'string':
+		return f'"{value}"'
+	else:
+		raise NotImplemented
+
 
 with open('block_palette') as f:
 	block_palette = json.load(f)
@@ -20,19 +39,19 @@ for blockstate in block_palette['blocks']:
 				blocks[(namespace, base_name)]['properties'][prop['name']].append(snbt_value)
 
 
-for block_name, block in blocks.items():
+for (namespace, base_name), block in blocks.items():
 	primitive = {
 		"to_universal": [
 			{
 				"function": "new_block",
-				"options": f"universal_{block_name}"
+				"options": f"universal_{namespace}:{base_name}"
 			}
 		],
 		"from_universal": {
-			f"universal_{block_name}": [
+			f"universal_{namespace}:{base_name}": [
 				{
 					"function": "new_block",
-					"options": block_name
+					"options": f'{namespace}:{base_name}'
 				}
 			]
 		}
@@ -57,7 +76,7 @@ for block_name, block in blocks.items():
 			}
 		)
 
-		primitive['from_universal'][f"universal_{block_name}"].append(
+		primitive['from_universal'][f"universal_{namespace}:{base_name}"].append(
 			{
 				"function": "map_properties",
 				"options": {
@@ -74,3 +93,6 @@ for block_name, block in blocks.items():
 				}
 			}
 		)
+
+	with open(f'./vanilla/{base_name}.json', 'w') as f:
+		json.dump(primitive, f, indent=4)
