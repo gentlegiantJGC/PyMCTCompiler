@@ -25,7 +25,7 @@ for start_folder in blocks:
 		for f in files:
 			if os.path.splitext(f)[0] in blocks[start_folder]:
 				print(f'Block name "{os.path.splitext(f)[0]}" is define twice')
-			if f.endswith('.json'):
+			if f.endswith('.json') or f.endswith('.pyjson'):
 				try:
 					blocks[start_folder][os.path.splitext(f)[0]] = _load_file(f'{root}/{f}')
 				except Exception as e:
