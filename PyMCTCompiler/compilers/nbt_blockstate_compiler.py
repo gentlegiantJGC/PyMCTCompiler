@@ -87,8 +87,9 @@ def main(version_name: str, version_str: str):
 				}
 			else:
 				for prop in blockstate['states']:
-					if prop['value'] not in blocks[(namespace, base_name)]['properties'][prop['name']]:
-						blocks[(namespace, base_name)]['properties'][prop['name']].append(to_snbt(prop['type'], prop['value']))
+					snbt_value = to_snbt(prop['type'], prop['value'])
+					if snbt_value not in blocks[(namespace, base_name)]['properties'][prop['name']]:
+						blocks[(namespace, base_name)]['properties'][prop['name']].append(snbt_value)
 
 		for (namespace, base_name), spec in blocks.items():
 			save_json(f'{version_name}/block/blockstate/specification/{namespace}/vanilla/{base_name}.json', spec, buffer=output)
