@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:coal_block"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:coal_block": [
+            {
+                "function": "new_block",
+                "options": "minecraft:coal_block"
+            }
+        ]
+    }
+}

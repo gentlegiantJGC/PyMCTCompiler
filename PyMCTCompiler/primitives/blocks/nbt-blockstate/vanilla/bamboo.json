@@ -1,0 +1,171 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:bamboo"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "age_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "age_bit": "0b"
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "age_bit": "1b"
+                            }
+                        }
+                    ]
+                },
+                "bamboo_leaf_size": {
+                    "\"no_leaves\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "bamboo_leaf_size": "\"no_leaves\""
+                            }
+                        }
+                    ],
+                    "\"small_leaves\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "bamboo_leaf_size": "\"small_leaves\""
+                            }
+                        }
+                    ],
+                    "\"large_leaves\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "bamboo_leaf_size": "\"large_leaves\""
+                            }
+                        }
+                    ]
+                },
+                "bamboo_stalk_thickness": {
+                    "\"thin\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "bamboo_stalk_thickness": "\"thin\""
+                            }
+                        }
+                    ],
+                    "\"thick\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "bamboo_stalk_thickness": "\"thick\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:bamboo": [
+            {
+                "function": "new_block",
+                "options": "minecraft:bamboo"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "age_bit": {
+                        "0b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "age_bit": [
+                                        "snbt",
+                                        "0b"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "age_bit": [
+                                        "snbt",
+                                        "1b"
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "bamboo_leaf_size": {
+                        "\"no_leaves\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "bamboo_leaf_size": [
+                                        "snbt",
+                                        "\"no_leaves\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"small_leaves\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "bamboo_leaf_size": [
+                                        "snbt",
+                                        "\"small_leaves\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"large_leaves\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "bamboo_leaf_size": [
+                                        "snbt",
+                                        "\"large_leaves\""
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "bamboo_stalk_thickness": {
+                        "\"thin\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "bamboo_stalk_thickness": [
+                                        "snbt",
+                                        "\"thin\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"thick\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "bamboo_stalk_thickness": [
+                                        "snbt",
+                                        "\"thick\""
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

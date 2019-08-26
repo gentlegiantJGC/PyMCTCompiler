@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:dragon_egg"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:dragon_egg": [
+            {
+                "function": "new_block",
+                "options": "minecraft:dragon_egg"
+            }
+        ]
+    }
+}

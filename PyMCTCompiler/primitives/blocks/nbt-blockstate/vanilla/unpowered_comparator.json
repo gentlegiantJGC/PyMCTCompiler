@@ -1,0 +1,190 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:unpowered_comparator"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "direction": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "direction": "0"
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "direction": "1"
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "direction": "2"
+                            }
+                        }
+                    ],
+                    "3": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "direction": "3"
+                            }
+                        }
+                    ]
+                },
+                "output_lit_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "output_lit_bit": "0b"
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "output_lit_bit": "1b"
+                            }
+                        }
+                    ]
+                },
+                "output_subtract_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "output_subtract_bit": "0b"
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "output_subtract_bit": "1b"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:unpowered_comparator": [
+            {
+                "function": "new_block",
+                "options": "minecraft:unpowered_comparator"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "direction": {
+                        "0": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "0"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "1"
+                                    ]
+                                }
+                            }
+                        ],
+                        "2": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "2"
+                                    ]
+                                }
+                            }
+                        ],
+                        "3": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "3"
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "output_lit_bit": {
+                        "0b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "output_lit_bit": [
+                                        "snbt",
+                                        "0b"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "output_lit_bit": [
+                                        "snbt",
+                                        "1b"
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "output_subtract_bit": {
+                        "0b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "output_subtract_bit": [
+                                        "snbt",
+                                        "0b"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "output_subtract_bit": [
+                                        "snbt",
+                                        "1b"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

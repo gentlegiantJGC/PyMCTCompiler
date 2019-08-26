@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:undyed_shulker_box"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:undyed_shulker_box": [
+            {
+                "function": "new_block",
+                "options": "minecraft:undyed_shulker_box"
+            }
+        ]
+    }
+}

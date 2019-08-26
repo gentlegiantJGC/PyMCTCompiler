@@ -1,0 +1,144 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:piston"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "facing_direction": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing_direction": "0"
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing_direction": "1"
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing_direction": "2"
+                            }
+                        }
+                    ],
+                    "3": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing_direction": "3"
+                            }
+                        }
+                    ],
+                    "4": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing_direction": "4"
+                            }
+                        }
+                    ],
+                    "5": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing_direction": "5"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:piston": [
+            {
+                "function": "new_block",
+                "options": "minecraft:piston"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "facing_direction": {
+                        "0": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing_direction": [
+                                        "snbt",
+                                        "0"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing_direction": [
+                                        "snbt",
+                                        "1"
+                                    ]
+                                }
+                            }
+                        ],
+                        "2": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing_direction": [
+                                        "snbt",
+                                        "2"
+                                    ]
+                                }
+                            }
+                        ],
+                        "3": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing_direction": [
+                                        "snbt",
+                                        "3"
+                                    ]
+                                }
+                            }
+                        ],
+                        "4": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing_direction": [
+                                        "snbt",
+                                        "4"
+                                    ]
+                                }
+                            }
+                        ],
+                        "5": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing_direction": [
+                                        "snbt",
+                                        "5"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

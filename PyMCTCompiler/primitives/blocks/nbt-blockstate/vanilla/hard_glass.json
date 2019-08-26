@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:hard_glass"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:hard_glass": [
+            {
+                "function": "new_block",
+                "options": "minecraft:hard_glass"
+            }
+        ]
+    }
+}

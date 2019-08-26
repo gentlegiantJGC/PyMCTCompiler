@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:red_nether_brick"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:red_nether_brick": [
+            {
+                "function": "new_block",
+                "options": "minecraft:red_nether_brick"
+            }
+        ]
+    }
+}

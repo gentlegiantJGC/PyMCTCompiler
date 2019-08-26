@@ -1,0 +1,190 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:bed"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "direction": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "direction": "0"
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "direction": "1"
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "direction": "2"
+                            }
+                        }
+                    ],
+                    "3": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "direction": "3"
+                            }
+                        }
+                    ]
+                },
+                "head_piece_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "head_piece_bit": "0b"
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "head_piece_bit": "1b"
+                            }
+                        }
+                    ]
+                },
+                "occupied_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "occupied_bit": "0b"
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "occupied_bit": "1b"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:bed": [
+            {
+                "function": "new_block",
+                "options": "minecraft:bed"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "direction": {
+                        "0": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "0"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "1"
+                                    ]
+                                }
+                            }
+                        ],
+                        "2": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "2"
+                                    ]
+                                }
+                            }
+                        ],
+                        "3": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "3"
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "head_piece_bit": {
+                        "0b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "head_piece_bit": [
+                                        "snbt",
+                                        "0b"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "head_piece_bit": [
+                                        "snbt",
+                                        "1b"
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "occupied_bit": {
+                        "0b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "occupied_bit": [
+                                        "snbt",
+                                        "0b"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "occupied_bit": [
+                                        "snbt",
+                                        "1b"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

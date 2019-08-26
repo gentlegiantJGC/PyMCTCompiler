@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:glass_pane"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:glass_pane": [
+            {
+                "function": "new_block",
+                "options": "minecraft:glass_pane"
+            }
+        ]
+    }
+}

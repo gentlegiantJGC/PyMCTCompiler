@@ -1,0 +1,87 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:prismarine"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "prismarine_block_type": {
+                    "\"default\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "prismarine_block_type": "\"default\""
+                            }
+                        }
+                    ],
+                    "\"dark\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "prismarine_block_type": "\"dark\""
+                            }
+                        }
+                    ],
+                    "\"bricks\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "prismarine_block_type": "\"bricks\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:prismarine": [
+            {
+                "function": "new_block",
+                "options": "minecraft:prismarine"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "prismarine_block_type": {
+                        "\"default\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "prismarine_block_type": [
+                                        "snbt",
+                                        "\"default\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"dark\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "prismarine_block_type": [
+                                        "snbt",
+                                        "\"dark\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"bricks\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "prismarine_block_type": [
+                                        "snbt",
+                                        "\"bricks\""
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

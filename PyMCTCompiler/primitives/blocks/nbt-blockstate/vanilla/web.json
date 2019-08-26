@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:web"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:web": [
+            {
+                "function": "new_block",
+                "options": "minecraft:web"
+            }
+        ]
+    }
+}

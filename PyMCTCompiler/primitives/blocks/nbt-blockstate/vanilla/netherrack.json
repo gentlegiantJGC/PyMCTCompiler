@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:netherrack"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:netherrack": [
+            {
+                "function": "new_block",
+                "options": "minecraft:netherrack"
+            }
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:hardened_clay"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:hardened_clay": [
+            {
+                "function": "new_block",
+                "options": "minecraft:hardened_clay"
+            }
+        ]
+    }
+}

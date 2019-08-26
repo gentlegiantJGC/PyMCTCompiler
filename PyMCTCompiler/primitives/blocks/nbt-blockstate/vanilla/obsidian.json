@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:obsidian"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:obsidian": [
+            {
+                "function": "new_block",
+                "options": "minecraft:obsidian"
+            }
+        ]
+    }
+}

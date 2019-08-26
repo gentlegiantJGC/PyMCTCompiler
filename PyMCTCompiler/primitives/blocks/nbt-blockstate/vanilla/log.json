@@ -1,0 +1,167 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:log"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "old_log_type": {
+                    "\"oak\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "old_log_type": "\"oak\""
+                            }
+                        }
+                    ],
+                    "\"spruce\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "old_log_type": "\"spruce\""
+                            }
+                        }
+                    ],
+                    "\"birch\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "old_log_type": "\"birch\""
+                            }
+                        }
+                    ],
+                    "\"jungle\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "old_log_type": "\"jungle\""
+                            }
+                        }
+                    ]
+                },
+                "pillar_axis": {
+                    "\"y\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "pillar_axis": "\"y\""
+                            }
+                        }
+                    ],
+                    "\"x\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "pillar_axis": "\"x\""
+                            }
+                        }
+                    ],
+                    "\"z\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "pillar_axis": "\"z\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:log": [
+            {
+                "function": "new_block",
+                "options": "minecraft:log"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "old_log_type": {
+                        "\"oak\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "old_log_type": [
+                                        "snbt",
+                                        "\"oak\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"spruce\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "old_log_type": [
+                                        "snbt",
+                                        "\"spruce\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"birch\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "old_log_type": [
+                                        "snbt",
+                                        "\"birch\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"jungle\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "old_log_type": [
+                                        "snbt",
+                                        "\"jungle\""
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "pillar_axis": {
+                        "\"y\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": [
+                                        "snbt",
+                                        "\"y\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"x\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": [
+                                        "snbt",
+                                        "\"x\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"z\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": [
+                                        "snbt",
+                                        "\"z\""
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

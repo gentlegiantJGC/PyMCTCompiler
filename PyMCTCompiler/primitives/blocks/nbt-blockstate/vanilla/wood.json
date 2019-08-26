@@ -1,0 +1,247 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:wood"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "pillar_axis": {
+                    "\"y\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "pillar_axis": "\"y\""
+                            }
+                        }
+                    ],
+                    "\"x\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "pillar_axis": "\"x\""
+                            }
+                        }
+                    ],
+                    "\"z\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "pillar_axis": "\"z\""
+                            }
+                        }
+                    ]
+                },
+                "stripped_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stripped_bit": "0b"
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stripped_bit": "1b"
+                            }
+                        }
+                    ]
+                },
+                "wood_type": {
+                    "\"oak\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "wood_type": "\"oak\""
+                            }
+                        }
+                    ],
+                    "\"spruce\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "wood_type": "\"spruce\""
+                            }
+                        }
+                    ],
+                    "\"birch\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "wood_type": "\"birch\""
+                            }
+                        }
+                    ],
+                    "\"jungle\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "wood_type": "\"jungle\""
+                            }
+                        }
+                    ],
+                    "\"acacia\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "wood_type": "\"acacia\""
+                            }
+                        }
+                    ],
+                    "\"dark_oak\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "wood_type": "\"dark_oak\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:wood": [
+            {
+                "function": "new_block",
+                "options": "minecraft:wood"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "pillar_axis": {
+                        "\"y\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": [
+                                        "snbt",
+                                        "\"y\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"x\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": [
+                                        "snbt",
+                                        "\"x\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"z\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": [
+                                        "snbt",
+                                        "\"z\""
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "stripped_bit": {
+                        "0b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stripped_bit": [
+                                        "snbt",
+                                        "0b"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stripped_bit": [
+                                        "snbt",
+                                        "1b"
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "wood_type": {
+                        "\"oak\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "wood_type": [
+                                        "snbt",
+                                        "\"oak\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"spruce\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "wood_type": [
+                                        "snbt",
+                                        "\"spruce\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"birch\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "wood_type": [
+                                        "snbt",
+                                        "\"birch\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"jungle\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "wood_type": [
+                                        "snbt",
+                                        "\"jungle\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"acacia\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "wood_type": [
+                                        "snbt",
+                                        "\"acacia\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"dark_oak\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "wood_type": [
+                                        "snbt",
+                                        "\"dark_oak\""
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

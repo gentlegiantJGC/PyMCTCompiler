@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:brown_mushroom"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:brown_mushroom": [
+            {
+                "function": "new_block",
+                "options": "minecraft:brown_mushroom"
+            }
+        ]
+    }
+}

@@ -1,0 +1,125 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:coral"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "coral_color": {
+                    "\"blue\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "coral_color": "\"blue\""
+                            }
+                        }
+                    ],
+                    "\"pink\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "coral_color": "\"pink\""
+                            }
+                        }
+                    ],
+                    "\"purple\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "coral_color": "\"purple\""
+                            }
+                        }
+                    ],
+                    "\"red\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "coral_color": "\"red\""
+                            }
+                        }
+                    ],
+                    "\"yellow\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "coral_color": "\"yellow\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:coral": [
+            {
+                "function": "new_block",
+                "options": "minecraft:coral"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "coral_color": {
+                        "\"blue\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "coral_color": [
+                                        "snbt",
+                                        "\"blue\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"pink\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "coral_color": [
+                                        "snbt",
+                                        "\"pink\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"purple\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "coral_color": [
+                                        "snbt",
+                                        "\"purple\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"red\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "coral_color": [
+                                        "snbt",
+                                        "\"red\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"yellow\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "coral_color": [
+                                        "snbt",
+                                        "\"yellow\""
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

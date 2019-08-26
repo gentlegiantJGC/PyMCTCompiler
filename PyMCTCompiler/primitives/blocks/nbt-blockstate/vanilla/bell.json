@@ -1,0 +1,228 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:bell"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "attachment": {
+                    "\"standing\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "attachment": "\"standing\""
+                            }
+                        }
+                    ],
+                    "\"hanging\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "attachment": "\"hanging\""
+                            }
+                        }
+                    ],
+                    "\"side\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "attachment": "\"side\""
+                            }
+                        }
+                    ],
+                    "\"multiple\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "attachment": "\"multiple\""
+                            }
+                        }
+                    ]
+                },
+                "direction": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "direction": "0"
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "direction": "1"
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "direction": "2"
+                            }
+                        }
+                    ],
+                    "3": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "direction": "3"
+                            }
+                        }
+                    ]
+                },
+                "toggle_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "toggle_bit": "0b"
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "toggle_bit": "1b"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:bell": [
+            {
+                "function": "new_block",
+                "options": "minecraft:bell"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "attachment": {
+                        "\"standing\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "attachment": [
+                                        "snbt",
+                                        "\"standing\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"hanging\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "attachment": [
+                                        "snbt",
+                                        "\"hanging\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"side\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "attachment": [
+                                        "snbt",
+                                        "\"side\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"multiple\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "attachment": [
+                                        "snbt",
+                                        "\"multiple\""
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "direction": {
+                        "0": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "0"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "1"
+                                    ]
+                                }
+                            }
+                        ],
+                        "2": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "2"
+                                    ]
+                                }
+                            }
+                        ],
+                        "3": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "3"
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "toggle_bit": {
+                        "0b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "toggle_bit": [
+                                        "snbt",
+                                        "0b"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "toggle_bit": [
+                                        "snbt",
+                                        "1b"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

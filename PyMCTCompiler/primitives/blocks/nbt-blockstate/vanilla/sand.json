@@ -1,0 +1,68 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:sand"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "sand_type": {
+                    "\"normal\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "sand_type": "\"normal\""
+                            }
+                        }
+                    ],
+                    "\"red\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "sand_type": "\"red\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:sand": [
+            {
+                "function": "new_block",
+                "options": "minecraft:sand"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "sand_type": {
+                        "\"normal\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "sand_type": [
+                                        "snbt",
+                                        "\"normal\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"red\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "sand_type": [
+                                        "snbt",
+                                        "\"red\""
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

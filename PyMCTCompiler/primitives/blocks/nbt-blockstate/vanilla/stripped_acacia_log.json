@@ -1,0 +1,87 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:stripped_acacia_log"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "pillar_axis": {
+                    "\"y\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "pillar_axis": "\"y\""
+                            }
+                        }
+                    ],
+                    "\"x\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "pillar_axis": "\"x\""
+                            }
+                        }
+                    ],
+                    "\"z\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "pillar_axis": "\"z\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:stripped_acacia_log": [
+            {
+                "function": "new_block",
+                "options": "minecraft:stripped_acacia_log"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "pillar_axis": {
+                        "\"y\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": [
+                                        "snbt",
+                                        "\"y\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"x\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": [
+                                        "snbt",
+                                        "\"x\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"z\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": [
+                                        "snbt",
+                                        "\"z\""
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

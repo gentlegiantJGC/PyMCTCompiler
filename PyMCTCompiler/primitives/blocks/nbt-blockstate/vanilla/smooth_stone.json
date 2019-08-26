@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:smooth_stone"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:smooth_stone": [
+            {
+                "function": "new_block",
+                "options": "minecraft:smooth_stone"
+            }
+        ]
+    }
+}

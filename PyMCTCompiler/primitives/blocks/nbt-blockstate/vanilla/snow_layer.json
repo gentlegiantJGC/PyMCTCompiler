@@ -1,0 +1,224 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:snow_layer"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "covered_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "covered_bit": "0b"
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "covered_bit": "1b"
+                            }
+                        }
+                    ]
+                },
+                "height": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "height": "0"
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "height": "1"
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "height": "2"
+                            }
+                        }
+                    ],
+                    "3": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "height": "3"
+                            }
+                        }
+                    ],
+                    "4": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "height": "4"
+                            }
+                        }
+                    ],
+                    "5": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "height": "5"
+                            }
+                        }
+                    ],
+                    "6": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "height": "6"
+                            }
+                        }
+                    ],
+                    "7": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "height": "7"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:snow_layer": [
+            {
+                "function": "new_block",
+                "options": "minecraft:snow_layer"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "covered_bit": {
+                        "0b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "covered_bit": [
+                                        "snbt",
+                                        "0b"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "covered_bit": [
+                                        "snbt",
+                                        "1b"
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "height": {
+                        "0": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "height": [
+                                        "snbt",
+                                        "0"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "height": [
+                                        "snbt",
+                                        "1"
+                                    ]
+                                }
+                            }
+                        ],
+                        "2": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "height": [
+                                        "snbt",
+                                        "2"
+                                    ]
+                                }
+                            }
+                        ],
+                        "3": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "height": [
+                                        "snbt",
+                                        "3"
+                                    ]
+                                }
+                            }
+                        ],
+                        "4": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "height": [
+                                        "snbt",
+                                        "4"
+                                    ]
+                                }
+                            }
+                        ],
+                        "5": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "height": [
+                                        "snbt",
+                                        "5"
+                                    ]
+                                }
+                            }
+                        ],
+                        "6": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "height": [
+                                        "snbt",
+                                        "6"
+                                    ]
+                                }
+                            }
+                        ],
+                        "7": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "height": [
+                                        "snbt",
+                                        "7"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

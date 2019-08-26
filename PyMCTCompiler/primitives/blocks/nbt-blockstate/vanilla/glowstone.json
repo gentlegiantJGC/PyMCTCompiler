@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:glowstone"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:glowstone": [
+            {
+                "function": "new_block",
+                "options": "minecraft:glowstone"
+            }
+        ]
+    }
+}

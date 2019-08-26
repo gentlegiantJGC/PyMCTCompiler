@@ -1,0 +1,186 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:anvil"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "damage": {
+                    "\"undamaged\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "damage": "\"undamaged\""
+                            }
+                        }
+                    ],
+                    "\"slightly_damaged\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "damage": "\"slightly_damaged\""
+                            }
+                        }
+                    ],
+                    "\"very_damaged\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "damage": "\"very_damaged\""
+                            }
+                        }
+                    ],
+                    "\"broken\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "damage": "\"broken\""
+                            }
+                        }
+                    ]
+                },
+                "direction": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "direction": "0"
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "direction": "1"
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "direction": "2"
+                            }
+                        }
+                    ],
+                    "3": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "direction": "3"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:anvil": [
+            {
+                "function": "new_block",
+                "options": "minecraft:anvil"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "damage": {
+                        "\"undamaged\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "damage": [
+                                        "snbt",
+                                        "\"undamaged\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"slightly_damaged\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "damage": [
+                                        "snbt",
+                                        "\"slightly_damaged\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"very_damaged\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "damage": [
+                                        "snbt",
+                                        "\"very_damaged\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"broken\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "damage": [
+                                        "snbt",
+                                        "\"broken\""
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "direction": {
+                        "0": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "0"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "1"
+                                    ]
+                                }
+                            }
+                        ],
+                        "2": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "2"
+                                    ]
+                                }
+                            }
+                        ],
+                        "3": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "3"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

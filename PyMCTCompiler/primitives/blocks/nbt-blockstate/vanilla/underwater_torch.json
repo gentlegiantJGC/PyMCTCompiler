@@ -1,0 +1,144 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:underwater_torch"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "torch_facing_direction": {
+                    "\"unknown\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "torch_facing_direction": "\"unknown\""
+                            }
+                        }
+                    ],
+                    "\"west\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "torch_facing_direction": "\"west\""
+                            }
+                        }
+                    ],
+                    "\"east\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "torch_facing_direction": "\"east\""
+                            }
+                        }
+                    ],
+                    "\"north\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "torch_facing_direction": "\"north\""
+                            }
+                        }
+                    ],
+                    "\"south\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "torch_facing_direction": "\"south\""
+                            }
+                        }
+                    ],
+                    "\"top\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "torch_facing_direction": "\"top\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:underwater_torch": [
+            {
+                "function": "new_block",
+                "options": "minecraft:underwater_torch"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "torch_facing_direction": {
+                        "\"unknown\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": [
+                                        "snbt",
+                                        "\"unknown\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"west\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": [
+                                        "snbt",
+                                        "\"west\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"east\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": [
+                                        "snbt",
+                                        "\"east\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"north\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": [
+                                        "snbt",
+                                        "\"north\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"south\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": [
+                                        "snbt",
+                                        "\"south\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"top\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": [
+                                        "snbt",
+                                        "\"top\""
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

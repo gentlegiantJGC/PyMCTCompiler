@@ -1,0 +1,186 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:chemistry_table"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "chemistry_table_type": {
+                    "\"compound_creator\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "chemistry_table_type": "\"compound_creator\""
+                            }
+                        }
+                    ],
+                    "\"material_reducer\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "chemistry_table_type": "\"material_reducer\""
+                            }
+                        }
+                    ],
+                    "\"element_constructor\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "chemistry_table_type": "\"element_constructor\""
+                            }
+                        }
+                    ],
+                    "\"lab_table\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "chemistry_table_type": "\"lab_table\""
+                            }
+                        }
+                    ]
+                },
+                "direction": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "direction": "0"
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "direction": "1"
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "direction": "2"
+                            }
+                        }
+                    ],
+                    "3": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "direction": "3"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:chemistry_table": [
+            {
+                "function": "new_block",
+                "options": "minecraft:chemistry_table"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "chemistry_table_type": {
+                        "\"compound_creator\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "chemistry_table_type": [
+                                        "snbt",
+                                        "\"compound_creator\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"material_reducer\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "chemistry_table_type": [
+                                        "snbt",
+                                        "\"material_reducer\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"element_constructor\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "chemistry_table_type": [
+                                        "snbt",
+                                        "\"element_constructor\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"lab_table\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "chemistry_table_type": [
+                                        "snbt",
+                                        "\"lab_table\""
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "direction": {
+                        "0": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "0"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "1"
+                                    ]
+                                }
+                            }
+                        ],
+                        "2": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "2"
+                                    ]
+                                }
+                            }
+                        ],
+                        "3": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "3"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

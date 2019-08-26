@@ -1,0 +1,167 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:coral_fan_dead"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "coral_color": {
+                    "\"blue\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "coral_color": "\"blue\""
+                            }
+                        }
+                    ],
+                    "\"pink\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "coral_color": "\"pink\""
+                            }
+                        }
+                    ],
+                    "\"purple\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "coral_color": "\"purple\""
+                            }
+                        }
+                    ],
+                    "\"red\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "coral_color": "\"red\""
+                            }
+                        }
+                    ],
+                    "\"yellow\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "coral_color": "\"yellow\""
+                            }
+                        }
+                    ]
+                },
+                "coral_fan_direction": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "coral_fan_direction": "0"
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "coral_fan_direction": "1"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:coral_fan_dead": [
+            {
+                "function": "new_block",
+                "options": "minecraft:coral_fan_dead"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "coral_color": {
+                        "\"blue\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "coral_color": [
+                                        "snbt",
+                                        "\"blue\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"pink\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "coral_color": [
+                                        "snbt",
+                                        "\"pink\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"purple\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "coral_color": [
+                                        "snbt",
+                                        "\"purple\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"red\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "coral_color": [
+                                        "snbt",
+                                        "\"red\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"yellow\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "coral_color": [
+                                        "snbt",
+                                        "\"yellow\""
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "coral_fan_direction": {
+                        "0": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "coral_fan_direction": [
+                                        "snbt",
+                                        "0"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "coral_fan_direction": [
+                                        "snbt",
+                                        "1"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

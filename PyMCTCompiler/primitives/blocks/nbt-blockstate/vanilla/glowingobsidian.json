@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:glowingobsidian"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:glowingobsidian": [
+            {
+                "function": "new_block",
+                "options": "minecraft:glowingobsidian"
+            }
+        ]
+    }
+}

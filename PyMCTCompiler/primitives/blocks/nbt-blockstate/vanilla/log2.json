@@ -1,0 +1,129 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:log2"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "new_log_type": {
+                    "\"acacia\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "new_log_type": "\"acacia\""
+                            }
+                        }
+                    ],
+                    "\"dark_oak\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "new_log_type": "\"dark_oak\""
+                            }
+                        }
+                    ]
+                },
+                "pillar_axis": {
+                    "\"y\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "pillar_axis": "\"y\""
+                            }
+                        }
+                    ],
+                    "\"x\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "pillar_axis": "\"x\""
+                            }
+                        }
+                    ],
+                    "\"z\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "pillar_axis": "\"z\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:log2": [
+            {
+                "function": "new_block",
+                "options": "minecraft:log2"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "new_log_type": {
+                        "\"acacia\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "new_log_type": [
+                                        "snbt",
+                                        "\"acacia\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"dark_oak\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "new_log_type": [
+                                        "snbt",
+                                        "\"dark_oak\""
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "pillar_axis": {
+                        "\"y\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": [
+                                        "snbt",
+                                        "\"y\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"x\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": [
+                                        "snbt",
+                                        "\"x\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"z\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": [
+                                        "snbt",
+                                        "\"z\""
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

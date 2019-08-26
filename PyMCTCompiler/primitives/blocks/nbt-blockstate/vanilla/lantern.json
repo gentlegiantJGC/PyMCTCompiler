@@ -1,0 +1,68 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:lantern"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "hanging": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "hanging": "0b"
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "hanging": "1b"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:lantern": [
+            {
+                "function": "new_block",
+                "options": "minecraft:lantern"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "hanging": {
+                        "0b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "hanging": [
+                                        "snbt",
+                                        "0b"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "hanging": [
+                                        "snbt",
+                                        "1b"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

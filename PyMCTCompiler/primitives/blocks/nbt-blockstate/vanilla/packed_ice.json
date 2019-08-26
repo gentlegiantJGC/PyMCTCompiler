@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:packed_ice"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:packed_ice": [
+            {
+                "function": "new_block",
+                "options": "minecraft:packed_ice"
+            }
+        ]
+    }
+}

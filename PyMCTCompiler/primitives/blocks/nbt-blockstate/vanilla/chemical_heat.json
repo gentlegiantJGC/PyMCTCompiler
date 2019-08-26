@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:chemical_heat"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:chemical_heat": [
+            {
+                "function": "new_block",
+                "options": "minecraft:chemical_heat"
+            }
+        ]
+    }
+}

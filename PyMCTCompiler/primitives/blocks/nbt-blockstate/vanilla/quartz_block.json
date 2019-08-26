@@ -1,0 +1,167 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:quartz_block"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "chisel_type": {
+                    "\"default\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "chisel_type": "\"default\""
+                            }
+                        }
+                    ],
+                    "\"chiseled\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "chisel_type": "\"chiseled\""
+                            }
+                        }
+                    ],
+                    "\"lines\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "chisel_type": "\"lines\""
+                            }
+                        }
+                    ],
+                    "\"smooth\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "chisel_type": "\"smooth\""
+                            }
+                        }
+                    ]
+                },
+                "pillar_axis": {
+                    "\"y\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "pillar_axis": "\"y\""
+                            }
+                        }
+                    ],
+                    "\"x\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "pillar_axis": "\"x\""
+                            }
+                        }
+                    ],
+                    "\"z\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "pillar_axis": "\"z\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:quartz_block": [
+            {
+                "function": "new_block",
+                "options": "minecraft:quartz_block"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "chisel_type": {
+                        "\"default\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "chisel_type": [
+                                        "snbt",
+                                        "\"default\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"chiseled\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "chisel_type": [
+                                        "snbt",
+                                        "\"chiseled\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"lines\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "chisel_type": [
+                                        "snbt",
+                                        "\"lines\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"smooth\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "chisel_type": [
+                                        "snbt",
+                                        "\"smooth\""
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "pillar_axis": {
+                        "\"y\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": [
+                                        "snbt",
+                                        "\"y\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"x\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": [
+                                        "snbt",
+                                        "\"x\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"z\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": [
+                                        "snbt",
+                                        "\"z\""
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,224 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:stone_slab3"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "stone_slab_type_3": {
+                    "\"end_stone_brick\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_slab_type_3": "\"end_stone_brick\""
+                            }
+                        }
+                    ],
+                    "\"smooth_red_sandstone\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_slab_type_3": "\"smooth_red_sandstone\""
+                            }
+                        }
+                    ],
+                    "\"polished_andesite\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_slab_type_3": "\"polished_andesite\""
+                            }
+                        }
+                    ],
+                    "\"andesite\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_slab_type_3": "\"andesite\""
+                            }
+                        }
+                    ],
+                    "\"diorite\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_slab_type_3": "\"diorite\""
+                            }
+                        }
+                    ],
+                    "\"polished_diorite\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_slab_type_3": "\"polished_diorite\""
+                            }
+                        }
+                    ],
+                    "\"granite\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_slab_type_3": "\"granite\""
+                            }
+                        }
+                    ],
+                    "\"polished_granite\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_slab_type_3": "\"polished_granite\""
+                            }
+                        }
+                    ]
+                },
+                "top_slot_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "top_slot_bit": "0b"
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "top_slot_bit": "1b"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:stone_slab3": [
+            {
+                "function": "new_block",
+                "options": "minecraft:stone_slab3"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "stone_slab_type_3": {
+                        "\"end_stone_brick\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_slab_type_3": [
+                                        "snbt",
+                                        "\"end_stone_brick\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"smooth_red_sandstone\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_slab_type_3": [
+                                        "snbt",
+                                        "\"smooth_red_sandstone\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"polished_andesite\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_slab_type_3": [
+                                        "snbt",
+                                        "\"polished_andesite\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"andesite\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_slab_type_3": [
+                                        "snbt",
+                                        "\"andesite\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"diorite\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_slab_type_3": [
+                                        "snbt",
+                                        "\"diorite\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"polished_diorite\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_slab_type_3": [
+                                        "snbt",
+                                        "\"polished_diorite\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"granite\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_slab_type_3": [
+                                        "snbt",
+                                        "\"granite\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"polished_granite\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_slab_type_3": [
+                                        "snbt",
+                                        "\"polished_granite\""
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "top_slot_bit": {
+                        "0b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "top_slot_bit": [
+                                        "snbt",
+                                        "0b"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "top_slot_bit": [
+                                        "snbt",
+                                        "1b"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

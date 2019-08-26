@@ -1,0 +1,167 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:turtle_egg"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "cracked_state": {
+                    "\"no_cracks\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "cracked_state": "\"no_cracks\""
+                            }
+                        }
+                    ],
+                    "\"cracked\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "cracked_state": "\"cracked\""
+                            }
+                        }
+                    ],
+                    "\"max_cracked\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "cracked_state": "\"max_cracked\""
+                            }
+                        }
+                    ]
+                },
+                "turtle_egg_count": {
+                    "\"one_egg\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "turtle_egg_count": "\"one_egg\""
+                            }
+                        }
+                    ],
+                    "\"two_egg\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "turtle_egg_count": "\"two_egg\""
+                            }
+                        }
+                    ],
+                    "\"three_egg\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "turtle_egg_count": "\"three_egg\""
+                            }
+                        }
+                    ],
+                    "\"four_egg\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "turtle_egg_count": "\"four_egg\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:turtle_egg": [
+            {
+                "function": "new_block",
+                "options": "minecraft:turtle_egg"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "cracked_state": {
+                        "\"no_cracks\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "cracked_state": [
+                                        "snbt",
+                                        "\"no_cracks\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"cracked\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "cracked_state": [
+                                        "snbt",
+                                        "\"cracked\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"max_cracked\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "cracked_state": [
+                                        "snbt",
+                                        "\"max_cracked\""
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "turtle_egg_count": {
+                        "\"one_egg\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "turtle_egg_count": [
+                                        "snbt",
+                                        "\"one_egg\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"two_egg\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "turtle_egg_count": [
+                                        "snbt",
+                                        "\"two_egg\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"three_egg\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "turtle_egg_count": [
+                                        "snbt",
+                                        "\"three_egg\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"four_egg\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "turtle_egg_count": [
+                                        "snbt",
+                                        "\"four_egg\""
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

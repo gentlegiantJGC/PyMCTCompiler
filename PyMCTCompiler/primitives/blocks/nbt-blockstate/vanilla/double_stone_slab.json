@@ -1,0 +1,224 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:double_stone_slab"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "stone_slab_type": {
+                    "\"smooth_stone\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_slab_type": "\"smooth_stone\""
+                            }
+                        }
+                    ],
+                    "\"sandstone\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_slab_type": "\"sandstone\""
+                            }
+                        }
+                    ],
+                    "\"wood\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_slab_type": "\"wood\""
+                            }
+                        }
+                    ],
+                    "\"cobblestone\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_slab_type": "\"cobblestone\""
+                            }
+                        }
+                    ],
+                    "\"brick\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_slab_type": "\"brick\""
+                            }
+                        }
+                    ],
+                    "\"stone_brick\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_slab_type": "\"stone_brick\""
+                            }
+                        }
+                    ],
+                    "\"quartz\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_slab_type": "\"quartz\""
+                            }
+                        }
+                    ],
+                    "\"nether_brick\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_slab_type": "\"nether_brick\""
+                            }
+                        }
+                    ]
+                },
+                "top_slot_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "top_slot_bit": "0b"
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "top_slot_bit": "1b"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:double_stone_slab": [
+            {
+                "function": "new_block",
+                "options": "minecraft:double_stone_slab"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "stone_slab_type": {
+                        "\"smooth_stone\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_slab_type": [
+                                        "snbt",
+                                        "\"smooth_stone\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"sandstone\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_slab_type": [
+                                        "snbt",
+                                        "\"sandstone\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"wood\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_slab_type": [
+                                        "snbt",
+                                        "\"wood\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"cobblestone\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_slab_type": [
+                                        "snbt",
+                                        "\"cobblestone\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"brick\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_slab_type": [
+                                        "snbt",
+                                        "\"brick\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"stone_brick\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_slab_type": [
+                                        "snbt",
+                                        "\"stone_brick\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"quartz\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_slab_type": [
+                                        "snbt",
+                                        "\"quartz\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"nether_brick\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_slab_type": [
+                                        "snbt",
+                                        "\"nether_brick\""
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "top_slot_bit": {
+                        "0b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "top_slot_bit": [
+                                        "snbt",
+                                        "0b"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "top_slot_bit": [
+                                        "snbt",
+                                        "1b"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

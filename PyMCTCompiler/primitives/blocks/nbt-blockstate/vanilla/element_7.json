@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:element_7"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:element_7": [
+            {
+                "function": "new_block",
+                "options": "minecraft:element_7"
+            }
+        ]
+    }
+}

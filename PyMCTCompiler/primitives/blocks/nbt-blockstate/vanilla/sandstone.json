@@ -1,0 +1,106 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:sandstone"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "sand_stone_type": {
+                    "\"default\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "sand_stone_type": "\"default\""
+                            }
+                        }
+                    ],
+                    "\"heiroglyphs\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "sand_stone_type": "\"heiroglyphs\""
+                            }
+                        }
+                    ],
+                    "\"cut\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "sand_stone_type": "\"cut\""
+                            }
+                        }
+                    ],
+                    "\"smooth\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "sand_stone_type": "\"smooth\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:sandstone": [
+            {
+                "function": "new_block",
+                "options": "minecraft:sandstone"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "sand_stone_type": {
+                        "\"default\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "sand_stone_type": [
+                                        "snbt",
+                                        "\"default\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"heiroglyphs\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "sand_stone_type": [
+                                        "snbt",
+                                        "\"heiroglyphs\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"cut\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "sand_stone_type": [
+                                        "snbt",
+                                        "\"cut\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"smooth\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "sand_stone_type": [
+                                        "snbt",
+                                        "\"smooth\""
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

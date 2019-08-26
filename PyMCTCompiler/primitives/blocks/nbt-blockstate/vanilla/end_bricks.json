@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:end_bricks"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:end_bricks": [
+            {
+                "function": "new_block",
+                "options": "minecraft:end_bricks"
+            }
+        ]
+    }
+}

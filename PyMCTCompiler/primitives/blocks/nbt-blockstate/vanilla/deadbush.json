@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:deadbush"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:deadbush": [
+            {
+                "function": "new_block",
+                "options": "minecraft:deadbush"
+            }
+        ]
+    }
+}

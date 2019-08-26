@@ -1,0 +1,334 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:red_mushroom_block"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "huge_mushroom_bits": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "huge_mushroom_bits": "0"
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "huge_mushroom_bits": "1"
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "huge_mushroom_bits": "2"
+                            }
+                        }
+                    ],
+                    "3": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "huge_mushroom_bits": "3"
+                            }
+                        }
+                    ],
+                    "4": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "huge_mushroom_bits": "4"
+                            }
+                        }
+                    ],
+                    "5": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "huge_mushroom_bits": "5"
+                            }
+                        }
+                    ],
+                    "6": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "huge_mushroom_bits": "6"
+                            }
+                        }
+                    ],
+                    "7": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "huge_mushroom_bits": "7"
+                            }
+                        }
+                    ],
+                    "8": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "huge_mushroom_bits": "8"
+                            }
+                        }
+                    ],
+                    "9": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "huge_mushroom_bits": "9"
+                            }
+                        }
+                    ],
+                    "10": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "huge_mushroom_bits": "10"
+                            }
+                        }
+                    ],
+                    "11": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "huge_mushroom_bits": "11"
+                            }
+                        }
+                    ],
+                    "12": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "huge_mushroom_bits": "12"
+                            }
+                        }
+                    ],
+                    "13": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "huge_mushroom_bits": "13"
+                            }
+                        }
+                    ],
+                    "14": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "huge_mushroom_bits": "14"
+                            }
+                        }
+                    ],
+                    "15": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "huge_mushroom_bits": "15"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:red_mushroom_block": [
+            {
+                "function": "new_block",
+                "options": "minecraft:red_mushroom_block"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "huge_mushroom_bits": {
+                        "0": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "huge_mushroom_bits": [
+                                        "snbt",
+                                        "0"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "huge_mushroom_bits": [
+                                        "snbt",
+                                        "1"
+                                    ]
+                                }
+                            }
+                        ],
+                        "2": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "huge_mushroom_bits": [
+                                        "snbt",
+                                        "2"
+                                    ]
+                                }
+                            }
+                        ],
+                        "3": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "huge_mushroom_bits": [
+                                        "snbt",
+                                        "3"
+                                    ]
+                                }
+                            }
+                        ],
+                        "4": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "huge_mushroom_bits": [
+                                        "snbt",
+                                        "4"
+                                    ]
+                                }
+                            }
+                        ],
+                        "5": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "huge_mushroom_bits": [
+                                        "snbt",
+                                        "5"
+                                    ]
+                                }
+                            }
+                        ],
+                        "6": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "huge_mushroom_bits": [
+                                        "snbt",
+                                        "6"
+                                    ]
+                                }
+                            }
+                        ],
+                        "7": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "huge_mushroom_bits": [
+                                        "snbt",
+                                        "7"
+                                    ]
+                                }
+                            }
+                        ],
+                        "8": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "huge_mushroom_bits": [
+                                        "snbt",
+                                        "8"
+                                    ]
+                                }
+                            }
+                        ],
+                        "9": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "huge_mushroom_bits": [
+                                        "snbt",
+                                        "9"
+                                    ]
+                                }
+                            }
+                        ],
+                        "10": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "huge_mushroom_bits": [
+                                        "snbt",
+                                        "10"
+                                    ]
+                                }
+                            }
+                        ],
+                        "11": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "huge_mushroom_bits": [
+                                        "snbt",
+                                        "11"
+                                    ]
+                                }
+                            }
+                        ],
+                        "12": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "huge_mushroom_bits": [
+                                        "snbt",
+                                        "12"
+                                    ]
+                                }
+                            }
+                        ],
+                        "13": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "huge_mushroom_bits": [
+                                        "snbt",
+                                        "13"
+                                    ]
+                                }
+                            }
+                        ],
+                        "14": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "huge_mushroom_bits": [
+                                        "snbt",
+                                        "14"
+                                    ]
+                                }
+                            }
+                        ],
+                        "15": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "huge_mushroom_bits": [
+                                        "snbt",
+                                        "15"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

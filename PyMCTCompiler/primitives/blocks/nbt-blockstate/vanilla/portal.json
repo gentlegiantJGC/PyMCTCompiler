@@ -1,0 +1,87 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:portal"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "portal_axis": {
+                    "\"unknown\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "portal_axis": "\"unknown\""
+                            }
+                        }
+                    ],
+                    "\"x\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "portal_axis": "\"x\""
+                            }
+                        }
+                    ],
+                    "\"z\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "portal_axis": "\"z\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:portal": [
+            {
+                "function": "new_block",
+                "options": "minecraft:portal"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "portal_axis": {
+                        "\"unknown\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "portal_axis": [
+                                        "snbt",
+                                        "\"unknown\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"x\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "portal_axis": [
+                                        "snbt",
+                                        "\"x\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"z\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "portal_axis": [
+                                        "snbt",
+                                        "\"z\""
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

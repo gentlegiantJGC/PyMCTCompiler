@@ -1,0 +1,68 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:structure_void"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "structure_void_type": {
+                    "\"void\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "structure_void_type": "\"void\""
+                            }
+                        }
+                    ],
+                    "\"air\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "structure_void_type": "\"air\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:structure_void": [
+            {
+                "function": "new_block",
+                "options": "minecraft:structure_void"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "structure_void_type": {
+                        "\"void\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "structure_void_type": [
+                                        "snbt",
+                                        "\"void\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"air\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "structure_void_type": [
+                                        "snbt",
+                                        "\"air\""
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

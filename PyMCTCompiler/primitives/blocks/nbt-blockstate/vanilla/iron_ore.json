@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:iron_ore"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:iron_ore": [
+            {
+                "function": "new_block",
+                "options": "minecraft:iron_ore"
+            }
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:jukebox"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:jukebox": [
+            {
+                "function": "new_block",
+                "options": "minecraft:jukebox"
+            }
+        ]
+    }
+}

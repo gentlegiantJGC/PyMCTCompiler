@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:blue_ice"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:blue_ice": [
+            {
+                "function": "new_block",
+                "options": "minecraft:blue_ice"
+            }
+        ]
+    }
+}

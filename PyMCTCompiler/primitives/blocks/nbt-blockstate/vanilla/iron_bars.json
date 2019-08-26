@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:iron_bars"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:iron_bars": [
+            {
+                "function": "new_block",
+                "options": "minecraft:iron_bars"
+            }
+        ]
+    }
+}

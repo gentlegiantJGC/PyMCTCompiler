@@ -1,0 +1,186 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:hopper"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "facing_direction": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing_direction": "0"
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing_direction": "1"
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing_direction": "2"
+                            }
+                        }
+                    ],
+                    "3": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing_direction": "3"
+                            }
+                        }
+                    ],
+                    "4": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing_direction": "4"
+                            }
+                        }
+                    ],
+                    "5": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing_direction": "5"
+                            }
+                        }
+                    ]
+                },
+                "toggle_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "toggle_bit": "0b"
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "toggle_bit": "1b"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:hopper": [
+            {
+                "function": "new_block",
+                "options": "minecraft:hopper"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "facing_direction": {
+                        "0": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing_direction": [
+                                        "snbt",
+                                        "0"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing_direction": [
+                                        "snbt",
+                                        "1"
+                                    ]
+                                }
+                            }
+                        ],
+                        "2": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing_direction": [
+                                        "snbt",
+                                        "2"
+                                    ]
+                                }
+                            }
+                        ],
+                        "3": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing_direction": [
+                                        "snbt",
+                                        "3"
+                                    ]
+                                }
+                            }
+                        ],
+                        "4": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing_direction": [
+                                        "snbt",
+                                        "4"
+                                    ]
+                                }
+                            }
+                        ],
+                        "5": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing_direction": [
+                                        "snbt",
+                                        "5"
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "toggle_bit": {
+                        "0b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "toggle_bit": [
+                                        "snbt",
+                                        "0b"
+                                    ]
+                                }
+                            }
+                        ],
+                        "1b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "toggle_bit": [
+                                        "snbt",
+                                        "1b"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

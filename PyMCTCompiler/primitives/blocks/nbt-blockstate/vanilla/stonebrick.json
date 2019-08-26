@@ -1,0 +1,125 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:stonebrick"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "stone_brick_type": {
+                    "\"default\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_brick_type": "\"default\""
+                            }
+                        }
+                    ],
+                    "\"mossy\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_brick_type": "\"mossy\""
+                            }
+                        }
+                    ],
+                    "\"cracked\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_brick_type": "\"cracked\""
+                            }
+                        }
+                    ],
+                    "\"chiseled\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_brick_type": "\"chiseled\""
+                            }
+                        }
+                    ],
+                    "\"smooth\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stone_brick_type": "\"smooth\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:stonebrick": [
+            {
+                "function": "new_block",
+                "options": "minecraft:stonebrick"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "stone_brick_type": {
+                        "\"default\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_brick_type": [
+                                        "snbt",
+                                        "\"default\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"mossy\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_brick_type": [
+                                        "snbt",
+                                        "\"mossy\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"cracked\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_brick_type": [
+                                        "snbt",
+                                        "\"cracked\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"chiseled\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_brick_type": [
+                                        "snbt",
+                                        "\"chiseled\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"smooth\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "stone_brick_type": [
+                                        "snbt",
+                                        "\"smooth\""
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
