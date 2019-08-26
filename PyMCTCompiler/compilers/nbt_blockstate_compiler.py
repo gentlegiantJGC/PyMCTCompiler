@@ -82,7 +82,7 @@ def main(version_name: str, version_str: str):
 			if (namespace, base_name) not in blocks:
 				blocks[(namespace, base_name)] = {
 					"properties": {prop['name']: [to_snbt(prop['type'], prop['value'])] for prop in blockstate['states']},
-					"defaults": {prop['name']: prop['value'] for prop in blockstate['states']},
+					"defaults": {prop['name']: to_snbt(prop['type'], prop['value']) for prop in blockstate['states']},
 					"nbt_properties": True
 				}
 			else:
