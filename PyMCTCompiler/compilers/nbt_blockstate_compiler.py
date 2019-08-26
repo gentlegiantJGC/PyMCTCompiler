@@ -8,6 +8,25 @@ Summary
 """
 
 
+def to_snbt(nbt_type, value):
+	if nbt_type == 'byte':
+		return f'{value}b'
+	elif nbt_type == 'short':
+		return f'{value}s'
+	elif nbt_type == 'int':
+		return f'{value}'
+	elif nbt_type == 'long':
+		return f'{value}l'
+	elif nbt_type == 'float':
+		return f'{value}f'
+	elif nbt_type == 'double':
+		return f'{value}d'
+	elif nbt_type == 'string':
+		return f'"{value}"'
+	else:
+		raise NotImplemented
+
+
 def main(version_name: str, version_str: str):
 	"""Custom compiler for the Java 1.13+ versions.
 
@@ -62,14 +81,14 @@ def main(version_name: str, version_str: str):
 			namespace, base_name = blockstate['name'].split(':', 1)
 			if (namespace, base_name) not in blocks:
 				blocks[(namespace, base_name)] = {
-					"properties": {prop['name']: [prop['value']] for prop in blockstate['states']},
-					"properties_nbt": {prop['name']: prop['type'] for prop in blockstate['states']},
-					"defaults": {prop['name']: prop['value'] for prop in blockstate['states']}
+					"properties": {prop['name']: [to_snbt(prop['type'], prop['value'])] for prop in blockstate['states']},
+					"defaults": {prop['name']: prop['value'] for prop in blockstate['states']},
+					"nbt_properties": True
 				}
 			else:
 				for prop in blockstate['states']:
 					if prop['value'] not in blocks[(namespace, base_name)]['properties'][prop['name']]:
-						blocks[(namespace, base_name)]['properties'][prop['name']].append(prop['value'])
+						blocks[(namespace, base_name)]['properties'][prop['name']].append(to_snbt(prop['type'], prop['value']))
 
 		for (namespace, base_name), spec in blocks.items():
 			save_json(f'{version_name}/block/blockstate/specification/{namespace}/vanilla/{base_name}.json', spec, buffer=output)
