@@ -5464,8 +5464,7 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 										"function": "new_nbt",
 										"options": {
 											"key": "note",
-											"type": "byte",
-											"value": data
+											"value": f"{data}b"
 										}
 									}
 								] for data in range(25)
@@ -5476,8 +5475,7 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 										"function": "new_nbt",
 										"options": {
 											"key": "powered",
-											"type": "byte",
-											"value": 0
+											"value": "0b"
 										}
 									}
 								],
@@ -5486,8 +5484,7 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 										"function": "new_nbt",
 										"options": {
 											"key": "powered",
-											"type": "byte",
-											"value": 1
+											"value": "1b"
 										}
 									}
 								]
@@ -5621,8 +5618,7 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 										"function": "new_nbt",
 										"options": {
 											"key": "note",
-											"type": "byte",
-											"value": data
+											"value": f"{data}b"
 										}
 									}
 								] for data in range(25)

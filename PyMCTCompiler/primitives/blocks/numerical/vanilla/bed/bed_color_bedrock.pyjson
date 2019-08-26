@@ -124,8 +124,7 @@
 								"function": "new_nbt",
 								"options": {
 									"key": "color",
-									"type": "byte",
-									"value": num
+									"value": f"{num}b"
 								}
 							}
 						] for num, color in enumerate([
