@@ -17,7 +17,7 @@ def _load_file(path: str) -> dict:
 
 
 print('Loading Primitives ...')
-blocks = {'numerical': {}, 'blockstate': {}}
+blocks = {'numerical': {}, 'blockstate': {}, 'nbt-blockstate': {}}
 entities = {}
 
 for start_folder in blocks:
