@@ -151,7 +151,7 @@ def main():
 			t = time.time()
 			init = getattr(version_compiler, version_name).init
 			assert isinstance(init, dict)
-			if 'block_format' in init and init['block_format'] in ['numerical', 'pseudo-numerical', 'blockstate']:
+			if 'block_format' in init and init['block_format'] in ['numerical', 'pseudo-numerical', 'blockstate', 'nbt-blockstate']:
 				if init['block_format'] == 'numerical':
 					# copy over the numerical map required for old numerical formats
 					copy_file(f'{version_name}/__numerical_block_map__.json')
