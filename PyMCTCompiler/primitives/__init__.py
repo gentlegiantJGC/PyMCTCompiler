@@ -25,11 +25,12 @@ for start_folder in blocks:
 		for f in files:
 			if os.path.splitext(f)[0] in blocks[start_folder]:
 				print(f'Block name "{os.path.splitext(f)[0]}" is define twice')
-			try:
-				blocks[start_folder][os.path.splitext(f)[0]] = _load_file(f'{root}/{f}')
-			except Exception as e:
-				print(f'Failed to load {root}/{f}\n{e}')
-				print(traceback.print_tb(e.__traceback__))
+			if f.endswith('.json'):
+				try:
+					blocks[start_folder][os.path.splitext(f)[0]] = _load_file(f'{root}/{f}')
+				except Exception as e:
+					print(f'Failed to load {root}/{f}\n{e}')
+					print(traceback.print_tb(e.__traceback__))
 
 for root, dirs, files in os.walk(f'{os.path.dirname(__file__)}/entities'):
 	for f in files:
