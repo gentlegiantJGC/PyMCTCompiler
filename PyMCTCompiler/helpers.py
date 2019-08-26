@@ -59,6 +59,7 @@ def merge_map_(data_: list, data: list) -> list:
 
 
 def _merge_map(data_: list, data: list) -> list:
+	# TODO: update this and implement named groups
 	assert [fun['function'] for fun in data_] == [fun['function'] for fun in data], f'The functions do not match\n{data_}\n{data}'
 
 	for fun_, fun in zip(data_, data):
