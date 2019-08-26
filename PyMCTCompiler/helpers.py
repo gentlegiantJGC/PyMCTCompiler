@@ -196,29 +196,15 @@ def check_specification_format(data: dict):
 	assert isinstance(defaults, dict), '"defaults" must be a dictionary'
 	assert sorted(properties.keys()) == sorted(defaults.keys()), 'The keys in "properties" and "defaults" must match'
 
-	if "properties_nbt" in data:
-		assert sorted(properties.keys()) == sorted(data['properties_nbt'].keys()), 'The keys in "properties" and "properties_nbt" must match'
-		for prop_name, prop_type in data['properties_nbt'].items():
-			assert isinstance(prop_name, str), 'Property names must be strings'
-			assert isinstance(properties[prop_name], list), 'Property options must be a list'
-			assert defaults[prop_name] in properties[prop_name], 'Default property value must be in the property list'
-
-			if prop_type in ('byte', 'short', 'int', 'long', 'float', 'double'):
-				assert all(isinstance(prop, (float, int)) for prop in properties[prop_name]), f'Numerical NBT type must have a corresponding int or float property\n{data}'
-				assert isinstance(defaults[prop_name], (float, int)), f'Numerical NBT type must have a corresponding int or float property\n{data}'
-			elif prop_type == 'string':
-				assert all(isinstance(prop, str) for prop in properties[prop_name]), f'String NBT type must have a corresponding string property\n{data}'
-				assert isinstance(defaults[prop_name], str), f'String NBT type must have a corresponding string property\n{data}'
-			else:
-				raise Exception(f'The NBT type {prop_type} is not currently supported here')
-
-	else:
-		for key, val in properties.items():
-			assert isinstance(key, str), 'Property names must be strings'
-			assert isinstance(val, list), 'Property options must be a list of strings'
-			assert all(isinstance(prop, str) for prop in val), 'All property options must be strings'
-			assert isinstance(defaults[key], str), 'All default property values must be strings'
-			assert defaults[key] in val, 'Default property value must be in the property list'
+	for key, val in properties.items():
+		assert isinstance(key, str), 'Property names must be strings'
+		assert isinstance(val, list), 'Property options must be a list of strings'
+		assert all(isinstance(prop, str) for prop in val), 'All property options must be strings'
+		assert isinstance(defaults[key], str), 'All default property values must be strings'
+		assert defaults[key] in val, 'Default property value must be in the property list'
+		if data.get('nbt_properties', False):
+			pass
+			# TODO: verify that all of these are valid SNBT
 
 	if 'snbt' in data:
 		assert isinstance(data['snbt'], str), 'Specification "snbt" must be a string'
@@ -231,7 +217,7 @@ def check_specification_format(data: dict):
 		assert 'nbt_identifier' not in data, '"nbt_identifier" should only be defined if "snbt" is defined'
 
 	for key in data.keys():
-		if key not in ('properties', 'properties_nbt', 'defaults', 'snbt', "nbt_identifier"):
+		if key not in ('properties', 'nbt_properties', 'defaults', 'snbt', "nbt_identifier"):
 			log_to_file(f'Extra key "{key}" found')
 
 
