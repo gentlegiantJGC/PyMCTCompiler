@@ -319,19 +319,8 @@ def check_mapping_format(data: list, extra_feature_set: Tuple[str, ...] = None):
 				else:
 					raise Exception('The first paramater of each entry in path must be a string or an int')
 
-				assert 'type' in new_nbt, '"type" must be present in new_nbt'
-				assert new_nbt['type'] in ('byte', 'short', 'int', 'long', 'float', 'double', 'string', 'byte_array', 'int_array', 'long_array'), 'datatype is not known'
-
 				assert 'value' in new_nbt, '"value" must be present in new_nbt'
-				if new_nbt['type'] in ('byte', 'short', 'int', 'long'):
-					assert isinstance(new_nbt['value'], int), f'new_nbt "value" must be an int for type {new_nbt["type"]}'
-				elif new_nbt['type'] in ('float', 'double'):
-					assert isinstance(new_nbt['value'], (int, float)), f'new_nbt "value" must be an int or float for type {new_nbt["type"]}'
-				elif new_nbt['type'] == 'string':
-					assert isinstance(new_nbt['value'], str), f'new_nbt "value" must be a string for type {new_nbt["type"]}'
-				elif new_nbt['type'] in ('byte_array', 'int_array', 'long_array'):
-					assert isinstance(new_nbt['value'], list), f'new_nbt "value" must be a list of ints for type {new_nbt["type"]}'
-					assert all(isinstance(array_val, int) for array_val in new_nbt['value']), f'new_nbt "value" must be a list of ints for type {new_nbt["type"]}'
+				# TODO: run the nbt string through from_snbt to confirm it is parsable
 
 		elif fun['function'] == 'carry_nbt' and 'carry_nbt' in extra_feature_set:
 			assert isinstance(fun['options'], dict), 'options must be a dictionary'
