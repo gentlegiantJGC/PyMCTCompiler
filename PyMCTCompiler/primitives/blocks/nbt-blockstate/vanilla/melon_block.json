@@ -2,11 +2,11 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:melon_block"
+            "options": "universal_minecraft:melon"
         }
     ],
     "from_universal": {
-        "universal_minecraft:melon_block": [
+        "universal_minecraft:melon": [
             {
                 "function": "new_block",
                 "options": "minecraft:melon_block"

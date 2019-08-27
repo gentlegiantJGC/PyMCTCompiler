@@ -2,11 +2,11 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:seaLantern"
+            "options": "universal_minecraft:sea_lantern"
         }
     ],
     "from_universal": {
-        "universal_minecraft:seaLantern": [
+        "universal_minecraft:sea_lantern": [
             {
                 "function": "new_block",
                 "options": "minecraft:seaLantern"

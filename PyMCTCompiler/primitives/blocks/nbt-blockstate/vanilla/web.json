@@ -2,11 +2,11 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:web"
+            "options": "universal_minecraft:cobweb"
         }
     ],
     "from_universal": {
-        "universal_minecraft:web": [
+        "universal_minecraft:cobweb": [
             {
                 "function": "new_block",
                 "options": "minecraft:web"

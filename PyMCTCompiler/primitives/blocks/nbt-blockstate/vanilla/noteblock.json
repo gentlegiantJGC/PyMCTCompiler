@@ -2,11 +2,11 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:noteblock"
+            "options": "universal_minecraft:note_block"
         }
     ],
     "from_universal": {
-        "universal_minecraft:noteblock": [
+        "universal_minecraft:note_block": [
             {
                 "function": "new_block",
                 "options": "minecraft:noteblock"

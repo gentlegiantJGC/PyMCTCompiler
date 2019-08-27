@@ -2,11 +2,11 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:invisibleBedrock"
+            "options": "universal_minecraft:invisible_bedrock"
         }
     ],
     "from_universal": {
-        "universal_minecraft:invisibleBedrock": [
+        "universal_minecraft:invisible_bedrock": [
             {
                 "function": "new_block",
                 "options": "minecraft:invisibleBedrock"

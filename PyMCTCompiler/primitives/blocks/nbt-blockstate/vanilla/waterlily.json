@@ -2,11 +2,11 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:waterlily"
+            "options": "universal_minecraft:lily_pad"
         }
     ],
     "from_universal": {
-        "universal_minecraft:waterlily": [
+        "universal_minecraft:lily_pad": [
             {
                 "function": "new_block",
                 "options": "minecraft:waterlily"

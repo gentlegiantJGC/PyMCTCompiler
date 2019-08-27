@@ -2,11 +2,11 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:mob_spawner"
+            "options": "universal_minecraft:spawner"
         }
     ],
     "from_universal": {
-        "universal_minecraft:mob_spawner": [
+        "universal_minecraft:spawner": [
             {
                 "function": "new_block",
                 "options": "minecraft:mob_spawner"

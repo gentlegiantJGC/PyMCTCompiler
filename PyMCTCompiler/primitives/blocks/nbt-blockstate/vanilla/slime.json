@@ -2,11 +2,11 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:slime"
+            "options": "universal_minecraft:slime_block"
         }
     ],
     "from_universal": {
-        "universal_minecraft:slime": [
+        "universal_minecraft:slime_block": [
             {
                 "function": "new_block",
                 "options": "minecraft:slime"

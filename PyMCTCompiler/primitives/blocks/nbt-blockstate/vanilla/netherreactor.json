@@ -2,11 +2,11 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:netherreactor"
+            "options": "universal_minecraft:nether_reactor"
         }
     ],
     "from_universal": {
-        "universal_minecraft:netherreactor": [
+        "universal_minecraft:nether_reactor": [
             {
                 "function": "new_block",
                 "options": "minecraft:netherreactor"

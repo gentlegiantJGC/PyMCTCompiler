@@ -2,11 +2,11 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:magma"
+            "options": "universal_minecraft:magma_block"
         }
     ],
     "from_universal": {
-        "universal_minecraft:magma": [
+        "universal_minecraft:magma_block": [
             {
                 "function": "new_block",
                 "options": "minecraft:magma"

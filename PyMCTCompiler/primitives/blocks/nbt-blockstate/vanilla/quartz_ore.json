@@ -2,11 +2,11 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:quartz_ore"
+            "options": "universal_minecraft:nether_quartz_ore"
         }
     ],
     "from_universal": {
-        "universal_minecraft:quartz_ore": [
+        "universal_minecraft:nether_quartz_ore": [
             {
                 "function": "new_block",
                 "options": "minecraft:quartz_ore"
