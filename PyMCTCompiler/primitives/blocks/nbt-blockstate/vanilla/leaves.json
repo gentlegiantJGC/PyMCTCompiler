@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "old_leaf_type": "\"oak\""
+                                "old_leaf_type": "oak"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "old_leaf_type": "\"spruce\""
+                                "old_leaf_type": "spruce"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "old_leaf_type": "\"birch\""
+                                "old_leaf_type": "birch"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "old_leaf_type": "\"jungle\""
+                                "old_leaf_type": "jungle"
                             }
                         }
                     ]
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "persistent_bit": "0b"
+                                "persistent_bit": "0"
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "persistent_bit": "1b"
+                                "persistent_bit": "1"
                             }
                         }
                     ]
@@ -64,7 +64,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "update_bit": "0b"
+                                "update_bit": "0"
                             }
                         }
                     ],
@@ -72,7 +72,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "update_bit": "1b"
+                                "update_bit": "1"
                             }
                         }
                     ]
@@ -90,7 +90,7 @@
                 "function": "map_properties",
                 "options": {
                     "old_leaf_type": {
-                        "\"oak\"": [
+                        "oak": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -101,7 +101,7 @@
                                 }
                             }
                         ],
-                        "\"spruce\"": [
+                        "spruce": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -112,7 +112,7 @@
                                 }
                             }
                         ],
-                        "\"birch\"": [
+                        "birch": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -123,7 +123,7 @@
                                 }
                             }
                         ],
-                        "\"jungle\"": [
+                        "jungle": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -136,7 +136,7 @@
                         ]
                     },
                     "persistent_bit": {
-                        "0b": [
+                        "0": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -147,7 +147,7 @@
                                 }
                             }
                         ],
-                        "1b": [
+                        "1": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -160,7 +160,7 @@
                         ]
                     },
                     "update_bit": {
-                        "0b": [
+                        "0": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -171,7 +171,7 @@
                                 }
                             }
                         ],
-                        "1b": [
+                        "1": [
                             {
                                 "function": "new_properties",
                                 "options": {

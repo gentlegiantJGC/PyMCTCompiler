@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "age_bit": "0b"
+                                "age_bit": "0"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "age_bit": "1b"
+                                "age_bit": "1"
                             }
                         }
                     ]
@@ -30,7 +30,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "bamboo_leaf_size": "\"no_leaves\""
+                                "bamboo_leaf_size": "no_leaves"
                             }
                         }
                     ],
@@ -38,7 +38,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "bamboo_leaf_size": "\"small_leaves\""
+                                "bamboo_leaf_size": "small_leaves"
                             }
                         }
                     ],
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "bamboo_leaf_size": "\"large_leaves\""
+                                "bamboo_leaf_size": "large_leaves"
                             }
                         }
                     ]
@@ -56,7 +56,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "bamboo_stalk_thickness": "\"thin\""
+                                "bamboo_stalk_thickness": "thin"
                             }
                         }
                     ],
@@ -64,7 +64,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "bamboo_stalk_thickness": "\"thick\""
+                                "bamboo_stalk_thickness": "thick"
                             }
                         }
                     ]
@@ -82,7 +82,7 @@
                 "function": "map_properties",
                 "options": {
                     "age_bit": {
-                        "0b": [
+                        "0": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -93,7 +93,7 @@
                                 }
                             }
                         ],
-                        "1b": [
+                        "1": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -106,7 +106,7 @@
                         ]
                     },
                     "bamboo_leaf_size": {
-                        "\"no_leaves\"": [
+                        "no_leaves": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -117,7 +117,7 @@
                                 }
                             }
                         ],
-                        "\"small_leaves\"": [
+                        "small_leaves": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -128,7 +128,7 @@
                                 }
                             }
                         ],
-                        "\"large_leaves\"": [
+                        "large_leaves": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -141,7 +141,7 @@
                         ]
                     },
                     "bamboo_stalk_thickness": {
-                        "\"thin\"": [
+                        "thin": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -152,7 +152,7 @@
                                 }
                             }
                         ],
-                        "\"thick\"": [
+                        "thick": [
                             {
                                 "function": "new_properties",
                                 "options": {

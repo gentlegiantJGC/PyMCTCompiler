@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sand_stone_type": "\"default\""
+                                "sand_stone_type": "default"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sand_stone_type": "\"heiroglyphs\""
+                                "sand_stone_type": "heiroglyphs"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sand_stone_type": "\"cut\""
+                                "sand_stone_type": "cut"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sand_stone_type": "\"smooth\""
+                                "sand_stone_type": "smooth"
                             }
                         }
                     ]
@@ -54,7 +54,7 @@
                 "function": "map_properties",
                 "options": {
                     "sand_stone_type": {
-                        "\"default\"": [
+                        "default": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -65,7 +65,7 @@
                                 }
                             }
                         ],
-                        "\"heiroglyphs\"": [
+                        "heiroglyphs": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -76,7 +76,7 @@
                                 }
                             }
                         ],
-                        "\"cut\"": [
+                        "cut": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -87,7 +87,7 @@
                                 }
                             }
                         ],
-                        "\"smooth\"": [
+                        "smooth": [
                             {
                                 "function": "new_properties",
                                 "options": {

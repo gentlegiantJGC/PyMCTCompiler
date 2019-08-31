@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "tall_grass_type": "\"default\""
+                                "tall_grass_type": "default"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "tall_grass_type": "\"tall\""
+                                "tall_grass_type": "tall"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "tall_grass_type": "\"fern\""
+                                "tall_grass_type": "fern"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "tall_grass_type": "\"snow\""
+                                "tall_grass_type": "snow"
                             }
                         }
                     ]
@@ -54,7 +54,7 @@
                 "function": "map_properties",
                 "options": {
                     "tall_grass_type": {
-                        "\"default\"": [
+                        "default": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -65,7 +65,7 @@
                                 }
                             }
                         ],
-                        "\"tall\"": [
+                        "tall": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -76,7 +76,7 @@
                                 }
                             }
                         ],
-                        "\"fern\"": [
+                        "fern": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -87,7 +87,7 @@
                                 }
                             }
                         ],
-                        "\"snow\"": [
+                        "snow": [
                             {
                                 "function": "new_properties",
                                 "options": {

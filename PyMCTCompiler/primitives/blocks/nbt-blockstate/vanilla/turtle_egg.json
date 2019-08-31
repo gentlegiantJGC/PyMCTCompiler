@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "cracked_state": "\"no_cracks\""
+                                "cracked_state": "no_cracks"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "cracked_state": "\"cracked\""
+                                "cracked_state": "cracked"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "cracked_state": "\"max_cracked\""
+                                "cracked_state": "max_cracked"
                             }
                         }
                     ]
@@ -38,7 +38,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "turtle_egg_count": "\"one_egg\""
+                                "turtle_egg_count": "one_egg"
                             }
                         }
                     ],
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "turtle_egg_count": "\"two_egg\""
+                                "turtle_egg_count": "two_egg"
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "turtle_egg_count": "\"three_egg\""
+                                "turtle_egg_count": "three_egg"
                             }
                         }
                     ],
@@ -62,7 +62,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "turtle_egg_count": "\"four_egg\""
+                                "turtle_egg_count": "four_egg"
                             }
                         }
                     ]
@@ -80,7 +80,7 @@
                 "function": "map_properties",
                 "options": {
                     "cracked_state": {
-                        "\"no_cracks\"": [
+                        "no_cracks": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -91,7 +91,7 @@
                                 }
                             }
                         ],
-                        "\"cracked\"": [
+                        "cracked": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -102,7 +102,7 @@
                                 }
                             }
                         ],
-                        "\"max_cracked\"": [
+                        "max_cracked": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -115,7 +115,7 @@
                         ]
                     },
                     "turtle_egg_count": {
-                        "\"one_egg\"": [
+                        "one_egg": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -126,7 +126,7 @@
                                 }
                             }
                         ],
-                        "\"two_egg\"": [
+                        "two_egg": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -137,7 +137,7 @@
                                 }
                             }
                         ],
-                        "\"three_egg\"": [
+                        "three_egg": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -148,7 +148,7 @@
                                 }
                             }
                         ],
-                        "\"four_egg\"": [
+                        "four_egg": [
                             {
                                 "function": "new_properties",
                                 "options": {

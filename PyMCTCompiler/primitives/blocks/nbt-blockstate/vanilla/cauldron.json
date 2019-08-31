@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "cauldron_liquid": "\"water\""
+                                "cauldron_liquid": "water"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "cauldron_liquid": "\"lava\""
+                                "cauldron_liquid": "lava"
                             }
                         }
                     ]
@@ -96,7 +96,7 @@
                 "function": "map_properties",
                 "options": {
                     "cauldron_liquid": {
-                        "\"water\"": [
+                        "water": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -107,7 +107,7 @@
                                 }
                             }
                         ],
-                        "\"lava\"": [
+                        "lava": [
                             {
                                 "function": "new_properties",
                                 "options": {

@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "new_log_type": "\"acacia\""
+                                "new_log_type": "acacia"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "new_log_type": "\"dark_oak\""
+                                "new_log_type": "dark_oak"
                             }
                         }
                     ]
@@ -30,7 +30,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "pillar_axis": "\"y\""
+                                "pillar_axis": "y"
                             }
                         }
                     ],
@@ -38,7 +38,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "pillar_axis": "\"x\""
+                                "pillar_axis": "x"
                             }
                         }
                     ],
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "pillar_axis": "\"z\""
+                                "pillar_axis": "z"
                             }
                         }
                     ]
@@ -64,7 +64,7 @@
                 "function": "map_properties",
                 "options": {
                     "new_log_type": {
-                        "\"acacia\"": [
+                        "acacia": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -75,7 +75,7 @@
                                 }
                             }
                         ],
-                        "\"dark_oak\"": [
+                        "dark_oak": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -88,7 +88,7 @@
                         ]
                     },
                     "pillar_axis": {
-                        "\"y\"": [
+                        "y": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -99,7 +99,7 @@
                                 }
                             }
                         ],
-                        "\"x\"": [
+                        "x": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -110,7 +110,7 @@
                                 }
                             }
                         ],
-                        "\"z\"": [
+                        "z": [
                             {
                                 "function": "new_properties",
                                 "options": {

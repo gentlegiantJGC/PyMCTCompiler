@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_brick_type": "\"default\""
+                                "stone_brick_type": "default"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_brick_type": "\"mossy\""
+                                "stone_brick_type": "mossy"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_brick_type": "\"cracked\""
+                                "stone_brick_type": "cracked"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_brick_type": "\"chiseled\""
+                                "stone_brick_type": "chiseled"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_brick_type": "\"smooth\""
+                                "stone_brick_type": "smooth"
                             }
                         }
                     ]
@@ -62,7 +62,7 @@
                 "function": "map_properties",
                 "options": {
                     "stone_brick_type": {
-                        "\"default\"": [
+                        "default": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -73,7 +73,7 @@
                                 }
                             }
                         ],
-                        "\"mossy\"": [
+                        "mossy": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -84,7 +84,7 @@
                                 }
                             }
                         ],
-                        "\"cracked\"": [
+                        "cracked": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -95,7 +95,7 @@
                                 }
                             }
                         ],
-                        "\"chiseled\"": [
+                        "chiseled": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -106,7 +106,7 @@
                                 }
                             }
                         ],
-                        "\"smooth\"": [
+                        "smooth": [
                             {
                                 "function": "new_properties",
                                 "options": {

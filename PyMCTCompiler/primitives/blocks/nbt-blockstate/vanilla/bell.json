@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "attachment": "\"standing\""
+                                "attachment": "standing"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "attachment": "\"hanging\""
+                                "attachment": "hanging"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "attachment": "\"side\""
+                                "attachment": "side"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "attachment": "\"multiple\""
+                                "attachment": "multiple"
                             }
                         }
                     ]
@@ -80,7 +80,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "toggle_bit": "0b"
+                                "toggle_bit": "0"
                             }
                         }
                     ],
@@ -88,7 +88,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "toggle_bit": "1b"
+                                "toggle_bit": "1"
                             }
                         }
                     ]
@@ -106,7 +106,7 @@
                 "function": "map_properties",
                 "options": {
                     "attachment": {
-                        "\"standing\"": [
+                        "standing": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -117,7 +117,7 @@
                                 }
                             }
                         ],
-                        "\"hanging\"": [
+                        "hanging": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -128,7 +128,7 @@
                                 }
                             }
                         ],
-                        "\"side\"": [
+                        "side": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -139,7 +139,7 @@
                                 }
                             }
                         ],
-                        "\"multiple\"": [
+                        "multiple": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -198,7 +198,7 @@
                         ]
                     },
                     "toggle_bit": {
-                        "0b": [
+                        "0": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -209,7 +209,7 @@
                                 }
                             }
                         ],
-                        "1b": [
+                        "1": [
                             {
                                 "function": "new_properties",
                                 "options": {

@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "double_plant_type": "\"sunflower\""
+                                "double_plant_type": "sunflower"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "double_plant_type": "\"syringa\""
+                                "double_plant_type": "syringa"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "double_plant_type": "\"grass\""
+                                "double_plant_type": "grass"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "double_plant_type": "\"fern\""
+                                "double_plant_type": "fern"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "double_plant_type": "\"rose\""
+                                "double_plant_type": "rose"
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "double_plant_type": "\"paeonia\""
+                                "double_plant_type": "paeonia"
                             }
                         }
                     ]
@@ -62,7 +62,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "upper_block_bit": "0b"
+                                "upper_block_bit": "0"
                             }
                         }
                     ],
@@ -70,7 +70,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "upper_block_bit": "1b"
+                                "upper_block_bit": "1"
                             }
                         }
                     ]
@@ -88,7 +88,7 @@
                 "function": "map_properties",
                 "options": {
                     "double_plant_type": {
-                        "\"sunflower\"": [
+                        "sunflower": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -99,7 +99,7 @@
                                 }
                             }
                         ],
-                        "\"syringa\"": [
+                        "syringa": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -110,7 +110,7 @@
                                 }
                             }
                         ],
-                        "\"grass\"": [
+                        "grass": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -121,7 +121,7 @@
                                 }
                             }
                         ],
-                        "\"fern\"": [
+                        "fern": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -132,7 +132,7 @@
                                 }
                             }
                         ],
-                        "\"rose\"": [
+                        "rose": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -143,7 +143,7 @@
                                 }
                             }
                         ],
-                        "\"paeonia\"": [
+                        "paeonia": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -156,7 +156,7 @@
                         ]
                     },
                     "upper_block_bit": {
-                        "0b": [
+                        "0": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -167,7 +167,7 @@
                                 }
                             }
                         ],
-                        "1b": [
+                        "1": [
                             {
                                 "function": "new_properties",
                                 "options": {

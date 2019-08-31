@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "chisel_type": "\"default\""
+                                "chisel_type": "default"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "chisel_type": "\"chiseled\""
+                                "chisel_type": "chiseled"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "chisel_type": "\"lines\""
+                                "chisel_type": "lines"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "chisel_type": "\"smooth\""
+                                "chisel_type": "smooth"
                             }
                         }
                     ]
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "pillar_axis": "\"y\""
+                                "pillar_axis": "y"
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "pillar_axis": "\"x\""
+                                "pillar_axis": "x"
                             }
                         }
                     ],
@@ -62,7 +62,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "pillar_axis": "\"z\""
+                                "pillar_axis": "z"
                             }
                         }
                     ]
@@ -80,7 +80,7 @@
                 "function": "map_properties",
                 "options": {
                     "chisel_type": {
-                        "\"default\"": [
+                        "default": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -91,7 +91,7 @@
                                 }
                             }
                         ],
-                        "\"chiseled\"": [
+                        "chiseled": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -102,7 +102,7 @@
                                 }
                             }
                         ],
-                        "\"lines\"": [
+                        "lines": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -113,7 +113,7 @@
                                 }
                             }
                         ],
-                        "\"smooth\"": [
+                        "smooth": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -126,7 +126,7 @@
                         ]
                     },
                     "pillar_axis": {
-                        "\"y\"": [
+                        "y": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -137,7 +137,7 @@
                                 }
                             }
                         ],
-                        "\"x\"": [
+                        "x": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -148,7 +148,7 @@
                                 }
                             }
                         ],
-                        "\"z\"": [
+                        "z": [
                             {
                                 "function": "new_properties",
                                 "options": {

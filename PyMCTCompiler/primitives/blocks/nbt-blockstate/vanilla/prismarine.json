@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "prismarine_block_type": "\"default\""
+                                "prismarine_block_type": "default"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "prismarine_block_type": "\"dark\""
+                                "prismarine_block_type": "dark"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "prismarine_block_type": "\"bricks\""
+                                "prismarine_block_type": "bricks"
                             }
                         }
                     ]
@@ -46,7 +46,7 @@
                 "function": "map_properties",
                 "options": {
                     "prismarine_block_type": {
-                        "\"default\"": [
+                        "default": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -57,7 +57,7 @@
                                 }
                             }
                         ],
-                        "\"dark\"": [
+                        "dark": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -68,7 +68,7 @@
                                 }
                             }
                         ],
-                        "\"bricks\"": [
+                        "bricks": [
                             {
                                 "function": "new_properties",
                                 "options": {

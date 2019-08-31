@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "button_pressed_bit": "0b"
+                                "button_pressed_bit": "0"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "button_pressed_bit": "1b"
+                                "button_pressed_bit": "1"
                             }
                         }
                     ]
@@ -88,7 +88,7 @@
                 "function": "map_properties",
                 "options": {
                     "button_pressed_bit": {
-                        "0b": [
+                        "0": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -99,7 +99,7 @@
                                 }
                             }
                         ],
-                        "1b": [
+                        "1": [
                             {
                                 "function": "new_properties",
                                 "options": {

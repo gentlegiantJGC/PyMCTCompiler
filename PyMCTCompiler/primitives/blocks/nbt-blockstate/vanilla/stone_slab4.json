@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_4": "\"mossy_stone_brick\""
+                                "stone_slab_type_4": "mossy_stone_brick"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_4": "\"smooth_quartz\""
+                                "stone_slab_type_4": "smooth_quartz"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_4": "\"stone\""
+                                "stone_slab_type_4": "stone"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_4": "\"cut_sandstone\""
+                                "stone_slab_type_4": "cut_sandstone"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_4": "\"cut_red_sandstone\""
+                                "stone_slab_type_4": "cut_red_sandstone"
                             }
                         }
                     ]
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "top_slot_bit": "0b"
+                                "top_slot_bit": "0"
                             }
                         }
                     ],
@@ -62,7 +62,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "top_slot_bit": "1b"
+                                "top_slot_bit": "1"
                             }
                         }
                     ]
@@ -80,7 +80,7 @@
                 "function": "map_properties",
                 "options": {
                     "stone_slab_type_4": {
-                        "\"mossy_stone_brick\"": [
+                        "mossy_stone_brick": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -91,7 +91,7 @@
                                 }
                             }
                         ],
-                        "\"smooth_quartz\"": [
+                        "smooth_quartz": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -102,7 +102,7 @@
                                 }
                             }
                         ],
-                        "\"stone\"": [
+                        "stone": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -113,7 +113,7 @@
                                 }
                             }
                         ],
-                        "\"cut_sandstone\"": [
+                        "cut_sandstone": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -124,7 +124,7 @@
                                 }
                             }
                         ],
-                        "\"cut_red_sandstone\"": [
+                        "cut_red_sandstone": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -137,7 +137,7 @@
                         ]
                     },
                     "top_slot_bit": {
-                        "0b": [
+                        "0": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -148,7 +148,7 @@
                                 }
                             }
                         ],
-                        "1b": [
+                        "1": [
                             {
                                 "function": "new_properties",
                                 "options": {

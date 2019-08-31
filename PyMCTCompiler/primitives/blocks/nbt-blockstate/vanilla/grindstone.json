@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "attachment": "\"standing\""
+                                "attachment": "standing"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "attachment": "\"hanging\""
+                                "attachment": "hanging"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "attachment": "\"side\""
+                                "attachment": "side"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "attachment": "\"multiple\""
+                                "attachment": "multiple"
                             }
                         }
                     ]
@@ -88,7 +88,7 @@
                 "function": "map_properties",
                 "options": {
                     "attachment": {
-                        "\"standing\"": [
+                        "standing": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -99,7 +99,7 @@
                                 }
                             }
                         ],
-                        "\"hanging\"": [
+                        "hanging": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -110,7 +110,7 @@
                                 }
                             }
                         ],
-                        "\"side\"": [
+                        "side": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -121,7 +121,7 @@
                                 }
                             }
                         ],
-                        "\"multiple\"": [
+                        "multiple": [
                             {
                                 "function": "new_properties",
                                 "options": {

@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "pillar_axis": "\"y\""
+                                "pillar_axis": "y"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "pillar_axis": "\"x\""
+                                "pillar_axis": "x"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "pillar_axis": "\"z\""
+                                "pillar_axis": "z"
                             }
                         }
                     ]
@@ -46,7 +46,7 @@
                 "function": "map_properties",
                 "options": {
                     "pillar_axis": {
-                        "\"y\"": [
+                        "y": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -57,7 +57,7 @@
                                 }
                             }
                         ],
-                        "\"x\"": [
+                        "x": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -68,7 +68,7 @@
                                 }
                             }
                         ],
-                        "\"z\"": [
+                        "z": [
                             {
                                 "function": "new_properties",
                                 "options": {

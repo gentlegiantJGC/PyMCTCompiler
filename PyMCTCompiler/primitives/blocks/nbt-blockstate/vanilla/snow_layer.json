@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "covered_bit": "0b"
+                                "covered_bit": "0"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "covered_bit": "1b"
+                                "covered_bit": "1"
                             }
                         }
                     ]
@@ -104,7 +104,7 @@
                 "function": "map_properties",
                 "options": {
                     "covered_bit": {
-                        "0b": [
+                        "0": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -115,7 +115,7 @@
                                 }
                             }
                         ],
-                        "1b": [
+                        "1": [
                             {
                                 "function": "new_properties",
                                 "options": {

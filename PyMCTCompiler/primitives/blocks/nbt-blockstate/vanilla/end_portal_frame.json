@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "end_portal_eye_bit": "0b"
+                                "end_portal_eye_bit": "0"
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "end_portal_eye_bit": "1b"
+                                "end_portal_eye_bit": "1"
                             }
                         }
                     ]
@@ -118,7 +118,7 @@
                         ]
                     },
                     "end_portal_eye_bit": {
-                        "0b": [
+                        "0": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -129,7 +129,7 @@
                                 }
                             }
                         ],
-                        "1b": [
+                        "1": [
                             {
                                 "function": "new_properties",
                                 "options": {

@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "portal_axis": "\"unknown\""
+                                "portal_axis": "unknown"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "portal_axis": "\"x\""
+                                "portal_axis": "x"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "portal_axis": "\"z\""
+                                "portal_axis": "z"
                             }
                         }
                     ]
@@ -46,7 +46,7 @@
                 "function": "map_properties",
                 "options": {
                     "portal_axis": {
-                        "\"unknown\"": [
+                        "unknown": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -57,7 +57,7 @@
                                 }
                             }
                         ],
-                        "\"x\"": [
+                        "x": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -68,7 +68,7 @@
                                 }
                             }
                         ],
-                        "\"z\"": [
+                        "z": [
                             {
                                 "function": "new_properties",
                                 "options": {

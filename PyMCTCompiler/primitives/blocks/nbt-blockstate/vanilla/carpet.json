@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "\"white\""
+                                "color": "white"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "\"orange\""
+                                "color": "orange"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "\"magenta\""
+                                "color": "magenta"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "\"light_blue\""
+                                "color": "light_blue"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "\"yellow\""
+                                "color": "yellow"
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "\"lime\""
+                                "color": "lime"
                             }
                         }
                     ],
@@ -60,7 +60,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "\"pink\""
+                                "color": "pink"
                             }
                         }
                     ],
@@ -68,7 +68,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "\"gray\""
+                                "color": "gray"
                             }
                         }
                     ],
@@ -76,7 +76,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "\"silver\""
+                                "color": "silver"
                             }
                         }
                     ],
@@ -84,7 +84,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "\"cyan\""
+                                "color": "cyan"
                             }
                         }
                     ],
@@ -92,7 +92,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "\"purple\""
+                                "color": "purple"
                             }
                         }
                     ],
@@ -100,7 +100,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "\"blue\""
+                                "color": "blue"
                             }
                         }
                     ],
@@ -108,7 +108,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "\"brown\""
+                                "color": "brown"
                             }
                         }
                     ],
@@ -116,7 +116,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "\"green\""
+                                "color": "green"
                             }
                         }
                     ],
@@ -124,7 +124,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "\"red\""
+                                "color": "red"
                             }
                         }
                     ],
@@ -132,7 +132,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "\"black\""
+                                "color": "black"
                             }
                         }
                     ]
@@ -150,7 +150,7 @@
                 "function": "map_properties",
                 "options": {
                     "color": {
-                        "\"white\"": [
+                        "white": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -161,7 +161,7 @@
                                 }
                             }
                         ],
-                        "\"orange\"": [
+                        "orange": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -172,7 +172,7 @@
                                 }
                             }
                         ],
-                        "\"magenta\"": [
+                        "magenta": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -183,7 +183,7 @@
                                 }
                             }
                         ],
-                        "\"light_blue\"": [
+                        "light_blue": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -194,7 +194,7 @@
                                 }
                             }
                         ],
-                        "\"yellow\"": [
+                        "yellow": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -205,7 +205,7 @@
                                 }
                             }
                         ],
-                        "\"lime\"": [
+                        "lime": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -216,7 +216,7 @@
                                 }
                             }
                         ],
-                        "\"pink\"": [
+                        "pink": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -227,7 +227,7 @@
                                 }
                             }
                         ],
-                        "\"gray\"": [
+                        "gray": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -238,7 +238,7 @@
                                 }
                             }
                         ],
-                        "\"silver\"": [
+                        "silver": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -249,7 +249,7 @@
                                 }
                             }
                         ],
-                        "\"cyan\"": [
+                        "cyan": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -260,7 +260,7 @@
                                 }
                             }
                         ],
-                        "\"purple\"": [
+                        "purple": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -271,7 +271,7 @@
                                 }
                             }
                         ],
-                        "\"blue\"": [
+                        "blue": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -282,7 +282,7 @@
                                 }
                             }
                         ],
-                        "\"brown\"": [
+                        "brown": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -293,7 +293,7 @@
                                 }
                             }
                         ],
-                        "\"green\"": [
+                        "green": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -304,7 +304,7 @@
                                 }
                             }
                         ],
-                        "\"red\"": [
+                        "red": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -315,7 +315,7 @@
                                 }
                             }
                         ],
-                        "\"black\"": [
+                        "black": [
                             {
                                 "function": "new_properties",
                                 "options": {

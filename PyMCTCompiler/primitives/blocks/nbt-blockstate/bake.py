@@ -28,18 +28,23 @@ for blockstate in block_palette['blocks']:
 	namespace, base_name = blockstate['name'].split(':', 1)
 	if (namespace, base_name) not in blocks:
 		blocks[(namespace, base_name)] = {
-			"properties": {prop['name']: [to_snbt(prop['type'], prop['value'])] for prop in blockstate['states']},
+			"properties": {prop['name']: [[to_snbt(prop['type'], prop['value']), str(prop['value'])]] for prop in blockstate['states']},
 			"defaults": {prop['name']: to_snbt(prop['type'], prop['value']) for prop in blockstate['states']},
 			"nbt_properties": True
 		}
 	else:
 		for prop in blockstate['states']:
-			snbt_value = to_snbt(prop['type'], prop['value'])
-			if snbt_value not in blocks[(namespace, base_name)]['properties'][prop['name']]:
-				blocks[(namespace, base_name)]['properties'][prop['name']].append(snbt_value)
+			value = [to_snbt(prop['type'], prop['value']), str(prop['value'])]
+			if value not in blocks[(namespace, base_name)]['properties'][prop['name']]:
+				blocks[(namespace, base_name)]['properties'][prop['name']].append(value)
+
+with open('skip_blocks') as f:
+	skip_blocks = set(json.load(f))
 
 
 for (namespace, base_name), block in blocks.items():
+	if base_name in skip_blocks:
+		continue
 	primitive = {
 		"to_universal": [
 			{
@@ -63,14 +68,14 @@ for (namespace, base_name), block in blocks.items():
 				"function": "map_properties",
 				"options": {
 					prop: {
-						val: [
+						snbt_val: [
 							{
 								"function": "new_properties",
 								"options": {
 									prop: val
 								}
 							}
-						] for val in block['properties'][prop]
+						] for snbt_val, val in block['properties'][prop]
 					} for prop in block['properties'].keys()
 				}
 			}
@@ -85,10 +90,10 @@ for (namespace, base_name), block in blocks.items():
 							{
 								"function": "new_properties",
 								"options": {
-									prop: ['snbt', val]
+									prop: ['snbt', snbt_val]
 								}
 							}
-						] for val in block['properties'][prop]
+						] for snbt_val, val in block['properties'][prop]
 					} for prop in block['properties'].keys()
 				}
 			}

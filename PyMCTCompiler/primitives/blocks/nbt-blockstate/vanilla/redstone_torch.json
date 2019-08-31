@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "torch_facing_direction": "\"unknown\""
+                                "torch_facing_direction": "unknown"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "torch_facing_direction": "\"west\""
+                                "torch_facing_direction": "west"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "torch_facing_direction": "\"east\""
+                                "torch_facing_direction": "east"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "torch_facing_direction": "\"north\""
+                                "torch_facing_direction": "north"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "torch_facing_direction": "\"south\""
+                                "torch_facing_direction": "south"
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "torch_facing_direction": "\"top\""
+                                "torch_facing_direction": "top"
                             }
                         }
                     ]
@@ -70,7 +70,7 @@
                 "function": "map_properties",
                 "options": {
                     "torch_facing_direction": {
-                        "\"unknown\"": [
+                        "unknown": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -81,7 +81,7 @@
                                 }
                             }
                         ],
-                        "\"west\"": [
+                        "west": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -92,7 +92,7 @@
                                 }
                             }
                         ],
-                        "\"east\"": [
+                        "east": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -103,7 +103,7 @@
                                 }
                             }
                         ],
-                        "\"north\"": [
+                        "north": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -114,7 +114,7 @@
                                 }
                             }
                         ],
-                        "\"south\"": [
+                        "south": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -125,7 +125,7 @@
                                 }
                             }
                         ],
-                        "\"top\"": [
+                        "top": [
                             {
                                 "function": "new_properties",
                                 "options": {

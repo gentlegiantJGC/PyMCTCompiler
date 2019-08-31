@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_3": "\"end_stone_brick\""
+                                "stone_slab_type_3": "end_stone_brick"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_3": "\"smooth_red_sandstone\""
+                                "stone_slab_type_3": "smooth_red_sandstone"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_3": "\"polished_andesite\""
+                                "stone_slab_type_3": "polished_andesite"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_3": "\"andesite\""
+                                "stone_slab_type_3": "andesite"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_3": "\"diorite\""
+                                "stone_slab_type_3": "diorite"
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_3": "\"polished_diorite\""
+                                "stone_slab_type_3": "polished_diorite"
                             }
                         }
                     ],
@@ -60,7 +60,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_3": "\"granite\""
+                                "stone_slab_type_3": "granite"
                             }
                         }
                     ],
@@ -68,7 +68,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_3": "\"polished_granite\""
+                                "stone_slab_type_3": "polished_granite"
                             }
                         }
                     ]
@@ -78,7 +78,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "top_slot_bit": "0b"
+                                "top_slot_bit": "0"
                             }
                         }
                     ],
@@ -86,7 +86,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "top_slot_bit": "1b"
+                                "top_slot_bit": "1"
                             }
                         }
                     ]
@@ -104,7 +104,7 @@
                 "function": "map_properties",
                 "options": {
                     "stone_slab_type_3": {
-                        "\"end_stone_brick\"": [
+                        "end_stone_brick": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -115,7 +115,7 @@
                                 }
                             }
                         ],
-                        "\"smooth_red_sandstone\"": [
+                        "smooth_red_sandstone": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -126,7 +126,7 @@
                                 }
                             }
                         ],
-                        "\"polished_andesite\"": [
+                        "polished_andesite": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -137,7 +137,7 @@
                                 }
                             }
                         ],
-                        "\"andesite\"": [
+                        "andesite": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -148,7 +148,7 @@
                                 }
                             }
                         ],
-                        "\"diorite\"": [
+                        "diorite": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -159,7 +159,7 @@
                                 }
                             }
                         ],
-                        "\"polished_diorite\"": [
+                        "polished_diorite": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -170,7 +170,7 @@
                                 }
                             }
                         ],
-                        "\"granite\"": [
+                        "granite": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -181,7 +181,7 @@
                                 }
                             }
                         ],
-                        "\"polished_granite\"": [
+                        "polished_granite": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -194,7 +194,7 @@
                         ]
                     },
                     "top_slot_bit": {
-                        "0b": [
+                        "0": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -205,7 +205,7 @@
                                 }
                             }
                         ],
-                        "1b": [
+                        "1": [
                             {
                                 "function": "new_properties",
                                 "options": {

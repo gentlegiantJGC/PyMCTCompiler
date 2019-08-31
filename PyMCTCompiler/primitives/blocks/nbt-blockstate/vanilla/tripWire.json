@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "attached_bit": "0b"
+                                "attached_bit": "0"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "attached_bit": "1b"
+                                "attached_bit": "1"
                             }
                         }
                     ]
@@ -30,7 +30,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "disarmed_bit": "0b"
+                                "disarmed_bit": "0"
                             }
                         }
                     ],
@@ -38,7 +38,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "disarmed_bit": "1b"
+                                "disarmed_bit": "1"
                             }
                         }
                     ]
@@ -48,7 +48,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "powered_bit": "0b"
+                                "powered_bit": "0"
                             }
                         }
                     ],
@@ -56,7 +56,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "powered_bit": "1b"
+                                "powered_bit": "1"
                             }
                         }
                     ]
@@ -66,7 +66,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "suspended_bit": "0b"
+                                "suspended_bit": "0"
                             }
                         }
                     ],
@@ -74,7 +74,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "suspended_bit": "1b"
+                                "suspended_bit": "1"
                             }
                         }
                     ]
@@ -92,7 +92,7 @@
                 "function": "map_properties",
                 "options": {
                     "attached_bit": {
-                        "0b": [
+                        "0": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -103,7 +103,7 @@
                                 }
                             }
                         ],
-                        "1b": [
+                        "1": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -116,7 +116,7 @@
                         ]
                     },
                     "disarmed_bit": {
-                        "0b": [
+                        "0": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -127,7 +127,7 @@
                                 }
                             }
                         ],
-                        "1b": [
+                        "1": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -140,7 +140,7 @@
                         ]
                     },
                     "powered_bit": {
-                        "0b": [
+                        "0": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -151,7 +151,7 @@
                                 }
                             }
                         ],
-                        "1b": [
+                        "1": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -164,7 +164,7 @@
                         ]
                     },
                     "suspended_bit": {
-                        "0b": [
+                        "0": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -175,7 +175,7 @@
                                 }
                             }
                         ],
-                        "1b": [
+                        "1": [
                             {
                                 "function": "new_properties",
                                 "options": {

@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_type": "\"stone\""
+                                "stone_type": "stone"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_type": "\"granite\""
+                                "stone_type": "granite"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_type": "\"granite_smooth\""
+                                "stone_type": "granite_smooth"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_type": "\"diorite\""
+                                "stone_type": "diorite"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_type": "\"diorite_smooth\""
+                                "stone_type": "diorite_smooth"
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_type": "\"andesite\""
+                                "stone_type": "andesite"
                             }
                         }
                     ],
@@ -60,7 +60,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_type": "\"andesite_smooth\""
+                                "stone_type": "andesite_smooth"
                             }
                         }
                     ]
@@ -78,7 +78,7 @@
                 "function": "map_properties",
                 "options": {
                     "stone_type": {
-                        "\"stone\"": [
+                        "stone": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -89,7 +89,7 @@
                                 }
                             }
                         ],
-                        "\"granite\"": [
+                        "granite": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -100,7 +100,7 @@
                                 }
                             }
                         ],
-                        "\"granite_smooth\"": [
+                        "granite_smooth": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -111,7 +111,7 @@
                                 }
                             }
                         ],
-                        "\"diorite\"": [
+                        "diorite": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -122,7 +122,7 @@
                                 }
                             }
                         ],
-                        "\"diorite_smooth\"": [
+                        "diorite_smooth": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -133,7 +133,7 @@
                                 }
                             }
                         ],
-                        "\"andesite\"": [
+                        "andesite": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -144,7 +144,7 @@
                                 }
                             }
                         ],
-                        "\"andesite_smooth\"": [
+                        "andesite_smooth": [
                             {
                                 "function": "new_properties",
                                 "options": {

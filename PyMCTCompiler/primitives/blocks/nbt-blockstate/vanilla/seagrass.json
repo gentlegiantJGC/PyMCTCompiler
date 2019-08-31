@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sea_grass_type": "\"default\""
+                                "sea_grass_type": "default"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sea_grass_type": "\"double_top\""
+                                "sea_grass_type": "double_top"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sea_grass_type": "\"double_bot\""
+                                "sea_grass_type": "double_bot"
                             }
                         }
                     ]
@@ -46,7 +46,7 @@
                 "function": "map_properties",
                 "options": {
                     "sea_grass_type": {
-                        "\"default\"": [
+                        "default": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -57,7 +57,7 @@
                                 }
                             }
                         ],
-                        "\"double_top\"": [
+                        "double_top": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -68,7 +68,7 @@
                                 }
                             }
                         ],
-                        "\"double_bot\"": [
+                        "double_bot": [
                             {
                                 "function": "new_properties",
                                 "options": {

@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "coral_color": "\"blue\""
+                                "coral_color": "blue"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "coral_color": "\"pink\""
+                                "coral_color": "pink"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "coral_color": "\"purple\""
+                                "coral_color": "purple"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "coral_color": "\"red\""
+                                "coral_color": "red"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "coral_color": "\"yellow\""
+                                "coral_color": "yellow"
                             }
                         }
                     ]
@@ -80,7 +80,7 @@
                 "function": "map_properties",
                 "options": {
                     "coral_color": {
-                        "\"blue\"": [
+                        "blue": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -91,7 +91,7 @@
                                 }
                             }
                         ],
-                        "\"pink\"": [
+                        "pink": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -102,7 +102,7 @@
                                 }
                             }
                         ],
-                        "\"purple\"": [
+                        "purple": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -113,7 +113,7 @@
                                 }
                             }
                         ],
-                        "\"red\"": [
+                        "red": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -124,7 +124,7 @@
                                 }
                             }
                         ],
-                        "\"yellow\"": [
+                        "yellow": [
                             {
                                 "function": "new_properties",
                                 "options": {

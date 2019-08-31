@@ -62,7 +62,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "toggle_bit": "0b"
+                                "toggle_bit": "0"
                             }
                         }
                     ],
@@ -70,7 +70,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "toggle_bit": "1b"
+                                "toggle_bit": "1"
                             }
                         }
                     ]
@@ -156,7 +156,7 @@
                         ]
                     },
                     "toggle_bit": {
-                        "0b": [
+                        "0": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -167,7 +167,7 @@
                                 }
                             }
                         ],
-                        "1b": [
+                        "1": [
                             {
                                 "function": "new_properties",
                                 "options": {

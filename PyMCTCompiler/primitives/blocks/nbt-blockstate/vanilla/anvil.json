@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "damage": "\"undamaged\""
+                                "damage": "undamaged"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "damage": "\"slightly_damaged\""
+                                "damage": "slightly_damaged"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "damage": "\"very_damaged\""
+                                "damage": "very_damaged"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "damage": "\"broken\""
+                                "damage": "broken"
                             }
                         }
                     ]
@@ -88,7 +88,7 @@
                 "function": "map_properties",
                 "options": {
                     "damage": {
-                        "\"undamaged\"": [
+                        "undamaged": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -99,7 +99,7 @@
                                 }
                             }
                         ],
-                        "\"slightly_damaged\"": [
+                        "slightly_damaged": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -110,7 +110,7 @@
                                 }
                             }
                         ],
-                        "\"very_damaged\"": [
+                        "very_damaged": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -121,7 +121,7 @@
                                 }
                             }
                         ],
-                        "\"broken\"": [
+                        "broken": [
                             {
                                 "function": "new_properties",
                                 "options": {
