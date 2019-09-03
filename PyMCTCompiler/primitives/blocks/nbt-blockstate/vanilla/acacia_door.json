@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "direction": "0"
+                                "facing": "south"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "direction": "1"
+                                "facing": "west"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "direction": "2"
+                                "facing": "north"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "direction": "3"
+                                "facing": "east"
                             }
                         }
                     ]
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "door_hinge_bit": "0"
+                                "hinge": "left"
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "door_hinge_bit": "1"
+                                "hinge": "right"
                             }
                         }
                     ]
@@ -64,7 +64,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "open_bit": "0"
+                                "open": "false"
                             }
                         }
                     ],
@@ -72,7 +72,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "open_bit": "1"
+                                "open": "true"
                             }
                         }
                     ]
@@ -82,7 +82,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "upper_block_bit": "0"
+                                "half": "lower"
                             }
                         }
                     ],
@@ -90,7 +90,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "upper_block_bit": "1"
+                                "half": "upper"
                             }
                         }
                     ]
@@ -107,8 +107,8 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "direction": {
-                        "0": [
+                    "facing": {
+                        "south": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -119,7 +119,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "west": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -130,7 +130,7 @@
                                 }
                             }
                         ],
-                        "2": [
+                        "north": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -141,7 +141,7 @@
                                 }
                             }
                         ],
-                        "3": [
+                        "east": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -153,8 +153,8 @@
                             }
                         ]
                     },
-                    "door_hinge_bit": {
-                        "0": [
+                    "hinge": {
+                        "left": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -165,7 +165,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "right": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -177,8 +177,8 @@
                             }
                         ]
                     },
-                    "open_bit": {
-                        "0": [
+                    "open": {
+                        "false": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -189,7 +189,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "true": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -201,8 +201,8 @@
                             }
                         ]
                     },
-                    "upper_block_bit": {
-                        "0": [
+                    "half": {
+                        "lower": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -213,7 +213,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "upper": [
                             {
                                 "function": "new_properties",
                                 "options": {

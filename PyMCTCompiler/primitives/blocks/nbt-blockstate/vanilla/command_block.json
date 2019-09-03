@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "conditional_bit": "0"
+                                "conditional": "false"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "conditional_bit": "1"
+                                "conditional": "true"
                             }
                         }
                     ]
@@ -30,7 +30,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing_direction": "0"
+                                "facing_direction": "down"
                             }
                         }
                     ],
@@ -38,7 +38,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing_direction": "1"
+                                "facing_direction": "up"
                             }
                         }
                     ],
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing_direction": "2"
+                                "facing_direction": "north"
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing_direction": "3"
+                                "facing_direction": "south"
                             }
                         }
                     ],
@@ -62,7 +62,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing_direction": "4"
+                                "facing_direction": "west"
                             }
                         }
                     ],
@@ -70,7 +70,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing_direction": "5"
+                                "facing_direction": "east"
                             }
                         }
                     ]
@@ -87,8 +87,8 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "conditional_bit": {
-                        "0": [
+                    "conditional": {
+                        "false": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -99,7 +99,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "true": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -112,7 +112,7 @@
                         ]
                     },
                     "facing_direction": {
-                        "0": [
+                        "down": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -123,7 +123,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "up": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -134,7 +134,7 @@
                                 }
                             }
                         ],
-                        "2": [
+                        "north": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -145,7 +145,7 @@
                                 }
                             }
                         ],
-                        "3": [
+                        "south": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -156,7 +156,7 @@
                                 }
                             }
                         ],
-                        "4": [
+                        "west": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -167,7 +167,7 @@
                                 }
                             }
                         ],
-                        "5": [
+                        "east": [
                             {
                                 "function": "new_properties",
                                 "options": {

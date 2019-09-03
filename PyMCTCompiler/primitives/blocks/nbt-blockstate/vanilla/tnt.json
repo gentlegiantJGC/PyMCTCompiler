@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "allow_underwater_bit": "0"
+                                "allow_underwater": "false"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "allow_underwater_bit": "1"
+                                "allow_underwater": "true"
                             }
                         }
                     ]
@@ -30,7 +30,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "explode_bit": "0"
+                                "unstable": "false"
                             }
                         }
                     ],
@@ -38,7 +38,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "explode_bit": "1"
+                                "unstable": "true"
                             }
                         }
                     ]
@@ -55,8 +55,8 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "allow_underwater_bit": {
-                        "0": [
+                    "allow_underwater": {
+                        "false": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -67,7 +67,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "true": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -79,8 +79,8 @@
                             }
                         ]
                     },
-                    "explode_bit": {
-                        "0": [
+                    "unstable": {
+                        "false": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -91,7 +91,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "true": [
                             {
                                 "function": "new_properties",
                                 "options": {

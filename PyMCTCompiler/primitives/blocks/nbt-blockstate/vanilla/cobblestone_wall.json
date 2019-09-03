@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "wall_block_type": "cobblestone"
+                                "material": "cobblestone"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "wall_block_type": "mossy_cobblestone"
+                                "material": "mossy_cobblestone"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "wall_block_type": "granite"
+                                "material": "granite"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "wall_block_type": "diorite"
+                                "material": "diorite"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "wall_block_type": "andesite"
+                                "material": "andesite"
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "wall_block_type": "sandstone"
+                                "material": "sandstone"
                             }
                         }
                     ],
@@ -60,7 +60,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "wall_block_type": "brick"
+                                "material": "brick"
                             }
                         }
                     ],
@@ -68,7 +68,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "wall_block_type": "stone_brick"
+                                "material": "stone_brick"
                             }
                         }
                     ],
@@ -76,7 +76,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "wall_block_type": "mossy_stone_brick"
+                                "material": "mossy_stone_brick"
                             }
                         }
                     ],
@@ -84,7 +84,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "wall_block_type": "nether_brick"
+                                "material": "nether_brick"
                             }
                         }
                     ],
@@ -92,7 +92,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "wall_block_type": "end_brick"
+                                "material": "end_stone_brick"
                             }
                         }
                     ],
@@ -100,7 +100,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "wall_block_type": "prismarine"
+                                "material": "prismarine"
                             }
                         }
                     ],
@@ -108,7 +108,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "wall_block_type": "red_sandstone"
+                                "material": "red_sandstone"
                             }
                         }
                     ],
@@ -116,7 +116,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "wall_block_type": "red_nether_brick"
+                                "material": "red_nether_brick"
                             }
                         }
                     ]
@@ -133,7 +133,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "wall_block_type": {
+                    "material": {
                         "cobblestone": [
                             {
                                 "function": "new_properties",
@@ -244,7 +244,7 @@
                                 }
                             }
                         ],
-                        "end_brick": [
+                        "end_stone_brick": [
                             {
                                 "function": "new_properties",
                                 "options": {

@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "growth": "0"
+                                "age": "0"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "growth": "1"
+                                "age": "1"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "growth": "2"
+                                "age": "2"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "growth": "3"
+                                "age": "3"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "growth": "4"
+                                "age": "4"
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "growth": "5"
+                                "age": "5"
                             }
                         }
                     ],
@@ -60,7 +60,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "growth": "6"
+                                "age": "6"
                             }
                         }
                     ],
@@ -68,7 +68,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "growth": "7"
+                                "age": "7"
                             }
                         }
                     ]
@@ -85,7 +85,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "growth": {
+                    "age": {
                         "0": [
                             {
                                 "function": "new_properties",

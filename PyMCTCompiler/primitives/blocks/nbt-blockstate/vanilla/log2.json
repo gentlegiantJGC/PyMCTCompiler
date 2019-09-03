@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "new_log_type": "acacia"
+                                "material": "acacia"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "new_log_type": "dark_oak"
+                                "material": "dark_oak"
                             }
                         }
                     ]
@@ -30,7 +30,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "pillar_axis": "y"
+                                "axis": "y"
                             }
                         }
                     ],
@@ -38,7 +38,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "pillar_axis": "x"
+                                "axis": "x"
                             }
                         }
                     ],
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "pillar_axis": "z"
+                                "axis": "z"
                             }
                         }
                     ]
@@ -63,7 +63,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "new_log_type": {
+                    "material": {
                         "acacia": [
                             {
                                 "function": "new_properties",
@@ -87,7 +87,7 @@
                             }
                         ]
                     },
-                    "pillar_axis": {
+                    "axis": {
                         "y": [
                             {
                                 "function": "new_properties",

@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "tall_grass_type": "default"
+                                "flower": "default"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "tall_grass_type": "tall"
+                                "flower": "tall"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "tall_grass_type": "fern"
+                                "flower": "fern"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "tall_grass_type": "snow"
+                                "flower": "snow"
                             }
                         }
                     ]
@@ -53,7 +53,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "tall_grass_type": {
+                    "flower": {
                         "default": [
                             {
                                 "function": "new_properties",

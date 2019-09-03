@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "age_bit": "0"
+                                "stage": "0"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "age_bit": "1"
+                                "stage": "1"
                             }
                         }
                     ]
@@ -87,7 +87,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "age_bit": {
+                    "stage": {
                         "0": [
                             {
                                 "function": "new_properties",

@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type": "smooth_stone"
+                                "material": "smooth_stone"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type": "sandstone"
+                                "material": "sandstone"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type": "wood"
+                                "material": "petrified_oak"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type": "cobblestone"
+                                "material": "cobblestone"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type": "brick"
+                                "material": "brick"
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type": "stone_brick"
+                                "material": "stone_brick"
                             }
                         }
                     ],
@@ -60,7 +60,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type": "quartz"
+                                "material": "quartz"
                             }
                         }
                     ],
@@ -68,7 +68,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type": "nether_brick"
+                                "material": "nether_brick"
                             }
                         }
                     ]
@@ -78,7 +78,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "top_slot_bit": "0"
+                                "type": "bottom"
                             }
                         }
                     ],
@@ -86,7 +86,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "top_slot_bit": "1"
+                                "type": "top"
                             }
                         }
                     ]
@@ -103,7 +103,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "stone_slab_type": {
+                    "material": {
                         "smooth_stone": [
                             {
                                 "function": "new_properties",
@@ -126,7 +126,7 @@
                                 }
                             }
                         ],
-                        "wood": [
+                        "petrified_oak": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -193,8 +193,8 @@
                             }
                         ]
                     },
-                    "top_slot_bit": {
-                        "0": [
+                    "type": {
+                        "bottom": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -205,7 +205,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "top": [
                             {
                                 "function": "new_properties",
                                 "options": {

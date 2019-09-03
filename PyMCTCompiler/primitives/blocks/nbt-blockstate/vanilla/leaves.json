@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "old_leaf_type": "oak"
+                                "material": "oak"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "old_leaf_type": "spruce"
+                                "material": "spruce"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "old_leaf_type": "birch"
+                                "material": "birch"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "old_leaf_type": "jungle"
+                                "material": "jungle"
                             }
                         }
                     ]
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "persistent_bit": "0"
+                                "persistent": "false"
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "persistent_bit": "1"
+                                "persistent": "true"
                             }
                         }
                     ]
@@ -64,7 +64,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "update_bit": "0"
+                                "check_decay": "false"
                             }
                         }
                     ],
@@ -72,7 +72,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "update_bit": "1"
+                                "check_decay": "true"
                             }
                         }
                     ]
@@ -89,7 +89,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "old_leaf_type": {
+                    "material": {
                         "oak": [
                             {
                                 "function": "new_properties",
@@ -135,8 +135,8 @@
                             }
                         ]
                     },
-                    "persistent_bit": {
-                        "0": [
+                    "persistent": {
+                        "false": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -147,7 +147,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "true": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -159,8 +159,8 @@
                             }
                         ]
                     },
-                    "update_bit": {
-                        "0": [
+                    "check_decay": {
+                        "false": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -171,7 +171,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "true": [
                             {
                                 "function": "new_properties",
                                 "options": {

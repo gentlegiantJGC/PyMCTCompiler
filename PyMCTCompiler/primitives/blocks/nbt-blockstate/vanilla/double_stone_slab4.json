@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_4": "mossy_stone_brick"
+                                "material": "mossy_stone_brick"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_4": "smooth_quartz"
+                                "material": "smooth_quartz"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_4": "stone"
+                                "material": "stone"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_4": "cut_sandstone"
+                                "material": "cut_sandstone"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_4": "cut_red_sandstone"
+                                "material": "cut_red_sandstone"
                             }
                         }
                     ]
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "top_slot_bit": "0"
+                                "type": "bottom"
                             }
                         }
                     ],
@@ -62,7 +62,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "top_slot_bit": "1"
+                                "type": "top"
                             }
                         }
                     ]
@@ -79,7 +79,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "stone_slab_type_4": {
+                    "material": {
                         "mossy_stone_brick": [
                             {
                                 "function": "new_properties",
@@ -136,8 +136,8 @@
                             }
                         ]
                     },
-                    "top_slot_bit": {
-                        "0": [
+                    "type": {
+                        "bottom": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -148,7 +148,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "top": [
                             {
                                 "function": "new_properties",
                                 "options": {

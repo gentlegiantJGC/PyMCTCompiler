@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stability": "0"
+                                "distance": "0"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stability": "1"
+                                "distance": "1"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stability": "2"
+                                "distance": "2"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stability": "3"
+                                "distance": "3"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stability": "4"
+                                "distance": "4"
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stability": "5"
+                                "distance": "5"
                             }
                         }
                     ],
@@ -60,7 +60,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stability": "6"
+                                "distance": "6"
                             }
                         }
                     ],
@@ -68,7 +68,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stability": "7"
+                                "distance": "7"
                             }
                         }
                     ]
@@ -78,7 +78,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stability_check": "0"
+                                "bottom": "true"
                             }
                         }
                     ],
@@ -86,7 +86,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stability_check": "1"
+                                "bottom": "false"
                             }
                         }
                     ]
@@ -103,7 +103,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "stability": {
+                    "distance": {
                         "0": [
                             {
                                 "function": "new_properties",
@@ -193,8 +193,8 @@
                             }
                         ]
                     },
-                    "stability_check": {
-                        "0": [
+                    "bottom": {
+                        "true": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -205,7 +205,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "false": [
                             {
                                 "function": "new_properties",
                                 "options": {

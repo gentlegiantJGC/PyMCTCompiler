@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "monster_egg_stone_type": "stone"
+                                "material": "stone"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "monster_egg_stone_type": "cobblestone"
+                                "material": "cobblestone"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "monster_egg_stone_type": "stone_brick"
+                                "material": "stone_bricks"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "monster_egg_stone_type": "mossy_stone_brick"
+                                "material": "mossy_stone_bricks"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "monster_egg_stone_type": "cracked_stone_brick"
+                                "material": "cracked_stone_bricks"
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "monster_egg_stone_type": "chiseled_stone_brick"
+                                "material": "chiseled_stone_bricks"
                             }
                         }
                     ]
@@ -69,7 +69,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "monster_egg_stone_type": {
+                    "material": {
                         "stone": [
                             {
                                 "function": "new_properties",
@@ -92,7 +92,7 @@
                                 }
                             }
                         ],
-                        "stone_brick": [
+                        "stone_bricks": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -103,7 +103,7 @@
                                 }
                             }
                         ],
-                        "mossy_stone_brick": [
+                        "mossy_stone_bricks": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -114,7 +114,7 @@
                                 }
                             }
                         ],
-                        "cracked_stone_brick": [
+                        "cracked_stone_bricks": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -125,7 +125,7 @@
                                 }
                             }
                         ],
-                        "chiseled_stone_brick": [
+                        "chiseled_stone_bricks": [
                             {
                                 "function": "new_properties",
                                 "options": {

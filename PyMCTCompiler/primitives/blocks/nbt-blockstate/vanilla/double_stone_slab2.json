@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_2": "red_sandstone"
+                                "material": "red_sandstone"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_2": "purpur"
+                                "material": "purpur"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_2": "prismarine_rough"
+                                "material": "prismarine"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_2": "prismarine_dark"
+                                "material": "dark_prismarine"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_2": "prismarine_brick"
+                                "material": "prismarine_brick"
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_2": "mossy_cobblestone"
+                                "material": "mossy_cobblestone"
                             }
                         }
                     ],
@@ -60,7 +60,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_2": "smooth_sandstone"
+                                "material": "smooth_sandstone"
                             }
                         }
                     ],
@@ -68,7 +68,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_slab_type_2": "red_nether_brick"
+                                "material": "red_nether_brick"
                             }
                         }
                     ]
@@ -78,7 +78,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "top_slot_bit": "0"
+                                "type": "bottom"
                             }
                         }
                     ],
@@ -86,7 +86,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "top_slot_bit": "1"
+                                "type": "top"
                             }
                         }
                     ]
@@ -103,7 +103,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "stone_slab_type_2": {
+                    "material": {
                         "red_sandstone": [
                             {
                                 "function": "new_properties",
@@ -126,7 +126,7 @@
                                 }
                             }
                         ],
-                        "prismarine_rough": [
+                        "prismarine": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -137,7 +137,7 @@
                                 }
                             }
                         ],
-                        "prismarine_dark": [
+                        "dark_prismarine": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -193,8 +193,8 @@
                             }
                         ]
                     },
-                    "top_slot_bit": {
-                        "0": [
+                    "type": {
+                        "bottom": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -205,7 +205,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "top": [
                             {
                                 "function": "new_properties",
                                 "options": {

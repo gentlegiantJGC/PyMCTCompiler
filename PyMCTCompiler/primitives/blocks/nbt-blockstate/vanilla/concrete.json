@@ -76,7 +76,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "silver"
+                                "color": "light_gray"
                             }
                         }
                     ],
@@ -238,7 +238,7 @@
                                 }
                             }
                         ],
-                        "silver": [
+                        "light_gray": [
                             {
                                 "function": "new_properties",
                                 "options": {

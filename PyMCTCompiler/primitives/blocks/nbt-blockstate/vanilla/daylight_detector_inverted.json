@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "redstone_signal": "0"
+                                "power": "0"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "redstone_signal": "1"
+                                "power": "1"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "redstone_signal": "2"
+                                "power": "2"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "redstone_signal": "3"
+                                "power": "3"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "redstone_signal": "4"
+                                "power": "4"
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "redstone_signal": "5"
+                                "power": "5"
                             }
                         }
                     ],
@@ -60,7 +60,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "redstone_signal": "6"
+                                "power": "6"
                             }
                         }
                     ],
@@ -68,7 +68,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "redstone_signal": "7"
+                                "power": "7"
                             }
                         }
                     ],
@@ -76,7 +76,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "redstone_signal": "8"
+                                "power": "8"
                             }
                         }
                     ],
@@ -84,7 +84,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "redstone_signal": "9"
+                                "power": "9"
                             }
                         }
                     ],
@@ -92,7 +92,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "redstone_signal": "10"
+                                "power": "10"
                             }
                         }
                     ],
@@ -100,7 +100,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "redstone_signal": "11"
+                                "power": "11"
                             }
                         }
                     ],
@@ -108,7 +108,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "redstone_signal": "12"
+                                "power": "12"
                             }
                         }
                     ],
@@ -116,7 +116,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "redstone_signal": "13"
+                                "power": "13"
                             }
                         }
                     ],
@@ -124,7 +124,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "redstone_signal": "14"
+                                "power": "14"
                             }
                         }
                     ],
@@ -132,7 +132,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "redstone_signal": "15"
+                                "power": "15"
                             }
                         }
                     ]
@@ -149,7 +149,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "redstone_signal": {
+                    "power": {
                         "0": [
                             {
                                 "function": "new_properties",

@@ -30,7 +30,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "height": "0"
+                                "layers": "1"
                             }
                         }
                     ],
@@ -38,7 +38,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "height": "1"
+                                "layers": "2"
                             }
                         }
                     ],
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "height": "2"
+                                "layers": "3"
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "height": "3"
+                                "layers": "4"
                             }
                         }
                     ],
@@ -62,7 +62,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "height": "4"
+                                "layers": "5"
                             }
                         }
                     ],
@@ -70,7 +70,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "height": "5"
+                                "layers": "6"
                             }
                         }
                     ],
@@ -78,7 +78,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "height": "6"
+                                "layers": "7"
                             }
                         }
                     ],
@@ -86,7 +86,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "height": "7"
+                                "layers": "8"
                             }
                         }
                     ]
@@ -127,8 +127,8 @@
                             }
                         ]
                     },
-                    "height": {
-                        "0": [
+                    "layers": {
+                        "1": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -139,7 +139,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "2": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -150,7 +150,7 @@
                                 }
                             }
                         ],
-                        "2": [
+                        "3": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -161,7 +161,7 @@
                                 }
                             }
                         ],
-                        "3": [
+                        "4": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -172,7 +172,7 @@
                                 }
                             }
                         ],
-                        "4": [
+                        "5": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -183,7 +183,7 @@
                                 }
                             }
                         ],
-                        "5": [
+                        "6": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -194,7 +194,7 @@
                                 }
                             }
                         ],
-                        "6": [
+                        "7": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -205,7 +205,7 @@
                                 }
                             }
                         ],
-                        "7": [
+                        "8": [
                             {
                                 "function": "new_properties",
                                 "options": {

@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rail_data_bit": "0"
+                                "powered": "false"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rail_data_bit": "1"
+                                "powered": "true"
                             }
                         }
                     ]
@@ -30,7 +30,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rail_direction": "0"
+                                "shape": "north_south"
                             }
                         }
                     ],
@@ -38,7 +38,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rail_direction": "1"
+                                "shape": "east_west"
                             }
                         }
                     ],
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rail_direction": "2"
+                                "shape": "ascending_east"
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rail_direction": "3"
+                                "shape": "ascending_west"
                             }
                         }
                     ],
@@ -62,7 +62,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rail_direction": "4"
+                                "shape": "ascending_north"
                             }
                         }
                     ],
@@ -70,7 +70,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rail_direction": "5"
+                                "shape": "ascending_south"
                             }
                         }
                     ]
@@ -87,8 +87,8 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "rail_data_bit": {
-                        "0": [
+                    "powered": {
+                        "false": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -99,7 +99,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "true": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -111,8 +111,8 @@
                             }
                         ]
                     },
-                    "rail_direction": {
-                        "0": [
+                    "shape": {
+                        "north_south": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -123,7 +123,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "east_west": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -134,7 +134,7 @@
                                 }
                             }
                         ],
-                        "2": [
+                        "ascending_east": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -145,7 +145,7 @@
                                 }
                             }
                         ],
-                        "3": [
+                        "ascending_west": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -156,7 +156,7 @@
                                 }
                             }
                         ],
-                        "4": [
+                        "ascending_north": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -167,7 +167,7 @@
                                 }
                             }
                         ],
-                        "5": [
+                        "ascending_south": [
                             {
                                 "function": "new_properties",
                                 "options": {

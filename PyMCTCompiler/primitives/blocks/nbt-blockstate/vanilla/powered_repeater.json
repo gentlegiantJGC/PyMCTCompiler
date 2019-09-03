@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "direction": "0"
+                                "facing": "south"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "direction": "1"
+                                "facing": "west"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "direction": "2"
+                                "facing": "north"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "direction": "3"
+                                "facing": "east"
                             }
                         }
                     ]
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "repeater_delay": "0"
+                                "delay": "0"
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "repeater_delay": "1"
+                                "delay": "1"
                             }
                         }
                     ],
@@ -62,7 +62,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "repeater_delay": "2"
+                                "delay": "2"
                             }
                         }
                     ],
@@ -70,7 +70,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "repeater_delay": "3"
+                                "delay": "3"
                             }
                         }
                     ]
@@ -87,8 +87,8 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "direction": {
-                        "0": [
+                    "facing": {
+                        "south": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -99,7 +99,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "west": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -110,7 +110,7 @@
                                 }
                             }
                         ],
-                        "2": [
+                        "north": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -121,7 +121,7 @@
                                 }
                             }
                         ],
-                        "3": [
+                        "east": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -133,7 +133,7 @@
                             }
                         ]
                     },
-                    "repeater_delay": {
+                    "delay": {
                         "0": [
                             {
                                 "function": "new_properties",

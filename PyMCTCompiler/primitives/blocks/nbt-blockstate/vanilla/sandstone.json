@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sand_stone_type": "default"
+                                "variant": "normal"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sand_stone_type": "heiroglyphs"
+                                "variant": "chiseled"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sand_stone_type": "cut"
+                                "variant": "cut"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sand_stone_type": "smooth"
+                                "variant": "smooth"
                             }
                         }
                     ]
@@ -53,8 +53,8 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "sand_stone_type": {
-                        "default": [
+                    "variant": {
+                        "normal": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -65,7 +65,7 @@
                                 }
                             }
                         ],
-                        "heiroglyphs": [
+                        "chiseled": [
                             {
                                 "function": "new_properties",
                                 "options": {

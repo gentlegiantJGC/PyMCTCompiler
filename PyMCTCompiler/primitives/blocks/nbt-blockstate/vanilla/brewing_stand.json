@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "brewing_stand_slot_a_bit": "0"
+                                "has_bottle_0": "false"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "brewing_stand_slot_a_bit": "1"
+                                "has_bottle_0": "true"
                             }
                         }
                     ]
@@ -30,7 +30,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "brewing_stand_slot_b_bit": "0"
+                                "has_bottle_1": "false"
                             }
                         }
                     ],
@@ -38,7 +38,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "brewing_stand_slot_b_bit": "1"
+                                "has_bottle_1": "true"
                             }
                         }
                     ]
@@ -48,7 +48,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "brewing_stand_slot_c_bit": "0"
+                                "has_bottle_2": "false"
                             }
                         }
                     ],
@@ -56,7 +56,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "brewing_stand_slot_c_bit": "1"
+                                "has_bottle_2": "true"
                             }
                         }
                     ]
@@ -73,8 +73,8 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "brewing_stand_slot_a_bit": {
-                        "0": [
+                    "has_bottle_0": {
+                        "false": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -85,7 +85,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "true": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -97,8 +97,8 @@
                             }
                         ]
                     },
-                    "brewing_stand_slot_b_bit": {
-                        "0": [
+                    "has_bottle_1": {
+                        "false": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -109,7 +109,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "true": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -121,8 +121,8 @@
                             }
                         ]
                     },
-                    "brewing_stand_slot_c_bit": {
-                        "0": [
+                    "has_bottle_2": {
+                        "false": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -133,7 +133,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "true": [
                             {
                                 "function": "new_properties",
                                 "options": {

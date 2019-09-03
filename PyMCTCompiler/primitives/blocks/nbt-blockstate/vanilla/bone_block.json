@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "pillar_axis": "y"
+                                "axis": "y"
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "pillar_axis": "x"
+                                "axis": "x"
                             }
                         }
                     ],
@@ -62,7 +62,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "pillar_axis": "z"
+                                "axis": "z"
                             }
                         }
                     ]
@@ -125,7 +125,7 @@
                             }
                         ]
                     },
-                    "pillar_axis": {
+                    "axis": {
                         "y": [
                             {
                                 "function": "new_properties",

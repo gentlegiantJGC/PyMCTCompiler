@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "portal_axis": "unknown"
+                                "axis": "unknown"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "portal_axis": "x"
+                                "axis": "x"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "portal_axis": "z"
+                                "axis": "z"
                             }
                         }
                     ]
@@ -45,7 +45,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "portal_axis": {
+                    "axis": {
                         "unknown": [
                             {
                                 "function": "new_properties",

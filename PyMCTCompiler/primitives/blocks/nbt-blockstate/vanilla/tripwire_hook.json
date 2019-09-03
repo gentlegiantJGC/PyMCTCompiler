@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "attached_bit": "0"
+                                "attached": "false"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "attached_bit": "1"
+                                "attached": "true"
                             }
                         }
                     ]
@@ -30,7 +30,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "direction": "0"
+                                "facing": "south"
                             }
                         }
                     ],
@@ -38,7 +38,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "direction": "1"
+                                "facing": "west"
                             }
                         }
                     ],
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "direction": "2"
+                                "facing": "north"
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "direction": "3"
+                                "facing": "east"
                             }
                         }
                     ]
@@ -64,7 +64,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "powered_bit": "0"
+                                "powered": "false"
                             }
                         }
                     ],
@@ -72,7 +72,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "powered_bit": "1"
+                                "powered": "true"
                             }
                         }
                     ]
@@ -89,8 +89,8 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "attached_bit": {
-                        "0": [
+                    "attached": {
+                        "false": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -101,7 +101,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "true": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -113,8 +113,8 @@
                             }
                         ]
                     },
-                    "direction": {
-                        "0": [
+                    "facing": {
+                        "south": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -125,7 +125,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "west": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -136,7 +136,7 @@
                                 }
                             }
                         ],
-                        "2": [
+                        "north": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -147,7 +147,7 @@
                                 }
                             }
                         ],
-                        "3": [
+                        "east": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -159,8 +159,8 @@
                             }
                         ]
                     },
-                    "powered_bit": {
-                        "0": [
+                    "powered": {
+                        "false": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -171,7 +171,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "true": [
                             {
                                 "function": "new_properties",
                                 "options": {

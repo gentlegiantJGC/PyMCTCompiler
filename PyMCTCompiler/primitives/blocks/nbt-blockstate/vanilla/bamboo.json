@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "age_bit": "0"
+                                "stage": "0"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "age_bit": "1"
+                                "stage": "1"
                             }
                         }
                     ]
@@ -30,7 +30,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "bamboo_leaf_size": "no_leaves"
+                                "leaves": "none"
                             }
                         }
                     ],
@@ -38,7 +38,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "bamboo_leaf_size": "small_leaves"
+                                "leaves": "small"
                             }
                         }
                     ],
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "bamboo_leaf_size": "large_leaves"
+                                "leaves": "large"
                             }
                         }
                     ]
@@ -56,7 +56,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "bamboo_stalk_thickness": "thin"
+                                "age": "0"
                             }
                         }
                     ],
@@ -64,7 +64,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "bamboo_stalk_thickness": "thick"
+                                "age": "1"
                             }
                         }
                     ]
@@ -81,7 +81,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "age_bit": {
+                    "stage": {
                         "0": [
                             {
                                 "function": "new_properties",
@@ -105,8 +105,8 @@
                             }
                         ]
                     },
-                    "bamboo_leaf_size": {
-                        "no_leaves": [
+                    "leaves": {
+                        "none": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -117,7 +117,7 @@
                                 }
                             }
                         ],
-                        "small_leaves": [
+                        "small": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -128,7 +128,7 @@
                                 }
                             }
                         ],
-                        "large_leaves": [
+                        "large": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -140,8 +140,8 @@
                             }
                         ]
                     },
-                    "bamboo_stalk_thickness": {
-                        "thin": [
+                    "age": {
+                        "0": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -152,7 +152,7 @@
                                 }
                             }
                         ],
-                        "thick": [
+                        "1": [
                             {
                                 "function": "new_properties",
                                 "options": {

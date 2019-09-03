@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "pillar_axis": "y"
+                                "axis": "y"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "pillar_axis": "x"
+                                "axis": "x"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "pillar_axis": "z"
+                                "axis": "z"
                             }
                         }
                     ]
@@ -38,7 +38,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stripped_bit": "0"
+                                "stripped": "false"
                             }
                         }
                     ],
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stripped_bit": "1"
+                                "stripped": "true"
                             }
                         }
                     ]
@@ -56,7 +56,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "wood_type": "oak"
+                                "material": "oak"
                             }
                         }
                     ],
@@ -64,7 +64,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "wood_type": "spruce"
+                                "material": "spruce"
                             }
                         }
                     ],
@@ -72,7 +72,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "wood_type": "birch"
+                                "material": "birch"
                             }
                         }
                     ],
@@ -80,7 +80,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "wood_type": "jungle"
+                                "material": "jungle"
                             }
                         }
                     ],
@@ -88,7 +88,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "wood_type": "acacia"
+                                "material": "acacia"
                             }
                         }
                     ],
@@ -96,7 +96,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "wood_type": "dark_oak"
+                                "material": "dark_oak"
                             }
                         }
                     ]
@@ -113,7 +113,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "pillar_axis": {
+                    "axis": {
                         "y": [
                             {
                                 "function": "new_properties",
@@ -148,8 +148,8 @@
                             }
                         ]
                     },
-                    "stripped_bit": {
-                        "0": [
+                    "stripped": {
+                        "false": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -160,7 +160,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "true": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -172,7 +172,7 @@
                             }
                         ]
                     },
-                    "wood_type": {
+                    "material": {
                         "oak": [
                             {
                                 "function": "new_properties",

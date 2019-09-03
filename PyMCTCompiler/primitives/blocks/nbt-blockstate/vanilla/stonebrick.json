@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_brick_type": "default"
+                                "variant": "normal"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_brick_type": "mossy"
+                                "variant": "mossy"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_brick_type": "cracked"
+                                "variant": "cracked"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_brick_type": "chiseled"
+                                "variant": "chiseled"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stone_brick_type": "smooth"
+                                "variant": "smooth"
                             }
                         }
                     ]
@@ -61,8 +61,8 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "stone_brick_type": {
-                        "default": [
+                    "variant": {
+                        "normal": [
                             {
                                 "function": "new_properties",
                                 "options": {

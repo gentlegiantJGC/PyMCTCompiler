@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "upside_down_bit": "0"
+                                "half": "bottom"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "upside_down_bit": "1"
+                                "half": "top"
                             }
                         }
                     ]
@@ -30,7 +30,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "weirdo_direction": "0"
+                                "weirdo_direction": "east"
                             }
                         }
                     ],
@@ -38,7 +38,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "weirdo_direction": "1"
+                                "weirdo_direction": "west"
                             }
                         }
                     ],
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "weirdo_direction": "2"
+                                "weirdo_direction": "south"
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "weirdo_direction": "3"
+                                "weirdo_direction": "north"
                             }
                         }
                     ]
@@ -71,8 +71,8 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "upside_down_bit": {
-                        "0": [
+                    "half": {
+                        "bottom": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -83,7 +83,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "top": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -96,7 +96,7 @@
                         ]
                     },
                     "weirdo_direction": {
-                        "0": [
+                        "east": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -107,7 +107,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "west": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -118,7 +118,7 @@
                                 }
                             }
                         ],
-                        "2": [
+                        "south": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -129,7 +129,7 @@
                                 }
                             }
                         ],
-                        "3": [
+                        "north": [
                             {
                                 "function": "new_properties",
                                 "options": {

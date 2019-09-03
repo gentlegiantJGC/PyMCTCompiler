@@ -30,7 +30,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "torch_facing_direction": "unknown"
+                                "facing": "unknown"
                             }
                         }
                     ],
@@ -38,7 +38,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "torch_facing_direction": "west"
+                                "facing": "west"
                             }
                         }
                     ],
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "torch_facing_direction": "east"
+                                "facing": "east"
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "torch_facing_direction": "north"
+                                "facing": "north"
                             }
                         }
                     ],
@@ -62,7 +62,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "torch_facing_direction": "south"
+                                "facing": "south"
                             }
                         }
                     ],
@@ -70,7 +70,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "torch_facing_direction": "top"
+                                "facing": "up"
                             }
                         }
                     ]
@@ -111,7 +111,7 @@
                             }
                         ]
                     },
-                    "torch_facing_direction": {
+                    "facing": {
                         "unknown": [
                             {
                                 "function": "new_properties",
@@ -167,7 +167,7 @@
                                 }
                             }
                         ],
-                        "top": [
+                        "up": [
                             {
                                 "function": "new_properties",
                                 "options": {

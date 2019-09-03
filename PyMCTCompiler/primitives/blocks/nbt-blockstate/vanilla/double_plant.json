@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "double_plant_type": "sunflower"
+                                "flower": "sunflower"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "double_plant_type": "syringa"
+                                "flower": "lilac"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "double_plant_type": "grass"
+                                "flower": "tall_grass"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "double_plant_type": "fern"
+                                "flower": "large_fern"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "double_plant_type": "rose"
+                                "flower": "rose_bush"
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "double_plant_type": "paeonia"
+                                "flower": "peony"
                             }
                         }
                     ]
@@ -62,7 +62,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "upper_block_bit": "0"
+                                "half": "lower"
                             }
                         }
                     ],
@@ -70,7 +70,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "upper_block_bit": "1"
+                                "half": "upper"
                             }
                         }
                     ]
@@ -87,7 +87,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "double_plant_type": {
+                    "flower": {
                         "sunflower": [
                             {
                                 "function": "new_properties",
@@ -99,7 +99,7 @@
                                 }
                             }
                         ],
-                        "syringa": [
+                        "lilac": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -110,7 +110,7 @@
                                 }
                             }
                         ],
-                        "grass": [
+                        "tall_grass": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -121,7 +121,7 @@
                                 }
                             }
                         ],
-                        "fern": [
+                        "large_fern": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -132,7 +132,7 @@
                                 }
                             }
                         ],
-                        "rose": [
+                        "rose_bush": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -143,7 +143,7 @@
                                 }
                             }
                         ],
-                        "paeonia": [
+                        "peony": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -155,8 +155,8 @@
                             }
                         ]
                     },
-                    "upper_block_bit": {
-                        "0": [
+                    "half": {
+                        "lower": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -167,7 +167,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "upper": [
                             {
                                 "function": "new_properties",
                                 "options": {

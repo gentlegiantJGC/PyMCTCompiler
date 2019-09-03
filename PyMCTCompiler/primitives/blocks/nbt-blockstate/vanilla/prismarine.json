@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "prismarine_block_type": "default"
+                                "variant": "default"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "prismarine_block_type": "dark"
+                                "variant": "dark"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "prismarine_block_type": "bricks"
+                                "variant": "bricks"
                             }
                         }
                     ]
@@ -45,7 +45,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "prismarine_block_type": {
+                    "variant": {
                         "default": [
                             {
                                 "function": "new_properties",

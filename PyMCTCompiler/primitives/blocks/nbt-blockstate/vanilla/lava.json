@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "liquid_depth": "0"
+                                "level": "0"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "liquid_depth": "1"
+                                "level": "1"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "liquid_depth": "2"
+                                "level": "2"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "liquid_depth": "3"
+                                "level": "3"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "liquid_depth": "4"
+                                "level": "4"
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "liquid_depth": "5"
+                                "level": "5"
                             }
                         }
                     ],
@@ -60,7 +60,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "liquid_depth": "6"
+                                "level": "6"
                             }
                         }
                     ],
@@ -68,7 +68,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "liquid_depth": "7"
+                                "level": "7"
                             }
                         }
                     ],
@@ -76,7 +76,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "liquid_depth": "8"
+                                "level": "8"
                             }
                         }
                     ],
@@ -84,7 +84,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "liquid_depth": "9"
+                                "level": "9"
                             }
                         }
                     ],
@@ -92,7 +92,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "liquid_depth": "10"
+                                "level": "10"
                             }
                         }
                     ],
@@ -100,7 +100,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "liquid_depth": "11"
+                                "level": "11"
                             }
                         }
                     ],
@@ -108,7 +108,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "liquid_depth": "12"
+                                "level": "12"
                             }
                         }
                     ],
@@ -116,7 +116,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "liquid_depth": "13"
+                                "level": "13"
                             }
                         }
                     ],
@@ -124,7 +124,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "liquid_depth": "14"
+                                "level": "14"
                             }
                         }
                     ],
@@ -132,7 +132,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "liquid_depth": "15"
+                                "level": "15"
                             }
                         }
                     ]
@@ -149,7 +149,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "liquid_depth": {
+                    "level": {
                         "0": [
                             {
                                 "function": "new_properties",
