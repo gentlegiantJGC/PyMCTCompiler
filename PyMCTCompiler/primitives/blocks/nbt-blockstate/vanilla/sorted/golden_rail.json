@@ -2,7 +2,7 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:golden_rail"
+            "options": "universal_minecraft:powered_rail"
         },
         {
             "function": "map_properties",
@@ -79,7 +79,7 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:golden_rail": [
+        "universal_minecraft:powered_rail": [
             {
                 "function": "new_block",
                 "options": "minecraft:golden_rail"
