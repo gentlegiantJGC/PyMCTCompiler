@@ -1,0 +1,111 @@
+{
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:log"
+		},
+		{
+			"function": "new_properties",
+			"options": {
+				"stripped": "true",
+				"material": "birch"
+			}
+		},
+		{
+			"function": "map_properties",
+			"options": {
+				"pillar_axis": {
+					"\"y\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"axis": "y"
+							}
+						}
+					],
+					"\"x\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"axis": "x"
+							}
+						}
+					],
+					"\"z\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"axis": "z"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:log": [
+			{
+				"function": "new_block",
+				"options": "minecraft:log"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"sripped": {
+						"true": [
+							{
+								"function": "map_properties",
+								"options": {
+									"material": {
+										"birch": [
+											{
+												"function": "new_block",
+												"options": "minecraft:stripped_birch_log"
+											}
+										]
+									}
+								}
+							}
+						]
+					},
+					"axis": {
+						"y": [
+							{
+								"function": "new_properties",
+								"options": {
+									"pillar_axis": [
+										"snbt",
+										"\"y\""
+									]
+								}
+							}
+						],
+						"x": [
+							{
+								"function": "new_properties",
+								"options": {
+									"pillar_axis": [
+										"snbt",
+										"\"x\""
+									]
+								}
+							}
+						],
+						"z": [
+							{
+								"function": "new_properties",
+								"options": {
+									"pillar_axis": [
+										"snbt",
+										"\"z\""
+									]
+								}
+							}
+						]
+					}
+				}
+			}
+		]
+	}
+}
