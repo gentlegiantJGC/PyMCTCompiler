@@ -27,9 +27,9 @@
 					"6",
 					"7"
 				],
-				"decayable": [
-					"true",
-					"false"
+				"persistent": [
+					"false",
+					"true"
 				],
 				"check_decay": [
 					"true",
@@ -39,7 +39,7 @@
 			"defaults": {
 				"material": "oak",
 				"distance": "7",
-				"decayable": "true",
+				"persistent": "false",
 				"check_decay": "true"
 			}
 		}

@@ -730,7 +730,7 @@ def leaves(input_namespace: str, input_block_name: str, material: str, universal
 							{
 								"function": "new_properties",
 								"options": {
-									"decayable": "false",
+									"persistent": "true",
 									"check_decay": "false"
 								}
 							}
@@ -739,7 +739,7 @@ def leaves(input_namespace: str, input_block_name: str, material: str, universal
 							{
 								"function": "new_properties",
 								"options": {
-									"decayable": "true",
+									"persistent": "false",
 									"check_decay": "false"
 								}
 							}
@@ -760,24 +760,6 @@ def leaves(input_namespace: str, input_block_name: str, material: str, universal
 									"options": f"{input_namespace}:{input_block_name}"
 								}
 							]
-						},
-						"decayable": {
-							"true": [
-								{
-									"function": "new_properties",
-									"options": {
-										"persistent": "false"
-									}
-								}
-							],
-							"false": [
-								{
-									"function": "new_properties",
-									"options": {
-										"persistent": "true"
-									}
-								}
-							]
 						}
 					}
 				},
@@ -792,6 +774,10 @@ def leaves(input_namespace: str, input_block_name: str, material: str, universal
 							"5",
 							"6",
 							"7"
+						],
+						"persistent": [
+							"false",
+							"true"
 						]
 					}
 				}

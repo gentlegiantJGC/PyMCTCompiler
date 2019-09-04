@@ -367,11 +367,11 @@ def liquid(input_namespace: str, input_block_name: str, flowing_: bool, universa
 
 def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "universal_minecraft", to_block_name: str = "leaves") -> dict:
 	if platform == 'bedrock':
-		property8 = "decayable"
+		property8 = "persistent"
 		property4 = "check_decay"
 	elif platform == 'java':
 		property8 = "check_decay"
-		property4 = "decayable"
+		property4 = "persistent"
 	else:
 		raise Exception(f'Platform "{platform}" is not known')
 
@@ -397,7 +397,7 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 								"function": "new_properties",
 								"options": {
 									"material": material_pallet[data & 3],
-									property4: {0: "true", 4: "false"}[data & 4],
+									property4: {0: "false", 4: "true"}[data & 4],
 									property8: {0: "false", 8: "true"}[data & 8]
 								}
 							}
@@ -437,7 +437,7 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 														}
 													}
 												}
-											] for data4, val4 in {0: "true", 4: "false"}.items()
+											] for data4, val4 in {0: "false", 4: "true"}.items()
 										}
 									}
 								}
@@ -450,7 +450,7 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 		"blockstate_specification": {
 			"properties": {
 				"material": list(material_pallet.values()),
-				"decayable": [
+				"persistent": [
 					"true",
 					"false"
 				],
@@ -461,7 +461,7 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 			},
 			"defaults": {
 				"material": material_pallet[0],
-				"decayable": "true",
+				"persistent": "false",
 				"check_decay": "true"
 			}
 		},
@@ -474,7 +474,7 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 				"function": "carry_properties",
 				"options": {
 					"material": list(material_pallet.values()),
-					"decayable": [
+					"persistent": [
 						"true",
 						"false"
 					],
@@ -491,7 +491,7 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 					"function": "carry_properties",
 					"options": {
 						"material": list(material_pallet.values()),
-						"decayable": [
+						"persistent": [
 							"true",
 							"false"
 						],
