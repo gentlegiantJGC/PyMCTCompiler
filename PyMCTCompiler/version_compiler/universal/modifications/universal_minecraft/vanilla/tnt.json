@@ -15,7 +15,8 @@
 				]
 			},
 			"defaults": {
-				"unstable": "false"
+				"unstable": "false",
+				"underwater": "false"
 			}
 		}
 	}
