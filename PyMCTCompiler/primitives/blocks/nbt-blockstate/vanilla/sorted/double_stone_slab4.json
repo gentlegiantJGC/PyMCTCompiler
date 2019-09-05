@@ -1,0 +1,181 @@
+{
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:slab"
+		},
+		{
+			"function": "map_properties",
+			"options": {
+				"stone_slab_type_4": {
+					"\"mossy_stone_brick\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"material": "mossy_stone_brick"
+							}
+						}
+					],
+					"\"smooth_quartz\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"material": "smooth_quartz"
+							}
+						}
+					],
+					"\"stone\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"material": "stone"
+							}
+						}
+					],
+					"\"cut_sandstone\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"material": "cut_sandstone"
+							}
+						}
+					],
+					"\"cut_red_sandstone\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"material": "cut_red_sandstone"
+							}
+						}
+					]
+				},
+				"top_slot_bit": {
+					"0b": [
+						{
+							"function": "new_properties",
+							"options": {
+								"type": "double"
+							}
+						}
+					],
+					"1b": [
+						{
+							"function": "new_properties",
+							"options": {
+								"type": "double"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:slab": [
+			{
+				"function": "new_block",
+				"options": "minecraft:stone_slab"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"type": {
+						"double": [
+							{
+								"function": "new_properties",
+								"options": {
+									"top_slot_bit": [
+										"snbt",
+										"0b"
+									]
+								}
+							},
+							{
+								"function": "map_properties",
+								"options": {
+									"material": {
+										"mossy_stone_brick": [
+											{
+												"function": "new_block",
+												"options": "minecraft:double_stone_slab4"
+											},
+											{
+												"function": "new_properties",
+												"options": {
+													"stone_slab_type_4": [
+														"snbt",
+														"\"mossy_stone_brick\""
+													]
+												}
+											}
+										],
+										"smooth_quartz": [
+											{
+												"function": "new_block",
+												"options": "minecraft:double_stone_slab4"
+											},
+											{
+												"function": "new_properties",
+												"options": {
+													"stone_slab_type_4": [
+														"snbt",
+														"\"smooth_quartz\""
+													]
+												}
+											}
+										],
+										"stone": [
+											{
+												"function": "new_block",
+												"options": "minecraft:double_stone_slab4"
+											},
+											{
+												"function": "new_properties",
+												"options": {
+													"stone_slab_type_4": [
+														"snbt",
+														"\"stone\""
+													]
+												}
+											}
+										],
+										"cut_sandstone": [
+											{
+												"function": "new_block",
+												"options": "minecraft:double_stone_slab4"
+											},
+											{
+												"function": "new_properties",
+												"options": {
+													"stone_slab_type_4": [
+														"snbt",
+														"\"cut_sandstone\""
+													]
+												}
+											}
+										],
+										"cut_red_sandstone": [
+											{
+												"function": "new_block",
+												"options": "minecraft:double_stone_slab4"
+											},
+											{
+												"function": "new_properties",
+												"options": {
+													"stone_slab_type_4": [
+														"snbt",
+														"\"cut_red_sandstone\""
+													]
+												}
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			}
+		]
+	}
+}
