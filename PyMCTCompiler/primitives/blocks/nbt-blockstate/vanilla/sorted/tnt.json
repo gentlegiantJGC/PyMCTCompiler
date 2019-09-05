@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "allow_underwater": "false"
+                                "underwater": "false"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "allow_underwater": "true"
+                                "underwater": "true"
                             }
                         }
                     ]
@@ -55,7 +55,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "allow_underwater": {
+                    "underwater": {
                         "false": [
                             {
                                 "function": "new_properties",

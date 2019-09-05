@@ -1,0 +1,22 @@
+{
+	"remove": [
+		"tnt"
+	],
+	"add": {
+		"tnt": {
+			"properties": {
+				"unstable": [
+					"true",
+					"false"
+				],
+				"underwater": [
+					"true",
+					"false"
+				]
+			},
+			"defaults": {
+				"unstable": "false"
+			}
+		}
+	}
+}
