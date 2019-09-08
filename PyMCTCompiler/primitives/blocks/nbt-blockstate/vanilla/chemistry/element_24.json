@@ -2,14 +2,33 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:element_24"
+            "options": "universal_minecraft:element"
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "atomic_number": "24"
+            }
         }
     ],
     "from_universal": {
-        "universal_minecraft:element_24": [
+        "universal_minecraft:element": [
             {
                 "function": "new_block",
-                "options": "minecraft:element_24"
+                "options": "minecraft:element_0"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "atomic_number": {
+                        "24": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:element_24"
+                            }
+                        ]
+                    }
+                }
             }
         ]
     }
