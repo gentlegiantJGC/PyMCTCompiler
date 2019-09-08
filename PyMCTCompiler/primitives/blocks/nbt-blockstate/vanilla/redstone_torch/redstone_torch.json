@@ -1,9 +1,31 @@
 {
+    "specification": {
+		"properties": {
+			"torch_facing_direction": [
+                "\"top\"",
+				"\"west\"",
+				"\"east\"",
+				"\"north\"",
+				"\"south\"",
+				"\"unknown\""
+            ]
+		},
+		"defaults": {
+			"torch_facing_direction": "\"top\""
+		},
+		"nbt_properties": true
+	},
     "to_universal": [
         {
             "function": "new_block",
             "options": "universal_minecraft:redstone_torch"
         },
+        {
+			"function": "new_properties",
+			"options": {
+                "lit": "true"
+            }
+		},
         {
             "function": "map_properties",
             "options": {
@@ -69,6 +91,14 @@
             {
                 "function": "map_properties",
                 "options": {
+                    "lit": {
+						"true": [
+							{
+								"function": "new_block",
+								"options": "minecraft:redstone_torch"
+							}
+						]
+					},
                     "facing": {
                         "unknown": [
                             {

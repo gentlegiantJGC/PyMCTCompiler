@@ -105,12 +105,16 @@ def process_block(buffer: DiskBuffer, block_json: dict, version_name: str, names
 	assert isinstance(block_json['from_universal'], dict), f'Key from_universal must be a dictionary'
 
 	if universal_type == 'block':
+		if 'specification' in block_json:
+			save_json(f'{version_name}/block/blockstate/specification/{namespace}/{sub_name}/{block_file_name}.json', block_json['specification'], overwrite=True, buffer=buffer)
 		save_json(f'{version_name}/block/blockstate/to_universal/{namespace}/{sub_name}/{block_file_name}.json', block_json['to_universal'], buffer=buffer)
 		for block_str, block_data in block_json['from_universal'].items():
 			namespace_, block_name = block_str.split(':', 1)
 			merge_map(block_data, f'{version_name}/block/blockstate/from_universal/{namespace_}/{sub_name}/{block_name}.json', buffer=buffer)
 
 	elif universal_type == 'entity':
+		if 'specification' in block_json:
+			save_json(f'{version_name}/block/blockstate/specification/{namespace}/{sub_name}/{block_file_name}.json', block_json['specification'], overwrite=True, buffer=buffer)
 		save_json(f'{version_name}/block/blockstate/to_universal/{namespace}/{sub_name}/{block_file_name}.json', block_json['to_universal'], buffer=buffer)
 		for block_str, block_data in block_json['from_universal'].items():
 			namespace_, block_name = block_str.split(':', 1)
