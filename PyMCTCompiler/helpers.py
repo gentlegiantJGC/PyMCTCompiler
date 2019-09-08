@@ -248,7 +248,7 @@ def check_mapping_format(data: list, extra_feature_set: Tuple[str, ...] = None):
 			assert isinstance(fun['options'], dict), '"options" must be a dictionary'
 			for key, val in fun['options'].items():
 				assert isinstance(key, str), '"options" keys must be strings'
-				assert isinstance(val, str), '"options" values must be strings'
+				assert isinstance(val, str) or (isinstance(val, list) and val[0] == 'snbt'), '"options" values must be strings'
 
 		elif fun['function'] == 'carry_properties':
 			assert isinstance(fun['options'], dict), '"options" must be a dictionary'

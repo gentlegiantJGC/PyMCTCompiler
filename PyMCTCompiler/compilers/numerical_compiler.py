@@ -72,7 +72,7 @@ def process_block(buffer: DiskBuffer, block_json: dict, version_name: str, names
 			save_json(f'{version_name}/block/{file_format}/specification/{namespace}/{sub_name}/{block_file_name}.json', block_json.get(f'{prefix}specification', default_spec[file_format]), buffer=buffer)
 			save_json(f'{version_name}/block/{file_format}/to_universal/{namespace}/{sub_name}/{block_file_name}.json', block_json[f'{prefix}to_universal'], buffer=buffer)
 			for block_str, block_data in block_json[f'{prefix}from_universal'].items():
-				namespace_, block_name = block_str.split(':')
+				namespace_, block_name = block_str.split(':', 1)
 				merge_map(block_data, f'{version_name}/block/{file_format}/from_universal/{namespace_}/{sub_name}/{block_name}.json', buffer=buffer)
 
 	elif universal_type == 'entity':
@@ -84,7 +84,7 @@ def process_block(buffer: DiskBuffer, block_json: dict, version_name: str, names
 			save_json(f'{version_name}/block/{file_format}/specification/{namespace}/{sub_name}/{block_file_name}.json', block_json.get(f'{prefix}specification', default_spec[file_format]), buffer=buffer)
 			save_json(f'{version_name}/block/{file_format}/to_universal/{namespace}/{sub_name}/{block_file_name}.json', block_json[f'{prefix}to_universal'], buffer=buffer)
 			for block_str, block_data in block_json[f'{prefix}from_universal'].items():
-				namespace_, block_name = block_str.split(':')
+				namespace_, block_name = block_str.split(':', 1)
 				merge_map(block_data, f'{version_name}/entity/{file_format}/from_universal/{namespace_}/{sub_name}/{block_name}.json', buffer=buffer)
 
 	else:
@@ -117,7 +117,7 @@ def process_entity(buffer: DiskBuffer, entity_json: dict, version_name: str, nam
 			save_json(f'{version_name}/entity/{file_format}/specification/{namespace}/{sub_name}/{block_file_name}.json', entity_json['specification'], buffer=buffer)
 			save_json(f'{version_name}/entity/{file_format}/to_universal/{namespace}/{sub_name}/{block_file_name}.json', entity_json['to_universal'], buffer=buffer)
 			for block_str, block_data in entity_json['from_universal'].items():
-				namespace_, block_name = block_str.split(':')
+				namespace_, block_name = block_str.split(':', 1)
 				merge_map(block_data, f'{version_name}/entity/{file_format}/from_universal/{namespace_}/{sub_name}/{block_name}.json', buffer=buffer)
 
 	elif universal_type == 'block':
@@ -133,7 +133,7 @@ def process_entity(buffer: DiskBuffer, entity_json: dict, version_name: str, nam
 			save_json(f'{version_name}/entity/{file_format}/specification/{namespace}/{sub_name}/{block_file_name}.json', entity_json['specification'], buffer=buffer)
 			save_json(f'{version_name}/entity/{file_format}/to_universal/{namespace}/{sub_name}/{block_file_name}.json', entity_json[f'{prefix}to_universal'], buffer=buffer)
 			for block_str, block_data in entity_json[f'{prefix}from_universal'].items():
-				namespace_, block_name = block_str.split(':')
+				namespace_, block_name = block_str.split(':', 1)
 				merge_map(block_data, f'{version_name}/block/{file_format}/from_universal/{namespace_}/{sub_name}/{block_name}.json', buffer=buffer)
 	else:
 		raise Exception(f'Universal type "{universal_type}" is not known')
