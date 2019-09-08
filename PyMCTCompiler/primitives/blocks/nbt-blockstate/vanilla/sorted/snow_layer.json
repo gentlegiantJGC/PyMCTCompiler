@@ -2,7 +2,7 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:snow_layer"
+            "options": "universal_minecraft:snow"
         },
         {
             "function": "map_properties",
@@ -95,7 +95,7 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:snow_layer": [
+        "universal_minecraft:snow": [
             {
                 "function": "new_block",
                 "options": "minecraft:snow_layer"

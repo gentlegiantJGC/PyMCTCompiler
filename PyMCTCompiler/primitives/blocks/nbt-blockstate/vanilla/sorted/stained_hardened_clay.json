@@ -2,7 +2,7 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:stained_hardened_clay"
+            "options": "universal_minecraft:stained_terracotta"
         },
         {
             "function": "map_properties",
@@ -141,7 +141,7 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:stained_hardened_clay": [
+        "universal_minecraft:stained_terracotta": [
             {
                 "function": "new_block",
                 "options": "minecraft:stained_hardened_clay"

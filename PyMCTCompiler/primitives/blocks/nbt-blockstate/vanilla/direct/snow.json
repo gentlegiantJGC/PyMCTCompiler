@@ -2,11 +2,11 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:snow"
+            "options": "universal_minecraft:snow_block"
         }
     ],
     "from_universal": {
-        "universal_minecraft:snow": [
+        "universal_minecraft:snow_block": [
             {
                 "function": "new_block",
                 "options": "minecraft:snow"

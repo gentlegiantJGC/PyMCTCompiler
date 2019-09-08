@@ -2,7 +2,8 @@
 	"remove": [
 		"stone_bricks",
 		"cracked_stone_bricks",
-		"mossy_stone_bricks"
+		"mossy_stone_bricks",
+		"chiseled_stone_bricks"
 	],
 	"add": {
 		"stone_bricks": {
@@ -10,7 +11,8 @@
 				"variant": [
 					"normal",
 					"cracked",
-					"mossy"
+					"mossy",
+					"chiseled"
 				]
 			},
 			"defaults": {

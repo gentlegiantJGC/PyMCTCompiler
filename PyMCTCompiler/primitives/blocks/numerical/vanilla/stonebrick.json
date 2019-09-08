@@ -43,7 +43,13 @@
 					"3": [
 						{
 							"function": "new_block",
-							"options": "universal_minecraft:chiseled_stone_bricks"
+							"options": "universal_minecraft:stone_bricks"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"variant": "chiseled"
+							}
 						}
 					]
 				}
@@ -83,20 +89,16 @@
 									"block_data": "2"
 								}
 							}
+						],
+						"chiseled": [
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": "3"
+								}
+							}
 						]
 					}
-				}
-			}
-		],
-		"universal_minecraft:chiseled_stone_bricks": [
-			{
-				"function": "new_block",
-				"options": "minecraft:stonebrick"
-			},
-			{
-				"function": "new_properties",
-				"options": {
-					"block_data": "3"
 				}
 			}
 		]
@@ -116,52 +118,18 @@
 	},
 	"blockstate_to_universal": [
 		{
-			"function": "map_properties",
+			"function": "new_block",
+			"options": "universal_minecraft:stone_bricks"
+		},
+		{
+			"function": "carry_properties",
 			"options": {
-				"variant": {
-					"normal": [
-						{
-							"function": "new_block",
-							"options": "universal_minecraft:stone_bricks"
-						},
-						{
-							"function": "new_properties",
-							"options": {
-								"variant": "normal"
-							}
-						}
-					],
-					"cracked": [
-						{
-							"function": "new_block",
-							"options": "universal_minecraft:stone_bricks"
-						},
-						{
-							"function": "new_properties",
-							"options": {
-								"variant": "cracked"
-							}
-						}
-					],
-					"mossy": [
-						{
-							"function": "new_block",
-							"options": "universal_minecraft:stone_bricks"
-						},
-						{
-							"function": "new_properties",
-							"options": {
-								"variant": "mossy"
-							}
-						}
-					],
-					"chiseled": [
-						{
-							"function": "new_block",
-							"options": "universal_minecraft:chiseled_stone_bricks"
-						}
-					]
-				}
+				"variant": [
+					"normal",
+					"cracked",
+					"mossy",
+					"chiseled"
+				]
 			}
 		}
 	],
@@ -177,20 +145,9 @@
 					"variant": [
 						"normal",
 						"cracked",
-						"mossy"
+						"mossy",
+						"chiseled"
 					]
-				}
-			}
-		],
-		"universal_minecraft:chiseled_stone_bricks": [
-			{
-				"function": "new_block",
-				"options": "minecraft:stonebrick"
-			},
-			{
-				"function": "new_properties",
-				"options": {
-					"variant": "chiseled"
 				}
 			}
 		]
