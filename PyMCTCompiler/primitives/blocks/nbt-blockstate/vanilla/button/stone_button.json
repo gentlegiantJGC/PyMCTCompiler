@@ -1,186 +1,215 @@
 {
-    "to_universal": [
-        {
-            "function": "new_block",
-            "options": "universal_minecraft:stone_button"
-        },
-        {
-            "function": "map_properties",
-            "options": {
-                "button_pressed_bit": {
-                    "0b": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "powered": "false"
-                            }
-                        }
-                    ],
-                    "1b": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "powered": "true"
-                            }
-                        }
-                    ]
-                },
-                "facing_direction": {
-                    "0": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "facing": "down"
-                            }
-                        }
-                    ],
-                    "1": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "facing": "up"
-                            }
-                        }
-                    ],
-                    "2": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "facing": "north"
-                            }
-                        }
-                    ],
-                    "3": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "facing": "south"
-                            }
-                        }
-                    ],
-                    "4": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "facing": "west"
-                            }
-                        }
-                    ],
-                    "5": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "facing": "east"
-                            }
-                        }
-                    ]
-                }
-            }
-        }
-    ],
-    "from_universal": {
-        "universal_minecraft:stone_button": [
-            {
-                "function": "new_block",
-                "options": "minecraft:stone_button"
-            },
-            {
-                "function": "map_properties",
-                "options": {
-                    "powered": {
-                        "false": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "button_pressed_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
-                                }
-                            }
-                        ],
-                        "true": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "button_pressed_bit": [
-                                        "snbt",
-                                        "1b"
-                                    ]
-                                }
-                            }
-                        ]
-                    },
-                    "facing": {
-                        "down": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "0"
-                                    ]
-                                }
-                            }
-                        ],
-                        "up": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "1"
-                                    ]
-                                }
-                            }
-                        ],
-                        "north": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "2"
-                                    ]
-                                }
-                            }
-                        ],
-                        "south": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "3"
-                                    ]
-                                }
-                            }
-                        ],
-                        "west": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "4"
-                                    ]
-                                }
-                            }
-                        ],
-                        "east": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "5"
-                                    ]
-                                }
-                            }
-                        ]
-                    }
-                }
-            }
-        ]
-    }
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:button"
+		},
+		{
+			"function": "new_properties",
+			"options": {
+				"material": "stone"
+			}
+		},
+		{
+			"function": "map_properties",
+			"options": {
+				"button_pressed_bit": {
+					"0b": [
+						{
+							"function": "new_properties",
+							"options": {
+								"powered": "false"
+							}
+						}
+					],
+					"1b": [
+						{
+							"function": "new_properties",
+							"options": {
+								"powered": "true"
+							}
+						}
+					]
+				},
+				"facing_direction": {
+					"0": [
+						{
+							"function": "new_properties",
+							"options": {
+								"face": "ceiling",
+								"facing": "south"
+							}
+						}
+					],
+					"1": [
+						{
+							"function": "new_properties",
+							"options": {
+								"face": "floor",
+								"facing": "south"
+							}
+						}
+					],
+					"2": [
+						{
+							"function": "new_properties",
+							"options": {
+								"face": "wall",
+								"facing": "north"
+							}
+						}
+					],
+					"3": [
+						{
+							"function": "new_properties",
+							"options": {
+								"face": "wall",
+								"facing": "south"
+							}
+						}
+					],
+					"4": [
+						{
+							"function": "new_properties",
+							"options": {
+								"face": "wall",
+								"facing": "west"
+							}
+						}
+					],
+					"5": [
+						{
+							"function": "new_properties",
+							"options": {
+								"face": "wall",
+								"facing": "east"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:button": [
+			{
+				"function": "new_block",
+				"options": "minecraft:wooden_button"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"material": {
+						"stone": [
+							{
+								"function": "new_block",
+								"options": "minecraft:stone_button"
+							}
+						]
+					},
+					"face": {
+						"ceiling": [
+							{
+								"function": "new_properties",
+								"options": {
+									"facing_direction": [
+										"snbt",
+										"0"
+									]
+								}
+							}
+						],
+						"floor": [
+							{
+								"function": "new_properties",
+								"options": {
+									"facing_direction": [
+										"snbt",
+										"1"
+									]
+								}
+							}
+						],
+						"wall": [
+							{
+								"function": "map_properties",
+								"options": {
+									"facing": {
+										"north": [
+											{
+												"function": "new_properties",
+												"options": {
+													"facing_direction": [
+														"snbt",
+														"2"
+													]
+												}
+											}
+										],
+										"south": [
+											{
+												"function": "new_properties",
+												"options": {
+													"facing_direction": [
+														"snbt",
+														"3"
+													]
+												}
+											}
+										],
+										"west": [
+											{
+												"function": "new_properties",
+												"options": {
+													"facing_direction": [
+														"snbt",
+														"4"
+													]
+												}
+											}
+										],
+										"east": [
+											{
+												"function": "new_properties",
+												"options": {
+													"facing_direction": [
+														"snbt",
+														"5"
+													]
+												}
+											}
+										]
+									}
+								}
+							}
+						]
+					},
+					"powered": {
+						"false": [
+							{
+								"function": "new_properties",
+								"options": {
+									"button_pressed_bit": [
+										"snbt",
+										"0b"
+									]
+								}
+							}
+						],
+						"true": [
+							{
+								"function": "new_properties",
+								"options": {
+									"button_pressed_bit": [
+										"snbt",
+										"1b"
+									]
+								}
+							}
+						]
+					}
+				}
+			}
+		]
+	}
 }

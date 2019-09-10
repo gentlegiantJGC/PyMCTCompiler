@@ -2,11 +2,11 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:stonecutter"
+            "options": "universal_minecraft:stonecutter_old"
         }
     ],
     "from_universal": {
-        "universal_minecraft:stonecutter": [
+        "universal_minecraft:stonecutter_old": [
             {
                 "function": "new_block",
                 "options": "minecraft:stonecutter"

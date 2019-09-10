@@ -78,7 +78,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "bottom": "true"
+                                "bottom": "false"
                             }
                         }
                     ],
@@ -86,7 +86,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "bottom": "false"
+                                "bottom": "true"
                             }
                         }
                     ]
@@ -200,7 +200,7 @@
                                 "options": {
                                     "stability_check": [
                                         "snbt",
-                                        "0b"
+                                        "1b"
                                     ]
                                 }
                             }
@@ -211,7 +211,7 @@
                                 "options": {
                                     "stability_check": [
                                         "snbt",
-                                        "1b"
+                                        "0b"
                                     ]
                                 }
                             }

@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "attachment": "standing"
+                                "face": "floor"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "attachment": "hanging"
+                                "face": "ceiling"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "attachment": "side"
+                                "face": "wall"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "attachment": "multiple"
+                                "face": "multiple"
                             }
                         }
                     ]
@@ -87,8 +87,8 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "attachment": {
-                        "standing": [
+                    "face": {
+                        "floor": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -99,7 +99,7 @@
                                 }
                             }
                         ],
-                        "hanging": [
+                        "ceiling": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -110,7 +110,7 @@
                                 }
                             }
                         ],
-                        "side": [
+                        "wall": [
                             {
                                 "function": "new_properties",
                                 "options": {
