@@ -1,13 +1,21 @@
 {
-    "properties": {
-        "facing": [
-            "north",
-            "south",
-            "west",
-            "east"
-        ]
-    },
-    "defaults": {
-        "facing": "north"
-    }
+    "remove": [
+        "pumpkin"
+    ],
+	"add": {
+		"pumpkin": {
+			"properties": {
+				"facing": [
+					"north",
+					"south",
+					"west",
+					"east"
+				]
+			},
+			"defaults": {
+				"facing": "north"
+			}
+		}
+	}
 }
+
