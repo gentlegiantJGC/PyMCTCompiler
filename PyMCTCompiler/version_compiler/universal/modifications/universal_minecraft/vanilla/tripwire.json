@@ -1,0 +1,53 @@
+{
+	"remove": [
+		"tripwire"
+	],
+	"add": {
+		"tripwire": {
+			"properties": {
+				"attached": [
+					"true",
+					"false"
+				],
+				"disarmed": [
+					"true",
+					"false"
+				],
+				"powered": [
+					"true",
+					"false"
+				],
+				"suspended": [
+					"true",
+					"false"
+				],
+				"east": [
+					"true",
+					"false"
+				],
+				"north": [
+					"true",
+					"false"
+				],
+				"south": [
+					"true",
+					"false"
+				],
+				"west": [
+					"true",
+					"false"
+				]
+			},
+			"defaults": {
+				"attached": "false",
+				"disarmed": "false",
+				"powered": "false",
+				"suspended": "true",
+				"east": "false",
+				"north": "false",
+				"south": "false",
+				"west": "false"
+			}
+		}
+	}
+}

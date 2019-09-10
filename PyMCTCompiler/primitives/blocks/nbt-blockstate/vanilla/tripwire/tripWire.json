@@ -2,7 +2,7 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:tripWire"
+            "options": "universal_minecraft:tripwire"
         },
         {
             "function": "map_properties",
@@ -83,7 +83,7 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:tripWire": [
+        "universal_minecraft:tripwire": [
             {
                 "function": "new_block",
                 "options": "minecraft:tripWire"

@@ -2,7 +2,7 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:monster_egg"
+            "options": "universal_minecraft:infested_block"
         },
         {
             "function": "map_properties",
@@ -61,7 +61,7 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:monster_egg": [
+        "universal_minecraft:infested_block": [
             {
                 "function": "new_block",
                 "options": "minecraft:monster_egg"
