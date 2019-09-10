@@ -2,33 +2,41 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:portal"
+            "options": "universal_minecraft:jack_o_lantern"
         },
         {
             "function": "map_properties",
             "options": {
-                "portal_axis": {
-                    "\"unknown\"": [
+                "direction": {
+                    "0": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "axis": "unknown"
+                                "facing": "south"
                             }
                         }
                     ],
-                    "\"x\"": [
+                    "1": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "axis": "x"
+                                "facing": "west"
                             }
                         }
                     ],
-                    "\"z\"": [
+                    "2": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "axis": "z"
+                                "facing": "north"
+                            }
+                        }
+                    ],
+                    "3": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "east"
                             }
                         }
                     ]
@@ -37,44 +45,55 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:portal": [
+        "universal_minecraft:jack_o_lantern": [
             {
                 "function": "new_block",
-                "options": "minecraft:portal"
+                "options": "minecraft:lit_pumpkin"
             },
             {
                 "function": "map_properties",
                 "options": {
-                    "axis": {
-                        "unknown": [
+                    "facing": {
+                        "south": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "portal_axis": [
+                                    "direction": [
                                         "snbt",
-                                        "\"unknown\""
+                                        "0"
                                     ]
                                 }
                             }
                         ],
-                        "x": [
+                        "west": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "portal_axis": [
+                                    "direction": [
                                         "snbt",
-                                        "\"x\""
+                                        "1"
                                     ]
                                 }
                             }
                         ],
-                        "z": [
+                        "north": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "portal_axis": [
+                                    "direction": [
                                         "snbt",
-                                        "\"z\""
+                                        "2"
+                                    ]
+                                }
+                            }
+                        ],
+                        "east": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "3"
                                     ]
                                 }
                             }

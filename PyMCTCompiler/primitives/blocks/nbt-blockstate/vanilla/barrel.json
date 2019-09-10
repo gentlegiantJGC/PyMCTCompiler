@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing_direction": "down"
+                                "facing": "down"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing_direction": "up"
+                                "facing": "up"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing_direction": "north"
+                                "facing": "north"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing_direction": "south"
+                                "facing": "south"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing_direction": "west"
+                                "facing": "west"
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing_direction": "east"
+                                "facing": "east"
                             }
                         }
                     ]
@@ -87,7 +87,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "facing_direction": {
+                    "facing": {
                         "down": [
                             {
                                 "function": "new_properties",
