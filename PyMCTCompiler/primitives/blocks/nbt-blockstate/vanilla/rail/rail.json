@@ -60,7 +60,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "shape": "6"
+                                "shape": "south_east"
                             }
                         }
                     ],
@@ -68,7 +68,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "shape": "7"
+                                "shape": "south_west"
                             }
                         }
                     ],
@@ -76,7 +76,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "shape": "8"
+                                "shape": "north_west"
                             }
                         }
                     ],
@@ -84,7 +84,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "shape": "9"
+                                "shape": "north_east"
                             }
                         }
                     ]
@@ -168,7 +168,7 @@
                                 }
                             }
                         ],
-                        "6": [
+                        "south_east": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -179,7 +179,7 @@
                                 }
                             }
                         ],
-                        "7": [
+                        "south_west": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -190,7 +190,7 @@
                                 }
                             }
                         ],
-                        "8": [
+                        "north_west": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -201,7 +201,7 @@
                                 }
                             }
                         ],
-                        "9": [
+                        "north_east": [
                             {
                                 "function": "new_properties",
                                 "options": {
