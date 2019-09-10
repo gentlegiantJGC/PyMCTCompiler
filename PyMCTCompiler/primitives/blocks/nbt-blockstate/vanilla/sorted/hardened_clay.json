@@ -2,11 +2,11 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:hardened_clay"
+            "options": "universal_minecraft:terracotta"
         }
     ],
     "from_universal": {
-        "universal_minecraft:hardened_clay": [
+        "universal_minecraft:terracotta": [
             {
                 "function": "new_block",
                 "options": "minecraft:hardened_clay"

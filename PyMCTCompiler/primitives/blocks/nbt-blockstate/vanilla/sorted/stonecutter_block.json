@@ -2,7 +2,7 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:stonecutter_block"
+            "options": "universal_minecraft:stonecutter"
         },
         {
             "function": "map_properties",
@@ -61,7 +61,7 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:stonecutter_block": [
+        "universal_minecraft:stonecutter": [
             {
                 "function": "new_block",
                 "options": "minecraft:stonecutter_block"

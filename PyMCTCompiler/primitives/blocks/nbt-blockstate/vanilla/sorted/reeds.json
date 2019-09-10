@@ -2,7 +2,7 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:reeds"
+            "options": "universal_minecraft:sugar_cane"
         },
         {
             "function": "map_properties",
@@ -141,7 +141,7 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:reeds": [
+        "universal_minecraft:sugar_cane": [
             {
                 "function": "new_block",
                 "options": "minecraft:reeds"
