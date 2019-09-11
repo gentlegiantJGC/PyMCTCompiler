@@ -1,0 +1,56 @@
+{
+	"remove": [
+		"purpur_block",
+		"purpur_pillar"
+	],
+	"add": {
+		"purpur_block": {
+			"properties": {
+				"axis": [
+					"x",
+					"y",
+					"z"
+				]
+			},
+			"defaults": {
+				"axis": "y"
+			}
+		},
+		"chiseled_purpur_block": {
+			"properties": {
+				"axis": [
+					"x",
+					"y",
+					"z"
+				]
+			},
+			"defaults": {
+				"axis": "y"
+			}
+		},
+		"purpur_pillar": {
+			"properties": {
+				"axis": [
+					"x",
+					"y",
+					"z"
+				]
+			},
+			"defaults": {
+				"axis": "y"
+			}
+		},
+		"smooth_purpur": {
+			"properties": {
+				"axis": [
+					"x",
+					"y",
+					"z"
+				]
+			},
+			"defaults": {
+				"axis": "y"
+			}
+		}
+	}
+}

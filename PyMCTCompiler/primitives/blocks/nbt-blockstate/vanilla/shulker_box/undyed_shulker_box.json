@@ -2,14 +2,14 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:redstone_lamp"
+            "options": "universal_minecraft:shulker_box"
         }
     ],
     "from_universal": {
-        "universal_minecraft:redstone_lamp": [
+        "universal_minecraft:shulker_box": [
             {
                 "function": "new_block",
-                "options": "minecraft:redstone_lamp"
+                "options": "minecraft:undyed_shulker_box"
             }
         ]
     }

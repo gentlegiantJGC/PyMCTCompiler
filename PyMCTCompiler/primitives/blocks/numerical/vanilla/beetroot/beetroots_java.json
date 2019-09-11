@@ -1,14 +1,14 @@
 {
 	"to_universal": [
 		{
+			"function": "new_block",
+			"options": "universal_minecraft:beetroots"
+		},
+		{
 			"function": "map_properties",
 			"options": {
 				"block_data": {
 					"0": [
-						{
-							"function": "new_block",
-							"options": "universal_minecraft:beetroots"
-						},
 						{
 							"function": "new_properties",
 							"options": {
@@ -18,10 +18,6 @@
 					],
 					"1": [
 						{
-							"function": "new_block",
-							"options": "universal_minecraft:beetroots"
-						},
-						{
 							"function": "new_properties",
 							"options": {
 								"age": "2"
@@ -30,10 +26,6 @@
 					],
 					"2": [
 						{
-							"function": "new_block",
-							"options": "universal_minecraft:beetroots"
-						},
-						{
 							"function": "new_properties",
 							"options": {
 								"age": "4"
@@ -41,10 +33,6 @@
 						}
 					],
 					"3": [
-						{
-							"function": "new_block",
-							"options": "universal_minecraft:beetroots"
-						},
 						{
 							"function": "new_properties",
 							"options": {

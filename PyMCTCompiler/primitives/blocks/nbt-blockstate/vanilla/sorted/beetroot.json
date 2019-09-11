@@ -2,7 +2,7 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:beetroot"
+            "options": "universal_minecraft:beetroots"
         },
         {
             "function": "map_properties",
@@ -77,7 +77,7 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:beetroot": [
+        "universal_minecraft:beetroots": [
             {
                 "function": "new_block",
                 "options": "minecraft:beetroot"

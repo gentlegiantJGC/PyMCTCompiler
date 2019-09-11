@@ -2,137 +2,121 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:concretePowder"
+            "options": "universal_minecraft:wall"
         },
         {
             "function": "map_properties",
             "options": {
-                "color": {
-                    "\"white\"": [
+                "wall_block_type": {
+                    "\"cobblestone\"": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "white"
+                                "material": "cobblestone"
                             }
                         }
                     ],
-                    "\"orange\"": [
+                    "\"mossy_cobblestone\"": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "orange"
+                                "material": "mossy_cobblestone"
                             }
                         }
                     ],
-                    "\"magenta\"": [
+                    "\"granite\"": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "magenta"
+                                "material": "granite"
                             }
                         }
                     ],
-                    "\"light_blue\"": [
+                    "\"diorite\"": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "light_blue"
+                                "material": "diorite"
                             }
                         }
                     ],
-                    "\"yellow\"": [
+                    "\"andesite\"": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "yellow"
+                                "material": "andesite"
                             }
                         }
                     ],
-                    "\"lime\"": [
+                    "\"sandstone\"": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "lime"
+                                "material": "sandstone"
                             }
                         }
                     ],
-                    "\"pink\"": [
+                    "\"brick\"": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "pink"
+                                "material": "brick"
                             }
                         }
                     ],
-                    "\"gray\"": [
+                    "\"stone_brick\"": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "gray"
+                                "material": "stone_brick"
                             }
                         }
                     ],
-                    "\"silver\"": [
+                    "\"mossy_stone_brick\"": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "light_gray"
+                                "material": "mossy_stone_brick"
                             }
                         }
                     ],
-                    "\"cyan\"": [
+                    "\"nether_brick\"": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "cyan"
+                                "material": "nether_brick"
                             }
                         }
                     ],
-                    "\"purple\"": [
+                    "\"end_brick\"": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "purple"
+                                "material": "end_stone_brick"
                             }
                         }
                     ],
-                    "\"blue\"": [
+                    "\"prismarine\"": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "blue"
+                                "material": "prismarine"
                             }
                         }
                     ],
-                    "\"brown\"": [
+                    "\"red_sandstone\"": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "brown"
+                                "material": "red_sandstone"
                             }
                         }
                     ],
-                    "\"green\"": [
+                    "\"red_nether_brick\"": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "green"
-                            }
-                        }
-                    ],
-                    "\"red\"": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "color": "red"
-                            }
-                        }
-                    ],
-                    "\"black\"": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "color": "black"
+                                "material": "red_nether_brick"
                             }
                         }
                     ]
@@ -141,187 +125,165 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:concretePowder": [
+        "universal_minecraft:wall": [
             {
                 "function": "new_block",
-                "options": "minecraft:concretePowder"
+                "options": "minecraft:cobblestone_wall"
             },
             {
                 "function": "map_properties",
                 "options": {
-                    "color": {
-                        "white": [
+                    "material": {
+                        "cobblestone": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
+                                    "wall_block_type": [
                                         "snbt",
-                                        "\"white\""
+                                        "\"cobblestone\""
                                     ]
                                 }
                             }
                         ],
-                        "orange": [
+                        "mossy_cobblestone": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
+                                    "wall_block_type": [
                                         "snbt",
-                                        "\"orange\""
+                                        "\"mossy_cobblestone\""
                                     ]
                                 }
                             }
                         ],
-                        "magenta": [
+                        "granite": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
+                                    "wall_block_type": [
                                         "snbt",
-                                        "\"magenta\""
+                                        "\"granite\""
                                     ]
                                 }
                             }
                         ],
-                        "light_blue": [
+                        "diorite": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
+                                    "wall_block_type": [
                                         "snbt",
-                                        "\"light_blue\""
+                                        "\"diorite\""
                                     ]
                                 }
                             }
                         ],
-                        "yellow": [
+                        "andesite": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
+                                    "wall_block_type": [
                                         "snbt",
-                                        "\"yellow\""
+                                        "\"andesite\""
                                     ]
                                 }
                             }
                         ],
-                        "lime": [
+                        "sandstone": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
+                                    "wall_block_type": [
                                         "snbt",
-                                        "\"lime\""
+                                        "\"sandstone\""
                                     ]
                                 }
                             }
                         ],
-                        "pink": [
+                        "brick": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
+                                    "wall_block_type": [
                                         "snbt",
-                                        "\"pink\""
+                                        "\"brick\""
                                     ]
                                 }
                             }
                         ],
-                        "gray": [
+                        "stone_brick": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
+                                    "wall_block_type": [
                                         "snbt",
-                                        "\"gray\""
+                                        "\"stone_brick\""
                                     ]
                                 }
                             }
                         ],
-                        "light_gray": [
+                        "mossy_stone_brick": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
+                                    "wall_block_type": [
                                         "snbt",
-                                        "\"silver\""
+                                        "\"mossy_stone_brick\""
                                     ]
                                 }
                             }
                         ],
-                        "cyan": [
+                        "nether_brick": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
+                                    "wall_block_type": [
                                         "snbt",
-                                        "\"cyan\""
+                                        "\"nether_brick\""
                                     ]
                                 }
                             }
                         ],
-                        "purple": [
+                        "end_stone_brick": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
+                                    "wall_block_type": [
                                         "snbt",
-                                        "\"purple\""
+                                        "\"end_brick\""
                                     ]
                                 }
                             }
                         ],
-                        "blue": [
+                        "prismarine": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
+                                    "wall_block_type": [
                                         "snbt",
-                                        "\"blue\""
+                                        "\"prismarine\""
                                     ]
                                 }
                             }
                         ],
-                        "brown": [
+                        "red_sandstone": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
+                                    "wall_block_type": [
                                         "snbt",
-                                        "\"brown\""
+                                        "\"red_sandstone\""
                                     ]
                                 }
                             }
                         ],
-                        "green": [
+                        "red_nether_brick": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
+                                    "wall_block_type": [
                                         "snbt",
-                                        "\"green\""
-                                    ]
-                                }
-                            }
-                        ],
-                        "red": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "color": [
-                                        "snbt",
-                                        "\"red\""
-                                    ]
-                                }
-                            }
-                        ],
-                        "black": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "color": [
-                                        "snbt",
-                                        "\"black\""
+                                        "\"red_nether_brick\""
                                     ]
                                 }
                             }

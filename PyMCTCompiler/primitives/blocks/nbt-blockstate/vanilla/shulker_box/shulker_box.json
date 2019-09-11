@@ -2,7 +2,7 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:shulker_box"
+            "options": "universal_minecraft:stained_shulker_box"
         },
         {
             "function": "map_properties",
@@ -141,7 +141,7 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:shulker_box": [
+        "universal_minecraft:stained_shulker_box": [
             {
                 "function": "new_block",
                 "options": "minecraft:shulker_box"
