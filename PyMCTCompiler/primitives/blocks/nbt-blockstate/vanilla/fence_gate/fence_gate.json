@@ -1,190 +1,204 @@
 {
-    "to_universal": [
-        {
-            "function": "new_block",
-            "options": "universal_minecraft:fence_gate"
-        },
-        {
-            "function": "map_properties",
-            "options": {
-                "direction": {
-                    "0": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "facing": "south"
-                            }
-                        }
-                    ],
-                    "1": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "facing": "west"
-                            }
-                        }
-                    ],
-                    "2": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "facing": "north"
-                            }
-                        }
-                    ],
-                    "3": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "facing": "east"
-                            }
-                        }
-                    ]
-                },
-                "in_wall_bit": {
-                    "0b": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "in_wall": "false"
-                            }
-                        }
-                    ],
-                    "1b": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "in_wall": "true"
-                            }
-                        }
-                    ]
-                },
-                "open_bit": {
-                    "0b": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "open": "false"
-                            }
-                        }
-                    ],
-                    "1b": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "open": "true"
-                            }
-                        }
-                    ]
-                }
-            }
-        }
-    ],
-    "from_universal": {
-        "universal_minecraft:fence_gate": [
-            {
-                "function": "new_block",
-                "options": "minecraft:fence_gate"
-            },
-            {
-                "function": "map_properties",
-                "options": {
-                    "facing": {
-                        "south": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "0"
-                                    ]
-                                }
-                            }
-                        ],
-                        "west": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "1"
-                                    ]
-                                }
-                            }
-                        ],
-                        "north": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "2"
-                                    ]
-                                }
-                            }
-                        ],
-                        "east": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "3"
-                                    ]
-                                }
-                            }
-                        ]
-                    },
-                    "in_wall": {
-                        "false": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "in_wall_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
-                                }
-                            }
-                        ],
-                        "true": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "in_wall_bit": [
-                                        "snbt",
-                                        "1b"
-                                    ]
-                                }
-                            }
-                        ]
-                    },
-                    "open": {
-                        "false": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "open_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
-                                }
-                            }
-                        ],
-                        "true": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "open_bit": [
-                                        "snbt",
-                                        "1b"
-                                    ]
-                                }
-                            }
-                        ]
-                    }
-                }
-            }
-        ]
-    }
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:fence_gate"
+		},
+		{
+			"function": "new_properties",
+			"options": {
+				"material": "oak"
+			}
+		},
+		{
+			"function": "map_properties",
+			"options": {
+				"direction": {
+					"0": [
+						{
+							"function": "new_properties",
+							"options": {
+								"facing": "south"
+							}
+						}
+					],
+					"1": [
+						{
+							"function": "new_properties",
+							"options": {
+								"facing": "west"
+							}
+						}
+					],
+					"2": [
+						{
+							"function": "new_properties",
+							"options": {
+								"facing": "north"
+							}
+						}
+					],
+					"3": [
+						{
+							"function": "new_properties",
+							"options": {
+								"facing": "east"
+							}
+						}
+					]
+				},
+				"in_wall_bit": {
+					"0b": [
+						{
+							"function": "new_properties",
+							"options": {
+								"in_wall": "false"
+							}
+						}
+					],
+					"1b": [
+						{
+							"function": "new_properties",
+							"options": {
+								"in_wall": "true"
+							}
+						}
+					]
+				},
+				"open_bit": {
+					"0b": [
+						{
+							"function": "new_properties",
+							"options": {
+								"open": "false"
+							}
+						}
+					],
+					"1b": [
+						{
+							"function": "new_properties",
+							"options": {
+								"open": "true"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:fence_gate": [
+			{
+				"function": "new_block",
+				"options": "minecraft:fence_gate"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"material": {
+						"oak": [
+							{
+								"function": "new_block",
+								"options": "minecraft:fence_gate"
+							}
+						]
+					},
+					"facing": {
+						"south": [
+							{
+								"function": "new_properties",
+								"options": {
+									"direction": [
+										"snbt",
+										"0"
+									]
+								}
+							}
+						],
+						"west": [
+							{
+								"function": "new_properties",
+								"options": {
+									"direction": [
+										"snbt",
+										"1"
+									]
+								}
+							}
+						],
+						"north": [
+							{
+								"function": "new_properties",
+								"options": {
+									"direction": [
+										"snbt",
+										"2"
+									]
+								}
+							}
+						],
+						"east": [
+							{
+								"function": "new_properties",
+								"options": {
+									"direction": [
+										"snbt",
+										"3"
+									]
+								}
+							}
+						]
+					},
+					"in_wall": {
+						"false": [
+							{
+								"function": "new_properties",
+								"options": {
+									"in_wall_bit": [
+										"snbt",
+										"0b"
+									]
+								}
+							}
+						],
+						"true": [
+							{
+								"function": "new_properties",
+								"options": {
+									"in_wall_bit": [
+										"snbt",
+										"1b"
+									]
+								}
+							}
+						]
+					},
+					"open": {
+						"false": [
+							{
+								"function": "new_properties",
+								"options": {
+									"open_bit": [
+										"snbt",
+										"0b"
+									]
+								}
+							}
+						],
+						"true": [
+							{
+								"function": "new_properties",
+								"options": {
+									"open_bit": [
+										"snbt",
+										"1b"
+									]
+								}
+							}
+						]
+					}
+				}
+			}
+		]
+	}
 }

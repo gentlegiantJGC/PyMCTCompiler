@@ -1,0 +1,129 @@
+{
+	"add": {
+		"hard_glass_pane": {},
+		"hard_stained_glass_pane": {
+			"properties": {
+				"color": [
+					"white",
+					"orange",
+					"magenta",
+					"light_blue",
+					"yellow",
+					"lime",
+					"pink",
+					"gray",
+					"light_gray",
+					"cyan",
+					"purple",
+					"blue",
+					"brown",
+					"green",
+					"red",
+					"black"
+				]
+			},
+			"defaults": {
+				"color": "white"
+			}
+		},
+		"chemical_heat": {},
+		"colored_torch_rg": {
+			"properties": {
+				"color": [
+					"0",
+					"1"
+				],
+				"facing": [
+					"up",
+					"north",
+					"south",
+					"west",
+					"east"
+				]
+			},
+			"defaults": {
+				"color": "0",
+				"facing": "up"
+			}
+		},
+		"colored_torch_bp": {
+			"properties": {
+				"color": [
+					"0",
+					"1"
+				],
+				"facing": [
+					"up",
+					"north",
+					"south",
+					"west",
+					"east"
+				]
+			},
+			"defaults": {
+				"color": "0",
+				"facing": "up"
+			}
+		},
+		"chemistry_table": {
+			"properties": {
+				"chemistry_table_type": [
+					"compound_creator",
+					"material_reducer",
+					"element_constructor",
+					"lab_table"
+				],
+				"facing": [
+					"north",
+					"south",
+					"west",
+					"east"
+				]
+			},
+			"defaults": {
+				"chemistry_table_type": "compound_creator",
+				"facing": "north"
+			}
+		},
+		"underwater_torch": {
+			"properties": {
+				"facing": [
+					"up",
+					"north",
+					"south",
+					"west",
+					"east"
+				]
+			},
+			"defaults": {
+				"facing": "up"
+			}
+		},
+		"hard_glass": {},
+		"hard_stained_glass": {
+			"properties": {
+				"color": [
+					"white",
+					"orange",
+					"magenta",
+					"light_blue",
+					"yellow",
+					"lime",
+					"pink",
+					"gray",
+					"light_gray",
+					"cyan",
+					"purple",
+					"blue",
+					"brown",
+					"green",
+					"red",
+					"black"
+				]
+			},
+			"defaults": {
+				"color": "white"
+			}
+		}
+	}
+}
