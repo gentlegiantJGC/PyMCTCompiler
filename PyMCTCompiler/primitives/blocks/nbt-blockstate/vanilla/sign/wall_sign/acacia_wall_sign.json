@@ -2,23 +2,23 @@
 	"to_universal": [
 		{
 			"function": "new_block",
-			"options": "universal_minecraft:comparator"
+			"options": "universal_minecraft:wall_sign"
 		},
 		{
 			"function": "new_properties",
 			"options": {
-				"powered": "true"
+				"material": "acacia"
 			}
 		},
 		{
 			"function": "map_properties",
 			"options": {
-				"direction": {
+				"facing_direction": {
 					"0": [
 						{
 							"function": "new_properties",
 							"options": {
-								"facing": "south"
+								"facing": "down"
 							}
 						}
 					],
@@ -26,7 +26,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"facing": "west"
+								"facing": "up"
 							}
 						}
 					],
@@ -42,25 +42,23 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"facing": "east"
-							}
-						}
-					]
-				},
-				"output_subtract_bit": {
-					"0b": [
-						{
-							"function": "new_properties",
-							"options": {
-								"mode": "compare"
+								"facing": "south"
 							}
 						}
 					],
-					"1b": [
+					"4": [
 						{
 							"function": "new_properties",
 							"options": {
-								"mode": "subtract"
+								"facing": "west"
+							}
+						}
+					],
+					"5": [
+						{
+							"function": "new_properties",
+							"options": {
+								"facing": "east"
 							}
 						}
 					]
@@ -69,31 +67,39 @@
 		}
 	],
 	"from_universal": {
-		"universal_minecraft:comparator": [
+		"universal_minecraft:wall_sign": [
 			{
 				"function": "new_block",
-				"options": "minecraft:unpowered_comparator"
+				"options": "minecraft:wall_sign"
 			},
 			{
 				"function": "map_properties",
 				"options": {
+					"material": {
+						"acacia": [
+							{
+								"function": "new_block",
+								"options": "minecraft:acacia_wall_sign"
+							}
+						]
+					},
 					"facing": {
-						"south": [
+						"down": [
 							{
 								"function": "new_properties",
 								"options": {
-									"direction": [
+									"facing_direction": [
 										"snbt",
 										"0"
 									]
 								}
 							}
 						],
-						"west": [
+						"up": [
 							{
 								"function": "new_properties",
 								"options": {
-									"direction": [
+									"facing_direction": [
 										"snbt",
 										"1"
 									]
@@ -104,9 +110,31 @@
 							{
 								"function": "new_properties",
 								"options": {
-									"direction": [
+									"facing_direction": [
 										"snbt",
 										"2"
+									]
+								}
+							}
+						],
+						"south": [
+							{
+								"function": "new_properties",
+								"options": {
+									"facing_direction": [
+										"snbt",
+										"3"
+									]
+								}
+							}
+						],
+						"west": [
+							{
+								"function": "new_properties",
+								"options": {
+									"facing_direction": [
+										"snbt",
+										"4"
 									]
 								}
 							}
@@ -115,50 +143,9 @@
 							{
 								"function": "new_properties",
 								"options": {
-									"direction": [
+									"facing_direction": [
 										"snbt",
-										"3"
-									]
-								}
-							}
-						]
-					},
-					"powered": {
-						"true": [
-							{
-								"function": "new_block",
-								"options": "minecraft:powered_comparator"
-							},
-							{
-								"function": "new_properties",
-								"options": {
-									"output_lit_bit": [
-										"snbt",
-										"1b"
-									]
-								}
-							}
-						]
-					},
-					"mode": {
-						"compare": [
-							{
-								"function": "new_properties",
-								"options": {
-									"output_subtract_bit": [
-										"snbt",
-										"0b"
-									]
-								}
-							}
-						],
-						"subtract": [
-							{
-								"function": "new_properties",
-								"options": {
-									"output_subtract_bit": [
-										"snbt",
-										"1b"
+										"5"
 									]
 								}
 							}
