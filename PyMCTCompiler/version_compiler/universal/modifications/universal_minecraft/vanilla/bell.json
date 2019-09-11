@@ -1,0 +1,32 @@
+{
+	"remove": [
+		"bell"
+	],
+	"add": {
+		"bell": {
+			"properties": {
+				"attachment": [
+					"floor",
+					"ceiling",
+					"single_wall",
+					"double_wall"
+				],
+				"facing": [
+					"north",
+					"south",
+					"west",
+					"east"
+				],
+				"enabled": [
+					"false",
+					"true"
+				]
+			},
+			"defaults": {
+				"attachment": "floor",
+				"facing": "north",
+				"enabled": "false"
+			}
+		}
+	}
+}

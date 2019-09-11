@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "attachment": "standing"
+                                "attachment": "floor"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "attachment": "hanging"
+                                "attachment": "ceiling"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "attachment": "side"
+                                "attachment": "single_wall"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "attachment": "multiple"
+                                "attachment": "double_wall"
                             }
                         }
                     ]
@@ -106,7 +106,7 @@
                 "function": "map_properties",
                 "options": {
                     "attachment": {
-                        "standing": [
+                        "floor": [
                             {
                                 "function": "new_properties",
                                 "options": {
