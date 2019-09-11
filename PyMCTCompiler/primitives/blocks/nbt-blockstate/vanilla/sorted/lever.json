@@ -1,0 +1,303 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:lever"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "lever_direction": {
+                    "\"down_east_west\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "face": "ceiling",
+                                "facing": "west"
+                            }
+                        }
+                    ],
+                    "\"east\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "face": "wall",
+                                "facing": "east"
+                            }
+                        }
+                    ],
+                    "\"west\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "face": "wall",
+                                "facing": "west"
+                            }
+                        }
+                    ],
+                    "\"south\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "face": "wall",
+                                "facing": "south"
+                            }
+                        }
+                    ],
+                    "\"north\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "face": "wall",
+                                "facing": "north"
+                            }
+                        }
+                    ],
+                    "\"up_north_south\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "face": "floor",
+                                "facing": "north"
+                            }
+                        }
+                    ],
+                    "\"up_east_west\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "face": "floor",
+                                "facing": "west"
+                            }
+                        }
+                    ],
+                    "\"down_north_south\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "face": "ceiling",
+                                "facing": "north"
+                            }
+                        }
+                    ]
+                },
+                "open_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "powered": "false"
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "powered": "true"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:lever": [
+            {
+                "function": "new_block",
+                "options": "minecraft:lever"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "face": {
+                        "floor": [
+                            {
+                                "function": "map_properties",
+                                "options": {
+                                    "facing": {
+                                        "north": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "lever_direction": [
+                                                        "snbt",
+                                                        "\"up_north_south\""
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "south": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "lever_direction": [
+                                                        "snbt",
+                                                        "\"up_north_south\""
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "east": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "lever_direction": [
+                                                        "snbt",
+                                                        "\"up_east_west\""
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "west": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "lever_direction": [
+                                                        "snbt",
+                                                        "\"up_east_west\""
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "ceiling": [
+                            {
+                                "function": "map_properties",
+                                "options": {
+                                    "facing": {
+                                        "north": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "lever_direction": [
+                                                        "snbt",
+                                                        "\"down_north_south\""
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "south": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "lever_direction": [
+                                                        "snbt",
+                                                        "\"down_north_south\""
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "east": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "lever_direction": [
+                                                        "snbt",
+                                                        "\"down_east_west\""
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "west": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "lever_direction": [
+                                                        "snbt",
+                                                        "\"down_east_west\""
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "wall": [
+                            {
+                                "function": "map_properties",
+                                "options": {
+                                    "facing": {
+                                        "north": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "lever_direction": [
+                                                        "snbt",
+                                                        "\"north\""
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "south": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "lever_direction": [
+                                                        "snbt",
+                                                        "\"south\""
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "east": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "lever_direction": [
+                                                        "snbt",
+                                                        "\"east\""
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "west": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "lever_direction": [
+                                                        "snbt",
+                                                        "\"west\""
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "powered": {
+                        "false": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "open_bit": [
+                                        "snbt",
+                                        "0b"
+                                    ]
+                                }
+                            }
+                        ],
+                        "true": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "open_bit": [
+                                        "snbt",
+                                        "1b"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

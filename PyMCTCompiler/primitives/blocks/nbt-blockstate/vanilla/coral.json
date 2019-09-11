@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "coral_color": "tube"
+                                "type": "tube"
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "coral_color": "brain"
+                                "type": "brain"
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "coral_color": "bubble"
+                                "type": "bubble"
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "coral_color": "fire"
+                                "type": "fire"
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "coral_color": "horn"
+                                "type": "horn"
                             }
                         }
                     ]
@@ -61,7 +61,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "coral_color": {
+                    "type": {
                         "tube": [
                             {
                                 "function": "new_properties",

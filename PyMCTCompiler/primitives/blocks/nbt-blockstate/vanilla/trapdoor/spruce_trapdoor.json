@@ -1,190 +1,204 @@
 {
-    "to_universal": [
-        {
-            "function": "new_block",
-            "options": "universal_minecraft:spruce_trapdoor"
-        },
-        {
-            "function": "map_properties",
-            "options": {
-                "direction": {
-                    "0": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "facing": "south"
-                            }
-                        }
-                    ],
-                    "1": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "facing": "west"
-                            }
-                        }
-                    ],
-                    "2": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "facing": "north"
-                            }
-                        }
-                    ],
-                    "3": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "facing": "east"
-                            }
-                        }
-                    ]
-                },
-                "open_bit": {
-                    "0b": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "open": "false"
-                            }
-                        }
-                    ],
-                    "1b": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "open": "true"
-                            }
-                        }
-                    ]
-                },
-                "upside_down_bit": {
-                    "0b": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "half": "bottom"
-                            }
-                        }
-                    ],
-                    "1b": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "half": "top"
-                            }
-                        }
-                    ]
-                }
-            }
-        }
-    ],
-    "from_universal": {
-        "universal_minecraft:spruce_trapdoor": [
-            {
-                "function": "new_block",
-                "options": "minecraft:spruce_trapdoor"
-            },
-            {
-                "function": "map_properties",
-                "options": {
-                    "facing": {
-                        "south": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "0"
-                                    ]
-                                }
-                            }
-                        ],
-                        "west": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "1"
-                                    ]
-                                }
-                            }
-                        ],
-                        "north": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "2"
-                                    ]
-                                }
-                            }
-                        ],
-                        "east": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "3"
-                                    ]
-                                }
-                            }
-                        ]
-                    },
-                    "open": {
-                        "false": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "open_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
-                                }
-                            }
-                        ],
-                        "true": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "open_bit": [
-                                        "snbt",
-                                        "1b"
-                                    ]
-                                }
-                            }
-                        ]
-                    },
-                    "half": {
-                        "bottom": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "upside_down_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
-                                }
-                            }
-                        ],
-                        "top": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "upside_down_bit": [
-                                        "snbt",
-                                        "1b"
-                                    ]
-                                }
-                            }
-                        ]
-                    }
-                }
-            }
-        ]
-    }
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:trapdoor"
+		},
+		{
+			"function": "new_properties",
+			"options": {
+				"material": "spruce"
+			}
+		},
+		{
+			"function": "map_properties",
+			"options": {
+				"direction": {
+					"0": [
+						{
+							"function": "new_properties",
+							"options": {
+								"facing": "south"
+							}
+						}
+					],
+					"1": [
+						{
+							"function": "new_properties",
+							"options": {
+								"facing": "west"
+							}
+						}
+					],
+					"2": [
+						{
+							"function": "new_properties",
+							"options": {
+								"facing": "north"
+							}
+						}
+					],
+					"3": [
+						{
+							"function": "new_properties",
+							"options": {
+								"facing": "east"
+							}
+						}
+					]
+				},
+				"open_bit": {
+					"0b": [
+						{
+							"function": "new_properties",
+							"options": {
+								"open": "false"
+							}
+						}
+					],
+					"1b": [
+						{
+							"function": "new_properties",
+							"options": {
+								"open": "true"
+							}
+						}
+					]
+				},
+				"upside_down_bit": {
+					"0b": [
+						{
+							"function": "new_properties",
+							"options": {
+								"half": "bottom"
+							}
+						}
+					],
+					"1b": [
+						{
+							"function": "new_properties",
+							"options": {
+								"half": "top"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:trapdoor": [
+			{
+				"function": "new_block",
+				"options": "minecraft:trapdoor"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"material": {
+						"spruce": [
+							{
+								"function": "new_block",
+								"options": "minecraft:spruce_trapdoor"
+							}
+						]
+					},
+					"facing": {
+						"south": [
+							{
+								"function": "new_properties",
+								"options": {
+									"direction": [
+										"snbt",
+										"0"
+									]
+								}
+							}
+						],
+						"west": [
+							{
+								"function": "new_properties",
+								"options": {
+									"direction": [
+										"snbt",
+										"1"
+									]
+								}
+							}
+						],
+						"north": [
+							{
+								"function": "new_properties",
+								"options": {
+									"direction": [
+										"snbt",
+										"2"
+									]
+								}
+							}
+						],
+						"east": [
+							{
+								"function": "new_properties",
+								"options": {
+									"direction": [
+										"snbt",
+										"3"
+									]
+								}
+							}
+						]
+					},
+					"open": {
+						"false": [
+							{
+								"function": "new_properties",
+								"options": {
+									"open_bit": [
+										"snbt",
+										"0b"
+									]
+								}
+							}
+						],
+						"true": [
+							{
+								"function": "new_properties",
+								"options": {
+									"open_bit": [
+										"snbt",
+										"1b"
+									]
+								}
+							}
+						]
+					},
+					"half": {
+						"bottom": [
+							{
+								"function": "new_properties",
+								"options": {
+									"upside_down_bit": [
+										"snbt",
+										"0b"
+									]
+								}
+							}
+						],
+						"top": [
+							{
+								"function": "new_properties",
+								"options": {
+									"upside_down_bit": [
+										"snbt",
+										"1b"
+									]
+								}
+							}
+						]
+					}
+				}
+			}
+		]
+	}
 }
