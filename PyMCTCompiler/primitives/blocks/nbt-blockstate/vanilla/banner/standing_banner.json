@@ -2,7 +2,7 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:standing_banner"
+            "options": "universal_minecraft:banner"
         },
         {
             "function": "map_properties",
@@ -141,7 +141,7 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:standing_banner": [
+        "universal_minecraft:banner": [
             {
                 "function": "new_block",
                 "options": "minecraft:standing_banner"

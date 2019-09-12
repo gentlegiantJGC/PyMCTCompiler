@@ -1,0 +1,80 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:prismarine"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "prismarine_block_type": {
+                    "\"default\"": [
+                        {
+                            "function": "new_block",
+                            "options": "universal_minecraft:prismarine"
+                        }
+                    ],
+                    "\"dark\"": [
+                        {
+                            "function": "new_block",
+                            "options": "universal_minecraft:dark_prismarine"
+                        }
+                    ],
+                    "\"bricks\"": [
+                        {
+                            "function": "new_block",
+                            "options": "universal_minecraft:prismarine_bricks"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:prismarine": [
+            {
+                "function": "new_block",
+                "options": "minecraft:prismarine"
+            },
+            {
+                "function": "new_properties",
+                "options": {
+                    "prismarine_block_type": [
+                        "snbt",
+                        "\"default\""
+                    ]
+                }
+            }
+        ],
+        "universal_minecraft:dark_prismarine": [
+            {
+                "function": "new_block",
+                "options": "minecraft:prismarine"
+            },
+            {
+                "function": "new_properties",
+                "options": {
+                    "prismarine_block_type": [
+                        "snbt",
+                        "\"dark\""
+                    ]
+                }
+            }
+        ],
+        "universal_minecraft:prismarine_bricks": [
+            {
+                "function": "new_block",
+                "options": "minecraft:prismarine"
+            },
+            {
+                "function": "new_properties",
+                "options": {
+                    "prismarine_block_type": [
+                        "snbt",
+                        "\"bricks\""
+                    ]
+                }
+            }
+        ]
+    }
+}

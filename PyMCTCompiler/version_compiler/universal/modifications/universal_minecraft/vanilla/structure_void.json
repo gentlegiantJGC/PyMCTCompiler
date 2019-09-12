@@ -1,0 +1,18 @@
+{
+	"remove": [
+		"structure_void"
+	],
+	"add": {
+		"structure_void": {
+			"properties": {
+				"type": [
+					"void",
+					"air"
+				]
+			},
+			"defaults": {
+				"type": "void"
+			}
+		}
+	}
+}

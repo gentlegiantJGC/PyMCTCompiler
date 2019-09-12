@@ -1,0 +1,22 @@
+{
+	"remove": [
+		"structure_block"
+	],
+	"add": {
+		"structure_block": {
+			"properties": {
+				"mode": [
+					"save",
+					"load",
+					"corner",
+					"data",
+					"invalid",
+					"export"
+				]
+			},
+			"defaults": {
+				"mode": "save"
+			}
+		}
+	}
+}
