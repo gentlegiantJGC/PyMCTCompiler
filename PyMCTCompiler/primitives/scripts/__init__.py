@@ -1,1 +1,1 @@
-from ..scripts import numerical, blockstate
+from ..scripts import numerical, blockstate, nbt_blockstate
