@@ -2,7 +2,7 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:stonebrick"
+            "options": "universal_minecraft:stone_bricks"
         },
         {
             "function": "map_properties",
@@ -53,7 +53,7 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:stonebrick": [
+        "universal_minecraft:stone_bricks": [
             {
                 "function": "new_block",
                 "options": "minecraft:stonebrick"

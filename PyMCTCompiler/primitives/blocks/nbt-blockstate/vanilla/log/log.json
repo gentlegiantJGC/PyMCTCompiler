@@ -79,7 +79,7 @@
 			{
 				"function": "map_properties",
 				"options": {
-					"sripped": {
+					"stripped": {
 						"false": [
 							{
 								"function": "map_properties",

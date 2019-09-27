@@ -159,7 +159,7 @@
 						"stone": [
 							{
 								"function": "new_block",
-								"options": "minecraft:stone_fence_gate"
+								"options": "minecraft:stone_pressure_plate"
 							}
 						]
 					},

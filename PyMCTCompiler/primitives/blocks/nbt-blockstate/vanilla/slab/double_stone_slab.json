@@ -78,7 +78,8 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "double"
+                                "type": "double",
+                                "top_slot_bit": "0"
                             }
                         }
                     ],
@@ -86,7 +87,8 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "double"
+                                "type": "double",
+                                "top_slot_bit": "1"
                             }
                         }
                     ]
@@ -106,23 +108,38 @@
                     "type": {
                         "double": [
                             {
-                                "function": "new_properties",
-                                "options": {
-                                    "top_slot_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
-                                }
-                            },
-                            {
                                 "function": "map_properties",
                                 "options": {
+                                    "top_slot_bit": {
+                                        "0": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "top_slot_bit": [
+                                                        "snbt",
+                                                        "0b"
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "1": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "top_slot_bit": [
+                                                        "snbt",
+                                                        "1b"
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
                                     "material": {
                                         "smooth_stone": [
-											{
-												"function": "new_block",
-												"options": "minecraft:double_stone_slab"
-											},
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:double_stone_slab"
+                                            },
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -134,10 +151,10 @@
                                             }
                                         ],
                                         "sandstone": [
-											{
-												"function": "new_block",
-												"options": "minecraft:double_stone_slab"
-											},
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:double_stone_slab"
+                                            },
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -149,10 +166,10 @@
                                             }
                                         ],
                                         "petrified_oak": [
-											{
-												"function": "new_block",
-												"options": "minecraft:double_stone_slab"
-											},
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:double_stone_slab"
+                                            },
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -164,10 +181,10 @@
                                             }
                                         ],
                                         "cobblestone": [
-											{
-												"function": "new_block",
-												"options": "minecraft:double_stone_slab"
-											},
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:double_stone_slab"
+                                            },
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -179,10 +196,10 @@
                                             }
                                         ],
                                         "brick": [
-											{
-												"function": "new_block",
-												"options": "minecraft:double_stone_slab"
-											},
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:double_stone_slab"
+                                            },
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -194,10 +211,10 @@
                                             }
                                         ],
                                         "stone_brick": [
-											{
-												"function": "new_block",
-												"options": "minecraft:double_stone_slab"
-											},
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:double_stone_slab"
+                                            },
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -209,10 +226,10 @@
                                             }
                                         ],
                                         "quartz": [
-											{
-												"function": "new_block",
-												"options": "minecraft:double_stone_slab"
-											},
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:double_stone_slab"
+                                            },
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -224,10 +241,10 @@
                                             }
                                         ],
                                         "nether_brick": [
-											{
-												"function": "new_block",
-												"options": "minecraft:double_stone_slab"
-											},
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:double_stone_slab"
+                                            },
                                             {
                                                 "function": "new_properties",
                                                 "options": {

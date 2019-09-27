@@ -448,5 +448,7 @@
 	"mossy_stone_bricks": "mossy_stone_bricks",
 	"chiseled_stone_bricks": "chiseled_stone_bricks",
 	"beetroots": "beetroots",
-	"sweet_berry_bush": "sweet_berry_bush"
+	"sweet_berry_bush": "sweet_berry_bush",
+	"cobblestone_wall": "cobblestone_wall",
+	"mossy_cobblestone_wall": "mossy_cobblestone_wall"
 }

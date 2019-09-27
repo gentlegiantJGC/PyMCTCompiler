@@ -159,7 +159,7 @@
 						"oak": [
 							{
 								"function": "new_block",
-								"options": "minecraft:wooden_fence_gate"
+								"options": "minecraft:wooden_pressure_plate"
 							}
 						]
 					},

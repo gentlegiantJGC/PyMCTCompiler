@@ -159,7 +159,7 @@
 						"jungle": [
 							{
 								"function": "new_block",
-								"options": "minecraft:jungle_fence_gate"
+								"options": "minecraft:jungle_pressure_plate"
 							}
 						]
 					},

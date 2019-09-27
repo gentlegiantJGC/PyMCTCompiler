@@ -159,7 +159,7 @@
 						"acacia": [
 							{
 								"function": "new_block",
-								"options": "minecraft:acacia_fence_gate"
+								"options": "minecraft:acacia_pressure_plate"
 							}
 						]
 					},

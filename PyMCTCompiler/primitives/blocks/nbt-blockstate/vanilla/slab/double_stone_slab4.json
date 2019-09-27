@@ -54,7 +54,8 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"type": "double"
+								"type": "double",
+								"top_slot_bit": "0"
 							}
 						}
 					],
@@ -62,7 +63,8 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"type": "double"
+								"type": "double",
+								"top_slot_bit": "1"
 							}
 						}
 					]
@@ -82,17 +84,32 @@
 					"type": {
 						"double": [
 							{
-								"function": "new_properties",
-								"options": {
-									"top_slot_bit": [
-										"snbt",
-										"0b"
-									]
-								}
-							},
-							{
 								"function": "map_properties",
 								"options": {
+									"top_slot_bit": {
+										"0": [
+											{
+												"function": "new_properties",
+												"options": {
+													"top_slot_bit": [
+														"snbt",
+														"0b"
+													]
+												}
+											}
+										],
+										"1": [
+											{
+												"function": "new_properties",
+												"options": {
+													"top_slot_bit": [
+														"snbt",
+														"1b"
+													]
+												}
+											}
+										]
+									},
 									"material": {
 										"mossy_stone_brick": [
 											{

@@ -52,7 +52,7 @@
 			{
 				"function": "map_properties",
 				"options": {
-					"sripped": {
+					"stripped": {
 						"true": [
 							{
 								"function": "map_properties",

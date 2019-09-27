@@ -159,7 +159,7 @@
 						"spruce": [
 							{
 								"function": "new_block",
-								"options": "minecraft:spruce_fence_gate"
+								"options": "minecraft:spruce_pressure_plate"
 							}
 						]
 					},

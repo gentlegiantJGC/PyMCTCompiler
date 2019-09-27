@@ -159,7 +159,7 @@
 						"dark_oak": [
 							{
 								"function": "new_block",
-								"options": "minecraft:dark_oak_fence_gate"
+								"options": "minecraft:dark_oak_pressure_plate"
 							}
 						]
 					},

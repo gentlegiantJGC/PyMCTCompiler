@@ -159,7 +159,7 @@
 						"birch": [
 							{
 								"function": "new_block",
-								"options": "minecraft:birch_fence_gate"
+								"options": "minecraft:birch_pressure_plate"
 							}
 						]
 					},
