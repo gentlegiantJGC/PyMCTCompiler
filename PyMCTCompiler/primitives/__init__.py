@@ -27,7 +27,7 @@ for start_folder in blocks:
 				print(f'Block name "{os.path.splitext(f)[0]}" is define twice')
 			if f.endswith('.json') or f.endswith('.pyjson'):
 				try:
-					blocks[start_folder][os.path.splitext(f)[0]] = _load_file(f'{root}/{f}')
+					prim = blocks[start_folder][os.path.splitext(f)[0]] = _load_file(f'{root}/{f}')
 				except Exception as e:
 					print(f'Failed to load {root}/{f}\n{e}')
 					print(traceback.print_tb(e.__traceback__))
@@ -95,7 +95,15 @@ def _merge_objects(obj1: dict, obj2: dict) -> dict:
 
 
 def _merge_mappings(obj1: list, obj2: list) -> list:
+	# merge two translation files together
 	assert isinstance(obj1, list) and isinstance(obj2, list)
+
+	# reorganise functions into the form
+	# [
+	#  [function, custom_name],
+	#  [function, custom_name],
+	#  [function, custom_name]
+	# ]
 	obj1_functions = [[fun['function'], fun.get('custom_name', None)] for fun in obj1]
 	obj2_functions = [[fun['function'], fun.get('custom_name', None)] for fun in obj2]
 	for obj in [obj1, obj2]:
@@ -123,7 +131,7 @@ def _merge_mappings(obj1: list, obj2: list) -> list:
 					if prop not in obj1[index]['options']:
 						obj1[index]['options'][prop] = val
 					else:
-						obj1[index]['options'][prop] = _unique_merge_lists(obj1[index]['options'][prop], val)
+						obj1[index]['options'][prop] = list(set(obj1[index]['options'][prop] + val))
 
 			elif fun_name == 'map_properties':
 				for prop in fun['options']:
@@ -157,100 +165,41 @@ def _merge_mappings(obj1: list, obj2: list) -> list:
 					else:
 						obj1[index]['options'][val] = fun['options'][val]
 
+			# TODO
 			# elif fun_name == 'map_input_nbt':
 			# 	assert isinstance(fun['options'], dict), 'options must be a dictionary'
 			# 	for key, val in fun['options'].items():
 			# 		assert isinstance(key, str), 'All keys in the outer nbt type must be strings'
 			# 		check_map_input_nbt_format(val)
 			#
-			# elif fun_name == 'new_nbt':
-			# 	new_nbts = fun['options']
-			# 	if isinstance(new_nbts, dict):
-			# 		new_nbts = [new_nbts]
-			# 	assert isinstance(new_nbts, list), '"new_nbt" must be a dictionary or a list of dictionaries'
-			# 	for new_nbt in new_nbts:
-			# 		assert isinstance(new_nbt, dict), '"new_nbt" must be a dictionary or a list of dictionaries'
-			# 		if 'path' in new_nbt:
-			# 			assert isinstance(new_nbt['path'], list), '"new_nbt" path must be a list of lists'
-			# 			for index, path in enumerate(new_nbt['path']):
-			# 				assert isinstance(path, list), '"new_nbt" path must be a list of lists'
-			# 				assert len(path) == 2, '"new_nbt" path must be a list of lists of length 2'
-			# 				if index == 0:
-			# 					assert isinstance(path[0], str), '"new_nbt" path entry [0][0] must be a string because it is wrapped in an implied compound tag'
-			# 				else:
-			# 					if isinstance(path[0], str):
-			# 						assert new_nbt['path'][index - 1][1] == 'compound', f'Expected the previous data type to be "compound" got {path[index - 1][1]}'
-			# 					elif isinstance(path[0], int):
-			# 						assert new_nbt['path'][index - 1][1] == 'list', f'Expected the previous data type to be "list" got {path[index - 1][1]}'
-			# 					else:
-			# 						raise Exception('The first paramater of each entry in path must be a string or an int')
-			#
-			# 		assert 'key' in new_nbt, '"key" must be present in new_nbt'
-			# 		if isinstance(new_nbt['key'], str):
-			# 			if 'path' in new_nbt:
-			# 				assert new_nbt['path'][-1][1] == 'compound', f'Expected the final data type in path to be "compound" got {new_nbt["path"][-1][1]}'
-			# 		elif isinstance(new_nbt['key'], int):
-			# 			if 'path' in new_nbt:
-			# 				assert new_nbt['path'][-1][1] == 'list', f'Expected the final data type in path to be "list" got {new_nbt["path"][-1][1]}'
-			# 		else:
-			# 			raise Exception('The first paramater of each entry in path must be a string or an int')
-			#
-			# 		assert 'type' in new_nbt, '"type" must be present in new_nbt'
-			# 		assert new_nbt['type'] in ('byte', 'short', 'int', 'long', 'float', 'double', 'string', 'byte_array', 'int_array', 'long_array'), 'datatype is not known'
-			#
-			# 		assert 'value' in new_nbt, '"value" must be present in new_nbt'
-			# 		if new_nbt['type'] in ('byte', 'short', 'int', 'long'):
-			# 			assert isinstance(new_nbt['value'], int), f'new_nbt "value" must be an int for type {new_nbt["type"]}'
-			# 		elif new_nbt['type'] in ('float', 'double'):
-			# 			assert isinstance(new_nbt['value'], (int, float)), f'new_nbt "value" must be an int or float for type {new_nbt["type"]}'
-			# 		elif new_nbt['type'] == 'string':
-			# 			assert isinstance(new_nbt['value'], str), f'new_nbt "value" must be a string for type {new_nbt["type"]}'
-			# 		elif new_nbt['type'] in ('byte_array', 'int_array', 'long_array'):
-			# 			assert isinstance(new_nbt['value'], list), f'new_nbt "value" must be a list of ints for type {new_nbt["type"]}'
-			# 			assert all(isinstance(array_val, int) for array_val in new_nbt['value']), f'new_nbt "value" must be a list of ints for type {new_nbt["type"]}'
-			#
-			# elif fun_name == 'carry_nbt' and 'carry_nbt' in extra_feature_set:
-			# 	assert isinstance(fun['options'], dict), 'options must be a dictionary'
-			# 	if 'path' in fun['options']:
-			# 		assert isinstance(fun['options']['path'], list), '"options" path must be a list of lists'
-			# 		for index, path in enumerate(fun['options']['path']):
-			# 			assert isinstance(path, list), '"options" path must be a list of lists'
-			# 			assert len(path) == 2, '"options" path must be a list of lists of length 2'
-			# 			if index == 0:
-			# 				assert isinstance(path[0], str), '"new_nbt" path entry [0][0] must be a string because it is wrapped in an implied compound tag'
-			# 			else:
-			# 				if isinstance(path[0], str):
-			# 					assert fun['options']['path'][index - 1][1] == 'compound', f'Expected the previous data type to be "compound" got {path[index - 1][1]}'
-			# 				elif isinstance(path[0], int):
-			# 					assert fun['options']['path'][index - 1][1] == 'list', f'Expected the previous data type to be "list" got {path[index - 1][1]}'
-			# 				else:
-			# 					raise Exception('The first paramater of each entry in path must be a string or an int')
-			#
-			# 	if 'key' in fun['options']:
-			# 		if isinstance(fun['options']['key'], str):
-			# 			if 'path' in fun['options']:
-			# 				assert fun['options']['path'][-1][1] == 'compound', f'Expected the final data type in path to be "compound" got {fun["options"]["path"][-1][1]}'
-			# 		elif isinstance(fun['options']['key'], int):
-			# 			if 'path' in fun['options']:
-			# 				assert fun['options']['path'][-1][1] == 'list', f'Expected the final data type in path to be "list" got {fun["options"]["path"][-1][1]}'
-			# 		else:
-			# 			raise Exception('The first paramater of each entry in path must be a string or an int')
-			#
-			# 	if 'type' in fun['options']:
-			# 		assert fun['options']['type'] in ('byte', 'short', 'int', 'long', 'float', 'double', 'string', 'byte_array', 'int_array', 'long_array'), 'datatype is not known'
-			#
+			elif fun_name == 'new_nbt':
+				new_nbts = fun['options']
+				if isinstance(new_nbts, dict):
+					new_nbts = [new_nbts]
+				if isinstance(obj1[index]['options'], dict):
+					obj1[index]['options'] = [obj1[index]['options']]
+				for new_nbt in new_nbts:
+					if new_nbt not in obj1[index]['options']:
+						obj1[index]['options'].append(new_nbt)
+
+			elif fun_name == 'carry_nbt':
+				obj1[index]['options'] = fun['options']
+
 			elif fun_name == 'map_nbt':
 				if 'cases' in fun['options']:
-					assert isinstance(fun['options']['cases'], dict), 'map_nbt cases must be a dictionary if present'
+					obj1[index]['options'].setdefault('cases', {})
 					for key, val in fun['options']['cases'].items():
-						assert isinstance(key, str), 'map_nbt cases keys must be strings. This is a limitation of JSON. numerical types are mappable but string the value'
-						check_mapping_format(val, extra_feature_set_)
+						if key in obj1[index]['options']['cases']:
+							obj1[index]['options']['cases'][key] = _merge_mappings(obj1[index]['options']['cases'][key], val)
+						else:
+							obj1[index]['options']['cases'][key] = val
 
 				if 'default' in fun['options']:
-					check_mapping_format(fun['options']['default'], extra_feature_set_)
-			#
-			# else:
-			# 	log_to_file(f'Unknown/unsupported function "{fun["function"]}" found')
+					obj1[index]['options'].setdefault('default', [])
+					obj1[index]['options']['default'] = _merge_mappings(obj1[index]['options']['default'], fun['options']['default'])
+
+			else:
+				raise Exception(f'Unknown/unsupported function "{fun["function"]}" found')
 
 		except ValueError:
 			obj1.append(fun)
@@ -269,19 +218,3 @@ def _merge_objects_(obj1, obj2) -> dict:
 		return obj1
 	else:
 		return obj2
-
-
-def _unique_merge_lists(list_a: list, list_b: list) -> list:
-	"""Will return a list of the unique values from the two given lists.
-
-	:param list_a: List of values
-	:type list_a: list
-	:param list_b: List of values
-	:type list_b: list
-	:return: List of unique entries from a and b
-	"""
-	merged_list = []
-	for entry in list_a+list_b:
-		if entry not in merged_list:
-			merged_list.append(entry)
-	return merged_list
