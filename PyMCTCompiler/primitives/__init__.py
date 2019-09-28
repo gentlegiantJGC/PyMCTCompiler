@@ -55,7 +55,7 @@ def get_block(block_format: str, primitive: Union[str, List[str]]) -> dict:
 		for nested_primitive in primitive:
 			assert isinstance(nested_primitive, str), f'Expected a list of strings. At least one entry was type {type(nested_primitive)}'
 			assert nested_primitive in blocks[block_format], f'"{nested_primitive}" is not present in the mappings for format "{block_format}"'
-			output = _merge_objects(copy.deepcopy(output), copy.deepcopy(blocks[block_format][nested_primitive]))
+			output = _merge_primitives(copy.deepcopy(output), copy.deepcopy(blocks[block_format][nested_primitive]))
 		return output
 	else:
 		raise Exception(f'Un-supported format: {type(primitive)}')
@@ -70,31 +70,31 @@ def get_entity(primitive: Union[str, List[str]]) -> dict:
 		for nested_primitive in primitive:
 			assert isinstance(nested_primitive, str), f'Expected a list of strings. At least one entry was type {type(nested_primitive)}'
 			assert nested_primitive in entities, f'"{nested_primitive}" is not present in the entity mappings'
-			output = _merge_objects(copy.deepcopy(output), copy.deepcopy(entities[nested_primitive]))
+			output = _merge_primitives(copy.deepcopy(output), copy.deepcopy(entities[nested_primitive]))
 		return output
 	else:
 		raise Exception(f'Un-supported format: {type(primitive)}')
 
 
-def _merge_objects(obj1: dict, obj2: dict) -> dict:
+def _merge_primitives(obj1: dict, obj2: dict) -> dict:
 	assert isinstance(obj1, dict) and isinstance(obj2, dict)
 	for key, val in obj2.items():
 		if key not in obj1:
 			obj1[key] = val
 		elif key in ('to_universal', 'blockstate_to_universal'):
-			obj1[key] = _merge_mappings(obj1[key], obj2[key])
+			obj1[key] = _merge_primitive_mappings(obj1[key], obj2[key])
 		elif key in ('from_universal', 'blockstate_from_universal'):
 			for string_id, props in val.items():
 				if string_id not in obj1[key]:
 					obj1[key][string_id] = props
 				else:
-					obj1[key][string_id] = _merge_mappings(obj1[key][string_id], props)
+					obj1[key][string_id] = _merge_primitive_mappings(obj1[key][string_id], props)
 		else:
 			_merge_objects_(obj1[key], obj2[key])
 	return obj1
 
 
-def _merge_mappings(obj1: list, obj2: list) -> list:
+def _merge_primitive_mappings(obj1: list, obj2: list) -> list:
 	# merge two translation files together
 	assert isinstance(obj1, list) and isinstance(obj2, list)
 
@@ -138,7 +138,7 @@ def _merge_mappings(obj1: list, obj2: list) -> list:
 					if prop in obj1[index]['options']:
 						for val in fun['options'][prop]:
 							if val in obj1[index]['options'][prop]:
-								obj1[index]['options'][prop][val] = _merge_mappings(obj1[index]['options'][prop][val], fun['options'][prop][val])
+								obj1[index]['options'][prop][val] = _merge_primitive_mappings(obj1[index]['options'][prop][val], fun['options'][prop][val])
 							else:
 								obj1[index]['options'][prop][val] = fun['options'][prop][val]
 					else:
@@ -156,22 +156,20 @@ def _merge_mappings(obj1: list, obj2: list) -> list:
 					if obj1_mapping is None:
 						obj1[index]['options'].append(mapping)
 					else:
-						obj1_mapping['functions'] = _merge_mappings(obj1_mapping['functions'], mapping['functions'])
+						obj1_mapping['functions'] = _merge_primitive_mappings(obj1_mapping['functions'], mapping['functions'])
 
 			elif fun_name == 'map_block_name':
 				for val in fun['options']:
 					if val in obj1[index]['options']:
-						obj1[index]['options'][val] = _merge_mappings(obj1[index]['options'][val], fun['options'][val])
+						obj1[index]['options'][val] = _merge_primitive_mappings(obj1[index]['options'][val], fun['options'][val])
 					else:
 						obj1[index]['options'][val] = fun['options'][val]
 
-			# TODO
-			# elif fun_name == 'map_input_nbt':
-			# 	assert isinstance(fun['options'], dict), 'options must be a dictionary'
-			# 	for key, val in fun['options'].items():
-			# 		assert isinstance(key, str), 'All keys in the outer nbt type must be strings'
-			# 		check_map_input_nbt_format(val)
-			#
+			elif fun_name == 'map_input_nbt':
+				if 'outer_name' in fun:
+					obj1[index]['outer_name'] = fun['outer_name']
+				obj1[index]['options'] = _merge_primitive_map_input_nbt(obj1[index]['options'], fun['options'])
+
 			elif fun_name == 'new_nbt':
 				new_nbts = fun['options']
 				if isinstance(new_nbts, dict):
@@ -190,13 +188,13 @@ def _merge_mappings(obj1: list, obj2: list) -> list:
 					obj1[index]['options'].setdefault('cases', {})
 					for key, val in fun['options']['cases'].items():
 						if key in obj1[index]['options']['cases']:
-							obj1[index]['options']['cases'][key] = _merge_mappings(obj1[index]['options']['cases'][key], val)
+							obj1[index]['options']['cases'][key] = _merge_primitive_mappings(obj1[index]['options']['cases'][key], val)
 						else:
 							obj1[index]['options']['cases'][key] = val
 
 				if 'default' in fun['options']:
 					obj1[index]['options'].setdefault('default', [])
-					obj1[index]['options']['default'] = _merge_mappings(obj1[index]['options']['default'], fun['options']['default'])
+					obj1[index]['options']['default'] = _merge_primitive_mappings(obj1[index]['options']['default'], fun['options']['default'])
 
 			else:
 				raise Exception(f'Unknown/unsupported function "{fun["function"]}" found')
@@ -207,12 +205,31 @@ def _merge_mappings(obj1: list, obj2: list) -> list:
 	return obj1
 
 
+def _merge_primitive_map_input_nbt(obj1: dict, obj2: dict) -> dict:
+	if 'type' in obj2:
+		assert obj1['type'] == obj2['type'], '"type" must match in both NBT types'
+
+	for function_name in ('self_default', 'functions', 'nested_default'):
+		if function_name in obj2:
+			obj1[function_name] = _merge_primitive_mappings(obj1.get(function_name, []), obj2[function_name])
+
+	for key in ('keys', 'index'):
+		if key in obj2:
+			obj1.setdefault(key, {})
+			for val in obj2['keys'].keys():
+				if val in obj1['keys'].keys():
+					obj1[key][val] = _merge_primitive_map_input_nbt(obj1[key][val], obj2[key][val])
+				else:
+					obj1[key][val] = obj2[key][val]
+	return obj1
+
+
 def _merge_objects_(obj1, obj2) -> dict:
 	if isinstance(obj2, dict) and isinstance(obj1, dict):
 		obj1 = copy.deepcopy(obj1)
 		for key, val in obj2.items():
 			if key in obj1:
-				obj1[key] = _merge_objects(obj1[key], obj2[key])
+				obj1[key] = _merge_primitives(obj1[key], obj2[key])
 			else:
 				obj1[key] = val
 		return obj1
