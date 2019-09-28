@@ -46,7 +46,7 @@ def log_to_file(msg: str):
 	log_file.write(f'{msg}\n')
 
 
-def merge_map_(data_: list, data: list) -> list:
+def strict_merge_map_(data_: list, data: list) -> list:
 	"""Merge new "data" object into "data_" (data loaded from disk) and return the result.
 
 	:param data_: List to merge with data_
@@ -55,10 +55,10 @@ def merge_map_(data_: list, data: list) -> list:
 	"""
 	check_mapping_format(data_)
 	check_mapping_format(data)
-	return _merge_map(data_, data)
+	return _strict_merge_map(data_, data)
 
 
-def _merge_map(data_: list, data: list) -> list:
+def _strict_merge_map(data_: list, data: list) -> list:
 	# TODO: update this and implement named groups
 	assert [fun['function'] for fun in data_] == [fun['function'] for fun in data], f'The functions do not match\n{data_}\n{data}'
 
@@ -74,7 +74,7 @@ def _merge_map(data_: list, data: list) -> list:
 			for key in fun['options'].keys():
 				for val in fun['options'][key].keys():
 					if val in fun_['options'][key].keys():
-						fun_['options'][key][val] = _merge_map(fun_['options'][key][val], fun['options'][key][val])
+						fun_['options'][key][val] = _strict_merge_map(fun_['options'][key][val], fun['options'][key][val])
 					else:
 						fun_['options'][key][val] = fun['options'][key][val]
 
@@ -94,12 +94,12 @@ def _merge_map(data_: list, data: list) -> list:
 			for key in fun['options'].keys():
 				for val in fun['options'][key].keys():
 					if val in fun_['options'][key].keys():
-						fun_['options'][key][val] = _merge_map(fun_['options'][key][val], fun['options'][key][val])
+						fun_['options'][key][val] = _strict_merge_map(fun_['options'][key][val], fun['options'][key][val])
 					else:
 						fun_['options'][key][val] = fun['options'][key][val]
 
 		elif fun['function'] == 'map_input_nbt':
-			fun_['options'] = merge_map_input_nbt(fun_['options'], fun['options'])
+			fun_['options'] = strict_merge_map_input_nbt(fun_['options'], fun['options'])
 
 		elif fun['function'] == 'carry_nbt':
 			assert fun_['options'] == fun['options'], '"carry_nbt" must be the same when merging'
@@ -110,73 +110,73 @@ def _merge_map(data_: list, data: list) -> list:
 	return data_
 
 
-def merge_map_input_nbt(data_: dict, data: dict) -> dict:
+def strict_merge_map_input_nbt(data_: dict, data: dict) -> dict:
 	for key, val in data.items():
 		if key in data_:
-			data_[key] = _merge_map_input_nbt(data_[key], val)
+			data_[key] = _strict_merge_map_input_nbt(data_[key], val)
 		else:
 			data_[key] = val
 	return data_
 
 
-def _merge_map_input_nbt(data_: dict, data: dict, bypass_type=False) -> dict:
+def _strict_merge_map_input_nbt(data_: dict, data: dict, bypass_type=False) -> dict:
 	if not bypass_type:
 		assert data_['type'] == data['type'], '"type" must match in both NBT types'
 	if 'self_default' in data_ and 'self_default' in data:
-		data_['self_default'] = _merge_map(data_['self_default'], data['self_default'])
+		data_['self_default'] = _strict_merge_map(data_['self_default'], data['self_default'])
 	elif not ('self_default' not in data_ and 'self_default' not in data):
-		data_['self_default'] = _merge_map(data_.get('self_default', {"carry_nbt": {}}), data.get('self_default', {"carry_nbt": {}}))
+		data_['self_default'] = _strict_merge_map(data_.get('self_default', {"carry_nbt": {}}), data.get('self_default', {"carry_nbt": {}}))
 
 	if 'functions' in data_ and 'functions' in data:
-		data_['functions'] = _merge_map(data_['functions'], data['functions'])
+		data_['functions'] = _strict_merge_map(data_['functions'], data['functions'])
 	elif not ('functions' not in data_ and 'functions' not in data):
-		data_['functions'] = _merge_map(data_.get('functions', {}), data.get('functions', {}))
+		data_['functions'] = _strict_merge_map(data_.get('functions', {}), data.get('functions', {}))
 
 	if not bypass_type:
 		if data_['type'] == 'compound':
 			if 'keys' in data and 'keys' in data_:
 				for val in data['keys'].keys():
 					if val in data_['keys'].keys():
-						data_['keys'][val] = _merge_map_input_nbt(data_['keys'][val], data['keys'][val])
+						data_['keys'][val] = _strict_merge_map_input_nbt(data_['keys'][val], data['keys'][val])
 					else:
 						data_['keys'][val] = data['keys'][val]
 			else:
 				assert 'keys' not in data and 'keys' not in data_, '"keys" defined in one but not the other'
 
 			if 'nested_default' in data_ and 'nested_default' in data:
-				data_['nested_default'] = _merge_map(data_['nested_default'], data['nested_default'])
+				data_['nested_default'] = _strict_merge_map(data_['nested_default'], data['nested_default'])
 			elif not ('nested_default' not in data_ and 'nested_default' not in data):
-				data_['nested_default'] = _merge_map(data_.get('nested_default', {"carry_nbt": {}}), data.get('nested_default', {"carry_nbt": {}}))
+				data_['nested_default'] = _strict_merge_map(data_.get('nested_default', {"carry_nbt": {}}), data.get('nested_default', {"carry_nbt": {}}))
 
 		elif data_['type'] == 'list':
 			if 'index' in data and 'index' in data_:
 				for val in data['index'].keys():
 					if val in data_['index'].keys():
-						data_['index'][val] = _merge_map_input_nbt(data_['index'][val], data['index'][val])
+						data_['index'][val] = _strict_merge_map_input_nbt(data_['index'][val], data['index'][val])
 					else:
 						data_['index'][val] = data['index'][val]
 			else:
 				assert 'index' not in data and 'index' not in data_, '"keys" defined in one but not the other'
 
 			if 'nested_default' in data_ and 'nested_default' in data:
-				data_['nested_default'] = _merge_map(data_['nested_default'], data['nested_default'])
+				data_['nested_default'] = _strict_merge_map(data_['nested_default'], data['nested_default'])
 			elif not ('nested_default' not in data_ and 'nested_default' not in data):
-				data_['nested_default'] = _merge_map(data_.get('nested_default', {"carry_nbt": {}}), data.get('nested_default', {"carry_nbt": {}}))
+				data_['nested_default'] = _strict_merge_map(data_.get('nested_default', {"carry_nbt": {}}), data.get('nested_default', {"carry_nbt": {}}))
 
 		elif data_['type'] in ('byte_array', 'int_array', 'long_array'):
 			if 'index' in data and 'index' in data_:
 				for val in data['index'].keys():
 					if val in data_['index'].keys():
-						data_['index'][val] = _merge_map_input_nbt(data_['index'][val], data['index'][val], True)
+						data_['index'][val] = _strict_merge_map_input_nbt(data_['index'][val], data['index'][val], True)
 					else:
 						data_['index'][val] = data['index'][val]
 			else:
 				assert 'index' not in data and 'index' not in data_, '"keys" defined in one but not the other'
 
 			if 'nested_default' in data_ and 'nested_default' in data:
-				data_['nested_default'] = _merge_map(data_['nested_default'], data['nested_default'])
+				data_['nested_default'] = _strict_merge_map(data_['nested_default'], data['nested_default'])
 			elif not ('nested_default' not in data_ and 'nested_default' not in data):
-				data_['nested_default'] = _merge_map(data_.get('nested_default', {"carry_nbt": {}}), data.get('nested_default', {"carry_nbt": {}}))
+				data_['nested_default'] = _strict_merge_map(data_.get('nested_default', {"carry_nbt": {}}), data.get('nested_default', {"carry_nbt": {}}))
 
 	return data_
 

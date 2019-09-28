@@ -4,7 +4,7 @@ import shutil
 import time
 from typing import Union
 from PyMCTCompiler import version_compiler
-from PyMCTCompiler.helpers import log_to_file, merge_map_, blocks_from_server_, DiskBuffer, check_formatting
+from PyMCTCompiler.helpers import log_to_file, strict_merge_map_, blocks_from_server_, DiskBuffer, check_formatting
 
 uncompiled_dir = './version_compiler'
 compiled_dir = '../../PyMCTranslate/PyMCTranslate/mappings'
@@ -117,7 +117,7 @@ def merge_map(data: dict, path: str, buffer: DiskBuffer = None):
 	"""
 	if isfile(path, compiled_dir, buffer):
 		data_ = load_file(path, compiled_dir, buffer)
-		save_json(path, merge_map_(data_, data), True, buffer=buffer)
+		save_json(path, strict_merge_map_(data_, data), True, buffer=buffer)
 	else:
 		save_json(path, data, buffer=buffer)
 
