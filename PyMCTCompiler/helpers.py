@@ -110,16 +110,7 @@ def _strict_merge_map(data_: list, data: list) -> list:
 	return data_
 
 
-def strict_merge_map_input_nbt(data_: dict, data: dict) -> dict:
-	for key, val in data.items():
-		if key in data_:
-			data_[key] = _strict_merge_map_input_nbt(data_[key], val)
-		else:
-			data_[key] = val
-	return data_
-
-
-def _strict_merge_map_input_nbt(data_: dict, data: dict, bypass_type=False) -> dict:
+def strict_merge_map_input_nbt(data_: dict, data: dict, bypass_type=False) -> dict:
 	if not bypass_type:
 		assert data_['type'] == data['type'], '"type" must match in both NBT types'
 	if 'self_default' in data_ and 'self_default' in data:
@@ -137,7 +128,7 @@ def _strict_merge_map_input_nbt(data_: dict, data: dict, bypass_type=False) -> d
 			if 'keys' in data and 'keys' in data_:
 				for val in data['keys'].keys():
 					if val in data_['keys'].keys():
-						data_['keys'][val] = _strict_merge_map_input_nbt(data_['keys'][val], data['keys'][val])
+						data_['keys'][val] = strict_merge_map_input_nbt(data_['keys'][val], data['keys'][val])
 					else:
 						data_['keys'][val] = data['keys'][val]
 			else:
@@ -152,7 +143,7 @@ def _strict_merge_map_input_nbt(data_: dict, data: dict, bypass_type=False) -> d
 			if 'index' in data and 'index' in data_:
 				for val in data['index'].keys():
 					if val in data_['index'].keys():
-						data_['index'][val] = _strict_merge_map_input_nbt(data_['index'][val], data['index'][val])
+						data_['index'][val] = strict_merge_map_input_nbt(data_['index'][val], data['index'][val])
 					else:
 						data_['index'][val] = data['index'][val]
 			else:
@@ -167,7 +158,7 @@ def _strict_merge_map_input_nbt(data_: dict, data: dict, bypass_type=False) -> d
 			if 'index' in data and 'index' in data_:
 				for val in data['index'].keys():
 					if val in data_['index'].keys():
-						data_['index'][val] = _strict_merge_map_input_nbt(data_['index'][val], data['index'][val], True)
+						data_['index'][val] = strict_merge_map_input_nbt(data_['index'][val], data['index'][val], True)
 					else:
 						data_['index'][val] = data['index'][val]
 			else:
@@ -287,9 +278,7 @@ def check_mapping_format(data: list, extra_feature_set: Tuple[str, ...] = None):
 
 		elif fun['function'] == 'map_input_nbt':
 			assert isinstance(fun['options'], dict), 'options must be a dictionary'
-			for key, val in fun['options'].items():
-				assert isinstance(key, str), 'All keys in the outer nbt type must be strings'
-				check_map_input_nbt_format(val)
+			check_map_input_nbt_format(fun['options'])
 
 		elif fun['function'] == 'new_nbt':
 			new_nbts = fun['options']

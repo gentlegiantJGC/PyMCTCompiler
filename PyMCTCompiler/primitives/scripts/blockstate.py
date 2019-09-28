@@ -290,10 +290,8 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 			{
 				"function": "map_input_nbt",
 				"options": {
-					"": {
-						"type": "compound",
-						"keys": {}
-					}
+					"type": "compound",
+					"keys": {}
 				}
 			}
 		],
@@ -302,10 +300,8 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 				{
 					"function": "map_input_nbt",
 					"options": {
-						"": {
-							"type": "compound",
-							"keys": {}
-						}
+						"type": "compound",
+						"keys": {}
 					}
 				}
 			] for universal_block in universal_blocks

@@ -34,48 +34,46 @@
 		{
 			"function": "map_input_nbt",
 			"options": {
-				"": {
-					"type": "compound",
-					"keys": {
-						"color": {
-							"type": "byte",
-							"functions": [
-								{
-									"function": "map_nbt",
-									"options": {
-										"cases": {
-											str(num): [
-												{
-													"function": "new_properties",
-													"options": {
-														"color": color
-													}
+				"type": "compound",
+				"keys": {
+					"color": {
+						"type": "byte",
+						"functions": [
+							{
+								"function": "map_nbt",
+								"options": {
+									"cases": {
+										str(num): [
+											{
+												"function": "new_properties",
+												"options": {
+													"color": color
 												}
-											] for num, color in enumerate([
-											"white",
-											"orange",
-											"magenta",
-											"light_blue",
-											"yellow",
-											"lime",
-											"pink",
-											"gray",
-											"light_gray",
-											"cyan",
-											"purple",
-											"blue",
-											"brown",
-											"green",
-											"red",
-											"black"
-										])
-										},
-										"default": []
-									}
+											}
+										] for num, color in enumerate([
+										"white",
+										"orange",
+										"magenta",
+										"light_blue",
+										"yellow",
+										"lime",
+										"pink",
+										"gray",
+										"light_gray",
+										"cyan",
+										"purple",
+										"blue",
+										"brown",
+										"green",
+										"red",
+										"black"
+									])
+									},
+									"default": []
 								}
-							],
-							"self_default": []
-						}
+							}
+						],
+						"self_default": []
 					}
 				}
 			}

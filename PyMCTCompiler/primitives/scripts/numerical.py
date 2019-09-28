@@ -151,10 +151,8 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 			{
 				"function": "map_input_nbt",
 				"options": {
-					"": {
-						"type": "compound",
-						"keys": {}
-					}
+					"type": "compound",
+					"keys": {}
 				}
 			}
 		],
@@ -163,10 +161,8 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 				{
 					"function": "map_input_nbt",
 					"options": {
-						"": {
-							"type": "compound",
-							"keys": {}
-						}
+						"type": "compound",
+						"keys": {}
 					}
 				}
 			] for universal_block in universal_blocks
@@ -179,10 +175,8 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 			{
 				"function": "map_input_nbt",
 				"options": {
-					"": {
-						"type": "compound",
-						"keys": {}
-					}
+					"type": "compound",
+					"keys": {}
 				}
 			}
 		],
@@ -191,10 +185,8 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 				{
 					"function": "map_input_nbt",
 					"options": {
-						"": {
-							"type": "compound",
-							"keys": {}
-						}
+						"type": "compound",
+						"keys": {}
 					}
 				}
 			] for universal_block in universal_blocks
@@ -5389,61 +5381,59 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 				{
 					"function": "map_input_nbt",
 					"options": {
-						"": {
-							"type": "compound",
-							"keys": {
-								"note": {
-									"type": "byte",
-									"functions": [
-										{
-											"function": "map_nbt",
-											"options": {
-												"cases": {
-													str(data): [
-														{
-															"function": "new_properties",
-															"options": {
-																"note": str(data)
-															}
+						"type": "compound",
+						"keys": {
+							"note": {
+								"type": "byte",
+								"functions": [
+									{
+										"function": "map_nbt",
+										"options": {
+											"cases": {
+												str(data): [
+													{
+														"function": "new_properties",
+														"options": {
+															"note": str(data)
 														}
-													] for data in range(25)
-												},
-												"default": []
-											}
+													}
+												] for data in range(25)
+											},
+											"default": []
 										}
-									],
-									"self_default": []
-								},
-								"powered": {
-									"type": "byte",
-									"functions": [
-										{
-											"function": "map_nbt",
-											"options": {
-												"cases": {
-													"0": [
-														{
-															"function": "new_properties",
-															"options": {
-																"powered": "false"
-															}
+									}
+								],
+								"self_default": []
+							},
+							"powered": {
+								"type": "byte",
+								"functions": [
+									{
+										"function": "map_nbt",
+										"options": {
+											"cases": {
+												"0": [
+													{
+														"function": "new_properties",
+														"options": {
+															"powered": "false"
 														}
-													],
-													"1": [
-														{
-															"function": "new_properties",
-															"options": {
-																"powered": "true"
-															}
+													}
+												],
+												"1": [
+													{
+														"function": "new_properties",
+														"options": {
+															"powered": "true"
 														}
-													]
-												},
-												"default": []
-											}
+													}
+												]
+											},
+											"default": []
 										}
-									],
-									"self_default": []
-								}
+									}
+								],
+								"self_default": []
 							}
 						}
 					}
@@ -5552,31 +5542,29 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 				{
 					"function": "map_input_nbt",
 					"options": {
-						"": {
-							"type": "compound",
-							"keys": {
-								"note": {
-									"type": "byte",
-									"functions": [
-										{
-											"function": "map_nbt",
-											"options": {
-												"cases": {
-													str(data): [
-														{
-															"function": "new_properties",
-															"options": {
-																"note": str(data)
-															}
+						"type": "compound",
+						"keys": {
+							"note": {
+								"type": "byte",
+								"functions": [
+									{
+										"function": "map_nbt",
+										"options": {
+											"cases": {
+												str(data): [
+													{
+														"function": "new_properties",
+														"options": {
+															"note": str(data)
 														}
-													] for data in range(25)
-												},
-												"default": []
-											}
+													}
+												] for data in range(25)
+											},
+											"default": []
 										}
-									],
-									"self_default": []
-								}
+									}
+								],
+								"self_default": []
 							}
 						}
 					}
