@@ -21,7 +21,7 @@ class NewEntity(BaseTranslationFunction):
 	def _compiled_extend(self, other):
 		"""Used to merge two completed translations together.
 		The formats must match in such a way that the two base translations do not interfere."""
-		assert self['options'] == other['options'], '"new_block" must be the same when merging'
+		assert self['options'] == other['options'], '"new_entity" must be the same when merging'
 
 	def _commit(self, extra_feature_set: Tuple[str, ...]):
 		assert isinstance(self['options'], str), '"options" must be a string'
