@@ -4,6 +4,8 @@ import traceback
 import copy
 from typing import Union, List
 from .scripts import *
+import amulet_nbt
+from amulet_nbt import NBTFile, TAG_Byte, TAG_Short, TAG_Int, TAG_Long, TAG_Float, TAG_Double, TAG_Byte_Array, TAG_String, TAG_List, TAG_Compound, TAG_Int_Array, TAG_Long_Array
 
 
 def _load_file(path: str) -> dict:
@@ -89,8 +91,65 @@ def _merge_primitives(obj1: dict, obj2: dict) -> dict:
 					obj1[key][string_id] = props
 				else:
 					obj1[key][string_id] = _merge_primitive_mappings(obj1[key][string_id], props)
+		elif key in ('specification', 'blockstate_specification'):
+			merge_primitive_specification(obj1[key], obj2[key])
+	return obj1
+
+
+def merge_nbt(obj1, obj2):
+	assert isinstance(obj1, obj2.__class__), 'The data types must be the same'
+	if isinstance(obj1, TAG_Compound):
+		for key, val in obj2.items():
+			if key in obj1:
+				obj1[key] = merge_nbt(obj1[key], val)
+			else:
+				obj1[key] = val
+
+	elif obj1 != obj2:
+		raise Exception(f'Data type was not compound and the data was different. Cannot merge this primitive data.\n{obj1}, {obj2}')
+
+	return obj1.to_snbt()
+
+
+
+
+def merge_primitive_specification(obj1: dict, obj2: dict) -> dict:
+	assert isinstance(obj1, dict) and isinstance(obj2, dict)
+	# {
+	# 	"properties": {
+	# 		"prop": [
+	# 			"values"
+	# 		]
+	# 	},
+	# 	"defaults": {
+	# 		"prop": "value"
+	# 	},
+	# 	"snbt": "snbt_str",
+	# 	"nbt_identifier": ["namespace", "base_name"],
+	# 	"nbt_properties": false
+	# }
+	if 'properties' in obj2:
+		obj1.setdefault("properties", {})
+		obj1.setdefault("defaults", {})
+		for prop, values in obj2['properties'].items():
+			obj1['properties'][prop] = obj1['properties'].get(prop, []) + [val for val in values if val not in obj1['properties'].get(prop, [])]
+			obj1['defaults'][prop] = obj2['defaults'][prop]
+
+	if 'snbt' in obj2:
+		if 'snbt' in obj1:
+			obj1['snbt'] = merge_nbt(amulet_nbt.from_snbt(obj1['snbt']), amulet_nbt.from_snbt(obj2['snbt']))
 		else:
-			_merge_objects_(obj1[key], obj2[key])
+			obj1['snbt'] = obj2['snbt']
+
+	if 'nbt_identifier' in obj2:
+		if 'nbt_identifier' in obj1:
+			assert obj1['nbt_identifier'] == obj2['nbt_identifier'], 'nbt identifiers do not match'
+		else:
+			obj1['nbt_identifier'] = obj2['nbt_identifier']
+
+	if 'nbt_properties' in obj2:
+		obj1['nbt_properties'] = obj2['nbt_properties']
+
 	return obj1
 
 
