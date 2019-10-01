@@ -65,7 +65,7 @@ class FunctionList:
 		for fun in self.function_list:
 			fun.commit(feature_set)
 
-	def to_object(self):
+	def to_object(self) -> list:
 		if self._is_primitive:
 			raise Exception('The commit function must be called before to_object is called to confirm the format is valid')
 		return [fun.to_object for fun in self.function_list]
@@ -118,7 +118,7 @@ class BaseTranslationFunction:
 	def _commit(self, feature_set: Set[str, ...]):
 		raise NotImplemented
 
-	def to_object(self):
+	def to_object(self) -> dict:
 		raise NotImplemented
 
 

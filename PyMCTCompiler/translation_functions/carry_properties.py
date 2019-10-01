@@ -40,5 +40,5 @@ class CarryProperties(BaseTranslationFunction):
 			for val in val_list:
 				assert isinstance(val, str), '"options" property values must be strings'
 
-	def to_object(self):
+	def to_object(self) -> dict:
 		return self._function

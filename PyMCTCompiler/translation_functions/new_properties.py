@@ -33,5 +33,5 @@ class NewProperties(BaseTranslationFunction):
 			assert isinstance(key, str), '"options" keys must be strings'
 			assert isinstance(val, str) or (isinstance(val, list) and val[0] == 'snbt'), '"options" values must be strings'
 
-	def to_object(self):
+	def to_object(self) -> dict:
 		return self._function

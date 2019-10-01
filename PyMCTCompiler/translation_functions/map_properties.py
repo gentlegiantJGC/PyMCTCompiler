@@ -58,7 +58,7 @@ class MapProperties(BaseTranslationFunction):
 				assert isinstance(nest, FunctionList)
 				nest.commit(feature_set)
 
-	def to_object(self):
+	def to_object(self) -> dict:
 		fun = copy.deepcopy(self._function)
 		for property_name in fun.get('options', {}):
 			for property_value in fun['options'][property_name]:

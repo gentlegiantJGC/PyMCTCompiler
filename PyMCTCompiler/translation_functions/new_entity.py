@@ -26,5 +26,5 @@ class NewEntity(BaseTranslationFunction):
 	def _commit(self, feature_set: Set[str, ...]):
 		assert isinstance(self['options'], str), '"options" must be a string'
 
-	def to_object(self):
+	def to_object(self) -> dict:
 		return self._function
