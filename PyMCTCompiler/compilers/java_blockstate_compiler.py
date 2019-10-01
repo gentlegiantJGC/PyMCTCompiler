@@ -35,12 +35,8 @@ def main(version_name: str, version_str: str):
 					for key, val in json_object.items():
 						if key in modifications['block'][namespace][group_name]:
 							print(f'Key "{key}" specified for addition more than once')
-						try:
-							modifications['block'][namespace][group_name]['add'][key] = primitives.get_block('blockstate', val)
-							modifications['block'][namespace][group_name]["remove"].append(key)
-						except:
-							print(f'could not get primitive "{val}"')
-							continue
+						modifications['block'][namespace][group_name]['add'][key] = primitives.get_block('blockstate', val)
+						modifications['block'][namespace][group_name]["remove"].append(key)
 
 				if '__include_entities__.json' in listdir(f'{version_name}/modifications/{namespace}/{group_name}'):
 					if namespace not in modifications['entity']:
@@ -51,11 +47,7 @@ def main(version_name: str, version_str: str):
 					for key, val in json_object.items():
 						if key in modifications['entity'][namespace][group_name]:
 							print(f'Key "{key}" specified for addition more than once')
-						try:
-							modifications['entity'][namespace][group_name]['add'][key] = primitives.get_entity(val)
-						except:
-							print(f'could not get primitive "{val}"')
-							continue
+						modifications['entity'][namespace][group_name]['add'][key] = primitives.get_entity(val)
 
 		# load the block list the server created
 		blocks: dict = load_file(f'{version_name}/generated/reports/blocks.json')
