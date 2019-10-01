@@ -37,7 +37,7 @@
 							"new_nbt",
 							"multiblock",
 							"map_block_name",
-							"map_input_nbt",
+							"walk_input_nbt",
 							"carry_nbt",
 							"map_nbt"
 						]
@@ -217,7 +217,7 @@
 						"if": {
 							"properties": {
 								"function": {
-									"pattern": "map_input_nbt"
+									"pattern": "walk_input_nbt"
 								}
 							}
 						},

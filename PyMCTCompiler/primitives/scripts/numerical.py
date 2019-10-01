@@ -149,7 +149,7 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 		},
 		"to_universal": [
 			{
-				"function": "map_input_nbt",
+				"function": "walk_input_nbt",
 				"options": {
 					"type": "compound",
 					"keys": {}
@@ -159,7 +159,7 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 		"from_universal": {
 			universal_block: [
 				{
-					"function": "map_input_nbt",
+					"function": "walk_input_nbt",
 					"options": {
 						"type": "compound",
 						"keys": {}
@@ -173,7 +173,7 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 		},
 		"blockstate_to_universal": [
 			{
-				"function": "map_input_nbt",
+				"function": "walk_input_nbt",
 				"options": {
 					"type": "compound",
 					"keys": {}
@@ -183,7 +183,7 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 		"blockstate_from_universal": {
 			universal_block: [
 				{
-					"function": "map_input_nbt",
+					"function": "walk_input_nbt",
 					"options": {
 						"type": "compound",
 						"keys": {}
@@ -5379,7 +5379,7 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 					"options": f"{universal_namespace}:{universal_block_name}"
 				},
 				{
-					"function": "map_input_nbt",
+					"function": "walk_input_nbt",
 					"options": {
 						"type": "compound",
 						"keys": {
@@ -5540,7 +5540,7 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 					"options": f"{universal_namespace}:{universal_block_name}"
 				},
 				{
-					"function": "map_input_nbt",
+					"function": "walk_input_nbt",
 					"options": {
 						"type": "compound",
 						"keys": {

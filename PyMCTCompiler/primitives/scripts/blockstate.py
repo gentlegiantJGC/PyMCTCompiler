@@ -228,7 +228,7 @@ def _nbt_mapping_from_hex(nbt_bin: bytes):
 		}
 	elif nbt_bin.startswith(b'\x07'):
 		return {
-			"map_input_nbt": {
+			"walk_input_nbt": {
 				"type": "byte_array",
 				"functions": {
 					"carry_nbt": {}
@@ -244,7 +244,7 @@ def _nbt_mapping_from_hex(nbt_bin: bytes):
 		}
 	elif nbt_bin.startswith(b'\x09'):
 		return {
-			"map_input_nbt": {
+			"walk_input_nbt": {
 				"type": "list",
 				"functions": {
 					"carry_nbt": {}
@@ -253,7 +253,7 @@ def _nbt_mapping_from_hex(nbt_bin: bytes):
 		}
 	elif nbt_bin.startswith(b'\x0A'):
 		return {
-			"map_input_nbt": {
+			"walk_input_nbt": {
 				"type": "compound",
 				"functions": {
 					"carry_nbt": {}
@@ -262,7 +262,7 @@ def _nbt_mapping_from_hex(nbt_bin: bytes):
 		}
 	elif nbt_bin.startswith(b'\x0B'):
 		return {
-			"map_input_nbt": {
+			"walk_input_nbt": {
 				"type": "int_array",
 				"functions": {
 					"carry_nbt": {}
@@ -271,7 +271,7 @@ def _nbt_mapping_from_hex(nbt_bin: bytes):
 		}
 	elif nbt_bin.startswith(b'\x0C'):
 		return {
-			"map_input_nbt": {
+			"walk_input_nbt": {
 				"type": "long_array",
 				"functions": {
 					"carry_nbt": {}
@@ -288,7 +288,7 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 		},
 		"to_universal": [
 			{
-				"function": "map_input_nbt",
+				"function": "walk_input_nbt",
 				"options": {
 					"type": "compound",
 					"keys": {}
@@ -298,7 +298,7 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 		"from_universal": {
 			universal_block: [
 				{
-					"function": "map_input_nbt",
+					"function": "walk_input_nbt",
 					"options": {
 						"type": "compound",
 						"keys": {}

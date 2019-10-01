@@ -7,7 +7,7 @@ general process:
 
 	hopefully in those mappings an output block/entity should have been specified (if not throw out the input as usual)
 
-	if "map_input_nbt" is defined then process that data here
+	if "walk_input_nbt" is defined then process that data here
 	    if it is not defined and there is NBT then copy it as is
 
 	merge the nbt buffer into the output nbt (if the output nbt is not defined then it is created)
@@ -21,7 +21,7 @@ NOTE: path is not relative to the root. path should point to the parent data
 main functions
 	"new_nbt": {  # add nbt to the output
 		"path": [
-			# when used outside map_input_nbt -> [] to be the outer data type, undeined to be ['', 'compound']
+			# when used outside walk_input_nbt -> [] to be the outer data type, undeined to be ['', 'compound']
 			# when used inside map_input_data -> [] to be the outer data type, undefined to be the input path
 			[<path1>: Union[str, int], <datatype1>: str],
 			...
@@ -34,7 +34,7 @@ main functions
 	"new_nbt": [  # add nbt to the output (same as above but can be nested to allow multiple additions in the same function
 		{
 			"path": [
-				# when used outside map_input_nbt -> undefined or [] to be the outer data type
+				# when used outside walk_input_nbt -> undefined or [] to be the outer data type
 				# when used inside map_input_data -> [] to be the outer data type, undefined to be the input path
 				[<path1>: Union[str, int], <datatype1>: str],
 				...
@@ -46,18 +46,18 @@ main functions
 		...
 	]
 
-	"map_input_nbt": {
+	"walk_input_nbt": {
 		# This has various different layouts depending on data type (see below)
 	}
 
-	"map_input_nbt": { # the outer type must be a compound tag as implied by the NBT format
+	"walk_input_nbt": { # the outer type must be a compound tag as implied by the NBT format
 		"": {
 			"type": "compound",
 			# iterate through every key in the compound tag.
 			# Look up if that key exists in "keys".
 			# If it doesn't, run "nested_default" functions on it
 			"keys": {	# if undefined will not iterate through and will just run functions
-				"<key>": {} # this dictionary is in the same format as "map_input_nbt"
+				"<key>": {} # this dictionary is in the same format as "walk_input_nbt"
 			}
 			# If "functions" is defined then run these functions
 			"functions": {},
@@ -69,14 +69,14 @@ main functions
 		}
 	}
 
-	"map_input_nbt": {
+	"walk_input_nbt": {
 		"": {
 			"type": "list",
 			# iterate through every index in the list.
 			# Look up if the string of that index exists in "index" (sadly JSON only allows string keys).
 			# If it doesn't, run "nested_default" functions on it
 			"index": {	# if undefined will not iterate through and will just run functions
-				"<index>": {} # this dictionary is in the same format as "map_input_nbt"
+				"<index>": {} # this dictionary is in the same format as "walk_input_nbt"
 			}
 			# If "functions" is defined then run these functions
 			"functions": {},
@@ -88,7 +88,7 @@ main functions
 		}
 	}
 
-	"map_input_nbt": {
+	"walk_input_nbt": {
 		"": {
 			"type": "byte/short/int/long/float/double/string",
 			# If "functions" is defined then run these functions
@@ -97,7 +97,7 @@ main functions
 		}
 	}
 
-	"map_input_nbt": {
+	"walk_input_nbt": {
 		"": {
 			"type": "byte_array/int_array/long_array",
 			# These are essentially identical to a list with that nested data type. I don't know why they weren't just implemented as that.
@@ -105,7 +105,7 @@ main functions
 			# Look up if the string of that index exists in "index" (sadly JSON only allows string keys).
 			# If it doesn't, run "nested_default" functions on it
 			"index": {	# if undefined will not iterate through and will just run functions
-				"<index>": {} # this dictionary is in the same format as "map_input_nbt" as a byte/int/long but "type" is not read
+				"<index>": {} # this dictionary is in the same format as "walk_input_nbt" as a byte/int/long but "type" is not read
 			}
 			# If "functions" is defined then run these functions
 			"functions": {},
@@ -119,7 +119,7 @@ main functions
 
 
 	# an example of this nested
-	"map_input_nbt": {
+	"walk_input_nbt": {
 		"type": "compound",
 		"keys": {
 			"Air": {  # copy "Air": TAG_Short as it is
@@ -161,7 +161,7 @@ main functions
 	}
 	
 
-side functions (these are "map_input_nbt" and functions that can only be used within map_input_nbt) (note any of the main functions can be used in map_input_nbt as well
+side functions (these are "walk_input_nbt" and functions that can only be used within walk_input_nbt) (note any of the main functions can be used in walk_input_nbt as well
 
 	"map_item": {   # Still WIP (used to convert items from one format to another and pass it through the mappings)
 		"input_format": "",

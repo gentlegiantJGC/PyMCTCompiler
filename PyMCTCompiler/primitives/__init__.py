@@ -222,10 +222,10 @@ def _merge_primitive_mappings(obj1: list, obj2: list) -> list:
 					else:
 						obj1[index]['options'][val] = fun['options'][val]
 
-			elif fun_name == 'map_input_nbt':
+			elif fun_name == 'walk_input_nbt':
 				if 'outer_name' in fun:
 					obj1[index]['outer_name'] = fun['outer_name']
-				obj1[index]['options'] = _merge_primitive_map_input_nbt(obj1[index]['options'], fun['options'])
+				obj1[index]['options'] = _merge_primitive_walk_input_nbt(obj1[index]['options'], fun['options'])
 
 			elif fun_name == 'new_nbt':
 				new_nbts = fun['options']
@@ -262,7 +262,7 @@ def _merge_primitive_mappings(obj1: list, obj2: list) -> list:
 	return obj1
 
 
-def _merge_primitive_map_input_nbt(obj1: dict, obj2: dict) -> dict:
+def _merge_primitive_walk_input_nbt(obj1: dict, obj2: dict) -> dict:
 	if 'type' in obj2:
 		assert obj1['type'] == obj2['type'], '"type" must match in both NBT types'
 
@@ -275,7 +275,7 @@ def _merge_primitive_map_input_nbt(obj1: dict, obj2: dict) -> dict:
 			obj1.setdefault(key, {})
 			for val in obj2['keys'].keys():
 				if val in obj1['keys'].keys():
-					obj1[key][val] = _merge_primitive_map_input_nbt(obj1[key][val], obj2[key][val])
+					obj1[key][val] = _merge_primitive_walk_input_nbt(obj1[key][val], obj2[key][val])
 				else:
 					obj1[key][val] = obj2[key][val]
 	return obj1

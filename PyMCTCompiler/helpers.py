@@ -98,8 +98,8 @@ def _strict_merge_map(data_: list, data: list) -> list:
 					else:
 						fun_['options'][key][val] = fun['options'][key][val]
 
-		elif fun['function'] == 'map_input_nbt':
-			fun_['options'] = strict_merge_map_input_nbt(fun_['options'], fun['options'])
+		elif fun['function'] == 'walk_input_nbt':
+			fun_['options'] = strict_merge_walk_input_nbt(fun_['options'], fun['options'])
 
 		elif fun['function'] == 'carry_nbt':
 			assert fun_['options'] == fun['options'], '"carry_nbt" must be the same when merging'
@@ -110,7 +110,7 @@ def _strict_merge_map(data_: list, data: list) -> list:
 	return data_
 
 
-def strict_merge_map_input_nbt(data_: dict, data: dict, bypass_type=False) -> dict:
+def strict_merge_walk_input_nbt(data_: dict, data: dict, bypass_type=False) -> dict:
 	if not bypass_type:
 		assert data_['type'] == data['type'], '"type" must match in both NBT types'
 	if 'self_default' in data_ and 'self_default' in data:
@@ -128,7 +128,7 @@ def strict_merge_map_input_nbt(data_: dict, data: dict, bypass_type=False) -> di
 			if 'keys' in data and 'keys' in data_:
 				for val in data['keys'].keys():
 					if val in data_['keys'].keys():
-						data_['keys'][val] = strict_merge_map_input_nbt(data_['keys'][val], data['keys'][val])
+						data_['keys'][val] = strict_merge_walk_input_nbt(data_['keys'][val], data['keys'][val])
 					else:
 						data_['keys'][val] = data['keys'][val]
 			else:
@@ -143,7 +143,7 @@ def strict_merge_map_input_nbt(data_: dict, data: dict, bypass_type=False) -> di
 			if 'index' in data and 'index' in data_:
 				for val in data['index'].keys():
 					if val in data_['index'].keys():
-						data_['index'][val] = strict_merge_map_input_nbt(data_['index'][val], data['index'][val])
+						data_['index'][val] = strict_merge_walk_input_nbt(data_['index'][val], data['index'][val])
 					else:
 						data_['index'][val] = data['index'][val]
 			else:
@@ -158,7 +158,7 @@ def strict_merge_map_input_nbt(data_: dict, data: dict, bypass_type=False) -> di
 			if 'index' in data and 'index' in data_:
 				for val in data['index'].keys():
 					if val in data_['index'].keys():
-						data_['index'][val] = strict_merge_map_input_nbt(data_['index'][val], data['index'][val], True)
+						data_['index'][val] = strict_merge_walk_input_nbt(data_['index'][val], data['index'][val], True)
 					else:
 						data_['index'][val] = data['index'][val]
 			else:
@@ -276,9 +276,9 @@ def check_mapping_format(data: list, extra_feature_set: Tuple[str, ...] = None):
 				assert isinstance(key, str), f'Key must be a string. Got {key}'
 				check_mapping_format(val)
 
-		elif fun['function'] == 'map_input_nbt':
+		elif fun['function'] == 'walk_input_nbt':
 			assert isinstance(fun['options'], dict), 'options must be a dictionary'
-			check_map_input_nbt_format(fun['options'])
+			check_walk_input_nbt_format(fun['options'])
 
 		elif fun['function'] == 'new_nbt':
 			new_nbts = fun['options']
@@ -359,7 +359,7 @@ def check_mapping_format(data: list, extra_feature_set: Tuple[str, ...] = None):
 			log_to_file(f'Unknown/unsupported function "{fun["function"]}" found')
 
 
-def check_map_input_nbt_format(data: dict):
+def check_walk_input_nbt_format(data: dict):
 	assert isinstance(data, dict), 'nbt map outer type must be a dictionary'
 	assert 'type' in data, 'type must be present in nbt mapping'
 	if data['type'] == 'compound':
@@ -367,7 +367,7 @@ def check_map_input_nbt_format(data: dict):
 			assert isinstance(data['keys'], dict), 'nbt map compound "keys" must be a dictionary'
 			for key, val in data['keys'].items():
 				assert isinstance(key, str), 'keys in nbt map compound "keys" must be strings'
-				check_map_input_nbt_format(val)
+				check_walk_input_nbt_format(val)
 		if 'functions' in data:
 			check_mapping_format(data['functions'], ('carry_nbt',))
 		if 'nested_default' in data:
@@ -384,7 +384,7 @@ def check_map_input_nbt_format(data: dict):
 			assert isinstance(data['index'], dict), 'nbt map compound "index" must be a dictionary'
 			for key, val in data['index'].items():
 				assert isinstance(key, str) and key.isdigit(), 'all keys in nbt map list index must be an int in string form'
-				check_map_input_nbt_format(val)
+				check_walk_input_nbt_format(val)
 		if 'functions' in data:
 			check_mapping_format(data['functions'], ('carry_nbt',))
 		if 'nested_default' in data:
