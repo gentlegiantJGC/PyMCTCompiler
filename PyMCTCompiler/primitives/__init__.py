@@ -111,8 +111,6 @@ def merge_nbt(obj1, obj2):
 	return obj1.to_snbt()
 
 
-
-
 def merge_primitive_specification(obj1: dict, obj2: dict) -> dict:
 	assert isinstance(obj1, dict) and isinstance(obj2, dict)
 	# {
