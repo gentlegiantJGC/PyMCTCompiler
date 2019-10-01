@@ -1,4 +1,4 @@
-from typing import List, Tuple
+from typing import List, Tuple, Set
 
 
 class FunctionList:
@@ -34,9 +34,11 @@ class FunctionList:
 		other_functions = [[fun.function_name, fun.custom_name] for fun in other.function_list]
 
 		for fun, (fun_name, custom_name) in zip(other.function_list, other_functions):
+			assert isinstance(fun, BaseTranslationFunction)
 			try:
 				index = self_functions.index([fun_name, custom_name])
-				self.function_list[index] += fun
+				assert isinstance(self.function_list[index], BaseTranslationFunction)
+				self.function_list[index].extend(fun)
 
 			except ValueError:
 				self.function_list.append(fun)
@@ -48,16 +50,20 @@ class FunctionList:
 		assert [fun.function_name for fun in self.function_list] == [fun.function_name for fun in other.function_list], f'The functions do not match\n{self.to_object()}\n{other.to_object()}'
 
 		for self_fun, other_fun in zip(self.function_list, other.function_list):
-			self_fun += other_fun
+			assert isinstance(self_fun, BaseTranslationFunction)
+			assert isinstance(other_fun, BaseTranslationFunction)
+			self_fun.extend(other_fun)
 
-	def commit(self, extra_feature_set: Tuple[str, ...]):
+	def commit(self, feature_set: Set[str, ...]):
 		"""Confirm that the function is complete and run the validation code."""
+		if feature_set is None:
+			feature_set =
 		self._is_primitive = False
-		self._commit(extra_feature_set)
+		self._commit(feature_set)
 
-	def _commit(self, extra_feature_set):
+	def _commit(self, feature_set: Set[str, ...]):
 		for fun in self.function_list:
-			fun.commit(extra_feature_set)
+			fun.commit(feature_set)
 
 	def to_object(self):
 		if self._is_primitive:
@@ -103,13 +109,13 @@ class BaseTranslationFunction:
 		The formats must match in such a way that the two base translations do not interfere."""
 		raise NotImplemented
 
-	def commit(self, extra_feature_set: Tuple[str, ...]):
+	def commit(self, feature_set: Set[str, ...]):
 		"""Confirm that the function is complete and run the validation code."""
 		self._is_primitive = False
 		assert isinstance(self._function, dict)
-		self._commit(extra_feature_set)
+		self._commit(feature_set)
 
-	def _commit(self, extra_feature_set: Tuple[str, ...]):
+	def _commit(self, feature_set: Set[str, ...]):
 		raise NotImplemented
 
 	def to_object(self):
@@ -129,3 +135,7 @@ from PyMCTCompiler.translation_functions.new_properties import NewProperties
 from PyMCTCompiler.translation_functions.walk_input_nbt import WalkInputNBT
 
 function_map = {f.function_name: f for f in [CarryNBT, CarryProperties, MapBlockName, MapNBT, MapProperties, Multiblock, NewBlock, NewEntity, NewNBT, NewProperties, WalkInputNBT]}
+default_feature_set = [f.function_name for f in [CarryProperties, MapBlockName, MapNBT, MapProperties, Multiblock, NewBlock, NewEntity, NewNBT, NewProperties, WalkInputNBT]]
+extend_feature_set = {
+	WalkInputNBT.function_name: [CarryNBT.function_name, MapNBT.function_name]
+}

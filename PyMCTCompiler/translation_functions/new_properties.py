@@ -1,4 +1,4 @@
-from typing import Tuple
+from typing import Tuple, Set
 from PyMCTCompiler.translation_functions import BaseTranslationFunction
 
 
@@ -27,7 +27,7 @@ class NewProperties(BaseTranslationFunction):
 		The formats must match in such a way that the two base translations do not interfere."""
 		assert self['options'] == other['options'], '"new_properties" must be the same when merging'
 
-	def _commit(self, extra_feature_set: Tuple[str, ...]):
+	def _commit(self, feature_set: Set[str, ...]):
 		assert isinstance(self['options'], dict), '"options" must be a dictionary'
 		for key, val in self['options'].items():
 			assert isinstance(key, str), '"options" keys must be strings'

@@ -1,4 +1,4 @@
-from typing import Tuple
+from typing import Tuple, Set
 from PyMCTCompiler.translation_functions import BaseTranslationFunction
 
 
@@ -23,7 +23,7 @@ class NewEntity(BaseTranslationFunction):
 		The formats must match in such a way that the two base translations do not interfere."""
 		assert self['options'] == other['options'], '"new_entity" must be the same when merging'
 
-	def _commit(self, extra_feature_set: Tuple[str, ...]):
+	def _commit(self, feature_set: Set[str, ...]):
 		assert isinstance(self['options'], str), '"options" must be a string'
 
 	def to_object(self):
