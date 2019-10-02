@@ -138,17 +138,17 @@ extend_feature_set = {
 }
 
 
-from PyMCTCompiler.translation_functions.carry_nbt import CarryNBT
-from PyMCTCompiler.translation_functions.carry_properties import CarryProperties
+from PyMCTCompiler.translation_functions.nbt.carry_nbt import CarryNBT
+from PyMCTCompiler.translation_functions.nbt.map_nbt import MapNBT
+from PyMCTCompiler.translation_functions.nbt.new_nbt import NewNBT
+from PyMCTCompiler.translation_functions.nbt.walk_input_nbt import WalkInputNBT
+from PyMCTCompiler.translation_functions.object.new_block import NewBlock
+from PyMCTCompiler.translation_functions.object.new_entity import NewEntity
+from PyMCTCompiler.translation_functions.property.carry_properties import CarryProperties
+from PyMCTCompiler.translation_functions.property.map_properties import MapProperties
+from PyMCTCompiler.translation_functions.property.new_properties import NewProperties
 from PyMCTCompiler.translation_functions.map_block_name import MapBlockName
-from PyMCTCompiler.translation_functions.map_nbt import MapNBT
-from PyMCTCompiler.translation_functions.map_properties import MapProperties
 from PyMCTCompiler.translation_functions.multiblock import Multiblock
-from PyMCTCompiler.translation_functions.new_block import NewBlock
-from PyMCTCompiler.translation_functions.new_entity import NewEntity
-from PyMCTCompiler.translation_functions.new_nbt import NewNBT
-from PyMCTCompiler.translation_functions.new_properties import NewProperties
-from PyMCTCompiler.translation_functions.walk_input_nbt import WalkInputNBT
 
 function_map = {f.function_name: f for f in [CarryNBT, CarryProperties, MapBlockName, MapNBT, MapProperties, Multiblock, NewBlock, NewEntity, NewNBT, NewProperties, WalkInputNBT]}
 default_feature_set: Set[str] = {f.function_name for f in [CarryProperties, MapBlockName, MapNBT, MapProperties, Multiblock, NewBlock, NewEntity, NewNBT, NewProperties, WalkInputNBT]}
