@@ -74,15 +74,15 @@ class ContainerWalkInputNBT(BaseTranslationFunction):
 				data['nested_default'] = FunctionList(data['nested_default'])
 			if data['type'] == 'compound':
 				if 'keys' in data:
-					for key, val in data['keys']:
+					for key, val in data['keys'].items():
 						data['keys'][key] = ContainerWalkInputNBT(val)
 			elif data['type'] == 'list':
 				if 'index' in data:
-					for key, val in data['index']:
+					for key, val in data['index'].items():
 						data['index'][key] = ContainerWalkInputNBT(val)
 			else:
 				if 'index' in data:
-					for key, val in data['index']:
+					for key, val in data['index'].items():
 						data['index'][key] = ContainerWalkInputNBT(val, True)
 
 		BaseTranslationFunction.__init__(self, data)

@@ -12,6 +12,8 @@ def _save_file(path, data):
 	os.makedirs(os.path.dirname(path), exist_ok=True)
 	with open(path, 'w') as f:
 		if path.endswith('.json'):
+			if isinstance(data, FunctionList):
+				data = data.to_object()
 			json.dump(data, f, indent=4)
 		else:
 			f.write(data)
@@ -492,3 +494,5 @@ def download_server_jar(path: str, version_str: str = None):
 			f.write(server)
 	else:
 		raise Exception(f'Could not find server for version "{version_str}"')
+
+from PyMCTCompiler.translation_functions import FunctionList

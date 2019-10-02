@@ -2,10 +2,11 @@ import json
 import os
 import traceback
 import copy
-from typing import Union, List
+from typing import Union, List, Dict
 from .scripts import *
 import amulet_nbt
 from amulet_nbt import NBTFile, TAG_Byte, TAG_Short, TAG_Int, TAG_Long, TAG_Float, TAG_Double, TAG_Byte_Array, TAG_String, TAG_List, TAG_Compound, TAG_Int_Array, TAG_Long_Array
+from PyMCTCompiler.translation_functions import FunctionList
 
 
 def _load_file(path: str) -> dict:
@@ -18,9 +19,65 @@ def _load_file(path: str) -> dict:
 			print(f'Could not load {path}. Not a .json or .pyjson file')
 
 
+class Primitive:
+	def __init__(self, data: dict):
+		for key in ('to_universal', 'blockstate_to_universal'):
+			if key in data:
+				data[key] = FunctionList(data[key])
+		for key in ('from_universal', 'blockstate_from_universal'):
+			if key in data:
+				for key_ in data[key]:
+					data[key][key_] = FunctionList(data[key][key_])
+		self._data = data
+
+	def __contains__(self, item: str):
+		return item in self._data
+
+	def __getitem__(self, item: str):
+		return self._data[item]
+
+	def __setitem__(self, key: str, value):
+		self._data[key] = value
+
+	def items(self):
+		return self._data.items()
+
+	def setdefault(self, key, default):
+		self._data.setdefault(key, default)
+
+	def get(self, item, default):
+		return self._data.get(item, default)
+
+	def extend(self, other: 'Primitive'):
+		assert isinstance(other, Primitive)
+		for key, val in other.items():
+			if key not in self:
+				self[key] = val
+			elif key in ('to_universal', 'blockstate_to_universal'):
+				self[key].extend(other[key])
+			elif key in ('from_universal', 'blockstate_from_universal'):
+				for string_id, props in val.items():
+					if string_id not in self[key]:
+						self[key][string_id] = props
+					else:
+						self[key][string_id].extend(props)
+			elif key in ('specification', 'blockstate_specification'):
+				merge_primitive_specification(self[key], other[key])
+
+	def commit(self):
+		for key in ('to_universal', 'blockstate_to_universal'):
+			if key in self._data:
+				assert isinstance(self._data[key], FunctionList)
+				self._data[key].commit(None)
+		for key in ('from_universal', 'blockstate_from_universal'):
+			if key in self._data:
+				assert isinstance(self._data[key], dict)
+				for val in self._data[key].values():
+					val.commit(None)
+
 print('Loading Primitives ...')
-blocks = {'numerical': {}, 'blockstate': {}, 'nbt-blockstate': {}}
-entities = {}
+blocks: Dict[str, Dict[str, Primitive]] = {'numerical': {}, 'blockstate': {}, 'nbt-blockstate': {}}
+entities: Dict[str, Primitive] = {}
 
 for start_folder in blocks:
 	for root, dirs, files in os.walk(f'{os.path.dirname(__file__)}/blocks/{start_folder}'):
@@ -29,7 +86,7 @@ for start_folder in blocks:
 				print(f'Block name "{os.path.splitext(f)[0]}" is define twice')
 			if f.endswith('.json') or f.endswith('.pyjson'):
 				try:
-					prim = blocks[start_folder][os.path.splitext(f)[0]] = _load_file(f'{root}/{f}')
+					blocks[start_folder][os.path.splitext(f)[0]] = Primitive(_load_file(f'{root}/{f}'))
 				except Exception as e:
 					print(f'Failed to load {root}/{f}\n{e}')
 					print(traceback.print_tb(e.__traceback__))
@@ -39,7 +96,7 @@ for root, dirs, files in os.walk(f'{os.path.dirname(__file__)}/entities'):
 		if os.path.splitext(f)[0] in entities:
 			print(f'Block name "{os.path.splitext(f)[0]}" is define twice')
 		try:
-			entities[os.path.splitext(f)[0]] = _load_file(f'{root}/{f}')
+			entities[os.path.splitext(f)[0]] = Primitive(_load_file(f'{root}/{f}'))
 		except Exception as e:
 			print(f'Failed to load {root}/{f}\n{e}')
 			print(traceback.print_tb(e.__traceback__))
@@ -47,32 +104,38 @@ for root, dirs, files in os.walk(f'{os.path.dirname(__file__)}/entities'):
 print('\tFinished Loading Primitives')
 
 
-def get_block(block_format: str, primitive: Union[str, List[str]]) -> dict:
+def get_block(block_format: str, primitive: Union[str, List[str]]) -> Primitive:
 	assert block_format in blocks, f'"{block_format}" is not a known format'
 	if isinstance(primitive, str):
 		assert primitive in blocks[block_format], f'"{primitive}" is not present in the mappings for format "{block_format}"'
-		return blocks[block_format][primitive]
-	elif isinstance(primitive, list):
-		output = {}
+		output = copy.deepcopy(blocks[block_format][primitive])
+		output.commit()
+		return output
+	elif isinstance(primitive, list) and len(primitive) >= 1:
+		output = Primitive({})
 		for nested_primitive in primitive:
 			assert isinstance(nested_primitive, str), f'Expected a list of strings. At least one entry was type {type(nested_primitive)}'
 			assert nested_primitive in blocks[block_format], f'"{nested_primitive}" is not present in the mappings for format "{block_format}"'
-			output = _merge_primitives(copy.deepcopy(output), copy.deepcopy(blocks[block_format][nested_primitive]))
+			output.extend(copy.deepcopy(blocks[block_format][nested_primitive]))
+		output.commit()
 		return output
 	else:
 		raise Exception(f'Un-supported format: {type(primitive)}')
 
 
-def get_entity(primitive: Union[str, List[str]]) -> dict:
+def get_entity(primitive: Union[str, List[str]]) -> Primitive:
 	if isinstance(primitive, str):
 		assert primitive in entities, f'"{primitive}" is not present in the entity mappings'
-		return entities[primitive]
+		output = copy.deepcopy(entities[primitive])
+		output.commit()
+		return output
 	elif isinstance(primitive, list):
-		output = {}
+		output = Primitive({})
 		for nested_primitive in primitive:
 			assert isinstance(nested_primitive, str), f'Expected a list of strings. At least one entry was type {type(nested_primitive)}'
 			assert nested_primitive in entities, f'"{nested_primitive}" is not present in the entity mappings'
-			output = _merge_primitives(copy.deepcopy(output), copy.deepcopy(entities[nested_primitive]))
+			output.extend(copy.deepcopy(entities[nested_primitive]))
+		output.commit()
 		return output
 	else:
 		raise Exception(f'Un-supported format: {type(primitive)}')

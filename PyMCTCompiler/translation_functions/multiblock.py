@@ -17,6 +17,8 @@ class Multiblock(BaseTranslationFunction):
 	# }
 
 	def __init__(self, data):
+		if isinstance(data['options'], dict):
+			data['options'] = [data['options']]
 		for option in data['options']:
 			option['functions'] = FunctionList(option['functions'])
 		BaseTranslationFunction.__init__(self, data)

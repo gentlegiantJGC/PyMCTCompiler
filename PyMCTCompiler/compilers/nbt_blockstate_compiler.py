@@ -86,7 +86,7 @@ def main(version_name: str, version_str: str):
 	return output.save()
 
 
-def process_block(buffer: DiskBuffer, block_json: dict, version_name: str, namespace: str, sub_name: str, block_file_name: str):
+def process_block(buffer: DiskBuffer, block_json: primitives.Primitive, version_name: str, namespace: str, sub_name: str, block_file_name: str):
 	"""Will create json files based on block_json.
 
 	:param buffer: DiskBuffer instance to hold the data in memory rather than writing directly to disk
@@ -100,9 +100,7 @@ def process_block(buffer: DiskBuffer, block_json: dict, version_name: str, names
 	universal_type = block_json.get('universal_type', 'block')
 
 	assert 'to_universal' in block_json, f'Key to_universal must be defined'
-	assert isinstance(block_json['to_universal'], list), f'Key to_universal must be a list'
 	assert 'from_universal' in block_json, f'Key from_universal must be defined'
-	assert isinstance(block_json['from_universal'], dict), f'Key from_universal must be a dictionary'
 
 	if universal_type == 'block':
 		if 'specification' in block_json:
@@ -124,7 +122,7 @@ def process_block(buffer: DiskBuffer, block_json: dict, version_name: str, names
 		raise Exception(f'Universal type "{universal_type}" is not known')
 
 
-def process_entity(buffer: DiskBuffer, entity_json: dict, version_name: str, namespace: str, sub_name: str, block_file_name: str):
+def process_entity(buffer: DiskBuffer, entity_json: primitives.Primitive, version_name: str, namespace: str, sub_name: str, block_file_name: str):
 	"""Will create json files based on block_json.
 
 	:param buffer: DiskBuffer instance to hold the data in memory rather than writing directly to disk

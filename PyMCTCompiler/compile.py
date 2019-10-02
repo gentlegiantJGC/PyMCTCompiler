@@ -4,7 +4,8 @@ import shutil
 import time
 from typing import Union
 from PyMCTCompiler import version_compiler
-from PyMCTCompiler.helpers import log_to_file, strict_merge_map_, blocks_from_server_, DiskBuffer, check_formatting
+from PyMCTCompiler.helpers import log_to_file, blocks_from_server_, DiskBuffer, check_specification_format
+from PyMCTCompiler.translation_functions import FunctionList
 
 uncompiled_dir = './version_compiler'
 compiled_dir = '../../PyMCTranslate/PyMCTranslate/mappings'
@@ -48,7 +49,7 @@ def create_directory(path: str, prefix: str = compiled_dir):
 		os.makedirs(f'{prefix}/{path}')
 
 
-def load_file(path: str, prefix: str = uncompiled_dir, buffer: DiskBuffer = None) -> dict:
+def load_file(path: str, prefix: str = uncompiled_dir, buffer: DiskBuffer = None) -> Union[dict, FunctionList]:
 	"""Loads and returns the data from the file at prefix/path if it is a json file.
 
 	:param path: The path to look for within prefix
@@ -66,7 +67,7 @@ def load_file(path: str, prefix: str = uncompiled_dir, buffer: DiskBuffer = None
 			raise Exception(f'Could not load "{prefix}/{path}"')
 
 
-def save_json(path: str, data: Union[dict, list], overwrite: bool = False, prefix: str = compiled_dir, buffer: DiskBuffer = None):
+def save_json(path: str, data: Union[dict, list, FunctionList], overwrite: bool = False, prefix: str = compiled_dir, buffer: DiskBuffer = None):
 	"""Will save "data" to a json file at compiled_dir/path.
 
 	:param path: The path to look for within prefix
@@ -75,13 +76,11 @@ def save_json(path: str, data: Union[dict, list], overwrite: bool = False, prefi
 	:param prefix: Path prefix
 	:param buffer: the DiskBuffer to write in
 	"""
-	try:
-		if 'specification' in path:
-			check_formatting(data, 'specification')
-		elif 'to_universal' in path or 'from_universal' in path:
-			check_formatting(data, 'mapping')
-	except Exception as e:
-		log_to_file(f'Format check failed for {prefix}/{path}\n{e}')
+	if 'specification' in path:
+		check_specification_format(data)
+	elif 'to_universal' in path or 'from_universal' in path:
+		assert isinstance(data, FunctionList), 'Must be a function list'
+		data.commit(None)
 
 	if isinstance(buffer, DiskBuffer) and prefix == compiled_dir:
 		if not overwrite and isfile(path, prefix):
@@ -108,7 +107,7 @@ def copy_file(path: str):
 		log_to_file(f'Could not find file {uncompiled_dir}/{path} to copy')
 
 
-def merge_map(data: dict, path: str, buffer: DiskBuffer = None):
+def merge_map(data: FunctionList, path: str, buffer: DiskBuffer = None):
 	"""Will save "data" to compiled_dir/path and merge with any data present.
 
 	:param data: The data to save
@@ -117,7 +116,9 @@ def merge_map(data: dict, path: str, buffer: DiskBuffer = None):
 	"""
 	if isfile(path, compiled_dir, buffer):
 		data_ = load_file(path, compiled_dir, buffer)
-		save_json(path, strict_merge_map_(data_, data), True, buffer=buffer)
+		assert isinstance(data_, FunctionList) and isinstance(data, FunctionList), 'Needs to be FunctionLists'
+		data_.extend(data)
+		save_json(path, data_, True, buffer=buffer)
 	else:
 		save_json(path, data, buffer=buffer)
 

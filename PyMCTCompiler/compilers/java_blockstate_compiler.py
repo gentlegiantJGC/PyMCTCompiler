@@ -1,5 +1,6 @@
 from PyMCTCompiler.compile import save_json, load_file, isfile, isdir, listdir, merge_map, blocks_from_server, compiled_dir, DiskBuffer
 from PyMCTCompiler import primitives
+from PyMCTCompiler.translation_functions import FunctionList
 
 """
 Summary
@@ -71,7 +72,7 @@ def main(version_name: str, version_str: str):
 				# the block is not marked for removal
 
 				if 'properties' in default_state:
-					to_universal = [
+					to_universal = FunctionList([
 						{
 							"function":"new_block",
 							"options":  f"universal_{block_string}"
@@ -80,8 +81,8 @@ def main(version_name: str, version_str: str):
 							"function":"carry_properties",
 							"options":  states['properties']
 						}
-					]
-					from_universal = [
+					], True)
+					from_universal = FunctionList([
 						{
 							"function":"new_block",
 							"options":  block_string
@@ -90,20 +91,20 @@ def main(version_name: str, version_str: str):
 							"function":"carry_properties",
 							"options":  states['properties']
 						}
-					]
+					], True)
 				else:
-					to_universal = [
+					to_universal = FunctionList([
 						{
 							"function":"new_block",
 							"options":  f"universal_{block_string}"
 						}
-					]
-					from_universal = [
+					], True)
+					from_universal = FunctionList([
 						{
 							"function":"new_block",
 							"options":  block_string
 						}
-					]
+					], True)
 
 				save_json(f'{version_name}/block/blockstate/to_universal/{namespace}/vanilla/{block_name}.json', to_universal, buffer=output)
 				save_json(f'{version_name}/block/blockstate/from_universal/universal_{namespace}/vanilla/{block_name}.json', from_universal, buffer=output)
@@ -115,10 +116,10 @@ def main(version_name: str, version_str: str):
 					if isfile(f'{version_name}/block/blockstate/to_universal/{namespace}/{group_name}/{block_name}.json', compiled_dir, buffer=output):
 						print(f'"{block_name}" is already present.')
 					else:
-						assert isinstance(block_data, dict), f'The data here is supposed to be a dictionary. Got this instead:\n{block_data}'
+						assert isinstance(block_data, primitives.Primitive), f'The data here is supposed to be a Primitive. Got this instead:\n{block_data}'
 
 						if 'specification' in block_data:
-							specification = block_data.get("specification")
+							specification = block_data["specification"]
 							if 'properties' in specification and 'waterlogged' in specification['properties']:
 								if f'{namespace}:{block_name}' not in waterlogable:
 									waterlogable.append(f'{namespace}:{block_name}')
