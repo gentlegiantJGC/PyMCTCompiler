@@ -16,6 +16,9 @@ class FunctionList:
 			else:
 				raise Exception(f'No function name given for {data}')
 
+	def __contains__(self, item):
+		return item in self.function_list
+
 	def extend(self, other: 'FunctionList'):
 		assert isinstance(other, FunctionList)
 		assert self._is_primitive == other._is_primitive
@@ -87,6 +90,9 @@ class BaseTranslationFunction:
 		else:
 			self.custom_name = None
 		self._function = data
+
+	def __contains__(self, item):
+		return item in self._function
 
 	def __getitem__(self, item):
 		return self._function[item]
