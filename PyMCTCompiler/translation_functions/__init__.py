@@ -16,11 +16,11 @@ class FunctionList:
 		assert isinstance(other, FunctionList)
 		assert self._is_primitive == other._is_primitive
 		if self._is_primitive:
-			return self.primitive_extend(other)
+			return self._primitive_extend(other)
 		else:
-			return self.compiled_extend(other)
+			return self._compiled_extend(other)
 
-	def primitive_extend(self, other: 'FunctionList'):
+	def _primitive_extend(self, other: 'FunctionList'):
 		"""Used to merge two primitive files together.
 		The formats do not need to be identical but close enough that the data can stack."""
 
@@ -44,7 +44,7 @@ class FunctionList:
 				self.function_list.append(fun)
 				self_functions.append([fun_name, custom_name])
 
-	def compiled_extend(self, other):
+	def _compiled_extend(self, other):
 		"""Used to merge two completed translations together.
 		The formats must match in such a way that the two base translations do not interfere."""
 		assert [fun.function_name for fun in self.function_list] == [fun.function_name for fun in other.function_list], f'The functions do not match\n{self.to_object()}\n{other.to_object()}'
@@ -54,14 +54,14 @@ class FunctionList:
 			assert isinstance(other_fun, BaseTranslationFunction)
 			self_fun.extend(other_fun)
 
-	def commit(self, feature_set: Set[str, ...]):
+	def commit(self, feature_set: Set[str]):
 		"""Confirm that the function is complete and run the validation code."""
 		if feature_set is None:
 			feature_set =
 		self._is_primitive = False
 		self._commit(feature_set)
 
-	def _commit(self, feature_set: Set[str, ...]):
+	def _commit(self, feature_set: Set[str]):
 		for fun in self.function_list:
 			fun.commit(feature_set)
 
@@ -92,30 +92,30 @@ class BaseTranslationFunction:
 	def get(self, item, default):
 		return self._function.get(item, default)
 
-	def extend(self, other):
+	def extend(self, other: 'BaseTranslationFunction'):
 		assert isinstance(other, BaseTranslationFunction)
 		if self._is_primitive:
 			return self._primitive_extend(other)
 		else:
 			return self._compiled_extend(other)
 
-	def _primitive_extend(self, other):
+	def _primitive_extend(self, other: 'BaseTranslationFunction'):
 		"""Used to merge two primitive files together.
 		The formats do not need to be identical but close enough that the data can stack."""
 		raise NotImplemented
 
-	def _compiled_extend(self, other):
+	def _compiled_extend(self, other: 'BaseTranslationFunction'):
 		"""Used to merge two completed translations together.
 		The formats must match in such a way that the two base translations do not interfere."""
 		raise NotImplemented
 
-	def commit(self, feature_set: Set[str, ...]):
+	def commit(self, feature_set: Set[str]):
 		"""Confirm that the function is complete and run the validation code."""
 		self._is_primitive = False
 		assert isinstance(self._function, dict)
 		self._commit(feature_set)
 
-	def _commit(self, feature_set: Set[str, ...]):
+	def _commit(self, feature_set: Set[str]):
 		raise NotImplemented
 
 	def to_object(self) -> dict:
@@ -135,7 +135,7 @@ from PyMCTCompiler.translation_functions.new_properties import NewProperties
 from PyMCTCompiler.translation_functions.walk_input_nbt import WalkInputNBT
 
 function_map = {f.function_name: f for f in [CarryNBT, CarryProperties, MapBlockName, MapNBT, MapProperties, Multiblock, NewBlock, NewEntity, NewNBT, NewProperties, WalkInputNBT]}
-default_feature_set = [f.function_name for f in [CarryProperties, MapBlockName, MapNBT, MapProperties, Multiblock, NewBlock, NewEntity, NewNBT, NewProperties, WalkInputNBT]]
+default_feature_set: Set[str] = {f.function_name for f in [CarryProperties, MapBlockName, MapNBT, MapProperties, Multiblock, NewBlock, NewEntity, NewNBT, NewProperties, WalkInputNBT]}
 extend_feature_set = {
 	WalkInputNBT.function_name: [CarryNBT.function_name, MapNBT.function_name]
 }

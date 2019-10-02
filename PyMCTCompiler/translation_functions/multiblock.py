@@ -21,7 +21,7 @@ class Multiblock(BaseTranslationFunction):
 			option['functions'] = FunctionList(option['functions'])
 		BaseTranslationFunction.__init__(self, data)
 
-	def _primitive_extend(self, other):
+	def _primitive_extend(self, other: BaseTranslationFunction):
 		"""Used to merge two primitive files together.
 		The formats do not need to be identical but close enough that the data can stack."""
 		multiblock = other['options']
@@ -37,13 +37,13 @@ class Multiblock(BaseTranslationFunction):
 			else:
 				self_mapping['functions'].extend(other_mapping['functions'])
 
-	def _compiled_extend(self, other):
+	def _compiled_extend(self, other: BaseTranslationFunction):
 		"""Used to merge two completed translations together.
 		The formats must match in such a way that the two base translations do not interfere."""
 		# TODO
 		assert self['options'] == other['options'], '"multiblock" must be the same when merging'
 
-	def _commit(self, feature_set: Set[str, ...]):
+	def _commit(self, feature_set: Set[str]):
 		multiblock = self['options']
 		if isinstance(multiblock, dict):
 			multiblock = [multiblock]

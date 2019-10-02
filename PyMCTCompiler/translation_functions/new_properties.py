@@ -16,18 +16,18 @@ class NewProperties(BaseTranslationFunction):
 	def __init__(self, data):
 		BaseTranslationFunction.__init__(self, data)
 
-	def _primitive_extend(self, other):
+	def _primitive_extend(self, other: BaseTranslationFunction):
 		"""Used to merge two primitive files together.
 		The formats do not need to be identical but close enough that the data can stack."""
 		for prop, val in other['options']:
 			self['options'][prop] = val
 
-	def _compiled_extend(self, other):
+	def _compiled_extend(self, other: BaseTranslationFunction):
 		"""Used to merge two completed translations together.
 		The formats must match in such a way that the two base translations do not interfere."""
 		assert self['options'] == other['options'], '"new_properties" must be the same when merging'
 
-	def _commit(self, feature_set: Set[str, ...]):
+	def _commit(self, feature_set: Set[str]):
 		assert isinstance(self['options'], dict), '"options" must be a dictionary'
 		for key, val in self['options'].items():
 			assert isinstance(key, str), '"options" keys must be strings'

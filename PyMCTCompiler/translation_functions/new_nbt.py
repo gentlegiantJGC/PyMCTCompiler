@@ -43,7 +43,7 @@ class NewNBT(BaseTranslationFunction):
 			data['options'] = [data['options']]
 		BaseTranslationFunction.__init__(self, data)
 
-	def _primitive_extend(self, other):
+	def _primitive_extend(self, other: BaseTranslationFunction):
 		"""Used to merge two primitive files together.
 		The formats do not need to be identical but close enough that the data can stack."""
 		new_nbts = other['options']
@@ -51,12 +51,12 @@ class NewNBT(BaseTranslationFunction):
 			if new_nbt not in self['options']:
 				self['options'].append(new_nbt)
 
-	def _compiled_extend(self, other):
+	def _compiled_extend(self, other: BaseTranslationFunction):
 		"""Used to merge two completed translations together.
 		The formats must match in such a way that the two base translations do not interfere."""
 		assert self['options'] == other['options'], '"new_nbt" must be the same when merging'
 
-	def _commit(self, feature_set: Set[str, ...]):
+	def _commit(self, feature_set: Set[str]):
 		new_nbts = self['options']
 		assert isinstance(new_nbts, list), '"new_nbt" must be a dictionary or a list of dictionaries'
 		for new_nbt in new_nbts:

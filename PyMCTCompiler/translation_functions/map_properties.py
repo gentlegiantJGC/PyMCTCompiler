@@ -24,7 +24,7 @@ class MapProperties(BaseTranslationFunction):
 				data['options'][property_name][property_value] = FunctionList(data['options'][property_name][property_value])
 		BaseTranslationFunction.__init__(self, data)
 
-	def _primitive_extend(self, other):
+	def _primitive_extend(self, other: BaseTranslationFunction):
 		"""Used to merge two primitive files together.
 		The formats do not need to be identical but close enough that the data can stack."""
 		for prop in other['options']:
@@ -37,7 +37,7 @@ class MapProperties(BaseTranslationFunction):
 			else:
 				self['options'][prop] = other['options'][prop]
 
-	def _compiled_extend(self, other):
+	def _compiled_extend(self, other: BaseTranslationFunction):
 		"""Used to merge two completed translations together.
 		The formats must match in such a way that the two base translations do not interfere."""
 		assert self['options'].keys() == other['options'].keys(), '"map_properties" must have the same key entries when merging'
@@ -48,7 +48,7 @@ class MapProperties(BaseTranslationFunction):
 				else:
 					self['options'][key][val] = other['options'][key][val]
 
-	def _commit(self, feature_set: Set[str, ...]):
+	def _commit(self, feature_set: Set[str]):
 		assert isinstance(self['options'], dict), '"options" must be a dictionary'
 		for key, val_dict in self['options'].items():
 			assert isinstance(key, str), '"options" keys are property names which must be strings'
