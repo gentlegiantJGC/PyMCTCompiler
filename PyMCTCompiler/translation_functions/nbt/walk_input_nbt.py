@@ -142,39 +142,38 @@ class ContainerWalkInputNBT(BaseTranslationFunction):
 				assert key not in other and key not in self, '"keys" defined in one but not the other'
 
 	def _commit(self, feature_set: Set[str]):
-		data = copy.deepcopy(self._function)
 		all_keys = ['type', 'self_default', 'functions']
 
-		assert isinstance(data, dict), 'nbt map outer type must be a dictionary'
-		assert 'type' in data, 'type must be present in nbt mapping'
+		assert isinstance(self._function, dict), 'nbt map outer type must be a dictionary'
+		assert 'type' in self, 'type must be present in nbt mapping'
 
 		for key in ('self_default', 'functions'):
-			if key in data:
-				data[key].commit(feature_set)
+			if key in self:
+				self[key].commit(feature_set)
 
 		if not self.bypass_type:
-			assert data['type'] in ('compound', 'list', 'byte', 'short', 'int', 'long', 'float', 'double', 'string', 'byte_array', 'int_array', 'long_array'), f'Type {data["type"]} is not supported'
-			if data['type'] in ('compound', 'list', 'byte_array', 'int_array', 'long_array'):
+			assert self['type'] in ('compound', 'list', 'byte', 'short', 'int', 'long', 'float', 'double', 'string', 'byte_array', 'int_array', 'long_array'), f'Type {self["type"]} is not supported'
+			if self['type'] in ('compound', 'list', 'byte_array', 'int_array', 'long_array'):
 				all_keys.append('nested_default')
-				if 'nested_default' in data:
-					data['nested_default'].commit(feature_set)
+				if 'nested_default' in self:
+					self['nested_default'].commit(feature_set)
 
-				if data['type'] == 'compound':
+				if self['type'] == 'compound':
 					all_keys.append('keys')
-					if 'keys' in data:
-						assert isinstance(data['keys'], dict), 'nbt map compound "keys" must be a dictionary'
-						for key, val in data['keys'].items():
+					if 'keys' in self:
+						assert isinstance(self['keys'], dict), 'nbt map compound "keys" must be a dictionary'
+						for key, val in self['keys'].items():
 							assert isinstance(key, str), 'keys in nbt map compound "keys" must be strings'
 							val.commit(feature_set)
 				else:
 					all_keys.append('index')
-					if 'index' in data:
-						assert isinstance(data['index'], dict), 'nbt map compound "index" must be a dictionary'
-						for key, val in data['index'].items():
+					if 'index' in self:
+						assert isinstance(self['index'], dict), 'nbt map compound "index" must be a dictionary'
+						for key, val in self['index'].items():
 							assert isinstance(key, str) and key.isdigit(), 'all keys in nbt map list index must be an int in string form'
 							val.commit(feature_set)
 
-		for key in data.keys():
+		for key in self._function.keys():
 			if key not in all_keys:
 				log_to_file(f'Extra key "{key}" found')
 
@@ -186,7 +185,7 @@ class ContainerWalkInputNBT(BaseTranslationFunction):
 
 		for key in ('keys', 'index'):
 			if key in data:
-				for key_, val in data[key]:
+				for key_, val in data[key].items():
 					data[key][key_] = val.to_object()
 
 		return data
