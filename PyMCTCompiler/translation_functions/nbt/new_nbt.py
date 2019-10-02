@@ -87,7 +87,7 @@ class NewNBT(BaseTranslationFunction):
 				raise Exception('The first paramater of each entry in path must be a string or an int')
 
 			assert 'value' in new_nbt, '"value" must be present in new_nbt'
-			amulet_nbt.from_snbt(new_nbt['value']) # check the snbt is valid
+			amulet_nbt.from_snbt(new_nbt['value'])  # check the snbt is valid
 
 	def to_object(self) -> dict:
 		return self._function

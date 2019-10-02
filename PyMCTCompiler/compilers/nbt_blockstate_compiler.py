@@ -1,4 +1,4 @@
-from PyMCTCompiler.compile import save_json, load_file, isfile, isdir, listdir, merge_map, blocks_from_server, compiled_dir, DiskBuffer, log_to_file
+from PyMCTCompiler.compile import save_json, load_file, isfile, isdir, listdir, merge_map, DiskBuffer, log_to_file
 from PyMCTCompiler import primitives, version_compiler
 import traceback
 

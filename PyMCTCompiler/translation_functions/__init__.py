@@ -133,6 +133,7 @@ class BaseTranslationFunction:
 	def to_object(self) -> dict:
 		raise NotImplemented
 
+
 extend_feature_set = {
 	'walk_input_nbt': ['carry_nbt', 'map_nbt']
 }

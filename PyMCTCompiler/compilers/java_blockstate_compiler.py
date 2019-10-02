@@ -74,34 +74,34 @@ def main(version_name: str, version_str: str):
 				if 'properties' in default_state:
 					to_universal = FunctionList([
 						{
-							"function":"new_block",
+							"function": "new_block",
 							"options":  f"universal_{block_string}"
 						},
 						{
-							"function":"carry_properties",
+							"function": "carry_properties",
 							"options":  states['properties']
 						}
 					], True)
 					from_universal = FunctionList([
 						{
-							"function":"new_block",
+							"function": "new_block",
 							"options":  block_string
 						},
 						{
-							"function":"carry_properties",
+							"function": "carry_properties",
 							"options":  states['properties']
 						}
 					], True)
 				else:
 					to_universal = FunctionList([
 						{
-							"function":"new_block",
+							"function": "new_block",
 							"options":  f"universal_{block_string}"
 						}
 					], True)
 					from_universal = FunctionList([
 						{
-							"function":"new_block",
+							"function": "new_block",
 							"options":  block_string
 						}
 					], True)
