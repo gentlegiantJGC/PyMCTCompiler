@@ -59,7 +59,8 @@ class MapProperties(BaseTranslationFunction):
 				nest.commit(feature_set)
 
 	def to_object(self) -> dict:
-		fun = copy.deepcopy(self._function)
-		for property_name in fun.get('options', {}):
-			for property_value in fun['options'][property_name]:
-				fun['options'][property_name][property_value] = fun['options'][property_name][property_value].to_object()
+		data = copy.deepcopy(self._function)
+		for property_name in data.get('options', {}):
+			for property_value in data['options'][property_name]:
+				data['options'][property_name][property_value] = data['options'][property_name][property_value].to_object()
+		return data
