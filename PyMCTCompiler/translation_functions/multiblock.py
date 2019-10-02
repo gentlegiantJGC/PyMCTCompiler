@@ -53,7 +53,7 @@ class Multiblock(BaseTranslationFunction):
 			assert 'coords' in mapping, 'coords must be present in multiblock'
 			assert isinstance(mapping['coords'], list) and len(mapping['coords']) == 3 and all(isinstance(coord, int) for coord in mapping['coords']), f'"coords" must be a list of ints of length 3. Got {mapping["coords"]} instead'
 			assert 'functions' in mapping, 'functions must be present in multiblock'
-			mapping['functions'].commit()
+			mapping['functions'].commit(feature_set)
 
 	def to_object(self) -> dict:
 		data = copy.deepcopy(self._function)
