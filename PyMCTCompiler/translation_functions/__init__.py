@@ -1,4 +1,4 @@
-from typing import List, Tuple, Set
+from typing import List, Set
 
 
 def from_primitive(data) -> 'FunctionList':

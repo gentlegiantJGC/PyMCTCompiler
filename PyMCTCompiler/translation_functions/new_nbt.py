@@ -1,4 +1,4 @@
-from typing import Tuple, Set
+from typing import Set
 from PyMCTCompiler.translation_functions import BaseTranslationFunction
 import amulet_nbt
 
