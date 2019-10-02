@@ -57,12 +57,13 @@ class FunctionList:
 	def commit(self, feature_set: Set[str]):
 		"""Confirm that the function is complete and run the validation code."""
 		if feature_set is None:
-			feature_set =
+			feature_set = default_feature_set
 		self._is_primitive = False
 		self._commit(feature_set)
 
 	def _commit(self, feature_set: Set[str]):
 		for fun in self.function_list:
+			assert fun.function_name in feature_set, f'Function "{fun.function_name}" is not valid here.'
 			fun.commit(feature_set)
 
 	def to_object(self) -> list:
