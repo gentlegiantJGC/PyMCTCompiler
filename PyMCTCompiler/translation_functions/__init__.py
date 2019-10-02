@@ -1,12 +1,8 @@
-from typing import List, Set
-
-
-def from_primitive(data) -> 'FunctionList':
-	return FunctionList(data)
+from typing import List, Set, Union
 
 
 class FunctionList:
-	def __init__(self, data):
+	def __init__(self, data, instant_commit=False):
 		assert isinstance(data, list)
 		self._is_primitive = True
 		self.function_list: List[BaseTranslationFunction] = []
@@ -15,6 +11,8 @@ class FunctionList:
 				self.function_list.append(function_map[fun['function']](fun))
 			else:
 				raise Exception(f'No function name given for {data}')
+		if instant_commit:
+			self.commit(None)
 
 	def __contains__(self, item):
 		return item in self.function_list
@@ -61,7 +59,7 @@ class FunctionList:
 			assert isinstance(other_fun, BaseTranslationFunction)
 			self_fun.extend(other_fun)
 
-	def commit(self, feature_set: Set[str]):
+	def commit(self, feature_set: Union[Set[str], None]):
 		"""Confirm that the function is complete and run the validation code."""
 		if feature_set is None:
 			feature_set = default_feature_set
@@ -76,13 +74,13 @@ class FunctionList:
 	def to_object(self) -> list:
 		if self._is_primitive:
 			raise Exception('The commit function must be called before to_object is called to confirm the format is valid')
-		return [fun.to_object for fun in self.function_list]
+		return [fun.to_object() for fun in self.function_list]
 
 
 class BaseTranslationFunction:
 	function_name = None
 
-	def __init__(self, data):
+	def __init__(self, data: dict):
 		self._is_primitive = True
 		if 'custom_name' in data:
 			self.custom_name = data['custom_name']
@@ -91,14 +89,17 @@ class BaseTranslationFunction:
 			self.custom_name = None
 		self._function = data
 
-	def __contains__(self, item):
+	def __contains__(self, item: str):
 		return item in self._function
 
-	def __getitem__(self, item):
+	def __getitem__(self, item: str):
 		return self._function[item]
 
-	def __setitem__(self, key, value):
+	def __setitem__(self, key: str, value):
 		self._function[key] = value
+
+	def setdefault(self, key, default):
+		self._function.setdefault(key, default)
 
 	def get(self, item, default):
 		return self._function.get(item, default)
@@ -132,6 +133,10 @@ class BaseTranslationFunction:
 	def to_object(self) -> dict:
 		raise NotImplemented
 
+extend_feature_set = {
+	'walk_input_nbt': ['carry_nbt', 'map_nbt']
+}
+
 
 from PyMCTCompiler.translation_functions.carry_nbt import CarryNBT
 from PyMCTCompiler.translation_functions.carry_properties import CarryProperties
@@ -147,6 +152,3 @@ from PyMCTCompiler.translation_functions.walk_input_nbt import WalkInputNBT
 
 function_map = {f.function_name: f for f in [CarryNBT, CarryProperties, MapBlockName, MapNBT, MapProperties, Multiblock, NewBlock, NewEntity, NewNBT, NewProperties, WalkInputNBT]}
 default_feature_set: Set[str] = {f.function_name for f in [CarryProperties, MapBlockName, MapNBT, MapProperties, Multiblock, NewBlock, NewEntity, NewNBT, NewProperties, WalkInputNBT]}
-extend_feature_set = {
-	WalkInputNBT.function_name: [CarryNBT.function_name, MapNBT.function_name]
-}
