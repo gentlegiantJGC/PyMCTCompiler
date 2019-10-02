@@ -1,6 +1,10 @@
 from typing import List, Tuple, Set
 
 
+def from_primitive(data) -> 'FunctionList':
+	return FunctionList(data)
+
+
 class FunctionList:
 	def __init__(self, data):
 		assert isinstance(data, list)
