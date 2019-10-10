@@ -23,7 +23,11 @@ class DiskBuffer:
 		}
 
 		# self._translations = {}
-		self._nested_translations: Dict[Union[Tuple[str, ...], Tuple[Tuple[str, ...], ...]], FunctionList] = {}
+
+		# stores the primitive names converting to the hash of those primitive names (or a slight variant if a duplicate is found)
+		self._nested_translations: Dict[Union[Tuple[str, ...], Tuple[Tuple[str, ...], ...]], str] = {}
+		# stores the inverse of the above
+		self._nested_translations_inverse: Set[str] = set()
 
 		self._files_to_save: Dict[tuple, Union[list, dict]] = {}
 
@@ -67,11 +71,21 @@ class DiskBuffer:
 		else:
 			self._translations["from_universal"][(version_name, object_type, version_format, namespace, group_name, base_name)] = data
 
-	def save_nested_translation(self, primitive_group: Union[Tuple[str, ...], Tuple[Tuple[str, ...], ...]], data: list):
+	def save_nested_translation(self, primitive_group: Union[Tuple[str, ...], Tuple[Tuple[str, ...], ...]], data: list) -> str:
 		"""This method should only be used by internal code.
 		Used at the end during the saving process to add a nested primitive file for saving."""
-		# TODO: validate that each hash is unique and handle if it is not
-		self.save_json_object(('nested_translations', str(hash(primitive_group))), data)
+		key = hash(primitive_group)
+		if primitive_group in self._nested_translations:
+			return self._nested_translations[primitive_group]
+		else:
+			while str(key) in self._nested_translations_inverse:
+				# we have a duplicate hash
+				key += 1
+
+			self.save_json_object(('nested_translations', str(key)), data)
+			self._nested_translations_inverse.add(str(key))
+			self._nested_translations[primitive_group] = str(key)
+			return str(key)
 
 	def save_json_object(self, tuple_path: tuple, data: Union[dict, list]):
 		assert isinstance(data, (dict, list))
