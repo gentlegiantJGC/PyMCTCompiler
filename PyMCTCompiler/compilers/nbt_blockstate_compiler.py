@@ -1,6 +1,10 @@
-from PyMCTCompiler.compile import save_json, load_file, isfile, isdir, listdir, merge_map, DiskBuffer, log_to_file
-from PyMCTCompiler import primitives, version_compiler
+import os
 import traceback
+
+import PyMCTCompiler
+from PyMCTCompiler import primitives, disk_buffer
+from PyMCTCompiler.compilers.load_previous_primitives import load_previous_versions_primitives
+from PyMCTCompiler.helpers import log_to_file, load_json_file
 
 """
 Summary
@@ -35,11 +39,10 @@ def main(version_name: str, version_str: str):
 	:param version_str: The string of the version number exactly as it appears in the version manifest
 	"""
 
-	output = DiskBuffer()
-	if isfile(f'{version_name}/block_palette.json'):
+	if os.path.isfile(os.path.join(PyMCTCompiler.path, 'version_compiler', version_name, 'block_palette.json')):
 
 		# load the block list
-		block_palette: dict = load_file(f'{version_name}/block_palette.json')
+		block_palette: dict = load_json_file(os.path.join(PyMCTCompiler.path, 'version_compiler', version_name, 'block_palette.json'))
 		blocks = {}
 
 		for blockstate in block_palette['blocks']:
@@ -57,12 +60,12 @@ def main(version_name: str, version_str: str):
 						blocks[(namespace, base_name)]['properties'][prop['name']].append(snbt_value)
 
 		for (namespace, base_name), spec in blocks.items():
-			save_json(f'{version_name}/block/blockstate/specification/{namespace}/vanilla/{base_name}.json', spec, buffer=output)
+			disk_buffer.add_specification(version_name, 'block', 'blockstate', namespace, 'vanilla', base_name, spec)
 
 	else:
 		raise Exception(f'Could not find {version_name}/block_palette.json')
 
-	include_data = merge_parents(version_name)
+	include_data = load_previous_versions_primitives(version_name)
 	for namespace in include_data:
 		# iterate through all sub_names ('vanilla', 'chemistry'...)
 		for sub_name in include_data[namespace]:
@@ -72,7 +75,7 @@ def main(version_name: str, version_str: str):
 					if primitive_block_name is None:
 						continue
 					try:
-						process_block(output, primitives.get_block('nbt-blockstate', primitive_block_name), version_name, namespace, sub_name, block_file_name)
+						process_block(primitives.get_block('nbt-blockstate', primitive_block_name), version_name, namespace, sub_name, block_file_name)
 					except Exception as e:
 						log_to_file(f'Failed to process {version_name}/{namespace}/{sub_name}/{block_file_name}\n{e}\n{traceback.print_exc()}')
 			if '__include_entities__.json' in include_data[namespace][sub_name]:
@@ -80,16 +83,24 @@ def main(version_name: str, version_str: str):
 					if primitive_entity_name is None:
 						continue
 					try:
-						process_entity(output, primitives.get_entity(primitive_entity_name), version_name, namespace, sub_name, entity_file_name)
+						process_entity(primitives.get_entity(primitive_entity_name), version_name, namespace, sub_name, entity_file_name)
 					except Exception as e:
 						log_to_file(f'Failed to process {version_name}/{namespace}/{sub_name}/{entity_file_name}\n{e}\n{traceback.print_exc()}')
-	return output.save()
 
 
-def process_block(buffer: DiskBuffer, block_json: primitives.Primitive, version_name: str, namespace: str, sub_name: str, block_file_name: str):
+def save_data(version_type, universal_type, data, version_name, namespace, sub_name, block_file_name):
+	assert universal_type in ('block', 'entity'), f'Universal type "{universal_type}" is not known'
+	if 'specification' in data:
+		disk_buffer.add_specification(version_name, version_type, 'blockstate', namespace, sub_name, block_file_name, data['specification'])
+	disk_buffer.add_translation_to_universal(version_name, version_type, 'blockstate', namespace, sub_name, block_file_name, data['to_universal'])
+	for block_str, block_data in data['from_universal'].items():
+		namespace_, block_name = block_str.split(':', 1)
+		disk_buffer.add_translation_from_universal(version_name, universal_type, 'blockstate', namespace_, sub_name, block_name, block_data)
+
+
+def process_block(block_json: primitives.Primitive, version_name: str, namespace: str, sub_name: str, block_file_name: str):
 	"""Will create json files based on block_json.
 
-	:param buffer: DiskBuffer instance to hold the data in memory rather than writing directly to disk
 	:param block_json: The data that will be split up and saved out
 	:param version_name: The version name for use in the file path
 	:param namespace: The namespace for use in the file path
@@ -101,31 +112,12 @@ def process_block(buffer: DiskBuffer, block_json: primitives.Primitive, version_
 
 	assert 'to_universal' in block_json, f'Key to_universal must be defined'
 	assert 'from_universal' in block_json, f'Key from_universal must be defined'
-
-	if universal_type == 'block':
-		if 'specification' in block_json:
-			save_json(f'{version_name}/block/blockstate/specification/{namespace}/{sub_name}/{block_file_name}.json', block_json['specification'], overwrite=True, buffer=buffer)
-		save_json(f'{version_name}/block/blockstate/to_universal/{namespace}/{sub_name}/{block_file_name}.json', block_json['to_universal'], buffer=buffer)
-		for block_str, block_data in block_json['from_universal'].items():
-			namespace_, block_name = block_str.split(':', 1)
-			merge_map(block_data, f'{version_name}/block/blockstate/from_universal/{namespace_}/{sub_name}/{block_name}.json', buffer=buffer)
-
-	elif universal_type == 'entity':
-		if 'specification' in block_json:
-			save_json(f'{version_name}/block/blockstate/specification/{namespace}/{sub_name}/{block_file_name}.json', block_json['specification'], overwrite=True, buffer=buffer)
-		save_json(f'{version_name}/block/blockstate/to_universal/{namespace}/{sub_name}/{block_file_name}.json', block_json['to_universal'], buffer=buffer)
-		for block_str, block_data in block_json['from_universal'].items():
-			namespace_, block_name = block_str.split(':', 1)
-			merge_map(block_data, f'{version_name}/entity/blockstate/from_universal/{namespace_}/{sub_name}/{block_name}.json', buffer=buffer)
-
-	else:
-		raise Exception(f'Universal type "{universal_type}" is not known')
+	save_data('block', universal_type, block_json, version_name, namespace, sub_name, block_file_name)
 
 
-def process_entity(buffer: DiskBuffer, entity_json: primitives.Primitive, version_name: str, namespace: str, sub_name: str, block_file_name: str):
+def process_entity(entity_json: primitives.Primitive, version_name: str, namespace: str, sub_name: str, block_file_name: str):
 	"""Will create json files based on block_json.
 
-	:param buffer: DiskBuffer instance to hold the data in memory rather than writing directly to disk
 	:param entity_json: The data that will be split up and saved out
 	:param version_name: The version name for use in the file path
 	:param namespace: The namespace for use in the file path
@@ -139,43 +131,4 @@ def process_entity(buffer: DiskBuffer, entity_json: primitives.Primitive, versio
 		assert key in entity_json, f'Key {key} must be defined'
 		assert isinstance(entity_json[key], dict), f'Key {key} must be a dictionary'
 
-	if universal_type == 'entity':
-		save_json(f'{version_name}/entity/blockstate/specification/{namespace}/{sub_name}/{block_file_name}.json', entity_json['specification'], buffer=buffer)
-		save_json(f'{version_name}/entity/blockstate/to_universal/{namespace}/{sub_name}/{block_file_name}.json', entity_json['to_universal'], buffer=buffer)
-		for block_str, block_data in entity_json['from_universal'].items():
-			namespace_, block_name = block_str.split(':', 1)
-			merge_map(block_data, f'{version_name}/entity/blockstate/from_universal/{namespace_}/{sub_name}/{block_name}.json', buffer=buffer)
-
-	elif universal_type == 'block':
-		save_json(f'{version_name}/entity/blockstate/specification/{namespace}/{sub_name}/{block_file_name}.json', entity_json['specification'], buffer=buffer)
-		save_json(f'{version_name}/entity/blockstate/to_universal/{namespace}/{sub_name}/{block_file_name}.json', entity_json['to_universal'], buffer=buffer)
-		for block_str, block_data in entity_json['from_universal'].items():
-			namespace_, block_name = block_str.split(':', 1)
-			merge_map(block_data, f'{version_name}/block/blockstate/from_universal/{namespace_}/{sub_name}/{block_name}.json', buffer=buffer)
-	else:
-		raise Exception(f'Universal type "{universal_type}" is not known')
-
-
-def merge_parents(version_name: str):
-	if hasattr(version_compiler, version_name) and hasattr(getattr(version_compiler, version_name), 'init'):
-		init = getattr(version_compiler, version_name)
-		if hasattr(init, 'parent_version'):
-			include_data = merge_parents(init.parent_version)
-		else:
-			include_data = {}
-	else:
-		raise Exception(f'Issue getting init file for version {version_name}')
-
-	for namespace in listdir(f'{version_name}'):
-		if isdir(f'{version_name}/{namespace}'):
-			# iterate through all sub_names ('vanilla', 'chemistry'...)
-			for sub_name in listdir(f'{version_name}/{namespace}'):
-				if isdir(f'{version_name}/{namespace}/{sub_name}'):
-					# load __include_blocks__.json if it exists and unpack those primitive files
-					if '__include_blocks__.json' in listdir(f'{version_name}/{namespace}/{sub_name}'):
-						for block_file_name, primitive_block_name in load_file(f'{version_name}/{namespace}/{sub_name}/__include_blocks__.json').items():
-							include_data.setdefault(namespace, {}).setdefault(sub_name, {}).setdefault('__include_blocks__.json', {})[block_file_name] = primitive_block_name
-					if '__include_entities__.json' in listdir(f'{version_name}/{namespace}/{sub_name}'):
-						for entity_file_name, primitive_entity_name in load_file(f'{version_name}/{namespace}/{sub_name}/__include_entities__.json').items():
-							include_data.setdefault(namespace, {}).setdefault(sub_name, {}).setdefault('__include_entities__.json', {})[entity_file_name] = primitive_entity_name
-	return include_data
+	save_data('block', universal_type, entity_json, version_name, namespace, sub_name, block_file_name)
