@@ -144,7 +144,7 @@ def main(version_name: str, version_str: str):
 						for block_string2, mapping in block_data['from_universal'].items():
 							namespace2, block_name2 = block_string2.split(':', 1)
 							disk_buffer.add_translation_from_universal(version_name, universal_type, 'blockstate', namespace2, 'vanilla', block_name2, mapping)
-		disk_buffer.save_json_object(('mappings', version_name, '__waterlogable__'), waterlogable)
+		disk_buffer.save_json_object(('versions', version_name, '__waterlogable__'), waterlogable)
 
 		# add in the modifications for entities
 		for namespace in modifications['entity']:

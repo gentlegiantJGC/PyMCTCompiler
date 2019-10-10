@@ -38,10 +38,10 @@ class DiskBuffer:
 		:param data:
 		:return:
 		"""
-		self.save_json_object(("mappings", version_name, object_type, version_format, "specification", namespace, group_name, base_name), data)
+		self.save_json_object(('versions', version_name, object_type, version_format, "specification", namespace, group_name, base_name), data)
 
 	def has_specification(self, version_name: str, object_type: str, version_format: str, namespace: str, group_name: str, base_name: str) -> bool:
-		return ("mappings", version_name, object_type, version_format, "specification", namespace, group_name, base_name) in self._files_to_save
+		return ('versions', version_name, object_type, version_format, "specification", namespace, group_name, base_name) in self._files_to_save
 
 	def add_translation_to_universal(self, version_name: str, object_type: str, version_format: str, namespace: str, group_name: str, base_name: str, data: FunctionList):
 		"""add a translation file from version to universal format to the disk buffer to be saved at the end"""
@@ -82,7 +82,7 @@ class DiskBuffer:
 		for direction in self._translations:
 			for path, data in self._translations[direction].items():
 				data.commit(None, [])  # validate the translation
-				self.save_json_object(("mappings",) + path[:3] + (direction,) + path[3:], data.save([]))  # add the file to the dictionary to be saved
+				self.save_json_object(('versions',) + path[:3] + (direction,) + path[3:], data.save([]))  # add the file to the dictionary to be saved
 
 		with ThreadPoolExecutor(max_workers=1000) as executor:
 			for path, data in self._files_to_save.items():

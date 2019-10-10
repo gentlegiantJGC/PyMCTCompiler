@@ -52,14 +52,14 @@ def build(compiled_dir_):
 				if init['block_format'] == 'numerical':
 					# copy over the numerical map required for old numerical formats
 					with open(os.path.join(os.path.dirname(__file__), 'version_compiler', version_name, '__numerical_block_map__.json')) as f:
-						disk_buffer.save_json_object(('mappings', version_name, '__numerical_block_map__'), json.load(f))
+						disk_buffer.save_json_object(('versions', version_name, '__numerical_block_map__'), json.load(f))
 
 				# run the relevant compiler
 				assert hasattr(getattr(version_compiler, version_name), 'compiler') and getattr(version_compiler, version_name).compiler is not None
 				getattr(version_compiler, version_name).compiler(version_name, '.'.join(str(a) for a in init['version']))
 
 				# save the init file
-				disk_buffer.save_json_object(('mappings', version_name, '__init__'), init)
+				disk_buffer.save_json_object(('versions', version_name, '__init__'), init)
 				log_to_file(f'\tFinished in {round(time.time() - t, 2)} seconds')
 			else:
 				log_to_file(f'"block_format" in __init__.json for {version_name} is either not defined or not a valid value. This version has been skipped')
