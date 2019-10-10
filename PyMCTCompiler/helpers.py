@@ -39,8 +39,7 @@ def check_specification_format(data: dict):
 		assert isinstance(defaults[key], str), 'All default property values must be strings'
 		assert defaults[key] in val, 'Default property value must be in the property list'
 		if data.get('nbt_properties', False):
-			pass
-			# TODO: verify that all of these are valid SNBT
+			[amulet_nbt.from_snbt(val_) for val_ in val]  # verify that the snbt is valid
 
 	if 'snbt' in data:
 		assert isinstance(data['snbt'], str), 'Specification "snbt" must be a string'
