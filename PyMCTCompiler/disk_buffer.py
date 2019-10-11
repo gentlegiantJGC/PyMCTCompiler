@@ -71,18 +71,23 @@ class DiskBuffer:
 		else:
 			self._translations["from_universal"][(version_name, object_type, version_format, namespace, group_name, base_name)] = data
 
-	def save_nested_translation(self, primitive_group: Union[Tuple[str, ...], Tuple[Tuple[str, ...], ...]], data: list) -> str:
+	def save_nested_translation(self, primitive_group: Union[Tuple[str, ...], Tuple[Tuple[str, ...], ...]], data: list):
 		"""This method should only be used by internal code.
 		Used at the end during the saving process to add a nested primitive file for saving."""
-		key = hash(primitive_group)
+		key = self.nested_translation_key(primitive_group)
+		if ('nested_translations', key) not in self._files_to_save:
+			self.save_json_object(('nested_translations', key), data)
+
+	def nested_translation_key(self, primitive_group: Tuple[Tuple[str, ...], ...]) -> str:
+		"""Used to retrieve or create a key a nested primitive is stored under."""
 		if primitive_group in self._nested_translations:
 			return self._nested_translations[primitive_group]
 		else:
+			key = hash(primitive_group)
 			while str(key) in self._nested_translations_inverse:
 				# we have a duplicate hash
 				key += 1
 
-			self.save_json_object(('nested_translations', str(key)), data)
 			self._nested_translations_inverse.add(str(key))
 			self._nested_translations[primitive_group] = str(key)
 			return str(key)
