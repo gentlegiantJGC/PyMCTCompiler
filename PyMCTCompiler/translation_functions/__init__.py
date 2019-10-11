@@ -165,6 +165,7 @@ from PyMCTCompiler.translation_functions.property.map_properties import MapPrope
 from PyMCTCompiler.translation_functions.property.new_properties import NewProperties
 from PyMCTCompiler.translation_functions.map_block_name import MapBlockName
 from PyMCTCompiler.translation_functions.multiblock import Multiblock
+from PyMCTCompiler.translation_functions.nested_translation import NestedTranslation
 
-function_map = {f.function_name: f for f in [CarryNBT, CarryProperties, MapBlockName, MapNBT, MapProperties, Multiblock, NewBlock, NewEntity, NewNBT, NewProperties, WalkInputNBT]}
+function_map = {f.function_name: f for f in [CarryNBT, CarryProperties, MapBlockName, MapNBT, MapProperties, Multiblock, NewBlock, NewEntity, NewNBT, NewProperties, WalkInputNBT, NestedTranslation]}
 default_feature_set: Set[str] = {f.function_name for f in [CarryProperties, MapBlockName, MapNBT, MapProperties, Multiblock, NewBlock, NewEntity, NewNBT, NewProperties, WalkInputNBT]}
