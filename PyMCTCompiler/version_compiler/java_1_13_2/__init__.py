@@ -7,6 +7,7 @@ init = {
 	"entity_format": "namespace-str-id",
 	"entity_coord_format": "Pos-list-float",
 	"platform": "java",
-	"version": [1, 13, 2]
+	"version": [1, 13, 2],
+	"data_version": 1631
 }
 compiler = java_blockstate_compiler.main
