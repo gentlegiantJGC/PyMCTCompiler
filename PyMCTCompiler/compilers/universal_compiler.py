@@ -1,4 +1,8 @@
-from PyMCTCompiler.compile import save_json, load_file, isfile, isdir, listdir, blocks_from_server, compiled_dir, DiskBuffer
+import os
+
+import PyMCTCompiler
+from PyMCTCompiler import disk_buffer
+from PyMCTCompiler.helpers import blocks_from_server, load_json_file
 
 """
 Summary
@@ -19,21 +23,26 @@ def main(version_name: str, version_str: str):
 	"""
 	blocks_from_server(version_name)
 
-	if isfile(f'{version_name}/generated/reports/blocks.json'):
-		output = DiskBuffer()
+	if os.path.isfile(os.path.join(PyMCTCompiler.path, 'version_compiler', version_name, 'generated', 'reports', 'blocks.json')):
 		modifications = {}
 		# Iterate through all modifications and load them into a dictionary
-		for namespace in (namespace for namespace in listdir(f'{version_name}/modifications') if isdir(f'{version_name}/modifications/{namespace}')):
+		for namespace in (
+				namespace for namespace in os.listdir(os.path.join(PyMCTCompiler.path, 'version_compiler', version_name, 'modifications'))
+				if os.path.isdir(os.path.join(PyMCTCompiler.path, 'version_compiler', version_name, 'modifications', namespace))
+		):
 			if namespace not in modifications:
 				modifications[namespace] = {}
-			for group_name in (group_name for group_name in listdir(f'{version_name}/modifications/{namespace}') if isdir(f'{version_name}/modifications/{namespace}/{group_name}')):
+			for group_name in (
+					group_name for group_name in os.listdir(os.path.join(PyMCTCompiler.path, 'version_compiler', version_name, 'modifications', namespace))
+					if os.path.isdir(os.path.join(PyMCTCompiler.path, 'version_compiler', version_name, 'modifications', namespace, group_name))
+			):
 				if group_name not in modifications[namespace]:
 					modifications[namespace][group_name] = {"remove": [], "add": {}}
 
 				# load the modifications for that namespace and group name
-				for file_name in listdir(f'{version_name}/modifications/{namespace}/{group_name}'):
+				for file_name in os.listdir(os.path.join(PyMCTCompiler.path, 'version_compiler', version_name, 'modifications', namespace, group_name)):
 					if file_name.endswith('.json'):
-						json_object = load_file(f'{version_name}/modifications/{namespace}/{group_name}/{file_name}')
+						json_object = load_json_file(os.path.join(PyMCTCompiler.path, 'version_compiler', version_name, 'modifications', namespace, group_name, file_name))
 						if "remove" in json_object:
 							modifications[namespace][group_name]["remove"] += json_object["remove"]
 						if "add" in json_object:
@@ -43,7 +52,7 @@ def main(version_name: str, version_str: str):
 								modifications[namespace][group_name]["add"][key] = val
 
 		# load the block list the server created
-		blocks: dict = load_file(f'{version_name}/generated/reports/blocks.json')
+		blocks: dict = load_json_file(os.path.join(PyMCTCompiler.path, 'version_compiler', version_name, 'generated', 'reports', 'blocks.json'))
 
 		for block_string, states in blocks.items():
 			namespace, block_name = block_string.split(':', 1)
@@ -60,17 +69,15 @@ def main(version_name: str, version_str: str):
 			del states['states']
 			if not(namespace in modifications and any(block_name in modifications[namespace][group_name]['remove'] for group_name in modifications[namespace])):
 				# the block is not marked for removal
-				save_json(f'{version_name}/block/blockstate/specification/{namespace}/vanilla/{block_name}.json', states, buffer=output)
+				disk_buffer.add_specification(version_name, 'block', 'blockstate', namespace, 'vanilla', block_name, states)
 
 		for namespace in modifications:
 			for group_name in modifications[namespace]:
 				for block_name, specification in modifications[namespace][group_name]["add"].items():
-					if isfile(f'{version_name}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', compiled_dir, buffer=output):
+					if disk_buffer.has_specification(version_name, 'block', 'blockstate', namespace, group_name, block_name):
 						print(f'"{block_name}" is already present.')
 					else:
 						assert isinstance(specification, dict), f'The data here is supposed to be a dictionary. Got this instead:\n{specification}'
-
-						save_json(f'{version_name}/block/blockstate/specification/{namespace}/{group_name}/{block_name}.json', specification, buffer=output)
-		return output.save()
+						disk_buffer.add_specification(version_name, 'block', 'blockstate', namespace, group_name, block_name, specification)
 	else:
 		raise Exception(f'Could not find {version_name}/generated/reports/blocks.json')

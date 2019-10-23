@@ -5,7 +5,7 @@ import copy
 from typing import Union, List, Dict
 from .scripts import *
 import amulet_nbt
-from amulet_nbt import NBTFile, TAG_Byte, TAG_Short, TAG_Int, TAG_Long, TAG_Float, TAG_Double, TAG_Byte_Array, TAG_String, TAG_List, TAG_Compound, TAG_Int_Array, TAG_Long_Array
+from amulet_nbt import TAG_Compound
 from PyMCTCompiler.translation_functions import FunctionList
 
 
@@ -20,7 +20,7 @@ def _load_file(path: str) -> dict:
 
 
 class Primitive:
-	def __init__(self, data: dict):
+	def __init__(self, data: Dict[str, Union[dict, FunctionList, Dict[str, FunctionList]]]):
 		for key in ('to_universal', 'blockstate_to_universal'):
 			if key in data:
 				data[key] = FunctionList(data[key])
@@ -54,13 +54,13 @@ class Primitive:
 			if key not in self:
 				self[key] = val
 			elif key in ('to_universal', 'blockstate_to_universal'):
-				self[key].extend(other[key])
+				self[key].extend(other[key], [])
 			elif key in ('from_universal', 'blockstate_from_universal'):
 				for string_id, props in val.items():
 					if string_id not in self[key]:
 						self[key][string_id] = props
 					else:
-						self[key][string_id].extend(props)
+						self[key][string_id].extend(props, [])
 			elif key in ('specification', 'blockstate_specification'):
 				merge_primitive_specification(self[key], other[key])
 
@@ -68,12 +68,13 @@ class Primitive:
 		for key in ('to_universal', 'blockstate_to_universal'):
 			if key in self._data:
 				assert isinstance(self._data[key], FunctionList)
-				self._data[key].commit(None)
+				self._data[key].commit(None, [])
 		for key in ('from_universal', 'blockstate_from_universal'):
 			if key in self._data:
 				assert isinstance(self._data[key], dict)
 				for val in self._data[key].values():
-					val.commit(None)
+					val.commit(None, [])
+
 
 print('Loading Primitives ...')
 blocks: Dict[str, Dict[str, Primitive]] = {'numerical': {}, 'blockstate': {}, 'nbt-blockstate': {}}
@@ -104,41 +105,41 @@ for root, dirs, files in os.walk(f'{os.path.dirname(__file__)}/entities'):
 print('\tFinished Loading Primitives')
 
 
-def get_block(block_format: str, primitive: Union[str, List[str]]) -> Primitive:
+def get_block(block_format: str, primitive_group: Union[str, List[str]]) -> Primitive:
 	assert block_format in blocks, f'"{block_format}" is not a known format'
-	if isinstance(primitive, str):
-		assert primitive in blocks[block_format], f'"{primitive}" is not present in the mappings for format "{block_format}"'
-		output = copy.deepcopy(blocks[block_format][primitive])
+	if isinstance(primitive_group, str):
+		assert primitive_group in blocks[block_format], f'"{primitive_group}" is not present in the mappings for format "{block_format}"'
+		output = copy.deepcopy(blocks[block_format][primitive_group])
 		output.commit()
 		return output
-	elif isinstance(primitive, list) and len(primitive) >= 1:
+	elif isinstance(primitive_group, list) and len(primitive_group) >= 1:
 		output = Primitive({})
-		for nested_primitive in primitive:
-			assert isinstance(nested_primitive, str), f'Expected a list of strings. At least one entry was type {type(nested_primitive)}'
-			assert nested_primitive in blocks[block_format], f'"{nested_primitive}" is not present in the mappings for format "{block_format}"'
-			output.extend(copy.deepcopy(blocks[block_format][nested_primitive]))
+		for primitive in primitive_group:
+			assert isinstance(primitive, str), f'Expected a list of strings. At least one entry was type {type(primitive)}'
+			assert primitive in blocks[block_format], f'"{primitive}" is not present in the mappings for format "{block_format}"'
+			output.extend(copy.deepcopy(blocks[block_format][primitive]))
 		output.commit()
 		return output
 	else:
-		raise Exception(f'Un-supported format: {type(primitive)}')
+		raise Exception(f'Un-supported format: {type(primitive_group)}')
 
 
-def get_entity(primitive: Union[str, List[str]]) -> Primitive:
-	if isinstance(primitive, str):
-		assert primitive in entities, f'"{primitive}" is not present in the entity mappings'
-		output = copy.deepcopy(entities[primitive])
+def get_entity(primitive_group: Union[str, List[str]]) -> Primitive:
+	if isinstance(primitive_group, str):
+		assert primitive_group in entities, f'"{primitive_group}" is not present in the entity mappings'
+		output = copy.deepcopy(entities[primitive_group])
 		output.commit()
 		return output
-	elif isinstance(primitive, list):
+	elif isinstance(primitive_group, list):
 		output = Primitive({})
-		for nested_primitive in primitive:
-			assert isinstance(nested_primitive, str), f'Expected a list of strings. At least one entry was type {type(nested_primitive)}'
-			assert nested_primitive in entities, f'"{nested_primitive}" is not present in the entity mappings'
-			output.extend(copy.deepcopy(entities[nested_primitive]))
+		for primitive in primitive_group:
+			assert isinstance(primitive, str), f'Expected a list of strings. At least one entry was type {type(primitive)}'
+			assert primitive in entities, f'"{primitive}" is not present in the entity mappings'
+			output.extend(copy.deepcopy(entities[primitive]))
 		output.commit()
 		return output
 	else:
-		raise Exception(f'Un-supported format: {type(primitive)}')
+		raise Exception(f'Un-supported format: {type(primitive_group)}')
 
 
 def merge_nbt(obj1, obj2):
@@ -194,3 +195,5 @@ def merge_primitive_specification(obj1: dict, obj2: dict) -> dict:
 		obj1['nbt_properties'] = obj2['nbt_properties']
 
 	return obj1
+
+from PyMCTCompiler.primitives import nested

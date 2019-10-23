@@ -1,41 +1,17 @@
 import os
-from typing import Tuple, Union
+from typing import Union
 from urllib.request import urlopen
 import json
-from concurrent.futures import ThreadPoolExecutor
 import amulet_nbt
+import PyMCTCompiler
 
 log_file = open('log.txt', 'w')
 
 
-def _save_file(path, data):
-	os.makedirs(os.path.dirname(path), exist_ok=True)
-	with open(path, 'w') as f:
-		if path.endswith('.json'):
-			if isinstance(data, FunctionList):
-				data = data.to_object()
-			json.dump(data, f, indent=4)
-		else:
-			f.write(data)
-
-
-class DiskBuffer:
-	def __init__(self):
-		self._files = {}
-
-	def add_file(self, path: str, data):
-		self._files[path] = data
-
-	def load_file(self, path: str):
-		return self._files[path]
-
-	def save(self):
-		with ThreadPoolExecutor(max_workers=1000) as executor:
-			for path, data in self._files.items():
-				executor.submit(_save_file, path, data)
-
-	def isfile(self, path: str) -> bool:
-		return path in self._files.keys()
+def load_json_file(path: str) -> Union[dict, list]:
+	"""Loads and returns the data from the file at prefix/path if it is a json file."""
+	with open(path) as f:
+		return json.load(f)
 
 
 def log_to_file(msg: str):
@@ -63,8 +39,7 @@ def check_specification_format(data: dict):
 		assert isinstance(defaults[key], str), 'All default property values must be strings'
 		assert defaults[key] in val, 'Default property value must be in the property list'
 		if data.get('nbt_properties', False):
-			pass
-			# TODO: verify that all of these are valid SNBT
+			[amulet_nbt.from_snbt(val_) for val_ in val]  # verify that the snbt is valid
 
 	if 'snbt' in data:
 		assert isinstance(data['snbt'], str), 'Specification "snbt" must be a string'
@@ -97,7 +72,8 @@ def unique_merge_lists(list_a: list, list_b: list) -> list:
 	return merged_list
 
 
-def blocks_from_server_(uncompiled_path: str, version_name: str, version_str: str = None):
+def blocks_from_server(version_name: str, version_str: str = None):
+	uncompiled_path = os.path.join(PyMCTCompiler.path, 'version_compiler')
 	if not os.path.isfile(f'{uncompiled_path}/{version_name}/generated/reports/blocks.json'):
 		if not os.path.isfile(f'{uncompiled_path}/{version_name}/server.jar'):
 			download_server_jar(f'{uncompiled_path}/{version_name}', version_str)

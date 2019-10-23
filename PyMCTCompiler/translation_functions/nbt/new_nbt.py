@@ -43,7 +43,7 @@ class NewNBT(BaseTranslationFunction):
 			data['options'] = [data['options']]
 		BaseTranslationFunction.__init__(self, data)
 
-	def _primitive_extend(self, other: BaseTranslationFunction):
+	def _primitive_extend(self, other: BaseTranslationFunction, parents: list):
 		"""Used to merge two primitive files together.
 		The formats do not need to be identical but close enough that the data can stack."""
 		new_nbts = other['options']
@@ -51,12 +51,12 @@ class NewNBT(BaseTranslationFunction):
 			if new_nbt not in self['options']:
 				self['options'].append(new_nbt)
 
-	def _compiled_extend(self, other: BaseTranslationFunction):
+	def _compiled_extend(self, other: BaseTranslationFunction, parents: list):
 		"""Used to merge two completed translations together.
 		The formats must match in such a way that the two base translations do not interfere."""
 		assert self['options'] == other['options'], '"new_nbt" must be the same when merging'
 
-	def _commit(self, feature_set: Set[str]):
+	def _commit(self, feature_set: Set[str], parents: list):
 		new_nbts = self['options']
 		assert isinstance(new_nbts, list), '"new_nbt" must be a dictionary or a list of dictionaries'
 		for new_nbt in new_nbts:
@@ -89,5 +89,5 @@ class NewNBT(BaseTranslationFunction):
 			assert 'value' in new_nbt, '"value" must be present in new_nbt'
 			amulet_nbt.from_snbt(new_nbt['value'])  # check the snbt is valid
 
-	def to_object(self) -> dict:
+	def save(self, parents: list) -> dict:
 		return self._function

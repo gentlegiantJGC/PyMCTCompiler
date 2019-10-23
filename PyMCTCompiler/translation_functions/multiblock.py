@@ -23,7 +23,7 @@ class Multiblock(BaseTranslationFunction):
 			option['functions'] = FunctionList(option['functions'])
 		BaseTranslationFunction.__init__(self, data)
 
-	def _primitive_extend(self, other: BaseTranslationFunction):
+	def _primitive_extend(self, other: BaseTranslationFunction, parents: list):
 		"""Used to merge two primitive files together.
 		The formats do not need to be identical but close enough that the data can stack."""
 		multiblock = other['options']
@@ -37,15 +37,15 @@ class Multiblock(BaseTranslationFunction):
 			if self_mapping is None:
 				self['options'].append(other_mapping)
 			else:
-				self_mapping['functions'].extend(other_mapping['functions'])
+				self_mapping['functions'].extend(other_mapping['functions'], parents)
 
-	def _compiled_extend(self, other: BaseTranslationFunction):
+	def _compiled_extend(self, other: BaseTranslationFunction, parents: list):
 		"""Used to merge two completed translations together.
 		The formats must match in such a way that the two base translations do not interfere."""
 		# TODO
 		assert self['options'] == other['options'], '"multiblock" must be the same when merging'
 
-	def _commit(self, feature_set: Set[str]):
+	def _commit(self, feature_set: Set[str], parents: list):
 		multiblock = self['options']
 		if isinstance(multiblock, dict):
 			multiblock = [multiblock]
@@ -55,10 +55,10 @@ class Multiblock(BaseTranslationFunction):
 			assert 'coords' in mapping, 'coords must be present in multiblock'
 			assert isinstance(mapping['coords'], list) and len(mapping['coords']) == 3 and all(isinstance(coord, int) for coord in mapping['coords']), f'"coords" must be a list of ints of length 3. Got {mapping["coords"]} instead'
 			assert 'functions' in mapping, 'functions must be present in multiblock'
-			mapping['functions'].commit(feature_set)
+			mapping['functions'].commit(feature_set, parents)
 
-	def to_object(self) -> dict:
+	def save(self, parents: list) -> dict:
 		data = copy.deepcopy(self._function)
 		for option in data['options']:
-			option['functions'] = option['functions'].to_object()
+			option['functions'] = option['functions'].save(parents)
 		return data

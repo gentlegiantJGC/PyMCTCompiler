@@ -19,41 +19,41 @@ class MapNBT(BaseTranslationFunction):
 			data['options']['default'] = FunctionList(data['options']['default'])
 		BaseTranslationFunction.__init__(self, data)
 
-	def _primitive_extend(self, other: BaseTranslationFunction):
+	def _primitive_extend(self, other: BaseTranslationFunction, parents: list):
 		"""Used to merge two primitive files together.
 		The formats do not need to be identical but close enough that the data can stack."""
 		if 'cases' in other['options']:
 			self['options'].setdefault('cases', {})
 			for key, val in other['options']['cases'].items():
 				if key in self['options']['cases']:
-					self['options']['cases'][key].extend(val)
+					self['options']['cases'][key].extend(val, parents)
 				else:
 					self['options']['cases'][key] = val
 
 		if 'default' in other['options']:
 			self['options'].setdefault('default', [])
-			self['options']['default'].extend(other['options']['default'])
+			self['options']['default'].extend(other['options']['default'], parents)
 
-	def _compiled_extend(self, other: BaseTranslationFunction):
+	def _compiled_extend(self, other: BaseTranslationFunction, parents: list):
 		"""Used to merge two completed translations together.
 		The formats must match in such a way that the two base translations do not interfere."""
 		assert self['options'] == other['options'], '"map_nbt" must be the same when merging'
 
-	def _commit(self, feature_set: Set[str]):
+	def _commit(self, feature_set: Set[str], parents: list):
 		if 'cases' in self['options']:
 			assert isinstance(self['options']['cases'], dict), 'map_nbt cases must be a dictionary if present'
 			for key, val in self['options']['cases'].items():
 				assert isinstance(key, str), 'map_nbt "cases" keys must be SNBT'
-				val.commit(feature_set)
+				val.commit(feature_set, parents)
 
 		if 'default' in self['options']:
-			self['options']['default'].commit(feature_set)
+			self['options']['default'].commit(feature_set, parents)
 
-	def to_object(self) -> dict:
+	def save(self, parents: list) -> dict:
 		data = copy.deepcopy(self._function)
 		if 'cases' in data['options']:
 			for key, val in data['options']['cases'].items():
-				data['options']['cases'][key] = val.to_object()
+				data['options']['cases'][key] = val.save(parents)
 		if 'default' in data['options']:
-			data['options']['default'] = data['options']['default'].to_object()
+			data['options']['default'] = data['options']['default'].save(parents)
 		return data
