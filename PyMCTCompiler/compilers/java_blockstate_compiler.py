@@ -4,7 +4,6 @@ from .base_compiler import BaseCompiler
 import PyMCTCompiler
 from PyMCTCompiler import primitives
 from PyMCTCompiler.disk_buffer import disk_buffer
-from PyMCTCompiler.helpers import log_to_file
 from PyMCTCompiler.helpers import blocks_from_server, load_json_file
 from PyMCTCompiler.translation_functions import FunctionList
 
@@ -16,13 +15,13 @@ class JavaBlockstateCompiler(BaseCompiler):
     def _build_blocks(self):
         blocks_from_server(self.version_name, [str(v) for v in self.version])
 
-        if os.path.isfile(os.path.join(PyMCTCompiler.path, 'version_compiler', version_name, 'generated', 'reports', 'blocks.json')):
+        if os.path.isfile(os.path.join(PyMCTCompiler.path, 'version_compiler', self.version_name, 'generated', 'reports', 'blocks.json')):
             waterlogable = []
             add = {}
             remove = {}
             for (namespace, sub_name), block_data in self.blocks.items():
                 remove.setdefault(namespace, set())
-                add.setdefault((namespace, sub_name), set())
+                add.setdefault((namespace, sub_name), {})
                 for block_base_name, primitive_data in block_data.items():
                     if primitive_data is None:
                         continue
