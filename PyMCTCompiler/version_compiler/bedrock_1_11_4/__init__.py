@@ -1,14 +1,9 @@
-from PyMCTCompiler.compilers import numerical_compiler
+from PyMCTCompiler.compilers.numerical_compiler import NumericalCompiler
+import os
 
-init = {
-	"block_format": "pseudo-numerical",
-	"block_entity_format": "str-id",
-	"block_entity_coord_format": "xyz-int",
-	"entity_format": "namespace-str-id",
-	"entity_coord_format": "Pos-list-float",
-	"platform": "bedrock",
-	"version": [1, 11, 4]
-}
-compiler = numerical_compiler.main
-
-parent_version = 'bedrock_1_7_0'
+compiler = NumericalCompiler(
+    os.path.dirname(__file__),
+    entity_format="namespace-str-id",
+    version=[1, 7, 0],
+    parent_version='bedrock_1_7_0'
+)
