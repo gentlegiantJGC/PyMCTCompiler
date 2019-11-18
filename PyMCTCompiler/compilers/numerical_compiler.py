@@ -1,3 +1,6 @@
+import os
+import json
+
 from .base_compiler import BaseCompiler
 from PyMCTCompiler import primitives
 from PyMCTCompiler.disk_buffer import disk_buffer
@@ -5,6 +8,33 @@ from PyMCTCompiler.helpers import log_to_file
 
 
 class NumericalCompiler(BaseCompiler):
+    def __init__(self, *args, **kwargs):
+        BaseCompiler.__init__(self, *args, **kwargs)
+        self._numerical_block_map = None
+
+    def build(self):
+        BaseCompiler.build(self)
+        self._save_numerical_block_map()
+
+    @property
+    def numerical_block_map(self):
+        if self._numerical_block_map is None:
+            self._load_from_parent('numerical_block_map', {})
+
+        with open(os.path.join(self._directory, '__numerical_block_map__.json')) as f:
+            numerical_block_map = json.load(f)
+
+        for string_block_id, numerical_block_id in numerical_block_map:
+            if numerical_block_id is None and string_block_id in self._numerical_block_map:
+                del self._numerical_block_map[string_block_id]
+            else:
+                self._numerical_block_map[string_block_id] = numerical_block_id
+
+        return self._numerical_block_map
+
+    def _save_numerical_block_map(self):
+        disk_buffer.save_json_object(('versions', self.version_name, '__numerical_block_map__'), self.numerical_block_map)
+
     @staticmethod
     def _save_data(version_type, universal_type, data, version_name, file_format, namespace, sub_name, block_file_name, prefix):
         assert universal_type in ('block', 'entity'), f'Universal type "{universal_type}" is not known'
