@@ -68,7 +68,7 @@ class BaseCompiler:
         return self._load_from_parent('platform')
 
     @property
-    def version(self) -> Tuple[int, int, int]:
+    def version(self) -> List[int]:
         return self._load_from_parent('version')
 
     def _load_property_from_parent(self, attr: str):
@@ -169,9 +169,9 @@ class BaseCompiler:
 
     def _build_biomes(self):
         biomes = {
-            "int_map": {biome_name: biome_data[0] for biome_name, biome_data in self._biomes['biomes']},
-            "version2universal": {biome_name: biome_data[1] for biome_name, biome_data in self._biomes['biomes']},
-            "universal2version": {biome_data[1]: biome_name for biome_name, biome_data in self._biomes['biomes']}
+            "int_map": {biome_name: biome_data[0] for biome_name, biome_data in self.biomes['biomes']},
+            "version2universal": {biome_name: biome_data[1] for biome_name, biome_data in self.biomes['biomes']},
+            "universal2version": {biome_data[1]: biome_name for biome_name, biome_data in self.biomes['biomes']}
         }
         for universal_biome, version_biome in self._biomes['universal_remap'].items():
             if universal_biome not in biomes["universal2version"]:

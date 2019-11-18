@@ -15,7 +15,7 @@ class NumericalCompiler(BaseCompiler):
             disk_buffer.add_translation_from_universal(version_name, universal_type, file_format, namespace_, sub_name, block_name, block_data)
 
     def _build_blocks(self):
-        for (namespace, sub_name), block_data in self._blocks.items():
+        for (namespace, sub_name), block_data in self.blocks.items():
             for block_base_name, primitive_data in block_data.items():
                 if primitive_data is None:
                     continue
@@ -34,7 +34,7 @@ class NumericalCompiler(BaseCompiler):
                     self._save_data('block', 'block', block_primitive_file, self.version_name, file_format, namespace, sub_name, block_base_name, prefix)
 
     def _build_entities(self):
-        for (namespace, sub_name), entity_data in self._entities.items():
+        for (namespace, sub_name), entity_data in self.entities.items():
             for entity_base_name, primitive_data in entity_data.items():
                 if primitive_data is None:
                     continue
@@ -42,7 +42,7 @@ class NumericalCompiler(BaseCompiler):
                 entity_primitive_file = primitives.get_entity(primitive_data)
 
                 for key in ('specification', 'to_universal', 'from_universal'):
-                    assert key in entity_primitive_file, f'Key {key} must be defined'
+                    assert key in entity_primitive_file, f'Key {key} must be defined. Was missing for {self.version_name} {namespace}:{entity_base_name}'
                     assert isinstance(entity_primitive_file[key], dict), f'Key {key} must be a dictionary'
 
                 for key in ('blockstate_specification', 'blockstate_to_universal', 'blockstate_from_universal'):
