@@ -25,7 +25,7 @@ class UniversalCompiler(BaseCompiler):
 	def _build_blocks(self):
 		blocks_from_server(self._directory, [str(v) for v in self.version])
 
-		if os.path.isfile(os.path.join(PyMCTCompiler.path, 'version_compiler', self.version_name, 'generated', 'reports', 'blocks.json')):
+		if os.path.isfile(os.path.join(self._directory, 'generated', 'reports', 'blocks.json')):
 			waterlogable = []
 			add = {}
 			remove = {}
@@ -41,7 +41,7 @@ class UniversalCompiler(BaseCompiler):
 							add[(namespace, sub_name)][key] = val
 
 			# load the block list the server created
-			blocks: dict = load_json_file(os.path.join(PyMCTCompiler.path, 'version_compiler', self.version_name, 'generated', 'reports', 'blocks.json'))
+			blocks: dict = load_json_file(os.path.join(self._directory, 'generated', 'reports', 'blocks.json'))
 
 			for block_string, states in blocks.items():
 				namespace, block_name = block_string.split(':', 1)

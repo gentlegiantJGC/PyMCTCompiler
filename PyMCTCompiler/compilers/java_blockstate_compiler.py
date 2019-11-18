@@ -15,7 +15,7 @@ class JavaBlockstateCompiler(BaseCompiler):
     def _build_blocks(self):
         blocks_from_server(self._directory, [str(v) for v in self.version])
 
-        if os.path.isfile(os.path.join(PyMCTCompiler.path, 'version_compiler', self.version_name, 'generated', 'reports', 'blocks.json')):
+        if os.path.isfile(os.path.join(self._directory, 'generated', 'reports', 'blocks.json')):
             waterlogable = []
             add = {}
             remove = {}
