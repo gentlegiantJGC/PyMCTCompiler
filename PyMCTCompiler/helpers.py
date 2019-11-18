@@ -72,14 +72,13 @@ def unique_merge_lists(list_a: list, list_b: list) -> list:
 	return merged_list
 
 
-def blocks_from_server(version_name: str, version_str: List[str] = None):
-	uncompiled_path = os.path.join(PyMCTCompiler.path, 'version_compiler')
-	if not os.path.isfile(f'{uncompiled_path}/{version_name}/generated/reports/blocks.json'):
-		if not os.path.isfile(f'{uncompiled_path}/{version_name}/server.jar'):
-			download_server_jar(f'{uncompiled_path}/{version_name}', version_str)
+def blocks_from_server(version_path: str, version_str: List[str] = None):
+	if not os.path.isfile(f'{version_path}/generated/reports/blocks.json'):
+		if not os.path.isfile(f'{version_path}/server.jar'):
+			download_server_jar(f'{version_path}', version_str)
 		# try and find a version of java with which to extract the blocks.json file
 		try:
-			os.system(f'java -cp {uncompiled_path}/{version_name}/server.jar net.minecraft.data.Main --reports --output {uncompiled_path}/{version_name}/generated')
+			os.system(f'java -cp {version_path}/server.jar net.minecraft.data.Main --reports --output {version_path}/generated')
 		except:
 			print('Could not find global Java. Trying to find the one packaged with Minecraft')
 			if os.path.isdir(r'C:\Program Files (x86)\Minecraft\runtime'):
@@ -95,7 +94,7 @@ def blocks_from_server(version_name: str, version_str: List[str] = None):
 					break
 			if java_path is not None:
 				try:
-					os.system(f'{java_path} -cp {uncompiled_path}/{version_name}/server.jar net.minecraft.data.Main --reports --output {uncompiled_path}/{version_name}/generated')
+					os.system(f'{java_path} -cp {version_path}/server.jar net.minecraft.data.Main --reports --output {version_path}/generated')
 				except Exception as e:
 					raise Exception(f'This failed for some reason\n{e}')
 
