@@ -22,8 +22,6 @@ class NumericalCompiler(BaseCompiler):
 
                 block_primitive_file = primitives.get_block(self.primitive_block_format, primitive_data)
 
-                universal_type = block_primitive_file.get('universal_type', 'block')
-
                 for prefix in ('blockstate_', ''):
                     assert f'{prefix}to_universal' in block_primitive_file, f'Key to_universal must be defined'
                     assert f'{prefix}from_universal' in block_primitive_file, f'Key from_universal must be defined'
@@ -33,7 +31,7 @@ class NumericalCompiler(BaseCompiler):
                 for file_format in ('numerical', 'blockstate'):
                     prefix = 'blockstate_' if file_format == 'blockstate' else ''
                     block_primitive_file.setdefault(f'{prefix}specification', default_spec[file_format])
-                    self._save_data('block', universal_type, block_primitive_file, self.version_name, file_format, namespace, sub_name, block_base_name, prefix)
+                    self._save_data('block', 'block', block_primitive_file, self.version_name, file_format, namespace, sub_name, block_base_name, prefix)
 
     def _build_entities(self):
         for (namespace, sub_name), entity_data in self._entities.items():
@@ -43,30 +41,13 @@ class NumericalCompiler(BaseCompiler):
 
                 entity_primitive_file = primitives.get_entity(primitive_data)
 
-                universal_type = entity_primitive_file.get('universal_type', 'entity')
-
                 for key in ('specification', 'to_universal', 'from_universal'):
                     assert key in entity_primitive_file, f'Key {key} must be defined'
                     assert isinstance(entity_primitive_file[key], dict), f'Key {key} must be a dictionary'
 
-                if universal_type == 'entity':
-                    for key in ('blockstate_specification', 'blockstate_to_universal', 'blockstate_from_universal'):
-                        if key in entity_primitive_file:
-                            log_to_file(f'{self.version_name}/entity/blockstate/{key}/{namespace}/{sub_name}/{entity_base_name}.json uses numerical as blockstate but {key} is present')
+                for key in ('blockstate_specification', 'blockstate_to_universal', 'blockstate_from_universal'):
+                    if key in entity_primitive_file:
+                        log_to_file(f'{self.version_name}/entity/blockstate/{key}/{namespace}/{sub_name}/{entity_base_name}.json uses numerical as blockstate but {key} is present')
 
-                    for file_format in ('numerical', 'blockstate'):
-                        self._save_data('entity', universal_type, entity_primitive_file, self.version_name, file_format, namespace, sub_name, entity_base_name, '')
-
-                elif universal_type == 'block':
-                    for key in ('blockstate_to_universal', 'blockstate_from_universal'):
-                        assert key in entity_primitive_file, f'Key {key} must be defined'
-                        assert isinstance(entity_primitive_file[key], dict), f'Key {key} must be a dictionary'
-
-                    if 'blockstate_specification' in entity_primitive_file:
-                        log_to_file(f'{self.version_name}/entity/blockstate/specification/{namespace}/{sub_name}/{entity_base_name}.json uses specification as blockstate_specification but blockstate_specification is present')
-
-                    for file_format in ('numerical', 'blockstate'):
-                        prefix = 'blockstate_' if file_format == 'blockstate' else ''
-                        self._save_data('entity', universal_type, entity_primitive_file, self.version_name, file_format, namespace, sub_name, entity_base_name, prefix)
-                else:
-                    raise Exception(f'Universal type "{universal_type}" is not known')
+                for file_format in ('numerical', 'blockstate'):
+                    self._save_data('entity', 'entity', entity_primitive_file, self.version_name, file_format, namespace, sub_name, entity_base_name, '')
