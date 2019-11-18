@@ -35,9 +35,9 @@ class BaseCompiler:
         self._loaded_parent = False
         self._parent: Union[BaseCompiler, None] = None
 
-        self._blocks: Dict[Tuple[str, str], Dict[str, List[str]]] = {}
-        self._entities: Dict[Tuple[str, str], Dict[str, List[str]]] = {}
-        self._biomes = {}
+        self._blocks: Dict[Tuple[str, str], Dict[str, List[str]]] = None
+        self._entities: Dict[Tuple[str, str], Dict[str, List[str]]] = None
+        self._biomes = None
 
     @property
     def block_format(self) -> str:
@@ -45,7 +45,7 @@ class BaseCompiler:
 
     @property
     def primitive_block_format(self) -> str:
-        return 'numerical' if self.block_format == 'psudo-numerical' else self.block_format
+        return 'numerical' if self.block_format == 'pseudo-numerical' else self.block_format
 
     @property
     def block_entity_format(self) -> str:
@@ -90,8 +90,8 @@ class BaseCompiler:
     def _load_parent(self):
         if not self._loaded_parent:
             if self._parent_name is not None:
-                if hasattr(version_compiler, self._parent_name):
-                    self._parent = getattr(version_compiler, self._parent_name)
+                if hasattr(version_compiler, self._parent_name) and hasattr(getattr(version_compiler, self._parent_name), 'compiler'):
+                    self._parent = getattr(version_compiler, self._parent_name).compiler
                 else:
                     log_to_file(f'Could not find version {self._parent_name}')
             self._loaded_parent = True
@@ -116,7 +116,10 @@ class BaseCompiler:
 
     def _load_dictionary_data_from_parent(self, attr: str):
         if getattr(self, f'_{attr}') is None:
-            self._load_from_parent(attr, {})
+            if os.path.isfile(os.path.join(self._directory, f'__{attr}_clean_slate_protocol__')):
+                setattr(self, f'_{attr}', {})
+            else:
+                self._load_from_parent(attr, {})
 
             for include_file in glob.iglob(os.path.join(self._modifications_prefix(), '*', '*', f'__include_{attr}__.json')):
                 namespace, sub_name = include_file.split(os.sep)[-3:-1]
@@ -153,11 +156,11 @@ class BaseCompiler:
             for biome in biome_data['remove']:
                 del self._biomes['biomes'][biome]
 
-            for biome, data in biome_data['add']['biomes']:
-                self._biomes['add']['biomes'][biome] = data
+            for biome, data in biome_data['add']['biomes'].items():
+                self._biomes['biomes'][biome] = data
 
-            for biome, data in biome_data['add']['universal_remap']:
-                self._biomes['add']['universal_remap'][biome] = data
+            for biome, data in biome_data['add']['universal_remap'].items():
+                self._biomes['universal_remap'][biome] = data
 
         return self._biomes
 
@@ -175,9 +178,9 @@ class BaseCompiler:
 
     def _build_biomes(self):
         biomes = {
-            "int_map": {biome_name: biome_data[0] for biome_name, biome_data in self.biomes['biomes']},
-            "version2universal": {biome_name: biome_data[1] for biome_name, biome_data in self.biomes['biomes']},
-            "universal2version": {biome_data[1]: biome_name for biome_name, biome_data in self.biomes['biomes']}
+            "int_map": {biome_name: biome_data[0] for biome_name, biome_data in self.biomes['biomes'].items()},
+            "version2universal": {biome_name: biome_data[1] for biome_name, biome_data in self.biomes['biomes'].items()},
+            "universal2version": {biome_data[1]: biome_name for biome_name, biome_data in self.biomes['biomes'].items()}
         }
         for universal_biome, version_biome in self._biomes['universal_remap'].items():
             if universal_biome not in biomes["universal2version"]:

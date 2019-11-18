@@ -3,7 +3,8 @@ import traceback
 
 import PyMCTCompiler
 from .base_compiler import BaseCompiler
-from PyMCTCompiler import primitives, disk_buffer
+from PyMCTCompiler import primitives
+from PyMCTCompiler.disk_buffer import disk_buffer
 from PyMCTCompiler.helpers import log_to_file, load_json_file
 
 """

@@ -1,7 +1,7 @@
 from typing import Set, List
 import copy
 from PyMCTCompiler.translation_functions import BaseTranslationFunction, FunctionList
-from PyMCTCompiler import disk_buffer
+from PyMCTCompiler.disk_buffer import disk_buffer
 
 
 class NestedTranslation(BaseTranslationFunction):

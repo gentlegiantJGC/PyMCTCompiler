@@ -1,8 +1,9 @@
 import os
+import glob
+import json
 
 from .base_compiler import BaseCompiler
-import PyMCTCompiler
-from PyMCTCompiler import disk_buffer
+from PyMCTCompiler.disk_buffer import disk_buffer
 from PyMCTCompiler.helpers import blocks_from_server, load_json_file
 
 """
@@ -19,8 +20,19 @@ class UniversalCompiler(BaseCompiler):
 	def _modifications_prefix(self):
 		return os.path.join(self._directory, 'modifications')
 
-	def _build_biomes(self):
-		pass
+	@property
+	def blocks(self):
+		if self._blocks is None:
+			self._blocks = {}
+			for include_file in glob.iglob(os.path.join(self._modifications_prefix(), '*', '*', '*.json')):
+				namespace, sub_name = include_file.split(os.sep)[-3:-1]
+				with open(include_file) as f:
+					include_file_data = json.load(f)
+				assert isinstance(include_file_data, dict)
+
+				self._blocks.setdefault((namespace, sub_name), []).append(include_file_data)
+
+		return self._blocks
 
 	def _build_blocks(self):
 		blocks_from_server(self._directory, [str(v) for v in self.version])
@@ -32,7 +44,7 @@ class UniversalCompiler(BaseCompiler):
 			for (namespace, sub_name), block_data in self.blocks.items():
 				remove.setdefault(namespace, [])
 				add.setdefault((namespace, sub_name), {})
-				for block_base_name, json_object in block_data.items():
+				for json_object in block_data:
 					remove[namespace] += json_object.get("remove", [])
 					if 'add' in json_object:
 						for key, val in json_object["add"].items():
@@ -71,4 +83,7 @@ class UniversalCompiler(BaseCompiler):
 			raise Exception(f'Could not find {self.version_name}/generated/reports/blocks.json')
 
 	def _build_entities(self):
+		pass
+
+	def _build_biomes(self):
 		pass

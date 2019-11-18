@@ -20,7 +20,8 @@ def build(compiled_dir_):
 	t2 = time.time()
 	# delete the mappings folder
 	log_to_file('Deleting the mapping directory ...')
-	shutil.rmtree(compiled_dir)
+	if os.path.exists(compiled_dir):
+		shutil.rmtree(compiled_dir)
 	if os.path.isdir(compiled_dir):
 		raise Exception(f'Failed to delete "{compiled_dir}" for some reason')
 	log_to_file('\tFinished deleting the mapping directory')
@@ -30,11 +31,12 @@ def build(compiled_dir_):
 
 	vc_dir = os.path.join(os.path.dirname(__file__), 'version_compiler')
 	for version_name in os.listdir(vc_dir):
-		if hasattr(version_compiler, version_name) and hasattr(getattr(version_compiler, version_name), 'compiler'):
-			versions[version_name] = getattr(version_compiler, version_name).compiler
-			versions[version_name].version_name = version_name
-		else:
-			log_to_file(f'Could not find compiler for {version_name} This version has been skipped')
+		if os.path.isdir(os.path.join(vc_dir, version_name)):
+			if hasattr(version_compiler, version_name) and hasattr(getattr(version_compiler, version_name), 'compiler'):
+				versions[version_name] = getattr(version_compiler, version_name).compiler
+				versions[version_name].version_name = version_name
+			else:
+				log_to_file(f'Could not find compiler for {version_name} This version has been skipped')
 
 	# iterate through all versions in the uncompiled directory
 	for version_name, compiler in sorted(versions.items(), key=lambda x: (x[1].platform, x[1].version)):

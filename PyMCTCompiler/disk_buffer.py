@@ -1,10 +1,11 @@
 import os
 import json
 from concurrent.futures import ThreadPoolExecutor
-from typing import Dict, Union, Tuple, Set
+from typing import Dict, Union, Tuple, Set, TYPE_CHECKING
 
 import PyMCTCompiler
-from PyMCTCompiler.translation_functions import FunctionList
+if TYPE_CHECKING:
+	from PyMCTCompiler.translation_functions import FunctionList
 from PyMCTCompiler.helpers import log_to_file
 
 
@@ -17,7 +18,7 @@ def save_json_file(path, data):
 class DiskBuffer:
 	def __init__(self):
 		self._specification: Dict[Tuple[str, str, str, str, str, str], dict] = {}
-		self._translations: Dict[str, Dict[Tuple[str, str, str, str, str, str], FunctionList]] = {
+		self._translations: Dict[str, Dict[Tuple[str, str, str, str, str, str], 'FunctionList']] = {
 			"to_universal": {},
 			"from_universal": {}
 		}
@@ -47,14 +48,14 @@ class DiskBuffer:
 	def has_specification(self, version_name: str, object_type: str, version_format: str, namespace: str, group_name: str, base_name: str) -> bool:
 		return ('versions', version_name, object_type, version_format, "specification", namespace, group_name, base_name) in self._files_to_save
 
-	def add_translation_to_universal(self, version_name: str, object_type: str, version_format: str, namespace: str, group_name: str, base_name: str, data: FunctionList):
+	def add_translation_to_universal(self, version_name: str, object_type: str, version_format: str, namespace: str, group_name: str, base_name: str, data: 'FunctionList'):
 		"""add a translation file from version to universal format to the disk buffer to be saved at the end"""
 		self._translations["to_universal"][(version_name, object_type, version_format, namespace, group_name, base_name)] = data
 		
 	def has_translation_to_universal(self, version_name: str, object_type: str, version_format: str, namespace: str, group_name: str, base_name: str) -> bool:
 		return (version_name, object_type, version_format, namespace, group_name, base_name) in self._translations["to_universal"]
 
-	def add_translation_from_universal(self, version_name: str, object_type: str, version_format: str, namespace: str, group_name: str, base_name: str, data: FunctionList):
+	def add_translation_from_universal(self, version_name: str, object_type: str, version_format: str, namespace: str, group_name: str, base_name: str, data: 'FunctionList'):
 		"""add a translation file from universal to version format to the disk buffer to be saved at the end.
 		If something already exists here it will be merged.
 		:param version_name: 'bedrock_1_13_0'
