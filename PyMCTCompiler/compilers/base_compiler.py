@@ -41,7 +41,7 @@ class BaseCompiler:
 
     @property
     def block_format(self) -> str:
-        return self._load_from_parent('block_format')
+        return self._load_property_from_parent('block_format')
 
     @property
     def primitive_block_format(self) -> str:
@@ -49,37 +49,43 @@ class BaseCompiler:
 
     @property
     def block_entity_format(self) -> str:
-        return self._load_from_parent('block_entity_format')
+        return self._load_property_from_parent('block_entity_format')
 
     @property
     def block_entity_coord_format(self) -> str:
-        return self._load_from_parent('block_entity_coord_format')
+        return self._load_property_from_parent('block_entity_coord_format')
 
     @property
     def entity_format(self) -> str:
-        return self._load_from_parent('entity_format')
+        return self._load_property_from_parent('entity_format')
 
     @property
     def entity_coord_format(self) -> str:
-        return self._load_from_parent('entity_coord_format')
+        return self._load_property_from_parent('entity_coord_format')
 
     @property
     def platform(self) -> str:
-        return self._load_from_parent('platform')
+        return self._load_property_from_parent('platform')
 
     @property
     def version(self) -> List[int]:
-        return self._load_from_parent('version')
+        return self._load_property_from_parent('version')
 
     def _load_property_from_parent(self, attr: str):
         if getattr(self, f'_{attr}') is None:
-            setattr(self, f'_{attr}', self._load_from_parent(attr))
+            return self._load_from_parent(attr)
         return getattr(self, f'_{attr}')
 
-    def _load_from_parent(self, attr: str):
+    def _load_from_parent(self, attr: str, default=None):
         self._load_parent()
         if self._parent is not None:
-            return copy.deepcopy(getattr(self._parent, attr))
+            data = copy.deepcopy(getattr(self._parent, attr))
+            if data is None:
+                data = default
+        else:
+            data = default
+        setattr(self, f'_{attr}', data)
+        return data
 
     def _load_parent(self):
         if not self._loaded_parent:
@@ -91,7 +97,7 @@ class BaseCompiler:
             self._loaded_parent = True
 
     @property
-    def init(self):
+    def _init(self):
         return {
             "block_format": self.block_format,
             "block_entity_format": self.block_entity_format,
@@ -102,14 +108,15 @@ class BaseCompiler:
             "version": self.version,
         }
 
+    def _save_init(self):
+        disk_buffer.save_json_object(('versions', self.version_name, '__init__'), self._init)
+
     def _modifications_prefix(self):
         return self._directory
 
     def _load_dictionary_data_from_parent(self, attr: str):
         if getattr(self, f'_{attr}') is None:
-            setattr(self, f'_{attr}', self._load_from_parent(attr))
-            if getattr(self, f'_{attr}') is None:
-                setattr(self, f'_{attr}', {})
+            self._load_from_parent(attr, {})
 
             for include_file in glob.iglob(os.path.join(self._modifications_prefix(), '*', '*', f'__include_{attr}__.json')):
                 namespace, sub_name = include_file.split(os.sep)[-3:-1]
@@ -135,12 +142,10 @@ class BaseCompiler:
     @property
     def biomes(self):
         if self._biomes is None:
-            self._biomes = self._load_from_parent('biomes')
-            if self._biomes is None:
-                self._biomes = {
-                    "biomes": {},
-                    "universal_remap": {}
-                }
+            self._load_from_parent('biomes', {
+                "biomes": {},
+                "universal_remap": {}
+            })
 
             with open(os.path.join(self._directory, '__biome_data__.json')) as f:
                 biome_data = json.load(f)
@@ -160,6 +165,7 @@ class BaseCompiler:
         self._build_blocks()
         self._build_entities()
         self._build_biomes()
+        self._save_init()
 
     def _build_blocks(self):
         raise NotImplementedError
