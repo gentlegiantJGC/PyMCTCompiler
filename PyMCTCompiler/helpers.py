@@ -1,5 +1,5 @@
 import os
-from typing import Union
+from typing import Union, List
 from urllib.request import urlopen
 import json
 import amulet_nbt
@@ -72,7 +72,7 @@ def unique_merge_lists(list_a: list, list_b: list) -> list:
 	return merged_list
 
 
-def blocks_from_server(version_name: str, version_str: str = None):
+def blocks_from_server(version_name: str, version_str: List[str] = None):
 	uncompiled_path = os.path.join(PyMCTCompiler.path, 'version_compiler')
 	if not os.path.isfile(f'{uncompiled_path}/{version_name}/generated/reports/blocks.json'):
 		if not os.path.isfile(f'{uncompiled_path}/{version_name}/server.jar'):
@@ -100,11 +100,12 @@ def blocks_from_server(version_name: str, version_str: str = None):
 					raise Exception(f'This failed for some reason\n{e}')
 
 
-def download_server_jar(path: str, version_str: str = None):
+def download_server_jar(path: str, version_str: List[str] = None):
 	manifest = json.load(urlopen('https://launchermeta.mojang.com/mc/game/version_manifest.json'))
 	if version_str is None:
-		version_str = manifest['latest']['release']
-	version = next((v for v in manifest['versions'] if v['id'] == version_str), None)
+		version_str = manifest['latest']['release'].split('.')
+	version_str = version_str + ['0'] * (4 - len(version_str))
+	version = next((v for v in manifest['versions'] if v['id'].split('.') + ['0'] * (4 - len(v['id'].split('.'))) == version_str), None)
 	if version is None:
 		raise Exception(f'Could not find version "{version_str}"')
 	version_manifest = json.load(urlopen(version['url']))
@@ -115,5 +116,3 @@ def download_server_jar(path: str, version_str: str = None):
 			f.write(server)
 	else:
 		raise Exception(f'Could not find server for version "{version_str}"')
-
-from PyMCTCompiler.translation_functions import FunctionList
