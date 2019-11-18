@@ -1,12 +1,9 @@
-from PyMCTCompiler.compilers import java_blockstate_compiler
+from PyMCTCompiler.compilers.java_blockstate_compiler import JavaBlockstateCompiler
+import os
 
-init = {
-	"block_format": "blockstate",
-	"block_entity_format": "namespace-str-id",
-	"block_entity_coord_format": "xyz-int",
-	"entity_format": "namespace-str-id",
-	"entity_coord_format": "Pos-list-float",
-	"platform": "java",
-	"version": [1, 13, 0]
-}
-compiler = java_blockstate_compiler.main
+compiler = JavaBlockstateCompiler(
+    os.path.dirname(__file__),
+    block_format="blockstate",
+    version=[1, 13, 0],
+    parent_version='java_1_12_2'
+)
