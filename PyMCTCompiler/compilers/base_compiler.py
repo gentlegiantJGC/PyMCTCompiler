@@ -102,13 +102,16 @@ class BaseCompiler:
             "version": self.version,
         }
 
+    def _modifications_prefix(self):
+        return self._directory
+
     def _load_dictionary_data_from_parent(self, attr: str):
         if getattr(self, f'_{attr}') is None:
             setattr(self, f'_{attr}', self._load_from_parent(attr))
             if getattr(self, f'_{attr}') is None:
                 setattr(self, f'_{attr}', {})
 
-            for include_file in glob.iglob(os.path.join(self._directory, '*', '*', f'__include_{attr}__.json')):
+            for include_file in glob.iglob(os.path.join(self._modifications_prefix(), '*', '*', f'__include_{attr}__.json')):
                 namespace, sub_name = include_file.split(os.sep)[-3:-1]
                 with open(include_file) as f:
                     include_file_data = json.load(f)
