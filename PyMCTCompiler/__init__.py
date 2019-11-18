@@ -9,7 +9,8 @@ from PyMCTCompiler import version_compiler
 from PyMCTCompiler.helpers import log_to_file
 from PyMCTCompiler.disk_buffer import disk_buffer
 
-fixed_compiled_dir = './compiled_json'
+compiled_dir = './compiled_json'
+path = os.path.dirname(__file__)
 
 
 def build(compiled_dir_):
