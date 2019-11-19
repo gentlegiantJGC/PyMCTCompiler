@@ -9,6 +9,7 @@ compiler = NumericalCompiler(
     entity_format="namespace-str-id",
     entity_coord_format="Pos-list-float",
     platform="java",
-    version=[1, 12, 2]
+    version=[1, 12, 2],
+    data_version=1343
 )
 

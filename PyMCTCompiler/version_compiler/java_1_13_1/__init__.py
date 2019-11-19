@@ -5,5 +5,6 @@ compiler = JavaBlockstateCompiler(
     os.path.dirname(__file__),
     block_format="blockstate",
     version=[1, 13, 1],
-    parent_version='java_1_13_0'
+    parent_version='java_1_13_0',
+    data_version=1628
 )

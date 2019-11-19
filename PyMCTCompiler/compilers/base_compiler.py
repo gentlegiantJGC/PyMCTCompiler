@@ -18,7 +18,8 @@ class BaseCompiler:
                  entity_format=None,
                  entity_coord_format=None,
                  platform=None,
-                 version=None
+                 version=None,
+                 data_version=None
                  ):
         self._directory = directory
 
@@ -29,6 +30,7 @@ class BaseCompiler:
         self._entity_coord_format = entity_coord_format  # "Pos-list-float",
         self._platform = platform  # "java", "bedrock", "universal"
         self._version = version
+        self._data_version = data_version
         self._parent_name = parent_version
         self.version_name = None
 
@@ -69,7 +71,7 @@ class BaseCompiler:
 
     @property
     def version(self) -> List[int]:
-        return self._load_property_from_parent('version')
+        return self._version
 
     def _load_property_from_parent(self, attr: str):
         if getattr(self, f'_{attr}') is None:
@@ -97,8 +99,8 @@ class BaseCompiler:
             self._loaded_parent = True
 
     @property
-    def _init(self):
-        return {
+    def _init(self) -> dict:
+        init = {
             "block_format": self.block_format,
             "block_entity_format": self.block_entity_format,
             "block_entity_coord_format": self.block_entity_coord_format,
@@ -107,6 +109,10 @@ class BaseCompiler:
             "platform": self.platform,
             "version": self.version,
         }
+        if self.platform == 'java':
+            init['data_version'] = self._data_version
+        assert all(val is not None for val in init.values())
+        return init
 
     def _save_init(self):
         disk_buffer.save_json_object(('versions', self.version_name, '__init__'), self._init)
