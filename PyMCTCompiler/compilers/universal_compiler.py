@@ -85,5 +85,18 @@ class UniversalCompiler(BaseCompiler):
 	def _build_entities(self):
 		pass
 
+	@property
+	def biomes(self):
+		if self._biomes is None:
+			with open(os.path.join(self._directory, '__biome_data__.json')) as f:
+				self._biomes = json.load(f)
+
+		return self._biomes
+
 	def _build_biomes(self):
-		pass
+		biomes = {
+			"int_map": {biome_name: None for biome_name in self.biomes},
+			"version2universal": {},
+			"universal2version": {}
+		}
+		disk_buffer.save_json_object(('versions', self.version_name, '__biome_data__'), biomes)
