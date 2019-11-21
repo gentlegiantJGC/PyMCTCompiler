@@ -33,7 +33,7 @@ class JavaBlockstateCompiler(BaseCompiler):
 
             # unpack all the default states from blocks.json and create direct mappings unless that block is in the modifications
             for block_string, states in blocks.items():
-                namespace, block_name = block_string.split(':', 1)
+                namespace, block_base_name = block_string.split(':', 1)
 
                 default_state = next(s for s in states['states'] if s.get('default', False))
 
@@ -45,8 +45,8 @@ class JavaBlockstateCompiler(BaseCompiler):
                         del states['properties']['waterlogged']
                         del states['defaults']['waterlogged']
                 del states['states']
-                disk_buffer.add_specification(self.version_name, 'block', 'blockstate', namespace, 'vanilla', block_name, states)
-                if not (namespace in remove and block_name in remove[namespace]):
+                disk_buffer.add_specification(self.version_name, 'block', 'blockstate', namespace, 'vanilla', block_base_name, states)
+                if not (namespace in remove and block_base_name in remove[namespace]):
                     # the block is not marked for removal
 
                     if 'properties' in default_state:
@@ -84,33 +84,43 @@ class JavaBlockstateCompiler(BaseCompiler):
                             }
                         ], True)
 
-                    disk_buffer.add_translation_to_universal(self.version_name, 'block', 'blockstate', namespace, 'vanilla', block_name, to_universal)
-                    disk_buffer.add_translation_from_universal(self.version_name, 'block', 'blockstate', f'universal_{namespace}', 'vanilla', block_name, from_universal)
+                    disk_buffer.add_translation_to_universal(self.version_name, 'block', 'blockstate', namespace, 'vanilla', block_base_name, to_universal)
+                    disk_buffer.add_translation_from_universal(self.version_name, 'block', 'blockstate', f'universal_{namespace}', 'vanilla', block_base_name, from_universal)
 
             # add in the modifications for blocks
             for namespace, sub_name in add:
-                for block_name, block_data in add[(namespace, sub_name)].items():
+                for block_base_name, block_data in add[(namespace, sub_name)].items():
 
-                    if disk_buffer.has_translation_to_universal(self.version_name, 'block', 'blockstate', namespace, sub_name, block_name):
-                        print(f'"{block_name}" is already present.')
+                    if disk_buffer.has_translation_to_universal(self.version_name, 'block', 'blockstate', namespace, sub_name, block_base_name):
+                        print(f'"{block_base_name}" is already present.')
                     else:
                         if 'specification' in block_data:
                             specification = block_data["specification"]
-                            if 'properties' in specification and 'waterlogged' in specification['properties']:
-                                if f'{namespace}:{block_name}' not in waterlogable:
-                                    waterlogable.append(f'{namespace}:{block_name}')
-                                del specification['properties']['waterlogged']
-                                del specification['defaults']['waterlogged']
-                            disk_buffer.add_specification(self.version_name, 'block', 'blockstate', namespace, sub_name, block_name, specification)
+                            if 'properties' in specification:
+                                if 'waterlogged' in specification['properties']:
+                                    if f'{namespace}:{block_base_name}' not in waterlogable:
+                                        waterlogable.append(f'{namespace}:{block_base_name}')
+                                    del specification['properties']['waterlogged']
+                                    del specification['defaults']['waterlogged']
+                            elif disk_buffer.has_specification(self.version_name, 'block', 'blockstate', namespace, sub_name, block_base_name):
+                                gen_spec = disk_buffer.get_specification(self.version_name, 'block', 'blockstate', namespace, sub_name, block_base_name)
+                                if 'properties' in gen_spec:
+                                    specification['properties'] = gen_spec['properties']
+                                    specification['defaults'] = gen_spec['defaults']
+                            disk_buffer.add_specification(self.version_name, 'block', 'blockstate', namespace, sub_name, block_base_name, specification)
 
-                        assert 'to_universal' in block_data, f'"to_universal" must be present. Was missing for {self.version_name} {namespace}:{block_name}'
-                        disk_buffer.add_translation_to_universal(self.version_name, 'block', 'blockstate', namespace, sub_name, block_name, block_data["to_universal"])
+                        assert 'to_universal' in block_data, f'"to_universal" must be present. Was missing for {self.version_name} {namespace}:{block_base_name}'
+                        disk_buffer.add_translation_to_universal(self.version_name, 'block', 'blockstate', namespace, sub_name, block_base_name, block_data["to_universal"])
 
-                        assert 'from_universal' in block_data, f'"to_universal" must be present. Was missing for {self.version_name} {namespace}:{block_name}'
-                        universal_type = block_data.get('universal_type', 'block')
+                        assert 'from_universal' in block_data, f'"to_universal" must be present. Was missing for {self.version_name} {namespace}:{block_base_name}'
                         for block_string2, mapping in block_data['from_universal'].items():
                             namespace2, base_name2 = block_string2.split(':', 1)
-                            disk_buffer.add_translation_from_universal(self.version_name, universal_type, 'blockstate', namespace2, 'vanilla', base_name2, mapping)
+                            try:
+                                disk_buffer.add_translation_from_universal(self.version_name, 'block', 'blockstate', namespace2, 'vanilla', base_name2, mapping)
+                            except Exception as e:
+                                print(self.version_name, namespace, block_base_name, namespace2, base_name2)
+                                raise Exception(e)
+
             disk_buffer.save_json_object(('versions', self.version_name, '__waterlogable__'), waterlogable)
         else:
             raise Exception(f'Could not find {self.version_name}/generated/reports/blocks.json')

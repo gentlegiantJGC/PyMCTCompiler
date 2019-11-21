@@ -48,6 +48,9 @@ class DiskBuffer:
 	def has_specification(self, version_name: str, object_type: str, version_format: str, namespace: str, group_name: str, base_name: str) -> bool:
 		return ('versions', version_name, object_type, version_format, "specification", namespace, group_name, base_name) in self._files_to_save
 
+	def get_specification(self, version_name: str, object_type: str, version_format: str, namespace: str, group_name: str, base_name: str) -> dict:
+		return self._files_to_save[('versions', version_name, object_type, version_format, "specification", namespace, group_name, base_name)]
+
 	def add_translation_to_universal(self, version_name: str, object_type: str, version_format: str, namespace: str, group_name: str, base_name: str, data: 'FunctionList'):
 		"""add a translation file from version to universal format to the disk buffer to be saved at the end"""
 		self._translations["to_universal"][(version_name, object_type, version_format, namespace, group_name, base_name)] = data

@@ -1,0 +1,42 @@
+{
+	"specification": {
+		"properties": {
+			"has_bottle_0": ["true", "false"],
+			"has_bottle_1": ["true", "false"],
+			"has_bottle_2": ["true", "false"]
+		},
+		"defaults": {
+			"has_bottle_0": "false",
+			"has_bottle_1": "false",
+			"has_bottle_2": "false"
+		}
+	},
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:brewing_stand"
+		}, {
+			"function": "carry_properties",
+			"options": {
+				"has_bottle_0": ["true", "false"],
+				"has_bottle_1": ["true", "false"],
+				"has_bottle_2": ["true", "false"]
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:brewing_stand": [
+			{
+				"function": "new_block",
+				"options": "minecraft:brewing_stand"
+			}, {
+				"function": "carry_properties",
+				"options": {
+					"has_bottle_0": ["true", "false"],
+					"has_bottle_1": ["true", "false"],
+					"has_bottle_2": ["true", "false"]
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"specification": {
+		"properties": {
+			"mode": ["save", "load", "corner", "data"]
+		},
+		"defaults": {
+			"mode": "save"
+		}
+	},
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:structure_block"
+		}, {
+			"function": "carry_properties",
+			"options": {
+				"mode": ["save", "load", "corner", "data"]
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:structure_block": [
+			{
+				"function": "new_block",
+				"options": "minecraft:structure_block"
+			}, {
+				"function": "carry_properties",
+				"options": {
+					"mode": ["save", "load", "corner", "data"]
+				}
+			}
+		]
+	}
+}

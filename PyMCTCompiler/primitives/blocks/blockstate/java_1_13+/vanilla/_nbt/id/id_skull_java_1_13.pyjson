@@ -1,1 +1,1 @@
-blockstate.auto_id('minecraft:skull', ['universal_minecraft:head', 'universal_minecraft:wall_head'])
+blockstate.auto_id('minecraft:skull', ['universal_minecraft:head'])

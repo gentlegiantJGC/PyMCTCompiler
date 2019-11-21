@@ -1,0 +1,38 @@
+{
+	"specification": {
+		"properties": {
+			"facing": ["north", "east", "south", "west", "up", "down"],
+			"triggered": ["true", "false"]
+		},
+		"defaults": {
+			"facing": "north",
+			"triggered": "false"
+		}
+	},
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:dropper"
+		}, {
+			"function": "carry_properties",
+			"options": {
+				"facing": ["north", "east", "south", "west", "up", "down"],
+				"triggered": ["true", "false"]
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:dropper": [
+			{
+				"function": "new_block",
+				"options": "minecraft:dropper"
+			}, {
+				"function": "carry_properties",
+				"options": {
+					"facing": ["north", "east", "south", "west", "up", "down"],
+					"triggered": ["true", "false"]
+				}
+			}
+		]
+	}
+}

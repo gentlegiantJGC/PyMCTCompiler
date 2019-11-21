@@ -1,0 +1,42 @@
+{
+	"specification": {
+		"properties": {
+			"facing": ["north", "south", "west", "east"],
+			"mode": ["compare", "subtract"],
+			"powered": ["true", "false"]
+		},
+		"defaults": {
+			"facing": "north",
+			"mode": "compare",
+			"powered": "false"
+		}
+	},
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:comparator"
+		}, {
+			"function": "carry_properties",
+			"options": {
+				"facing": ["north", "south", "west", "east"],
+				"mode": ["compare", "subtract"],
+				"powered": ["true", "false"]
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:comparator": [
+			{
+				"function": "new_block",
+				"options": "minecraft:comparator"
+			}, {
+				"function": "carry_properties",
+				"options": {
+					"facing": ["north", "south", "west", "east"],
+					"mode": ["compare", "subtract"],
+					"powered": ["true", "false"]
+				}
+			}
+		]
+	}
+}

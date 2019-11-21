@@ -1,1 +1,1 @@
-blockstate.auto_id('minecraft:sign', ['universal_minecraft:sign', 'universal_minecraft:wall_sign'])
+blockstate.auto_id('minecraft:sign', ['universal_minecraft:sign'])

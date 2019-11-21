@@ -1,0 +1,17 @@
+{
+	"specification": {},
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:spawner"
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:spawner": [
+			{
+				"function": "new_block",
+				"options": "minecraft:spawner"
+			}
+		]
+	}
+}

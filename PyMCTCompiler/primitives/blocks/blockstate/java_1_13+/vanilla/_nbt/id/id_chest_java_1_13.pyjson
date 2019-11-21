@@ -1,1 +1,1 @@
-blockstate.auto_id('minecraft:chest', ['universal_minecraft:chest', 'universal_minecraft:trapped_chest'])
+blockstate.auto_id('minecraft:chest', ['universal_minecraft:chest'])
