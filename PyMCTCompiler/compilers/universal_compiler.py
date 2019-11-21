@@ -75,10 +75,15 @@ class UniversalCompiler(BaseCompiler):
 			for namespace, sub_name in add:
 				for block_name, specification in add[(namespace, sub_name)].items():
 					if disk_buffer.has_specification(self.version_name, 'block', 'blockstate', namespace, sub_name, block_name):
-						print(f'"{block_name}" is already present.')
-					else:
-						assert isinstance(specification, dict), f'The data here is supposed to be a dictionary. Got this instead:\n{specification}'
-						disk_buffer.add_specification(self.version_name, 'block', 'blockstate', namespace, sub_name, block_name, specification)
+						spec = disk_buffer.get_specification(self.version_name, 'block', 'blockstate', namespace, sub_name, block_name)
+						if 'properties' in specification:
+							print(f'"{block_name}" is already present.')
+						else:
+							for key, val in specification.items():
+								spec[key] = val
+							specification = spec
+					assert isinstance(specification, dict), f'The data here is supposed to be a dictionary. Got this instead:\n{specification}'
+					disk_buffer.add_specification(self.version_name, 'block', 'blockstate', namespace, sub_name, block_name, specification)
 		else:
 			raise Exception(f'Could not find {self.version_name}/generated/reports/blocks.json')
 
