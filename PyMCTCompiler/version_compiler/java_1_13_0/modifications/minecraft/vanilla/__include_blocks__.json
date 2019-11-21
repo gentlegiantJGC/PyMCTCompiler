@@ -384,7 +384,7 @@
 	"brewing_stand": ["id_brewing_stand_java_1_13", "brewing_stand"],
 	"enchanting_table": ["id_enchanting_table_java_1_13", "enchanting_table"],
 	"end_portal": ["id_end_portal_java_1_13", "end_portal"],
-	"beacon": ["id_beacon_java_1_13", "beacon"],
+	"beacon": ["id_beacon_java_1_13", "beacon", "beacon_nbt"],
 
 	"skeleton_skull": ["id_skull_java_1_13", "skeleton_skull"],
 	"wither_skeleton_skull": ["id_skull_java_1_13", "wither_skeleton_skull"],
