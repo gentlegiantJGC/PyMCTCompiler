@@ -177,7 +177,7 @@ class BaseCompiler:
     def block_entity_map(self):
         if self._block_entity_map is None:
             if self.block_entity_format == "str-id":
-                self._load_from_parent('block_entity_format', {})
+                self._load_from_parent('block_entity_map', {})
 
                 block_entity_map_path = os.path.join(self._directory, '__block_entity_map__.json')
                 if os.path.isfile(block_entity_map_path):
