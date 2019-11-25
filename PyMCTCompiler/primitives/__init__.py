@@ -154,8 +154,7 @@ def merge_nbt(obj1, obj2):
 	elif obj1 != obj2:
 		raise Exception(f'Data type was not compound and the data was different. Cannot merge this primitive data.\n{obj1}, {obj2}')
 
-	return obj1.to_snbt()
-
+	return obj1
 
 def merge_primitive_specification(obj1: dict, obj2: dict) -> dict:
 	assert isinstance(obj1, dict) and isinstance(obj2, dict)
@@ -181,7 +180,7 @@ def merge_primitive_specification(obj1: dict, obj2: dict) -> dict:
 
 	if 'snbt' in obj2:
 		if 'snbt' in obj1:
-			obj1['snbt'] = merge_nbt(amulet_nbt.from_snbt(obj1['snbt']), amulet_nbt.from_snbt(obj2['snbt']))
+			obj1['snbt'] = merge_nbt(amulet_nbt.from_snbt(obj1['snbt']), amulet_nbt.from_snbt(obj2['snbt'])).to_snbt()
 		else:
 			obj1['snbt'] = obj2['snbt']
 

@@ -3,7 +3,6 @@ from typing import Union, List
 from urllib.request import urlopen
 import json
 import amulet_nbt
-import PyMCTCompiler
 
 log_file = open('log.txt', 'w')
 
