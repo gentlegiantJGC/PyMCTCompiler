@@ -180,7 +180,7 @@ class BaseCompiler:
                 with open(os.path.join(self._directory, '__block_entity_map__.json')) as f:
                     block_entity_data = json.load(f)
                 for be, namespaced_be in block_entity_data.items():
-                    if namespaced_be is None
+                    if namespaced_be is None:
                         if be in self._block_entity_map:
                             del self._block_entity_map[be]
                     else:
