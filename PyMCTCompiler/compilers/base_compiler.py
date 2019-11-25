@@ -157,17 +157,19 @@ class BaseCompiler:
                 "universal_remap": {}
             })
 
-            with open(os.path.join(self._directory, '__biome_data__.json')) as f:
-                biome_data = json.load(f)
+            biome_data_path = os.path.join(self._directory, '__biome_data__.json')
+            if os.path.isfile(biome_data_path):
+                with open(biome_data_path) as f:
+                    biome_data = json.load(f)
 
-            for biome in biome_data['remove']:
-                del self._biomes['biomes'][biome]
+                for biome in biome_data['remove']:
+                    del self._biomes['biomes'][biome]
 
-            for biome, data in biome_data['add']['biomes'].items():
-                self._biomes['biomes'][biome] = data
+                for biome, data in biome_data['add']['biomes'].items():
+                    self._biomes['biomes'][biome] = data
 
-            for biome, data in biome_data['add']['universal_remap'].items():
-                self._biomes['universal_remap'][biome] = data
+                for biome, data in biome_data['add']['universal_remap'].items():
+                    self._biomes['universal_remap'][biome] = data
 
         return self._biomes
 
@@ -177,14 +179,16 @@ class BaseCompiler:
             if self.block_entity_format == "str-id":
                 self._load_from_parent('block_entity_format', {})
 
-                with open(os.path.join(self._directory, '__block_entity_map__.json')) as f:
-                    block_entity_data = json.load(f)
-                for be, namespaced_be in block_entity_data.items():
-                    if namespaced_be is None:
-                        if be in self._block_entity_map:
-                            del self._block_entity_map[be]
-                    else:
-                        self._block_entity_map[be] = namespaced_be
+                block_entity_map_path = os.path.join(self._directory, '__block_entity_map__.json')
+                if os.path.isfile(block_entity_map_path):
+                    with open(block_entity_map_path) as f:
+                        block_entity_data = json.load(f)
+                    for be, namespaced_be in block_entity_data.items():
+                        if namespaced_be is None:
+                            if be in self._block_entity_map:
+                                del self._block_entity_map[be]
+                        else:
+                            self._block_entity_map[be] = namespaced_be
             else:
                 self._block_entity_map = {}
 

@@ -22,8 +22,10 @@ class NumericalCompiler(BaseCompiler):
         if self._numerical_block_map is None:
             self._load_from_parent('numerical_block_map', {})
 
-        with open(os.path.join(self._directory, '__numerical_block_map__.json')) as f:
-            numerical_block_map = json.load(f)
+        numerical_block_map_path = os.path.join(self._directory, '__numerical_block_map__.json')
+        if os.path.isfile(numerical_block_map_path):
+            with open(numerical_block_map_path) as f:
+                numerical_block_map = json.load(f)
 
         for string_block_id, numerical_block_id in numerical_block_map.items():
             if numerical_block_id is None and string_block_id in self._numerical_block_map:
