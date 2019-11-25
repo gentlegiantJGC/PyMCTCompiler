@@ -1,0 +1,25 @@
+{
+	"specification": {
+		"snbt": "{metadata: \"\", mirror: \"NONE\", ignoreEntities: 1b, powered: 0b, seed: 0l, author: \"\", rotation: \"NONE\", posX: 0, mode: \"DATA\", posY: 1, sizeX: 0, posZ: 0, integrity: 1.0f, showair: 0b, name: \"\", sizeY: 0, sizeZ: 0, showboundingbox: 1b}"
+	},
+	"to_universal": [
+		{
+			"function": "walk_input_nbt",
+			"options": {
+				"type": "compound",
+				"keys": {}
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:structure_block": [
+			{
+				"function": "walk_input_nbt",
+				"options": {
+					"type": "compound",
+					"keys": {}
+				}
+			}
+		]
+	}
+}

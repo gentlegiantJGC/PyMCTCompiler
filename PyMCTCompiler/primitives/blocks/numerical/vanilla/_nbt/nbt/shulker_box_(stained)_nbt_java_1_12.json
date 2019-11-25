@@ -1,0 +1,25 @@
+{
+	"specification": {
+		"snbt": "{Lock: \"\"}"
+	},
+	"to_universal": [
+		{
+			"function": "walk_input_nbt",
+			"options": {
+				"type": "compound",
+				"keys": {}
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:stained_shulker_box": [
+			{
+				"function": "walk_input_nbt",
+				"options": {
+					"type": "compound",
+					"keys": {}
+				}
+			}
+		]
+	}
+}

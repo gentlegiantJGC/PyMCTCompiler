@@ -1,0 +1,25 @@
+{
+	"specification": {
+		"snbt": "{CookTime: 0s, BurnTime: 0s, Items: [], RecipesUsedSize: 0s, CookTimeTotal: 0s, Lock: \"\"}"
+	},
+	"to_universal": [
+		{
+			"function": "walk_input_nbt",
+			"options": {
+				"type": "compound",
+				"keys": {}
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:furnace": [
+			{
+				"function": "walk_input_nbt",
+				"options": {
+					"type": "compound",
+					"keys": {}
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,1 @@
+blockstate.auto_id('minecraft:trapped_chest', ['universal_minecraft:trapped_chest'])

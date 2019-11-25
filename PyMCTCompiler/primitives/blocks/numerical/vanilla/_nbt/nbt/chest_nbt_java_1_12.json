@@ -1,0 +1,25 @@
+{
+	"specification": {
+		"snbt": "{Items: [], Lock: \"\"}"
+	},
+	"to_universal": [
+		{
+			"function": "walk_input_nbt",
+			"options": {
+				"type": "compound",
+				"keys": {}
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:chest": [
+			{
+				"function": "walk_input_nbt",
+				"options": {
+					"type": "compound",
+					"keys": {}
+				}
+			}
+		]
+	}
+}

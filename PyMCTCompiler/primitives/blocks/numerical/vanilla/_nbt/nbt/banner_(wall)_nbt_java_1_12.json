@@ -1,0 +1,25 @@
+{
+	"specification": {
+		"snbt": "{}"
+	},
+	"to_universal": [
+		{
+			"function": "walk_input_nbt",
+			"options": {
+				"type": "compound",
+				"keys": {}
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:wall_banner": [
+			{
+				"function": "walk_input_nbt",
+				"options": {
+					"type": "compound",
+					"keys": {}
+				}
+			}
+		]
+	}
+}
