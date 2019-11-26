@@ -189,7 +189,7 @@ java_str_lock = NBTRemapHelper(
 )
 
 
-base_beacon_j113 = NBTRemapHelper(
+_BeaconJ113 = NBTRemapHelper(
     [
         (
             ("Primary", "int", []),
@@ -207,7 +207,142 @@ base_beacon_j113 = NBTRemapHelper(
     "{Secondary: 0, Primary: 0, Levels: -1}"
 )
 
+banner_j113 = merge(
+    [EmptyNBT('minecraft:banner')],
+    ['universal_minecraft:banner']
+)
+
+banner_wall_j113 = merge(
+    [EmptyNBT('minecraft:banner')],
+    ['universal_minecraft:wall_banner']
+)
+
 beacon_j113 = merge(
-    [EmptyNBT('minecraft:beacon'), base_beacon_j113, java_str_lock],
+    [EmptyNBT('minecraft:beacon'), _BeaconJ113, java_str_lock],
     ['universal_minecraft:beacon']
+)
+
+bed_j113 = merge(
+    [EmptyNBT('minecraft:bed')],
+    ['universal_minecraft:bed']
+)
+
+brewing_stand_j113 = merge(
+    [EmptyNBT('minecraft:brewing_stand')],
+    ['universal_minecraft:brewing_stand']
+)
+
+chest_j113 = merge(
+    [EmptyNBT('minecraft:chest')],
+    ['universal_minecraft:chest']
+)
+
+trapped_chest_j113 = merge(
+    [EmptyNBT('minecraft:chest')],
+    ['universal_minecraft:trapped_chest']
+)
+
+command_block_j113 = merge(
+    [EmptyNBT('minecraft:command_block')],
+    ['universal_minecraft:command_block']
+)
+
+comparator_j113 = merge(
+    [EmptyNBT('minecraft:comparator')],
+    ['universal_minecraft:comparator']
+)
+
+conduit_j113 = merge(
+    [EmptyNBT('minecraft:conduit')],
+    ['universal_minecraft:conduit']
+)
+
+daylight_detector_j113 = merge(
+    [EmptyNBT('minecraft:daylight_detector')],
+    ['universal_minecraft:daylight_detector']
+)
+
+dispenser_j113 = merge(
+    [EmptyNBT('minecraft:dispenser')],
+    ['universal_minecraft:dispenser']
+)
+
+dropper_j113 = merge(
+    [EmptyNBT('minecraft:dropper')],
+    ['universal_minecraft:dropper']
+)
+
+enchanting_table_j113 = merge(
+    [EmptyNBT('minecraft:enchanting_table')],
+    ['universal_minecraft:enchanting_tables']
+)
+
+end_gateway_j113 = merge(
+    [EmptyNBT('minecraft:end_gateway')],
+    ['universal_minecraft:end_gateway']
+)
+
+end_portal_j113 = merge(
+    [EmptyNBT('minecraft:end_portal')],
+    ['universal_minecraft:end_portal']
+)
+
+ender_chest_j113 = merge(
+    [EmptyNBT('minecraft:ender_chest')],
+    ['universal_minecraft:ender_chest']
+)
+
+furnace_j113 = merge(
+    [EmptyNBT('minecraft:furnace')],
+    ['universal_minecraft:furnace']
+)
+
+hopper_j113 = merge(
+    [EmptyNBT('minecraft:hopper')],
+    ['universal_minecraft:hopper']
+)
+
+jukebox_j113 = merge(
+    [EmptyNBT('minecraft:jukebox')],
+    ['universal_minecraft:jukebox']
+)
+
+mob_spawner_j113 = merge(
+    [EmptyNBT('minecraft:mob_spawner')],
+    ['universal_minecraft:spawner']
+)
+
+shulker_box_j113 = merge(
+    [EmptyNBT('minecraft:shulker_box')],
+    ['universal_minecraft:shulker_box']
+)
+
+shulker_box_stained_j113 = merge(
+    [EmptyNBT('minecraft:shulker_box')],
+    ['universal_minecraft:stained_shulker_box']
+)
+
+sign_j113 = merge(
+    [EmptyNBT('minecraft:sign')],
+    ['universal_minecraft:sign']
+)
+
+sign_wall_j113 = merge(
+    [EmptyNBT('minecraft:sign')],
+    ['universal_minecraft:wall_sign']
+)
+
+skull_j113 = merge(
+    [EmptyNBT('minecraft:skull')],
+    ['universal_minecraft:head']
+)
+
+skull_wall_j113 = merge(
+    [EmptyNBT('minecraft:skull')],
+    ['universal_minecraft:wall_head']
+)
+
+structure_block_j113 = merge(
+    [EmptyNBT('minecraft:structure_block')],
+    ['universal_minecraft:structure_block']
 )
