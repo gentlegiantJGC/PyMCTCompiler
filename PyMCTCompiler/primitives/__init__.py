@@ -3,7 +3,6 @@ import os
 import traceback
 import copy
 from typing import Union, List, Dict
-from .scripts import *
 import amulet_nbt
 from amulet_nbt import TAG_Compound
 from PyMCTCompiler.translation_functions import FunctionList
@@ -76,35 +75,6 @@ class Primitive:
 					val.commit(None, [])
 
 
-print('Loading Primitives ...')
-blocks: Dict[str, Dict[str, Primitive]] = {'numerical': {}, 'blockstate': {}, 'nbt-blockstate': {}}
-entities: Dict[str, Primitive] = {}
-
-for start_folder in blocks:
-	for root, dirs, files in os.walk(f'{os.path.dirname(__file__)}/blocks/{start_folder}'):
-		for f in files:
-			if os.path.splitext(f)[0] in blocks[start_folder]:
-				print(f'Block name "{os.path.splitext(f)[0]}" is define twice')
-			if f.endswith('.json') or f.endswith('.pyjson'):
-				try:
-					blocks[start_folder][os.path.splitext(f)[0]] = Primitive(_load_file(f'{root}/{f}'))
-				except Exception as e:
-					print(f'Failed to load {root}/{f}\n{e}')
-					print(traceback.print_tb(e.__traceback__))
-
-for root, dirs, files in os.walk(f'{os.path.dirname(__file__)}/entities'):
-	for f in files:
-		if os.path.splitext(f)[0] in entities:
-			print(f'Block name "{os.path.splitext(f)[0]}" is define twice')
-		try:
-			entities[os.path.splitext(f)[0]] = Primitive(_load_file(f'{root}/{f}'))
-		except Exception as e:
-			print(f'Failed to load {root}/{f}\n{e}')
-			print(traceback.print_tb(e.__traceback__))
-
-print('\tFinished Loading Primitives')
-
-
 def get_block(block_format: str, primitive_group: Union[str, List[str]]) -> Primitive:
 	assert block_format in blocks, f'"{block_format}" is not a known format'
 	if isinstance(primitive_group, str):
@@ -156,6 +126,7 @@ def merge_nbt(obj1, obj2):
 
 	return obj1
 
+
 def merge_primitive_specification(obj1: dict, obj2: dict) -> dict:
 	assert isinstance(obj1, dict) and isinstance(obj2, dict)
 	# {
@@ -194,5 +165,35 @@ def merge_primitive_specification(obj1: dict, obj2: dict) -> dict:
 		obj1['nbt_properties'] = obj2['nbt_properties']
 
 	return obj1
+
+
+from .scripts import *
+print('Loading Primitives ...')
+blocks: Dict[str, Dict[str, Primitive]] = {'numerical': {}, 'blockstate': {}, 'nbt-blockstate': {}}
+entities: Dict[str, Primitive] = {}
+
+for start_folder in blocks:
+	for root, dirs, files in os.walk(f'{os.path.dirname(__file__)}/blocks/{start_folder}'):
+		for f in files:
+			if os.path.splitext(f)[0] in blocks[start_folder]:
+				print(f'Block name "{os.path.splitext(f)[0]}" is define twice')
+			if f.endswith('.json') or f.endswith('.pyjson'):
+				try:
+					blocks[start_folder][os.path.splitext(f)[0]] = Primitive(_load_file(f'{root}/{f}'))
+				except Exception as e:
+					print(f'Failed to load {root}/{f}\n{e}')
+					print(traceback.print_tb(e.__traceback__))
+
+for root, dirs, files in os.walk(f'{os.path.dirname(__file__)}/entities'):
+	for f in files:
+		if os.path.splitext(f)[0] in entities:
+			print(f'Block name "{os.path.splitext(f)[0]}" is define twice')
+		try:
+			entities[os.path.splitext(f)[0]] = Primitive(_load_file(f'{root}/{f}'))
+		except Exception as e:
+			print(f'Failed to load {root}/{f}\n{e}')
+			print(traceback.print_tb(e.__traceback__))
+
+print('\tFinished Loading Primitives')
 
 from PyMCTCompiler.primitives import nested
