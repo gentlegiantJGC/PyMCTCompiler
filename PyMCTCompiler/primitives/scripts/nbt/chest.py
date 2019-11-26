@@ -1,5 +1,5 @@
 from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
-from ..nbt.common import java_custom_name, java_items_27, java_str_lock, java_loot_table
+from .common import java_custom_name, java_items_27, java_str_lock, java_loot_table
 
 """
 Default
