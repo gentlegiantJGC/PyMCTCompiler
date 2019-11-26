@@ -1,7 +1,12 @@
 from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
 from ..nbt.common import java_str_lock
 
-_BeaconJ113 = NBTRemapHelper(
+"""
+Default
+J113    "minecraft:beacon"		"{Secondary: 0, Primary: 0, Levels: -1, Lock: \"\"}"
+"""
+
+_J113 = NBTRemapHelper(
     [
         (
             ("Primary", "int", []),
