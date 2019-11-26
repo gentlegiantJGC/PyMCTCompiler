@@ -86,8 +86,11 @@ def get_block(block_format: str, primitive_group: Union[str, List[str]]) -> Prim
 		output = Primitive({})
 		for primitive in primitive_group:
 			assert isinstance(primitive, str), f'Expected a list of strings. At least one entry was type {type(primitive)}'
-			assert primitive in blocks[block_format], f'"{primitive}" is not present in the mappings for format "{block_format}"'
-			output.extend(copy.deepcopy(blocks[block_format][primitive]))
+			if primitive.startswith('>'):
+				output.extend(copy.deepcopy(eval(primitive[1:])))
+			else:
+				assert primitive in blocks[block_format], f'"{primitive}" is not present in the mappings for format "{block_format}"'
+				output.extend(copy.deepcopy(blocks[block_format][primitive]))
 		output.commit()
 		return output
 	else:
@@ -100,12 +103,15 @@ def get_entity(primitive_group: Union[str, List[str]]) -> Primitive:
 		output = copy.deepcopy(entities[primitive_group])
 		output.commit()
 		return output
-	elif isinstance(primitive_group, list):
+	elif isinstance(primitive_group, list) and len(primitive_group) >= 1:
 		output = Primitive({})
 		for primitive in primitive_group:
 			assert isinstance(primitive, str), f'Expected a list of strings. At least one entry was type {type(primitive)}'
-			assert primitive in entities, f'"{primitive}" is not present in the entity mappings'
-			output.extend(copy.deepcopy(entities[primitive]))
+			if primitive.startswith('>'):
+				output.extend(copy.deepcopy(eval(primitive[1:])))
+			else:
+				assert primitive in entities, f'"{primitive}" is not present in the entity mappings'
+				output.extend(copy.deepcopy(entities[primitive]))
 		output.commit()
 		return output
 	else:
