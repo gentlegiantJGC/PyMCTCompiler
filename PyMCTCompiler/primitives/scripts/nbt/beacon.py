@@ -25,6 +25,6 @@ _J113 = NBTRemapHelper(
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:beacon'), _BeaconJ113, java_str_lock],
+    [EmptyNBT('minecraft:beacon'), _J113, java_str_lock],
     ['universal_minecraft:beacon']
 )

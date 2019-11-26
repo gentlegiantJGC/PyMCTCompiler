@@ -15,6 +15,20 @@ java_str_lock = NBTRemapHelper(
     "{Lock: \"\"}"
 )
 
+java_loot_table = NBTRemapHelper(
+    [
+        (
+            ("LootTable", "string", []),
+            ("LootTable", "string", [("utags", "compound")])
+        ),
+        (
+            ("LootTableSeed", "long", []),
+            ("LootTableSeed", "long", [("utags", "compound")])
+        )
+    ],
+    "{}"
+)
+
 java_items_3 = NBTRemapHelper(
     [(
         ("Items", "list", []),

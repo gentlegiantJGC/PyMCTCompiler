@@ -5,7 +5,17 @@ Default
 J113    "minecraft:jukebox"		"{}"
 """
 
+_J113 = NBTRemapHelper(
+    [
+        (
+            ("RecordItem", "compound", []),
+            ("RecordItem", "compound", [("utags", "compound")])
+        )
+    ],
+    "{}"
+)
+
 j113 = merge(
-    [EmptyNBT('minecraft:jukebox')],
+    [EmptyNBT('minecraft:jukebox'), _J113],
     ['universal_minecraft:jukebox']
 )
