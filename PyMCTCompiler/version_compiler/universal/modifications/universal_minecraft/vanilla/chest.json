@@ -1,0 +1,11 @@
+{
+	"add": {
+		"chest": {
+			"nbt_identifier": [
+		        "universal_minecraft",
+		        "chest"
+		    ],
+		    "snbt": "{utags: {isMovable: 1b}}"
+		}
+	}
+}

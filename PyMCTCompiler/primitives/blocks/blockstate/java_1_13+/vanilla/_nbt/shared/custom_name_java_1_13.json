@@ -1,5 +1,8 @@
 {
 	"specification": {
-		"snbt": "{}"
-	}
+		"snbt": "{CustomName:\"\"}"
+	},
+	"to_universal": [
+
+	]
 }
