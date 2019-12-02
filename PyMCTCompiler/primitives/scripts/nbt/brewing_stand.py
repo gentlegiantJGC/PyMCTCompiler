@@ -4,6 +4,8 @@ from .common import java_items_5, java_str_lock, java_custom_name
 """
 Default
 J113    "minecraft:brewing_stand"		"{Fuel: 0b, Items: [], BrewTime: 0s, Lock: \"\"}"
+
+B113	"BrewingStand"		"{CookTime: 0s, FuelAmount: 0s, FuelTotal: 0s, Items: [], isMovable: 1b}"
 """
 
 _J113 = NBTRemapHelper(

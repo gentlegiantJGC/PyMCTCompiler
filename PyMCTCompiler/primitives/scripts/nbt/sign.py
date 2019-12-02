@@ -2,7 +2,9 @@ from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
 
 """
 Default
-J113    "minecraft:sign"		r'{Text4: "{\"text\":\"\"}", Text3: "{\"text\":\"\"}", Text2: "{\"text\":\"\"}", Text1: "{\"text\":\"\"}"}'
+J113    "minecraft:sign"		r'{Text4: "{\\"text\\":\\"\\"}", Text3: "{\\"text\\":\\"\\"}", Text2: "{\\"text\\":\\"\\"}", Text1: "{\\"text\\":\\"\\"}"}'
+
+B113	"Sign"		"{Text: "", TextOwner: "", isMovable: 1b}"
 """
 
 _J113 = NBTRemapHelper(
@@ -24,7 +26,7 @@ _J113 = NBTRemapHelper(
             ("Text4", "string", [("utags", "compound")])
         )
     ],
-    r'{Text4: "{\"text\":\"\"}", Text3: "{\"text\":\"\"}", Text2: "{\"text\":\"\"}", Text1: "{\"text\":\"\"}"}'
+    r'{Text4: "{\\"text\\":\\"\\"}", Text3: "{\\"text\\":\\"\\"}", Text2: "{\\"text\\":\\"\\"}", Text1: "{\\"text\\":\\"\\"}"}'
 )
 
 j113 = merge(

@@ -3,6 +3,8 @@ from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
 """
 Default
 J113    "minecraft:bed"		"{}"
+
+B113	"Bed"		"{color: 0b, isMovable: 1b}"
 """
 
 j113 = merge(

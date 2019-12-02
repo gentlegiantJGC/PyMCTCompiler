@@ -4,6 +4,9 @@ from .common import java_custom_name
 """
 Default
 J113    "minecraft:banner"      "{}"
+
+
+B113    "Banner"		        "{Base: 0, Type: 0, isMovable: 1b}"
 """
 
 _J113 = NBTRemapHelper(

@@ -4,6 +4,8 @@ from .common import java_custom_name, java_str_lock, java_items_27, java_loot_ta
 """
 Default
 J113    "minecraft:shulker_box"		"{Lock: \"\"}"
+
+B113	"ShulkerBox"		"{Findable: 0b, Items: [], facing: 1b, isMovable: 1b}"
 """
 
 j113 = merge(

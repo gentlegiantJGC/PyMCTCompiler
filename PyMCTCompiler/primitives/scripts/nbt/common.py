@@ -25,8 +25,7 @@ java_loot_table = NBTRemapHelper(
             ("LootTableSeed", "long", []),
             ("LootTableSeed", "long", [("utags", "compound")])
         )
-    ],
-    "{}"
+    ]
 )
 
 java_items_3 = NBTRemapHelper(
@@ -54,6 +53,46 @@ java_items_9 = NBTRemapHelper(
 )
 
 java_items_27 = NBTRemapHelper(
+    [(
+        ("Items", "list", []),
+        ("Items", "list", [("utags", "compound")])
+    )],
+    "{Items: []}"
+)
+
+bedrock_is_movable = NBTRemapHelper(
+    [(
+        ("isMovable", "byte", []),
+        ("isMovable", "byte", [("utags", "compound")])
+    )],
+    "{isMovable: 1b}"
+)
+
+bedrock_items_3 = NBTRemapHelper(
+    [(
+        ("Items", "list", []),
+        ("Items", "list", [("utags", "compound")])
+    )],
+    "{Items: []}"
+)
+
+bedrock_items_5 = NBTRemapHelper(
+    [(
+        ("Items", "list", []),
+        ("Items", "list", [("utags", "compound")])
+    )],
+    "{Items: []}"
+)
+
+bedrock_items_9 = NBTRemapHelper(
+    [(
+        ("Items", "list", []),
+        ("Items", "list", [("utags", "compound")])
+    )],
+    "{Items: []}"
+)
+
+bedrock_items_27 = NBTRemapHelper(
     [(
         ("Items", "list", []),
         ("Items", "list", [("utags", "compound")])

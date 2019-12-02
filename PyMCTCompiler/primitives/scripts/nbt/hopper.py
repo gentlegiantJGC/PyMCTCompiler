@@ -4,6 +4,8 @@ from .common import java_custom_name, java_str_lock, java_items_5, java_loot_tab
 """
 Default
 J113    "minecraft:hopper"		"{TransferCooldown: -1, Items: [], Lock: \"\"}"
+
+B113	"Hopper"		"{Items: [], TransferCooldown: 0, isMovable: 1b}"
 """
 
 _J113 = NBTRemapHelper(

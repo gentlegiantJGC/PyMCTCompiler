@@ -34,15 +34,18 @@ def to_snbt(nbt_type, value):
 
 
 class NBTBlockstateCompiler(BaseCompiler):
-	@staticmethod
-	def _save_data(version_type, universal_type, data, version_name, namespace, sub_name, block_file_name):
+	def _save_data(self, version_type, universal_type, data, version_name, namespace, sub_name, block_base_name):
 		assert universal_type in ('block', 'entity'), f'Universal type "{universal_type}" is not known'
 		if 'specification' in data:
-			disk_buffer.add_specification(version_name, version_type, 'blockstate', namespace, sub_name, block_file_name, data['specification'])
-		disk_buffer.add_translation_to_universal(version_name, version_type, 'blockstate', namespace, sub_name, block_file_name, data['to_universal'])
+			disk_buffer.add_specification(version_name, version_type, 'blockstate', namespace, sub_name, block_base_name, data['specification'])
+		disk_buffer.add_translation_to_universal(version_name, version_type, 'blockstate', namespace, sub_name, block_base_name, data['to_universal'])
 		for block_str, block_data in data['from_universal'].items():
-			namespace_, block_name = block_str.split(':', 1)
-			disk_buffer.add_translation_from_universal(version_name, universal_type, 'blockstate', namespace_, sub_name, block_name, block_data)
+			namespace2, base_name2 = block_str.split(':', 1)
+			try:
+				disk_buffer.add_translation_from_universal(version_name, universal_type, 'blockstate', namespace2, sub_name, base_name2, block_data)
+			except Exception as e:
+				print(self.version_name, namespace, block_base_name, namespace2, base_name2)
+				raise Exception(e)
 
 	def _build_blocks(self):
 		if os.path.isfile(os.path.join(self._directory, 'block_palette.json')):
@@ -73,15 +76,20 @@ class NBTBlockstateCompiler(BaseCompiler):
 
 		for (namespace, sub_name), block_data in self.blocks.items():
 			# iterate through all namespaces ('minecraft', ...) and sub_names  ('vanilla', 'chemistry'...)
-			for block_file_name, primitive_data in block_data.items():
+			for block_base_name, primitive_data in block_data.items():
 				if primitive_data is None:
 					continue
 
-				block_primitive_file = primitives.get_block('nbt-blockstate', primitive_data)
+				try:
+					block_primitive_file = primitives.get_block('nbt-blockstate', primitive_data)
+				except Exception as e:
+					print(self.version_name, namespace, block_base_name)
+					raise Exception(e)
 
 				assert 'to_universal' in block_primitive_file, f'Key to_universal must be defined'
 				assert 'from_universal' in block_primitive_file, f'Key from_universal must be defined'
-				self._save_data('block', 'block', block_primitive_file, self.version_name, namespace, sub_name, block_file_name)
+				self._save_data('block', 'block', block_primitive_file, self.version_name, namespace, sub_name, block_base_name)
+
 
 	def _build_entities(self):
 		for (namespace, sub_name), entity_data in self.entities.items():

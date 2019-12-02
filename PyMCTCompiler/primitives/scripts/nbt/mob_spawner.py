@@ -3,6 +3,8 @@ from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
 """
 Default
 J113    "minecraft:mob_spawner"		"{MaxNearbyEntities: 6s, RequiredPlayerRange: 16s, SpawnCount: 4s, SpawnData: {id: \"minecraft:pig\"}, MaxSpawnDelay: 800s, Delay: 20s, SpawnRange: 4s, MinSpawnDelay: 200s, SpawnPotentials: [{Entity: {id: \"minecraft:pig\"}, Weight: 1}]}"
+
+B113	"MobSpawner"		"{Delay: 20s, DisplayEntityHeight: 1.7999999523162842f, DisplayEntityScale: 1.0f, DisplayEntityWidth: 0.800000011920929f, EntityIdentifier: \"\", MaxNearbyEntities: 6s, MaxSpawnDelay: 800s, MinSpawnDelay: 200s, RequiredPlayerRange: 16s, SpawnCount: 4s, SpawnRange: 4s, isMovable: 1b}"
 """
 
 _J113 = NBTRemapHelper(
