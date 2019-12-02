@@ -469,17 +469,17 @@
 	"structure_block": "structure_block",
 	"conduit": [">nbt.conduit.b113", "conduit"],
 
-	"standing_sign": "standing_sign",
-	"wall_sign": "wall_sign",
-	"jungle_standing_sign": "jungle_standing_sign",
-	"birch_standing_sign": "birch_standing_sign",
-	"darkoak_standing_sign": "darkoak_standing_sign",
-	"acacia_standing_sign": "acacia_standing_sign",
-	"spruce_standing_sign": "spruce_standing_sign",
-	"spruce_wall_sign": "spruce_wall_sign",
-	"darkoak_wall_sign": "darkoak_wall_sign",
-	"birch_wall_sign": "birch_wall_sign",
-	"jungle_wall_sign": "jungle_wall_sign",
-	"acacia_wall_sign": "acacia_wall_sign"
+	"standing_sign": [">nbt.sign.b113", "standing_sign"],
+	"wall_sign": [">nbt.sign.wall_b113", "wall_sign"],
+	"jungle_standing_sign": [">nbt.sign.b113", "jungle_standing_sign"],
+	"birch_standing_sign": [">nbt.sign.b113", "birch_standing_sign"],
+	"darkoak_standing_sign": [">nbt.sign.b113", "darkoak_standing_sign"],
+	"acacia_standing_sign": [">nbt.sign.b113", "acacia_standing_sign"],
+	"spruce_standing_sign": [">nbt.sign.b113", "spruce_standing_sign"],
+	"spruce_wall_sign": [">nbt.sign.wall_b113", "spruce_wall_sign"],
+	"darkoak_wall_sign": [">nbt.sign.wall_b113", "darkoak_wall_sign"],
+	"birch_wall_sign": [">nbt.sign.wall_b113", "birch_wall_sign"],
+	"jungle_wall_sign": [">nbt.sign.wall_b113", "jungle_wall_sign"],
+	"acacia_wall_sign": [">nbt.sign.wall_b113", "acacia_wall_sign"]
 
 }

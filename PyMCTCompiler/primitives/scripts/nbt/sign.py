@@ -29,6 +29,20 @@ _J113 = NBTRemapHelper(
     r'{Text4: "{\\"text\\":\\"\\"}", Text3: "{\\"text\\":\\"\\"}", Text2: "{\\"text\\":\\"\\"}", Text1: "{\\"text\\":\\"\\"}"}'
 )
 
+_B113 = NBTRemapHelper(
+    [
+        (
+            ("Text", "string", []),
+            ("Text", "string", [("utags", "compound")])
+        ),
+        (
+            ("TextOwner", "string", []),
+            ("TextOwner", "string", [("utags", "compound")])
+        )
+    ],
+    '{Text: "", TextOwner: ""}'
+)
+
 j113 = merge(
     [EmptyNBT('minecraft:sign'), _J113],
     ['universal_minecraft:sign']
@@ -38,3 +52,15 @@ wall_j113 = merge(
     [EmptyNBT('minecraft:sign'), _J113],
     ['universal_minecraft:wall_sign']
 )
+
+b113 = merge(
+    [EmptyNBT('minecraft:sign'), _B113],
+    ['universal_minecraft:sign']
+)
+
+wall_b113 = merge(
+    [EmptyNBT('minecraft:sign'), _B113],
+    ['universal_minecraft:wall_sign']
+)
+
+
