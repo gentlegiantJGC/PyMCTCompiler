@@ -1,18 +1,12 @@
 import os
 import json
-from concurrent.futures import ThreadPoolExecutor
 from typing import Dict, Union, Tuple, Set, TYPE_CHECKING
+import hashlib
 
 import PyMCTCompiler
+from PyMCTCompiler.helpers import log_to_file
 if TYPE_CHECKING:
 	from PyMCTCompiler.translation_functions import FunctionList
-from PyMCTCompiler.helpers import log_to_file
-
-
-def save_json_file(path, data):
-	os.makedirs(os.path.dirname(path), exist_ok=True)
-	with open(path, 'w') as f:
-		json.dump(data, f, indent=4)
 
 
 class DiskBuffer:
@@ -107,10 +101,32 @@ class DiskBuffer:
 				data.commit(None, [])  # validate the translation
 				self.save_json_object(('versions',) + path[:3] + (direction,) + path[3:], data.save([]))  # add the file to the dictionary to be saved
 
-		with ThreadPoolExecutor(max_workers=1000) as executor:
-			for path, data in self._files_to_save.items():
-				path = os.path.join(PyMCTCompiler.compiled_dir, *path) + '.json'
-				executor.submit(save_json_file, path, data)
+		if os.path.isfile('save_cache.json'):
+			try:
+				with open('save_cache.json') as f:
+					old_save_cache = json.load(f)
+			except:
+				old_save_cache = {}
+		else:
+			old_save_cache = {}
+		new_save_cache = {}
+
+		for path, data in self._files_to_save.items():
+			path = os.path.join(PyMCTCompiler.compiled_dir, *path) + '.json'
+			data = json.dumps(data, indent=4)
+			h = new_save_cache[path] = hashlib.sha1(data.encode('utf8')).hexdigest()
+
+			if path not in old_save_cache or old_save_cache[path] != h:
+				os.makedirs(os.path.dirname(path), exist_ok=True)
+				with open(path, 'w') as f:
+					f.write(data)
+
+		for path in old_save_cache.keys():
+			if path not in new_save_cache:
+				os.remove(path)
+
+		with open('save_cache.json', 'w') as f:
+			json.dump(new_save_cache, f, indent=4)
 
 
 disk_buffer = DiskBuffer()

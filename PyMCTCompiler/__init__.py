@@ -18,13 +18,6 @@ def build(compiled_dir_):
 	compiled_dir = compiled_dir_
 	"""Will remove all files from compiled_dir and generate them from uncompiled_dir"""
 	t2 = time.time()
-	# delete the mappings folder
-	log_to_file('Deleting the mapping directory ...')
-	if os.path.exists(compiled_dir):
-		shutil.rmtree(compiled_dir)
-	if os.path.isdir(compiled_dir):
-		raise Exception(f'Failed to delete "{compiled_dir}" for some reason')
-	log_to_file('\tFinished deleting the mapping directory')
 
 	# sort versions into order by version number
 	versions: Dict[str, BaseCompiler] = {}
@@ -45,7 +38,6 @@ def build(compiled_dir_):
 		t = time.time()
 		compiler.build()
 		log_to_file(f'\tFinished in {round(time.time() - t, 2)} seconds')
-
 
 	disk_buffer.save()
 	log_to_file(f'\nFinished compiling all versions in {round(time.time() - t2, 2)}')
