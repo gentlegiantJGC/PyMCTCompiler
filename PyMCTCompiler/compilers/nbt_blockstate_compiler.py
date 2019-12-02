@@ -88,8 +88,13 @@ class NBTBlockstateCompiler(BaseCompiler):
 
 				assert 'to_universal' in block_primitive_file, f'Key to_universal must be defined'
 				assert 'from_universal' in block_primitive_file, f'Key from_universal must be defined'
-				self._save_data('block', 'block', block_primitive_file, self.version_name, namespace, sub_name, block_base_name)
+				if 'specification' in block_primitive_file:
+					spec = disk_buffer.get_specification(self.version_name, 'block', 'blockstate', namespace, sub_name, block_base_name)
+					for key, val in block_primitive_file['specification'].items():
+						spec[key] = val
+					block_primitive_file['specification'] = spec
 
+				self._save_data('block', 'block', block_primitive_file, self.version_name, namespace, sub_name, block_base_name)
 
 	def _build_entities(self):
 		for (namespace, sub_name), entity_data in self.entities.items():
