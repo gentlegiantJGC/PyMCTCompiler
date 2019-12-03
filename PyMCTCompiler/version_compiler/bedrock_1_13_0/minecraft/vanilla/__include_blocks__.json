@@ -130,7 +130,6 @@
 	"heavy_weighted_pressure_plate": "heavy_weighted_pressure_plate",
 	"redstone_block": "redstone_block",
 	"quartz_ore": "quartz_ore",
-	"hopper": "hopper",
 	"quartz_block": "quartz_block",
 	"quartz_stairs": "quartz_stairs",
 	"double_wooden_slab": "double_wooden_slab",
@@ -152,8 +151,6 @@
 	"coal_block": "coal_block",
 	"packed_ice": "packed_ice",
 	"double_plant": "double_plant",
-	"standing_banner": "standing_banner",
-	"wall_banner": "wall_banner",
 	"red_sandstone": "red_sandstone",
 	"red_sandstone_stairs": "red_sandstone_stairs",
 	"double_stone_slab2": "double_stone_slab2",
@@ -178,7 +175,6 @@
 	"end_bricks": "end_bricks",
 	"frosted_ice": "frosted_ice",
 	"end_rod": "end_rod",
-	"end_gateway": "end_gateway",
 	"magma": "magma",
 	"nether_wart_block": "nether_wart_block",
 	"red_nether_brick": "red_nether_brick",
@@ -453,8 +449,6 @@
 	"ender_chest": [">nbt.ender_chest.b113", "ender_chest"],
 	"command_block": [">nbt.command_block.b113", "command_block"],
 	"beacon": [">nbt.beacon.b113", "beacon"],
-	"flower_pot": null,
-	"skull": null,
 	"trapped_chest": [">nbt.chest.trapped_b113", "trapped_chest"],
 	"unpowered_comparator": [">nbt.comparator.b113", "unpowered_comparator"],
 	"powered_comparator": [">nbt.comparator.b113", "powered_comparator"],
@@ -480,6 +474,11 @@
 	"darkoak_wall_sign": [">nbt.sign.wall_b113", "darkoak_wall_sign"],
 	"birch_wall_sign": [">nbt.sign.wall_b113", "birch_wall_sign"],
 	"jungle_wall_sign": [">nbt.sign.wall_b113", "jungle_wall_sign"],
-	"acacia_wall_sign": [">nbt.sign.wall_b113", "acacia_wall_sign"]
-
+	"acacia_wall_sign": [">nbt.sign.wall_b113", "acacia_wall_sign"],
+	"hopper": "hopper",
+	"flower_pot": null,
+	"skull": null,
+	"end_gateway": "end_gateway",
+	"standing_banner": "standing_banner",
+	"wall_banner": "wall_banner"
 }
