@@ -5,9 +5,7 @@
 		},
 		"defaults": {
 			"block_data": "0"
-		},
-		"nbt_identifier": ["minecraft", "bed"],
-		"snbt": "{color:14b,isMovable:1b}"
+		}
 	},
 	"to_universal": [
 		{
@@ -28,53 +26,6 @@
 							}
 						}
 					] for data in range(16)
-				}
-			}
-		},
-		{
-			"function": "walk_input_nbt",
-			"options": {
-				"type": "compound",
-				"keys": {
-					"color": {
-						"type": "byte",
-						"functions": [
-							{
-								"function": "map_nbt",
-								"options": {
-									"cases": {
-										str(num): [
-											{
-												"function": "new_properties",
-												"options": {
-													"color": color
-												}
-											}
-										] for num, color in enumerate([
-										"white",
-										"orange",
-										"magenta",
-										"light_blue",
-										"yellow",
-										"lime",
-										"pink",
-										"gray",
-										"light_gray",
-										"cyan",
-										"purple",
-										"blue",
-										"brown",
-										"green",
-										"red",
-										"black"
-									])
-									},
-									"default": []
-								}
-							}
-						],
-						"self_default": []
-					}
 				}
 			}
 		}
@@ -115,34 +66,6 @@
 								}
 							}
 						] for data8, part in {0: "foot", 8: "head"}.items()
-					},
-					"color": {
-						color: [
-							{
-								"function": "new_nbt",
-								"options": {
-									"key": "color",
-									"value": f"{num}b"
-								}
-							}
-						] for num, color in enumerate([
-						"white",
-						"orange",
-						"magenta",
-						"light_blue",
-						"yellow",
-						"lime",
-						"pink",
-						"gray",
-						"light_gray",
-						"cyan",
-						"purple",
-						"blue",
-						"brown",
-						"green",
-						"red",
-						"black"
-					])
 					}
 				}
 			}

@@ -25,7 +25,7 @@
 	"dispenser": "dispenser",
 	"sandstone": "sandstone+chiseled+cut+smooth",
 	"noteblock": "noteblock_bedrock",
-	"bed": "bed_color_bedrock",
+	"bed": [">nbt.bed.b17", "bed_bedrock"],
 	"golden_rail": "golden_rail",
 	"detector_rail": "detector_rail",
 	"sticky_piston": "sticky_piston_bedrock",
