@@ -40,7 +40,12 @@
 			"defaults": {
 				"mob": "skeleton",
 				"rotation": "0"
-			}
+			},
+			"nbt_identifier": [
+		        "universal_minecraft",
+		        "head"
+		    ],
+		    "snbt": "{utags: {isMovable: 1b}}"
 		}
 	}
 }
