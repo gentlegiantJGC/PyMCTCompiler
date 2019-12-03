@@ -1,1 +1,0 @@
-blockstate.auto_id('minecraft:mob_spawner', ['universal_minecraft:spawner'])
