@@ -51,9 +51,9 @@ class TranslationFile:
 
 
 class EmptyNBT(TranslationFile):
-    def __init__(self, namespaced_name: str):
+    def __init__(self, namespaced_identifier: str, universal_namespaced_identifier=None):
         spec = {
-            "nbt_identifier": namespaced_name.split(':', 1),
+            "nbt_identifier": namespaced_identifier.split(':', 1),
             "snbt": "{}"
         }
         to_universal = [

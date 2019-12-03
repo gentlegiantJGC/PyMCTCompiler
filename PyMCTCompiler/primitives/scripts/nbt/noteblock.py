@@ -8,5 +8,5 @@ Default
 
 b113 = merge(
     [EmptyNBT('minecraft:noteblock'), bedrock_is_movable],
-    ['universal_minecraft:noteblock']
+    ['universal_minecraft:note_block']
 )
