@@ -25,6 +25,9 @@ class TranslationFile:
         to_universal = copy.deepcopy(self.to_universal)
         from_universal = copy.deepcopy(self.from_universal)
         if abstract:
+            universal_spec = copy.deepcopy(self.spec)
+            universal_to_universal = copy.deepcopy(self.to_universal)
+            universal_from_universal = copy.deepcopy(self.from_universal)
             return Primitive({
                 "specification": spec,
                 "to_universal": to_universal,
@@ -32,10 +35,10 @@ class TranslationFile:
                     universal_block: from_universal
                     for universal_block in universal_blocks
                 },
-                "blockstate_specification": spec,
-                "blockstate_to_universal": to_universal,
+                "blockstate_specification": universal_spec,
+                "blockstate_to_universal": universal_to_universal,
                 "blockstate_from_universal": {
-                    universal_block: from_universal
+                    universal_block: universal_from_universal
                     for universal_block in universal_blocks
                 }
             })
