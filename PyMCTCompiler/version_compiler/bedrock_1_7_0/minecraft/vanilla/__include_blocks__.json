@@ -261,7 +261,7 @@
 	"chain_command_block": ["chain_command_block"],
 	"unpowered_comparator": null,
 	"powered_comparator": null,
-	"conduit": null,
+	"conduit": ["conduit", ">nbt.conduit.b17"],
 	"daylight_detector": ["daylight_detector_base", "daylight_detector_normal"],
 	"daylight_detector_inverted": ["daylight_detector_base", "daylight_detector_inverted"],
 	"dispenser": "dispenser",
