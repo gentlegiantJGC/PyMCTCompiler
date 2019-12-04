@@ -224,7 +224,7 @@
 	"powered_comparator": "java_powered_comparator",
 	"daylight_detector": ["daylight_detector_base", "daylight_detector_normal", ">nbt.daylight_detector.j112"],
 	"daylight_detector_inverted": ["daylight_detector_base", "daylight_detector_inverted", ">nbt.daylight_detector.j112"],
-	"dispenser": "dispenser",
+	"dispenser": ["dispenser", ">nbt.dispenser.j112"],
 	"dropper": "dropper",
 	"enchanting_table": "enchanting_table",
 	"end_gateway": null,
