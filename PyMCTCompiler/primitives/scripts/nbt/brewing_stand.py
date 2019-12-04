@@ -4,12 +4,13 @@ from .common import java_items_5, java_str_lock, java_custom_name, \
 
 """
 Default
-J113    "minecraft:brewing_stand"		"{Fuel: 0b, Items: [], BrewTime: 0s, Lock: \"\"}"
+J112    "minecraft:brewing_stand"		{Fuel: 0b, Items: [], BrewTime: 0s, Lock: ""}
+J113    "minecraft:brewing_stand"		{Fuel: 0b, Items: [], BrewTime: 0s, Lock: ""}
 
-B113	"BrewingStand"		"{CookTime: 0s, FuelAmount: 0s, FuelTotal: 0s, Items: [], isMovable: 1b}"
+B113	"BrewingStand"		{CookTime: 0s, FuelAmount: 0s, FuelTotal: 0s, Items: [], isMovable: 1b}
 """
 
-_J113 = NBTRemapHelper(
+_J112 = NBTRemapHelper(
     [
         (
             ("Fuel", "byte", []),
@@ -41,9 +42,21 @@ _B113 = NBTRemapHelper(
     "{CookTime: 0s, FuelAmount: 0s, FuelTotal: 0s}"
 )
 
+j112 = merge(
+    [EmptyNBT('minecraft:brewing_stand'), _J112, java_items_5, java_str_lock, java_custom_name],
+    ['universal_minecraft:brewing_stand'],
+    abstract=True
+)
+
 j113 = merge(
-    [EmptyNBT('minecraft:brewing_stand'), _J113, java_items_5, java_str_lock, java_custom_name],
+    [EmptyNBT('minecraft:brewing_stand'), _J112, java_items_5, java_str_lock, java_custom_name],
     ['universal_minecraft:brewing_stand']
+)
+
+b17 = merge(
+    [EmptyNBT('minecraft:brewing_stand'), _B113, bedrock_items_5, bedrock_is_movable],
+    ['universal_minecraft:brewing_stand'],
+    abstract=True
 )
 
 b113 = merge(

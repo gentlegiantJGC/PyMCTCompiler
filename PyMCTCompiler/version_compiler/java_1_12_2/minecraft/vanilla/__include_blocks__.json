@@ -214,7 +214,7 @@
 	"wall_banner": ["wall_banner", ">nbt.banner.wall_j112"],
 	"beacon": ["beacon", ">nbt.beacon.j112"],
 	"bed": ["bed_java", ">nbt.bed.j112"],
-	"brewing_stand": ["brewing_stand"],
+	"brewing_stand": ["brewing_stand", ">nbt.brewing_stand.j112"],
 	"chest": ["chest"],
 	"trapped_chest": ["trapped_chest"],
 	"command_block": ["impulse_command_block"],

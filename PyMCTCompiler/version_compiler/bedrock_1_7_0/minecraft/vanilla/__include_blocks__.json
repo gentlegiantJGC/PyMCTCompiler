@@ -253,7 +253,7 @@
 	"wall_banner": null,
 	"beacon": [">nbt.beacon.b17", "beacon"],
 	"bed": [">nbt.bed.b17", "bed_bedrock"],
-	"brewing_stand": ["brewing_stand"],
+	"brewing_stand": ["brewing_stand", ">nbt.brewing_stand.b17"],
 	"chest": ["chest"],
 	"trapped_chest": ["trapped_chest"],
 	"command_block": ["impulse_command_block"],

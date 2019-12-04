@@ -10,9 +10,7 @@ B113    "Banner"		        {Base: 0, Type: 0, isMovable: 1b}
 
 
 With Data
-J112   "minecraft:banner"       {Patterns:[],Base:15}
-                                {Patterns:[],Base:14}
-                                {Patterns:[],Base:10}
+J112   "minecraft:banner"       {Patterns:[],Base:0}
 """
 
 _J112 = NBTRemapHelper(
