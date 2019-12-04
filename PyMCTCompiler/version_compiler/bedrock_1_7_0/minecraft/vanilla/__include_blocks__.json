@@ -270,6 +270,7 @@
 	"end_gateway": null,
 	"end_portal": null,
 	"ender_chest": ["ender_chest"],
+	"flower_pot": null,
 	"furnace": "furnace",
 	"hopper": "hopper",
 	"jukebox": ["jukebox", "jukebox_nbt"],
@@ -281,6 +282,5 @@
 	"wall_sign": ["wall_sign"],
 	"skull": null,
 	"structure_block": null,
-	"movingblock": null,
-	"flower_pot": null
+	"movingblock": null
 }
