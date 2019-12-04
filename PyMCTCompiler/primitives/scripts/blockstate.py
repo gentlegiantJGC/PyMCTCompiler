@@ -301,7 +301,22 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 					"function": "walk_input_nbt",
 					"options": {
 						"type": "compound",
-						"keys": {}
+						"keys": {},
+						"nested_default": []
+					}
+				},
+				{
+					"custom_name": "copy_unknown",
+					"function": "walk_input_nbt",
+					"options": {
+						"type": "compound",
+						"keys": {
+							"utags": {
+								"type": "compound",
+								"self_default": [],
+								"nested_default": []
+							}
+						}
 					}
 				}
 			] for universal_block in universal_blocks

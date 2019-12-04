@@ -1,9 +1,8 @@
 import os
-from typing import Union
+from typing import Union, List
 from urllib.request import urlopen
 import json
 import amulet_nbt
-import PyMCTCompiler
 
 log_file = open('log.txt', 'w')
 
@@ -72,14 +71,13 @@ def unique_merge_lists(list_a: list, list_b: list) -> list:
 	return merged_list
 
 
-def blocks_from_server(version_name: str, version_str: str = None):
-	uncompiled_path = os.path.join(PyMCTCompiler.path, 'version_compiler')
-	if not os.path.isfile(f'{uncompiled_path}/{version_name}/generated/reports/blocks.json'):
-		if not os.path.isfile(f'{uncompiled_path}/{version_name}/server.jar'):
-			download_server_jar(f'{uncompiled_path}/{version_name}', version_str)
+def blocks_from_server(version_path: str, version_str: List[str] = None):
+	if not os.path.isfile(f'{version_path}/generated/reports/blocks.json'):
+		if not os.path.isfile(f'{version_path}/server.jar'):
+			download_server_jar(f'{version_path}', version_str)
 		# try and find a version of java with which to extract the blocks.json file
 		try:
-			os.system(f'java -cp {uncompiled_path}/{version_name}/server.jar net.minecraft.data.Main --reports --output {uncompiled_path}/{version_name}/generated')
+			os.system(f'java -cp {version_path}/server.jar net.minecraft.data.Main --reports --output {version_path}/generated')
 		except:
 			print('Could not find global Java. Trying to find the one packaged with Minecraft')
 			if os.path.isdir(r'C:\Program Files (x86)\Minecraft\runtime'):
@@ -95,16 +93,17 @@ def blocks_from_server(version_name: str, version_str: str = None):
 					break
 			if java_path is not None:
 				try:
-					os.system(f'{java_path} -cp {uncompiled_path}/{version_name}/server.jar net.minecraft.data.Main --reports --output {uncompiled_path}/{version_name}/generated')
+					os.system(f'{java_path} -cp {version_path}/server.jar net.minecraft.data.Main --reports --output {version_path}/generated')
 				except Exception as e:
 					raise Exception(f'This failed for some reason\n{e}')
 
 
-def download_server_jar(path: str, version_str: str = None):
+def download_server_jar(path: str, version_str: List[str] = None):
 	manifest = json.load(urlopen('https://launchermeta.mojang.com/mc/game/version_manifest.json'))
 	if version_str is None:
-		version_str = manifest['latest']['release']
-	version = next((v for v in manifest['versions'] if v['id'] == version_str), None)
+		version_str = manifest['latest']['release'].split('.')
+	version_str = version_str + ['0'] * (4 - len(version_str))
+	version = next((v for v in manifest['versions'] if v['id'].split('.') + ['0'] * (4 - len(v['id'].split('.'))) == version_str), None)
 	if version is None:
 		raise Exception(f'Could not find version "{version_str}"')
 	version_manifest = json.load(urlopen(version['url']))
@@ -115,5 +114,3 @@ def download_server_jar(path: str, version_str: str = None):
 			f.write(server)
 	else:
 		raise Exception(f'Could not find server for version "{version_str}"')
-
-from PyMCTCompiler.translation_functions import FunctionList

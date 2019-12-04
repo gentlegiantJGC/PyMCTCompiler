@@ -1,0 +1,196 @@
+{
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					str(data): [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:bed"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"facing": {0: "south", 1: "west", 2: "north", 3: "east"}[data & 3],
+								"occupied": {0: "false", 4: "true"}[data & 4],
+								"part": {0: "foot", 8: "head"}[data & 8]
+							}
+						}
+					] for data in range(16)
+				}
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:bed": [
+			{
+				"function": "new_block",
+				"options": "minecraft:bed"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"part": {
+						part: [
+							{
+								"function": "map_properties",
+								"options": {
+									"occupied": {
+										occupied: [
+											{
+												"function": "map_properties",
+												"options": {
+													"facing": {
+														facing: [
+															{
+																"function": "new_properties",
+																"options": {
+																	"block_data": str(data8 + data4 + data3)
+																}
+															}
+														] for data3, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
+													}
+												}
+											}
+										] for data4, occupied in {0: "false", 4: "true"}.items()
+									}
+								}
+							}
+						] for data8, part in {0: "foot", 8: "head"}.items()
+					}
+				}
+			}
+		]
+	},
+	"blockstate_specification": {
+		"properties": {
+			"facing": [
+				"east",
+				"north",
+				"south",
+				"west"
+			],
+			"occupied": [
+				"true",
+				"false"
+			],
+			"part": [
+				"foot",
+				"head"
+			],
+			"color": [
+				"white",
+				"orange",
+				"magenta",
+				"light_blue",
+				"yellow",
+				"lime",
+				"pink",
+				"gray",
+				"light_gray",
+				"cyan",
+				"purple",
+				"blue",
+				"brown",
+				"green",
+				"red",
+				"black"
+			]
+		},
+		"defaults": {
+			"facing": "north",
+			"occupied": "false",
+			"part": "foot",
+			"color": "red"
+		}
+	},
+	"blockstate_to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:bed"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
+				"facing": [
+					"east",
+					"north",
+					"south",
+					"west"
+				],
+				"occupied": [
+					"true",
+					"false"
+				],
+				"part": [
+					"foot",
+					"head"
+				],
+				"color": [
+					"white",
+					"orange",
+					"magenta",
+					"light_blue",
+					"yellow",
+					"lime",
+					"pink",
+					"gray",
+					"light_gray",
+					"cyan",
+					"purple",
+					"blue",
+					"brown",
+					"green",
+					"red",
+					"black"
+				]
+			}
+		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:bed": [
+			{
+				"function": "new_block",
+				"options": "minecraft:bed"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"facing": [
+						"east",
+						"north",
+						"south",
+						"west"
+					],
+					"occupied": [
+						"true",
+						"false"
+					],
+					"part": [
+						"foot",
+						"head"
+					],
+					"color": [
+						"white",
+						"orange",
+						"magenta",
+						"light_blue",
+						"yellow",
+						"lime",
+						"pink",
+						"gray",
+						"light_gray",
+						"cyan",
+						"purple",
+						"blue",
+						"brown",
+						"green",
+						"red",
+						"black"
+					]
+				}
+			}
+		]
+	}
+}

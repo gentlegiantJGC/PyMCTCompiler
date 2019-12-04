@@ -114,3 +114,4 @@ log.txt
 tests/logs/
 
 amulet_nbt
+save_cache.json

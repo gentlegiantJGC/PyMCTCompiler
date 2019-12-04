@@ -1,0 +1,38 @@
+{
+	"specification": {
+		"properties": {
+			"inverted": ["true", "false"],
+			"power": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
+		},
+		"defaults": {
+			"inverted": "false",
+			"power": "0"
+		}
+	},
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:daylight_detector"
+		}, {
+			"function": "carry_properties",
+			"options": {
+				"inverted": ["true", "false"],
+				"power": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:daylight_detector": [
+			{
+				"function": "new_block",
+				"options": "minecraft:daylight_detector"
+			}, {
+				"function": "carry_properties",
+				"options": {
+					"inverted": ["true", "false"],
+					"power": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
+				}
+			}
+		]
+	}
+}

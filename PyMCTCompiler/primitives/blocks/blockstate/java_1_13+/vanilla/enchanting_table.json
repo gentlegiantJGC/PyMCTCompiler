@@ -1,0 +1,17 @@
+{
+	"specification": {},
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:enchanting_table"
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:enchanting_table": [
+			{
+				"function": "new_block",
+				"options": "minecraft:enchanting_table"
+			}
+		]
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"specification": {},
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:end_gateway"
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:end_gateway": [
+			{
+				"function": "new_block",
+				"options": "minecraft:end_gateway"
+			}
+		]
+	}
+}

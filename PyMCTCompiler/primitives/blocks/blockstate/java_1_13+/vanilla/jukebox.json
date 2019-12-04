@@ -1,0 +1,34 @@
+{
+	"specification": {
+		"properties": {
+			"has_record": ["true", "false"]
+		},
+		"defaults": {
+			"has_record": "false"
+		}
+	},
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:jukebox"
+		}, {
+			"function": "carry_properties",
+			"options": {
+				"has_record": ["true", "false"]
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:jukebox": [
+			{
+				"function": "new_block",
+				"options": "minecraft:jukebox"
+			}, {
+				"function": "carry_properties",
+				"options": {
+					"has_record": ["true", "false"]
+				}
+			}
+		]
+	}
+}

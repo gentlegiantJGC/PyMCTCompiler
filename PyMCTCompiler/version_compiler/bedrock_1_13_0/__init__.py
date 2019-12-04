@@ -1,13 +1,10 @@
-from PyMCTCompiler.compilers import nbt_blockstate_compiler
+from PyMCTCompiler.compilers.nbt_blockstate_compiler import NBTBlockstateCompiler
+import os
 
-init = {
-	"block_format": "nbt-blockstate",
-	"block_entity_format": "str-id",
-	"block_entity_coord_format": "xyz-int",
-	"entity_format": "namespace-str-id",
-	"entity_coord_format": "Pos-list-float",
-	"platform": "bedrock",
-	"version": [1, 13, 0]
-}
-compiler = nbt_blockstate_compiler.main
-
+compiler = NBTBlockstateCompiler(
+    os.path.dirname(__file__),
+    block_format="nbt-blockstate",
+    entity_format="namespace-str-id",
+    version=[1, 13, 0],
+    parent_version='bedrock_1_11_4'
+)

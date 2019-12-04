@@ -29,7 +29,12 @@
 				"conditional": "false",
 				"facing": "north",
 				"mode": "impulse"
-			}
+			},
+			"nbt_identifier": [
+		        "universal_minecraft",
+		        "command_block"
+		    ],
+		    "snbt": "{utags: {isMovable: 1b}}"
 		}
 	}
 }

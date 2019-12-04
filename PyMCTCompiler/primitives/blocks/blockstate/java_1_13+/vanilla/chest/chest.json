@@ -1,0 +1,38 @@
+{
+	"specification": {
+		"properties": {
+			"facing": ["north", "south", "west", "east"],
+			"type": ["single", "left", "right"]
+		},
+		"defaults": {
+			"facing": "north",
+			"type": "single"
+		}
+	},
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:chest"
+		}, {
+			"function": "carry_properties",
+			"options": {
+				"facing": ["north", "south", "west", "east"],
+				"type": ["single", "left", "right"]
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:chest": [
+			{
+				"function": "new_block",
+				"options": "minecraft:chest"
+			}, {
+				"function": "carry_properties",
+				"options": {
+					"facing": ["north", "south", "west", "east"],
+					"type": ["single", "left", "right"]
+				}
+			}
+		]
+	}
+}

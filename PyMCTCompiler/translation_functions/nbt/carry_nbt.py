@@ -53,7 +53,7 @@ class CarryNBT(BaseTranslationFunction):
 		if 'key' in self['options']:
 			if isinstance(self['options']['key'], str):
 				if 'path' in self['options']:
-					assert self['options']['path'][-1][1] == 'compound', f'Expected the final data type in path to be "compound" got {self["options"]["path"][-1][1]}'
+					assert self['options']['path'] == [] or self['options']['path'][-1][1] == 'compound', f'Expected the final data type in path to be "compound" got {self["options"]["path"][-1][1]}'
 			elif isinstance(self['options']['key'], int):
 				if 'path' in self['options']:
 					assert self['options']['path'][-1][1] == 'list', f'Expected the final data type in path to be "list" got {self["options"]["path"][-1][1]}'

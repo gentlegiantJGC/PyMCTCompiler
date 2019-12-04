@@ -1,0 +1,17 @@
+{
+	"specification": {},
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:beacon"
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:beacon": [
+			{
+				"function": "new_block",
+				"options": "minecraft:beacon"
+			}
+		]
+	}
+}

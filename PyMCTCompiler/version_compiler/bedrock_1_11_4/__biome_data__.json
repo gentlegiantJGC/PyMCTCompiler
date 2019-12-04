@@ -1,0 +1,17 @@
+{
+	"__comment__": "this was actually added in 1.9",
+	"add": {
+		"biomes": {
+		    "minecraft:bamboo_jungle": [
+		        168,
+		        "universal_minecraft:bamboo_jungle"
+		    ],
+		    "minecraft:bamboo_jungle_hills": [
+		        169,
+		        "universal_minecraft:bamboo_jungle_hills"
+		    ]
+		},
+		"universal_remap": {}
+    },
+    "remove": []
+}

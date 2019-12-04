@@ -1,0 +1,26 @@
+{
+	"specification": {
+		"properties": {},
+		"defaults": {}
+	},
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:conduit"
+		}, {
+			"function": "carry_properties",
+			"options": {}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:conduit": [
+			{
+				"function": "new_block",
+				"options": "minecraft:conduit"
+			}, {
+				"function": "carry_properties",
+				"options": {}
+			}
+		]
+	}
+}

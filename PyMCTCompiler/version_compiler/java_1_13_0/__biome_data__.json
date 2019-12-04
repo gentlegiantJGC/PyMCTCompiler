@@ -1,0 +1,278 @@
+{
+    "add": {
+        "biomes": {
+            "minecraft:mountains": [
+                3,
+                "universal_minecraft:mountains"
+            ],
+            "minecraft:swamp": [
+                6,
+                "universal_minecraft:swamp"
+            ],
+            "minecraft:nether": [
+                8,
+                "universal_minecraft:nether"
+            ],
+            "minecraft:the_end": [
+                9,
+                "universal_minecraft:the_end"
+            ],
+            "minecraft:snowy_tundra": [
+                12,
+                "universal_minecraft:snowy_tundra"
+            ],
+            "minecraft:snowy_mountains": [
+                13,
+                "universal_minecraft:snowy_mountains"
+            ],
+            "minecraft:mushroom_fields": [
+                14,
+                "universal_minecraft:mushroom_fields"
+            ],
+            "minecraft:mushroom_field_shore": [
+                15,
+                "universal_minecraft:mushroom_field_shore"
+            ],
+            "minecraft:beach": [
+                16,
+                "universal_minecraft:beach"
+            ],
+            "minecraft:wooded_hills": [
+                18,
+                "universal_minecraft:wooded_hills"
+            ],
+            "minecraft:mountain_edge": [
+                20,
+                "universal_minecraft:mountain_edge"
+            ],
+            "minecraft:stone_shore": [
+                25,
+                "universal_minecraft:stone_shore"
+            ],
+            "minecraft:snowy_beach": [
+                26,
+                "universal_minecraft:snowy_beach"
+            ],
+            "minecraft:dark_forest": [
+                29,
+                "universal_minecraft:dark_forest"
+            ],
+            "minecraft:snowy_taiga": [
+                30,
+                "universal_minecraft:snowy_taiga"
+            ],
+            "minecraft:snowy_taiga_hills": [
+                31,
+                "universal_minecraft:snowy_taiga_hills"
+            ],
+            "minecraft:giant_tree_taiga": [
+                32,
+                "universal_minecraft:giant_tree_taiga"
+            ],
+            "minecraft:giant_tree_taiga_hills": [
+                33,
+                "universal_minecraft:giant_tree_taiga_hills"
+            ],
+            "minecraft:wooded_mountains": [
+                34,
+                "universal_minecraft:wooded_mountains"
+            ],
+            "minecraft:savanna_plateau": [
+                36,
+                "universal_minecraft:savanna_plateau"
+            ],
+            "minecraft:badlands": [
+                37,
+                "universal_minecraft:badlands"
+            ],
+            "minecraft:wooded_badlands_plateau": [
+                38,
+                "universal_minecraft:wooded_badlands_plateau"
+            ],
+            "minecraft:badlands_plateau": [
+                39,
+                "universal_minecraft:badlands_plateau"
+            ],
+            "minecraft:small_end_islands": [
+                40,
+                "universal_minecraft:small_end_islands"
+            ],
+            "minecraft:end_midlands": [
+                41,
+                "universal_minecraft:end_midlands"
+            ],
+            "minecraft:end_highlands": [
+                42,
+                "universal_minecraft:end_highlands"
+            ],
+            "minecraft:end_barrens": [
+                43,
+                "universal_minecraft:end_barrens"
+            ],
+            "minecraft:warm_ocean": [
+                44,
+                "universal_minecraft:warm_ocean"
+            ],
+            "minecraft:lukewarm_ocean": [
+                45,
+                "universal_minecraft:lukewarm_ocean"
+            ],
+            "minecraft:cold_ocean": [
+                46,
+                "universal_minecraft:cold_ocean"
+            ],
+            "minecraft:deep_warm_ocean": [
+                47,
+                "universal_minecraft:deep_warm_ocean"
+            ],
+            "minecraft:deep_lukewarm_ocean": [
+                48,
+                "universal_minecraft:deep_lukewarm_ocean"
+            ],
+            "minecraft:deep_cold_ocean": [
+                49,
+                "universal_minecraft:deep_cold_ocean"
+            ],
+            "minecraft:deep_frozen_ocean": [
+                50,
+                "universal_minecraft:deep_frozen_ocean"
+            ],
+            "minecraft:the_void": [
+                127,
+                "universal_minecraft:the_void"
+            ],
+            "minecraft:sunflower_plains": [
+                129,
+                "universal_minecraft:sunflower_plains"
+            ],
+            "minecraft:desert_lakes": [
+                130,
+                "universal_minecraft:desert_lakes"
+            ],
+            "minecraft:gravelly_mountains": [
+                131,
+                "universal_minecraft:gravelly_mountains"
+            ],
+            "minecraft:flower_forest": [
+                132,
+                "universal_minecraft:flower_forest"
+            ],
+            "minecraft:taiga_mountains": [
+                133,
+                "universal_minecraft:taiga_mountains"
+            ],
+            "minecraft:swamp_hills": [
+                134,
+                "universal_minecraft:swamp_hills"
+            ],
+            "minecraft:ice_spikes": [
+                140,
+                "universal_minecraft:ice_spikes"
+            ],
+            "minecraft:modified_jungle": [
+                149,
+                "universal_minecraft:modified_jungle"
+            ],
+            "minecraft:modified_jungle_edge": [
+                151,
+                "universal_minecraft:modified_jungle_edge"
+            ],
+            "minecraft:tall_birch_forest": [
+                155,
+                "universal_minecraft:tall_birch_forest"
+            ],
+            "minecraft:tall_birch_hills": [
+                156,
+                "universal_minecraft:tall_birch_hills"
+            ],
+            "minecraft:dark_forest_hills": [
+                157,
+                "universal_minecraft:dark_forest_hills"
+            ],
+            "minecraft:snowy_taiga_mountains": [
+                158,
+                "universal_minecraft:snowy_taiga_mountains"
+            ],
+            "minecraft:giant_spruce_taiga": [
+                160,
+                "universal_minecraft:giant_spruce_taiga"
+            ],
+            "minecraft:giant_spruce_taiga_hills": [
+                161,
+                "universal_minecraft:giant_spruce_taiga_hills"
+            ],
+            "minecraft:modified_gravelly_mountains": [
+                162,
+                "universal_minecraft:modified_gravelly_mountains"
+            ],
+            "minecraft:shattered_savanna": [
+                163,
+                "universal_minecraft:shattered_savanna"
+            ],
+            "minecraft:shattered_savanna_plateau": [
+                164,
+                "universal_minecraft:shattered_savanna_plateau"
+            ],
+            "minecraft:eroded_badlands": [
+                165,
+                "universal_minecraft:eroded_badlands"
+            ],
+            "minecraft:modified_wooded_badlands_plateau": [
+                166,
+                "universal_minecraft:modified_wooded_badlands_plateau"
+            ],
+            "minecraft:modified_badlands_plateau": [
+                167,
+                "universal_minecraft:modified_badlands_plateau"
+            ]
+        },
+        "universal_remap": {}
+    },
+    "remove": [
+        "minecraft:extreme_hills",
+        "minecraft:swampland",
+        "minecraft:hell",
+        "minecraft:sky",
+        "minecraft:ice_flats",
+        "minecraft:ice_mountains",
+        "minecraft:mushroom_island",
+        "minecraft:mushroom_island_shore",
+        "minecraft:beaches",
+        "minecraft:forest_hills",
+        "minecraft:smaller_extreme_hills",
+        "minecraft:stone_beach",
+        "minecraft:cold_beach",
+        "minecraft:roofed_forest",
+        "minecraft:taiga_cold",
+        "minecraft:taiga_cold_hills",
+        "minecraft:redwood_taiga",
+        "minecraft:redwood_taiga_hills",
+        "minecraft:extreme_hills_with_trees",
+        "minecraft:savanna_rock",
+        "minecraft:mesa",
+        "minecraft:mesa_rock",
+        "minecraft:mesa_clear_rock",
+        "minecraft:void",
+        "minecraft:mutated_plains",
+        "minecraft:mutated_desert",
+        "minecraft:mutated_extreme_hills",
+        "minecraft:mutated_forest",
+        "minecraft:mutated_taiga",
+        "minecraft:mutated_swampland",
+        "minecraft:mutated_ice_flats",
+        "minecraft:mutated_jungle",
+        "minecraft:mutated_jungle_edge",
+        "minecraft:mutated_birch_forest",
+        "minecraft:mutated_birch_forest_hills",
+        "minecraft:mutated_roofed_forest",
+        "minecraft:mutated_taiga_cold",
+        "minecraft:mutated_redwood_taiga",
+        "minecraft:mutated_redwood_taiga_hills",
+        "minecraft:mutated_extreme_hills_with_trees",
+        "minecraft:mutated_savanna",
+        "minecraft:mutated_savanna_rock",
+        "minecraft:mutated_mesa",
+        "minecraft:mutated_mesa_rock",
+        "minecraft:mutated_mesa_clear_rock"
+    ]
+}

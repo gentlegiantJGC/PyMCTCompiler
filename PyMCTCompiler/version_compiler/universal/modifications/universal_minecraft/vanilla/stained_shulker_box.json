@@ -50,7 +50,12 @@
 			"defaults": {
 				"color": "white",
 				"facing": "up"
-			}
+			},
+			"nbt_identifier": [
+		        "universal_minecraft",
+		        "shulker_box"
+		    ],
+		    "snbt": "{utags: {isMovable: 1b}}"
 		}
 	}
 }
