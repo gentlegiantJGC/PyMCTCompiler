@@ -1,11 +1,17 @@
-from PyMCTCompiler.primitives.scripts.nbt import EmptyNBT, merge, TranslationFile
+from PyMCTCompiler.primitives.scripts.nbt import EmptyNBT, merge, TranslationFile, colours_16
 from .common import bedrock_is_movable
 
 """
 Default
 J113    "minecraft:bed"        "{}"
 
-B113    "Bed"        "{color: 0b, isMovable: 1b}"
+
+B113    "Bed"                   "{color: 0b, isMovable: 1b}"
+
+With Data
+J112    "minecraft:bed"         {color:0}
+J113                            {}
+
 """
 
 _B17 = TranslationFile(
@@ -29,24 +35,7 @@ _B17 = TranslationFile(
                                                     "color": color
                                                 }
                                             }
-                                        ] for num, color in enumerate([
-                                            "white",
-                                            "orange",
-                                            "magenta",
-                                            "light_blue",
-                                            "yellow",
-                                            "lime",
-                                            "pink",
-                                            "gray",
-                                            "light_gray",
-                                            "cyan",
-                                            "purple",
-                                            "blue",
-                                            "brown",
-                                            "green",
-                                            "red",
-                                            "black"
-                                        ])
+                                        ] for num, color in enumerate(colours_16)
                                     },
                                     "default": []
                                 }
@@ -71,24 +60,7 @@ _B17 = TranslationFile(
                                 "value": f"{num}b"
                             }
                         }
-                    ] for num, color in enumerate([
-                        "white",
-                        "orange",
-                        "magenta",
-                        "light_blue",
-                        "yellow",
-                        "lime",
-                        "pink",
-                        "gray",
-                        "light_gray",
-                        "cyan",
-                        "purple",
-                        "blue",
-                        "brown",
-                        "green",
-                        "red",
-                        "black"
-                    ])
+                    ] for num, color in enumerate(colours_16)
                 }
             }
         }
@@ -96,6 +68,67 @@ _B17 = TranslationFile(
     {
         "snbt": "{color:14b}"
     }
+)
+
+_J112 = TranslationFile(
+    [
+        {
+            "function": "walk_input_nbt",
+            "options": {
+                "type": "compound",
+                "keys": {
+                    "color": {
+                        "type": "int",
+                        "functions": [
+                            {
+                                "function": "map_nbt",
+                                "options": {
+                                    "cases": {
+                                        str(num): [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "color": color
+                                                }
+                                            }
+                                        ] for num, color in enumerate(colours_16)
+                                    },
+                                    "default": []
+                                }
+                            }
+                        ],
+                        "self_default": []
+                    }
+                }
+            }
+        }
+    ],
+    [
+        {
+            "function": "map_properties",
+            "options": {
+                "color": {
+                    color: [
+                        {
+                            "function": "new_nbt",
+                            "options": {
+                                "key": "color",
+                                "value": f"{num}"
+                            }
+                        }
+                    ] for num, color in enumerate(colours_16)
+                }
+            }
+        }
+    ],
+    {
+        "snbt": "{color:14}"
+    }
+)
+
+j112 = merge(
+    [EmptyNBT('minecraft:bed'), _J112],
+    ['universal_minecraft:bed']
 )
 
 j113 = merge(

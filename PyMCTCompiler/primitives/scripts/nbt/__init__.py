@@ -181,5 +181,25 @@ class NBTRemapHelper(TranslationFile):
         return obj
 
 
+colours_16 = [
+    "white",
+    "orange",
+    "magenta",
+    "light_blue",
+    "yellow",
+    "lime",
+    "pink",
+    "gray",
+    "light_gray",
+    "cyan",
+    "purple",
+    "blue",
+    "brown",
+    "green",
+    "red",
+    "black"
+]
+
+
 __all__ = [f[:-3] for f in os.listdir(os.path.dirname(__file__)) if f.endswith('.py') and f != '__init__.py']
 from PyMCTCompiler.primitives.scripts.nbt import *

@@ -213,7 +213,7 @@
 	"standing_banner": null,
 	"wall_banner": null,
 	"beacon": null,
-	"bed": "bed_color_java",
+	"bed": ["bed_java", ">nbt.bed.j112"],
 	"brewing_stand": ["brewing_stand"],
 	"chest": ["chest"],
 	"trapped_chest": ["trapped_chest"],
@@ -257,6 +257,6 @@
 	"standing_sign": ["standing_sign"],
 	"wall_sign": ["wall_sign"],
 	"skull": null,
-	"structure_block": null,
+	"structure_block": null
 
 }
