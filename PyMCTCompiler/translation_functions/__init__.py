@@ -29,6 +29,9 @@ class FunctionList(BaseTranslationObject):
 		if instant_commit:
 			self.commit(None, [])
 
+	def __repr__(self):
+		return f'FunctionList({self.function_list})'
+
 	def __contains__(self, item):
 		return item in self.function_list
 
@@ -67,7 +70,8 @@ class FunctionList(BaseTranslationObject):
 	def _compiled_extend(self, other, parents: list):
 		"""Used to merge two completed translations together.
 		The formats must match in such a way that the two base translations do not interfere."""
-		assert [fun.function_name for fun in self.function_list] == [fun.function_name for fun in other.function_list], 'The functions do not match'
+		assert [fun.function_name for fun in self.function_list] == [fun.function_name for fun in other.function_list], \
+			f'The functions do not match\n{self.function_list}\n{other.function_list}'
 
 		for self_fun, other_fun in zip(self.function_list, other.function_list):
 			assert isinstance(self_fun, BaseTranslationFunction)
@@ -103,6 +107,9 @@ class BaseTranslationFunction(BaseTranslationObject):
 		else:
 			self.custom_name = None
 		self._function = data
+
+	def __repr__(self):
+		return f'{self.__class__.__name__}({self._function})'
 
 	def __contains__(self, item: str):
 		return item in self._function
