@@ -63,7 +63,11 @@ class NumericalCompiler(BaseCompiler):
 
                 for file_format in ('numerical', 'blockstate'):
                     prefix = 'blockstate_' if file_format == 'blockstate' else ''
-                    block_primitive_file.setdefault(f'{prefix}specification', default_spec[file_format])
+                    spec = default_spec[file_format]
+                    if f'{prefix}specification' in block_primitive_file:
+                        for key, val in block_primitive_file[f'{prefix}specification'].items():
+                            spec[key] = val
+                    block_primitive_file[f'{prefix}specification'] = spec
                     self._save_data('block', 'block', block_primitive_file, self.version_name, file_format, namespace, sub_name, block_base_name, prefix)
 
     def _build_entities(self):
