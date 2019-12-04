@@ -266,7 +266,7 @@
 	"daylight_detector_inverted": ["daylight_detector_base", "daylight_detector_inverted", ">nbt.daylight_detector.b17"],
 	"dispenser": ["dispenser", ">nbt.dispenser.b17"],
 	"dropper": ["dropper", ">nbt.dropper.b17"],
-	"enchanting_table": "enchanting_table",
+	"enchanting_table": ["enchanting_table", ">nbt.enchanting_table.b17"],
 	"end_gateway": null,
 	"end_portal": null,
 	"ender_chest": ["ender_chest"],

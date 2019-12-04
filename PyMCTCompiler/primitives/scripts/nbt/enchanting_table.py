@@ -18,9 +18,21 @@ _B113 = NBTRemapHelper(
     "{rott: 0.0}"
 )
 
+j112 = merge(
+    [EmptyNBT('minecraft:enchanting_table'), java_custom_name],
+    ['universal_minecraft:enchanting_table'],
+    abstract=True
+)
+
 j113 = merge(
     [EmptyNBT('minecraft:enchanting_table'), java_custom_name],
     ['universal_minecraft:enchanting_table']
+)
+
+b17 = merge(
+    [EmptyNBT('minecraft:enchanting_table'), _B113, bedrock_is_movable],
+    ['universal_minecraft:enchanting_table'],
+    abstract=True
 )
 
 b113 = merge(
