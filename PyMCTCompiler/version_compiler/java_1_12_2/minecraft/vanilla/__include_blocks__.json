@@ -210,8 +210,8 @@
 
 	"piston_head": null,
 
-	"standing_banner": null,
-	"wall_banner": null,
+	"standing_banner": ["standing_banner", ">nbt.banner.j112"],
+	"wall_banner": ["wall_banner", ">nbt.banner.wall_j112"],
 	"beacon": null,
 	"bed": ["bed_java", ">nbt.bed.j112"],
 	"brewing_stand": ["brewing_stand"],
