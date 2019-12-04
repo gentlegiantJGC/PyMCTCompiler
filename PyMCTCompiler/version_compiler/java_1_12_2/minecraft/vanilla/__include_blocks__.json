@@ -234,7 +234,7 @@
 	"furnace": "furnace",
 	"lit_furnace": "lit_furnace",
 	"hopper": "hopper",
-	"jukebox": ["jukebox", "jukebox_nbt", "default_specification"],
+	"jukebox": ["jukebox", "jukebox_nbt"],
 	"mob_spawner": ["mob_spawner"],
 	"noteblock": "noteblock_java",
 

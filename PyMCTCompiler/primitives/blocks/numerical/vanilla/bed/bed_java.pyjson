@@ -1,12 +1,4 @@
 {
-	"specification": {
-		"properties": {
-			"block_data": [str(data) for data in range(16)]
-		},
-		"defaults": {
-			"block_data": "0"
-		}
-	},
 	"to_universal": [
 		{
 			"function": "map_properties",
