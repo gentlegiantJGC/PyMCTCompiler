@@ -251,7 +251,7 @@
 
 	"standing_banner": null,
 	"wall_banner": null,
-	"beacon": null,
+	"beacon": [">nbt.beacon.b17", "beacon"],
 	"bed": [">nbt.bed.b17", "bed_bedrock"],
 	"brewing_stand": ["brewing_stand"],
 	"chest": ["chest"],

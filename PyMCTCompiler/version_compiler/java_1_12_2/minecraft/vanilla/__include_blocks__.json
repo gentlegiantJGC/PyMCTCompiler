@@ -212,7 +212,7 @@
 
 	"standing_banner": ["standing_banner", ">nbt.banner.j112"],
 	"wall_banner": ["wall_banner", ">nbt.banner.wall_j112"],
-	"beacon": null,
+	"beacon": ["beacon", ">nbt.beacon.j112"],
 	"bed": ["bed_java", ">nbt.bed.j112"],
 	"brewing_stand": ["brewing_stand"],
 	"chest": ["chest"],
