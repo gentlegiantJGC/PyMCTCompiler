@@ -225,7 +225,7 @@
 	"daylight_detector": ["daylight_detector_base", "daylight_detector_normal", ">nbt.daylight_detector.j112"],
 	"daylight_detector_inverted": ["daylight_detector_base", "daylight_detector_inverted", ">nbt.daylight_detector.j112"],
 	"dispenser": ["dispenser", ">nbt.dispenser.j112"],
-	"dropper": "dropper",
+	"dropper": ["dropper", ">nbt.dropper.j112"],
 	"enchanting_table": "enchanting_table",
 	"end_gateway": null,
 	"end_portal": null,
