@@ -234,7 +234,7 @@
 	"furnace": ["furnace", ">nbt.furnace.j19"],
 	"lit_furnace": ["lit_furnace", ">nbt.furnace.j19"],
 	"hopper": ["hopper", ">nbt.hopper.j19"],
-	"jukebox": ["jukebox", "jukebox_nbt"],
+	"jukebox": ["jukebox", ">nbt.jukebox.j19"],
 	"mob_spawner": ["mob_spawner"],
 	"noteblock": "noteblock_java",
 

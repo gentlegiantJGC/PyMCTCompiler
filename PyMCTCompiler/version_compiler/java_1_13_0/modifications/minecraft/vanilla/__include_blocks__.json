@@ -433,7 +433,7 @@
 	"ender_chest": [">nbt.ender_chest.j113", "ender_chest"],
 	"furnace": [">nbt.furnace.j113", "furnace"],
 	"hopper": [">nbt.hopper.j113", "hopper"],
-	"jukebox": [">nbt.jukebox.j113", "jukebox"],
+	"jukebox": ["jukebox", ">nbt.jukebox.j113"],
 	"spawner": [">nbt.mob_spawner.j113", "spawner"],
 
 	"shulker_box": [">nbt.shulker_box.j113", "shulker_box"],

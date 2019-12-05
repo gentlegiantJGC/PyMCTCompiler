@@ -273,7 +273,7 @@
 	"furnace": ["furnace", ">nbt.furnace.b17"],
 	"lit_furnace": ["lit_furnace", ">nbt.furnace.b17"],
 	"hopper": ["hopper", ">nbt.hopper.b17"],
-	"jukebox": ["jukebox", "jukebox_nbt"],
+	"jukebox": ["jukebox", ">nbt.jukebox.b17"],
 	"mob_spawner": ["mob_spawner"],
 	"noteblock": "noteblock_bedrock",
 	"undyed_shulker_box": ["undyed_shulker_box", "shulker_box_nbt_bedrock"],

@@ -6,9 +6,13 @@ Default
 J113    "minecraft:jukebox"		"{}"
 
 B113	"Jukebox"		"{isMovable: 1b}"
+
+Full
+J112    "{RecordItem: {Count: 0b, Damage: 0s, id: \":\", tag: {}}}"
+J113    "{RecordItem: {Count: 0b, id: \":\", tag: {}}}"
 """
 
-_J113 = NBTRemapHelper(
+_J19 = NBTRemapHelper(
     [
         (
             ("RecordItem", "compound", []),
@@ -17,21 +21,33 @@ _J113 = NBTRemapHelper(
     ]
 )
 
-_B113 = NBTRemapHelper(
+_B17 = NBTRemapHelper(
     [
         (
             ("RecordItem", "compound", []),
             ("RecordItem", "compound", [("utags", "compound")])
         )
     ]
+)
+
+j19 = merge(
+    [EmptyNBT('minecraft:jukebox'), _J19],
+    ['universal_minecraft:jukebox'],
+    abstract=True
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:jukebox'), _J113],
+    [EmptyNBT('minecraft:jukebox'), _J19],
     ['universal_minecraft:jukebox']
 )
 
+b17 = merge(
+    [EmptyNBT('minecraft:jukebox'), _B17, bedrock_is_movable],
+    ['universal_minecraft:jukebox'],
+    abstract=True
+)
+
 b113 = merge(
-    [EmptyNBT('minecraft:jukebox'), _B113, bedrock_is_movable],
+    [EmptyNBT('minecraft:jukebox'), _B17, bedrock_is_movable],
     ['universal_minecraft:jukebox']
 )

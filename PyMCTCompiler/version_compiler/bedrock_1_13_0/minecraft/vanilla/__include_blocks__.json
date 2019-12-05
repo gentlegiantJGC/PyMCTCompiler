@@ -460,7 +460,7 @@
 	"lit_furnace": [">nbt.furnace.b113", "lit_furnace"],
 	"hopper": ["hopper", ">nbt.hopper.b113"],
 	"frame": null,
-	"jukebox": [">nbt.jukebox.b113", "jukebox"],
+	"jukebox": ["jukebox", ">nbt.jukebox.b113"],
 	"mob_spawner": [">nbt.mob_spawner.b113", "mob_spawner"],
 	"noteblock": [">nbt.noteblock.b113", "noteblock"],
 
