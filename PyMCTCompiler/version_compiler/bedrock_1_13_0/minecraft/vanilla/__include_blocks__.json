@@ -458,7 +458,7 @@
 	"flower_pot": null,
 	"furnace": [">nbt.furnace.b113", "furnace"],
 	"lit_furnace": [">nbt.furnace.b113", "lit_furnace"],
-	"hopper": "hopper",
+	"hopper": ["hopper", ">nbt.hopper.b113"],
 	"frame": null,
 	"jukebox": [">nbt.jukebox.b113", "jukebox"],
 	"mob_spawner": [">nbt.mob_spawner.b113", "mob_spawner"],
