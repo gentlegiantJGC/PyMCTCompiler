@@ -268,7 +268,7 @@
 	"dropper": ["dropper", ">nbt.dropper.b17"],
 	"enchanting_table": ["enchanting_table", ">nbt.enchanting_table.b17"],
 	"end_gateway": null,
-	"end_portal": null,
+	"end_portal": ["end_portal", ">nbt.end_portal.b17"],
 	"ender_chest": ["ender_chest"],
 	"flower_pot": null,
 	"furnace": "furnace",
