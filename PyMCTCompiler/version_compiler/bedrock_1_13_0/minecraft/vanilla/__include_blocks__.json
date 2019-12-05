@@ -462,7 +462,7 @@
 	"frame": null,
 	"jukebox": ["jukebox", ">nbt.jukebox.b113"],
 	"mob_spawner": [">nbt.mob_spawner.b113", "mob_spawner"],
-	"noteblock": [">nbt.noteblock.b113", "noteblock"],
+	"noteblock": ["noteblock", ">nbt.noteblock.b113"],
 
 	"undyed_shulker_box": [">nbt.shulker_box.b113", "undyed_shulker_box"],
 	"shulker_box": [">nbt.shulker_box.stained_b113", "shulker_box"],

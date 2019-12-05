@@ -236,7 +236,7 @@
 	"hopper": ["hopper", ">nbt.hopper.j19"],
 	"jukebox": ["jukebox", ">nbt.jukebox.j19"],
 	"mob_spawner": ["mob_spawner"],
-	"noteblock": "noteblock_java",
+	"noteblock": ["noteblock_java", ">nbt.noteblock.j19"],
 
 	"white_shulker_box": ["white_shulker_box"],
 	"orange_shulker_box": ["orange_shulker_box"],
