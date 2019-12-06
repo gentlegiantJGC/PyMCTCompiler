@@ -1,0 +1,118 @@
+{
+    "to_universal": [
+        {
+            "function": "map_properties",
+            "options": {
+                "block_data": {
+                    str(0): [
+                        {
+                            "function": "new_block",
+                            "options": "universal_minecraft:shulker_box"
+                        },
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "color": "default"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:shulker_box": [
+            {
+                "function": "new_block",
+                "options": "minecraft:shulker_box"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "color": {
+                        "default": [
+                            {
+                                "function": "new_block",
+                                "options": f"minecraft:undyed_shulker_box"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "blockstate_specification": {
+        "properties": {
+                "facing": [
+                    "north",
+                    "east",
+                    "south",
+                    "west",
+                    "up",
+                    "down"
+                ]
+            },
+        "defaults": {
+            "facing": "up"
+        }
+    },
+    "blockstate_to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:shulker_box"
+        },
+        {
+            "function": "carry_properties",
+            "options": {
+                "facing": [
+                    "north",
+                    "east",
+                    "south",
+                    "west",
+                    "up",
+                    "down"
+                ]
+            }
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "color": "default"
+            }
+        }
+    ],
+    "blockstate_from_universal": {
+        "universal_minecraft:shulker_box": [
+            {
+                "function": "new_block",
+                "options": "minecraft:shulker_box"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "color": {
+                        "default": [
+                            {
+                                "function": "new_block",
+                                "options": f"minecraft:undyed_shulker_box"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "function": "carry_properties",
+                "options": {
+                    "facing": [
+                        "north",
+                        "east",
+                        "south",
+                        "west",
+                        "up",
+                        "down"
+                    ]
+                }
+            }
+        ]
+    }
+}

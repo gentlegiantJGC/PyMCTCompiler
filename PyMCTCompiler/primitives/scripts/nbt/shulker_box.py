@@ -7,6 +7,9 @@ Default
 J113    "minecraft:shulker_box"		"{Lock: \"\"}"
 
 B113	"ShulkerBox"		"{Findable: 0b, Items: [], facing: 1b, isMovable: 1b}"
+
+Full
+J111    {CustomName: \"\", Items: [], Lock: \"\", LootTable: \":\", LootTableSeed: 0l}
 """
 
 # TODO: facing
@@ -21,22 +24,24 @@ _B113 = NBTRemapHelper(
     "{Findable: 0b}"
 )
 
+j111 = merge(
+    [EmptyNBT('minecraft:shulker_box'), java_custom_name, java_str_lock, java_items_27, java_loot_table],
+    ['universal_minecraft:shulker_box'],
+    abstract=True
+)
+
 j113 = merge(
     [EmptyNBT('minecraft:shulker_box'), java_custom_name, java_str_lock, java_items_27, java_loot_table],
     ['universal_minecraft:shulker_box']
 )
 
-stained_j113 = merge(
-    [EmptyNBT('minecraft:shulker_box'), java_custom_name, java_str_lock, java_items_27, java_loot_table],
-    ['universal_minecraft:stained_shulker_box']
+b17 = merge(
+    [EmptyNBT('minecraft:shulker_box'), _B113, bedrock_is_movable, bedrock_items_27],
+    ['universal_minecraft:shulker_box'],
+    abstract=True
 )
 
 b113 = merge(
     [EmptyNBT('minecraft:shulker_box'), _B113, bedrock_is_movable, bedrock_items_27],
     ['universal_minecraft:shulker_box']
-)
-
-stained_b113 = merge(
-    [EmptyNBT('minecraft:shulker_box'), _B113, bedrock_is_movable, bedrock_items_27],
-    ['universal_minecraft:stained_shulker_box']
 )

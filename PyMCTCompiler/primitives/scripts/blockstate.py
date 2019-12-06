@@ -337,7 +337,7 @@ def stone(input_namespace: str, input_block_name: str, polished: bool, default_b
 
 
 def colour(input_namespace: str, input_block_name: str, color: str, universal_namespace: str = None, universal_block_name: str = None, carry_properties: Dict[str, List[str]] = None) -> dict:
-	for col in ('black_', 'blue_', 'brown_', 'cyan_', 'gray_', 'green_', 'light_blue_', 'light_gray_', 'lime_', 'magenta_', 'orange_', 'pink_', 'purple_', 'red_', 'white_', 'yellow_'):
+	for col in ('black_', 'blue_', 'brown_', 'cyan_', 'gray_', 'green_', 'light_blue_', 'light_gray_', 'lime_', 'magenta_', 'orange_', 'pink_', 'purple_', 'red_', 'white_', 'yellow_', ''):
 		if input_block_name.startswith(col):
 			default_block = f'{input_namespace}:white_{input_block_name[len(col):]}'
 			break

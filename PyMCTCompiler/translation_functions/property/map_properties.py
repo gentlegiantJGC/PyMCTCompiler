@@ -40,7 +40,7 @@ class MapProperties(BaseTranslationFunction):
 	def _compiled_extend(self, other: BaseTranslationFunction, parents: list):
 		"""Used to merge two completed translations together.
 		The formats must match in such a way that the two base translations do not interfere."""
-		assert self['options'].keys() == other['options'].keys(), '"map_properties" must have the same key entries when merging'
+		assert self['options'].keys() == other['options'].keys(), f'"map_properties" must have the same key entries when merging\n{self["options"].keys()}\n{other["options"].keys()}'
 		for key in other['options'].keys():
 			for val in other['options'][key].keys():
 				if val in self['options'][key].keys():

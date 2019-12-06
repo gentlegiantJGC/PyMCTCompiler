@@ -1,1 +1,166 @@
-numerical.colour("minecraft", "shulker_box", "universal_minecraft", "stained_shulker_box")
+{
+    "to_universal": [
+        {
+            "function": "map_properties",
+            "options": {
+                "block_data": {
+                    str(data): [
+                        {
+                            "function": "new_block",
+                            "options": "universal_minecraft:shulker_box"
+                        },
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "color": ["white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray",
+                                          "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"][
+                                    data]
+                            }
+                        }
+                    ] for data in range(16)
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:shulker_box": [
+            {
+                "function": "new_block",
+                "options": "minecraft:shulker_box"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "color": {
+                        colour: [
+                            {
+                                "function": "new_block",
+                                "options": f"minecraft:undyed_shulker_box"
+                            },
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "block_data": str(data)
+                                }
+                            }
+                        ] for data, colour in enumerate(
+                            ["white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray",
+                             "cyan", "purple", "blue", "brown", "green", "red", "black"])
+                    }
+                }
+            }
+        ]
+    },
+    "blockstate_specification": {
+        "properties": {
+            "facing": [
+                "north",
+                "east",
+                "south",
+                "west",
+                "up",
+                "down"
+            ],
+            "color": [
+                "white",
+                "orange",
+                "magenta",
+                "light_blue",
+                "yellow",
+                "lime",
+                "pink",
+                "gray",
+                "light_gray",
+                "cyan",
+                "purple",
+                "blue",
+                "brown",
+                "green",
+                "red",
+                "black"
+            ]
+        },
+        "defaults": {
+            "facing": "up",
+            "color": "white"
+        }
+    },
+    "blockstate_to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:shulker_box"
+        },
+        {
+            "function": "carry_properties",
+            "options": {
+                "facing": [
+                    "north",
+                    "east",
+                    "south",
+                    "west",
+                    "up",
+                    "down"
+                ],
+                "color": [
+                    "white",
+                    "orange",
+                    "magenta",
+                    "light_blue",
+                    "yellow",
+                    "lime",
+                    "pink",
+                    "gray",
+                    "light_gray",
+                    "cyan",
+                    "purple",
+                    "blue",
+                    "brown",
+                    "green",
+                    "red",
+                    "black"
+                ]
+            }
+        }
+    ],
+    "blockstate_from_universal": {
+        "universal_minecraft:shulker_box": [
+            {
+                "function": "new_block",
+                "options": "minecraft:shulker_box"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "color": {
+                        colour: [
+                            {
+                                "function": "new_block",
+                                "options": f"minecraft:shulker_box"
+                            },
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "color": colour
+                                }
+                            }
+                        ] for colour in ["white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray",
+                            "cyan", "purple", "blue", "brown", "green", "red", "black"]
+                    }
+                }
+            },
+            {
+                "function": "carry_properties",
+                "options": {
+                    "facing": [
+                        "north",
+                        "east",
+                        "south",
+                        "west",
+                        "up",
+                        "down"
+                    ]
+                }
+            }
+        ]
+    }
+}

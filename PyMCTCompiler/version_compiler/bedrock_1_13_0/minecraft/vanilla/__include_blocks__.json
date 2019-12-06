@@ -464,8 +464,8 @@
 	"mob_spawner": [">nbt.mob_spawner.b113", "mob_spawner"],
 	"noteblock": ["noteblock", ">nbt.noteblock.b113"],
 
-	"undyed_shulker_box": [">nbt.shulker_box.b113", "undyed_shulker_box"],
-	"shulker_box": [">nbt.shulker_box.stained_b113", "shulker_box"],
+	"undyed_shulker_box": ["undyed_shulker_box", ">nbt.shulker_box.b113"],
+	"shulker_box": ["shulker_box", ">nbt.shulker_box.b113"],
 	"standing_sign": [">nbt.sign.b113", "standing_sign"],
 	"wall_sign": [">nbt.sign.wall_b113", "wall_sign"],
 	"jungle_standing_sign": [">nbt.sign.b113", "jungle_standing_sign"],

@@ -1,5 +1,6 @@
 {
 	"remove": [
+		"shulker_box",
 		"white_shulker_box",
 		"orange_shulker_box",
 		"magenta_shulker_box",
@@ -18,9 +19,10 @@
 		"black_shulker_box"
 	],
 	"add": {
-		"stained_shulker_box": {
+		"shulker_box": {
 			"properties": {
 				"color": [
+					"normal",
 					"white",
 					"orange",
 					"magenta",
@@ -48,7 +50,7 @@
 				]
 			},
 			"defaults": {
-				"color": "white",
+				"color": "normal",
 				"facing": "up"
 			},
 			"nbt_identifier": [

@@ -6125,6 +6125,8 @@ def mushroom_block(color: str) -> dict:
 def shulker_box_colour_java(color: str, display_color=None) -> dict:
 	if display_color is None:
 		display_color = color
+	if display_color != '':
+		display_color += '_'
 	return {
 		"to_universal": [
 			{
@@ -6134,7 +6136,7 @@ def shulker_box_colour_java(color: str, display_color=None) -> dict:
 						str(data): [
 							{
 								"function": "new_block",
-								"options": "universal_minecraft:stained_shulker_box"
+								"options": "universal_minecraft:shulker_box"
 							},
 							{
 								"function": "new_properties",
@@ -6149,7 +6151,7 @@ def shulker_box_colour_java(color: str, display_color=None) -> dict:
 			}
 		],
 		"from_universal": {
-			"universal_minecraft:stained_shulker_box": [
+			"universal_minecraft:shulker_box": [
 				{
 					"function": "new_block",
 					"options": "minecraft:white_shulker_box"
@@ -6161,7 +6163,7 @@ def shulker_box_colour_java(color: str, display_color=None) -> dict:
 							color: [
 								{
 									"function": "new_block",
-									"options": f"minecraft:{display_color}_shulker_box"
+									"options": f"minecraft:{display_color}shulker_box"
 								}
 							]
 						},
@@ -6197,7 +6199,7 @@ def shulker_box_colour_java(color: str, display_color=None) -> dict:
 		"blockstate_to_universal": [
 			{
 				"function": "new_block",
-				"options": "universal_minecraft:stained_shulker_box"
+				"options": "universal_minecraft:shulker_box"
 			},
 			{
 				"function": "carry_properties",
@@ -6220,7 +6222,7 @@ def shulker_box_colour_java(color: str, display_color=None) -> dict:
 			}
 		],
 		"blockstate_from_universal": {
-			"universal_minecraft:stained_shulker_box": [
+			"universal_minecraft:shulker_box": [
 				{
 					"function": "new_block",
 					"options": "minecraft:white_shulker_box"
@@ -6232,7 +6234,7 @@ def shulker_box_colour_java(color: str, display_color=None) -> dict:
 							color: [
 								{
 									"function": "new_block",
-									"options": f"minecraft:{display_color}_shulker_box"
+									"options": f"minecraft:{display_color}shulker_box"
 								}
 							]
 						}
