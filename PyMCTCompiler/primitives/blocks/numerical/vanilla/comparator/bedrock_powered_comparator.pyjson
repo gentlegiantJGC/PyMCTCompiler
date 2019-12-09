@@ -1,13 +1,13 @@
 {
 	# 3 = rotation {0: "south", 1: "west", 2: "north", 3: "east"}
 	# 4 = subtract {0: "compare", 4: "subtract"}
-	# 8 = powered  {0: "false", 8: "true"}
+	# 8 = powered  8
 	"to_universal": [
 		{
 			"function": "map_properties",
 			"options": {
 				"block_data": {
-					str(data8 + data4 + data3): [
+					str(8 + data4 + data3): [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:comparator"
@@ -17,12 +17,11 @@
 							"options": {
 								"facing": facing,
 								"mode": mode,
-								"powered": powered
+								"powered": "true"
 							}
 						}
 					] for data3, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
 					for data4, mode in {0: "compare", 4: "subtract"}.items()
-					for data8, powered in {0: "false", 8: "true"}.items()
 				}
 			}
 		}
@@ -47,14 +46,14 @@
 												"function": "map_properties",
 												"options": {
 													"powered": {
-														powered: [
+														"true": [
 															{
 																"function": "new_properties",
 																"options": {
-																	"block_data": str(data8 + data4 + data3)
+																	"block_data": str(8 + data4 + data3)
 																}
 															}
-														] for data8, powered in {0: "false", 8: "true"}.items()
+														]
 													}
 												}
 											}
@@ -71,13 +70,11 @@
 	"blockstate_specification": {
 		"properties": {
 			"facing": list({0: "south", 1: "west", 2: "north", 3: "east"}.values()),
-			"mode": list({0: "compare", 4: "subtract"}.values()),
-			"powered": list({0: "false", 8: "true"}.values())
+			"mode": list({0: "compare", 4: "subtract"}.values())
 		},
 		"defaults": {
 			"facing": list({0: "south", 1: "west", 2: "north", 3: "east"}.values())[0],
-			"mode": list({0: "compare", 4: "subtract"}.values())[0],
-			"powered": list({0: "false", 8: "true"}.values())[0]
+			"mode": list({0: "compare", 4: "subtract"}.values())[0]
 		}
 	},
 	"blockstate_to_universal": [
@@ -89,8 +86,13 @@
 			"function": "carry_properties",
 			"options": {
 				"facing": list({0: "south", 1: "west", 2: "north", 3: "east"}.values()),
-				"mode": list({0: "compare", 4: "subtract"}.values()),
-				"powered": list({0: "false", 8: "true"}.values())
+				"mode": list({0: "compare", 4: "subtract"}.values())
+			}
+		},
+		{
+			"function": "new_properties",
+			"options": {
+				"powered": "true"
 			}
 		}
 	],
@@ -104,8 +106,20 @@
 				"function": "carry_properties",
 				"options": {
 					"facing": list({0: "south", 1: "west", 2: "north", 3: "east"}.values()),
-					"mode": list({0: "compare", 4: "subtract"}.values()),
-					"powered": list({0: "false", 8: "true"}.values())
+					"mode": list({0: "compare", 4: "subtract"}.values())
+				}
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"powered": {
+						"true": [
+							{
+								"function": "new_block",
+								"options": "minecraft:powered_comparator"
+							}
+						]
+					}
 				}
 			}
 		]
