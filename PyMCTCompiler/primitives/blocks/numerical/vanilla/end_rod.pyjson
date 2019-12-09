@@ -1,0 +1,81 @@
+{
+	# 7 = facing {0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					str(data7): [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:end_rod"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"facing": facing
+							}
+						}
+					] for data7, facing in {0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}.items()
+				}
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:end_rod": [
+			{
+				"function": "new_block",
+				"options": "minecraft:end_rod"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"facing": {
+						facing: [
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": str(data7)
+								}
+							}
+						] for data7, facing in {0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}.items()
+					}
+				}
+			}
+		]
+	},
+	"blockstate_specification": {
+		"properties": {
+			"facing": list({0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}.values())
+		},
+		"defaults": {
+			"facing": list({0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}.values())[0]
+		}
+	},
+	"blockstate_to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:end_rod"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
+				"facing": list({0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}.values())
+			}
+		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:end_rod": [
+			{
+				"function": "new_block",
+				"options": "minecraft:end_rod"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"facing": list({0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}.values()),
+				}
+			}
+		]
+	}
+}
