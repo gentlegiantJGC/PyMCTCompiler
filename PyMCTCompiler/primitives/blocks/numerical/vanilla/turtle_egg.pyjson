@@ -1,0 +1,97 @@
+{
+	# 3 = eggs {0: "0", 1: "1", 2: "2", 3: "3"}
+	# 12 = hatch {0: "0", 4: "1", 8: "2"}
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					str(data12 + data3): [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:turtle_egg"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"eggs": eggs,
+								"hatch": hatch
+							}
+						}
+					] for data3, eggs in {0: "0", 1: "1", 2: "2", 3: "3"}.items()
+					for data12, hatch in {0: "0", 4: "1", 8: "2"}.items()
+				}
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:turtle_egg": [
+			{
+				"function": "new_block",
+				"options": "minecraft:turtle_egg"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"eggs": {
+						eggs: [
+							{
+								"function": "map_properties",
+								"options": {
+									"hatch": {
+										hatch: [
+											{
+												"function": "new_properties",
+												"options": {
+													"block_data": str(data12 + data3)
+												}
+											}
+										] for data12, hatch in {0: "0", 4: "1", 8: "2"}.items()
+									}
+								}
+							}
+						] for data3, eggs in {0: "0", 1: "1", 2: "2", 3: "3"}.items()
+					}
+				}
+			}
+		]
+	},
+	"blockstate_specification": {
+		"properties": {
+			"eggs": list({0: "0", 1: "1", 2: "2", 3: "3"}.values()),
+			"hatch": list({0: "0", 4: "1", 8: "2"}.values())
+		},
+		"defaults": {
+			"eggs": list({0: "0", 1: "1", 2: "2", 3: "3"}.values())[0],
+			"hatch": list({0: "0", 4: "1", 8: "2"}.values())[0]
+		}
+	},
+	"blockstate_to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:turtle_egg"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
+				"eggs": list({0: "0", 1: "1", 2: "2", 3: "3"}.values()),
+				"hatch": list({0: "0", 4: "1", 8: "2"}.values())
+			}
+		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:turtle_egg": [
+			{
+				"function": "new_block",
+				"options": "minecraft:turtle_egg"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"eggs": list({0: "0", 1: "1", 2: "2", 3: "3"}.values()),
+					"hatch": list({0: "0", 4: "1", 8: "2"}.values())
+				}
+			}
+		]
+	}
+}
