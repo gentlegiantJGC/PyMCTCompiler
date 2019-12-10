@@ -149,7 +149,7 @@ def _iter_properties(properties: Dict[str, Dict[int, str]]) -> Generator[Tuple[i
 		yield data, props
 
 
-def _nested_map_properties(properties: List[Tuple[str, Dict[int, str]]], data=0) -> dict:
+def _nested_map_properties(properties: List[Tuple[str, Dict[int, str]]], data=0, block_str=None) -> dict:
 	if len(properties) == 0:
 		return {
 			"function": "new_properties",
@@ -158,23 +158,40 @@ def _nested_map_properties(properties: List[Tuple[str, Dict[int, str]]], data=0)
 			}
 		}
 	else:
+		nested_dict = {}
+		for data_, val in properties[0][1].items():
+			nested = _nested_map_properties(properties[1:], data + data_, block_str)
+			nested_dict[val] = [nested]
+			if nested['function'] == 'new_properties' and block_str is not None:
+				nested_dict[val].append(
+					{
+						"function": "new_block",
+						"options": block_str
+					}
+				)
+
 		return {
 			"function": "map_properties",
 			"options": {
-				properties[0][0]: {
-					val: [
-						_nested_map_properties(properties[1:], data+data_)
-					] for data_, val in properties[0][1].items()
-				}
+				properties[0][0]: nested_dict
 			}
 		}
 
 
-def bit_map(input_namespace: str, input_block_name: str, properties: Dict[str, Dict[int, str]], universal_namespace: str = None, universal_block_name: str = None, defaults: List[int] = None) -> dict:
+def bit_map(input_namespace: str, input_block_name: str, properties: Dict[str, Dict[int, str]], universal_namespace: str = None, universal_block_name: str = None, defaults: List[int] = None, return_namespace: str = None, return_block_name: str = None) -> dict:
 	if universal_namespace is None:
 		universal_namespace = input_namespace
 	if universal_block_name is None:
 		universal_block_name = input_block_name
+	if return_namespace is None:
+		return_namespace = input_namespace
+	if return_block_name is None:
+		return_block_name = input_block_name
+
+	if input_namespace == return_namespace and input_block_name == return_block_name:
+		block_str = None
+	else:
+		block_str = f"{input_namespace}:{input_block_name}"
 
 	prop_count = len(properties)
 	if defaults is None:
@@ -206,9 +223,9 @@ def bit_map(input_namespace: str, input_block_name: str, properties: Dict[str, D
 			f"{universal_namespace}:{universal_block_name}": [
 				{
 					"function": "new_block",
-					"options": f"{input_namespace}:{input_block_name}"
+					"options": f"{return_namespace}:{return_block_name}"
 				},
-				_nested_map_properties(list(properties.items()))
+				_nested_map_properties(list(properties.items()), block_str=block_str)
 			]
 		},
 		"blockstate_specification": {
@@ -235,7 +252,7 @@ def bit_map(input_namespace: str, input_block_name: str, properties: Dict[str, D
 			f"{universal_namespace}:{universal_block_name}": [
 				{
 					"function": "new_block",
-					"options": f"{input_namespace}:{input_block_name}"
+					"options": f"{return_namespace}:{return_block_name}"
 				},
 				{
 					"function": "carry_properties",

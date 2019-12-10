@@ -28,7 +28,7 @@ class CarryProperties(BaseTranslationFunction):
 	def _compiled_extend(self, other: BaseTranslationFunction, parents: list):
 		"""Used to merge two completed translations together.
 		The formats must match in such a way that the two base translations do not interfere."""
-		assert self['options'].keys() == other['options'].keys(), '"carry_properties" must have the same key entries when merging'
+		assert self['options'].keys() == other['options'].keys(), f'"carry_properties" must have the same key entries when merging\n{self["options"].keys()}\n{other["options"].keys()}'
 		for key in other['options'].keys():
 			self['options'][key] = self['options'][key] + [k for k in other['options'][key] if k not in self['options'][key]]
 

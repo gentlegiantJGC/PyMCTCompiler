@@ -1,0 +1,11 @@
+numerical.bit_map(
+	"minecraft", "coral_fan",
+	{
+		"facing": {0: "up"},
+		"dead": {0: "false"},
+		"type": {0: "tube", 1: "brain", 2: "bubble", 3: "fire", 4: "horn"}
+	},
+	"universal_minecraft", "coral_fan",
+	return_namespace="minecraft",
+	return_block_name="coral_fan"
+)
