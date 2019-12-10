@@ -203,7 +203,7 @@
 	"netherreactor": "netherreactor",
 	"info_update": "info_update",
 	"info_update2": "info_update2",
-	"observer": null,
+	"observer": "observer",
 
 	"reserved6": "reserved6",
 	"prismarine_stairs": "prismarine_stairs",

@@ -187,7 +187,7 @@
 	"red_nether_brick": "red_nether_brick",
 	"bone_block": "bone_block",
 	"structure_void": null,
-	"observer": null,
+	"observer": "observer",
 	"white_glazed_terracotta": "white_glazed_terracotta_java",
 	"orange_glazed_terracotta": "orange_glazed_terracotta_java",
 	"magenta_glazed_terracotta": "magenta_glazed_terracotta_java",
