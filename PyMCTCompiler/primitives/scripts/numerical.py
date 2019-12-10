@@ -1,4 +1,4 @@
-from typing import Dict, List
+from typing import Dict, List, Tuple, KeysView, Generator
 import itertools
 
 
@@ -134,6 +134,106 @@ def direct_data(input_namespace: str, input_block_name: str, property_name: str,
 					"function": "carry_properties",
 					"options": {
 						property_name: [str(data) for data in valid_data]
+					}
+				}
+			]
+		}
+	}
+
+
+def _iter_properties(properties: Dict[str, Dict[int, str]]) -> Generator[Tuple[int, Dict[str, str]], None, None]:
+	states = itertools.product(*[[[data, key, val] for data, val in properties[key].items()] for key in properties.keys()])
+	for state in states:
+		data = sum([v[0] for v in state])
+		props = {v[1]: v[2] for v in state}
+		yield data, props
+
+
+def _nested_map_properties(properties: List[Tuple[str, Dict[int, str]]], data=0) -> dict:
+	if len(properties) == 0:
+		return {
+			"function": "new_properties",
+			"options": {
+				"block_data": str(data)
+			}
+		}
+	else:
+		return {
+			"function": "map_properties",
+			"options": {
+				properties[0][0]: {
+					val: [
+						_nested_map_properties(properties[1:], data+data_)
+					] for data_, val in properties[0][1].items()
+				}
+			}
+		}
+
+
+def bit_map(input_namespace: str, input_block_name: str, properties: Dict[str, Dict[int, str]], universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	return {
+		"to_universal": [
+			{
+				"function": "map_properties",
+				"options": {
+					"block_data": {
+						str(data): [
+							{
+								"function": "new_block",
+								"options": f"{universal_namespace}:{universal_block_name}"
+							},
+							{
+								"function": "new_properties",
+								"options": props
+							}
+						] for data, props in _iter_properties(properties)
+					}
+				}
+			}
+		],
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": [
+				{
+					"function": "new_block",
+					"options": f"{input_namespace}:{input_block_name}"
+				},
+				_nested_map_properties(list(properties.items()))
+			]
+		},
+		"blockstate_specification": {
+			"properties": {
+				property_name: list(props.values()) for property_name, props in properties.items()
+			},
+			"defaults": {
+				property_name: list(props.values())[0] for property_name, props in properties.items()
+			}
+		},
+		"blockstate_to_universal": [
+			{
+				"function": "new_block",
+				"options": f"{universal_namespace}:{universal_block_name}"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					property_name: list(props.values()) for property_name, props in properties.items()
+				}
+			}
+		],
+		"blockstate_from_universal": {
+			f"{universal_namespace}:{universal_block_name}": [
+				{
+					"function": "new_block",
+					"options": f"{input_namespace}:{input_block_name}"
+				},
+				{
+					"function": "carry_properties",
+					"options": {
+						property_name: list(props.values()) for property_name, props in properties.items()
 					}
 				}
 			]
