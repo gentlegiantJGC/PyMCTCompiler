@@ -170,11 +170,18 @@ def _nested_map_properties(properties: List[Tuple[str, Dict[int, str]]], data=0)
 		}
 
 
-def bit_map(input_namespace: str, input_block_name: str, properties: Dict[str, Dict[int, str]], universal_namespace: str = None, universal_block_name: str = None) -> dict:
+def bit_map(input_namespace: str, input_block_name: str, properties: Dict[str, Dict[int, str]], universal_namespace: str = None, universal_block_name: str = None, defaults: List[int] = None) -> dict:
 	if universal_namespace is None:
 		universal_namespace = input_namespace
 	if universal_block_name is None:
 		universal_block_name = input_block_name
+
+	prop_count = len(properties)
+	if defaults is None:
+		defaults = [0] * prop_count
+	if len(defaults) != prop_count:
+		raise Exception('Defaults must be the same length as the number of properties')
+
 	return {
 		"to_universal": [
 			{
@@ -209,7 +216,7 @@ def bit_map(input_namespace: str, input_block_name: str, properties: Dict[str, D
 				property_name: list(props.values()) for property_name, props in properties.items()
 			},
 			"defaults": {
-				property_name: list(props.values())[0] for property_name, props in properties.items()
+				property_name: list(props.values())[prop_index] for prop_index, (property_name, props) in zip(defaults, properties.items())
 			}
 		},
 		"blockstate_to_universal": [
