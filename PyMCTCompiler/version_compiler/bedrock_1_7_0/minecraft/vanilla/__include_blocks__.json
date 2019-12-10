@@ -224,7 +224,7 @@
 	"coral_fan_hang": null,
 	"coral_fan_hang2": null,
 	"coral_fan_hang3": null,
-	"kelp": null,
+	"kelp": "kelp",
 	"dried_kelp_block": "dried_kelp_block",
 	"acacia_button": "bedrock_acacia_button",
 	"birch_button": "bedrock_birch_button",
