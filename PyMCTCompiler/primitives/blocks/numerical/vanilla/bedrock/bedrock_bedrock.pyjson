@@ -1,0 +1,7 @@
+numerical.bit_map(
+	"minecraft", "bedrock",
+	{
+		"infiniburn": {0: "false", 1: "true"}
+	},
+	"universal_minecraft"
+)

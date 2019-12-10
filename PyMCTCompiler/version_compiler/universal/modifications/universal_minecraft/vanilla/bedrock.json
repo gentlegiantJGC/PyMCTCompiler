@@ -1,0 +1,18 @@
+{
+	"remove": [
+		"bedrock"
+	],
+	"add": {
+		"bedrock": {
+			"properties": {
+				"infiniburn": [
+					"false",
+					"true"
+				]
+			},
+			"defaults": {
+				"infiniburn": "false"
+			}
+		}
+	}
+}

@@ -181,7 +181,7 @@
 	"end_bricks": "end_bricks",
 	"beetroots": "beetroots_java",
 	"grass_path": "grass_path",
-	"frosted_ice": null,
+	"frosted_ice": "frosted_ice",
 	"magma": "magma",
 	"nether_wart_block": "nether_wart_block",
 	"red_nether_brick": "red_nether_brick",

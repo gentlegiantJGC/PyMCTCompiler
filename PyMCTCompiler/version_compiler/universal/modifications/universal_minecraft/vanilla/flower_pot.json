@@ -57,6 +57,10 @@
 					"cornflower",
 					"lily_of_the_valley",
 					"wither_rose"
+				],
+				"update": [
+					"false",
+					"true"
 				]
 			},
 			"defaults": {
