@@ -104,7 +104,7 @@
 	"nether_brick_fence": "nether_brick_fence",
 	"nether_brick_stairs": "nether_brick_stairs",
 	"nether_wart": "nether_wart",
-	"cauldron": null,
+	"cauldron": "cauldron_java",
 	"end_portal_frame": "end_portal_frame",
 	"end_stone": "end_stone",
 	"dragon_egg": "dragon_egg",
