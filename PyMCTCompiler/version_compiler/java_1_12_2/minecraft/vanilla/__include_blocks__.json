@@ -185,7 +185,7 @@
 	"magma": "magma",
 	"nether_wart_block": "nether_wart_block",
 	"red_nether_brick": "red_nether_brick",
-	"bone_block": null,
+	"bone_block": "bone_block",
 	"structure_void": null,
 	"observer": null,
 	"white_glazed_terracotta": "white_glazed_terracotta_java",
