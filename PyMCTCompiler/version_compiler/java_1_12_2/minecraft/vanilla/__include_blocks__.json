@@ -116,7 +116,7 @@
 	"sandstone_stairs": "sandstone_stairs",
 	"emerald_ore": "emerald_ore",
 	"tripwire_hook": "tripwire_hook",
-	"tripwire": null,
+	"tripwire": "tripwire",
 	"emerald_block": "emerald_block",
 	"spruce_stairs": "spruce_stairs",
 	"birch_stairs": "birch_stairs",
