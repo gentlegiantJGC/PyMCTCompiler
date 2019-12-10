@@ -150,7 +150,7 @@
 	"hardened_clay": "hardened_clay",
 	"coal_block": "coal_block",
 	"packed_ice": "packed_ice",
-	"double_plant": null,
+	"double_plant": "double_plant",
 	"red_sandstone": "red_sandstone+chiseled+cut",
 	"red_sandstone_stairs": "red_sandstone_stairs",
 	"double_stone_slab2": "double_stone_slab2_java",
