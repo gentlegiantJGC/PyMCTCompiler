@@ -3097,8 +3097,40 @@ def fence_java(input_namespace: str, input_block_name: str, material: str, unive
 							{
 								"function": "new_properties",
 								"options": {
-									"material": material
+									"material": material,
+									"north": "true",
+									"east": "true",
+									"south": "true",
+									"west": "true"
 								}
+							},
+							{
+								"function": "multiblock",
+								"options": [
+									{
+										"coords": coord,
+										"functions": [
+											{
+												"function": "map_block_name",
+												"options": {
+													"minecraft:air": [
+														{
+															"function": "new_properties",
+															"options": {
+																direction: "false"
+															}
+														}
+													]
+												}
+											}
+										]
+									} for coord, direction in [
+										[[0, 0, -1], "north"],
+										[[0, 0, 1], "south"],
+										[[-1, 0, 0], "west"],
+										[[1, 0, 0], "east"],
+									]
+								]
 							}
 						]
 					}
