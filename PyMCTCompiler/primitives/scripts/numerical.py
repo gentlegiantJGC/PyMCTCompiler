@@ -2973,7 +2973,7 @@ def button_java(input_namespace: str, input_block_name: str, material: str, univ
 
 def glazed_terracotta(input_namespace: str, input_block_name: str, color: str, platform: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
 	if platform == 'java':
-		directions = {0: "north", 2: "south", 3: "west", 1: "east"}
+		directions = {0: "south", 2: "north", 3: "east", 1: "west"}
 	elif platform == 'bedrock':
 		directions = {2: "north", 3: "south", 4: "west", 5: "east"}
 	else:
