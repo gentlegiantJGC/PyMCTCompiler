@@ -1,7 +1,7 @@
 from typing import Dict
 import os
 import time
-import shutil
+from PyMCTCompiler import lua
 
 from PyMCTCompiler.compilers.base_compiler import BaseCompiler
 
@@ -38,6 +38,8 @@ def build(compiled_dir_):
 		t = time.time()
 		compiler.build()
 		log_to_file(f'\tFinished in {round(time.time() - t, 2)} seconds')
+
+	lua.save(os.path.join(os.path.dirname(compiled_dir), 'lua'))
 
 	disk_buffer.save()
 	log_to_file(f'\nFinished compiling all versions in {round(time.time() - t2, 2)}')
