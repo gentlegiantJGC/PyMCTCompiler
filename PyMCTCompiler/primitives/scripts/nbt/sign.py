@@ -1,4 +1,4 @@
-from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
+from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge, TranslationFile
 
 """
 Default
@@ -32,15 +32,37 @@ _J113 = NBTRemapHelper(
 _B113 = NBTRemapHelper(
     [
         (
-            ("Text", "string", []),
-            ("Text", "string", [("utags", "compound")])
-        ),
-        (
             ("TextOwner", "string", []),
             ("TextOwner", "string", [("utags", "compound")])
         )
     ],
-    '{Text: "", TextOwner: ""}'
+    '{TextOwner: ""}'
+)
+
+_BText = TranslationFile(
+    [
+        {
+            "function": "code",
+            "options": {
+                "input": ["nbt"],
+                "output": ["new_nbt"],
+                "function": "bedrock_sign_2u"
+            }
+        }
+    ],
+    [
+        {
+            "function": "code",
+            "options": {
+                "input": ["nbt"],
+                "output": ["new_nbt"],
+                "function": "bedrock_sign_fu"
+            }
+        }
+    ],
+    {
+        "snbt": "{Text: ""}"
+    }
 )
 
 j113 = merge(

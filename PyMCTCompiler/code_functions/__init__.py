@@ -1,5 +1,4 @@
 import os
-import traceback
 import glob
 from typing import Dict
 
