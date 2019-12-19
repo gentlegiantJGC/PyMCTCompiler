@@ -1,17 +1,18 @@
 import os
 import glob
 from typing import Dict
+import shutil
 
 print('Loading Code Primitives ...')
 code_primitives: Dict[str, str] = {}
 used_code_primitives = set()
 
-for f_name in glob.iglob(os.path.join(os.path.dirname(__file__), 'data', '**', '*.py')):
-    f = os.path.basename(f_name)
+for f_path in glob.iglob(os.path.join(os.path.dirname(__file__), 'data', '**', '*.py'), recursive=True):
+    f = os.path.basename(f_path)
     primitive_name = os.path.splitext(f)[0]
     if primitive_name in code_primitives:
         print(f'code primitive "{primitive_name}" is defined twice')
-    with open(f) as l:
+    with open(f_path) as l:
         code_primitives[primitive_name] = l.read()
 
 print('\tFinished Loading Code Primitives')
@@ -30,6 +31,8 @@ def get(code_function_name) -> None:
 
 
 def save(path):
+    shutil.rmtree(path)
+    os.makedirs(path)
     for code_function_name in used_code_primitives:
         code_function = code_primitives[code_function_name]
         with open(os.path.join(path, f'{code_function_name}.py'), 'w') as l_:

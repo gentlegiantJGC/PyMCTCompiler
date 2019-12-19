@@ -34,7 +34,7 @@ class Code(BaseTranslationFunction):
 		if 'input' in self['options']:
 			assert isinstance(self['options']['input'], list) and all(i in ["namespace", "base_name", "properties", "nbt"] for i in self['options']['input'])
 		if 'output' in self['options']:
-			assert isinstance(self['options']['input'], list) and all(i in ["output_name", "output_type", "new_properties", "new_nbt"] for i in self['options']['input'])
+			assert isinstance(self['options']['output'], list) and all(i in ["output_name", "output_type", "new_properties", "new_nbt"] for i in self['options']['output'])
 		assert isinstance(self['options']['function'], str), '"options" must be a string'
 		code_functions.get(self['options']['function'])
 
