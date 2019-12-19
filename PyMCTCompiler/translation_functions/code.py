@@ -1,13 +1,13 @@
 from typing import Set
 from PyMCTCompiler.translation_functions import BaseTranslationFunction
-from PyMCTCompiler import lua
+from PyMCTCompiler import code_functions
 
 
-class Lua(BaseTranslationFunction):
-	function_name = 'lua'
+class Code(BaseTranslationFunction):
+	function_name = 'code'
 
 	# {
-	# 	"function": "lua",  # when all the other functions fail you this should do what you need. Use as sparingly as possible
+	# 	"function": "code",  # when all the other functions fail you this should do what you need. Use as sparingly as possible
 	# 	"options": {
 	# 		"input": ["namespace", "base_name", "properties", "nbt"],  # all of these inputs and output are optional. Change these lists to modify
 	# 		"output": ["output_name", "output_type", "new_properties", "new_nbt"],
@@ -36,7 +36,7 @@ class Lua(BaseTranslationFunction):
 		if 'output' in self['options']:
 			assert isinstance(self['options']['input'], list) and all(i in ["output_name", "output_type", "new_properties", "new_nbt"] for i in self['options']['input'])
 		assert isinstance(self['options']['function'], str), '"options" must be a string'
-		lua.get(self['options']['function'])
+		code_functions.get(self['options']['function'])
 
 	def save(self, parents: list) -> dict:
 		return self._function

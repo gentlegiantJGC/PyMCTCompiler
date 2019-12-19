@@ -173,7 +173,7 @@ from .property.new_properties import NewProperties
 from .map_block_name import MapBlockName
 from .multiblock import Multiblock
 from .nested_translation import NestedTranslation
-from .lua import Lua
+from .code import Code
 
 function_map = {f.function_name: f for f in [CarryNBT, CarryProperties, MapBlockName, MapNBT, MapProperties, Multiblock, NewBlock, NewEntity, NewNBT, NewProperties, WalkInputNBT, NestedTranslation]}
 default_feature_set: Set[str] = {f.function_name for f in [CarryProperties, MapBlockName, MapNBT, MapProperties, Multiblock, NewBlock, NewEntity, NewNBT, NewProperties, WalkInputNBT]}
