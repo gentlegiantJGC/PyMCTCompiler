@@ -254,7 +254,7 @@
 	"green_shulker_box": ["green_shulker_box", ">nbt.shulker_box.j111"],
 	"red_shulker_box": ["red_shulker_box", ">nbt.shulker_box.j111"],
 	"black_shulker_box": ["black_shulker_box", ">nbt.shulker_box.j111"],
-	"standing_sign": ["standing_sign"],
+	"standing_sign": ["standing_sign", ">nbt.sign.j19"],
 	"wall_sign": ["wall_sign"],
 	"skull": null,
 	"structure_block": null

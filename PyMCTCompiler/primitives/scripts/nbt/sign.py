@@ -7,7 +7,7 @@ J113    "minecraft:sign"		r'{Text4: "{\\"text\\":\\"\\"}", Text3: "{\\"text\\":\
 B113	"Sign"		"{Text: "", TextOwner: "", isMovable: 1b}"
 """
 
-_J113 = NBTRemapHelper(
+_J19 = NBTRemapHelper(
     [
         (
             ("Text1", "string", []),
@@ -65,23 +65,23 @@ _BText = TranslationFile(
     }
 )
 
-j113 = merge(
-    [EmptyNBT('minecraft:sign'), _J113],
+j19 = merge(
+    [EmptyNBT('minecraft:sign'), _J19],
     ['universal_minecraft:sign']
 )
 
-wall_j113 = merge(
-    [EmptyNBT('minecraft:sign'), _J113],
+wall_j19 = merge(
+    [EmptyNBT('minecraft:sign'), _J19],
     ['universal_minecraft:wall_sign']
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:sign'), _B113],
+    [EmptyNBT('minecraft:sign'), _B113, _BText],
     ['universal_minecraft:sign']
 )
 
 wall_b113 = merge(
-    [EmptyNBT('minecraft:sign'), _B113],
+    [EmptyNBT('minecraft:sign'), _B113, _BText],
     ['universal_minecraft:wall_sign']
 )
 
