@@ -8,23 +8,27 @@ J113    "minecraft:command_block"		'{conditionMet: 0b, auto: 0b, CustomName: "{\
 B113	"CommandBlock"		            "{Command: "", CustomName: "", ExecuteOnFirstTick: 0b, LPCommandMode: 16064, LPCondionalMode: 63b, LPRedstoneMode: 0b, LastExecution: 0L, LastOutput: "", LastOutputParams: [], SuccessCount: 0, TickDelay: 0, TrackOutput: 1b, Version: 10, auto: 0b, conditionMet: 0b, isMovable: 1b, powered: 0b}"
 """
 
-_J113 = NBTRemapHelper(
+_J19 = NBTRemapHelper(
     [
-        (
-            ("conditionMet", "byte", []),
-            ("conditionMet", "byte", [("utags", "compound")])
-        ),
         (
             ("auto", "byte", []),
             ("auto", "byte", [("utags", "compound")])
         ),
         (
-            ("powered", "byte", []),
-            ("powered", "byte", [("utags", "compound")])
-        ),
-        (
             ("Command", "string", []),
             ("Command", "string", [("utags", "compound")])
+        ),
+        (
+            ("conditionMet", "byte", []),
+            ("conditionMet", "byte", [("utags", "compound")])
+        ),
+        (  # this is JSON TODO: write a code script for it
+            ("CustomName", "string", []),
+            ("CustomName", "string", [("utags", "compound")])
+        ),
+        (
+            ("powered", "byte", []),
+            ("powered", "byte", [("utags", "compound")])
         ),
         (
             ("SuccessCount", "int", []),
@@ -35,14 +39,6 @@ _J113 = NBTRemapHelper(
             ("TrackOutput", "byte", [("utags", "compound")])
         ),
         (
-            ("UpdateLastExecution", "byte", []),
-            ("UpdateLastExecution", "byte", [("utags", "compound")])
-        ),
-        (
-            ("CustomName", "string", []),
-            ("CustomName", "string", [("utags", "compound")])
-        ),
-        (
             ("LastOutput", "string", []),
             ("LastOutput", "string", [("utags", "compound")])
         ),
@@ -51,7 +47,27 @@ _J113 = NBTRemapHelper(
             ("LastExecution", "long", [("utags", "compound")])
         )
     ],
-    '{conditionMet: 0b, auto: 0b, CustomName: "{\\"text\\":\\"@\\"}", powered: 0b, Command: "", SuccessCount: 0, TrackOutput: 1b, UpdateLastExecution: 1b}'
+    '{conditionMet: 0b, auto: 0b, CustomName: "{\\"text\\":\\"@\\"}", powered: 0b, Command: "", SuccessCount: 0, TrackOutput: 1b}'
+)
+
+_J19_command_stats = NBTRemapHelper(
+    [
+        (
+            ("CommandStats", "compound", []),
+            ("CommandStats", "compound", [("utags", "compound")])
+        )
+    ],
+    '{}'
+)
+
+_J112_update_last = NBTRemapHelper(
+    [
+        (
+            ("UpdateLastExecution", "byte", []),
+            ("UpdateLastExecution", "byte", [("utags", "compound")])
+        )
+    ],
+    '{UpdateLastExecution: 1b}'
 )
 
 _B113 = NBTRemapHelper(
@@ -124,13 +140,22 @@ _B113 = NBTRemapHelper(
     '{Command: "", CustomName: "", ExecuteOnFirstTick: 0b, LPCommandMode: 16064, LPCondionalMode: 63b, LPRedstoneMode: 0b, LastExecution: 0L, LastOutput: "", LastOutputParams: [], SuccessCount: 0, TickDelay: 0, TrackOutput: 1b, Version: 10, auto: 0b, conditionMet: 0b, powered: 0b}'
 )
 
-
-j113 = merge(
-    [EmptyNBT('minecraft:command_block'), _J113],
+j19 = merge(
+    [EmptyNBT('minecraft:command_block'), _J19, _J19_command_stats],
     ['universal_minecraft:command_block']
 )
 
-b113 = merge(
+j112 = merge(
+    [EmptyNBT('minecraft:command_block'), _J19, _J19_command_stats, _J112_update_last],
+    ['universal_minecraft:command_block']
+)
+
+j113 = merge(
+    [EmptyNBT('minecraft:command_block'), _J19, _J112_update_last],
+    ['universal_minecraft:command_block']
+)
+
+b17 = merge(
     [EmptyNBT('minecraft:command_block'), _B113, bedrock_is_movable],
     ['universal_minecraft:command_block']
 )
