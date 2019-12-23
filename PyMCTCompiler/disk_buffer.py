@@ -4,7 +4,7 @@ from typing import Dict, Union, Tuple, Set, TYPE_CHECKING
 import hashlib
 
 import PyMCTCompiler
-from PyMCTCompiler.helpers import log_to_file
+from PyMCTCompiler.helpers import log_to_file, check_specification_format
 if TYPE_CHECKING:
 	from PyMCTCompiler.translation_functions import FunctionList
 
@@ -37,6 +37,7 @@ class DiskBuffer:
 		:param data:
 		:return:
 		"""
+		check_specification_format(data)
 		self.save_json_object(('versions', version_name, object_type, version_format, "specification", namespace, group_name, base_name), data)
 
 	def has_specification(self, version_name: str, object_type: str, version_format: str, namespace: str, group_name: str, base_name: str) -> bool:
