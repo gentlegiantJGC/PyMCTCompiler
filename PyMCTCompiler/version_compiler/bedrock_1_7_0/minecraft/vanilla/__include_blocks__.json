@@ -269,7 +269,7 @@
 	"end_gateway": "end_gateway",
 	"end_portal": ["end_portal", ">nbt.end_portal.b17"],
 	"ender_chest": ["ender_chest", ">nbt.ender_chest.b17"],
-	"flower_pot": null,
+	"flower_pot": ["flower_pot_bedrock", ">nbt.flower_pot.b17"],
 	"furnace": ["furnace", ">nbt.furnace.b17"],
 	"lit_furnace": ["lit_furnace", ">nbt.furnace.b17"],
 	"hopper": ["hopper", ">nbt.hopper.b17"],

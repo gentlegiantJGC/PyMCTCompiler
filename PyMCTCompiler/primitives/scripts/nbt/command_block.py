@@ -142,12 +142,14 @@ _B113 = NBTRemapHelper(
 
 j19 = merge(
     [EmptyNBT('minecraft:command_block'), _J19, _J19_command_stats],
-    ['universal_minecraft:command_block']
+    ['universal_minecraft:command_block'],
+    abstract=True
 )
 
 j112 = merge(
     [EmptyNBT('minecraft:command_block'), _J19, _J19_command_stats, _J112_update_last],
-    ['universal_minecraft:command_block']
+    ['universal_minecraft:command_block'],
+    abstract=True
 )
 
 j113 = merge(
@@ -156,6 +158,12 @@ j113 = merge(
 )
 
 b17 = merge(
+    [EmptyNBT('minecraft:command_block'), _B113, bedrock_is_movable],
+    ['universal_minecraft:command_block'],
+    abstract=True
+)
+
+b113 = merge(
     [EmptyNBT('minecraft:command_block'), _B113, bedrock_is_movable],
     ['universal_minecraft:command_block']
 )
