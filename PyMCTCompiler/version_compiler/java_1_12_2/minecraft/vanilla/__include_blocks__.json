@@ -230,7 +230,7 @@
 	"end_gateway": ["end_gateway"],
 	"end_portal": ["end_portal", ">nbt.end_portal.j112"],
 	"ender_chest": ["ender_chest", ">nbt.ender_chest.j112"],
-	"flower_pot": null,
+	"flower_pot": ["flower_pot_java", ">nbt.flower_pot.j19"],
 	"furnace": ["furnace", ">nbt.furnace.j19"],
 	"lit_furnace": ["lit_furnace", ">nbt.furnace.j19"],
 	"hopper": ["hopper", ">nbt.hopper.j19"],
