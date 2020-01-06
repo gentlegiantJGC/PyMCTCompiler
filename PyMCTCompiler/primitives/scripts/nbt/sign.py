@@ -1,4 +1,4 @@
-from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
+from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge, TranslationFile
 
 """
 Default
@@ -7,7 +7,7 @@ J113    "minecraft:sign"		r'{Text4: "{\\"text\\":\\"\\"}", Text3: "{\\"text\\":\
 B113	"Sign"		"{Text: "", TextOwner: "", isMovable: 1b}"
 """
 
-_J113 = NBTRemapHelper(
+_J19 = NBTRemapHelper(
     [
         (
             ("Text1", "string", []),
@@ -32,34 +32,56 @@ _J113 = NBTRemapHelper(
 _B113 = NBTRemapHelper(
     [
         (
-            ("Text", "string", []),
-            ("Text", "string", [("utags", "compound")])
-        ),
-        (
             ("TextOwner", "string", []),
             ("TextOwner", "string", [("utags", "compound")])
         )
     ],
-    '{Text: "", TextOwner: ""}'
+    '{TextOwner: ""}'
 )
 
-j113 = merge(
-    [EmptyNBT('minecraft:sign'), _J113],
+_BText = TranslationFile(
+    [
+        {
+            "function": "code",
+            "options": {
+                "input": ["nbt"],
+                "output": ["new_nbt"],
+                "function": "bedrock_sign_2u"
+            }
+        }
+    ],
+    [
+        {
+            "function": "code",
+            "options": {
+                "input": ["nbt"],
+                "output": ["new_nbt"],
+                "function": "bedrock_sign_fu"
+            }
+        }
+    ],
+    {
+        "snbt": "{Text: ""}"
+    }
+)
+
+j19 = merge(
+    [EmptyNBT('minecraft:sign'), _J19],
     ['universal_minecraft:sign']
 )
 
-wall_j113 = merge(
-    [EmptyNBT('minecraft:sign'), _J113],
+wall_j19 = merge(
+    [EmptyNBT('minecraft:sign'), _J19],
     ['universal_minecraft:wall_sign']
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:sign'), _B113],
+    [EmptyNBT('minecraft:sign'), _B113, _BText],
     ['universal_minecraft:sign']
 )
 
 wall_b113 = merge(
-    [EmptyNBT('minecraft:sign'), _B113],
+    [EmptyNBT('minecraft:sign'), _B113, _BText],
     ['universal_minecraft:wall_sign']
 )
 

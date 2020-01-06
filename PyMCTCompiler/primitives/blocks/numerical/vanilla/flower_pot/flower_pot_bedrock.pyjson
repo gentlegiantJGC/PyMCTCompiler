@@ -1,0 +1,7 @@
+numerical.bit_map(
+	"minecraft", "flower_pot",
+	{
+		"update": {0: "false", 1: "true"}
+	},
+	"universal_minecraft", "flower_pot"
+)

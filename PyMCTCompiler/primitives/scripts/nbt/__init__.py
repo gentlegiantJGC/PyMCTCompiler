@@ -175,6 +175,8 @@ class NBTRemapHelper(TranslationFile):
                 assert obj["type"] == nbt_type
             else:
                 obj["type"] = nbt_type
+            obj.setdefault("nested_default", [])
+            obj.setdefault("self_default", [])
             if nbt_type == 'compound':
                 obj = obj.setdefault('keys', {})
             elif nbt_type == 'list':

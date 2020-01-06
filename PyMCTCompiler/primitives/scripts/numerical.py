@@ -483,11 +483,23 @@ def liquid(input_namespace: str, input_block_name: str, flowing_: bool, universa
 
 def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "universal_minecraft", to_block_name: str = "leaves") -> dict:
 	if platform == 'bedrock':
+		# bedrock
+		# 3 - type
+		# 4 - persistent_bit
+		# 8 - update_bit
 		property8 = "persistent"
+		property8_lut = {0: "false", 8: "true"}
 		property4 = "check_decay"
+		property4_lut = {0: "false", 4: "true"}
 	elif platform == 'java':
+		# java
+		# 3 - type
+		# 4 - decayable 0: true, 1: false
+		# 8 - check_decay 0: false, 1: true
 		property8 = "check_decay"
+		property8_lut = {0: "false", 8: "true"}
 		property4 = "persistent"
+		property4_lut = {0: "false", 4: "true"}
 	else:
 		raise Exception(f'Platform "{platform}" is not known')
 
@@ -513,8 +525,8 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 								"function": "new_properties",
 								"options": {
 									"material": material_pallet[data & 3],
-									property4: {0: "false", 4: "true"}[data & 4],
-									property8: {0: "false", 8: "true"}[data & 8]
+									property4: property4_lut[data & 4],
+									property8: property8_lut[data & 8]
 								}
 							}
 						] for data in range(16) if data & 3 in material_pallet
@@ -553,11 +565,11 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 														}
 													}
 												}
-											] for data4, val4 in {0: "false", 4: "true"}.items()
+											] for data4, val4 in property4_lut.items()
 										}
 									}
 								}
-							] for data8, val8 in {0: "false", 8: "true"}.items()
+							] for data8, val8 in property8_lut.items()
 						}
 					}
 				}
@@ -2961,7 +2973,7 @@ def button_java(input_namespace: str, input_block_name: str, material: str, univ
 
 def glazed_terracotta(input_namespace: str, input_block_name: str, color: str, platform: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
 	if platform == 'java':
-		directions = {0: "north", 2: "south", 3: "west", 1: "east"}
+		directions = {0: "south", 2: "north", 3: "east", 1: "west"}
 	elif platform == 'bedrock':
 		directions = {2: "north", 3: "south", 4: "west", 5: "east"}
 	else:
