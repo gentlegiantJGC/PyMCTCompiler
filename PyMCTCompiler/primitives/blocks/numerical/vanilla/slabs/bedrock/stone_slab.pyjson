@@ -1,0 +1,1 @@
+numerical.slab("minecraft", "stone_slab", ["smooth_stone", "sandstone", "petrified_oak", "cobblestone", "brick", "stone_brick", "quartz", "nether_brick"], "universal_minecraft", "slab")

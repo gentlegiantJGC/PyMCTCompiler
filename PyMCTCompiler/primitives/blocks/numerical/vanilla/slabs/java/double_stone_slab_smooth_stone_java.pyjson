@@ -1,0 +1,68 @@
+{
+    "to_universal": [
+        {
+            "function": "map_properties",
+            "options": {
+                "block_data": {
+                    "8": [
+                        {
+                            "function": "new_block",
+                            "options": "universal_minecraft:smooth_stone"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:smooth_stone": [
+            {
+                "function": "new_block",
+                "options": "minecraft:double_stone_slab"
+            },
+            {
+                "function": "new_properties",
+                "options": {
+                    "block_data": "8"
+                }
+            }
+        ]
+    },
+    "blockstate_specification": {
+        "properties": {
+            "material": ["smooth_stone_block"]
+        },
+        "defaults": {
+            "material": "smooth_stone_block"
+        }
+    },
+    "blockstate_to_universal": [
+        {
+            "function": "map_properties",
+            "options": {
+                "material": {
+                    "smooth_stone_block": [
+                        {
+                            "function": "new_block",
+                            "options": "universal_minecraft:smooth_stone"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "blockstate_from_universal": {
+        "universal_minecraft:smooth_stone": [
+            {
+                "function": "new_block",
+                "options": "minecraft:double_stone_slab"
+            },
+            {
+                "function": "new_properties",
+                "options": {
+                    "material": "smooth_stone_block"
+                }
+            }
+        ]
+    }
+}

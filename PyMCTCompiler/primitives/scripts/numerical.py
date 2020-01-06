@@ -1,4 +1,4 @@
-from typing import Dict, List, Tuple, KeysView, Generator
+from typing import Dict, List, Tuple, Generator, Union
 import itertools
 
 
@@ -2108,11 +2108,19 @@ def colour(input_namespace: str, input_block_name: str, universal_namespace: str
 	}
 
 
-def double_slab(input_namespace: str, input_block_name: str, block_types: List[str], universal_namespace: str = None, universal_block_name: str = None) -> dict:
+def double_slab(input_namespace: str, input_block_name: str, block_types: Union[List[str], Dict[int, str]], universal_namespace: str = None, universal_block_name: str = None) -> dict:
 	if universal_namespace is None:
 		universal_namespace = input_namespace
 	if universal_block_name is None:
 		universal_block_name = input_block_name
+
+	if isinstance(block_types, list):
+		block_types = list(enumerate(block_types))
+	elif isinstance(block_types, dict):
+		block_types = list(block_types.items())
+	else:
+		raise Exception
+
 	return {
 		"to_universal": [
 			{
@@ -2131,7 +2139,7 @@ def double_slab(input_namespace: str, input_block_name: str, block_types: List[s
 									"type": "double"
 								}
 							}
-						] for data, material in enumerate(block_types)
+						] for data, material in block_types
 					}
 				}
 			}
@@ -2158,7 +2166,7 @@ def double_slab(input_namespace: str, input_block_name: str, block_types: List[s
 														"block_data": str(data)
 													}
 												}
-											] for data, material in enumerate(block_types)
+											] for data, material in block_types
 										}
 									}
 								}
@@ -2170,10 +2178,10 @@ def double_slab(input_namespace: str, input_block_name: str, block_types: List[s
 		},
 		"blockstate_specification": {
 			"properties": {
-				"material": block_types
+				"material": [b[1] for b in block_types]
 			},
 			"defaults": {
-				"material": block_types[0]
+				"material": block_types[0][1]
 			}
 		},
 		"blockstate_to_universal": [
@@ -2184,7 +2192,7 @@ def double_slab(input_namespace: str, input_block_name: str, block_types: List[s
 			{
 				"function": "carry_properties",
 				"options": {
-					"material": block_types
+					"material": [b[1] for b in block_types]
 				}
 			},
 			{
@@ -2216,7 +2224,7 @@ def double_slab(input_namespace: str, input_block_name: str, block_types: List[s
 														"material": material
 													}
 												}
-											] for material in block_types
+											] for material in [b[1] for b in block_types]
 										}
 									}
 								}
