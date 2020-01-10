@@ -4,7 +4,7 @@ import json
 
 from .base_compiler import BaseCompiler
 from PyMCTCompiler.disk_buffer import disk_buffer
-from PyMCTCompiler.helpers import blocks_from_server, load_json_file
+from PyMCTCompiler.helpers import blocks_from_server, load_json_file, get_latest_server
 
 """
 Summary
@@ -35,6 +35,7 @@ class UniversalCompiler(BaseCompiler):
 		return self._blocks
 
 	def _build_blocks(self):
+		get_latest_server(self._directory)
 		blocks_from_server(self._directory, [str(v) for v in self.version])
 
 		if os.path.isfile(os.path.join(self._directory, 'generated', 'reports', 'blocks.json')):

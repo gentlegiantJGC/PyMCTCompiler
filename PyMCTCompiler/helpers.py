@@ -1,4 +1,5 @@
 import os
+import shutil
 from typing import Union, List
 from urllib.request import urlopen
 import json
@@ -98,12 +99,30 @@ def blocks_from_server(version_path: str, version_str: List[str] = None):
 					raise Exception(f'This failed for some reason\n{e}')
 
 
+launcher_manifest = json.load(urlopen('https://launchermeta.mojang.com/mc/game/version_manifest.json'))
+
+
+def get_latest_server(path: str):
+	if os.path.isfile(os.path.join(path, 'latest')):
+		with open(os.path.join(path, 'latest')) as f:
+			last_version = f.read()
+	else:
+		last_version = ''
+
+	new_version = launcher_manifest['latest']['release']
+	if new_version != last_version:
+		download_server_jar(path, new_version.split('.'))
+		with open(os.path.join(path, 'latest'), 'w') as f:
+			f.write(new_version)
+		if os.path.isdir(os.path.join(path, 'generated')):
+			shutil.rmtree(os.path.join(path, 'generated'))
+
+
 def download_server_jar(path: str, version_str: List[str] = None):
-	manifest = json.load(urlopen('https://launchermeta.mojang.com/mc/game/version_manifest.json'))
 	if version_str is None:
-		version_str = manifest['latest']['release'].split('.')
+		version_str = launcher_manifest['latest']['release'].split('.')
 	version_str = version_str + ['0'] * (4 - len(version_str))
-	version = next((v for v in manifest['versions'] if v['id'].split('.') + ['0'] * (4 - len(v['id'].split('.'))) == version_str), None)
+	version = next((v for v in launcher_manifest['versions'] if v['id'].split('.') + ['0'] * (4 - len(v['id'].split('.'))) == version_str), None)
 	if version is None:
 		raise Exception(f'Could not find version "{version_str}"')
 	version_manifest = json.load(urlopen(version['url']))
