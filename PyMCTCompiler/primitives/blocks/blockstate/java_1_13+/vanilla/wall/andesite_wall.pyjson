@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "andesite_wall", "andesite", "universal_minecraft", "wall", {"east": ["true","false"],"north": ["true","false"],"south": ["true","false"],"up": ["true","false"],"west": ["true","false"]})
