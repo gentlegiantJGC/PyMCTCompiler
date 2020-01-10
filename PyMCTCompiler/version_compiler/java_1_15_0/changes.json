@@ -1,0 +1,67 @@
+{
+    "minecraft:bell": {
+        "properties_added": [
+            "powered"
+        ]
+    },
+    "minecraft:bee_nest": {
+        "block_added": {
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "honey_level": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            },
+            "defaults": {
+                "facing": "north",
+                "honey_level": "0"
+            }
+        }
+    },
+    "minecraft:beehive": {
+        "block_added": {
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "honey_level": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            },
+            "defaults": {
+                "facing": "north",
+                "honey_level": "0"
+            }
+        }
+    },
+    "minecraft:honey_block": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:honeycomb_block": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    }
+}

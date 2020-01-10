@@ -1,0 +1,102 @@
+{
+    "minecraft:tnt": {
+        "properties_added": [
+            "unstable"
+        ]
+    },
+    "minecraft:dead_tube_coral": {
+        "block_added": {
+            "properties": {
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "waterlogged": "true"
+            }
+        }
+    },
+    "minecraft:dead_brain_coral": {
+        "block_added": {
+            "properties": {
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "waterlogged": "true"
+            }
+        }
+    },
+    "minecraft:dead_bubble_coral": {
+        "block_added": {
+            "properties": {
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "waterlogged": "true"
+            }
+        }
+    },
+    "minecraft:dead_fire_coral": {
+        "block_added": {
+            "properties": {
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "waterlogged": "true"
+            }
+        }
+    },
+    "minecraft:dead_horn_coral": {
+        "block_added": {
+            "properties": {
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "waterlogged": "true"
+            }
+        }
+    },
+    "minecraft:tube_coral": {
+        "properties_added": [
+            "waterlogged"
+        ]
+    },
+    "minecraft:brain_coral": {
+        "properties_added": [
+            "waterlogged"
+        ]
+    },
+    "minecraft:bubble_coral": {
+        "properties_added": [
+            "waterlogged"
+        ]
+    },
+    "minecraft:fire_coral": {
+        "properties_added": [
+            "waterlogged"
+        ]
+    },
+    "minecraft:horn_coral": {
+        "properties_added": [
+            "waterlogged"
+        ]
+    },
+    "minecraft:conduit": {
+        "properties_added": [
+            "waterlogged"
+        ]
+    }
+}
