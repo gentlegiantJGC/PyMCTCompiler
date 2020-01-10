@@ -115,3 +115,4 @@ tests/logs/
 
 amulet_nbt
 save_cache.json
+PyMCTCompiler/version_compiler/universal/latest
