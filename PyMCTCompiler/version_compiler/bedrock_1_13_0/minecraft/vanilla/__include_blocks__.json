@@ -31,10 +31,12 @@
 	"deadbush": "deadbush",
 	"piston": null,
 	"pistonArmCollision": null,
+	"stickyPistonArmCollision": null,
 	"wool": "wool",
 
 	"yellow_flower": "yellow_flower",
 	"red_flower": "red_flower",
+	"wither_rose": null,
 	"brown_mushroom": "brown_mushroom",
 	"red_mushroom": "red_mushroom",
 	"gold_block": "gold_block",
