@@ -1,4 +1,5 @@
 import os
+import json
 
 from .base_compiler import BaseCompiler
 import PyMCTCompiler
@@ -8,6 +9,59 @@ from PyMCTCompiler.helpers import blocks_from_server, load_json_file
 from PyMCTCompiler.translation_functions import FunctionList
 
 
+def minify_blocks(blocks: dict) -> dict:
+    return {key: _minify_block(val) for key, val in blocks.items()}
+
+
+def _minify_block(block: dict):
+    return {
+        'properties': block.get('properties', {}),
+        'defaults': next(state for state in block['states'] if state.get('default', False)).get('properties', {})
+    }
+
+
+def find_blocks_changes(old_blocks: dict, new_blocks: dict):
+    # block added
+    # block removed
+    # property added
+    # property removed
+    # default changed
+    # value added
+    # value removed
+    old_blocks = minify_blocks(old_blocks)
+    new_blocks = minify_blocks(new_blocks)
+
+    changes = {}
+    for block, block_data in old_blocks.items():
+        if block not in new_blocks:
+            changes.setdefault(block, {})['block_removed'] = True
+        else:
+            new_block_data = new_blocks[block]
+            for prop, prop_data in block_data['properties'].items():
+                if prop not in new_block_data['properties']:
+                    changes.setdefault(block, {}).setdefault('properties_removed', []).append(prop)
+                else:
+                    for val in prop_data:
+                        if val not in new_block_data['properties'][prop]:
+                            changes.setdefault(block, {}).setdefault('values_removed', {}).setdefault(prop, []).append(val)
+
+    for block, block_data in new_blocks.items():
+        if block not in old_blocks:
+            changes.setdefault(block, {})['block_added'] = block_data
+        else:
+            old_block_data = old_blocks[block]
+            for prop, prop_data in block_data['properties'].items():
+                if prop not in old_block_data['properties']:
+                    changes.setdefault(block, {}).setdefault('properties_added', []).append(prop)
+                else:
+                    if block_data['defaults'][prop] != old_block_data['defaults'][prop]:
+                        changes.setdefault(block, {}).setdefault('default_changed', {})[prop] = [old_block_data['defaults'][prop], block_data['defaults'][prop]]
+                    for val in prop_data:
+                        if val not in old_block_data['properties'][prop]:
+                            changes.setdefault(block, {}).setdefault('values_added', {}).setdefault(prop, []).append(val)
+    return changes
+
+
 class JavaBlockstateCompiler(BaseCompiler):
     def _modifications_prefix(self):
         return os.path.join(self._directory, 'modifications')
@@ -15,7 +69,8 @@ class JavaBlockstateCompiler(BaseCompiler):
     def _build_blocks(self):
         blocks_from_server(self._directory, [str(v) for v in self.version])
 
-        if os.path.isfile(os.path.join(self._directory, 'generated', 'reports', 'blocks.json')):
+        blocks_path = os.path.join(self._directory, 'generated', 'reports', 'blocks.json')
+        if os.path.isfile(blocks_path):
             waterlogable = []
             add = {}
             remove = {}
@@ -29,7 +84,17 @@ class JavaBlockstateCompiler(BaseCompiler):
                     add[(namespace, sub_name)][block_base_name] = primitives.get_block(self.primitive_block_format, primitive_data)
 
             # load the block list the server created
-            blocks: dict = load_json_file(os.path.join(self._directory, 'generated', 'reports', 'blocks.json'))
+            blocks: dict = load_json_file(blocks_path)
+
+            parent_blocks_path = os.path.join(self._directory, '..', self._parent_name, 'generated', 'reports', 'blocks.json')
+            if os.path.isfile(parent_blocks_path) and not os.path.isfile(os.path.join(self._directory, 'changes.json')):
+                parent_blocks = load_json_file(parent_blocks_path)
+                with open(os.path.join(self._directory, 'changes.json'), 'w') as f:
+                    json.dump(
+                        find_blocks_changes(parent_blocks, blocks),
+                        f,
+                        indent=4
+                    )
 
             # unpack all the default states from blocks.json and create direct mappings unless that block is in the modifications
             for block_string, states in blocks.items():
