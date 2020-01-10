@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "smooth_quartz_slab", "smooth_quartz", "universal_minecraft", "slab", {"type": ["top","bottom","double"]})

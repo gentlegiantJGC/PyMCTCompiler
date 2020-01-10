@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "mossy_stone_brick_slab", "mossy_stone_brick", "universal_minecraft", "slab", {"type": ["top","bottom","double"]})
