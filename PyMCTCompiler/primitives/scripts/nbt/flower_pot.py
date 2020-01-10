@@ -30,7 +30,7 @@ B113	"FlowerPot"		            {PlantBlock: {name: "minecraft:red_flower", val: 0
 #     "fern",
 #     "dead_bush",
 #     "cactus",
-#     "potted_bamboo",
+#     "bamboo",
 #     "cornflower": ["red_flower", 9],
 #     "lily_of_the_valley": ["red_flower", 10],
 #     "wither_rose"

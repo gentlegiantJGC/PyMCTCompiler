@@ -12,7 +12,10 @@
 		"oxeye_daisy",
 		"grass",
 		"fern",
-		"dead_bush"
+		"dead_bush",
+		"cornflower",
+		"wither_rose",
+		"lily_of_the_valley"
 	],
 	"add": {
 		"plant": {
