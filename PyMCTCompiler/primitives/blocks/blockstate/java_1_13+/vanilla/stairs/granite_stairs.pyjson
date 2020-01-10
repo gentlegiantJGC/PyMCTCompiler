@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "granite_stairs", "granite", "universal_minecraft", "stairs", {"facing": ["north","south","west","east"],"half": ["top","bottom"],"shape": ["straight","inner_left","inner_right","outer_left","outer_right"]})
