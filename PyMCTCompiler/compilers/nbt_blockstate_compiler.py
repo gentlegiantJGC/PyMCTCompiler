@@ -89,6 +89,8 @@ def find_blocks_changes(old_blocks: dict, new_blocks: dict):
 				else:
 					if block_data['defaults'][prop] != old_block_data['defaults'][prop]:
 						changes.setdefault(block, {}).setdefault('default_changed', {})[prop] = [old_block_data['defaults'][prop], block_data['defaults'][prop]]
+					if block_data['types'][prop] != old_block_data['types'][prop]:
+						changes.setdefault(block, {}).setdefault('type_changed', {})[prop] = [old_block_data['types'][prop], block_data['types'][prop]]
 					for val in prop_data:
 						if val not in old_block_data['properties'][prop]:
 							changes.setdefault(block, {}).setdefault('values_added', {}).setdefault(prop, []).append(val)
