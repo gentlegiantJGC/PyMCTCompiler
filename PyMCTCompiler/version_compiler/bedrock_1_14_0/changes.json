@@ -1,0 +1,84 @@
+{
+    "minecraft:kelp": {
+        "properties_removed": [
+            "age"
+        ],
+        "properties_added": [
+            "kelp_age"
+        ]
+    },
+    "minecraft:beehive": {
+        "block_added": {
+            "properties": {
+                "facing_direction": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "honey_level": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ]
+            },
+            "defaults": {
+                "facing_direction": 0,
+                "honey_level": 0
+            },
+            "types": {
+                "facing_direction": "int",
+                "honey_level": "int"
+            }
+        }
+    },
+    "minecraft:bee_nest": {
+        "block_added": {
+            "properties": {
+                "facing_direction": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "honey_level": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ]
+            },
+            "defaults": {
+                "facing_direction": 0,
+                "honey_level": 0
+            },
+            "types": {
+                "facing_direction": "int",
+                "honey_level": "int"
+            }
+        }
+    },
+    "minecraft:honey_block": {
+        "block_added": {
+            "properties": {},
+            "defaults": {},
+            "types": {}
+        }
+    },
+    "minecraft:honeycomb_block": {
+        "block_added": {
+            "properties": {},
+            "defaults": {},
+            "types": {}
+        }
+    }
+}

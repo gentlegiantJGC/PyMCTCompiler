@@ -1,5 +1,6 @@
 import os
 import traceback
+import json
 
 import PyMCTCompiler
 from .base_compiler import BaseCompiler
@@ -31,6 +32,67 @@ def to_snbt(nbt_type, value):
 		return f'"{value}"'
 	else:
 		raise NotImplemented
+	
+	
+def minify_blocks(blocks: dict) -> dict:
+	blocks_out = {}
+	for block in blocks['blocks']:
+		block_out = blocks_out.setdefault(block['name'], {
+			"properties": {},
+			"defaults": {},
+			"types": {}
+		})
+		for state in block['states']:
+			prop, prop_type, val = state['name'], state['type'], state['value']
+			block_out['properties'].setdefault(prop, [])
+			if val not in block_out['properties'][prop]:
+				block_out['properties'][prop].append(val)
+			block_out['defaults'].setdefault(prop, val)
+			block_out['types'].setdefault(prop, prop_type)
+
+	return blocks_out
+
+
+def find_blocks_changes(old_blocks: dict, new_blocks: dict):
+	# block added
+	# block removed
+	# property added
+	# property removed
+	# default changed
+	# value added
+	# value removed
+	old_blocks = minify_blocks(old_blocks)
+	new_blocks = minify_blocks(new_blocks)
+
+	changes = {}
+	for block, block_data in old_blocks.items():
+		if block not in new_blocks:
+			changes.setdefault(block, {})['block_removed'] = True
+		else:
+			new_block_data = new_blocks[block]
+			for prop, prop_data in block_data['properties'].items():
+				if prop not in new_block_data['properties']:
+					changes.setdefault(block, {}).setdefault('properties_removed', []).append(prop)
+				else:
+					for val in prop_data:
+						if val not in new_block_data['properties'][prop]:
+							changes.setdefault(block, {}).setdefault('values_removed', {}).setdefault(prop, []).append(val)
+
+	for block, block_data in new_blocks.items():
+		if block not in old_blocks:
+			changes.setdefault(block, {})['block_added'] = block_data
+		else:
+			old_block_data = old_blocks[block]
+			for prop, prop_data in block_data['properties'].items():
+				if prop not in old_block_data['properties']:
+					changes.setdefault(block, {}).setdefault('properties_added', []).append(prop)
+				else:
+					if block_data['defaults'][prop] != old_block_data['defaults'][prop]:
+						changes.setdefault(block, {}).setdefault('default_changed', {})[prop] = [old_block_data['defaults'][prop], block_data['defaults'][prop]]
+					for val in prop_data:
+						if val not in old_block_data['properties'][prop]:
+							changes.setdefault(block, {}).setdefault('values_added', {}).setdefault(prop, []).append(val)
+	return changes
 
 
 class NBTBlockstateCompiler(BaseCompiler):
@@ -52,6 +114,17 @@ class NBTBlockstateCompiler(BaseCompiler):
 
 			# load the block list
 			block_palette: dict = load_json_file(os.path.join(self._directory, 'block_palette.json'))
+
+			old_block_palette_path = os.path.join(self._directory, '..', self._parent_name, 'block_palette.json')
+			if os.path.isfile(old_block_palette_path):
+				with open(old_block_palette_path) as f:
+					old_block_palette = json.load(f)
+				with open(os.path.join(self._directory, 'changes.json'), 'w') as f:
+					json.dump(
+						find_blocks_changes(old_block_palette, block_palette),
+						f,
+						indent=4
+					)
 			blocks = {}
 
 			for blockstate in block_palette['blocks']:
