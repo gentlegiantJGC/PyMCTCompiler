@@ -1,0 +1,35 @@
+{
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:plant"
+		},
+		{
+			"function": "new_properties",
+			"options": {
+				"type": "wither_rose"
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:plant": [
+			{
+				"function": "new_block",
+				"options": "minecraft:red_flower"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"type": {
+						"wither_rose": [
+							{
+								"function": "new_block",
+								"options": "minecraft:wither_rose"
+							}
+						]
+					}
+				}
+			}
+		]
+	}
+}
