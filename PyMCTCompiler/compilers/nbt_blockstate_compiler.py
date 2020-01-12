@@ -118,7 +118,7 @@ class NBTBlockstateCompiler(BaseCompiler):
 			block_palette: dict = load_json_file(os.path.join(self._directory, 'block_palette.json'))
 
 			old_block_palette_path = os.path.join(self._directory, '..', self._parent_name, 'block_palette.json')
-			if os.path.isfile(old_block_palette_path):
+			if os.path.isfile(old_block_palette_path) and not os.path.isfile(os.path.join(self._directory, 'changes.json')):
 				with open(old_block_palette_path) as f:
 					old_block_palette = json.load(f)
 				with open(os.path.join(self._directory, 'changes.json'), 'w') as f:
