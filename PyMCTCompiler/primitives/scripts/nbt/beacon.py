@@ -12,7 +12,15 @@ B113	"Beacon"                {isMovable: 1b, primary: 0, secondary: 0}
 
 universal = {
     "nbt_identifier": ["universal_minecraft", "beacon"],
-    "snbt": "{utags: {Secondary: 0, Primary: 0, Levels: -1, Lock: \"\", isMovable: 1b}}"
+    "snbt": """{
+        utags: {
+            isMovable: 1b, 
+            Secondary: 0, 
+            Primary: 0, 
+            Levels: -1, 
+            Lock: \"\"
+        }
+    }"""
 }
 
 _J112 = NBTRemapHelper(

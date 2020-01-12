@@ -43,6 +43,9 @@ def check_specification_format(data: dict):
 
 	if 'snbt' in data:
 		assert isinstance(data['snbt'], str), 'Specification "snbt" must be a string'
+		while '\n\t' in data['snbt'] or '\n ' in data['snbt']:
+			data['snbt'] = data['snbt'].replace('\n\t', '\n').replace('\n ', '\n')
+		data['snbt'] = data['snbt'].replace('\n', '')
 		try:
 			amulet_nbt.from_snbt(data['snbt'])
 		except:
