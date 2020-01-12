@@ -43,7 +43,7 @@
 			"unbt": "nbt.mob_spawner.universal"
 		},
 		"note_block": {
-			"unbt": "nbt.note_block.universal"
+			"unbt": "nbt.noteblock.universal"
 		},
 		"jukebox": {
 			"unbt": "nbt.jukebox.universal"
@@ -71,6 +71,12 @@
 		},
 		"conduit": {
 			"unbt": "nbt.conduit.universal"
+		},
+		"piston": {
+			"unbt": "nbt.piston.universal"
+		},
+		"sticky_piston": {
+			"unbt": "nbt.piston.universal_sticky"
 		}
 	}
 }

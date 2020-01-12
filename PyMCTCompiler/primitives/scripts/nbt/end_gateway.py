@@ -7,7 +7,11 @@ J113    "minecraft:end_gateway"		"{Age: 0l}"
 
 universal = {
     "nbt_identifier": ["universal_minecraft", "end_gateway"],
-    "snbt": "{utags: {isMovable: 1b}}"
+    "snbt": """{
+        utags: {
+            isMovable: 1b
+        }
+    }"""
 }
 
 _J113 = NBTRemapHelper(

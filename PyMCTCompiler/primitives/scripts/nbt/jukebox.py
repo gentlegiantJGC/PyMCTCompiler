@@ -14,7 +14,11 @@ J113    "{RecordItem: {Count: 0b, id: \":\", tag: {}}}"
 
 universal = {
     "nbt_identifier": ["universal_minecraft", "jukebox"],
-    "snbt": "{utags: {isMovable: 1b}}"
+    "snbt": """{
+        utags: {
+            isMovable: 1b
+        }
+    }"""
 }
 
 _J19 = NBTRemapHelper(

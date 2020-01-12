@@ -11,7 +11,11 @@ B113	"Dispenser"		"{Items: [], isMovable: 1b}"
 
 universal = {
     "nbt_identifier": ["universal_minecraft", "dispenser"],
-    "snbt": "{utags: {isMovable: 1b}}"
+    "snbt": """{
+        utags: {
+            isMovable: 1b
+        }
+    }"""
 }
 
 j112 = merge(

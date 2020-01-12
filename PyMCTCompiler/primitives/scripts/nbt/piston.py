@@ -6,7 +6,21 @@ J113    "minecraft:piston"
 """
 
 universal = {
+    "nbt_identifier": ["universal_minecraft", "piston"],
+    "snbt": """{
+        utags: {
+            isMovable: 1b
+        }
+    }"""
+}
 
+universal_sticky = {
+    "nbt_identifier": ["universal_minecraft", "piston"],
+    "snbt": """{
+        utags: {
+            isMovable: 1b
+        }
+    }"""
 }
 
 _J113 = NBTRemapHelper(

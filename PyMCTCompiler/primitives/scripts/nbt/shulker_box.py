@@ -14,7 +14,11 @@ J111    {CustomName: \"\", Items: [], Lock: \"\", LootTable: \":\", LootTableSee
 
 universal = {
     "nbt_identifier": ["universal_minecraft", "shulker_box"],
-    "snbt": "{utags: {isMovable: 1b}}"
+    "snbt": """{
+        utags: {
+            isMovable: 1b
+        }
+    }"""
 }
 
 # TODO: facing

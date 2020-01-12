@@ -10,7 +10,11 @@ B113	"EnchantTable"		"{isMovable: 1b, rott: -2.351901054382324f}"
 
 universal = {
     "nbt_identifier": ["universal_minecraft", "enchanting_table"],
-    "snbt": "{utags: {isMovable: 1b}}"
+    "snbt": """{
+        utags: {
+            isMovable: 1b
+        }
+    }"""
 }
 
 _B113 = NBTRemapHelper(

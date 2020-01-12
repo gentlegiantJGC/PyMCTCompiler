@@ -14,7 +14,11 @@ J19     "{CustomName: \"\", Items: [], Lock: \"\", LootTable: \":\", LootTableSe
 
 universal = {
     "nbt_identifier": ["universal_minecraft", "hopper"],
-    "snbt": "{utags: {isMovable: 1b}}"
+    "snbt": """{
+        utags: {
+            isMovable: 1b
+        }
+    }"""
 }
 
 _J19 = NBTRemapHelper(

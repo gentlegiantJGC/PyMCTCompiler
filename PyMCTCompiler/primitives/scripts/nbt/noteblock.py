@@ -9,8 +9,14 @@ B113    {isMovable: 1b, note: 0b}
 """
 
 universal = {
-
+    "nbt_identifier": ["universal_minecraft", "note_block"],
+    "snbt": """{
+        utags: {
+            isMovable: 1b
+        }
+    }"""
 }
+
 
 _J19 = TranslationFile(
     [

@@ -10,7 +10,11 @@ B113	"EndPortal"		"{isMovable: 1b}"
 
 universal = {
     "nbt_identifier": ["universal_minecraft", "end_portal"],
-    "snbt": "{utags: {isMovable: 1b}}"
+    "snbt": """{
+        utags: {
+            isMovable: 1b
+        }
+    }"""
 }
 
 j112 = merge(

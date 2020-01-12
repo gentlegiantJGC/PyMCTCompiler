@@ -10,7 +10,11 @@ B113	"DaylightDetector"		"{isMovable: 1b}"
 
 universal = {
     "nbt_identifier": ["universal_minecraft", "daylight_detector"],
-    "snbt": "{utags: {isMovable: 1b}}"
+    "snbt": """{
+        utags: {
+            isMovable: 1b
+        }
+    }"""
 }
 
 j112 = merge(

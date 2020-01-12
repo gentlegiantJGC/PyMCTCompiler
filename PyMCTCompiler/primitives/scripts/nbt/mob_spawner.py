@@ -10,7 +10,11 @@ B113	"MobSpawner"		"{Delay: 20s, DisplayEntityHeight: 1.7999999523162842f, Displ
 
 universal = {
     "nbt_identifier": ["universal_minecraft", "spawner"],
-    "snbt": "{utags: {isMovable: 1b}}"
+    "snbt": """{
+        utags: {
+            isMovable: 1b
+        }
+    }"""
 }
 
 _J113 = NBTRemapHelper(

@@ -11,7 +11,11 @@ B113	"Comparator"		        {OutputSignal: 0, isMovable: 1b}
 
 universal = {
     "nbt_identifier": ["universal_minecraft", "comparator"],
-    "snbt": "{utags: {isMovable: 1b}}"
+    "snbt": """{
+        utags: {
+            isMovable: 1b
+        }
+    }"""
 }
 
 _J112 = NBTRemapHelper(

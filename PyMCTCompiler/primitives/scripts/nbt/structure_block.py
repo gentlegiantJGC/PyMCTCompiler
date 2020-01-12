@@ -11,7 +11,11 @@ B113	"StructureBlock"		        "{data: 5, dataField: \"\", ignoreEntities: 0b, i
 
 universal = {
     "nbt_identifier": ["universal_minecraft", "structure_block"],
-    "snbt": "{utags: {isMovable: 1b}}"
+    "snbt": """{
+        utags: {
+            isMovable: 1b
+        }
+    }"""
 }
 
 _J113 = NBTRemapHelper(

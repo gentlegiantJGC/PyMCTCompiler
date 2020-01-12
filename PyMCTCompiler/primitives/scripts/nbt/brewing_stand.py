@@ -12,7 +12,15 @@ B113	"BrewingStand"		{CookTime: 0s, FuelAmount: 0s, FuelTotal: 0s, Items: [], is
 
 universal = {
     "nbt_identifier": ["universal_minecraft", "brewing_stand"],
-    "snbt": "{utags: {Fuel: 0b, Items: [], BrewTime: 0s, Lock: \"\", isMovable: 1b}}"
+    "snbt": """{
+        utags: {
+            isMovable: 1b,
+            Fuel: 0b, 
+            Items: [], 
+            BrewTime: 0s, 
+            Lock: \"\"
+        }
+    }"""
 }
 
 _J112 = NBTRemapHelper(

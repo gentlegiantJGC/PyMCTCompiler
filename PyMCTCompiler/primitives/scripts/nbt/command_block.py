@@ -10,7 +10,11 @@ B113	"CommandBlock"		            "{Command: "", CustomName: "", ExecuteOnFirstTi
 
 universal = {
     "nbt_identifier": ["universal_minecraft", "command_block"],
-    "snbt": "{utags: {isMovable: 1b}}"
+    "snbt": """{
+        utags: {
+            isMovable: 1b
+        }
+    }"""
 }
 
 _J19 = NBTRemapHelper(

@@ -15,7 +15,12 @@ J112   "minecraft:banner"       {Patterns:[],Base:0}
 
 universal = {
     "nbt_identifier": ["universal_minecraft", "banner"],
-    "snbt": "{utags: {isMovable: 1b, Patterns:{}}}"
+    "snbt": """{
+        utags: {
+            isMovable: 1b, 
+            Patterns:{}
+        }
+    }"""
 }
 
 _J112 = NBTRemapHelper(

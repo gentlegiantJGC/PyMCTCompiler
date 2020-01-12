@@ -10,7 +10,11 @@ B113	"FlowerPot"		            {PlantBlock: {name: "minecraft:red_flower", val: 0
 
 universal = {
     "nbt_identifier": ["universal_minecraft", "flower_pot"],
-    "snbt": "{utags: {isMovable: 1b}}"
+    "snbt": """{
+        utags: {
+            isMovable: 1b
+        }
+    }"""
 }
 
 # j_plants = {
