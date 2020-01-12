@@ -9,6 +9,11 @@ J113    "minecraft:structure_block"		'{metadata: "", mirror: "NONE", ignoreEntit
 B113	"StructureBlock"		        "{data: 5, dataField: \"\", ignoreEntities: 0b, includePlayers: 0b, integrity: 100.0f, isMovable: 1b, isPowered: 0b, mirror: 0b, redstoneSaveMode: 0, removeBlocks: 0b, rotation: 0b, seed: 0L, showBoundingBox: 1b, structureName: \"\", xStructureOffset: 0, xStructureSize: 5, yStructureOffset: -1, yStructureSize: 5, zStructureOffset: 0, zStructureSize: 5}"
 """
 
+universal = {
+    "nbt_identifier": ["universal_minecraft", "structure_block"],
+    "snbt": "{utags: {isMovable: 1b}}"
+}
+
 _J113 = NBTRemapHelper(
     [
         (

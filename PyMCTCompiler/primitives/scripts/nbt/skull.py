@@ -7,6 +7,11 @@ J113    "minecraft:skull"		"{}"
 B113	"Skull"		"{MouthMoving: 0b, MouthTickCount: 0, Rotation: -90.0f, SkullType: 0b, isMovable: 1b}"
 """
 
+universal = {
+    "nbt_identifier": ["universal_minecraft", "head"],
+    "snbt": "{utags: {isMovable: 1b}}"
+}
+
 _J113 = NBTRemapHelper(
     [
         (

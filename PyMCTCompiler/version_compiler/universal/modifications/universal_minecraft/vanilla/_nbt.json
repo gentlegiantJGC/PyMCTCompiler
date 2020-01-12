@@ -1,172 +1,76 @@
 {
 	"add": {
 		"chest": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "chest"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.chest.universal"
 		},
 		"trapped_chest": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "trapped_chest"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.chest.universal_trapped"
 		},
 		"dispenser": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "dispenser"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.dispenser.universal"
 		},
 		"furnace": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "furnace"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.furnace.universal"
 		},
 		"brewing_stand": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "brewing_stand"
-		    ],
-		    "snbt": "{utags: {Fuel: 0b, Items: [], BrewTime: 0s, Lock: \"\", isMovable: 1b}}"
+			"unbt": "nbt.brewing_stand.universal"
 		},
 		"hopper": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "hopper"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.hopper.universal"
 		},
 		"dropper": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "dropper"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.dropper.universal"
 		},
 		"barrel": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "barrel"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.barrel.universal"
 		},
 		"smoker": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "smoker"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.smoker.universal"
 		},
 		"blast_furnace": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "blast_furnace"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.blast_furnace.universal"
 		},
 		"campfire": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "campfire"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.campfire.universal"
 		},
 		"lectern": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "lectern"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.lectern.universal"
 		},
 		"beacon": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "beacon"
-		    ],
-		    "snbt": "{utags: {Secondary: 0, Primary: 0, Levels: -1, Lock: \"\", isMovable: 1b}}"
+			"unbt": "nbt.beacon.universal"
 		},
 		"spawner": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "spawner"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.mob_spawner.universal"
 		},
 		"note_block": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "note_block"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.note_block.universal"
 		},
 		"jukebox": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "jukebox"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.jukebox.universal"
 		},
 		"enchanting_table": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "enchanting_table"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.enchanting_table.universal"
 		},
 		"end_portal": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "end_portal"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.end_portal.universal"
 		},
 		"ender_chest": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "ender_chest"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.ender_chest.universal"
 		},
 		"end_gateway": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "end_gateway"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.end_gateway.universal"
 		},
 		"jigsaw": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "jigsaw"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.jigsaw.universal"
 		},
 		"daylight_detector": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "daylight_detector"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.daylight_detector.universal"
 		},
 		"comparator": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "comparator"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.comparator.universal"
 		},
 		"conduit": {
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "conduit"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.conduit.universal"
 		}
 	}
 }

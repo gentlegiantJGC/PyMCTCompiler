@@ -13,6 +13,11 @@ With Data
 J112   "minecraft:banner"       {Patterns:[],Base:0}
 """
 
+universal = {
+    "nbt_identifier": ["universal_minecraft", "banner"],
+    "snbt": "{utags: {isMovable: 1b, Patterns:{}}}"
+}
+
 _J112 = NBTRemapHelper(
     [
         (
@@ -48,7 +53,6 @@ wall_j112 = merge(
     ['universal_minecraft:wall_banner'],
     abstract=True
 )
-
 
 j113 = merge(
     [EmptyNBT('minecraft:banner'), _J113, java_custom_name],

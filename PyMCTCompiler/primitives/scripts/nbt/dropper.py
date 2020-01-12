@@ -8,6 +8,11 @@ J113    "minecraft:dropper"		"{Items: [], Lock: \"\"}"
 B113	"Dropper"		"{Items: [], isMovable: 1b}"
 """
 
+universal = {
+    "nbt_identifier": ["universal_minecraft", "dropper"],
+    "snbt": "{utags: {isMovable: 1b}}"
+}
+
 j112 = merge(
     [EmptyNBT('minecraft:dropper'), java_custom_name, java_str_lock, java_items_9, java_loot_table],
     ['universal_minecraft:dropper'],

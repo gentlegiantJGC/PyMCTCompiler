@@ -15,6 +15,16 @@ J112    "minecraft:chest"		        {Items: [], Lock: ""}
 J113    "minecraft:trapped_chest"		{Items: [], Lock: ""}
 """
 
+universal = {
+    "nbt_identifier": ["universal_minecraft", "chest"],
+    "snbt": "{utags: {isMovable: 1b}}"
+}
+
+universal_trapped = {
+    "nbt_identifier": ["universal_minecraft", "trapped_chest"],
+    "snbt": "{utags: {isMovable: 1b}}"
+}
+
 _B113 = NBTRemapHelper(
     [
         (

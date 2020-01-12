@@ -8,6 +8,11 @@ J113    "minecraft:daylight_detector"		"{}"
 B113	"DaylightDetector"		"{isMovable: 1b}"
 """
 
+universal = {
+    "nbt_identifier": ["universal_minecraft", "daylight_detector"],
+    "snbt": "{utags: {isMovable: 1b}}"
+}
+
 j112 = merge(
     [EmptyNBT('minecraft:daylight_detector')],
     ['universal_minecraft:daylight_detector'],

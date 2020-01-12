@@ -8,6 +8,11 @@ J113    "minecraft:command_block"		'{conditionMet: 0b, auto: 0b, CustomName: "{\
 B113	"CommandBlock"		            "{Command: "", CustomName: "", ExecuteOnFirstTick: 0b, LPCommandMode: 16064, LPCondionalMode: 63b, LPRedstoneMode: 0b, LastExecution: 0L, LastOutput: "", LastOutputParams: [], SuccessCount: 0, TickDelay: 0, TrackOutput: 1b, Version: 10, auto: 0b, conditionMet: 0b, isMovable: 1b, powered: 0b}"
 """
 
+universal = {
+    "nbt_identifier": ["universal_minecraft", "command_block"],
+    "snbt": "{utags: {isMovable: 1b}}"
+}
+
 _J19 = NBTRemapHelper(
     [
         (

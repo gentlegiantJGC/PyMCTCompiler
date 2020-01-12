@@ -14,6 +14,11 @@ J113                            {}
 
 """
 
+universal = {
+    "nbt_identifier": ["universal_minecraft", "bed"],
+    "snbt": "{utags: {isMovable: 1b}}"
+}
+
 _B17 = TranslationFile(
     [
         {

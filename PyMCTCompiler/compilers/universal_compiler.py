@@ -5,6 +5,7 @@ import json
 from .base_compiler import BaseCompiler
 from PyMCTCompiler.disk_buffer import disk_buffer
 from PyMCTCompiler.helpers import blocks_from_server, load_json_file, get_latest_server
+from PyMCTCompiler.primitives.scripts import nbt
 
 """
 Summary
@@ -84,6 +85,11 @@ class UniversalCompiler(BaseCompiler):
 								spec[key] = val
 							specification = spec
 					assert isinstance(specification, dict), f'The data here is supposed to be a dictionary. Got this instead:\n{specification}'
+					if 'unbt' in specification:
+						spec = eval(specification['unbt'])
+						del specification['unbt']
+						for key, val in spec.items():
+							specification[key] = val
 					disk_buffer.add_specification(self.version_name, 'block', 'blockstate', namespace, sub_name, block_name, specification)
 		else:
 			raise Exception(f'Could not find {self.version_name}/generated/reports/blocks.json')

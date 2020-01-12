@@ -13,6 +13,11 @@ J112    "{BurnTime: 0s, CookTime: 0s, CookTimeTotal: 0s, CustomName: \"\", Items
 J113    "{BurnTime: 0s, CookTime: 0s, CookTimeTotal: 0s, CustomName: \"\", Items: [], Lock: \"\", RecipesUsedSize: 0s, RecipeLocationX: "", RecipeAmountX: 0s}"
 """
 
+universal = {
+    "nbt_identifier": ["universal_minecraft", "furnace"],
+    "snbt": "{utags: {isMovable: 1b}}"
+}
+
 _J19 = NBTRemapHelper(
     [
         (

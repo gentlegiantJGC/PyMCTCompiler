@@ -8,6 +8,10 @@ B113    {isMovable: 1b, note: 0b}
 
 """
 
+universal = {
+
+}
+
 _J19 = TranslationFile(
     [
         {

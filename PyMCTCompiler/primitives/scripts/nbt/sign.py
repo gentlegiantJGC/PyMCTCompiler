@@ -7,6 +7,11 @@ J113    "minecraft:sign"		'{Text4: "{\\"text\\":\\"\\"}", Text3: "{\\"text\\":\\
 B113	"Sign"		"{Text: "", TextOwner: "", isMovable: 1b}"
 """
 
+universal = {
+    "nbt_identifier": ["universal_minecraft", "sign"],
+    "snbt": "{}"
+}
+
 _J19 = NBTRemapHelper(
     [
         (
@@ -84,5 +89,3 @@ wall_b113 = merge(
     [EmptyNBT('minecraft:sign'), _B113, _BText],
     ['universal_minecraft:wall_sign']
 )
-
-

@@ -5,6 +5,10 @@ Default
 J113    "minecraft:piston"
 """
 
+universal = {
+
+}
+
 _J113 = NBTRemapHelper(
     [],
     '{}'

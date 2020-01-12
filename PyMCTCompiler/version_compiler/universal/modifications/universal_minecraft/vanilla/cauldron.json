@@ -23,11 +23,7 @@
 				"level": "0",
 				"cauldron_liquid": "water"
 			},
-			"nbt_identifier": [
-		        "universal_minecraft",
-		        "cauldron"
-		    ],
-		    "snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.cauldron.universal"
 		}
 	}
 }

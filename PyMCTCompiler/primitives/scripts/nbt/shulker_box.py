@@ -1,5 +1,5 @@
 from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
-from .common import java_custom_name, java_str_lock, java_items_27, java_loot_table,\
+from .common import java_custom_name, java_str_lock, java_items_27, java_loot_table, \
     bedrock_is_movable, bedrock_items_27
 
 """
@@ -11,6 +11,11 @@ B113	"ShulkerBox"		"{Findable: 0b, Items: [], facing: 1b, isMovable: 1b}"
 Full
 J111    {CustomName: \"\", Items: [], Lock: \"\", LootTable: \":\", LootTableSeed: 0l}
 """
+
+universal = {
+    "nbt_identifier": ["universal_minecraft", "shulker_box"],
+    "snbt": "{utags: {isMovable: 1b}}"
+}
 
 # TODO: facing
 

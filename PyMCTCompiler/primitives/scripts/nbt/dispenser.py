@@ -9,6 +9,10 @@ J113    "minecraft:dispenser"		"{Items: [], Lock: \"\"}"
 B113	"Dispenser"		"{Items: [], isMovable: 1b}"
 """
 
+universal = {
+    "nbt_identifier": ["universal_minecraft", "dispenser"],
+    "snbt": "{utags: {isMovable: 1b}}"
+}
 
 j112 = merge(
     [EmptyNBT('minecraft:dispenser'), java_custom_name, java_str_lock, java_items_9, java_loot_table],

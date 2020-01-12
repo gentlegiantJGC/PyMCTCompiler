@@ -8,6 +8,11 @@ J112    "minecraft:flower_pot"		{Data: 0, Item: ":"}
 B113	"FlowerPot"		            {PlantBlock: {name: "minecraft:red_flower", val: 0s}, isMovable: 1b}
 """
 
+universal = {
+    "nbt_identifier": ["universal_minecraft", "flower_pot"],
+    "snbt": "{utags: {isMovable: 1b}}"
+}
+
 # j_plants = {
 #     "dandelion": ["yellow_flower", 0],
 #     "poppy": ["red_flower", 0],
@@ -38,7 +43,7 @@ B113	"FlowerPot"		            {PlantBlock: {name: "minecraft:red_flower", val: 0
 
 _J19 = NBTRemapHelper(
     [
-        (   # TODO: item translation
+        (  # TODO: item translation
             ("Data", "int", []),
             ("Data", "int", [("utags", "compound")])
         ),
@@ -52,7 +57,7 @@ _J19 = NBTRemapHelper(
 
 _B17 = NBTRemapHelper(
     [
-        (   # TODO: item translation
+        (  # TODO: item translation
             ("val", "short", [("PlantBlock", "compound")]),
             ("Data", "int", [("utags", "compound")])
         ),

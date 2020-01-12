@@ -8,6 +8,11 @@ J113    "minecraft:conduit"		"{}"
 B113	"Conduit"		"{Active: 0b, Target: -1L, isMovable: 1b}"
 """
 
+universal = {
+    "nbt_identifier": ["universal_minecraft", "conduit"],
+    "snbt": "{utags: {isMovable: 1b}}"
+}
+
 _J113 = NBTRemapHelper(
     [
         (

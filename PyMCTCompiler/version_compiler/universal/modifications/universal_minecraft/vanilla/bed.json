@@ -59,11 +59,7 @@
 				"occupied": "false",
 				"part": "foot"
 			},
-			"nbt_identifier": [
-				"universal_minecraft",
-				"bed"
-			],
-			"snbt": "{utags: {isMovable: 1b}}"
+			"unbt": "nbt.bed.universal"
 		}
 	}
 }

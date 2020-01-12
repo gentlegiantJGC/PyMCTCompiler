@@ -10,6 +10,11 @@ J113    "minecraft:brewing_stand"		{Fuel: 0b, Items: [], BrewTime: 0s, Lock: ""}
 B113	"BrewingStand"		{CookTime: 0s, FuelAmount: 0s, FuelTotal: 0s, Items: [], isMovable: 1b}
 """
 
+universal = {
+    "nbt_identifier": ["universal_minecraft", "brewing_stand"],
+    "snbt": "{utags: {Fuel: 0b, Items: [], BrewTime: 0s, Lock: \"\", isMovable: 1b}}"
+}
+
 _J112 = NBTRemapHelper(
     [
         (
@@ -27,15 +32,15 @@ _J112 = NBTRemapHelper(
 _B113 = NBTRemapHelper(
     [
         (
-            ("FuelAmount", "byte", []),                 # How much fuel is left
+            ("FuelAmount", "byte", []),  # How much fuel is left
             ("Fuel", "short", [("utags", "compound")])
         ),
         (
-            ("CookTime", "short", []),                  # Time until finished cooking
+            ("CookTime", "short", []),  # Time until finished cooking
             ("BrewTime", "short", [("utags", "compound")])
         ),
         (
-            ("FuelTotal", "short", []),                  # Max value of fuel container
+            ("FuelTotal", "short", []),  # Max value of fuel container
             ("FuelTotal", "short", [("utags", "compound")])
         )
     ],
