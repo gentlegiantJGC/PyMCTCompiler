@@ -39,6 +39,10 @@ _B113 = NBTRemapHelper(
         (
             ("TextOwner", "string", []),
             ("TextOwner", "string", [("utags", "compound")])
+        ),
+        (
+            ("Text", "string", []),
+            (None, None, None)
         )
     ],
     '{TextOwner: ""}'

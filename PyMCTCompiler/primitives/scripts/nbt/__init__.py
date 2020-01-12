@@ -133,6 +133,7 @@ class NBTRemapHelper(TranslationFile):
         ]
 
         for remap in remaps:
+            # TODO: make the second input to remap optionally None to mark the output as not being carried
             (input_key, input_type, input_path), (output_key, output_type, output_path) = remap
             to_uni = self._extend_map(to_universal[0]["options"]["keys"], input_path)
             from_uni = self._extend_map(from_universal[0]["options"]["keys"], output_path)
@@ -141,6 +142,8 @@ class NBTRemapHelper(TranslationFile):
                     (to_uni, input_key, input_type, output_key, output_type, output_path),
                     (from_uni, output_key, output_type, input_key, input_type, input_path)
             ):
+                if obj is None:
+                    continue
                 obj[in_key] = {}
                 obj = obj[in_key]
 
@@ -148,6 +151,10 @@ class NBTRemapHelper(TranslationFile):
                     assert obj["type"] == in_type
                 else:
                     obj["type"] = in_type
+
+                if out_key is None:
+                    obj['functions'] = []
+                    continue
 
                 obj["functions"] = [
                     {
@@ -166,7 +173,9 @@ class NBTRemapHelper(TranslationFile):
         super().__init__(to_universal, from_universal, spec)
 
     @staticmethod
-    def _extend_map(obj: dict, path: List[Tuple[str, str]]):
+    def _extend_map(obj: dict, path: Union[List[Tuple[str, str]], None]) -> Union[dict, None]:
+        if path is None:
+            return
         for sub_path in path:
             key, nbt_type = sub_path
             obj = obj.setdefault(str(key), {})
