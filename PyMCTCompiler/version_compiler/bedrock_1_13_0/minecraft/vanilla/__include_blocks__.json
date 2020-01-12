@@ -436,8 +436,8 @@
 	"element_117": "element_117",
 	"element_118": "element_118",
 
-	"standing_banner": "standing_banner",
-	"wall_banner": "wall_banner",
+	"standing_banner": [">nbt.banner.b113", "standing_banner"],
+	"wall_banner": [">nbt.banner.wall_b113", "wall_banner"],
 	"beacon": [">nbt.beacon.b113", "beacon"],
 	"bed": [">nbt.bed.b113", "bed"],
 	"brewing_stand": [">nbt.brewing_stand.b113", "brewing_stand"],

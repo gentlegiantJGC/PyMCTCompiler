@@ -248,8 +248,8 @@
 	"barrier": "barrier",
 
 
-	"standing_banner": "standing_banner",
-	"wall_banner": "wall_banner",
+	"standing_banner": [">nbt.banner.b17", "standing_banner"],
+	"wall_banner": [">nbt.banner.wall_b17", "wall_banner"],
 	"beacon": [">nbt.beacon.b17", "beacon"],
 	"bed": [">nbt.bed.b17", "bed_bedrock"],
 	"brewing_stand": ["brewing_stand", ">nbt.brewing_stand.b17"],
