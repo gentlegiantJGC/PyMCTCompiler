@@ -6,5 +6,5 @@ compiler = NBTBlockstateCompiler(
     block_format="nbt-blockstate",
     entity_format="namespace-str-id",
     version=[1, 13, 0],
-    parent_version='bedrock_1_12_1'
+    parent_version='bedrock_1_12_0'
 )

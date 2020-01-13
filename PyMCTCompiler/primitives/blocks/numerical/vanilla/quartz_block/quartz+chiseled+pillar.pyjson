@@ -18,8 +18,7 @@
 					] for data3, block in {
 					0: "universal_minecraft:quartz_block",
 					1: "universal_minecraft:chiseled_quartz_block",
-					2: "universal_minecraft:quartz_pillar",
-					3: "universal_minecraft:smooth_quartz"
+					2: "universal_minecraft:quartz_pillar"
 				}.items() for data12, axis in {
 					0: "y",
 					4: "x",
@@ -57,8 +56,7 @@
 		] for data3, block in {
 		0: "universal_minecraft:quartz_block",
 		1: "universal_minecraft:chiseled_quartz_block",
-		2: "universal_minecraft:quartz_pillar",
-		3: "universal_minecraft:smooth_quartz"
+		2: "universal_minecraft:quartz_pillar"
 	}.items()
 	},
 	"blockstate_specification": {
@@ -66,8 +64,7 @@
 			"variant": [
 				"quartz_block",
 				"chiseled_quartz_block",
-				"quartz_pillar",
-				"smooth"
+				"quartz_pillar"
 			],
 			"axis": [
 				"x",
@@ -101,12 +98,6 @@
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:quartz_pillar"
-						}
-					],
-					"smooth": [
-						{
-							"function": "new_block",
-							"options": "universal_minecraft:smooth_quartz"
 						}
 					]
 				}
@@ -177,28 +168,6 @@
 				"function": "new_properties",
 				"options": {
 					"variant": "quartz_pillar"
-				}
-			},
-			{
-				"function": "carry_properties",
-				"options": {
-					"axis": [
-						"x",
-						"y",
-						"z",
-					]
-				}
-			}
-		],
-		"universal_minecraft:smooth_quartz": [
-			{
-				"function": "new_block",
-				"options": "minecraft:quartz_block"
-			},
-			{
-				"function": "new_properties",
-				"options": {
-					"variant": "smooth"
 				}
 			},
 			{
