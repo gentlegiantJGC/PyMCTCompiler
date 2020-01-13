@@ -133,7 +133,6 @@ class NBTRemapHelper(TranslationFile):
         ]
 
         for remap in remaps:
-            # TODO: make the second input to remap optionally None to mark the output as not being carried
             (input_key, input_type, input_path), (output_key, output_type, output_path) = remap
             to_uni = self._extend_map(to_universal[0]["options"]["keys"], input_path)
             from_uni = self._extend_map(from_universal[0]["options"]["keys"], output_path)

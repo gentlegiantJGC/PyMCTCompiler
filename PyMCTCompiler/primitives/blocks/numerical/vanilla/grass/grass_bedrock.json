@@ -4,7 +4,7 @@
 			"function": "map_properties",
 			"options": {
 				"block_data": {
-					"0": [
+					"1": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:plant"
@@ -46,7 +46,7 @@
 							{
 								"function": "new_properties",
 								"options": {
-									"block_data": "0"
+									"block_data": "1"
 								}
 							}
 						],
