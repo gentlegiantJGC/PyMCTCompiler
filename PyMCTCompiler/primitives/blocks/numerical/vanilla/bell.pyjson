@@ -1,0 +1,9 @@
+numerical.bit_map(
+	"minecraft", "bell",
+	{
+		"toggle": {0: "0", 16: "1"},
+		"attachment": {0: "floor", 4: "ceiling", 8: "single_wall", 12: "double_wall"},
+		"facing": {0: "north", 1: "east", 2: "south", 3: "west"},
+	},
+	"universal_minecraft"
+)

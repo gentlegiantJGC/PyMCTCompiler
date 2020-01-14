@@ -1,7 +1,7 @@
 {
-	"barrel": null,
+	"barrel": ["barrel"],
 
-	"bell": null,
+	"bell": ["bell"],
 	"blast_furnace": null,
 	"lit_blast_furnace": null,
 	"composter": null,

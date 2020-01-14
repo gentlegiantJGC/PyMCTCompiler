@@ -17,17 +17,22 @@
 					"west",
 					"east"
 				],
-				"enabled": [
-					"false",
-					"true"
+				"toggle": [
+					"0",
+					"1"
+				],
+				"powered": [
+					"true",
+					"false"
 				]
 			},
 			"defaults": {
 				"attachment": "floor",
 				"facing": "north",
-				"enabled": "false"
+				"toggle": "0",
+				"powered": "false"
 			},
-			"unbt": "nbt.conduit.universal"
+			"unbt": "nbt.bell.universal"
 		}
 	}
 }
