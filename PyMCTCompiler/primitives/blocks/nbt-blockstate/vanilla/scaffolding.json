@@ -78,7 +78,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "bottom": "false"
+                                "stability_checked": "false"
                             }
                         }
                     ],
@@ -86,12 +86,35 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "bottom": "true"
+                                "stability_checked": "true"
                             }
                         }
                     ]
                 }
             }
+        },
+        {
+            "function": "multiblock",
+            "options": [
+                {
+                    "coords": [0, -1, 0],
+                    "functions": [
+                        {
+                            "function": "map_block_name",
+                            "options": {
+                                "minecraft:air": [
+                                    {
+                                        "function": "new_properties",
+                                        "options": {
+                                            "bottom": "true"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "from_universal": {
@@ -193,7 +216,7 @@
                             }
                         ]
                     },
-                    "bottom": {
+                    "stability_checked": {
                         "true": [
                             {
                                 "function": "new_properties",
