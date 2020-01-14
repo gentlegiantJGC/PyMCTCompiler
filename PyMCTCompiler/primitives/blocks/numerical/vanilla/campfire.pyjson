@@ -1,0 +1,8 @@
+numerical.bit_map(
+	"minecraft", "campfire",
+	{
+		"lit": {0: "true", 4: "false"},
+		"facing": {0: "north", 1: "east", 2: "south", 3: "west"}
+	},
+	"universal_minecraft", "campfire"
+)

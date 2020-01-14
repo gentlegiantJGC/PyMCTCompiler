@@ -1,0 +1,1 @@
+numerical.furnace("minecraft", "lit_blast_furnace", True, "universal_minecraft", "blast_furnace")

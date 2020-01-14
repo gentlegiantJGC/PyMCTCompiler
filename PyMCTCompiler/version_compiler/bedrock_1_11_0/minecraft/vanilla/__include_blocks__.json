@@ -2,16 +2,15 @@
 	"barrel": ["barrel"],
 
 	"bell": ["bell"],
-	"blast_furnace": null,
-	"lit_blast_furnace": null,
-	"composter": null,
+	"blast_furnace": ["blast_furnace"],
+	"lit_blast_furnace": ["lit_blast_furnace"],
+	"composter": "composter",
 
-	"smoker": null,
-	"stonecutter_block": null,
-	"cartography_table": null,
-	"campfire": null,
-	"fletching_table": null,
-	"smithing_table": null,
-	"grindstone": null
-
+	"smoker": ["smoker"],
+	"lit_smoker": ["lit_smoker"],
+	"stonecutter_block": "stonecutter_block",
+	"cartography_table": "cartography_table",
+	"campfire": ["campfire"],
+	"smithing_table": "smithing_table",
+	"grindstone": "grindstone"
 }

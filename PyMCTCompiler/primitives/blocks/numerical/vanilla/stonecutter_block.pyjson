@@ -1,0 +1,7 @@
+numerical.bit_map(
+	"minecraft", "stonecutter_block",
+	{
+		"facing": {0: "down", 1: "up", 2: "north", 3: "south", 4: "east", 5: "west"}
+	},
+	"universal_minecraft", "stonecutter"
+)
