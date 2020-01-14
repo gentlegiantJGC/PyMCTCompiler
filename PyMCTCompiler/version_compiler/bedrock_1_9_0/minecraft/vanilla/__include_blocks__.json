@@ -1,10 +1,9 @@
 {
 	"cauldron": ["cauldron2_bedrock"],
 	"lava_cauldron": ["lava_cauldron_bedrock"],
-	"fletching_table": null,
-	"red_flower-cornflower": null,
-	"red_flower-lily_of_the_valley": null,
-	"lantern": null,
+	"fletching_table": "fletching_table",
+	"red_flower": "red_flower+",
+	"lantern": "lantern",
 
 	"standing_sign": [">nbt.sign.b17", "oak_standing_sign"],
 	"wall_sign": [">nbt.sign.wall_b17", "oak_wall_sign"],
@@ -18,7 +17,7 @@
 	"birch_wall_sign": [">nbt.sign.wall_b17", "birch_wall_sign"],
 	"jungle_wall_sign": [">nbt.sign.wall_b17", "jungle_wall_sign"],
 	"acacia_wall_sign": [">nbt.sign.wall_b17", "acacia_wall_sign"],
-	"smooth_stone": null,
+	"smooth_stone": "smooth_stone",
 	"sandstone": "sandstone+chiseled+cut+smooth",
 	"red_sandstone": "red_sandstone+chiseled+cut+smooth",
 	"quartz_block": "quartz+chiseled+pillar+smooth_bedrock",
