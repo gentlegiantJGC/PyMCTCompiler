@@ -278,8 +278,8 @@
 	"noteblock": ["noteblock_bedrock", ">nbt.noteblock.b17"],
 	"undyed_shulker_box": ["undyed_shulker_box_bedrock", ">nbt.shulker_box.b17"],
 	"shulker_box": ["stained_shulker_box_bedrock", ">nbt.shulker_box.b17"],
-	"standing_sign": ["standing_sign"],
-	"wall_sign": ["wall_sign"],
+	"standing_sign": [">nbt.sign.b17", "standing_sign"],
+	"wall_sign": [">nbt.sign.wall_b17", "wall_sign"],
 	"skull": null,
 	"structure_block": null,
 	"movingblock": null
