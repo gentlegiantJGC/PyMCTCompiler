@@ -1,4 +1,5 @@
 from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge, TranslationFile
+from .common import bedrock_is_movable
 
 """
 Default
@@ -85,23 +86,23 @@ wall_j19 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:sign'), _B17, _BText],
+    [EmptyNBT('minecraft:sign'), _B17, _BText, bedrock_is_movable],
     ['universal_minecraft:sign'],
     abstract=True
 )
 
 wall_b17 = merge(
-    [EmptyNBT('minecraft:sign'), _B17, _BText],
+    [EmptyNBT('minecraft:sign'), _B17, _BText, bedrock_is_movable],
     ['universal_minecraft:wall_sign'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:sign'), _B17, _BText],
+    [EmptyNBT('minecraft:sign'), _B17, _BText, bedrock_is_movable],
     ['universal_minecraft:sign']
 )
 
 wall_b113 = merge(
-    [EmptyNBT('minecraft:sign'), _B17, _BText],
+    [EmptyNBT('minecraft:sign'), _B17, _BText, bedrock_is_movable],
     ['universal_minecraft:wall_sign']
 )
