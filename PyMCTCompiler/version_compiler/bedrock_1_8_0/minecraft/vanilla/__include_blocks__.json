@@ -1,4 +1,5 @@
 {
-	"bamboo": null,
+	"bamboo": "bamboo",
+	"bamboo_sapling": "bamboo_sapling",
 	"scaffolding": "scaffolding"
 }

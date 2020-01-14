@@ -1,0 +1,9 @@
+numerical.bit_map(
+	"minecraft", "bamboo",
+	{
+		"stage": {0: "0", 1: "1"},
+		"leaves": {0: "none", 1: "small", 2: "large"},
+		"thickness": {0: "thin", 1: "thick"}
+	},
+	"universal_minecraft", "bamboo"
+)

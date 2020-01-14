@@ -1,0 +1,29 @@
+{
+	"remove": [
+		"bamboo"
+	],
+	"add": {
+		"bamboo": {
+			"properties": {
+				"thickness": [
+					"thin",
+					"thick"
+				],
+				"leaves": [
+					"none",
+					"small",
+					"large"
+				],
+				"stage": [
+					"0",
+					"1"
+				]
+			},
+			"defaults": {
+				"thickness": "thin",
+				"leaves": "none",
+				"stage": "0"
+			}
+		}
+	}
+}
