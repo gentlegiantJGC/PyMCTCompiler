@@ -137,7 +137,7 @@ _BExtra_17 = TranslationFile(
                                 "function": "new_nbt",
                                 "options": [
                                     {
-                                        "key": "SkullType",
+                                        "key": "Rotation",
                                         "value": f"{rot * 22.5 - 360 * (rot > 8)}f"
                                     }
                                 ]
@@ -243,7 +243,7 @@ _BExtra_113 = TranslationFile(
                                 "function": "new_nbt",
                                 "options": [
                                     {
-                                        "key": "SkullType",
+                                        "key": "Rotation",
                                         "value": f"{rot * 22.5 - 360 * (rot > 8)}f"
                                     }
                                 ]

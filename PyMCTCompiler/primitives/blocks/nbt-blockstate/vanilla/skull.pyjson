@@ -57,7 +57,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": ["snbt", "1b"],
+                                    "facing_direction": ["snbt", "1"],
                                     "no_drop_bit": ["snbt", "0b"],
                                 }
                             }
@@ -66,7 +66,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": ["snbt", "1b"],
+                                    "facing_direction": ["snbt", "1"],
                                     "no_drop_bit": ["snbt", "1b"],
                                 }
                             }
