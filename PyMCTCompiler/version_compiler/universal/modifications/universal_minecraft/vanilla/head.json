@@ -35,11 +35,16 @@
 					"13",
 					"14",
 					"15"
+				],
+				"no_drop": [
+					"true",
+					"false"
 				]
 			},
 			"defaults": {
 				"mob": "skeleton",
-				"rotation": "0"
+				"rotation": "0",
+				"no_drop": "false"
 			},
 			"unbt": "nbt.skull.universal"
 		}
