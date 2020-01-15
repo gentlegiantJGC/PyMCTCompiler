@@ -280,7 +280,7 @@
 	"shulker_box": ["stained_shulker_box_bedrock", ">nbt.shulker_box.b17"],
 	"standing_sign": [">nbt.sign.b17", "standing_sign"],
 	"wall_sign": [">nbt.sign.wall_b17", "wall_sign"],
-	"skull": null,
+	"skull": [">nbt.skull.b17", "skull"],
 	"structure_block": null,
 	"movingblock": null
 }

@@ -12,7 +12,7 @@ def merge(translation_files: List['TranslationFile'], universal_blocks: List[str
 
 
 class TranslationFile:
-    def __init__(self, to_universal: list, from_universal: list, spec: dict = None):
+    def __init__(self, to_universal: list, from_universal: Union[list, dict], spec: dict = None):
         if spec is None:
             self.spec = {}
         else:
@@ -25,32 +25,34 @@ class TranslationFile:
         to_universal = copy.deepcopy(self.to_universal)
         from_universal = copy.deepcopy(self.from_universal)
         if abstract:
-            universal_spec = copy.deepcopy(self.spec)
-            universal_to_universal = copy.deepcopy(self.to_universal)
-            universal_from_universal = copy.deepcopy(self.from_universal)
+            blockstate_spec = copy.deepcopy(self.spec)
+            blockstate_to_universal = copy.deepcopy(self.to_universal)
+            blockstate_from_universal = copy.deepcopy(self.from_universal)
             return Primitive({
                 "specification": spec,
                 "to_universal": to_universal,
-                "from_universal": {
-                    universal_block: from_universal
-                    for universal_block in universal_blocks
-                },
-                "blockstate_specification": universal_spec,
-                "blockstate_to_universal": universal_to_universal,
-                "blockstate_from_universal": {
-                    universal_block: universal_from_universal
-                    for universal_block in universal_blocks
-                }
+                "from_universal": self._gen_from_universal(from_universal, universal_blocks),
+                "blockstate_specification": blockstate_spec,
+                "blockstate_to_universal": blockstate_to_universal,
+                "blockstate_from_universal": self._gen_from_universal(blockstate_from_universal, universal_blocks)
             })
         else:
             return Primitive({
                 "specification": spec,
                 "to_universal": to_universal,
-                "from_universal": {
-                    universal_block: from_universal
-                    for universal_block in universal_blocks
-                }
+                "from_universal": self._gen_from_universal(from_universal, universal_blocks)
             })
+
+    @staticmethod
+    def _gen_from_universal(from_universal, universal_blocks):
+        if isinstance(from_universal, list):
+            return {
+                universal_block: copy.deepcopy(from_universal)
+                for universal_block in universal_blocks
+            }
+        elif isinstance(from_universal, dict):
+            assert all(universal_block in from_universal for universal_block in universal_blocks)
+            return from_universal
 
 
 class EmptyNBT(TranslationFile):

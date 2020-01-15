@@ -18,7 +18,7 @@ class BaseTranslationObject:
 
 class FunctionList(BaseTranslationObject):
 	def __init__(self, data, instant_commit=False):
-		assert isinstance(data, list)
+		assert isinstance(data, list), data
 		self._is_primitive = True
 		self.function_list: List[BaseTranslationFunction] = []
 		for fun in data:

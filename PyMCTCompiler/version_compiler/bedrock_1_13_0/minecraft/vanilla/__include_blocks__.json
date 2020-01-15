@@ -480,7 +480,7 @@
 	"birch_wall_sign": [">nbt.sign.wall_b113", "birch_wall_sign"],
 	"jungle_wall_sign": [">nbt.sign.wall_b113", "jungle_wall_sign"],
 	"acacia_wall_sign": [">nbt.sign.wall_b113", "acacia_wall_sign"],
-	"skull": null,
+	"skull": [">nbt.skull.b113", "skull"],
 	"structure_block": [">nbt.structure_block.b113", "structure_block"],
 	"movingBlock": null
 }

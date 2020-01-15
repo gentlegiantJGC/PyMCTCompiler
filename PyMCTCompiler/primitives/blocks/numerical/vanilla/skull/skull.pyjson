@@ -1,0 +1,210 @@
+{
+    "to_universal": [
+        {
+            "function": "map_properties",
+            "options": {
+                "block_data": {
+                    str(data8 * 8 + data7): [
+                        {
+                            "function": "new_block",
+                            "options": "universal_minecraft:head"
+                        },
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "no_drop": no_drop_bit
+                            }
+                        }
+                    ] if data7 == 1 else [
+                        {
+                            "function": "new_block",
+                            "options": "universal_minecraft:wall_head"
+                        },
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": facing,
+                                "no_drop": no_drop_bit
+                            }
+                        }
+                    ] for data8, no_drop_bit in enumerate(["false", "true"])
+                    for data7, facing in [[1, 'floor'], [2, 'north'], [3, 'south'], [4, 'west'], [5, 'east']]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:head": [
+            {
+                "function": "new_block",
+                "options": "minecraft:skull"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "no_drop": {
+                        "false": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "block_data": "1"
+                                }
+                            }
+                        ],
+                        "true": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "block_data": "9"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "universal_minecraft:wall_head": [
+            {
+                "function": "new_block",
+                "options": "minecraft:skull"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "no_drop": {
+                        no_drop: [
+                            {
+                                "function": "map_properties",
+                                "options": {
+                                    "facing": {
+                                        facing: [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "data_value": str(data8 * 8 + rot + 2)
+                                                }
+                                            }
+                                        ] for rot, facing in enumerate([
+                                            "north",
+                                            "south",
+                                            "west",
+                                            "east"
+                                        ])
+                                    }
+                                }
+                            }
+                        ] for data8, no_drop in enumerate(["false", "true"])
+                    }
+                }
+            }
+        ]
+    },
+    "blockstate_specification": {
+        "properties": {
+            "facing": [
+                "floor",
+                "north",
+                "south",
+                "west",
+                "east"
+            ],
+            "no_drop": [
+                "true",
+                "false"
+            ]
+        },
+        "defaults": {
+            "facing": "floor",
+            "no_drop": "false"
+        }
+    },
+    "blockstate_to_universal": [
+        {
+            "function": "map_properties",
+            "options": {
+                "facing": {
+                    facing: [
+                        {
+                            "function": "new_block",
+                            "options": "universal_minecraft:head"
+                        }
+                    ] if facing == 'floor' else [
+                        {
+                            "function": "new_block",
+                            "options": "universal_minecraft:wall_head"
+                        },
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": facing
+                            }
+                        }
+                    ] for facing in ['north', 'south', 'west', 'east']
+                }
+            }
+        },
+        {
+            "function": "carry_properties",
+            "options": {
+                "no_drop": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    ],
+    "blockstate_from_universal": {
+        "universal_minecraft:head": [
+            {
+                "function": "new_block",
+                "options": "minecraft:skull"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "no_drop": {
+                        "false": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing": "floor",
+                                    "no_drop": "false"
+                                }
+                            }
+                        ],
+                        "true": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing": "floor",
+                                    "no_drop": "true"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "universal_minecraft:wall_head": [
+            {
+                "function": "new_block",
+                "options": "minecraft:skull"
+            },
+            {
+                "function": "carry_properties",
+                "options": {
+                    "no_drop": [
+                        "true",
+                        "false"
+                    ],
+                    "facing": [
+                        "north",
+                        "south",
+                        "west",
+                        "east"
+                    ]
+                }
+            }
+        ]
+    }
+}

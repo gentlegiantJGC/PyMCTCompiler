@@ -1,0 +1,123 @@
+{
+    "to_universal": [
+        {
+            "function": "map_properties",
+            "options": {
+                "no_drop_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "no_drop": "false"
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "no_drop": "true"
+                            }
+                        }
+                    ]
+                },
+                "facing_direction": {
+                    str(data7): [
+                        {
+                            "function": "new_block",
+                            "options": "universal_minecraft:head"
+                        }
+                    ] if data7 == 1 else [
+                        {
+                            "function": "new_block",
+                            "options": "universal_minecraft:wall_head"
+                        },
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": facing
+                            }
+                        }
+                    ] for data7, facing in [[1, 'floor'], [2, 'north'], [3, 'south'], [4, 'west'], [5, 'east']]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:head": [
+            {
+                "function": "new_block",
+                "options": "minecraft:skull"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "no_drop": {
+                        "false": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing_direction": ["snbt", "1b"],
+                                    "no_drop_bit": ["snbt", "0b"],
+                                }
+                            }
+                        ],
+                        "true": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing_direction": ["snbt", "1b"],
+                                    "no_drop_bit": ["snbt", "1b"],
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "universal_minecraft:wall_head": [
+            {
+                "function": "new_block",
+                "options": "minecraft:skull"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "no_drop": {
+                        "false": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "no_drop_bit": ["snbt", "0b"],
+                                }
+                            }
+                        ],
+                        "true": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "no_drop_bit": ["snbt", "1b"],
+                                }
+                            }
+                        ]
+                    },
+                    "facing": {
+                        facing: [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing_direction": ["snbt", str(rot + 2)]
+                                }
+                            }
+                        ] for rot, facing in enumerate([
+                            "north",
+                            "south",
+                            "west",
+                            "east"
+                        ])
+                    }
+                }
+            }
+        ]
+    }
+}
