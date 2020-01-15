@@ -211,5 +211,5 @@ for (namespace, base_name), block in blocks.items():
 			}
 		)
 
-	with open(f'./vanilla/{base_name}.json', 'w') as f:
+	with open(f'./temp/{base_name}.json', 'w') as f:
 		json.dump(primitive, f, indent=4)
