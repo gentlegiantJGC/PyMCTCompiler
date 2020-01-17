@@ -2,7 +2,7 @@ numerical.bit_map(
 	"minecraft", "double_plant",
 	{
 		"half": {0: "lower", 8: "upper"},
-		"flower": {0: "sunflower", 1: "lilac", 2: "tall_grass", 3: "large_fern", 4: "rose_bush", 5: "peony"}
+		"type": {0: "sunflower", 1: "lilac", 2: "tall_grass", 3: "large_fern", 4: "rose_bush", 5: "peony"}
 	},
 	"universal_minecraft"
 )
