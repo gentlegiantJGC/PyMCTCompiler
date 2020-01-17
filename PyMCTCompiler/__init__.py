@@ -32,7 +32,7 @@ def build(compiled_dir_):
 				log_to_file(f'Could not find compiler for {version_name} This version has been skipped')
 
 	# iterate through all versions in the uncompiled directory
-	for version_name, compiler in sorted(versions.items(), key=lambda x: (x[1].platform, x[1].version)):
+	for version_name, compiler in sorted(versions.items(), key=lambda x: ('' if x[1].platform == 'universal' else x[1].platform, x[1].version)):
 		compiler: BaseCompiler
 		log_to_file(f'Compiling {version_name} ...')
 		t = time.time()
