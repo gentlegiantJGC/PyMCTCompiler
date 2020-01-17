@@ -23,7 +23,7 @@ class DiskBuffer:
 		# stores the inverse of the above
 		self._nested_translations_inverse: Set[str] = set()
 
-		self._files_to_save: Dict[tuple, Union[list, dict]] = {}
+		self.files_to_save: Dict[tuple, Union[list, dict]] = {}
 
 	def add_specification(self, version_name: str, object_type: str, version_format: str, namespace: str, group_name: str, base_name: str, data: dict):
 		"""add a specification file to the disk buffer to be saved at the end
@@ -40,10 +40,10 @@ class DiskBuffer:
 		self.save_json_object(('versions', version_name, object_type, version_format, "specification", namespace, group_name, base_name), data)
 
 	def has_specification(self, version_name: str, object_type: str, version_format: str, namespace: str, group_name: str, base_name: str) -> bool:
-		return ('versions', version_name, object_type, version_format, "specification", namespace, group_name, base_name) in self._files_to_save
+		return ('versions', version_name, object_type, version_format, "specification", namespace, group_name, base_name) in self.files_to_save
 
 	def get_specification(self, version_name: str, object_type: str, version_format: str, namespace: str, group_name: str, base_name: str) -> dict:
-		return self._files_to_save[('versions', version_name, object_type, version_format, "specification", namespace, group_name, base_name)]
+		return self.files_to_save[('versions', version_name, object_type, version_format, "specification", namespace, group_name, base_name)]
 
 	def add_translation_to_universal(self, version_name: str, object_type: str, version_format: str, namespace: str, group_name: str, base_name: str, data: 'FunctionList'):
 		"""add a translation file from version to universal format to the disk buffer to be saved at the end"""
@@ -73,7 +73,7 @@ class DiskBuffer:
 		"""This method should only be used by internal code.
 		Used at the end during the saving process to add a nested primitive file for saving."""
 		key = self.nested_translation_key(primitive_group)
-		if ('nested_translations', key) not in self._files_to_save:
+		if ('nested_translations', key) not in self.files_to_save:
 			self.save_json_object(('nested_translations', key), data)
 
 	def nested_translation_key(self, primitive_group: Tuple[Tuple[str, ...], ...]) -> str:
@@ -92,7 +92,7 @@ class DiskBuffer:
 
 	def save_json_object(self, tuple_path: tuple, data: Union[dict, list]):
 		assert isinstance(data, (dict, list))
-		self._files_to_save[tuple_path] = data
+		self.files_to_save[tuple_path] = data
 
 	def save(self):
 		log_to_file('Saving to disk')
@@ -111,7 +111,7 @@ class DiskBuffer:
 			old_save_cache = {}
 		new_save_cache = {}
 
-		for path, data in self._files_to_save.items():
+		for path, data in self.files_to_save.items():
 			path = os.path.join(PyMCTCompiler.compiled_dir, *path) + '.json'
 			data = json.dumps(data, indent=4)
 			h = new_save_cache[path] = hashlib.sha1(data.encode('utf8')).hexdigest()

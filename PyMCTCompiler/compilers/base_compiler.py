@@ -6,6 +6,7 @@ import copy
 
 from PyMCTCompiler.helpers import log_to_file
 from PyMCTCompiler.disk_buffer import disk_buffer
+from PyMCTCompiler.translation_functions import FunctionList, NewBlock
 
 
 class BaseCompiler:
@@ -196,6 +197,7 @@ class BaseCompiler:
 
     def build(self):
         self._build_blocks()
+        self._pad_from_universal()
         self._build_entities()
         self._build_biomes()
         if self.block_entity_format == "str-id":
@@ -204,6 +206,35 @@ class BaseCompiler:
 
     def _build_blocks(self):
         raise NotImplementedError
+
+    def _pad_from_universal(self):
+        # ensure that every state in the universal format gets mapped to something
+        for key, fun in disk_buffer.translations['from_universal'].items():
+            if len(key) == 6 and key[0] == self.version_name and key[1] == 'block' and isinstance(fun, FunctionList) and not any(isinstance(sub_fun, NewBlock) for sub_fun in fun.function_list):
+                fun.function_list.insert(
+                    0,
+                    NewBlock(
+                        {
+                            "function": "new_block",
+                            "options": "minecraft:air"
+                        }
+                    )
+                )
+                # (version_name, object_type, version_format, namespace, group_name, base_name)
+
+        if self.version_name != 'universal':
+            for key in disk_buffer.files_to_save:
+                if len(key) == 8 and key[0:5] == ('versions', 'universal', 'block', 'blockstate', "specification"):
+                    for version_format in ['numerical', 'blockstate']:
+                        if version_format == 'numerical' and self.block_format not in ["numerical", "pseudo-numerical"]:
+                            continue
+                        if (self.version_name, 'block', version_format, key[5], 'vanilla', key[7]) not in disk_buffer.translations['from_universal']:
+                            disk_buffer.translations['from_universal'][(self.version_name, 'block', version_format, key[5], 'vanilla', key[7])] = FunctionList([
+                                {
+                                    "function": "new_block",
+                                    "options": "minecraft:air"
+                                }
+                            ])
 
     def _build_entities(self):
         raise NotImplementedError
