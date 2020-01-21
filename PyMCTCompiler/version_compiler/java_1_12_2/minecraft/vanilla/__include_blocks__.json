@@ -235,7 +235,7 @@
 	"lit_furnace": ["lit_furnace", ">nbt.furnace.j19"],
 	"hopper": ["hopper", ">nbt.hopper.j19"],
 	"jukebox": ["jukebox", ">nbt.jukebox.j19"],
-	"mob_spawner": ["mob_spawner"],
+	"mob_spawner": [">nbt.mob_spawner.j19", "mob_spawner"],
 	"noteblock": ["noteblock_java", ">nbt.noteblock.j19"],
 
 	"white_shulker_box": ["white_shulker_box", ">nbt.shulker_box.j111"],
