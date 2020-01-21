@@ -76,8 +76,8 @@ _J19 = NBTRemapHelper(
             ("EntityIdentifier", "string", [("utags", "compound")])
         ),
         (
-            ("SpawnPotentials", "compound", []),
-            ("SpawnPotentials", "compound", [("utags", "compound")])
+            ("SpawnPotentials", "list", []),
+            ("SpawnPotentials", "list", [("utags", "compound")])
         )
     ],
     '{SpawnData: {id: "minecraft:pig"}, SpawnPotentials: [{Entity: {id: "minecraft:pig"}, Weight: 1}]}'
