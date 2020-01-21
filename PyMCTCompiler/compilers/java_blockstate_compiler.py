@@ -83,7 +83,7 @@ class JavaBlockstateCompiler(BaseCompiler):
 
         blocks_path = os.path.join(self._directory, 'generated', 'reports', 'blocks.json')
         if os.path.isfile(blocks_path):
-            waterlogable = []
+            waterloggable = []
             add = {}
             remove = {}
             for (namespace, sub_name), block_data in self.blocks.items():
@@ -117,8 +117,8 @@ class JavaBlockstateCompiler(BaseCompiler):
                 if 'properties' in default_state:
                     states['defaults'] = default_state['properties']
                     if 'waterlogged' in states['properties']:
-                        if block_string not in waterlogable:
-                            waterlogable.append(block_string)
+                        if block_string not in waterloggable:
+                            waterloggable.append(block_string)
                         del states['properties']['waterlogged']
                         del states['defaults']['waterlogged']
                 del states['states']
@@ -175,8 +175,8 @@ class JavaBlockstateCompiler(BaseCompiler):
                             specification = block_data["specification"]
                             if 'properties' in specification:
                                 if 'waterlogged' in specification['properties']:
-                                    if f'{namespace}:{block_base_name}' not in waterlogable:
-                                        waterlogable.append(f'{namespace}:{block_base_name}')
+                                    if f'{namespace}:{block_base_name}' not in waterloggable:
+                                        waterloggable.append(f'{namespace}:{block_base_name}')
                                     del specification['properties']['waterlogged']
                                     del specification['defaults']['waterlogged']
                             elif disk_buffer.has_specification(self.version_name, 'block', 'blockstate', namespace, sub_name, block_base_name):
@@ -198,7 +198,7 @@ class JavaBlockstateCompiler(BaseCompiler):
                                 print(self.version_name, namespace, block_base_name, namespace2, base_name2)
                                 raise Exception(e)
 
-            disk_buffer.save_json_object(('versions', self.version_name, '__waterlogable__'), waterlogable)
+            disk_buffer.save_json_object(('versions', self.version_name, '__waterloggable__'), waterloggable)
             disk_buffer.save_json_object(('versions', self.version_name, '__always_waterlogged__'), self.always_waterlogged)
         else:
             raise Exception(f'Could not find {self.version_name}/generated/reports/blocks.json')

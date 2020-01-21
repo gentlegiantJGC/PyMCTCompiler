@@ -40,7 +40,6 @@ class UniversalCompiler(BaseCompiler):
 		blocks_from_server(self._directory, [str(v) for v in self.version])
 
 		if os.path.isfile(os.path.join(self._directory, 'generated', 'reports', 'blocks.json')):
-			waterlogable = []
 			add = {}
 			remove = {}
 			for (namespace, sub_name), block_data in self.blocks.items():
