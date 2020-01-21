@@ -195,11 +195,11 @@ j19 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:noteblock'), _B17, bedrock_is_movable],
+    [EmptyNBT('minecraft:note_block'), _B17, bedrock_is_movable],
     ['universal_minecraft:note_block']
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:noteblock'), _B17, bedrock_is_movable],
+    [EmptyNBT('minecraft:note_block'), _B17, bedrock_is_movable],
     ['universal_minecraft:note_block']
 )
