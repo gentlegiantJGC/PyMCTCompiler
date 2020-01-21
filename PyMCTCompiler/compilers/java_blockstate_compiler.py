@@ -1,5 +1,6 @@
 import os
 import json
+from typing import List
 
 from .base_compiler import BaseCompiler
 import PyMCTCompiler
@@ -65,6 +66,17 @@ def find_blocks_changes(old_blocks: dict, new_blocks: dict):
 class JavaBlockstateCompiler(BaseCompiler):
     def _modifications_prefix(self):
         return os.path.join(self._directory, 'modifications')
+
+    @property
+    def always_waterlogged(self) -> List[str]:
+        waterlogged = []
+        if hasattr(self._parent, 'always_waterlogged'):
+            waterlogged = self._parent.always_waterlogged
+        waterlogged_path = os.path.join(self._directory, '__always_waterlogged__.json')
+        if os.path.isfile(waterlogged_path):
+            with open(waterlogged_path) as f:
+                waterlogged += json.load(f)
+        return waterlogged
 
     def _build_blocks(self):
         blocks_from_server(self._directory, [str(v) for v in self.version])
@@ -187,6 +199,7 @@ class JavaBlockstateCompiler(BaseCompiler):
                                 raise Exception(e)
 
             disk_buffer.save_json_object(('versions', self.version_name, '__waterlogable__'), waterlogable)
+            disk_buffer.save_json_object(('versions', self.version_name, '__always_waterlogged__'), self.always_waterlogged)
         else:
             raise Exception(f'Could not find {self.version_name}/generated/reports/blocks.json')
 
