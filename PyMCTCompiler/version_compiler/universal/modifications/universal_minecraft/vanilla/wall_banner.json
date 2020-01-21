@@ -48,7 +48,8 @@
 			"defaults": {
 				"color": "white",
 				"facing": "north"
-			}
+			},
+			"unbt": "nbt.banner.universal"
 		}
 	}
 }
