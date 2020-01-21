@@ -5707,7 +5707,7 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 				"defaults": {
 					"block_data": "0"
 				},
-				"nbt_identifier": ["minecraft", "noteblock"],
+				"nbt_identifier": ["minecraft", "note_block"],
 				"snbt": "{note:0b}"
 			},
 			"to_universal": [

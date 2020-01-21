@@ -184,7 +184,7 @@ _B17 = TranslationFile(
         "defaults": {
             "block_data": "0"
         },
-        "nbt_identifier": ["minecraft", "noteblock"],
+        "nbt_identifier": ["minecraft", "note_block"],
         "snbt": "{note:0b}"
     }
 )
