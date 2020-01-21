@@ -153,6 +153,10 @@ class NBTRemapHelper(TranslationFile):
                 else:
                     obj["type"] = in_type
 
+                if in_type in ['compound', 'list']:
+                    obj.setdefault("nested_default", [])
+                    obj.setdefault("self_default", [])
+
                 if out_key is None:
                     obj['functions'] = []
                     continue
