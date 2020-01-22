@@ -1,5 +1,5 @@
 {
-	"barrel": ["barrel"],
+	"barrel": [">nbt.barrel.b111", "barrel"],
 
 	"bell": ["bell"],
 	"blast_furnace": ["blast_furnace"],

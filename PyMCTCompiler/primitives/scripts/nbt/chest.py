@@ -1,6 +1,6 @@
 from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
 from .common import java_custom_name, java_items_27, java_str_lock, java_loot_table, \
-    bedrock_items_27, bedrock_is_movable, java_keep_packed
+    bedrock_items_27, bedrock_is_movable, java_keep_packed, bedrock_findable
 
 """
 Default
@@ -19,7 +19,9 @@ universal = {
     "nbt_identifier": ["universal_minecraft", "chest"],
     "snbt": """{
         utags: {
-            isMovable: 1b
+            isMovable: 1b,
+            Findable: 0b,
+            Items: []
         }
     }"""
 }
@@ -28,20 +30,12 @@ universal_trapped = {
     "nbt_identifier": ["universal_minecraft", "trapped_chest"],
     "snbt": """{
         utags: {
-            isMovable: 1b
+            isMovable: 1b,
+            Findable: 0b,
+            Items: []
         }
     }"""
 }
-
-_B113 = NBTRemapHelper(
-    [
-        (
-            ("Findable", "byte", []),
-            ("Findable", "byte", [("utags", "compound")])
-        )
-    ],
-    "{Findable: 0b}"
-)
 
 j112 = merge(
     [EmptyNBT('minecraft:chest'), java_custom_name, java_items_27, java_str_lock, java_loot_table],
@@ -66,23 +60,23 @@ trapped_j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:chest'), _B113, bedrock_items_27, bedrock_is_movable],
+    [EmptyNBT('minecraft:chest'), bedrock_findable, bedrock_items_27, bedrock_is_movable],
     ['universal_minecraft:chest'],
     abstract=True
 )
 
 trapped_b17 = merge(
-    [EmptyNBT('minecraft:chest'), _B113, bedrock_items_27, bedrock_is_movable],
+    [EmptyNBT('minecraft:chest'), bedrock_findable, bedrock_items_27, bedrock_is_movable],
     ['universal_minecraft:trapped_chest'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:chest'), _B113, bedrock_items_27, bedrock_is_movable],
+    [EmptyNBT('minecraft:chest'), bedrock_findable, bedrock_items_27, bedrock_is_movable],
     ['universal_minecraft:chest']
 )
 
 trapped_b113 = merge(
-    [EmptyNBT('minecraft:chest'), _B113, bedrock_items_27, bedrock_is_movable],
+    [EmptyNBT('minecraft:chest'), bedrock_findable, bedrock_items_27, bedrock_is_movable],
     ['universal_minecraft:trapped_chest']
 )

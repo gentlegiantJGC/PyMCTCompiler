@@ -280,7 +280,6 @@
 	"loom": "loom",
 	"lectern": "lectern",
 	"grindstone": "grindstone",
-	"barrel": "barrel",
 	"cartography_table": "cartography_table",
 	"lantern": "lantern",
 	"composter": "composter",
@@ -482,5 +481,6 @@
 	"acacia_wall_sign": [">nbt.sign.wall_b113", "acacia_wall_sign"],
 	"skull": [">nbt.skull.b113", "skull"],
 	"structure_block": [">nbt.structure_block.b113", "structure_block"],
-	"movingBlock": null
+	"movingBlock": null,
+	"barrel": [">nbt.barrel.b111", "barrel"]
 }

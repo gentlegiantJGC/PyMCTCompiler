@@ -1,0 +1,70 @@
+{
+	"specification": {
+		"properties": {
+			"facing": [
+				"north",
+				"east",
+				"south",
+				"west",
+				"up",
+				"down"
+			],
+			"open": [
+				"true",
+				"false"
+			]
+		},
+		"defaults": {
+			"facing": "north",
+			"open": "false"
+		}
+	},
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:barrel"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
+				"facing": [
+					"north",
+					"east",
+					"south",
+					"west",
+					"up",
+					"down"
+				],
+				"open": [
+					"true",
+					"false"
+				]
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:barrel": [
+			{
+				"function": "new_block",
+				"options": "minecraft:barrel"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"facing": [
+						"north",
+						"east",
+						"south",
+						"west",
+						"up",
+						"down"
+					],
+					"open": [
+						"true",
+						"false"
+					]
+				}
+			}
+		]
+	}
+}

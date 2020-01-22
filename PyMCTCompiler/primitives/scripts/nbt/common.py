@@ -106,3 +106,13 @@ bedrock_items_27 = NBTRemapHelper(
     )],
     "{Items: []}"
 )
+
+bedrock_findable = NBTRemapHelper(
+    [
+        (
+            ("Findable", "byte", []),
+            ("Findable", "byte", [("utags", "compound")])
+        )
+    ],
+    "{Findable: 0b}"
+)

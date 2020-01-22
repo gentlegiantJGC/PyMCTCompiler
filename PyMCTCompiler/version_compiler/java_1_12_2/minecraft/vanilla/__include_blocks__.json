@@ -256,7 +256,7 @@
 	"black_shulker_box": ["black_shulker_box", ">nbt.shulker_box.j111"],
 	"standing_sign": ["standing_sign", ">nbt.sign.j19"],
 	"wall_sign": ["wall_sign"],
-	"skull": null,
+	"skull": [">nbt.skull.j19", "skull_java"],
 	"structure_block": null
 
 }
