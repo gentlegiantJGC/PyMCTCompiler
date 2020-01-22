@@ -19,7 +19,7 @@ universal = {
     }"""
 }
 
-_J113 = NBTRemapHelper(
+_J19 = NBTRemapHelper(
     [
         (
             ("Owner", "compound", []),
@@ -86,8 +86,7 @@ _BExtra_17 = TranslationFile(
                                                 }
                                             }
                                         ] for skull_num, skull_type in enumerate(skull_types)
-                                    },
-                                    "default": []
+                                    }
                                 }
                             }
                         ]
@@ -192,8 +191,7 @@ _BExtra_113 = TranslationFile(
                                                 }
                                             }
                                         ] for skull_num, skull_type in enumerate(skull_types)
-                                    },
-                                    "default": []
+                                    }
                                 }
                             }
                         ]
@@ -276,13 +274,136 @@ _BExtra_113 = TranslationFile(
     }
 )
 
+_JExtra_19 = TranslationFile(
+    [
+        {
+            "function": "walk_input_nbt",
+            "options": {
+                "type": "compound",
+                "keys": {
+                    "SkullType": {
+                        "type": "byte",
+                        "functions": [
+                            {
+                                "function": "map_nbt",
+                                "options": {
+                                    "cases": {
+                                        f"{skull_num}b": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "mob": skull_type
+                                                }
+                                            }
+                                        ] for skull_num, skull_type in enumerate(skull_types)
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "Rot": {
+                        "type": "byte",
+                        "functions": [
+                            {
+                                "function": "map_properties",
+                                "options": {
+                                    "block_data": {
+                                        "1": [
+                                            {
+                                                "function": "map_nbt",
+                                                "options": {
+                                                    "cases": {
+                                                        f"{rot}b": [
+                                                            {
+                                                                "function": "new_properties",
+                                                                "options": {
+                                                                    "rotation": str(rot)
+                                                                }
+                                                            }
+                                                        ] for rot in range(16)
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ],
+    {
+        "universal_minecraft:head": [
+            {
+                "function": "map_properties",
+                "options": {
+                    "mob": {
+                        skull_type: [
+                            {
+                                "function": "new_nbt",
+                                "options": [
+                                    {
+                                        "key": "SkullType",
+                                        "value": f"{skull_num}b"
+                                    }
+                                ]
+                            }
+                        ] for skull_num, skull_type in enumerate(skull_types)
+                    },
+                    "rotation": {
+                        str(rot): [
+                            {
+                                "function": "new_nbt",
+                                "options": [
+                                    {
+                                        "key": "Rotation",
+                                        "value": f"{rot}b"
+                                    }
+                                ]
+                            }
+                        ] for rot in range(16)
+                    }
+                }
+            }
+        ],
+        "universal_minecraft:wall_head": [
+            {
+                "function": "map_properties",
+                "options": {
+                    "mob": {
+                        skull_type: [
+                            {
+                                "function": "new_nbt",
+                                "options": [
+                                    {
+                                        "key": "SkullType",
+                                        "value": f"{skull_num}b"
+                                    }
+                                ]
+                            }
+                        ] for skull_num, skull_type in enumerate(skull_types)
+                    }
+                }
+            }
+        ]
+    }
+)
+
+j19 = merge(
+    [EmptyNBT('minecraft:skull'), _J19, _JExtra_19],
+    ['universal_minecraft:head', 'universal_minecraft:wall_head'],
+    abstract=True
+)
+
 j113 = merge(
-    [EmptyNBT('minecraft:skull'), _J113, java_keep_packed],
+    [EmptyNBT('minecraft:skull'), _J19, java_keep_packed],
     ['universal_minecraft:head']
 )
 
 wall_j113 = merge(
-    [EmptyNBT('minecraft:skull'), _J113, java_keep_packed],
+    [EmptyNBT('minecraft:skull'), _J19, java_keep_packed],
     ['universal_minecraft:wall_head']
 )
 

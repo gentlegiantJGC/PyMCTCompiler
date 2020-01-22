@@ -291,7 +291,9 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 				"function": "walk_input_nbt",
 				"options": {
 					"type": "compound",
-					"keys": {}
+					"keys": {},
+                    "self_default": [{"function": "carry_nbt", "options": {}}],
+                    "nested_default": [{"function": "carry_nbt", "options": {}}]
 				}
 			}
 		],
@@ -301,8 +303,7 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 					"function": "walk_input_nbt",
 					"options": {
 						"type": "compound",
-						"keys": {},
-						"nested_default": []
+						"keys": {}
 					}
 				},
 				{
@@ -313,8 +314,8 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 						"keys": {
 							"utags": {
 								"type": "compound",
-								"self_default": [],
-								"nested_default": []
+								"self_default": [{"function": "carry_nbt", "options": {}}],
+								"nested_default": [{"function": "carry_nbt", "options": {}}]
 							}
 						}
 					}

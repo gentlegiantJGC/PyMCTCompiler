@@ -40,12 +40,10 @@ _J19 = TranslationFile(
                                                 }
                                             }
                                         ] for data in range(25)
-                                    },
-                                    "default": []
+                                    }
                                 }
                             }
-                        ],
-                        "self_default": []
+                        ]
                     },
                     "powered": {
                         "type": "byte",
@@ -70,12 +68,10 @@ _J19 = TranslationFile(
                                                 }
                                             }
                                         ]
-                                    },
-                                    "default": []
+                                    }
                                 }
                             }
-                        ],
-                        "self_default": []
+                        ]
                     }
                 }
             }
@@ -148,12 +144,10 @@ _B17 = TranslationFile(
                                                 }
                                             }
                                         ] for data in range(25)
-                                    },
-                                    "default": []
+                                    }
                                 }
                             }
-                        ],
-                        "self_default": []
+                        ]
                     }
                 }
             }

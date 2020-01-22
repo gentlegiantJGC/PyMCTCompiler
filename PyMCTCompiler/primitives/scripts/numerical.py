@@ -5574,12 +5574,10 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 														}
 													}
 												] for data in range(25)
-											},
-											"default": []
+											}
 										}
 									}
-								],
-								"self_default": []
+								]
 							},
 							"powered": {
 								"type": "byte",
@@ -5604,12 +5602,10 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 														}
 													}
 												]
-											},
-											"default": []
+											}
 										}
 									}
-								],
-								"self_default": []
+								]
 							}
 						}
 					}
@@ -5735,12 +5731,10 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 														}
 													}
 												] for data in range(25)
-											},
-											"default": []
+											}
 										}
 									}
-								],
-								"self_default": []
+								]
 							}
 						}
 					}

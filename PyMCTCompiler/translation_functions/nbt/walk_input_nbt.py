@@ -50,7 +50,7 @@ class ContainerWalkInputNBT(BaseTranslationFunction):
 	# This is a special function unlike the others. See _convert_walk_input_nbt for more information
 	# {
 	# 	"type": "<nbt type>",  # check that the nbt is of this type
-	# 	"self_default": [],  # if the type is different run these functions : defaults to [{"function": "carry_nbt"}] which carries everything
+	# 	"self_default": [],  # if the type is different run these functions : defaults to [] which does nothing
 	# 	"functions": [],  # functions to run if defined
 	#
 	# 	"keys": {  # only for compound type
@@ -61,7 +61,7 @@ class ContainerWalkInputNBT(BaseTranslationFunction):
 	# 	},
 	# 	"nested_default": []  # only for compound, list or array types.
 	# 		If nested key/index is not in respective dictionary run these functions on them.
-	# 		If undefined defaults to [{"function": "carry_nbt"}] which carries everything
+	# 		If undefined defaults to [] which does nothing
 	# }
 
 	def __init__(self, data, bypass_type=False):

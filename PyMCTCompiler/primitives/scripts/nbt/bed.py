@@ -45,12 +45,10 @@ _B17 = TranslationFile(
                                                 }
                                             }
                                         ] for num, color in enumerate(colours_16)
-                                    },
-                                    "default": []
+                                    }
                                 }
                             }
-                        ],
-                        "self_default": []
+                        ]
                     }
                 }
             }
@@ -101,12 +99,10 @@ _J112 = TranslationFile(
                                                 }
                                             }
                                         ] for num, color in enumerate(colours_16)
-                                    },
-                                    "default": []
+                                    }
                                 }
                             }
-                        ],
-                        "self_default": []
+                        ]
                     }
                 }
             }

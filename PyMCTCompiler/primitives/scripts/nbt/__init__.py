@@ -66,7 +66,9 @@ class EmptyNBT(TranslationFile):
                 "function": "walk_input_nbt",
                 "options": {
                     "type": "compound",
-                    "keys": {}
+                    "keys": {},
+                    "self_default": [{"function": "carry_nbt", "options": {}}],
+                    "nested_default": [{"function": "carry_nbt", "options": {}}]
                 }
             }
         ]
@@ -75,8 +77,7 @@ class EmptyNBT(TranslationFile):
                 "function": "walk_input_nbt",
                 "options": {
                     "type": "compound",
-                    "keys": {},
-                    "nested_default": []
+                    "keys": {}
                 }
             },
             {
@@ -86,11 +87,11 @@ class EmptyNBT(TranslationFile):
                     "type": "compound",
                     "keys": {
                         "utags": {
-                            "type": "compound",
-                            "self_default": [],
-                            "nested_default": []
+                            "type": "compound"
                         }
-                    }
+                    },
+                    "self_default": [{"function": "carry_nbt", "options": {}}],
+                    "nested_default": [{"function": "carry_nbt", "options": {}}]
                 }
             }
         ]
@@ -119,7 +120,9 @@ class NBTRemapHelper(TranslationFile):
                 "function": "walk_input_nbt",
                 "options": {
                     "type": "compound",
-                    "keys": {}
+                    "keys": {},
+                    "self_default": [{"function": "carry_nbt", "options": {}}],
+                    "nested_default": [{"function": "carry_nbt", "options": {}}]
                 }
             }
         ]
@@ -128,8 +131,7 @@ class NBTRemapHelper(TranslationFile):
                 "function": "walk_input_nbt",
                 "options": {
                     "type": "compound",
-                    "keys": {},
-                    "nested_default": []
+                    "keys": {}
                 }
             }
         ]
