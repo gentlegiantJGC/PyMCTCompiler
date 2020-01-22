@@ -219,6 +219,8 @@ colours_16 = [
     "black"
 ]
 
+colours_16_inverse = list(reversed(colours_16))
+
 
 __all__ = [f[:-3] for f in os.listdir(os.path.dirname(__file__)) if f.endswith('.py') and f != '__init__.py']
 from PyMCTCompiler.primitives.scripts.nbt import *
