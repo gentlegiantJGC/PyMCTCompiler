@@ -231,3 +231,380 @@ def mushroom_block(color: str) -> dict:
 			]
 		}
 	}
+
+
+def door(block_name: str, material: str) -> dict:
+	return {
+		"to_universal": [
+			{
+				"function": "new_block",
+				"options": "universal_minecraft:door"
+			},
+			{
+				"function": "new_properties",
+				"options": {
+					"material": material
+				}
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"upper_block_bit": {
+						"0b": [
+							{
+								"function": "new_properties",
+								"options": {
+									"half": "lower"
+								}
+							},
+							{
+								"function": "map_properties",
+								"options": {
+									"direction": {
+										"0": [
+											{
+												"function": "new_properties",
+												"options": {
+													"facing": "east"
+												}
+											}
+										],
+										"1": [
+											{
+												"function": "new_properties",
+												"options": {
+													"facing": "south"
+												}
+											}
+										],
+										"2": [
+											{
+												"function": "new_properties",
+												"options": {
+													"facing": "west"
+												}
+											}
+										],
+										"3": [
+											{
+												"function": "new_properties",
+												"options": {
+													"facing": "north"
+												}
+											}
+										]
+									},
+									"open_bit": {
+										"0b": [
+											{
+												"function": "new_properties",
+												"options": {
+													"open": "false"
+												}
+											}
+										],
+										"1b": [
+											{
+												"function": "new_properties",
+												"options": {
+													"open": "true"
+												}
+											}
+										]
+									}
+								}
+							},
+							{
+								"function": "multiblock",
+								"options": [
+									{
+										"coords": [
+											0,
+											1,
+											0
+										],
+										"functions": [
+											{
+												"function": "map_properties",
+												"options": {
+													"door_hinge_bit": {
+														"0b": [
+															{
+																"function": "new_properties",
+																"options": {
+																	"hinge": "left"
+																}
+															}
+														],
+														"1b": [
+															{
+																"function": "new_properties",
+																"options": {
+																	"hinge": "right"
+																}
+															}
+														]
+													}
+												}
+											}
+										]
+									}
+								]
+							}
+						],
+						"1b": [
+							{
+								"function": "new_properties",
+								"options": {
+									"half": "upper"
+								}
+							},
+							{
+								"function": "map_properties",
+								"options": {
+									"door_hinge_bit": {
+										"0b": [
+											{
+												"function": "new_properties",
+												"options": {
+													"hinge": "left"
+												}
+											}
+										],
+										"1b": [
+											{
+												"function": "new_properties",
+												"options": {
+													"hinge": "right"
+												}
+											}
+										]
+									}
+								}
+							},
+							{
+								"function": "multiblock",
+								"options": [
+									{
+										"coords": [
+											0,
+											-1,
+											0
+										],
+										"functions": [
+											{
+												"function": "map_properties",
+												"options": {
+													"direction": {
+														"0": [
+															{
+																"function": "new_properties",
+																"options": {
+																	"facing": "east"
+																}
+															}
+														],
+														"1": [
+															{
+																"function": "new_properties",
+																"options": {
+																	"facing": "south"
+																}
+															}
+														],
+														"2": [
+															{
+																"function": "new_properties",
+																"options": {
+																	"facing": "west"
+																}
+															}
+														],
+														"3": [
+															{
+																"function": "new_properties",
+																"options": {
+																	"facing": "north"
+																}
+															}
+														]
+													},
+													"open_bit": {
+														"0b": [
+															{
+																"function": "new_properties",
+																"options": {
+																	"open": "false"
+																}
+															}
+														],
+														"1b": [
+															{
+																"function": "new_properties",
+																"options": {
+																	"open": "true"
+																}
+															}
+														]
+													}
+												}
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				}
+			}
+		],
+		"from_universal": {
+			"universal_minecraft:door": [
+				{
+					"function": "new_block",
+					"options": "minecraft:wooden_door"
+				},
+				{
+					"function": "map_properties",
+					"options": {
+						"material": {
+							material: [
+								{
+									"function": "new_block",
+									"options": f"minecraft:{block_name}"
+								}
+							]
+						},
+						"half": {
+							"lower": [
+								{
+									"function": "new_properties",
+									"options": {
+										"upper_block_bit": [
+											"snbt",
+											"0b"
+										]
+									}
+								},
+								{
+									"function": "map_properties",
+									"options": {
+										"facing": {
+											"east": [
+												{
+													"function": "new_properties",
+													"options": {
+														"direction": [
+															"snbt",
+															"0"
+														]
+													}
+												}
+											],
+											"south": [
+												{
+													"function": "new_properties",
+													"options": {
+														"direction": [
+															"snbt",
+															"1"
+														]
+													}
+												}
+											],
+											"west": [
+												{
+													"function": "new_properties",
+													"options": {
+														"direction": [
+															"snbt",
+															"2"
+														]
+													}
+												}
+											],
+											"north": [
+												{
+													"function": "new_properties",
+													"options": {
+														"direction": [
+															"snbt",
+															"3"
+														]
+													}
+												}
+											]
+										},
+										"open": {
+											"false": [
+												{
+													"function": "new_properties",
+													"options": {
+														"open_bit": [
+															"snbt",
+															"0b"
+														]
+													}
+												}
+											],
+											"true": [
+												{
+													"function": "new_properties",
+													"options": {
+														"open_bit": [
+															"snbt",
+															"1b"
+														]
+													}
+												}
+											]
+										}
+									}
+								}
+							],
+							"upper": [
+								{
+									"function": "new_properties",
+									"options": {
+										"upper_block_bit": [
+											"snbt",
+											"1b"
+										]
+									}
+								},
+								{
+									"function": "map_properties",
+									"options": {
+										"hinge": {
+											"left": [
+												{
+													"function": "new_properties",
+													"options": {
+														"door_hinge_bit": [
+															"snbt",
+															"0b"
+														]
+													}
+												}
+											],
+											"right": [
+												{
+													"function": "new_properties",
+													"options": {
+														"door_hinge_bit": [
+															"snbt",
+															"1b"
+														]
+													}
+												}
+											]
+										}
+									}
+								}
+							]
+						}
+					}
+				}
+			]
+		}
+	}
