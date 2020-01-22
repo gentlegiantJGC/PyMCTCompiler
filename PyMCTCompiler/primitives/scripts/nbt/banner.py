@@ -1,5 +1,5 @@
 from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge, TranslationFile, colours_16_inverse
-from .common import java_custom_name, bedrock_is_movable
+from .common import java_custom_name, bedrock_is_movable, java_keep_packed
 
 """
 Default
@@ -182,12 +182,12 @@ wall_j112 = merge(
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:banner'), _J113, java_custom_name],
+    [EmptyNBT('minecraft:banner'), _J113, java_custom_name, java_keep_packed],
     ['universal_minecraft:banner']
 )
 
 wall_j113 = merge(
-    [EmptyNBT('minecraft:banner'), _J113, java_custom_name],
+    [EmptyNBT('minecraft:banner'), _J113, java_custom_name, java_keep_packed],
     ['universal_minecraft:wall_banner']
 )
 

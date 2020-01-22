@@ -1,6 +1,6 @@
 from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
 from .common import java_custom_name, java_items_27, java_str_lock, java_loot_table, \
-    bedrock_items_27, bedrock_is_movable
+    bedrock_items_27, bedrock_is_movable, java_keep_packed
 
 """
 Default
@@ -56,12 +56,12 @@ trapped_j112 = merge(
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:chest'), java_custom_name, java_items_27, java_str_lock, java_loot_table],
+    [EmptyNBT('minecraft:chest'), java_custom_name, java_items_27, java_str_lock, java_loot_table, java_keep_packed],
     ['universal_minecraft:chest']
 )
 
 trapped_j113 = merge(
-    [EmptyNBT('minecraft:trapped_chest'), java_custom_name, java_items_27, java_str_lock, java_loot_table],
+    [EmptyNBT('minecraft:trapped_chest'), java_custom_name, java_items_27, java_str_lock, java_loot_table, java_keep_packed],
     ['universal_minecraft:trapped_chest']
 )
 

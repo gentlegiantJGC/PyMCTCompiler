@@ -1,5 +1,5 @@
 from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, TranslationFile, EmptyNBT, merge
-from .common import bedrock_is_movable
+from .common import bedrock_is_movable, java_keep_packed
 
 """
 Default
@@ -277,12 +277,12 @@ _BExtra_113 = TranslationFile(
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:skull'), _J113],
+    [EmptyNBT('minecraft:skull'), _J113, java_keep_packed],
     ['universal_minecraft:head']
 )
 
 wall_j113 = merge(
-    [EmptyNBT('minecraft:skull'), _J113],
+    [EmptyNBT('minecraft:skull'), _J113, java_keep_packed],
     ['universal_minecraft:wall_head']
 )
 

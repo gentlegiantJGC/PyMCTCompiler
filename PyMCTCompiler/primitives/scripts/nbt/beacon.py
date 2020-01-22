@@ -1,5 +1,5 @@
 from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
-from .common import java_str_lock, bedrock_is_movable
+from .common import java_str_lock, bedrock_is_movable, java_keep_packed
 
 """
 Default
@@ -62,7 +62,7 @@ j112 = merge(
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:beacon'), _J112, java_str_lock],
+    [EmptyNBT('minecraft:beacon'), _J112, java_str_lock, java_keep_packed],
     ['universal_minecraft:beacon']
 )
 

@@ -1,5 +1,5 @@
 from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
-from .common import bedrock_is_movable
+from .common import bedrock_is_movable, java_keep_packed
 
 """
 Default
@@ -24,7 +24,7 @@ j112 = merge(
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:end_portal')],
+    [EmptyNBT('minecraft:end_portal'), java_keep_packed],
     ['universal_minecraft:end_portal']
 )
 

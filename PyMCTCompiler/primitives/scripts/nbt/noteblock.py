@@ -1,5 +1,5 @@
 from PyMCTCompiler.primitives.scripts.nbt import EmptyNBT, merge, TranslationFile
-from .common import bedrock_is_movable
+from .common import bedrock_is_movable, java_keep_packed
 
 """
 Default
@@ -191,12 +191,14 @@ _B17 = TranslationFile(
 
 j19 = merge(
     [EmptyNBT('minecraft:noteblock'), _J19],
-    ['universal_minecraft:note_block']
+    ['universal_minecraft:note_block'],
+    abstract=True
 )
 
 b17 = merge(
     [EmptyNBT('minecraft:note_block'), _B17, bedrock_is_movable],
-    ['universal_minecraft:note_block']
+    ['universal_minecraft:note_block'],
+    abstract=True
 )
 
 b113 = merge(

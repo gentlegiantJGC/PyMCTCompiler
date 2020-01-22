@@ -1,6 +1,6 @@
 from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
 from .common import java_custom_name, java_str_lock, java_items_27, java_loot_table, \
-    bedrock_is_movable, bedrock_items_27
+    bedrock_is_movable, bedrock_items_27, java_keep_packed
 
 """
 Default
@@ -40,7 +40,7 @@ j111 = merge(
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:shulker_box'), java_custom_name, java_str_lock, java_items_27, java_loot_table],
+    [EmptyNBT('minecraft:shulker_box'), java_custom_name, java_str_lock, java_items_27, java_loot_table, java_keep_packed],
     ['universal_minecraft:shulker_box']
 )
 

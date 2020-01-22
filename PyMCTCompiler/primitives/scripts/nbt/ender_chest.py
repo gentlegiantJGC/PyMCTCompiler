@@ -1,5 +1,5 @@
 from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
-from .common import bedrock_is_movable, bedrock_items_27
+from .common import bedrock_is_movable, bedrock_items_27, java_keep_packed
 
 """
 Default
@@ -34,7 +34,7 @@ j112 = merge(
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:ender_chest')],
+    [EmptyNBT('minecraft:ender_chest'), java_keep_packed],
     ['universal_minecraft:ender_chest']
 )
 

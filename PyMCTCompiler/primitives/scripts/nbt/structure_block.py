@@ -1,5 +1,5 @@
 from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
-from .common import bedrock_is_movable
+from .common import bedrock_is_movable, java_keep_packed
 
 """
 Default
@@ -97,7 +97,7 @@ _J113 = NBTRemapHelper(
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:structure_block'), _J113],
+    [EmptyNBT('minecraft:structure_block'), _J113, java_keep_packed],
     ['universal_minecraft:structure_block']
 )
 

@@ -1,5 +1,5 @@
 from PyMCTCompiler.primitives.scripts.nbt import EmptyNBT, merge, TranslationFile, colours_16
-from .common import bedrock_is_movable
+from .common import bedrock_is_movable, java_keep_packed
 
 """
 Default
@@ -141,7 +141,7 @@ j112 = merge(
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:bed')],
+    [EmptyNBT('minecraft:bed'), java_keep_packed],
     ['universal_minecraft:bed']
 )
 

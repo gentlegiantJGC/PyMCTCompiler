@@ -1,6 +1,6 @@
 from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
 from .common import java_items_5, java_str_lock, java_custom_name, \
-    bedrock_is_movable, bedrock_items_5
+    bedrock_is_movable, bedrock_items_5, java_keep_packed
 
 """
 Default
@@ -62,7 +62,7 @@ j112 = merge(
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:brewing_stand'), _J112, java_items_5, java_str_lock, java_custom_name],
+    [EmptyNBT('minecraft:brewing_stand'), _J112, java_items_5, java_str_lock, java_custom_name, java_keep_packed],
     ['universal_minecraft:brewing_stand']
 )
 

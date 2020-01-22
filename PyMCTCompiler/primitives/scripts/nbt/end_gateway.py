@@ -1,4 +1,5 @@
 from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
+from .common import java_keep_packed
 
 """
 Default
@@ -33,6 +34,6 @@ _J113 = NBTRemapHelper(
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:end_gateway'), _J113],
+    [EmptyNBT('minecraft:end_gateway'), _J113, java_keep_packed],
     ['universal_minecraft:end_gateway']
 )

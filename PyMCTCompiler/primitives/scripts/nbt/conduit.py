@@ -1,5 +1,5 @@
 from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
-from .common import bedrock_is_movable
+from .common import bedrock_is_movable, java_keep_packed
 
 """
 Default
@@ -42,7 +42,7 @@ _B113 = NBTRemapHelper(
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:conduit'), _J113],
+    [EmptyNBT('minecraft:conduit'), _J113, java_keep_packed],
     ['universal_minecraft:conduit']
 )
 

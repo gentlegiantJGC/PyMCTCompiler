@@ -1,5 +1,5 @@
 from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
-from .common import bedrock_is_movable
+from .common import bedrock_is_movable, java_keep_packed
 
 """
 Default
@@ -112,7 +112,7 @@ j19 = merge(
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:mob_spawner'), _JBShared, _J19],
+    [EmptyNBT('minecraft:mob_spawner'), _JBShared, _J19, java_keep_packed],
     ['universal_minecraft:spawner']
 )
 

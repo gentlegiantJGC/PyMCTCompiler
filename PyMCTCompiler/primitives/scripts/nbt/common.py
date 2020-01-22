@@ -15,6 +15,13 @@ java_str_lock = NBTRemapHelper(
     "{Lock: \"\"}"
 )
 
+java_keep_packed = NBTRemapHelper(
+    [(
+        ("keepPacked", "byte", []),
+        ("keepPacked", "byte", [("utags", "compound")])
+    )]
+)
+
 java_loot_table = NBTRemapHelper(
     [
         (

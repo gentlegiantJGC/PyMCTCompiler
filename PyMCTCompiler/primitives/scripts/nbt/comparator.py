@@ -1,5 +1,5 @@
 from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
-from .common import bedrock_is_movable
+from .common import bedrock_is_movable, java_keep_packed
 
 """
 Default
@@ -35,7 +35,7 @@ j112 = merge(
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:comparator'), _J112],
+    [EmptyNBT('minecraft:comparator'), _J112, java_keep_packed],
     ['universal_minecraft:comparator']
 )
 

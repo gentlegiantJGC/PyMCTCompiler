@@ -1,5 +1,5 @@
 from PyMCTCompiler.primitives.scripts.nbt import TranslationFile, NBTRemapHelper, EmptyNBT, merge
-from .common import bedrock_is_movable
+from .common import bedrock_is_movable, java_keep_packed
 
 """
 Default

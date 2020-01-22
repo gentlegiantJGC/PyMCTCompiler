@@ -1,6 +1,6 @@
 from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
 from .common import java_items_3, java_custom_name, java_str_lock, \
-    bedrock_items_3, bedrock_is_movable
+    bedrock_items_3, bedrock_is_movable, java_keep_packed
 
 """
 Default
@@ -81,7 +81,7 @@ j19 = merge(
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:furnace'), _J19, _J113, java_items_3, java_custom_name, java_str_lock],
+    [EmptyNBT('minecraft:furnace'), _J19, _J113, java_items_3, java_custom_name, java_str_lock, java_keep_packed],
     ['universal_minecraft:furnace']
 )
 

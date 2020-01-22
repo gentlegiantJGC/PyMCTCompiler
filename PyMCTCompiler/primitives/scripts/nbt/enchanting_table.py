@@ -1,5 +1,5 @@
 from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
-from .common import java_custom_name, bedrock_is_movable
+from .common import java_custom_name, bedrock_is_movable, java_keep_packed
 
 """
 Default
@@ -34,7 +34,7 @@ j112 = merge(
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:enchanting_table'), java_custom_name],
+    [EmptyNBT('minecraft:enchanting_table'), java_custom_name, java_keep_packed],
     ['universal_minecraft:enchanting_table']
 )
 
