@@ -4,6 +4,10 @@ from .common import java_keep_packed
 """
 Default
 J113    "minecraft:piston"
+
+B1.14
+{AttachedBlocks: [], BreakBlocks: [], LastProgress: 0.0f, NewState: 0b, Progress: 0.0f, State: 0b, Sticky: 0b, id: "PistonArm", isMovable: 1b}
+{AttachedBlocks: [], BreakBlocks: [], LastProgress: 0.0f, NewState: 0b, Progress: 0.0f, State: 0b, Sticky: 1b, id: "PistonArm", isMovable: 1b}
 """
 
 universal = {
