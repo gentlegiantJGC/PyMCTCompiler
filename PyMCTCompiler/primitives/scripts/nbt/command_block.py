@@ -1,4 +1,4 @@
-from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
+from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge, TranslationFile
 from .common import bedrock_is_movable, java_keep_packed
 
 """
@@ -111,9 +111,9 @@ _B113 = NBTRemapHelper(
             ("conditionMet", "byte", []),
             ("conditionMet", "byte", [("utags", "compound")])
         ),
-        (  # TODO: convert this to the json rawtext format
+        (
             ("CustomName", "string", []),
-            ("CustomName", "string", [("utags", "compound")])
+            (None, None, None)
         ),
         (
             ("ExecuteOnFirstTick", "byte", []),
@@ -164,7 +164,33 @@ _B113 = NBTRemapHelper(
             ("Version", "int", [("utags", "compound")])
         ),
     ],
-    '{Command: "", CustomName: "", ExecuteOnFirstTick: 0b, LPCommandMode: 16064, LPCondionalMode: 63b, LPRedstoneMode: 0b, LastExecution: 0L, LastOutput: "", LastOutputParams: [], SuccessCount: 0, TickDelay: 0, TrackOutput: 1b, Version: 10, auto: 0b, conditionMet: 0b, powered: 0b}'
+    '{Command: "", ExecuteOnFirstTick: 0b, LPCommandMode: 16064, LPCondionalMode: 63b, LPRedstoneMode: 0b, LastExecution: 0L, LastOutput: "", LastOutputParams: [], SuccessCount: 0, TickDelay: 0, TrackOutput: 1b, Version: 10, auto: 0b, conditionMet: 0b, powered: 0b}'
+)
+
+_BCustomName = TranslationFile(
+    [
+        {
+            "function": "code",
+            "options": {
+                "input": ["nbt"],
+                "output": ["new_nbt"],
+                "function": "bedrock_cmd_custom_name_2u"
+            }
+        }
+    ],
+    [
+        {
+            "function": "code",
+            "options": {
+                "input": ["nbt"],
+                "output": ["new_nbt"],
+                "function": "bedrock_cmd_custom_name_fu"
+            }
+        }
+    ],
+    {
+        "snbt": "{CustomName: ""}"
+    }
 )
 
 j19 = merge(
@@ -185,12 +211,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:command_block'), _B113, bedrock_is_movable],
+    [EmptyNBT('minecraft:command_block'), _B113, _BCustomName, bedrock_is_movable],
     ['universal_minecraft:command_block'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:command_block'), _B113, bedrock_is_movable],
+    [EmptyNBT('minecraft:command_block'), _B113, _BCustomName, bedrock_is_movable],
     ['universal_minecraft:command_block']
 )
