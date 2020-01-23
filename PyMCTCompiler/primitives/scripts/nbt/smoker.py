@@ -12,7 +12,8 @@ universal = {
             CookTime: 0s, 
             CookTimeTotal: 0s,
             StoredXPInt: 0,
-            RecipesUsedSize: 0s
+            RecipesUsedSize: 0s,
+            Items: []
         }
     }"""
 }

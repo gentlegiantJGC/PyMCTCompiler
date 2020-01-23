@@ -18,7 +18,8 @@ universal = {
             Fuel: 0b, 
             Items: [], 
             BrewTime: 0s, 
-            Lock: \"\"
+            Lock: \"\",
+            FuelTotal: 0s
         }
     }"""
 }
