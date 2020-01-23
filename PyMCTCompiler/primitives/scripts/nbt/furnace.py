@@ -1,6 +1,7 @@
-from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
+from PyMCTCompiler.primitives.scripts.nbt import EmptyNBT, merge
 from .common import java_items_3, java_custom_name, java_str_lock, \
-    bedrock_items_3, bedrock_is_movable, java_keep_packed
+    java_keep_packed, java_furnace_base, bedrock_furnace_base, java_recipes_used_size, \
+    bedrock_items_3, bedrock_is_movable
 
 """
 Default
@@ -17,81 +18,35 @@ universal = {
     "nbt_identifier": ["universal_minecraft", "furnace"],
     "snbt": """{
         utags: {
-            isMovable: 1b
+            isMovable: 1b,
+            BurnTime: 0s,
+            CookTime: 0s, 
+            CookTimeTotal: 0s,
+            StoredXPInt: 0,
+            RecipesUsedSize: 0s
         }
     }"""
 }
 
-_J19 = NBTRemapHelper(
-    [
-        (
-            ("BurnTime", "short", []),
-            ("BurnTime", "short", [("utags", "compound")])
-        ),
-        (
-            ("CookTime", "short", []),
-            ("CookTime", "short", [("utags", "compound")])
-        ),
-        (
-            ("CookTimeTotal", "short", []),
-            ("CookTimeTotal", "short", [("utags", "compound")])
-        ),
-    ],
-    "{CookTime: 0s, BurnTime: 0s, CookTimeTotal: 0s}"
-)
-
-# TODO: sort out the variable keys
-_J113 = NBTRemapHelper(
-    [
-        (
-            ("RecipesUsedSize", "short", []),
-            ("RecipesUsedSize", "short", [("utags", "compound")])
-        )
-    ],
-    "{RecipesUsedSize: 0s}"
-)
-
-_B113 = NBTRemapHelper(
-    [
-        (
-            ("BurnTime", "short", []),
-            ("BurnTime", "short", [("utags", "compound")])
-        ),
-        (
-            ("CookTime", "short", []),
-            ("CookTime", "short", [("utags", "compound")])
-        ),
-        (
-            ("BurnDuration", "short", []),
-            ("CookTimeTotal", "short", [("utags", "compound")])
-        ),
-        (
-            ("StoredXPInt", "int", []),
-            ("StoredXPInt", "int", [("utags", "compound")])
-        ),
-
-    ],
-    "{BurnDuration: 0s, BurnTime: 0s, CookTime: 0s, StoredXPInt: 0}"
-)
-
 j19 = merge(
-    [EmptyNBT('minecraft:furnace'), _J19, java_items_3, java_custom_name, java_str_lock],
+    [EmptyNBT('minecraft:furnace'), java_furnace_base, java_items_3, java_custom_name, java_str_lock],
     ['universal_minecraft:furnace'],
     abstract=True
 )
 
+# TODO: sort out the variable keys
 j113 = merge(
-    [EmptyNBT('minecraft:furnace'), _J19, _J113, java_items_3, java_custom_name, java_str_lock, java_keep_packed],
+    [EmptyNBT('minecraft:furnace'), java_furnace_base, java_recipes_used_size, java_items_3, java_custom_name, java_str_lock, java_keep_packed],
     ['universal_minecraft:furnace']
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:furnace'), _B113, bedrock_items_3, bedrock_is_movable],
+    [EmptyNBT('minecraft:furnace'), bedrock_furnace_base, bedrock_items_3, bedrock_is_movable],
     ['universal_minecraft:furnace'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:furnace'), _B113, bedrock_items_3, bedrock_is_movable],
+    [EmptyNBT('minecraft:furnace'), bedrock_furnace_base, bedrock_items_3, bedrock_is_movable],
     ['universal_minecraft:furnace']
 )

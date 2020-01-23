@@ -272,8 +272,6 @@
 	"mossy_cobblestone_stairs": "mossy_cobblestone_stairs",
 
 	"fletching_table": "fletching_table",
-	"blast_furnace": "blast_furnace",
-	"lit_blast_furnace": "lit_blast_furnace",
 	"smithing_table": "smithing_table",
 	"stonecutter_block": "stonecutter_block",
 	"loom": "loom",
@@ -482,5 +480,7 @@
 	"structure_block": [">nbt.structure_block.b113", "structure_block"],
 	"movingBlock": null,
 	"barrel": [">nbt.barrel.b113", "barrel"],
-	"bell": [">nbt.bell.b113", "bell"]
+	"bell": [">nbt.bell.b113", "bell"],
+	"blast_furnace": [">nbt.blast_furnace.b113", "blast_furnace"],
+	"lit_blast_furnace": [">nbt.blast_furnace.b113", "lit_blast_furnace"]
 }

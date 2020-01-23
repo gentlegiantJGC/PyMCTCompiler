@@ -67,6 +67,64 @@ java_items_27 = NBTRemapHelper(
     "{Items: []}"
 )
 
+java_furnace_base = NBTRemapHelper(
+    [
+        (
+            ("BurnTime", "short", []),
+            ("BurnTime", "short", [("utags", "compound")])
+        ),
+        (
+            ("CookTime", "short", []),
+            ("CookTime", "short", [("utags", "compound")])
+        ),
+        (
+            ("CookTimeTotal", "short", []),
+            ("CookTimeTotal", "short", [("utags", "compound")])
+        ),
+    ],
+    "{CookTime: 0s, BurnTime: 0s, CookTimeTotal: 0s}"
+)
+
+java_recipes_used_size = NBTRemapHelper(
+    [
+        (
+            ("RecipesUsedSize", "short", []),
+            ("RecipesUsedSize", "short", [("utags", "compound")])
+        )
+    ],
+    "{RecipesUsedSize: 0s}"
+)
+
+bedrock_furnace_base = NBTRemapHelper(
+    [
+        (
+            ("BurnTime", "short", []),
+            ("BurnTime", "short", [("utags", "compound")])
+        ),
+        (
+            ("CookTime", "short", []),
+            ("CookTime", "short", [("utags", "compound")])
+        ),
+        (
+            ("BurnDuration", "short", []),
+            ("CookTimeTotal", "short", [("utags", "compound")])
+        ),
+        (
+            ("StoredXPInt", "int", []),
+            ("StoredXPInt", "int", [("utags", "compound")])
+        ),
+
+    ],
+    "{BurnDuration: 0s, BurnTime: 0s, CookTime: 0s, StoredXPInt: 0}"
+)
+
+
+
+
+
+
+
+
 bedrock_is_movable = NBTRemapHelper(
     [(
         ("isMovable", "byte", []),
@@ -116,3 +174,4 @@ bedrock_findable = NBTRemapHelper(
     ],
     "{Findable: 0b}"
 )
+

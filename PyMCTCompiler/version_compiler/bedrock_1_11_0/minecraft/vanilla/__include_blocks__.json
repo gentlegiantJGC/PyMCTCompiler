@@ -2,8 +2,8 @@
 	"barrel": [">nbt.barrel.b111", "barrel"],
 
 	"bell": [">nbt.bell.b111", "bell"],
-	"blast_furnace": ["blast_furnace"],
-	"lit_blast_furnace": ["lit_blast_furnace"],
+	"blast_furnace": [">nbt.blast_furnace.b111", "blast_furnace"],
+	"lit_blast_furnace": [">nbt.blast_furnace.b111", "lit_blast_furnace"],
 	"composter": "composter",
 
 	"smoker": ["smoker"],

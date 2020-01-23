@@ -1,0 +1,64 @@
+{
+	"specification": {
+		"properties": {
+			"facing": [
+				"north",
+				"south",
+				"west",
+				"east"
+			],
+			"lit": [
+				"true",
+				"false"
+			]
+		},
+		"defaults": {
+			"facing": "north",
+			"lit": "false"
+		}
+	},
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:blast_furnace"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
+				"facing": [
+					"north",
+					"south",
+					"west",
+					"east"
+				],
+				"lit": [
+					"true",
+					"false"
+				]
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:blast_furnace": [
+			{
+				"function": "new_block",
+				"options": "minecraft:blast_furnace"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"facing": [
+						"north",
+						"south",
+						"west",
+						"east"
+					],
+					"lit": [
+						"true",
+						"false"
+					]
+				}
+			}
+		]
+	}
+}
