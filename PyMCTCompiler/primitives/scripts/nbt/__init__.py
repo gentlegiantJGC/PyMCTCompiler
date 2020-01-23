@@ -1,7 +1,7 @@
-from typing import List, Tuple, Union
-import copy
-from PyMCTCompiler.primitives import Primitive
 import os
+from typing import List, Tuple, Union
+
+from PyMCTCompiler.primitives import Primitive
 
 
 def merge(translation_files: List['TranslationFile'], universal_blocks: List[str], abstract=False) -> Primitive:

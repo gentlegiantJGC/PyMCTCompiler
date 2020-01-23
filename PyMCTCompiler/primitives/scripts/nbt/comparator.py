@@ -13,12 +13,13 @@ universal = {
     "nbt_identifier": ["universal_minecraft", "comparator"],
     "snbt": """{
         utags: {
-            isMovable: 1b
+            isMovable: 1b,
+            OutputSignal: 0
         }
     }"""
 }
 
-_J112 = NBTRemapHelper(
+_ComparatorBase = NBTRemapHelper(
     [
         (
             ("OutputSignal", "int", []),
@@ -29,23 +30,23 @@ _J112 = NBTRemapHelper(
 )
 
 j112 = merge(
-    [EmptyNBT('minecraft:comparator'), _J112],
+    [EmptyNBT('minecraft:comparator'), _ComparatorBase],
     ['universal_minecraft:comparator'],
     abstract=True
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:comparator'), _J112, java_keep_packed],
+    [EmptyNBT('minecraft:comparator'), _ComparatorBase, java_keep_packed],
     ['universal_minecraft:comparator']
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:comparator'), _J112, bedrock_is_movable],
+    [EmptyNBT('minecraft:comparator'), _ComparatorBase, bedrock_is_movable],
     ['universal_minecraft:comparator'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:comparator'), _J112, bedrock_is_movable],
+    [EmptyNBT('minecraft:comparator'), _ComparatorBase, bedrock_is_movable],
     ['universal_minecraft:comparator']
 )

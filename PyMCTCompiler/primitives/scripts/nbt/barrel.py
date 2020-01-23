@@ -1,4 +1,4 @@
-from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
+from PyMCTCompiler.primitives.scripts.nbt import EmptyNBT, merge
 from .common import java_items_27, bedrock_items_27, java_custom_name, java_str_lock, java_loot_table, java_keep_packed, \
     bedrock_is_movable, bedrock_findable
 

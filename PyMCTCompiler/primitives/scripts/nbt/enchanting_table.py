@@ -12,19 +12,20 @@ universal = {
     "nbt_identifier": ["universal_minecraft", "enchanting_table"],
     "snbt": """{
         utags: {
-            isMovable: 1b
+            isMovable: 1b,
+            rott: 0.0f
         }
     }"""
 }
 
-_B113 = NBTRemapHelper(
+_B17 = NBTRemapHelper(
     [
         (
             ("rott", "float", []),
             ("rott", "float", [("utags", "compound")])
         )
     ],
-    "{rott: 0.0}"
+    "{rott: 0.0f}"
 )
 
 j112 = merge(
@@ -39,12 +40,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:enchanting_table'), _B113, bedrock_is_movable],
+    [EmptyNBT('minecraft:enchanting_table'), _B17, bedrock_is_movable],
     ['universal_minecraft:enchanting_table'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:enchanting_table'), _B113, bedrock_is_movable],
+    [EmptyNBT('minecraft:enchanting_table'), _B17, bedrock_is_movable],
     ['universal_minecraft:enchanting_table']
 )

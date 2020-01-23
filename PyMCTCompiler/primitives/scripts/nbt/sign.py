@@ -88,12 +88,12 @@ wall_j19 = merge(
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:sign'), _J19],
+    [EmptyNBT('minecraft:sign'), _J19, java_keep_packed],
     ['universal_minecraft:sign']
 )
 
 wall_j113 = merge(
-    [EmptyNBT('minecraft:sign'), _J19],
+    [EmptyNBT('minecraft:sign'), _J19, java_keep_packed],
     ['universal_minecraft:wall_sign']
 )
 
