@@ -18,6 +18,7 @@
 	"barrel": [">nbt.barrel.j114", "barrel"],
 	"bell": [">nbt.bell.j114", "bell"],
 	"blast_furnace": [">nbt.blast_furnace.j114", "blast_furnace"],
+	"smoker": [">nbt.smoker.j114", "smoker"],
 
 	"cornflower": "cornflower",
 	"wither_rose": "wither_rose",

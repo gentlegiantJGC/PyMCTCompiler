@@ -281,8 +281,6 @@
 	"lantern": "lantern",
 	"composter": "composter",
 	"campfire": "campfire",
-	"smoker": "smoker",
-	"lit_smoker": "lit_smoker",
 	"jigsaw": "jigsaw",
 	"scaffolding": "scaffolding",
 
@@ -482,5 +480,7 @@
 	"barrel": [">nbt.barrel.b113", "barrel"],
 	"bell": [">nbt.bell.b113", "bell"],
 	"blast_furnace": [">nbt.blast_furnace.b113", "blast_furnace"],
-	"lit_blast_furnace": [">nbt.blast_furnace.b113", "lit_blast_furnace"]
+	"lit_blast_furnace": [">nbt.blast_furnace.b113", "lit_blast_furnace"],
+	"smoker": [">nbt.smoker.b113", "smoker"],
+	"lit_smoker": [">nbt.smoker.b113", "lit_smoker"]
 }

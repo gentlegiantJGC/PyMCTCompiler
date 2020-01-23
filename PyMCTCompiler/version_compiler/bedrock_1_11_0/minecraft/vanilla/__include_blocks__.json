@@ -6,8 +6,8 @@
 	"lit_blast_furnace": [">nbt.blast_furnace.b111", "lit_blast_furnace"],
 	"composter": "composter",
 
-	"smoker": ["smoker"],
-	"lit_smoker": ["lit_smoker"],
+	"smoker": [">nbt.smoker.b111", "smoker"],
+	"lit_smoker": [">nbt.smoker.b111", "lit_smoker"],
 	"stonecutter_block": "stonecutter_block",
 	"cartography_table": "cartography_table",
 	"campfire": ["campfire"],

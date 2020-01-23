@@ -1,0 +1,64 @@
+{
+	"specification": {
+		"properties": {
+			"facing": [
+				"north",
+				"south",
+				"west",
+				"east"
+			],
+			"lit": [
+				"true",
+				"false"
+			]
+		},
+		"defaults": {
+			"facing": "north",
+			"lit": "false"
+		}
+	},
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:smoker"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
+				"facing": [
+					"north",
+					"south",
+					"west",
+					"east"
+				],
+				"lit": [
+					"true",
+					"false"
+				]
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:smoker": [
+			{
+				"function": "new_block",
+				"options": "minecraft:smoker"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"facing": [
+						"north",
+						"south",
+						"west",
+						"east"
+					],
+					"lit": [
+						"true",
+						"false"
+					]
+				}
+			}
+		]
+	}
+}
