@@ -1,4 +1,5 @@
 import os
+import copy
 from typing import List, Tuple, Union
 
 from PyMCTCompiler.primitives import Primitive
