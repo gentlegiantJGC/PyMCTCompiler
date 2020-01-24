@@ -448,7 +448,7 @@
 	"dispenser": [">nbt.dispenser.b113", "dispenser"],
 	"dropper": [">nbt.dropper.b113", "dropper"],
 	"enchanting_table": [">nbt.enchanting_table.b113", "enchanting_table"],
-	"end_gateway": "end_gateway",
+	"end_gateway": [">nbt.end_gateway.b113", "end_gateway"],
 	"end_portal": [">nbt.end_portal.b113", "end_portal"],
 	"ender_chest": [">nbt.ender_chest.b113", "ender_chest"],
 	"flower_pot": ["flower_pot", ">nbt.flower_pot.b113"],

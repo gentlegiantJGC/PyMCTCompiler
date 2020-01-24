@@ -227,7 +227,7 @@
 	"dispenser": ["dispenser", ">nbt.dispenser.j112"],
 	"dropper": ["dropper", ">nbt.dropper.j112"],
 	"enchanting_table": ["enchanting_table", ">nbt.enchanting_table.j112"],
-	"end_gateway": ["end_gateway"],
+	"end_gateway": [">nbt.end_gateway.j19", "end_gateway"],
 	"end_portal": ["end_portal", ">nbt.end_portal.j112"],
 	"ender_chest": ["ender_chest", ">nbt.ender_chest.j112"],
 	"flower_pot": ["flower_pot_java", ">nbt.flower_pot.j19"],

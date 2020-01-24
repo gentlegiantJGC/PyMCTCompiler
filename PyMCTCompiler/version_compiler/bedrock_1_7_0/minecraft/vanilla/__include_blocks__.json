@@ -266,7 +266,7 @@
 	"dispenser": ["dispenser", ">nbt.dispenser.b17"],
 	"dropper": ["dropper", ">nbt.dropper.b17"],
 	"enchanting_table": ["enchanting_table", ">nbt.enchanting_table.b17"],
-	"end_gateway": "end_gateway",
+	"end_gateway": [">nbt.end_gateway.b17", "end_gateway"],
 	"end_portal": ["end_portal", ">nbt.end_portal.b17"],
 	"ender_chest": ["ender_chest", ">nbt.ender_chest.b17"],
 	"flower_pot": ["flower_pot_bedrock", ">nbt.flower_pot.b17"],
