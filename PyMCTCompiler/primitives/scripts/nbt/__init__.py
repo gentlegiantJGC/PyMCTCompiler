@@ -148,8 +148,8 @@ class NBTRemapHelper(TranslationFile):
             ):
                 if obj is None:
                     continue
-                obj[in_key] = {}
-                obj = obj[in_key]
+                obj[str(in_key)] = {}
+                obj = obj[str(in_key)]
 
                 if "type" in obj:
                     assert obj["type"] == in_type
