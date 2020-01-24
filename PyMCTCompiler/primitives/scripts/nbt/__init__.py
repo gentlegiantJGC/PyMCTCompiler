@@ -105,8 +105,8 @@ class NBTRemapHelper(TranslationFile):
             self,
             remaps: List[
                 Tuple[
-                    Tuple[Union[str, int], str, List[Tuple[str, str]]],
-                    Tuple[Union[str, int], str, List[Tuple[str, str]]],
+                    Union[Tuple[Union[str, int], str, List[Tuple[str, str]]], Tuple[None, None, None]],
+                    Union[Tuple[Union[str, int], str, List[Tuple[str, str]]], Tuple[None, None, None]],
                 ]
             ],
             nbt: str = None

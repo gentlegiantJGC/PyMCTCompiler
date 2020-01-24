@@ -6,6 +6,7 @@ Default
 J113    "minecraft:conduit"		"{}"
 
 B113	"Conduit"		"{Active: 0b, Target: -1L, isMovable: 1b}"
+There are UUID values in both but I am skipping these
 """
 
 universal = {
@@ -21,7 +22,7 @@ _J113 = NBTRemapHelper(
     [
         (
             ("target_uuid", "compound", []),
-            ("java_target_uuid", "compound", [("utags", "compound")])
+            (None, None, None)
         )
     ],
     "{}"
@@ -31,14 +32,14 @@ _B113 = NBTRemapHelper(
     [
         (
             ("Target", "long", []),
-            ("bedrock_target_uuid", "long", [("utags", "compound")])
+            (None, None, None)
         ),
         (
             ("Active", "byte", []),
             ("Active", "byte", [("utags", "compound")])
         )
     ],
-    "{Active: 0b, Target: -1L}"
+    "{Active: 0b}"
 )
 
 j113 = merge(
