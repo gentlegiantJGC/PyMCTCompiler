@@ -365,7 +365,7 @@
 	"mossy_cobblestone_wall": "mossy_cobblestone_wall",
 
 
-	"moving_piston": [">nbt.piston.j113", "moving_piston"],
+	"moving_piston": [">nbt.moving_block.j113", "moving_piston"],
 
 	"white_banner": [">nbt.banner.j113", "white_banner"],
 	"orange_banner": [">nbt.banner.j113", "orange_banner"],

@@ -55,10 +55,6 @@ _B110 = NBTRemapHelper(
             ("Book", "compound", [("utags", "compound")])
         ),
         (
-            ("hasBook", "byte", []),
-            (None, None, None)
-        ),
-        (
             ("page", "int", []),
             ("Page", "int", [("utags", "compound")])
         ),

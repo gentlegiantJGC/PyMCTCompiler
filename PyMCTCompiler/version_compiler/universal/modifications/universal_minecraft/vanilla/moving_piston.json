@@ -16,7 +16,8 @@
 		    },
 		    "defaults": {
 		        "facing": "north"
-		    }
+		    },
+			"unbt": "nbt.moving_block.universal"
 		},
 		"moving_sticky_piston": {
 		    "properties": {
@@ -31,7 +32,8 @@
 		    },
 		    "defaults": {
 		        "facing": "north"
-		    }
+		    },
+			"unbt": "nbt.moving_block.universal"
 		}
 	}
 }
