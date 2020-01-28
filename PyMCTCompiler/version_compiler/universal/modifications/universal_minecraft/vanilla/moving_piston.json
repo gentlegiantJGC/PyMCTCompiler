@@ -3,36 +3,25 @@
 		"moving_piston"
 	],
 	"add": {
-		"moving_piston": {
-		    "properties": {
-		        "facing": [
-		            "north",
-		            "east",
-		            "south",
-		            "west",
-		            "up",
-		            "down"
-		        ]
-		    },
-		    "defaults": {
-		        "facing": "north"
-		    },
-			"unbt": "nbt.moving_block.universal"
-		},
-		"moving_sticky_piston": {
-		    "properties": {
-		        "facing": [
-		            "north",
-		            "east",
-		            "south",
-		            "west",
-		            "up",
-		            "down"
-		        ]
-		    },
-		    "defaults": {
-		        "facing": "north"
-		    },
+		"moving_block": {
+			"properties": {
+				"type": [
+					"normal",
+					"sticky"
+				],
+				"facing": [
+					"north",
+					"east",
+					"south",
+					"west",
+					"up",
+					"down"
+				]
+			},
+			"defaults": {
+				"type": "normal",
+				"facing": "north"
+			},
 			"unbt": "nbt.moving_block.universal"
 		}
 	}

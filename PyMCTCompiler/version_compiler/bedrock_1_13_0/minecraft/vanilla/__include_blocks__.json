@@ -475,7 +475,7 @@
 	"acacia_wall_sign": [">nbt.sign.wall_b113", "acacia_wall_sign"],
 	"skull": [">nbt.skull.b113", "skull"],
 	"structure_block": [">nbt.structure_block.b113", "structure_block"],
-	"movingBlock": null,
+	"movingBlock": [">nbt.moving_block.b113", "moving_block"],
 	"barrel": [">nbt.barrel.b113", "barrel"],
 	"bell": [">nbt.bell.b113", "bell"],
 	"blast_furnace": [">nbt.blast_furnace.b113", "blast_furnace"],
