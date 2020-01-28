@@ -1,5 +1,5 @@
-from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
-from .common import bedrock_is_movable, bedrock_items_27, java_keep_packed
+from PyMCTCompiler.primitives.scripts.nbt import EmptyNBT, merge
+from .common import bedrock_is_movable, bedrock_items_27, java_keep_packed, bedrock_findable
 
 """
 Default
@@ -17,16 +17,6 @@ universal = {
     }"""
 }
 
-_B17 = NBTRemapHelper(
-    [
-        (
-            ("Findable", "byte", []),
-            ("Findable", "byte", [("utags", "compound")])
-        )
-    ],
-    "{BurnDuration: 0s, BurnTime: 0s, CookTime: 0s, StoredXPInt: 0}"
-)
-
 j112 = merge(
     [EmptyNBT('minecraft:ender_chest')],
     ['universal_minecraft:ender_chest'],
@@ -39,12 +29,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:ender_chest'), _B17, bedrock_items_27, bedrock_is_movable],
+    [EmptyNBT('minecraft:ender_chest'), bedrock_findable, bedrock_is_movable],
     ['universal_minecraft:ender_chest'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:ender_chest'), _B17, bedrock_items_27, bedrock_is_movable],
+    [EmptyNBT('minecraft:ender_chest'), bedrock_findable, bedrock_is_movable],
     ['universal_minecraft:ender_chest']
 )
