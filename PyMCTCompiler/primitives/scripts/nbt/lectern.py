@@ -117,7 +117,7 @@ _BedrockHasBook = TranslationFile(
                             "options": [
                                 {
                                     "key": "hasBook",
-                                    "value": "0"
+                                    "value": "1b"
                                 }
                             ]
                         }
