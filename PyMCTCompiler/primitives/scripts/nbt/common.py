@@ -35,6 +35,14 @@ java_loot_table = NBTRemapHelper(
     ]
 )
 
+java_item_1 = NBTRemapHelper(
+    [(
+        ("Item", "compound", []),
+        ("Item", "compound", [("utags", "compound")])
+    )],
+    "{}"
+)
+
 java_items_3 = NBTRemapHelper(
     [(
         ("Items", "list", []),
@@ -131,6 +139,14 @@ bedrock_is_movable = NBTRemapHelper(
         ("isMovable", "byte", [("utags", "compound")])
     )],
     "{isMovable: 1b}"
+)
+
+bedrock_item_1 = NBTRemapHelper(
+    [(
+        ("Item", "compound", []),
+        ("Item", "compound", [("utags", "compound")])
+    )],
+    "{}"
 )
 
 bedrock_items_3 = NBTRemapHelper(

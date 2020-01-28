@@ -2,7 +2,7 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:frame"
+            "options": "universal_minecraft:item_frame_block"
         },
         {
             "function": "map_properties",
@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "item_frame_map_bit": "0"
+                                "map_item": "false"
                             }
                         }
                     ],
@@ -20,17 +20,17 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "item_frame_map_bit": "1"
+                                "map_item": "true"
                             }
                         }
                     ]
                 },
-                "weirdo_direction": {
+                "facing_direction": {
                     "0": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "weirdo_direction": "east"
+                                "facing": "down"
                             }
                         }
                     ],
@@ -38,7 +38,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "weirdo_direction": "west"
+                                "facing": "up"
                             }
                         }
                     ],
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "weirdo_direction": "south"
+                                "facing": "north"
                             }
                         }
                     ],
@@ -54,7 +54,23 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "weirdo_direction": "north"
+                                "facing": "south"
+                            }
+                        }
+                    ],
+                    "4": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "west"
+                            }
+                        }
+                    ],
+                    "5": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "east"
                             }
                         }
                     ]
@@ -63,7 +79,7 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:frame": [
+        "universal_minecraft:item_frame_block": [
             {
                 "function": "new_block",
                 "options": "minecraft:frame"
@@ -71,8 +87,8 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "item_frame_map_bit": {
-                        "0": [
+                    "map_item": {
+                        "false": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -83,7 +99,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "true": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -95,36 +111,25 @@
                             }
                         ]
                     },
-                    "weirdo_direction": {
-                        "east": [
+                    "facing": {
+                        "down": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "weirdo_direction": [
+                                    "facing_direction": [
                                         "snbt",
                                         "0"
                                     ]
                                 }
                             }
                         ],
-                        "west": [
+                        "up": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "weirdo_direction": [
+                                    "facing_direction": [
                                         "snbt",
                                         "1"
-                                    ]
-                                }
-                            }
-                        ],
-                        "south": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "weirdo_direction": [
-                                        "snbt",
-                                        "2"
                                     ]
                                 }
                             }
@@ -133,9 +138,42 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "weirdo_direction": [
+                                    "facing_direction": [
+                                        "snbt",
+                                        "2"
+                                    ]
+                                }
+                            }
+                        ],
+                        "south": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing_direction": [
                                         "snbt",
                                         "3"
+                                    ]
+                                }
+                            }
+                        ],
+                        "west": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing_direction": [
+                                        "snbt",
+                                        "4"
+                                    ]
+                                }
+                            }
+                        ],
+                        "east": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing_direction": [
+                                        "snbt",
+                                        "5"
                                     ]
                                 }
                             }

@@ -1,0 +1,26 @@
+{
+	"remove": [],
+	"add": {
+		"item_frame_block": {
+			"properties": {
+				"facing": [
+					"north",
+					"east",
+					"south",
+					"west",
+					"up",
+					"down"
+				],
+				"map_item": [
+					"true",
+					"false"
+				]
+			},
+			"defaults": {
+				"facing": "north",
+				"map_item": "false"
+			},
+			"unbt": "nbt.item_frame_block.universal"
+		}
+	}
+}

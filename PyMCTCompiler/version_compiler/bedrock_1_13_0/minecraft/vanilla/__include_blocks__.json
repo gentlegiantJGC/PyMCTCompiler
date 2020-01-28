@@ -455,7 +455,7 @@
 	"furnace": [">nbt.furnace.b113", "furnace"],
 	"lit_furnace": [">nbt.furnace.b113", "lit_furnace"],
 	"hopper": ["hopper", ">nbt.hopper.b113"],
-	"frame": null,
+	"frame": [">nbt.item_frame_block.b113", "frame"],
 	"jukebox": ["jukebox", ">nbt.jukebox.b113"],
 	"mob_spawner": [">nbt.mob_spawner.b113", "mob_spawner"],
 	"noteblock": ["noteblock", ">nbt.noteblock.b113"],

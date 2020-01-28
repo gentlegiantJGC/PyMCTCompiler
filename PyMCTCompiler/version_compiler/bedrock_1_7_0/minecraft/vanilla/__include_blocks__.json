@@ -165,7 +165,7 @@
 	"acacia_door": "acacia_door",
 	"dark_oak_door": "dark_oak_door",
 	"grass_path": "grass_path",
-	"frame": null,
+	"frame": [">nbt.item_frame_block.b17", "frame"],
 	"chorus_flower": "chorus_flower",
 	"purpur_block": ["purpur_block", "purpur_pillar_bedrock"],
 	"purpur_stairs": "purpur_stairs",
