@@ -1,6 +1,6 @@
-from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
+from PyMCTCompiler.primitives.scripts.nbt import TranslationFile, EmptyNBT, merge
 from .common import java_custom_name, java_str_lock, java_items_27, java_loot_table, \
-    bedrock_is_movable, bedrock_items_27, java_keep_packed
+    bedrock_is_movable, bedrock_items_27, java_keep_packed, bedrock_findable
 
 """
 Default
@@ -16,21 +16,81 @@ universal = {
     "nbt_identifier": ["universal_minecraft", "shulker_box"],
     "snbt": """{
         utags: {
-            isMovable: 1b
+            isMovable: 1b,
+            Findable: 0b,
+            Items: []
         }
     }"""
 }
 
-# TODO: facing
-
-_B113 = NBTRemapHelper(
+_BedrockFacing = TranslationFile(
     [
-        (
-            ("Findable", "byte", []),
-            ("Findable", "byte", [("utags", "compound")])
-        )
+        {
+            "function": "walk_input_nbt",
+            "options": {
+                "type": "compound",
+                "keys": {
+                    "facing": {
+                        "type": "byte",
+                        "functions": [
+                            {
+                                "function": "map_nbt",
+                                "options": {
+                                    "cases": {
+                                        f"{facing}b": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "facing": direction
+                                                }
+                                            }
+                                        ] for facing, direction in enumerate([
+                                            "down",
+                                            "up",
+                                            "north",
+                                            "south",
+                                            "west",
+                                            "east"
+                                        ])
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
     ],
-    "{Findable: 0b}"
+    [
+        {
+            "function": "map_properties",
+            "options": {
+                "facing": {
+                    direction: [
+                        {
+                            "function": "new_nbt",
+                            "options": [
+                                {
+                                    "key": "facing",
+                                    "value": f"{facing}b"
+                                }
+                            ]
+                        }
+                    ] for facing, direction in enumerate([
+                        "down",
+                        "up",
+                        "north",
+                        "south",
+                        "west",
+                        "east"
+                    ])
+                }
+            }
+        }
+    ],
+    {
+        "snbt": "{facing: 0b}"
+    }
 )
 
 j111 = merge(
@@ -45,12 +105,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:shulker_box'), _B113, bedrock_is_movable, bedrock_items_27],
+    [EmptyNBT('minecraft:shulker_box'), bedrock_findable, bedrock_is_movable, bedrock_items_27, _BedrockFacing],
     ['universal_minecraft:shulker_box'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:shulker_box'), _B113, bedrock_is_movable, bedrock_items_27],
+    [EmptyNBT('minecraft:shulker_box'), bedrock_findable, bedrock_is_movable, bedrock_items_27, _BedrockFacing],
     ['universal_minecraft:shulker_box']
 )
