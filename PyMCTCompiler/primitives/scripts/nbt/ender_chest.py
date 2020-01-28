@@ -12,7 +12,8 @@ universal = {
     "nbt_identifier": ["universal_minecraft", "ender_chest"],
     "snbt": """{
         utags: {
-            isMovable: 1b
+            isMovable: 1b,
+            Findable: 0b
         }
     }"""
 }
