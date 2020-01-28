@@ -1,0 +1,8 @@
+numerical.bit_map(
+    "minecraft", "lectern",
+    {
+        "powered": {0: "false", 4: "true"},
+        "facing": {0: "south", 1: "west", 2: "north", 3: "east"}
+    },
+    "universal_minecraft", "lectern"
+)

@@ -1,3 +1,4 @@
 {
-	"sweet_berry_bush": "sweet_berry_bush"
+	"sweet_berry_bush": "sweet_berry_bush",
+	"lectern": [">nbt.lectern.b110", "lectern"]
 }

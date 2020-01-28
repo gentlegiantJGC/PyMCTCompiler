@@ -19,6 +19,7 @@
 	"bell": [">nbt.bell.j114", "bell"],
 	"blast_furnace": [">nbt.blast_furnace.j114", "blast_furnace"],
 	"smoker": [">nbt.smoker.j114", "smoker"],
+	"lectern": [">nbt.lectern.j114", "lectern"],
 
 	"cornflower": "cornflower",
 	"wither_rose": "wither_rose",

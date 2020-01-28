@@ -275,7 +275,6 @@
 	"smithing_table": "smithing_table",
 	"stonecutter_block": "stonecutter_block",
 	"loom": "loom",
-	"lectern": "lectern",
 	"grindstone": "grindstone",
 	"cartography_table": "cartography_table",
 	"lantern": "lantern",
@@ -482,5 +481,6 @@
 	"blast_furnace": [">nbt.blast_furnace.b113", "blast_furnace"],
 	"lit_blast_furnace": [">nbt.blast_furnace.b113", "lit_blast_furnace"],
 	"smoker": [">nbt.smoker.b113", "smoker"],
-	"lit_smoker": [">nbt.smoker.b113", "lit_smoker"]
+	"lit_smoker": [">nbt.smoker.b113", "lit_smoker"],
+	"lectern": [">nbt.lectern.b113", "lectern"]
 }
