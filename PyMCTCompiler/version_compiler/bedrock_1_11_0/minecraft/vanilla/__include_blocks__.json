@@ -10,7 +10,7 @@
 	"lit_smoker": [">nbt.smoker.b111", "lit_smoker"],
 	"stonecutter_block": "stonecutter_block",
 	"cartography_table": "cartography_table",
-	"campfire": ["campfire"],
+	"campfire": [">nbt.campfire.b111", "campfire"],
 	"smithing_table": "smithing_table",
 	"grindstone": "grindstone"
 }

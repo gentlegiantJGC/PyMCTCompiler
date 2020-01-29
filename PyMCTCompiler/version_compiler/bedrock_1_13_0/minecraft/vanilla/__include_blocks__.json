@@ -279,7 +279,7 @@
 	"cartography_table": "cartography_table",
 	"lantern": "lantern",
 	"composter": "composter",
-	"campfire": "campfire",
+	"campfire": [">nbt.campfire.b111", "campfire"],
 	"jigsaw": "jigsaw",
 	"scaffolding": "scaffolding",
 
