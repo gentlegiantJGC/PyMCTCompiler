@@ -116,7 +116,6 @@ _J19 = TranslationFile(
         }
     ],
     {
-        "nbt_identifier": ["minecraft", "noteblock"],
         "snbt": "{note:0b,powered:0b}"
     }
 )
@@ -172,13 +171,6 @@ _B17 = TranslationFile(
         }
     ],
     {
-        "properties": {
-            "block_data": [str(data) for data in range(16)]
-        },
-        "defaults": {
-            "block_data": "0"
-        },
-        "nbt_identifier": ["minecraft", "note_block"],
         "snbt": "{note:0b}"
     }
 )
