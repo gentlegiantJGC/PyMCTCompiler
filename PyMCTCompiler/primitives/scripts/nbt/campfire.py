@@ -18,7 +18,11 @@ universal = {
             isMovable: 1b,
             Items:[], 
             CookingTimes: [I; 0, 0, 0, 0], 
-            CookingTotalTimes: [I; 0, 0, 0, 0]
+            CookingTotalTimes: [I; 0, 0, 0, 0],
+            ItemTime1: 0, 
+            ItemTime2: 0, 
+            ItemTime3: 0, 
+            ItemTime4: 0
         }
     }"""
 }
