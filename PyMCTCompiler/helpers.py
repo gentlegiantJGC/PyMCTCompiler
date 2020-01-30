@@ -36,6 +36,7 @@ def check_specification_format(data: dict):
 		assert isinstance(key, str), 'Property names must be strings'
 		assert isinstance(val, list), 'Property options must be a list of strings'
 		assert all(isinstance(prop, str) for prop in val), 'All property options must be strings'
+		remove_list_duplicates(val)
 		assert isinstance(defaults[key], str), 'All default property values must be strings'
 		assert defaults[key] in val, 'Default property value must be in the property list'
 		if data.get('nbt_properties', False):
@@ -73,6 +74,16 @@ def unique_merge_lists(list_a: list, list_b: list) -> list:
 		if entry not in merged_list:
 			merged_list.append(entry)
 	return merged_list
+
+
+def remove_list_duplicates(val: list):
+	# remove duplicates
+	i = 0
+	while len(val) > i:
+		if val[:i].count(val[i]) >= 1:
+			del val[i]
+		else:
+			i += 1
 
 
 def blocks_from_server(version_path: str, version_str: List[str] = None):

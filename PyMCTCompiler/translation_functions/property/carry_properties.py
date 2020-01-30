@@ -1,4 +1,5 @@
 from typing import Set
+from PyMCTCompiler.helpers import remove_list_duplicates
 from PyMCTCompiler.translation_functions import BaseTranslationFunction
 
 
@@ -39,6 +40,7 @@ class CarryProperties(BaseTranslationFunction):
 			assert isinstance(val_list, list), '"options" values must be a list of strings'
 			for val in val_list:
 				assert isinstance(val, str), '"options" property values must be strings'
+			remove_list_duplicates(val_list)
 
 	def save(self, parents: list) -> dict:
 		return self._function
