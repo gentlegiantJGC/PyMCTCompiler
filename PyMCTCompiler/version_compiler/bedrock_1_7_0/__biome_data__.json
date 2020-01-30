@@ -41,9 +41,9 @@
 		        9,
 		        "universal_minecraft:the_end"
 		    ],
-		    "minecraft:frozen_ocean": [
+		    "minecraft:legacy_frozen_ocean": [
 		        10,
-		        "universal_minecraft:frozen_ocean"
+		        "universal_minecraft:legacy_frozen_ocean"
 		    ],
 		    "minecraft:frozen_river": [
 		        11,
@@ -161,32 +161,36 @@
 		        39,
 		        "universal_minecraft:badlands_plateau"
 		    ],
-		    "minecraft:warm_ocean": [
-		        44,
+			"minecraft:warm_ocean": [
+		        40,
 		        "universal_minecraft:warm_ocean"
 		    ],
-		    "minecraft:lukewarm_ocean": [
-		        45,
-		        "universal_minecraft:lukewarm_ocean"
-		    ],
-		    "minecraft:cold_ocean": [
-		        46,
-		        "universal_minecraft:cold_ocean"
-		    ],
-		    "minecraft:deep_warm_ocean": [
-		        47,
+			"minecraft:deep_warm_ocean": [
+		        41,
 		        "universal_minecraft:deep_warm_ocean"
 		    ],
-		    "minecraft:deep_lukewarm_ocean": [
-		        48,
+			"minecraft:lukewarm_ocean": [
+		        42,
+		        "universal_minecraft:lukewarm_ocean"
+		    ],
+			"minecraft:deep_lukewarm_ocean": [
+		        43,
 		        "universal_minecraft:deep_lukewarm_ocean"
 		    ],
-		    "minecraft:deep_cold_ocean": [
-		        49,
+			"minecraft:cold_ocean": [
+		        44,
+		        "universal_minecraft:cold_ocean"
+		    ],
+			"minecraft:deep_cold_ocean": [
+		        45,
 		        "universal_minecraft:deep_cold_ocean"
 		    ],
-		    "minecraft:deep_frozen_ocean": [
-		        50,
+			"minecraft:frozen_ocean": [
+		        46,
+		        "universal_minecraft:frozen_ocean"
+		    ],
+			"minecraft:deep_frozen_ocean": [
+		        47,
 		        "universal_minecraft:deep_frozen_ocean"
 		    ],
 		    "minecraft:sunflower_plains": [
