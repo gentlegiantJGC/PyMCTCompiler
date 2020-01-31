@@ -52,7 +52,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "data_value": str(rot + 2)
+                                    "block_data": str(rot + 2)
                                 }
                             }
                         ] for rot, facing in enumerate([

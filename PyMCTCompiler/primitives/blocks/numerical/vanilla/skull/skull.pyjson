@@ -81,7 +81,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "data_value": str(data8 * 8 + rot + 2)
+                                                    "block_data": str(data8 * 8 + rot + 2)
                                                 }
                                             }
                                         ] for rot, facing in enumerate([
