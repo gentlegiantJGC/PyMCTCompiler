@@ -1,1 +1,22 @@
-numerical.default("minecraft", "flower_pot", "universal_minecraft")
+numerical.bit_map(
+    "minecraft", "flower_pot",
+    {
+        "plant": {
+            0: "none",
+            1: "poppy",
+            2: "dandelion",
+            3: "oak_sapling",
+            4: "spruce_sapling",
+            5: "birch_sapling",
+            6: "jungle_sapling",
+            7: "red_mushroom",
+            8: "brown_mushroom",
+            9: "cactus",
+            10: "dead_bush",
+            11: "fern",
+            12: "acacia_sapling",
+            13: "dark_oak_sapling"
+        }
+    },
+    "universal_minecraft", "coral_fan"
+)
