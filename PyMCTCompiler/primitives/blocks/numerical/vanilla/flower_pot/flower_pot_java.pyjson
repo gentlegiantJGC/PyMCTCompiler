@@ -18,5 +18,5 @@ numerical.bit_map(
             13: "dark_oak_sapling"
         }
     },
-    "universal_minecraft", "coral_fan"
+    "universal_minecraft"
 )
