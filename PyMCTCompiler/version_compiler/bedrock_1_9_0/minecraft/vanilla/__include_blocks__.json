@@ -1,6 +1,6 @@
 {
-	"cauldron": ["cauldron2_bedrock"],
-	"lava_cauldron": ["lava_cauldron_bedrock"],
+	"cauldron": [">nbt.cauldron.b110", "cauldron2_bedrock"],
+	"lava_cauldron": [">nbt.cauldron.b110", "lava_cauldron_bedrock"],
 	"fletching_table": "fletching_table",
 	"red_flower": "red_flower+",
 	"lantern": "lantern",
