@@ -5429,7 +5429,7 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 					"minecraft:sand",
 					"minecraft:gravel",
 					"minecraft:soul_sand",
-					"minecraft:concretepowder"
+					"minecraft:concretePowder"
 				],
 				"hat": [
 					"minecraft:glass",
@@ -5439,7 +5439,7 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 					"minecraft:stained_glass_pane",
 					"minecraft:glowstone",
 					"minecraft:beacon",
-					"minecraft:sealantern",
+					"minecraft:seaLantern",
 					"minecraft:hard_glass",
 					"minecraft:hard_glass_pane",
 					"minecraft:hard_stained_glass",
