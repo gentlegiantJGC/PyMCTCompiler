@@ -11,6 +11,9 @@ class WalkInputNBT(BaseTranslationFunction):
 	# {
 	# 	"function": "walk_input_nbt",
 	#   "outer_name": "",  # defaults to this if undefined
+	#   "path": [],  # Should only be used when nested inside itself.
+	#   				 Use to walk back up the NBT when the output depends on two or more NBT values.
+	# 					 Format is a standard path relative to the base [["key", "type"]]
 	# 	"options": ContainerWalkInputNBT
 	# }
 
@@ -23,6 +26,8 @@ class WalkInputNBT(BaseTranslationFunction):
 		The formats do not need to be identical but close enough that the data can stack."""
 		if 'outer_name' in other:
 			self['outer_name'] = other['outer_name']
+		if 'path' in other:
+			assert self['path'] == other['path']
 		self['options'].extend(other['options'], parents)
 
 	def _compiled_extend(self, other: BaseTranslationFunction, parents: list):
@@ -33,6 +38,9 @@ class WalkInputNBT(BaseTranslationFunction):
 	def _commit(self, feature_set: Set[str], parents: list):
 		if 'outer_name' in self:
 			assert isinstance(self['outer_name'], str)
+		if 'path' in self:
+			assert isinstance(self['path'], list)
+			assert all(isinstance(p, list) and len(p) == 2 and isinstance(p[0], (int, str)) and isinstance(p[1], str) for p in self['path'])
 		feature_set_ = copy.deepcopy(feature_set)
 		for function_name in extend_feature_set.get(self.function_name, []):
 			feature_set_.add(function_name)
