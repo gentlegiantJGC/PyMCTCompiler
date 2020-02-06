@@ -1,5 +1,6 @@
 {
 	"bamboo": "bamboo",
 	"bamboo_sapling": "bamboo_sapling",
-	"scaffolding": "scaffolding"
+	"scaffolding": "scaffolding",
+	"flower_pot": ["flower_pot_bedrock", ">nbt.flower_pot.b18"]
 }

@@ -3,6 +3,7 @@
 	"lava_cauldron": [">nbt.cauldron.b110", "lava_cauldron_bedrock"],
 	"fletching_table": "fletching_table",
 	"red_flower": "red_flower+",
+	"flower_pot": ["flower_pot_bedrock", ">nbt.flower_pot.b19"],
 	"lantern": "lantern",
 
 	"standing_sign": [">nbt.sign.b17", "oak_standing_sign"],
