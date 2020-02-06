@@ -57,7 +57,7 @@
 		"universal_minecraft:piston_head": [
 			{
 				"function": "new_block",
-				"options": "minecraft:pistonarmcollision"
+				"options": "minecraft:pistonArmCollision"
 			},
 			{
 				"function": "map_properties",
@@ -134,7 +134,7 @@
 		"universal_minecraft:piston_head": [
 			{
 				"function": "new_block",
-				"options": "minecraft:pistonarmcollision"
+				"options": "minecraft:pistonArmCollision"
 			},
 			{
 				"function": "new_properties",
@@ -159,7 +159,7 @@
 		"universal_minecraft:sticky_piston_head": [
 			{
 				"function": "new_block",
-				"options": "minecraft:pistonarmcollision"
+				"options": "minecraft:pistonArmCollision"
 			},
 			{
 				"function": "new_properties",
