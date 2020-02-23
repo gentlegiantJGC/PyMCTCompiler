@@ -1,6 +1,8 @@
 from typing import Dict, List, Tuple, Generator, Union
 import itertools
 
+wool_colours = ["\"white\"", "\"orange\"", "\"magenta\"", "\"light_blue\"", "\"yellow\"", "\"lime\"", "\"pink\"", "\"gray\"", "\"light_gray\"", "\"cyan\"", "\"purple\"", "\"blue\"", "\"brown\"", "\"green\"", "\"red\"", "\"black\""]
+
 
 def default(input_namespace: str, input_block_name: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
 	if universal_namespace is None:
@@ -73,7 +75,7 @@ def direct_data(input_namespace: str, input_block_name: str, property_name: str,
 							{
 								"function": "new_properties",
 								"options": {
-									property_name: str(data)
+									property_name: f"\"{data}\""
 								}
 							}
 						] for data in valid_data
@@ -91,7 +93,7 @@ def direct_data(input_namespace: str, input_block_name: str, property_name: str,
 					"function": "map_properties",
 					"options": {
 						property_name: {
-							str(data): [
+							f"\"{data}\"": [
 								{
 									"function": "new_properties",
 									"options": {
@@ -106,10 +108,10 @@ def direct_data(input_namespace: str, input_block_name: str, property_name: str,
 		},
 		"blockstate_specification": {
 			"properties": {
-				property_name: [str(data) for data in valid_data]
+				property_name: [f"\"{data}\"" for data in valid_data]
 			},
 			"defaults": {
-				property_name: str(valid_data[0])
+				property_name: f"\"{valid_data[0]}\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -120,7 +122,7 @@ def direct_data(input_namespace: str, input_block_name: str, property_name: str,
 			{
 				"function": "carry_properties",
 				"options": {
-					property_name: [str(data) for data in valid_data]
+					property_name: [f"\"{data}\"" for data in valid_data]
 				}
 			}
 		],
@@ -133,7 +135,7 @@ def direct_data(input_namespace: str, input_block_name: str, property_name: str,
 				{
 					"function": "carry_properties",
 					"options": {
-						property_name: [str(data) for data in valid_data]
+						property_name: [f"\"{data}\"" for data in valid_data]
 					}
 				}
 			]
@@ -323,7 +325,7 @@ def liquid(input_namespace: str, input_block_name: str, flowing_: bool, universa
 		universal_namespace = input_namespace
 	if universal_block_name is None:
 		universal_block_name = input_block_name
-	flowing_str = "true" if flowing_ else "false"
+	flowing_str = "\"true\"" if flowing_ else "\"false\""
 	return {
 		"to_universal": [
 			{
@@ -338,8 +340,8 @@ def liquid(input_namespace: str, input_block_name: str, flowing_: bool, universa
 							{
 								"function": "new_properties",
 								"options": {
-									"level": {0: "0", 1: "1", 2: "2", 3: "3", 4: "4", 5: "5", 6: "6", 7: "7"}[data & 7],
-									"falling": {0: "false", 8: "true"}[data & 8],
+									"level": {0: "\"0\"", 1: "\"1\"", 2: "\"2\"", 3: "\"3\"", 4: "\"4\"", 5: "\"5\"", 6: "\"6\"", 7: "\"7\""}[data & 7],
+									"falling": {0: "\"false\"", 8: "\"true\""}[data & 8],
 									"flowing": flowing_str
 								}
 							}
@@ -375,11 +377,11 @@ def liquid(input_namespace: str, input_block_name: str, flowing_: bool, universa
 																		"block_data": str(data8 + data7)
 																	}
 																}
-															] for data7, level in {0: "0", 1: "1", 2: "2", 3: "3", 4: "4", 5: "5", 6: "6", 7: "7"}.items()
+															] for data7, level in {0: "\"0\"", 1: "\"1\"", 2: "\"2\"", 3: "\"3\"", 4: "\"4\"", 5: "\"5\"", 6: "\"6\"", 7: "\"7\""}.items()
 														}
 													}
 												}
-											] for data8, falling in {0: "false", 8: "true"}.items()
+											] for data8, falling in {0: "\"false\"", 8: "\"true\""}.items()
 										}
 									}
 								}
@@ -392,23 +394,23 @@ def liquid(input_namespace: str, input_block_name: str, flowing_: bool, universa
 		"blockstate_specification": {
 			"properties": {
 				"level": [
-					"0",
-					"1",
-					"2",
-					"3",
-					"4",
-					"5",
-					"6",
-					"7"
+					"\"0\"",
+					"\"1\"",
+					"\"2\"",
+					"\"3\"",
+					"\"4\"",
+					"\"5\"",
+					"\"6\"",
+					"\"7\""
 				],
 				"falling": [
-					"false",
-					"true"
+					"\"false\"",
+					"\"true\""
 				]
 			},
 			"defaults": {
-				"level": "0",
-				"falling": "false"
+				"level": "\"0\"",
+				"falling": "\"false\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -420,18 +422,18 @@ def liquid(input_namespace: str, input_block_name: str, flowing_: bool, universa
 				"function": "carry_properties",
 				"options": {
 					"level": [
-						"0",
-						"1",
-						"2",
-						"3",
-						"4",
-						"5",
-						"6",
-						"7"
+						"\"0\"",
+						"\"1\"",
+						"\"2\"",
+						"\"3\"",
+						"\"4\"",
+						"\"5\"",
+						"\"6\"",
+						"\"7\""
 					],
 					"falling": [
-						"false",
-						"true"
+						"\"false\"",
+						"\"true\""
 					]
 				}
 			},
@@ -448,18 +450,18 @@ def liquid(input_namespace: str, input_block_name: str, flowing_: bool, universa
 					"function": "carry_properties",
 					"options": {
 						"level": [
-							"0",
-							"1",
-							"2",
-							"3",
-							"4",
-							"5",
-							"6",
-							"7"
+							"\"0\"",
+							"\"1\"",
+							"\"2\"",
+							"\"3\"",
+							"\"4\"",
+							"\"5\"",
+							"\"6\"",
+							"\"7\""
 						],
 						"falling": [
-							"false",
-							"true"
+							"\"false\"",
+							"\"true\""
 						]
 					}
 				},
@@ -488,25 +490,25 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 		# 4 - persistent_bit
 		# 8 - update_bit
 		property8 = "persistent"
-		property8_lut = {0: "false", 8: "true"}
+		property8_lut = {0: "\"false\"", 8: "\"true\""}
 		property4 = "check_decay"
-		property4_lut = {0: "false", 4: "true"}
+		property4_lut = {0: "\"false\"", 4: "\"true\""}
 	elif platform == 'java':
 		# java
 		# 3 - type
 		# 4 - decayable 0: true, 1: false
 		# 8 - check_decay 0: false, 1: true
 		property8 = "check_decay"
-		property8_lut = {0: "false", 8: "true"}
+		property8_lut = {0: "\"false\"", 8: "\"true\""}
 		property4 = "persistent"
-		property4_lut = {0: "false", 4: "true"}
+		property4_lut = {0: "\"false\"", 4: "\"true\""}
 	else:
 		raise Exception(f'Platform "{platform}" is not known')
 
 	if block_name == "leaves":
-		material_pallet = {0: "oak", 1: "spruce", 2: "birch", 3: "jungle"}
+		material_pallet = {0: "\"oak\"", 1: "\"spruce\"", 2: "\"birch\"", 3: "\"jungle\""}
 	elif block_name == "leaves2":
-		material_pallet = {0: "acacia", 1: "dark_oak"}
+		material_pallet = {0: "\"acacia\"", 1: "\"dark_oak\""}
 	else:
 		raise Exception(f'Block name "{block_name}" is not known')
 
@@ -579,18 +581,18 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 			"properties": {
 				"material": list(material_pallet.values()),
 				"persistent": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				],
 				"check_decay": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				]
 			},
 			"defaults": {
 				"material": material_pallet[0],
-				"persistent": "false",
-				"check_decay": "true"
+				"persistent": "\"false\"",
+				"check_decay": "\"true\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -603,12 +605,12 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 				"options": {
 					"material": list(material_pallet.values()),
 					"persistent": [
-						"true",
-						"false"
+						"\"true\"",
+						"\"false\""
 					],
 					"check_decay": [
-						"true",
-						"false"
+						"\"true\"",
+						"\"false\""
 					]
 				}
 			}
@@ -620,12 +622,12 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 					"options": {
 						"material": list(material_pallet.values()),
 						"persistent": [
-							"true",
-							"false"
+							"\"true\"",
+							"\"false\""
 						],
 						"check_decay": [
-							"true",
-							"false"
+							"\"true\"",
+							"\"false\""
 						]
 					}
 				},
@@ -649,9 +651,9 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 
 def log(input_namespace: str, input_block_name: str) -> dict:
 	if input_block_name == "log":
-		material_pallet = {0: "oak", 1: "spruce", 2: "birch", 3: "jungle"}
+		material_pallet = {0: "\"oak\"", 1: "\"spruce\"", 2: "\"birch\"", 3: "\"jungle\""}
 	elif input_block_name == "log2":
-		material_pallet = {0: "acacia", 1: "dark_oak"}
+		material_pallet = {0: "\"acacia\"", 1: "\"dark_oak\""}
 	else:
 		raise Exception(f'Block name "{input_block_name}" is not known')
 
@@ -670,7 +672,7 @@ def log(input_namespace: str, input_block_name: str) -> dict:
 								"function": "new_properties",
 								"options": {
 									"material": material_pallet[data & 3],
-									"axis": {0: "y", 4: "x", 8: "z"}[data & 12]
+									"axis": {0: "\"y\"", 4: "\"x\"", 8: "\"z\""}[data & 12]
 								}
 							}
 						] if data <= 11 else [
@@ -715,7 +717,7 @@ def log(input_namespace: str, input_block_name: str) -> dict:
 										}
 									}
 								}
-							] for data12, axis in {0: "y", 4: "x", 8: "z"}.items()
+							] for data12, axis in {0: "\"y\"", 4: "\"x\"", 8: "\"z\""}.items()
 						}
 					}
 				}
@@ -746,15 +748,15 @@ def log(input_namespace: str, input_block_name: str) -> dict:
 			"properties": {
 				"material": list(material_pallet.values()),
 				"axis": [
-					"x",
-					"y",
-					"z",
-					"all"
+					"\"x\"",
+					"\"y\"",
+					"\"z\"",
+					"\"all\""
 				]
 			},
 			"defaults": {
 				"material": material_pallet[0],
-				"axis": "y"
+				"axis": "\"y\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -763,9 +765,9 @@ def log(input_namespace: str, input_block_name: str) -> dict:
 				"options": {
 					"material": list(material_pallet.values()),
 					"axis": [
-						"x",
-						"y",
-						"z"
+						"\"x\"",
+						"\"y\"",
+						"\"z\""
 					]
 				}
 			},
@@ -773,25 +775,25 @@ def log(input_namespace: str, input_block_name: str) -> dict:
 				"function": "map_properties",
 				"options": {
 					"axis": {
-						"x": [
+						"\"x\"": [
 							{
 								"function": "new_block",
 								"options": "universal_minecraft:log"
 							}
 						],
-						"y": [
+						"\"y\"": [
 							{
 								"function": "new_block",
 								"options": "universal_minecraft:log"
 							}
 						],
-						"z": [
+						"\"z\"": [
 							{
 								"function": "new_block",
 								"options": "universal_minecraft:log"
 							}
 						],
-						"all": [
+						"\"all\"": [
 							{
 								"function": "new_block",
 								"options": "universal_minecraft:wood"
@@ -799,7 +801,7 @@ def log(input_namespace: str, input_block_name: str) -> dict:
 							{
 								"function": "new_properties",
 								"options": {
-									"axis": "y"
+									"axis": "\"y\""
 								}
 							}
 						]
@@ -814,9 +816,9 @@ def log(input_namespace: str, input_block_name: str) -> dict:
 					"options": {
 						"material": list(material_pallet.values()),
 						"axis": [
-							"x",
-							"y",
-							"z"
+							"\"x\"",
+							"\"y\"",
+							"\"z\""
 						]
 					}
 				},
@@ -857,7 +859,7 @@ def log(input_namespace: str, input_block_name: str) -> dict:
 				{
 					"function": "new_properties",
 					"options": {
-						"axis": "all"
+						"axis": "\"all\""
 					}
 				}
 			]
@@ -867,9 +869,9 @@ def log(input_namespace: str, input_block_name: str) -> dict:
 
 def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 	if input_block_name == "log":
-		material_pallet = {0: "oak", 1: "spruce", 2: "birch", 3: "jungle"}
+		material_pallet = {0: "\"oak\"", 1: "\"spruce\"", 2: "\"birch\"", 3: "\"jungle\""}
 	elif input_block_name == "log2":
-		material_pallet = {0: "acacia", 1: "dark_oak"}
+		material_pallet = {0: "\"acacia\"", 1: "\"dark_oak\""}
 	else:
 		raise Exception(f'Block name "{input_block_name}" is not known')
 
@@ -888,7 +890,7 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 								"function": "new_properties",
 								"options": {
 									"material": material_pallet[data & 3],
-									"axis": {0: "y", 4: "x", 8: "z"}[data & 12]
+									"axis": {0: "\"y\"", 4: "\"x\"", 8: "\"z\""}[data & 12]
 								}
 							}
 						] if data <= 11 else [
@@ -913,7 +915,7 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 					"function": "map_properties",
 					"options": {
 						"stripped": {
-							"false": [
+							"\"false\"": [
 								{
 									"function": "map_properties",
 									"options": {
@@ -938,7 +940,7 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 														}
 													}
 												}
-											] for data12, axis in {0: "y", 4: "x", 8: "z"}.items()
+											] for data12, axis in {0: "\"y\"", 4: "\"x\"", 8: "\"z\""}.items()
 										}
 									}
 								}
@@ -952,7 +954,7 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 					"function": "map_properties",
 					"options": {
 						"stripped": {
-							"false": [
+							"\"false\"": [
 								{
 									"function": "map_properties",
 									"options": {
@@ -982,15 +984,15 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 			"properties": {
 				"material": list(material_pallet.values()),
 				"axis": [
-					"x",
-					"y",
-					"z",
-					"all"
+					"\"x\"",
+					"\"y\"",
+					"\"z\"",
+					"\"all\""
 				]
 			},
 			"defaults": {
 				"material": material_pallet[0],
-				"axis": "y"
+				"axis": "\"y\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -999,9 +1001,9 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 				"options": {
 					"material": list(material_pallet.values()),
 					"axis": [
-						"x",
-						"y",
-						"z"
+						"\"x\"",
+						"\"y\"",
+						"\"z\""
 					]
 				}
 			},
@@ -1009,25 +1011,25 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 				"function": "map_properties",
 				"options": {
 					"axis": {
-						"x": [
+						"\"x\"": [
 							{
 								"function": "new_block",
 								"options": "universal_minecraft:log"
 							}
 						],
-						"y": [
+						"\"y\"": [
 							{
 								"function": "new_block",
 								"options": "universal_minecraft:log"
 							}
 						],
-						"z": [
+						"\"z\"": [
 							{
 								"function": "new_block",
 								"options": "universal_minecraft:log"
 							}
 						],
-						"all": [
+						"\"all\"": [
 							{
 								"function": "new_block",
 								"options": "universal_minecraft:wood"
@@ -1035,7 +1037,7 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 							{
 								"function": "new_properties",
 								"options": {
-									"axis": "y"
+									"axis": "\"y\""
 								}
 							}
 						]
@@ -1049,9 +1051,9 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 					"function": "carry_properties",
 					"options": {
 						"axis": [
-							"x",
-							"y",
-							"z"
+							"\"x\"",
+							"\"y\"",
+							"\"z\""
 						]
 					}
 				},
@@ -1059,7 +1061,7 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 					"function": "map_properties",
 					"options": {
 						"stripped": {
-							"false": [
+							"\"false\"": [
 								{
 									"function": "carry_properties",
 									"options": {
@@ -1072,7 +1074,7 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 										"material": {
 											material: [
 												{
-													"function":"new_block",
+													"function": "new_block",
 													"options":  f"{input_namespace}:{input_block_name}"
 												}
 											] for material in material_pallet.values()
@@ -1089,7 +1091,7 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 					"function": "map_properties",
 					"options": {
 						"stripped": {
-							"false": [
+							"\"false\"": [
 								{
 									"function": "carry_properties",
 									"options": {
@@ -1116,7 +1118,7 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 				{
 					"function": "new_properties",
 					"options": {
-						"axis": "all"
+						"axis": "\"all\""
 					}
 				}
 			]
@@ -1140,7 +1142,7 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 								"function": "new_properties",
 								"options": {
 									"material": material,
-									"axis": {0: "y", 1: "x", 2: "z"}[data]
+									"axis": {0: "\"y\"", 1: "\"x\"", 2: "\"z\""}[data]
 								}
 							}
 						] if data <= 2 else [
@@ -1161,7 +1163,7 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 			{
 				"function": "new_properties",
 				"options": {
-					"stripped": "true"
+					"stripped": "\"true\""
 				}
 			}
 		],
@@ -1171,7 +1173,7 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 					"function": "map_properties",
 					"options": {
 						"stripped": {
-							"true": [
+							"\"true\"": [
 								{
 									"function": "map_properties",
 									"options": {
@@ -1183,7 +1185,7 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 														"block_data": str(data)
 													}
 												}
-											] for data, axis in {0: "y", 1: "x", 2: "z"}.items()
+											] for data, axis in {0: "\"y\"", 1: "\"x\"", 2: "\"z\""}.items()
 										},
 										"material": {
 											material: [
@@ -1205,7 +1207,7 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 					"function": "map_properties",
 					"options": {
 						"stripped": {
-							"true": [
+							"\"true\"": [
 								{
 									"function": "map_properties",
 									"options": {
@@ -1234,14 +1236,14 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 		"blockstate_specification": {
 			"properties": {
 				"axis": [
-					"x",
-					"y",
-					"z",
-					"all"
+					"\"x\"",
+					"\"y\"",
+					"\"z\"",
+					"\"all\""
 				]
 			},
 			"defaults": {
-				"axis": "y"
+				"axis": "\"y\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -1249,9 +1251,9 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 				"function": "carry_properties",
 				"options": {
 					"axis": [
-						"x",
-						"y",
-						"z"
+						"\"x\"",
+						"\"y\"",
+						"\"z\""
 					]
 				}
 			},
@@ -1259,7 +1261,7 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 				"function": "map_properties",
 				"options": {
 					"axis": {
-						"x": [
+						"\"x\"": [
 							{
 								"function": "new_block",
 								"options": "universal_minecraft:log"
@@ -1271,7 +1273,7 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 								}
 							}
 						],
-						"y": [
+						"\"y\"": [
 							{
 								"function": "new_block",
 								"options": "universal_minecraft:log"
@@ -1283,7 +1285,7 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 								}
 							}
 						],
-						"z": [
+						"\"z\"": [
 							{
 								"function": "new_block",
 								"options": "universal_minecraft:log"
@@ -1295,7 +1297,7 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 								}
 							}
 						],
-						"all": [
+						"\"all\"": [
 							{
 								"function": "new_block",
 								"options": "universal_minecraft:wood"
@@ -1303,7 +1305,7 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 							{
 								"function": "new_properties",
 								"options": {
-									"axis": "y",
+									"axis": "\"y\"",
 									"material": material
 								}
 							}
@@ -1314,7 +1316,7 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 			{
 				"function": "new_properties",
 				"options": {
-					"stripped": "true"
+					"stripped": "\"true\""
 				}
 			}
 		],
@@ -1324,9 +1326,9 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 					"function": "carry_properties",
 					"options": {
 						"axis": [
-							"x",
-							"y",
-							"z"
+							"\"x\"",
+							"\"y\"",
+							"\"z\""
 						]
 					}
 				},
@@ -1334,7 +1336,7 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 					"function": "map_properties",
 					"options": {
 						"stripped": {
-							"true": [
+							"\"true\"": [
 								{
 									"function": "map_properties",
 									"options": {
@@ -1358,7 +1360,7 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 					"function": "map_properties",
 					"options": {
 						"stripped": {
-							"true": [
+							"\"true\"": [
 								{
 									"function": "map_properties",
 									"options": {
@@ -1379,7 +1381,7 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 				{
 					"function": "new_properties",
 					"options": {
-						"axis": "all"
+						"axis": "\"all\""
 					}
 				}
 			]
@@ -1406,8 +1408,8 @@ def dispenser(input_namespace: str, input_block_name: str, universal_namespace: 
 							{
 								"function": "new_properties",
 								"options": {
-									"facing": {0: "down", 1: "up", 2: "north", 3: "south", 4: "west", 5: "east"}[data & 7],
-									"triggered": {0: "false", 8: "true"}[data & 8]
+									"facing": {0: "\"down\"", 1: "\"up\"", 2: "\"north\"", 3: "\"south\"", 4: "\"west\"", 5: "\"east\""}[data & 7],
+									"triggered": {0: "\"false\"", 8: "\"true\""}[data & 8]
 								}
 							}
 						] for data in range(16) if data & 7 <= 5
@@ -1437,11 +1439,11 @@ def dispenser(input_namespace: str, input_block_name: str, universal_namespace: 
 														"block_data": str(data8 + data7)
 													}
 												}
-											] for data7, facing in {0: "down", 1: "up", 2: "north", 3: "south", 4: "west", 5: "east"}.items()
+											] for data7, facing in {0: "\"down\"", 1: "\"up\"", 2: "\"north\"", 3: "\"south\"", 4: "\"west\"", 5: "\"east\""}.items()
 										}
 									}
 								}
-							] for data8, triggered in {0: "false", 8: "true"}.items()
+							] for data8, triggered in {0: "\"false\"", 8: "\"true\""}.items()
 						}
 					}
 				}
@@ -1450,21 +1452,21 @@ def dispenser(input_namespace: str, input_block_name: str, universal_namespace: 
 		"blockstate_specification": {
 			"properties": {
 				"facing": [
-					"north",
-					"east",
-					"south",
-					"west",
-					"up",
-					"down"
+					"\"north\"",
+					"\"east\"",
+					"\"south\"",
+					"\"west\"",
+					"\"up\"",
+					"\"down\""
 				],
 				"triggered": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				]
 			},
 			"defaults": {
-				"facing": "north",
-				"triggered": "false"
+				"facing": "\"north\"",
+				"triggered": "\"false\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -1476,16 +1478,16 @@ def dispenser(input_namespace: str, input_block_name: str, universal_namespace: 
 				"function": "carry_properties",
 				"options": {
 					"facing": [
-						"north",
-						"east",
-						"south",
-						"west",
-						"up",
-						"down"
+						"\"north\"",
+						"\"east\"",
+						"\"south\"",
+						"\"west\"",
+						"\"up\"",
+						"\"down\""
 					],
 					"triggered": [
-						"true",
-						"false"
+						"\"true\"",
+						"\"false\""
 					]
 				}
 			}
@@ -1500,16 +1502,16 @@ def dispenser(input_namespace: str, input_block_name: str, universal_namespace: 
 					"function": "carry_properties",
 					"options": {
 						"facing": [
-							"north",
-							"east",
-							"south",
-							"west",
-							"up",
-							"down"
+							"\"north\"",
+							"\"east\"",
+							"\"south\"",
+							"\"west\"",
+							"\"up\"",
+							"\"down\""
 						],
 						"triggered": [
-							"true",
-							"false"
+							"\"true\"",
+							"\"false\""
 						]
 					}
 				}
@@ -1523,7 +1525,7 @@ def sandstone(input_namespace: str, input_block_name: str, level: int = 1, unive
 		universal_namespace = input_namespace
 	if universal_block_name is None:
 		universal_block_name = input_block_name
-	variants = {var: {0: "normal", 1: "chiseled", 2: "cut", 3: "smooth"}[var] for var in range(level)}
+	variants = {var: {0: "\"normal\"", 1: "\"chiseled\"", 2: "\"cut\"", 3: "\"smooth\""}[var] for var in range(level)}
 	return {
 		"to_universal": [
 			{
@@ -1611,6 +1613,7 @@ def rail(input_namespace: str, input_block_name: str, universal_namespace: str =
 		universal_namespace = input_namespace
 	if universal_block_name is None:
 		universal_block_name = input_block_name
+	data_map = {0: "\"north_south\"", 1: "\"east_west\"", 2: "\"ascending_east\"", 3: "\"ascending_west\"", 4: "\"ascending_north\"", 5: "\"ascending_south\"", 6: "\"south_east\"", 7: "\"south_west\"", 8: "\"north_west\"", 9: "\"north_east\""}
 	return {
 		"to_universal": [
 			{
@@ -1625,9 +1628,7 @@ def rail(input_namespace: str, input_block_name: str, universal_namespace: str =
 							{
 								"function": "new_properties",
 								"options": {
-									"shape": {
-										0: "north_south", 1: "east_west", 2: "ascending_east", 3: "ascending_west", 4: "ascending_north", 5: "ascending_south", 6: "south_east", 7: "south_west", 8: "north_west", 9: "north_east"
-									}[data]
+									"shape": data_map[data]
 								}
 							}
 						] for data in range(10)
@@ -1652,7 +1653,7 @@ def rail(input_namespace: str, input_block_name: str, universal_namespace: str =
 										"block_data": str(data)
 									}
 								}
-							] for data, shape in {0: "north_south", 1: "east_west", 2: "ascending_east", 3: "ascending_west", 4: "ascending_north", 5: "ascending_south", 6: "south_east", 7: "south_west", 8: "north_west", 9: "north_east"}.items()
+							] for data, shape in data_map.items()
 						}
 					}
 				}
@@ -1660,18 +1661,7 @@ def rail(input_namespace: str, input_block_name: str, universal_namespace: str =
 		},
 		"blockstate_specification": {
 			"properties": {
-				"shape": [
-					"north_south",
-					"east_west",
-					"ascending_east",
-					"ascending_west",
-					"ascending_north",
-					"ascending_south",
-					"south_east",
-					"south_west",
-					"north_west",
-					"north_east"
-				]
+				"shape": list(data_map.values())
 			},
 			"defaults": {
 				"shape": "north_south"
@@ -1685,18 +1675,7 @@ def rail(input_namespace: str, input_block_name: str, universal_namespace: str =
 			{
 				"function": "carry_properties",
 				"options": {
-					"shape": [
-						"north_south",
-						"east_west",
-						"ascending_east",
-						"ascending_west",
-						"ascending_north",
-						"ascending_south",
-						"south_east",
-						"south_west",
-						"north_west",
-						"north_east"
-					]
+					"shape": list(data_map.values())
 				}
 			}
 		],
@@ -1709,18 +1688,7 @@ def rail(input_namespace: str, input_block_name: str, universal_namespace: str =
 				{
 					"function": "carry_properties",
 					"options": {
-						"shape": [
-							"north_south",
-							"east_west",
-							"ascending_east",
-							"ascending_west",
-							"ascending_north",
-							"ascending_south",
-							"south_east",
-							"south_west",
-							"north_west",
-							"north_east"
-						]
+						"shape": list(data_map.values())
 					}
 				}
 			]
@@ -1733,6 +1701,7 @@ def rail2(input_namespace: str, input_block_name: str, universal_namespace: str 
 		universal_namespace = input_namespace
 	if universal_block_name is None:
 		universal_block_name = input_block_name
+	data_map = {0: "\"north_south\"", 1: "\"east_west\"", 2: "\"ascending_east\"", 3: "\"ascending_west\"", 4: "\"ascending_north\"", 5: "\"ascending_south\""}
 	return {
 		"to_universal": [
 			{
@@ -1747,10 +1716,8 @@ def rail2(input_namespace: str, input_block_name: str, universal_namespace: str 
 							{
 								"function": "new_properties",
 								"options": {
-									"shape": {
-										0: "north_south", 1: "east_west", 2: "ascending_east", 3: "ascending_west", 4: "ascending_north", 5: "ascending_south"
-									}[data & 7],
-									"powered": {0: "false", 8: "true"}[data & 8]
+									"shape": data_map[data & 7],
+									"powered": {0: "\"false\"", 8: "\"true\""}[data & 8]
 								}
 							}
 						] for data in range(16) if data & 7 <= 5
@@ -1780,11 +1747,11 @@ def rail2(input_namespace: str, input_block_name: str, universal_namespace: str 
 														"block_data": str(data8 + data7)
 													}
 												}
-											] for data7, shape in {0: "north_south", 1: "east_west", 2: "ascending_east", 3: "ascending_west", 4: "ascending_north", 5: "ascending_south"}.items()
+											] for data7, shape in data_map.items()
 										}
 									}
 								}
-							] for data8, powered in {0: "false", 8: "true"}.items()
+							] for data8, powered in {0: "\"false\"", 8: "\"true\""}.items()
 						}
 					}
 				}
@@ -1793,21 +1760,14 @@ def rail2(input_namespace: str, input_block_name: str, universal_namespace: str 
 		"blockstate_specification": {
 			"properties": {
 				"powered": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				],
-				"shape": [
-					"north_south",
-					"east_west",
-					"ascending_east",
-					"ascending_west",
-					"ascending_north",
-					"ascending_south"
-				]
+				"shape": list(data_map.values())
 			},
 			"defaults": {
-				"powered": "false",
-				"shape": "north_south"
+				"powered": "\"false\"",
+				"shape": "\"north_south\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -1819,17 +1779,10 @@ def rail2(input_namespace: str, input_block_name: str, universal_namespace: str 
 				"function": "carry_properties",
 				"options": {
 					"powered": [
-						"true",
-						"false"
+						"\"true\"",
+						"\"false\""
 					],
-					"shape": [
-						"north_south",
-						"east_west",
-						"ascending_east",
-						"ascending_west",
-						"ascending_north",
-						"ascending_south"
-					]
+					"shape": list(data_map.values())
 				}
 			}
 		],
@@ -1843,17 +1796,10 @@ def rail2(input_namespace: str, input_block_name: str, universal_namespace: str 
 					"function": "carry_properties",
 					"options": {
 						"powered": [
-							"true",
-							"false"
+							"\"true\"",
+							"\"false\""
 						],
-						"shape": [
-							"north_south",
-							"east_west",
-							"ascending_east",
-							"ascending_west",
-							"ascending_north",
-							"ascending_south"
-						]
+						"shape": list(data_map.values())
 					}
 				}
 			]
@@ -1867,7 +1813,6 @@ def piston_bedrock(input_namespace: str, input_block_name: str, universal_namesp
 	if universal_block_name is None:
 		universal_block_name = input_block_name
 	return {
-		"comment": "There is also a tile entity here that contains more data",
 		"to_universal": [
 			{
 				"function": "map_properties",
@@ -1881,7 +1826,7 @@ def piston_bedrock(input_namespace: str, input_block_name: str, universal_namesp
 							{
 								"function": "new_properties",
 								"options": {
-									"facing": {0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}[data]
+									"facing": {0: "\"down\"", 1: "\"up\"", 2: "\"south\"", 3: "\"north\"", 4: "\"east\"", 5: "\"west\""}[data]
 								}
 							}
 						] for data in range(6)
@@ -1906,7 +1851,7 @@ def piston_bedrock(input_namespace: str, input_block_name: str, universal_namesp
 										"block_data": str(data)
 									}
 								}
-							] for data, facing in {0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}.items()
+							] for data, facing in {0: "\"down\"", 1: "\"up\"", 2: "\"south\"", 3: "\"north\"", 4: "\"east\"", 5: "\"west\""}.items()
 						}
 					}
 				}
@@ -1915,16 +1860,16 @@ def piston_bedrock(input_namespace: str, input_block_name: str, universal_namesp
 		"blockstate_specification": {
 			"properties": {
 				"facing": [
-					"north",
-					"east",
-					"south",
-					"west",
-					"up",
-					"down"
+					"\"north\"",
+					"\"east\"",
+					"\"south\"",
+					"\"west\"",
+					"\"up\"",
+					"\"down\""
 				]
 			},
 			"defaults": {
-				"facing": "north"
+				"facing": "\"north\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -1936,12 +1881,12 @@ def piston_bedrock(input_namespace: str, input_block_name: str, universal_namesp
 				"function": "carry_properties",
 				"options": {
 					"facing": [
-						"north",
-						"east",
-						"south",
-						"west",
-						"up",
-						"down"
+						"\"north\"",
+						"\"east\"",
+						"\"south\"",
+						"\"west\"",
+						"\"up\"",
+						"\"down\""
 					]
 				}
 			}
@@ -1956,12 +1901,12 @@ def piston_bedrock(input_namespace: str, input_block_name: str, universal_namesp
 					"function": "carry_properties",
 					"options": {
 						"facing": [
-							"north",
-							"east",
-							"south",
-							"west",
-							"up",
-							"down"
+							"\"north\"",
+							"\"east\"",
+							"\"south\"",
+							"\"west\"",
+							"\"up\"",
+							"\"down\""
 						]
 					}
 				}
@@ -1989,7 +1934,7 @@ def colour(input_namespace: str, input_block_name: str, universal_namespace: str
 							{
 								"function": "new_properties",
 								"options": {
-									"color": ["white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"][data]
+									"color": wool_colours[data]
 								}
 							}
 						] for data in range(16)
@@ -2014,7 +1959,7 @@ def colour(input_namespace: str, input_block_name: str, universal_namespace: str
 										"block_data": str(data)
 									}
 								}
-							] for data, color in enumerate(["white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"])
+							] for data, color in enumerate(wool_colours)
 						}
 					}
 				}
@@ -2022,27 +1967,10 @@ def colour(input_namespace: str, input_block_name: str, universal_namespace: str
 		},
 		"blockstate_specification": {
 			"properties": {
-				"color": [
-					"white",
-					"orange",
-					"magenta",
-					"light_blue",
-					"yellow",
-					"lime",
-					"pink",
-					"gray",
-					"light_gray",
-					"cyan",
-					"purple",
-					"blue",
-					"brown",
-					"green",
-					"red",
-					"black"
-				]
+				"color": wool_colours
 			},
 			"defaults": {
-				"color": "white"
+				"color": "\"white\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -2053,24 +1981,7 @@ def colour(input_namespace: str, input_block_name: str, universal_namespace: str
 			{
 				"function": "carry_properties",
 				"options": {
-					"color": [
-						"white",
-						"orange",
-						"magenta",
-						"light_blue",
-						"yellow",
-						"lime",
-						"pink",
-						"gray",
-						"light_gray",
-						"cyan",
-						"purple",
-						"blue",
-						"brown",
-						"green",
-						"red",
-						"black"
-					]
+					"color": wool_colours
 				}
 			}
 		],
@@ -2083,24 +1994,7 @@ def colour(input_namespace: str, input_block_name: str, universal_namespace: str
 				{
 					"function": "carry_properties",
 					"options": {
-						"color": [
-							"white",
-							"orange",
-							"magenta",
-							"light_blue",
-							"yellow",
-							"lime",
-							"pink",
-							"gray",
-							"light_gray",
-							"cyan",
-							"purple",
-							"blue",
-							"brown",
-							"green",
-							"red",
-							"black"
-						]
+						"color": wool_colours
 					}
 				}
 			]
@@ -2136,7 +2030,7 @@ def double_slab(input_namespace: str, input_block_name: str, block_types: Union[
 								"function": "new_properties",
 								"options": {
 									"material": material,
-									"type": "double"
+									"type": "\"double\""
 								}
 							}
 						] for data, material in block_types
@@ -2150,7 +2044,7 @@ def double_slab(input_namespace: str, input_block_name: str, block_types: Union[
 					"function": "map_properties",
 					"options": {
 						"type": {
-							"double": [
+							"\"double\"": [
 								{
 									"function": "map_properties",
 									"options": {
@@ -2198,7 +2092,7 @@ def double_slab(input_namespace: str, input_block_name: str, block_types: Union[
 			{
 				"function": "new_properties",
 				"options": {
-					"type": "double"
+					"type": "\"double\""
 				}
 			}
 		],
@@ -2208,7 +2102,7 @@ def double_slab(input_namespace: str, input_block_name: str, block_types: Union[
 					"function": "map_properties",
 					"options": {
 						"type": {
-							"double": [
+							"\"double\"": [
 								{
 									"function": "map_properties",
 									"options": {
@@ -2260,7 +2154,7 @@ def slab(input_namespace: str, input_block_name: str, block_types: List[str], un
 									"type": position
 								}
 							}
-						] for data, (block, position) in {data + data8 * 8: [material, position] for data8, position in enumerate(["bottom", "top"]) for data, material in enumerate(block_types)}.items()
+						] for data, (block, position) in {data + data8 * 8: [material, position] for data8, position in enumerate(["\"bottom\"", "\"top\""]) for data, material in enumerate(block_types)}.items()
 					}
 				}
 			}
@@ -2291,7 +2185,7 @@ def slab(input_namespace: str, input_block_name: str, block_types: List[str], un
 										}
 									}
 								}
-							] for data8, position in enumerate(["bottom", "top"])
+							] for data8, position in enumerate(["\"bottom\"", "\"top\""])
 						}
 					}
 				}
@@ -2300,11 +2194,11 @@ def slab(input_namespace: str, input_block_name: str, block_types: List[str], un
 		"blockstate_specification": {
 			"properties": {
 				"material": block_types,
-				"type": ["bottom", "top"]
+				"type": ["\"bottom\"", "\"top\""]
 			},
 			"defaults": {
 				"material": block_types[0],
-				"type": "bottom"
+				"type": "\"bottom\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -2316,7 +2210,7 @@ def slab(input_namespace: str, input_block_name: str, block_types: List[str], un
 				"function": "carry_properties",
 				"options": {
 					"material": block_types,
-					"type": ["bottom", "top"]
+					"type": ["\"bottom\"", "\"top\""]
 				}
 			}
 		],
@@ -2347,7 +2241,7 @@ def slab(input_namespace: str, input_block_name: str, block_types: List[str], un
 										}
 									}
 								}
-							] for position in ["bottom", "top"]
+							] for position in ["\"bottom\"", "\"top\""]
 						}
 					}
 				}
@@ -2376,8 +2270,8 @@ def stairs(input_namespace: str, input_block_name: str, material: str, universal
 								"function": "new_properties",
 								"options": {
 									"material": material,
-									"facing": ["east", "west", "south", "north"][data & 3],
-									"half": {0: "bottom", 4: "top"}[data & 4]
+									"facing": ["\"east\"", "\"west\"", "\"south\"", "\"north\""][data & 3],
+									"half": {0: "\"bottom\"", 4: "\"top\""}[data & 4]
 								}
 							}
 						] for data in range(8)
@@ -2415,11 +2309,11 @@ def stairs(input_namespace: str, input_block_name: str, material: str, universal
 														"block_data": str(data3 + data4 * 4)
 													}
 												}
-											] for data3, facing in enumerate(["east", "west", "south", "north"])
+											] for data3, facing in enumerate(["\"east\"", "\"west\"", "\"south\"", "\"north\""])
 										}
 									}
 								}
-							] for data4, half in enumerate(["bottom", "top"])
+							] for data4, half in enumerate(["\"bottom\"", "\"top\""])
 						}
 					}
 				}
@@ -2427,12 +2321,12 @@ def stairs(input_namespace: str, input_block_name: str, material: str, universal
 		},
 		"blockstate_specification": {
 			"properties": {
-				"facing": ["north", "east", "south", "west"],
-				"half": ["bottom", "top"]
+				"facing": ["\"north\"", "\"east\"", "\"south\"", "\"west\""],
+				"half": ["\"bottom\"", "\"top\""]
 			},
 			"defaults": {
-				"facing": "north",
-				"half": "bottom"
+				"facing": "\"north\"",
+				"half": "\"bottom\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -2449,8 +2343,8 @@ def stairs(input_namespace: str, input_block_name: str, material: str, universal
 			{
 				"function": "carry_properties",
 				"options": {
-					"facing": ["north", "east", "south", "west"],
-					"half": ["bottom", "top"]
+					"facing": ["\"north\"", "\"east\"", "\"south\"", "\"west\""],
+					"half": ["\"bottom\"", "\"top\""]
 				}
 			}
 		],
@@ -2472,8 +2366,8 @@ def stairs(input_namespace: str, input_block_name: str, material: str, universal
 				{
 					"function": "carry_properties",
 					"options": {
-						"facing": ["north", "east", "south", "west"],
-						"half": ["bottom", "top"]
+						"facing": ["\"north\"", "\"east\"", "\"south\"", "\"west\""],
+						"half": ["\"bottom\"", "\"top\""]
 					}
 				}
 			]
@@ -2595,18 +2489,18 @@ def button_bedrock(input_namespace: str, input_block_name: str, material: str, u
 								"options": properties
 							}
 						] for data, properties in {
-							0: {"face": "ceiling", "powered": "false"},
-							1: {"face": "floor", "powered": "false"},
-							2: {"face": "wall", "facing": "north", "powered": "false"},
-							3: {"face": "wall", "facing": "south", "powered": "false"},
-							4: {"face": "wall", "facing": "west", "powered": "false"},
-							5: {"face": "wall", "facing": "east", "powered": "false"},
-							8: {"face": "ceiling", "powered": "true"},
-							9: {"face": "floor", "powered": "true"},
-							10: {"face": "wall", "facing": "north", "powered": "true"},
-							11: {"face": "wall", "facing": "south", "powered": "true"},
-							12: {"face": "wall", "facing": "west", "powered": "true"},
-							13: {"face": "wall", "facing": "east", "powered": "true"}
+							0: {"face": "\"ceiling\"", "powered": "\"false\""},
+							1: {"face": "\"floor\"", "powered": "\"false\""},
+							2: {"face": "\"wall\"", "facing": "\"north\"", "powered": "\"false\""},
+							3: {"face": "\"wall\"", "facing": "\"south\"", "powered": "\"false\""},
+							4: {"face": "\"wall\"", "facing": "\"west\"", "powered": "\"false\""},
+							5: {"face": "\"wall\"", "facing": "\"east\"", "powered": "\"false\""},
+							8: {"face": "\"ceiling\"", "powered": "\"true\""},
+							9: {"face": "\"floor\"", "powered": "\"true\""},
+							10: {"face": "\"wall\"", "facing": "\"north\"", "powered": "\"true\""},
+							11: {"face": "\"wall\"", "facing": "\"south\"", "powered": "\"true\""},
+							12: {"face": "\"wall\"", "facing": "\"west\"", "powered": "\"true\""},
+							13: {"face": "\"wall\"", "facing": "\"east\"", "powered": "\"true\""}
 						}.items()
 					}
 				}
@@ -2631,7 +2525,7 @@ def button_bedrock(input_namespace: str, input_block_name: str, material: str, u
 									"function": "map_properties",
 									"options": {
 										"face": {
-											"ceiling": [
+											"\"ceiling\"": [
 												{
 													"function": "new_properties",
 													"options": {
@@ -2639,7 +2533,7 @@ def button_bedrock(input_namespace: str, input_block_name: str, material: str, u
 													}
 												}
 											],
-											"floor": [
+											"\"floor\"": [
 												{
 													"function": "new_properties",
 													"options": {
@@ -2647,7 +2541,7 @@ def button_bedrock(input_namespace: str, input_block_name: str, material: str, u
 													}
 												}
 											],
-											"wall": [
+											"\"wall\"": [
 												{
 													"function": "map_properties",
 													"options": {
@@ -2659,7 +2553,7 @@ def button_bedrock(input_namespace: str, input_block_name: str, material: str, u
 																		"block_data": str(data7 + data8)
 																	}
 																}
-															] for data7, facing in {2: "north", 3: "south", 4: "west", 5: "east"}.items()
+															] for data7, facing in {2: "\"north\"", 3: "\"south\"", 4: "\"west\"", 5: "\"east\""}.items()
 														}
 													}
 												}
@@ -2667,7 +2561,7 @@ def button_bedrock(input_namespace: str, input_block_name: str, material: str, u
 										}
 									}
 								}
-							] for data8, powered in {0: "false", 8: "true"}.items()
+							] for data8, powered in {0: "\"false\"", 8: "\"true\""}.items()
 						}
 					}
 				}
@@ -2675,12 +2569,12 @@ def button_bedrock(input_namespace: str, input_block_name: str, material: str, u
 		},
 		"blockstate_specification": {
 			"properties": {
-				"facing": ["down", "up", "north", "south", "west", "east"],
-				"powered": ["false", "true"]
+				"facing": ["\"down\"", "\"up\"", "\"north\"", "\"south\"", "\"west\"", "\"east\""],
+				"powered": ["\"false\"", "\"true\""]
 			},
 			"defaults": {
-				"facing": "up",
-				"powered": "false"
+				"facing": "\"up\"",
+				"powered": "\"false\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -2697,7 +2591,7 @@ def button_bedrock(input_namespace: str, input_block_name: str, material: str, u
 			{
 				"function": "carry_properties",
 				"options": {
-					"powered": ["false", "true"]
+					"powered": ["\"false\"", "\"true\""]
 				}
 			},
 			{
@@ -2710,12 +2604,12 @@ def button_bedrock(input_namespace: str, input_block_name: str, material: str, u
 								"options": properties
 							}
 						] for facing, properties in {
-							"down": {"face": "ceiling"},
-							"up": {"face": "floor"},
-							"north": {"face": "wall", "facing": "north"},
-							"south": {"face": "wall", "facing": "south"},
-							"west": {"face": "wall", "facing": "west"},
-							"east": {"face": "wall", "facing": "east"}
+							"\"down\"": {"face": "\"ceiling\""},
+							"\"up\"": {"face": "\"floor\""},
+							"\"north\"": {"face": "\"wall\"", "facing": "\"north\""},
+							"\"south\"": {"face": "\"wall\"", "facing": "\"south\""},
+							"\"west\"": {"face": "\"wall\"", "facing": "\"west\""},
+							"\"east\"": {"face": "\"wall\"", "facing": "\"east\""}
 						}.items()
 					}
 				}
@@ -2727,7 +2621,7 @@ def button_bedrock(input_namespace: str, input_block_name: str, material: str, u
 				{
 					"function": "carry_properties",
 					"options": {
-						"powered": ["false", "true"]
+						"powered": ["\"false\"", "\"true\""]
 					}
 				},
 				{
@@ -2742,27 +2636,27 @@ def button_bedrock(input_namespace: str, input_block_name: str, material: str, u
 							]
 						},
 						"face": {
-							"ceiling": [
+							"\"ceiling\"": [
 								{
 									"function": "new_properties",
 									"options": {
-										"facing": "down"
+										"facing": "\"down\""
 									}
 								}
 							],
-							"floor": [
+							"\"floor\"": [
 								{
 									"function": "new_properties",
 									"options": {
-										"facing": "up"
+										"facing": "\"up\""
 									}
 								}
 							],
-							"wall": [
+							"\"wall\"": [
 								{
 									"function": "carry_properties",
 									"options": {
-										"facing": ["north", "south", "west", "east"]
+										"facing": ["\"north\"", "\"south\"", "\"west\"", "\"east\""]
 									}
 								}
 							]
@@ -2801,18 +2695,18 @@ def button_java(input_namespace: str, input_block_name: str, material: str, univ
 								"options": properties
 							}
 						] for data, properties in {
-							0: {"face": "ceiling", "powered": "false"},
-							1: {"face": "wall", "facing": "east", "powered": "false"},
-							2: {"face": "wall", "facing": "west", "powered": "false"},
-							3: {"face": "wall", "facing": "south", "powered": "false"},
-							4: {"face": "wall", "facing": "north", "powered": "false"},
-							5: {"face": "floor", "powered": "false"},
-							8: {"face": "ceiling", "powered": "true"},
-							9: {"face": "wall", "facing": "east", "powered": "true"},
-							10: {"face": "wall", "facing": "west", "powered": "true"},
-							11: {"face": "wall", "facing": "south", "powered": "true"},
-							12: {"face": "wall", "facing": "north", "powered": "true"},
-							13: {"face": "floor", "powered": "true"}
+							0: {"face": "\"ceiling\"", "powered": "\"false\""},
+							1: {"face": "\"wall\"", "facing": "\"east\"", "powered": "\"false\""},
+							2: {"face": "\"wall\"", "facing": "\"west\"", "powered": "\"false\""},
+							3: {"face": "\"wall\"", "facing": "\"south\"", "powered": "\"false\""},
+							4: {"face": "\"wall\"", "facing": "\"north\"", "powered": "\"false\""},
+							5: {"face": "\"floor\"", "powered": "\"false\""},
+							8: {"face": "\"ceiling\"", "powered": "\"true\""},
+							9: {"face": "\"wall\"", "facing": "\"east\"", "powered": "\"true\""},
+							10: {"face": "\"wall\"", "facing": "\"west\"", "powered": "\"true\""},
+							11: {"face": "\"wall\"", "facing": "\"south\"", "powered": "\"true\""},
+							12: {"face": "\"wall\"", "facing": "\"north\"", "powered": "\"true\""},
+							13: {"face": "\"floor\"", "powered": "\"true\""}
 						}.items()
 					}
 				}
@@ -2837,7 +2731,7 @@ def button_java(input_namespace: str, input_block_name: str, material: str, univ
 									"function": "map_properties",
 									"options": {
 										"face": {
-											"ceiling": [
+											"\"ceiling\"": [
 												{
 													"function": "new_properties",
 													"options": {
@@ -2845,7 +2739,7 @@ def button_java(input_namespace: str, input_block_name: str, material: str, univ
 													}
 												}
 											],
-											"floor": [
+											"\"floor\"": [
 												{
 													"function": "new_properties",
 													"options": {
@@ -2853,7 +2747,7 @@ def button_java(input_namespace: str, input_block_name: str, material: str, univ
 													}
 												}
 											],
-											"wall": [
+											"\"wall\"": [
 												{
 													"function": "map_properties",
 													"options": {
@@ -2865,7 +2759,7 @@ def button_java(input_namespace: str, input_block_name: str, material: str, univ
 																		"block_data": str(data7 + data8)
 																	}
 																}
-															] for data7, facing in {1: "east", 2: "west", 3: "south", 4: "north"}.items()
+															] for data7, facing in {1: "\"east\"", 2: "\"west\"", 3: "\"south\"", 4: "\"north\""}.items()
 														}
 													}
 												}
@@ -2873,7 +2767,7 @@ def button_java(input_namespace: str, input_block_name: str, material: str, univ
 										}
 									}
 								}
-							] for data8, powered in {0: "false", 8: "true"}.items()
+							] for data8, powered in {0: "\"false\"", 8: "\"true\""}.items()
 						}
 					}
 				}
@@ -2881,12 +2775,12 @@ def button_java(input_namespace: str, input_block_name: str, material: str, univ
 		},
 		"blockstate_specification": {
 			"properties": {
-				"facing": ["down", "up", "north", "south", "west", "east"],
-				"powered": ["false", "true"]
+				"facing": ["\"down\"", "\"up\"", "\"north\"", "\"south\"", "\"west\"", "\"east\""],
+				"powered": ["\"false\"", "\"true\""]
 			},
 			"defaults": {
-				"facing": "up",
-				"powered": "false"
+				"facing": "\"up\"",
+				"powered": "\"false\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -2903,7 +2797,7 @@ def button_java(input_namespace: str, input_block_name: str, material: str, univ
 			{
 				"function": "carry_properties",
 				"options": {
-					"powered": ["false", "true"]
+					"powered": ["\"false\"", "\"true\""]
 				}
 			},
 			{
@@ -2916,12 +2810,12 @@ def button_java(input_namespace: str, input_block_name: str, material: str, univ
 								"options": properties
 							}
 						] for facing, properties in {
-							"down": {"face": "ceiling"},
-							"up": {"face": "floor"},
-							"north": {"face": "wall", "facing": "north"},
-							"south": {"face": "wall", "facing": "south"},
-							"west": {"face": "wall", "facing": "west"},
-							"east": {"face": "wall", "facing": "east"}
+							"\"down\"": {"face": "\"ceiling\""},
+							"\"up\"": {"face": "\"floor\""},
+							"\"north\"": {"face": "\"wall\"", "facing": "\"north\""},
+							"\"south\"": {"face": "\"wall\"", "facing": "\"south\""},
+							"\"west\"": {"face": "\"wall\"", "facing": "\"west\""},
+							"\"east\"": {"face": "\"wall\"", "facing": "\"east\""}
 						}.items()
 					}
 				}
@@ -2932,7 +2826,7 @@ def button_java(input_namespace: str, input_block_name: str, material: str, univ
 				{
 					"function": "carry_properties",
 					"options": {
-						"powered": ["false", "true"]
+						"powered": ["\"false\"", "\"true\""]
 					}
 				},
 				{
@@ -2947,27 +2841,27 @@ def button_java(input_namespace: str, input_block_name: str, material: str, univ
 							]
 						},
 						"face": {
-							"ceiling": [
+							"\"ceiling\"": [
 								{
 									"function": "new_properties",
 									"options": {
-										"facing": "down"
+										"facing": "\"down\""
 									}
 								}
 							],
-							"floor": [
+							"\"floor\"": [
 								{
 									"function": "new_properties",
 									"options": {
-										"facing": "up"
+										"facing": "\"up\""
 									}
 								}
 							],
-							"wall": [
+							"\"wall\"": [
 								{
 									"function": "carry_properties",
 									"options": {
-										"facing": ["north", "south", "west", "east"]
+										"facing": ["\"north\"", "\"south\"", "\"west\"", "\"east\""]
 									}
 								}
 							]
@@ -2981,9 +2875,9 @@ def button_java(input_namespace: str, input_block_name: str, material: str, univ
 
 def glazed_terracotta(input_namespace: str, input_block_name: str, color: str, platform: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
 	if platform == 'java':
-		directions = {0: "south", 2: "north", 3: "east", 1: "west"}
+		directions = {0: "\"south\"", 2: "\"north\"", 3: "\"east\"", 1: "\"west\""}
 	elif platform == 'bedrock':
-		directions = {2: "north", 3: "south", 4: "west", 5: "east"}
+		directions = {2: "\"north\"", 3: "\"south\"", 4: "\"west\"", 5: "\"east\""}
 	else:
 		raise Exception(f'Unknown platform {platform}')
 
@@ -3118,10 +3012,10 @@ def fence_java(input_namespace: str, input_block_name: str, material: str, unive
 								"function": "new_properties",
 								"options": {
 									"material": material,
-									"north": "true",
-									"east": "true",
-									"south": "true",
-									"west": "true"
+									"north": "\"true\"",
+									"east": "\"true\"",
+									"south": "\"true\"",
+									"west": "\"true\""
 								}
 							},
 							{
@@ -3137,7 +3031,7 @@ def fence_java(input_namespace: str, input_block_name: str, material: str, unive
 														{
 															"function": "new_properties",
 															"options": {
-																direction: "false"
+																direction: "\"false\""
 															}
 														}
 													]
@@ -3232,9 +3126,9 @@ def fence_gate_bedrock(input_namespace: str, input_block_name: str, material: st
 								"function": "new_properties",
 								"options": {
 									"material": material,
-									"facing": ["south", "west", "north", "east"][data & 3],
-									"open": {0: "false", 4: "true"}[data & 4],
-									"in_wall": {0: "false", 8: "true"}[data & 8]
+									"facing": ["\"south\"", "\"west\"", "\"north\"", "\"east\""][data & 3],
+									"open": {0: "\"false\"", 4: "\"true\""}[data & 4],
+									"in_wall": {0: "\"false\"", 8: "\"true\""}[data & 8]
 								}
 							}
 						] for data in range(16)
@@ -3273,15 +3167,15 @@ def fence_gate_bedrock(input_namespace: str, input_block_name: str, material: st
 																		"block_data": str(data3 + data4 + data8)
 																	}
 																}
-															] for data3, facing in enumerate(["south", "west", "north", "east"])
+															] for data3, facing in enumerate(["\"south\"", "\"west\"", "\"north\"", "\"east\""])
 														}
 													}
 												}
-											] for data4, is_open in {0: "false", 4: "true"}.items()
+											] for data4, is_open in {0: "\"false\"", 4: "\"true\""}.items()
 										}
 									}
 								}
-							] for data8, in_wall in {0: "false", 8: "true"}.items()
+							] for data8, in_wall in {0: "\"false\"", 8: "\"true\""}.items()
 						}
 					}
 				}
@@ -3289,14 +3183,14 @@ def fence_gate_bedrock(input_namespace: str, input_block_name: str, material: st
 		},
 		"blockstate_specification": {
 			"properties": {
-				"facing": ["south", "west", "north", "east"],
-				"open": ["false", "true"],
-				"in_wall": ["false", "true"]
+				"facing": ["\"south\"", "\"west\"", "\"north\"", "\"east\""],
+				"open": ["\"false\"", "\"true\""],
+				"in_wall": ["\"false\"", "\"true\""]
 			},
 			"defaults": {
-				"facing": "south",
-				"open": "false",
-				"in_wall": "false"
+				"facing": "\"south\"",
+				"open": "\"false\"",
+				"in_wall": "\"false\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -3313,9 +3207,9 @@ def fence_gate_bedrock(input_namespace: str, input_block_name: str, material: st
 			{
 				"function": "carry_properties",
 				"options": {
-					"facing": ["south", "west", "north", "east"],
-					"open": ["false", "true"],
-					"in_wall": ["false", "true"]
+					"facing": ["\"south\"", "\"west\"", "\"north\"", "\"east\""],
+					"open": ["\"false\"", "\"true\""],
+					"in_wall": ["\"false\"", "\"true\""]
 				}
 			}
 		],
@@ -3337,9 +3231,9 @@ def fence_gate_bedrock(input_namespace: str, input_block_name: str, material: st
 				{
 					"function": "carry_properties",
 					"options": {
-						"facing": ["south", "west", "north", "east"],
-						"open": ["false", "true"],
-						"in_wall": ["false", "true"]
+						"facing": ["\"south\"", "\"west\"", "\"north\"", "\"east\""],
+						"open": ["\"false\"", "\"true\""],
+						"in_wall": ["\"false\"", "\"true\""]
 					}
 				}
 			]
@@ -3367,9 +3261,9 @@ def fence_gate_java(input_namespace: str, input_block_name: str, material: str, 
 								"function": "new_properties",
 								"options": {
 									"material": material,
-									"facing": ["south", "west", "north", "east"][data & 3],
-									"open": {0: "false", 4: "true"}[data & 4],
-									"powered": {0: "false", 8: "true"}[data & 8]
+									"facing": ["\"south\"", "\"west\"", "\"north\"", "\"east\""][data & 3],
+									"open": {0: "\"false\"", 4: "\"true\""}[data & 4],
+									"powered": {0: "\"false\"", 8: "\"true\""}[data & 8]
 								}
 							}
 						] for data in range(16)
@@ -3408,15 +3302,15 @@ def fence_gate_java(input_namespace: str, input_block_name: str, material: str, 
 																		"block_data": str(data3 + data4 + data8)
 																	}
 																}
-															] for data3, facing in enumerate(["south", "west", "north", "east"])
+															] for data3, facing in enumerate(["\"south\"", "\"west\"", "\"north\"", "\"east\""])
 														}
 													}
 												}
-											] for data4, is_open in {0: "false", 4: "true"}.items()
+											] for data4, is_open in {0: "\"false\"", 4: "\"true\""}.items()
 										}
 									}
 								}
-							] for data8, powered in {0: "false", 8: "true"}.items()
+							] for data8, powered in {0: "\"false\"", 8: "\"true\""}.items()
 						}
 					}
 				}
@@ -3424,14 +3318,14 @@ def fence_gate_java(input_namespace: str, input_block_name: str, material: str, 
 		},
 		"blockstate_specification": {
 			"properties": {
-				"facing": ["south", "west", "north", "east"],
-				"open": ["false", "true"],
-				"powered": ["false", "true"]
+				"facing": ["\"south\"", "\"west\"", "\"north\"", "\"east\""],
+				"open": ["\"false\"", "\"true\""],
+				"powered": ["\"false\"", "\"true\""]
 			},
 			"defaults": {
-				"facing": "south",
-				"open": "false",
-				"powered": "false"
+				"facing": "\"south\"",
+				"open": "\"false\"",
+				"powered": "\"false\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -3448,9 +3342,9 @@ def fence_gate_java(input_namespace: str, input_block_name: str, material: str, 
 			{
 				"function": "carry_properties",
 				"options": {
-					"facing": ["south", "west", "north", "east"],
-					"open": ["false", "true"],
-					"powered": ["false", "true"]
+					"facing": ["\"south\"", "\"west\"", "\"north\"", "\"east\""],
+					"open": ["\"false\"", "\"true\""],
+					"powered": ["\"false\"", "\"true\""]
 				}
 			}
 		],
@@ -3472,9 +3366,9 @@ def fence_gate_java(input_namespace: str, input_block_name: str, material: str, 
 				{
 					"function": "carry_properties",
 					"options": {
-						"facing": ["south", "west", "north", "east"],
-						"open": ["false", "true"],
-						"powered": ["false", "true"]
+						"facing": ["\"south\"", "\"west\"", "\"north\"", "\"east\""],
+						"open": ["\"false\"", "\"true\""],
+						"powered": ["\"false\"", "\"true\""]
 					}
 				}
 			]
@@ -3483,7 +3377,7 @@ def fence_gate_java(input_namespace: str, input_block_name: str, material: str, 
 
 
 def torch(input_namespace: str, input_block_name: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
-	data_map = {1: "east", 2: "west", 3: "south", 4: "north", 5: "up"}
+	data_map = {1: "\"east\"", 2: "\"west\"", 3: "\"south\"", 4: "\"north\"", 5: "\"up\""}
 	if universal_namespace is None:
 		universal_namespace = input_namespace
 	if universal_block_name is None:
@@ -3538,7 +3432,7 @@ def torch(input_namespace: str, input_block_name: str, universal_namespace: str 
 				"facing": list(data_map.values())
 			},
 			"defaults": {
-				"facing": "up"
+				"facing": "\"up\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -3571,12 +3465,12 @@ def torch(input_namespace: str, input_block_name: str, universal_namespace: str 
 
 
 def redstone_torch(input_namespace: str, input_block_name: str, lit: bool, universal_namespace: str = None, universal_block_name: str = None) -> dict:
-	data_map = {1: "east", 2: "west", 3: "south", 4: "north", 5: "up"}
+	data_map = {1: "\"east\"", 2: "\"west\"", 3: "\"south\"", 4: "\"north\"", 5: "\"up\""}
 	if universal_namespace is None:
 		universal_namespace = input_namespace
 	if universal_block_name is None:
 		universal_block_name = input_block_name
-	lit = "true" if lit else "false"
+	lit = "\"true\"" if lit else "\"false\""
 	return {
 		"to_universal": [
 			{
@@ -3637,7 +3531,7 @@ def redstone_torch(input_namespace: str, input_block_name: str, lit: bool, unive
 				"facing": list(data_map.values())
 			},
 			"defaults": {
-				"facing": "up"
+				"facing": "\"up\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -3685,12 +3579,12 @@ def redstone_torch(input_namespace: str, input_block_name: str, lit: bool, unive
 
 
 def furnace(input_namespace: str, input_block_name: str, lit: bool, universal_namespace: str = None, universal_block_name: str = None) -> dict:
-	data_map = {2: "north", 3: "south", 4: "west", 5: "east"}
+	data_map = {2: "\"north\"", 3: "\"south\"", 4: "\"west\"", 5: "\"east\""}
 	if universal_namespace is None:
 		universal_namespace = input_namespace
 	if universal_block_name is None:
 		universal_block_name = input_block_name
-	lit = "true" if lit else "false"
+	lit = "\"true\"" if lit else "\"false\""
 	return {
 		"to_universal": [
 			{
@@ -3751,7 +3645,7 @@ def furnace(input_namespace: str, input_block_name: str, lit: bool, universal_na
 				"facing": list(data_map.values())
 			},
 			"defaults": {
-				"facing": "north"
+				"facing": "\"north\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -3820,9 +3714,9 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 							{
 								"function": "new_properties",
 								"options": {
-									"half": "lower",
-									"open": {0: "false", 4: "true"}[data & 4],
-									"facing": {0: "east", 1: "south", 2: "west", 3: "north"}[data & 3]
+									"half": "\"lower\"",
+									"open": {0: "\"false\"", 4: "\"true\""}[data & 4],
+									"facing": {0: "\"east\"", 1: "\"south\"", 2: "\"west\"", 3: "\"north\""}[data & 3]
 								}
 							},
 							{
@@ -3843,8 +3737,8 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 																	{
 																		"function": "new_properties",
 																		"options": {
-																			"powered": {0: "false", 2: "true"}[data_ & 2],
-																			"hinge": {0: "left", 1: "right"}[data_ & 1]
+																			"powered": {0: "\"false\"", 2: "\"true\""}[data_ & 2],
+																			"hinge": {0: "\"left\"", 1: "\"right\""}[data_ & 1]
 																		}
 																	}
 																] for data_ in range(8, 12)
@@ -3867,8 +3761,8 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 								"function": "new_properties",
 								"options": {
 									"half": "upper",
-									"powered": {0: "false", 2: "true"}[data & 2],
-									"hinge": {0: "left", 1: "right"}[data & 1]
+									"powered": {0: "\"false\"", 2: "\"true\""}[data & 2],
+									"hinge": {0: "\"left\"", 1: "\"right\""}[data & 1]
 								}
 							},
 							{
@@ -3889,8 +3783,8 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 																	{
 																		"function": "new_properties",
 																		"options": {
-																			"open": {0: "false", 4: "true"}[data & 4],
-																			"facing": {0: "east", 1: "south", 2: "west", 3: "north"}[data & 3]
+																			"open": {0: "\"false\"", 4: "\"true\""}[data & 4],
+																			"facing": {0: "\"east\"", 1: "\"south\"", 2: "\"west\"", 3: "\"north\""}[data & 3]
 																		}
 																	}
 																] for data_ in range(8)
@@ -3940,11 +3834,11 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 																		"block_data": str(data8 + data4 + data3)
 																	}
 																}
-															] for data3, facing in {0: "east", 1: "south", 2: "west", 3: "north"}.items()
+															] for data3, facing in {0: "\"east\"", 1: "\"south\"", 2: "\"west\"", 3: "\"north\""}.items()
 														}
 													}
 												}
-											] for data4, door_open in {0: "false", 4: "true"}.items()
+											] for data4, door_open in {0: "\"false\"", 4: "\"true\""}.items()
 										}
 									}
 								}
@@ -3966,15 +3860,15 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 																		"block_data": str(data8 + data2 + data1)
 																	}
 																}
-															] for data1, hinge in {0: "left", 1: "right"}.items()
+															] for data1, hinge in {0: "\"left\"", 1: "\"right\""}.items()
 														}
 													}
 												}
-											] for data2, powered in {0: "false", 2: "true"}.items()
+											] for data2, powered in {0: "\"false\"", 2: "\"true\""}.items()
 										}
 									}
 								}
-							] for data8, half in {0: "lower", 8: "upper"}.items()
+							] for data8, half in {0: "\"lower\"", 8: "\"upper\""}.items()
 						}
 					}
 				}
@@ -3983,34 +3877,34 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 		"blockstate_specification": {
 			"properties": {
 				"facing": [
-					"north",
-					"south",
-					"west",
-					"east"
+					"\"north\"",
+					"\"south\"",
+					"\"west\"",
+					"\"east\""
 				],
 				"half": [
-					"upper",
-					"lower"
+					"\"upper\"",
+					"\"lower\""
 				],
 				"hinge": [
-					"left",
-					"right"
+					"\"left\"",
+					"\"right\""
 				],
 				"open": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				],
 				"powered": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				]
 			},
 			"defaults": {
-				"facing": "north",
-				"half": "lower",
-				"hinge": "left",
-				"open": "false",
-				"powered": "false"
+				"facing": "\"north\"",
+				"half": "\"lower\"",
+				"hinge": "\"left\"",
+				"open": "\"false\"",
+				"powered": "\"false\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -4028,26 +3922,26 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 				"function": "carry_properties",
 				"options": {
 					"facing": [
-						"north",
-						"south",
-						"west",
-						"east"
+						"\"north\"",
+						"\"south\"",
+						"\"west\"",
+						"\"east\""
 					],
 					"half": [
-						"upper",
-						"lower"
+						"\"upper\"",
+						"\"lower\""
 					],
 					"hinge": [
-						"left",
-						"right"
+						"\"left\"",
+						"\"right\""
 					],
 					"open": [
-						"true",
-						"false"
+						"\"true\"",
+						"\"false\""
 					],
 					"powered": [
-						"true",
-						"false"
+						"\"true\"",
+						"\"false\""
 					]
 				}
 			}
@@ -4071,26 +3965,26 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 					"function": "carry_properties",
 					"options": {
 						"facing": [
-							"north",
-							"south",
-							"west",
-							"east"
+							"\"north\"",
+							"\"south\"",
+							"\"west\"",
+							"\"east\""
 						],
 						"half": [
-							"upper",
-							"lower"
+							"\"upper\"",
+							"\"lower\""
 						],
 						"hinge": [
-							"left",
-							"right"
+							"\"left\"",
+							"\"right\""
 						],
 						"open": [
-							"true",
-							"false"
+							"\"true\"",
+							"\"false\""
 						],
 						"powered": [
-							"true",
-							"false"
+							"\"true\"",
+							"\"false\""
 						]
 					}
 				}
@@ -4120,9 +4014,9 @@ def trapdoor_bedrock(input_namespace: str, input_block_name: str, material: str)
 							{
 								"function": "new_properties",
 								"options": {
-									"open": {0: "false", 8: "true"}[data & 8],
-									"half": {0: "bottom", 4: "top"}[data & 4],
-									"facing": {0: "east", 1: "west", 2: "south", 3: "north"}[data & 3]
+									"open": {0: "\"false\"", 8: "\"true\""}[data & 8],
+									"half": {0: "\"bottom\"", 4: "\"top\""}[data & 4],
+									"facing": {0: "\"east\"", 1: "\"west\"", 2: "\"south\"", 3: "\"north\""}[data & 3]
 								}
 							}
 						] for data in range(16)
@@ -4161,15 +4055,15 @@ def trapdoor_bedrock(input_namespace: str, input_block_name: str, material: str)
 																		"block_data": str(data8 + data4 + data3)
 																	}
 																}
-															] for data3, facing in {0: "east", 1: "west", 2: "south", 3: "north"}.items()
+															] for data3, facing in {0: "\"east\"", 1: "\"west\"", 2: "\"south\"", 3: "\"north\""}.items()
 														}
 													}
 												}
-											] for data4, half in {0: "bottom", 4: "top"}.items()
+											] for data4, half in {0: "\"bottom\"", 4: "\"top\""}.items()
 										}
 									}
 								}
-							] for data8, door_open in {0: "false", 8: "true"}.items()
+							] for data8, door_open in {0: "\"false\"", 8: "\"true\""}.items()
 						}
 					}
 				}
@@ -4178,24 +4072,24 @@ def trapdoor_bedrock(input_namespace: str, input_block_name: str, material: str)
 		"blockstate_specification": {
 			"properties": {
 				"facing": [
-					"north",
-					"south",
-					"west",
-					"east"
+					"\"north\"",
+					"\"south\"",
+					"\"west\"",
+					"\"east\""
 				],
 				"half": [
-					"top",
-					"bottom"
+					"\"top\"",
+					"\"bottom\""
 				],
 				"open": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				]
 			},
 			"defaults": {
-				"facing": "north",
-				"half": "bottom",
-				"open": "false"
+				"facing": "\"north\"",
+				"half": "\"bottom\"",
+				"open": "\"false\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -4213,18 +4107,18 @@ def trapdoor_bedrock(input_namespace: str, input_block_name: str, material: str)
 				"function": "carry_properties",
 				"options": {
 					"facing": [
-						"north",
-						"south",
-						"west",
-						"east"
+						"\"north\"",
+						"\"south\"",
+						"\"west\"",
+						"\"east\""
 					],
 					"half": [
-						"top",
-						"bottom"
+						"\"top\"",
+						"\"bottom\""
 					],
 					"open": [
-						"true",
-						"false"
+						"\"true\"",
+						"\"false\""
 					]
 				}
 			}
@@ -4248,18 +4142,18 @@ def trapdoor_bedrock(input_namespace: str, input_block_name: str, material: str)
 					"function": "carry_properties",
 					"options": {
 						"facing": [
-							"north",
-							"south",
-							"west",
-							"east"
+							"\"north\"",
+							"\"south\"",
+							"\"west\"",
+							"\"east\""
 						],
 						"half": [
-							"top",
-							"bottom"
+							"\"top\"",
+							"\"bottom\""
 						],
 						"open": [
-							"true",
-							"false"
+							"\"true\"",
+							"\"false\""
 						]
 					}
 				}
@@ -4289,9 +4183,9 @@ def trapdoor_java(input_namespace: str, input_block_name: str, material: str) ->
 							{
 								"function": "new_properties",
 								"options": {
-									"half": {0: "bottom", 8: "top"}[data & 8],
-									"open": {0: "false", 4: "true"}[data & 4],
-									"facing": {0: "north", 1: "south", 2: "west", 3: "east"}[data & 3]
+									"half": {0: "\"bottom\"", 8: "\"top\""}[data & 8],
+									"open": {0: "\"false\"", 4: "\"true\""}[data & 4],
+									"facing": {0: "\"north\"", 1: "\"south\"", 2: "\"west\"", 3: "\"east\""}[data & 3]
 								}
 							}
 						] for data in range(16)
@@ -4330,15 +4224,15 @@ def trapdoor_java(input_namespace: str, input_block_name: str, material: str) ->
 																		"block_data": str(data8 + data4 + data3)
 																	}
 																}
-															] for data3, facing in {0: "north", 1: "south", 2: "west", 3: "east"}.items()
+															] for data3, facing in {0: "\"north\"", 1: "\"south\"", 2: "\"west\"", 3: "\"east\""}.items()
 														}
 													}
 												}
-											] for data4, door_open in {0: "false", 4: "true"}.items()
+											] for data4, door_open in {0: "\"false\"", 4: "\"true\""}.items()
 										}
 									}
 								}
-							] for data8, half in {0: "bottom", 8: "top"}.items()
+							] for data8, half in {0: "\"bottom\"", 8: "\"top\""}.items()
 						}
 					}
 				}
@@ -4347,24 +4241,24 @@ def trapdoor_java(input_namespace: str, input_block_name: str, material: str) ->
 		"blockstate_specification": {
 			"properties": {
 				"facing": [
-					"north",
-					"south",
-					"west",
-					"east"
+					"\"north\"",
+					"\"south\"",
+					"\"west\"",
+					"\"east\""
 				],
 				"half": [
-					"top",
-					"bottom"
+					"\"top\"",
+					"\"bottom\""
 				],
 				"open": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				]
 			},
 			"defaults": {
-				"facing": "north",
-				"half": "bottom",
-				"open": "false"
+				"facing": "\"north\"",
+				"half": "\"bottom\"",
+				"open": "\"false\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -4382,18 +4276,18 @@ def trapdoor_java(input_namespace: str, input_block_name: str, material: str) ->
 				"function": "carry_properties",
 				"options": {
 					"facing": [
-						"north",
-						"south",
-						"west",
-						"east"
+						"\"north\"",
+						"\"south\"",
+						"\"west\"",
+						"\"east\""
 					],
 					"half": [
-						"top",
-						"bottom"
+						"\"top\"",
+						"\"bottom\""
 					],
 					"open": [
-						"true",
-						"false"
+						"\"true\"",
+						"\"false\""
 					]
 				}
 			}
@@ -4417,18 +4311,18 @@ def trapdoor_java(input_namespace: str, input_block_name: str, material: str) ->
 					"function": "carry_properties",
 					"options": {
 						"facing": [
-							"north",
-							"south",
-							"west",
-							"east"
+							"\"north\"",
+							"\"south\"",
+							"\"west\"",
+							"\"east\""
 						],
 						"half": [
-							"top",
-							"bottom"
+							"\"top\"",
+							"\"bottom\""
 						],
 						"open": [
-							"true",
-							"false"
+							"\"true\"",
+							"\"false\""
 						]
 					}
 				}
@@ -4438,7 +4332,7 @@ def trapdoor_java(input_namespace: str, input_block_name: str, material: str) ->
 
 
 def pressure_plate(input_namespace: str, input_block_name: str, material: str) -> dict:
-	states = {0: "false", 1: "true"}
+	states = {0: "\"false\"", 1: "\"true\""}
 	return {
 		"to_universal": [
 			{
@@ -4497,12 +4391,12 @@ def pressure_plate(input_namespace: str, input_block_name: str, material: str) -
 		"blockstate_specification": {
 			"properties": {
 				"powered": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				]
 			},
 			"defaults": {
-				"powered": "false"
+				"powered": "\"false\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -4520,8 +4414,8 @@ def pressure_plate(input_namespace: str, input_block_name: str, material: str) -
 				"function": "carry_properties",
 				"options": {
 					"powered": [
-						"true",
-						"false"
+						"\"true\"",
+						"\"false\""
 					]
 				}
 			}
@@ -4534,7 +4428,7 @@ def pressure_plate(input_namespace: str, input_block_name: str, material: str) -
 						"material": {
 							material: [
 								{
-									"function":"new_block",
+									"function": "new_block",
 									"options":  f"{input_namespace}:{input_block_name}"
 								}
 							]
@@ -4545,8 +4439,8 @@ def pressure_plate(input_namespace: str, input_block_name: str, material: str) -
 					"function": "carry_properties",
 					"options": {
 						"powered": [
-							"true",
-							"false"
+							"\"true\"",
+							"\"false\""
 						]
 					}
 				}
@@ -4556,7 +4450,7 @@ def pressure_plate(input_namespace: str, input_block_name: str, material: str) -
 
 
 def repeater(input_namespace: str, input_block_name: str, powered: bool) -> dict:
-	powered_str = "true" if powered else "false"
+	powered_str = "\"true\"" if powered else "\"false\""
 	return {
 		"to_universal": [
 			{
@@ -4577,8 +4471,8 @@ def repeater(input_namespace: str, input_block_name: str, powered: bool) -> dict
 							{
 								"function": "new_properties",
 								"options": {
-									"facing": {0: "south", 1: "west", 2: "north", 3: "east"}[data & 3],
-									"delay": {0: "1", 4: "2", 8: "3", 12: "4"}[data & 12]
+									"facing": {0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}[data & 3],
+									"delay": {0: "\"1\"", 4: "\"2\"", 8: "\"3\"", 12: "\"4\""}[data & 12]
 								}
 							},
 							{
@@ -4599,7 +4493,7 @@ def repeater(input_namespace: str, input_block_name: str, powered: bool) -> dict
 																		{
 																			"function": "new_properties",
 																			"options": {
-																				"locked": "true"
+																				"locked": "\"true\""
 																			}
 																		}
 																	] for data12 in range(0, 16, 4)
@@ -4644,11 +4538,11 @@ def repeater(input_namespace: str, input_block_name: str, powered: bool) -> dict
 														"block_data": str(data12 + data3)
 													}
 												}
-											] for data3, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
+											] for data3, facing in {0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}.items()
 										}
 									}
 								}
-							] for data12, delay in {0: "1", 4: "2", 8: "3", 12: "4"}.items()
+							] for data12, delay in {0: "\"1\"", 4: "\"2\"", 8: "\"3\"", 12: "\"4\""}.items()
 						}
 					}
 				}
@@ -4657,21 +4551,21 @@ def repeater(input_namespace: str, input_block_name: str, powered: bool) -> dict
 		"blockstate_specification": {
 			"properties": {
 				"delay": [
-					"1",
-					"2",
-					"3",
-					"4"
+					"\"1\"",
+					"\"2\"",
+					"\"3\"",
+					"\"4\""
 				],
 				"facing": [
-					"north",
-					"south",
-					"west",
-					"east"
+					"\"north\"",
+					"\"south\"",
+					"\"west\"",
+					"\"east\""
 				]
 			},
 			"defaults": {
-				"delay": "1",
-				"facing": "north"
+				"delay": "\"1\"",
+				"facing": "\"north\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -4689,16 +4583,16 @@ def repeater(input_namespace: str, input_block_name: str, powered: bool) -> dict
 				"function": "carry_properties",
 				"options": {
 					"delay": [
-						"1",
-						"2",
-						"3",
-						"4"
+						"\"1\"",
+						"\"2\"",
+						"\"3\"",
+						"\"4\""
 					],
 					"facing": [
-						"north",
-						"south",
-						"west",
-						"east"
+						"\"north\"",
+						"\"south\"",
+						"\"west\"",
+						"\"east\""
 					]
 				}
 			}
@@ -4711,7 +4605,7 @@ def repeater(input_namespace: str, input_block_name: str, powered: bool) -> dict
 						"powered": {
 							powered_str: [
 								{
-									"function":"new_block",
+									"function": "new_block",
 									"options":  f"{input_namespace}:{input_block_name}"
 								}
 							]
@@ -4722,16 +4616,16 @@ def repeater(input_namespace: str, input_block_name: str, powered: bool) -> dict
 					"function": "carry_properties",
 					"options": {
 						"delay": [
-							"1",
-							"2",
-							"3",
-							"4"
+							"\"1\"",
+							"\"2\"",
+							"\"3\"",
+							"\"4\""
 						],
 						"facing": [
-							"north",
-							"south",
-							"west",
-							"east"
+							"\"north\"",
+							"\"south\"",
+							"\"west\"",
+							"\"east\""
 						]
 					}
 				}
@@ -4762,7 +4656,7 @@ def coral(input_namespace: str, input_block_name: str, universal_namespace: str 
 									"type": material
 								}
 							}
-						] for data, material in {0: "tube", 1: "brain", 2: "bubble", 3: "fire", 4: "horn"}.items()
+						] for data, material in {0: "\"tube\"", 1: "\"brain\"", 2: "\"bubble\"", 3: "\"fire\"", 4: "\"horn\""}.items()
 					}
 				}
 			}
@@ -4784,7 +4678,7 @@ def coral(input_namespace: str, input_block_name: str, universal_namespace: str 
 										"block_data": str(data4)
 									}
 								}
-							] for data4, material in {0: "tube", 1: "brain", 2: "bubble", 3: "fire", 4: "horn"}.items()
+							] for data4, material in {0: "\"tube\"", 1: "\"brain\"", 2: "\"bubble\"", 3: "\"fire\"", 4: "\"horn\""}.items()
 						}
 					}
 				}
@@ -4793,15 +4687,15 @@ def coral(input_namespace: str, input_block_name: str, universal_namespace: str 
 		"blockstate_specification": {
 			"properties": {
 				"type": [
-					"tube",
-					"brain",
-					"bubble",
-					"fire",
-					"horn"
+					"\"tube\"",
+					"\"brain\"",
+					"\"bubble\"",
+					"\"fire\"",
+					"\"horn\""
 				]
 			},
 			"defaults": {
-				"type": "tube"
+				"type": "\"tube\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -4813,11 +4707,11 @@ def coral(input_namespace: str, input_block_name: str, universal_namespace: str 
 				"function": "carry_properties",
 				"options": {
 					"type": [
-						"tube",
-						"brain",
-						"bubble",
-						"fire",
-						"horn"
+						"\"tube\"",
+						"\"brain\"",
+						"\"bubble\"",
+						"\"fire\"",
+						"\"horn\""
 					]
 				}
 			}
@@ -4832,11 +4726,11 @@ def coral(input_namespace: str, input_block_name: str, universal_namespace: str 
 					"function": "carry_properties",
 					"options": {
 						"type": [
-							"tube",
-							"brain",
-							"bubble",
-							"fire",
-							"horn"
+							"\"tube\"",
+							"\"brain\"",
+							"\"bubble\"",
+							"\"fire\"",
+							"\"horn\""
 						]
 					}
 				}
@@ -4864,8 +4758,8 @@ def coral_block(input_namespace: str, input_block_name: str, universal_namespace
 							{
 								"function": "new_properties",
 								"options": {
-									"type": {0: "tube", 1: "brain", 2: "bubble", 3: "fire", 4: "horn"}[data & 7],
-									"dead": {0: "false", 8: "true"}[data & 8]
+									"type": {0: "\"tube\"", 1: "\"brain\"", 2: "\"bubble\"", 3: "\"fire\"", 4: "\"horn\""}[data & 7],
+									"dead": {0: "\"false\"", 8: "\"true\""}[data & 8]
 								}
 							}
 						] for data in range(16) if data & 7 <= 4
@@ -4895,11 +4789,11 @@ def coral_block(input_namespace: str, input_block_name: str, universal_namespace
 														"block_data": str(data8 + data7)
 													}
 												}
-											] for data7, material in {0: "tube", 1: "brain", 2: "bubble", 3: "fire", 4: "horn"}.items()
+											] for data7, material in {0: "\"tube\"", 1: "\"brain\"", 2: "\"bubble\"", 3: "\"fire\"", 4: "\"horn\""}.items()
 										}
 									}
 								}
-							] for data8, dead in {0: "false", 8: "true"}.items()
+							] for data8, dead in {0: "\"false\"", 8: "\"true\""}.items()
 						}
 					}
 				}
@@ -4908,20 +4802,20 @@ def coral_block(input_namespace: str, input_block_name: str, universal_namespace
 		"blockstate_specification": {
 			"properties": {
 				"type": [
-					"tube",
-					"brain",
-					"bubble",
-					"fire",
-					"horn"
+					"\"tube\"",
+					"\"brain\"",
+					"\"bubble\"",
+					"\"fire\"",
+					"\"horn\""
 				],
 				"dead": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				]
 			},
 			"defaults": {
-				"type": "tube",
-				"dead": "false"
+				"type": "\"tube\"",
+				"dead": "\"false\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -4933,15 +4827,15 @@ def coral_block(input_namespace: str, input_block_name: str, universal_namespace
 				"function": "carry_properties",
 				"options": {
 					"type": [
-						"tube",
-						"brain",
-						"bubble",
-						"fire",
-						"horn"
+						"\"tube\"",
+						"\"brain\"",
+						"\"bubble\"",
+						"\"fire\"",
+						"\"horn\""
 					],
 					"dead": [
-						"true",
-						"false"
+						"\"true\"",
+						"\"false\""
 					]
 				}
 			}
@@ -4956,15 +4850,15 @@ def coral_block(input_namespace: str, input_block_name: str, universal_namespace
 					"function": "carry_properties",
 					"options": {
 						"type": [
-							"tube",
-							"brain",
-							"bubble",
-							"fire",
-							"horn"
+							"\"tube\"",
+							"\"brain\"",
+							"\"bubble\"",
+							"\"fire\"",
+							"\"horn\""
 						],
 						"dead": [
-							"true",
-							"false"
+							"\"true\"",
+							"\"false\""
 						]
 					}
 				}
@@ -4992,7 +4886,7 @@ def standing_sign(input_namespace: str, input_block_name: str, material: str, un
 							{
 								"function": "new_properties",
 								"options": {
-									"rotation": str(data),
+									"rotation": f"\"{data}\"",
 									"material": material
 								}
 							}
@@ -5007,7 +4901,7 @@ def standing_sign(input_namespace: str, input_block_name: str, material: str, un
 					"function": "map_properties",
 					"options": {
 						"rotation": {
-							str(data): [
+							f"\"{data}\"": [
 								{
 									"function": "new_properties",
 									"options": {
@@ -5030,10 +4924,10 @@ def standing_sign(input_namespace: str, input_block_name: str, material: str, un
 		},
 		"blockstate_specification": {
 			"properties": {
-				"rotation": [str(data) for data in range(16)]
+				"rotation": [f"\"{data}\"" for data in range(16)]
 			},
 			"defaults": {
-				"rotation": "0"
+				"rotation": "\"0\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -5044,7 +4938,7 @@ def standing_sign(input_namespace: str, input_block_name: str, material: str, un
 			{
 				"function": "carry_properties",
 				"options": {
-					"rotation": [str(data) for data in range(16)]
+					"rotation": [f"\"{data}\"" for data in range(16)]
 				}
 			},
 			{
@@ -5072,7 +4966,7 @@ def standing_sign(input_namespace: str, input_block_name: str, material: str, un
 				{
 					"function": "carry_properties",
 					"options": {
-						"rotation": [str(data) for data in range(16)]
+						"rotation": [f"\"{data}\"" for data in range(16)]
 					}
 				}
 			]
@@ -5085,7 +4979,7 @@ def wall_sign(input_namespace: str, input_block_name: str, material: str, univer
 		universal_namespace = input_namespace
 	if universal_block_name is None:
 		universal_block_name = input_block_name
-	directions = {2: "north", 3: "south", 4: "west", 5: "east"}
+	directions = {2: "\"north\"", 3: "\"south\"", 4: "\"west\"", 5: "\"east\""}
 	return {
 		"to_universal": [
 			{
@@ -5189,7 +5083,7 @@ def wall_sign(input_namespace: str, input_block_name: str, material: str, univer
 
 
 def command_block(input_namespace: str, input_block_name: str, mode: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
-	directions = {0: "down", 1: "up", 2: "north", 3: "south", 4: "west", 5: "east"}
+	directions = {0: "\"down\"", 1: "\"up\"", 2: "\"north\"", 3: "\"south\"", 4: "\"west\"", 5: "\"east\""}
 	if universal_namespace is None:
 		universal_namespace = input_namespace
 	if universal_block_name is None:
@@ -5209,7 +5103,7 @@ def command_block(input_namespace: str, input_block_name: str, mode: str, univer
 								"function": "new_properties",
 								"options": {
 									"facing": directions[data & 7],
-									"conditional": {0: "false", 8: "true"}[data & 8],
+									"conditional": {0: "\"false\"", 8: "\"true\""}[data & 8],
 									"mode": mode
 								}
 							}
@@ -5249,7 +5143,7 @@ def command_block(input_namespace: str, input_block_name: str, mode: str, univer
 														}
 													}
 												}
-											] for data8, conditional in {0: "false", 8: "true"}.items()
+											] for data8, conditional in {0: "\"false\"", 8: "\"true\""}.items()
 										}
 									}
 								}
@@ -5262,21 +5156,21 @@ def command_block(input_namespace: str, input_block_name: str, mode: str, univer
 		"blockstate_specification": {
 			"properties": {
 				"conditional": [
-					"false",
-					"true"
+					"\"false\"",
+					"\"true\""
 				],
 				"facing": [
-					"north",
-					"east",
-					"south",
-					"west",
-					"up",
-					"down"
+					"\"north\"",
+					"\"east\"",
+					"\"south\"",
+					"\"west\"",
+					"\"up\"",
+					"\"down\""
 				]
 			},
 			"defaults": {
-				"conditional": "false",
-				"facing": "north"
+				"conditional": "\"false\"",
+				"facing": "\"north\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -5288,16 +5182,16 @@ def command_block(input_namespace: str, input_block_name: str, mode: str, univer
 				"function": "carry_properties",
 				"options": {
 					"conditional": [
-						"false",
-						"true"
+						"\"false\"",
+						"\"true\""
 					],
 					"facing": [
-						"north",
-						"east",
-						"south",
-						"west",
-						"up",
-						"down"
+						"\"north\"",
+						"\"east\"",
+						"\"south\"",
+						"\"west\"",
+						"\"up\"",
+						"\"down\""
 					]
 				}
 			},
@@ -5327,16 +5221,16 @@ def command_block(input_namespace: str, input_block_name: str, mode: str, univer
 					"function": "carry_properties",
 					"options": {
 						"conditional": [
-							"false",
-							"true"
+							"\"false\"",
+							"\"true\""
 						],
 						"facing": [
-							"north",
-							"east",
-							"south",
-							"west",
-							"up",
-							"down"
+							"\"north\"",
+							"\"east\"",
+							"\"south\"",
+							"\"west\"",
+							"\"up\"",
+							"\"down\""
 						]
 					}
 				}
@@ -5361,7 +5255,7 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 	elif platform == 'bedrock':
 		if feature_level == '1.0.0':
 			instruments = {
-				"bass": [
+				"\"bass\"": [
 					"minecraft:log",
 					"minecraft:log2",
 					"minecraft:stripped_oak_log",
@@ -5425,13 +5319,13 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 					"minecraft:jungle_button",
 					"minecraft:spruce_button"
 				],
-				"snare": [
+				"\"snare\"": [
 					"minecraft:sand",
 					"minecraft:gravel",
 					"minecraft:soul_sand",
 					"minecraft:concretePowder"
 				],
-				"hat": [
+				"\"hat\"": [
 					"minecraft:glass",
 					"minecraft:glass_pane",
 					"minecraft:stained_glass",
@@ -5445,7 +5339,7 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 					"minecraft:hard_stained_glass",
 					"minecraft:hard_stained_glass_pane"
 				],
-				"basedrum": [
+				"\"basedrum\"": [
 					"minecraft:stone",
 					"minecraft:cobblestone",
 					"minecraft:bedrock",
@@ -5566,11 +5460,11 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 										"function": "map_nbt",
 										"options": {
 											"cases": {
-												str(data): [
+												f"{data}b": [
 													{
 														"function": "new_properties",
 														"options": {
-															"note": str(data)
+															"note": f"\"{data}\""
 														}
 													}
 												] for data in range(25)
@@ -5586,19 +5480,19 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 										"function": "map_nbt",
 										"options": {
 											"cases": {
-												"0": [
+												"0b": [
 													{
 														"function": "new_properties",
 														"options": {
-															"powered": "false"
+															"powered": "\"false\""
 														}
 													}
 												],
-												"1": [
+												"1b": [
 													{
 														"function": "new_properties",
 														"options": {
-															"powered": "true"
+															"powered": "\"true\""
 														}
 													}
 												]
@@ -5621,7 +5515,7 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 						"function": "map_properties",
 						"options": {
 							"note": {
-								str(data): [
+								f"\"{data}\"": [
 									{
 										"function": "new_nbt",
 										"options": {
@@ -5632,7 +5526,7 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 								] for data in range(25)
 							},
 							"powered": {
-								"false": [
+								"\"false\"": [
 									{
 										"function": "new_nbt",
 										"options": {
@@ -5641,7 +5535,7 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 										}
 									}
 								],
-								"true": [
+								"\"true\"": [
 									{
 										"function": "new_nbt",
 										"options": {
@@ -5657,12 +5551,12 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 			},
 			"blockstate_specification": {
 				"properties": {
-					"note": [str(data) for data in range(25)],
-					"powered": ["false", "true"]
+					"note": [f"\"{data}\"" for data in range(25)],
+					"powered": ["\"false\"", "\"true\""]
 				},
 				"defaults": {
-					"note": "0",
-					"powered": "false"
+					"note": "\"0\"",
+					"powered": "\"false\""
 				}
 			},
 			"blockstate_to_universal": [
@@ -5673,8 +5567,8 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 				{
 					"function": "carry_properties",
 					"options": {
-						"note": [str(data) for data in range(25)],
-						"powered": ["false", "true"]
+						"note": [f"\"{data}\"" for data in range(25)],
+						"powered": ["\"false\"", "\"true\""]
 					}
 				}
 			],
@@ -5687,8 +5581,8 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 					{
 						"function": "carry_properties",
 						"options": {
-							"note": [str(data) for data in range(25)],
-							"powered": ["false", "true"]
+							"note": [f"\"{data}\"" for data in range(25)],
+							"powered": ["\"false\"", "\"true\""]
 						}
 					}
 				]
@@ -5723,11 +5617,11 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 										"function": "map_nbt",
 										"options": {
 											"cases": {
-												str(data): [
+												f"{data}b": [
 													{
 														"function": "new_properties",
 														"options": {
-															"note": str(data)
+															"note": f"\"{data}\""
 														}
 													}
 												] for data in range(25)
@@ -5771,7 +5665,7 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 						"function": "map_properties",
 						"options": {
 							"note": {
-								str(data): [
+								f"\"{data}\"": [
 									{
 										"function": "new_nbt",
 										"options": {
@@ -5787,10 +5681,10 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 			},
 			"blockstate_specification": {
 				"properties": {
-					"note": [str(data) for data in range(25)]
+					"note": [f"\"{data}\"" for data in range(25)]
 				},
 				"defaults": {
-					"note": "0"
+					"note": "\"0\""
 				}
 			},
 			"blockstate_to_universal": [
@@ -5801,7 +5695,7 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 				{
 					"function": "carry_properties",
 					"options": {
-						"note": [str(data) for data in range(25)]
+						"note": [f"\"{data}\"" for data in range(25)]
 					}
 				},
 				{
@@ -5836,7 +5730,7 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 					{
 						"function": "carry_properties",
 						"options": {
-							"note": [str(data) for data in range(25)]
+							"note": [f"\"{data}\"" for data in range(25)]
 						}
 					}
 				]
@@ -5847,42 +5741,42 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 def mushroom_block(color: str) -> dict:
 	directions = {  # up, down, north, east, south, west
 		f'universal_minecraft:{color}_mushroom_block': {
-			0: ['false', 'false', 'false', 'false', 'false', 'false'],
-			1: ['true', 'false', 'true', 'false', 'false', 'true'],
-			2: ['true', 'false', 'true', 'false', 'false', 'false'],
-			3: ['true', 'false', 'true', 'true', 'false', 'false'],
-			4: ['true', 'false', 'false', 'false', 'false', 'true'],
-			5: ['true', 'false', 'false', 'false', 'false', 'false'],
-			6: ['true', 'false', 'false', 'true', 'false', 'false'],
-			7: ['true', 'false', 'false', 'false', 'true', 'true'],
-			8: ['true', 'false', 'false', 'false', 'true', 'false'],
-			9: ['true', 'false', 'false', 'true', 'true', 'false'],
-			14: ['true', 'true', 'true', 'true', 'true', 'true']
+			0: ["\"false\"", "\"false\"", "\"false\"", "\"false\"", "\"false\"", "\"false\""],
+			1: ["\"true\"", "\"false\"", "\"true\"", "\"false\"", "\"false\"", "\"true\""],
+			2: ["\"true\"", "\"false\"", "\"true\"", "\"false\"", "\"false\"", "\"false\""],
+			3: ["\"true\"", "\"false\"", "\"true\"", "\"true\"", "\"false\"", "\"false\""],
+			4: ["\"true\"", "\"false\"", "\"false\"", "\"false\"", "\"false\"", "\"true\""],
+			5: ["\"true\"", "\"false\"", "\"false\"", "\"false\"", "\"false\"", "\"false\""],
+			6: ["\"true\"", "\"false\"", "\"false\"", "\"true\"", "\"false\"", "\"false\""],
+			7: ["\"true\"", "\"false\"", "\"false\"", "\"false\"", "\"true\"", "\"true\""],
+			8: ["\"true\"", "\"false\"", "\"false\"", "\"false\"", "\"true\"", "\"false\""],
+			9: ["\"true\"", "\"false\"", "\"false\"", "\"true\"", "\"true\"", "\"false\""],
+			14: ["\"true\"", "\"true\"", "\"true\"", "\"true\"", "\"true\"", "\"true\""]
 		},
 		'universal_minecraft:mushroom_stem': {
-			10: ['false', 'false', 'true', 'true', 'true', 'true'],
-			15: ['true', 'true', 'true', 'true', 'true', 'true']
+			10: ["\"false\"", "\"false\"", "\"true\"", "\"true\"", "\"true\"", "\"true\""],
+			15: ["\"true\"", "\"true\"", "\"true\"", "\"true\"", "\"true\"", "\"true\""]
 		}
 	}
 
 	data_to_variant = {
-		0: "all_inside",
-		1: "north_west",
-		2: "north",
-		3: "north_east",
-		4: "west",
-		5: "center",
-		6: "east",
-		7: "south_west",
-		8: "south",
-		9: "south_east",
-		10: "stem",
-		14: "all_outside",
-		15: "all_stem"
+		0: "\"all_inside\"",
+		1: "\"north_west\"",
+		2: "\"north\"",
+		3: "\"north_east\"",
+		4: "\"west\"",
+		5: "\"center\"",
+		6: "\"east\"",
+		7: "\"south_west\"",
+		8: "\"south\"",
+		9: "\"south_east\"",
+		10: "\"stem\"",
+		14: "\"all_outside\"",
+		15: "\"all_stem\""
 	}
 
 	nearest_map = {}
-	for dirs in list(itertools.product(['true', 'false'], repeat=6)):
+	for dirs in list(itertools.product(["\"true\"", "\"false\""], repeat=6)):
 		count = -1
 		nearest = None
 		for data, dirs2 in directions[f'universal_minecraft:{color}_mushroom_block'].items():
@@ -5925,7 +5819,7 @@ def mushroom_block(color: str) -> dict:
 										"east": dirs[3],
 										"south": dirs[4],
 										"west": dirs[5],
-										"material": color
+										"material": f"\"{color}\""
 									}
 								}[block]
 							}
@@ -5976,27 +5870,27 @@ def mushroom_block(color: str) -> dict:
 																														"block_data": str(nearest_map[(up, down, north, east, south, west)])
 																													}
 																												}
-																											] for west in ('true', 'false')
+																											] for west in ("\"true\"", "\"false\"")
 																										}
 																									}
 																								}
-																							] for south in ('true', 'false')
+																							] for south in ("\"true\"", "\"false\"")
 																						}
 																					}
 																				}
-																			] for east in ('true', 'false')
+																			] for east in ("\"true\"", "\"false\"")
 																		}
 																	}
 																}
-															] for north in ('true', 'false')
+															] for north in ("\"true\"", "\"false\"")
 														}
 													}
 												}
-											] for down in ('true', 'false')
+											] for down in ("\"true\"", "\"false\"")
 										}
 									}
 								}
-							] for up in ('true', 'false')
+							] for up in ("\"true\"", "\"false\"")
 						}
 					}
 				}
@@ -6016,32 +5910,32 @@ def mushroom_block(color: str) -> dict:
 					"function": "map_properties",
 					"options": {
 						"up": {
-							'true': [
+							"\"true\"": [
 								{
 									"function": "map_properties",
 									"options": {
 										"down": {
-											'true': [
+											"\"true\"": [
 												{
 													"function": "map_properties",
 													"options": {
 														"north": {
-															'true': [
+															"\"true\"": [
 																{
 																	"function": "map_properties",
 																	"options": {
 																		"east": {
-																			'true': [
+																			"\"true\"": [
 																				{
 																					"function": "map_properties",
 																					"options": {
 																						"south": {
-																							'true': [
+																							"\"true\"": [
 																								{
 																									"function": "map_properties",
 																									"options": {
 																										"west": {
-																											'true': [
+																											"\"true\"": [
 																												{
 																													"function": "new_properties",
 																													"options": {
@@ -6071,7 +5965,7 @@ def mushroom_block(color: str) -> dict:
 							]
 						},
 						"material": {
-							color: [
+							f"\"{color}\"": [
 								{
 									"function": "new_block",
 									"options": f'minecraft:{color}_mushroom_block'
@@ -6085,23 +5979,23 @@ def mushroom_block(color: str) -> dict:
 		"blockstate_specification": {
 			"properties": {
 				"variant": [
-					"all_inside",
-					"north_west",
-					"north",
-					"north_east",
-					"west",
-					"center",
-					"east",
-					"south_west",
-					"south",
-					"south_east",
-					"stem",
-					"all_outside",
-					"all_stem",
+					"\"all_inside\"",
+					"\"north_west\"",
+					"\"north\"",
+					"\"north_east\"",
+					"\"west\"",
+					"\"center\"",
+					"\"east\"",
+					"\"south_west\"",
+					"\"south\"",
+					"\"south_east\"",
+					"\"stem\"",
+					"\"all_outside\"",
+					"\"all_stem\"",
 				]
 			},
 			"defaults": {
-				"variant": "all_outside"
+				"variant": "\"all_outside\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -6132,7 +6026,7 @@ def mushroom_block(color: str) -> dict:
 										"east": dirs[3],
 										"south": dirs[4],
 										"west": dirs[5],
-										"material": color
+										"material": f"\"{color}\""
 									}
 								}[block]
 							}
@@ -6183,27 +6077,27 @@ def mushroom_block(color: str) -> dict:
 																														"variant": data_to_variant[nearest_map[(up, down, north, east, south, west)]]
 																													}
 																												}
-																											] for west in ('true', 'false')
+																											] for west in ("\"true\"", "\"false\"")
 																										}
 																									}
 																								}
-																							] for south in ('true', 'false')
+																							] for south in ("\"true\"", "\"false\"")
 																						}
 																					}
 																				}
-																			] for east in ('true', 'false')
+																			] for east in ("\"true\"", "\"false\"")
 																		}
 																	}
 																}
-															] for north in ('true', 'false')
+															] for north in ("\"true\"", "\"false\"")
 														}
 													}
 												}
-											] for down in ('true', 'false')
+											] for down in ("\"true\"", "\"false\"")
 										}
 									}
 								}
-							] for up in ('true', 'false')
+							] for up in ("\"true\"", "\"false\"")
 						}
 					}
 				}
@@ -6216,43 +6110,43 @@ def mushroom_block(color: str) -> dict:
 				{
 					"function": "new_properties",
 					"options": {
-						"variant": "stem"
+						"variant": "\"stem\""
 					}
 				},
 				{
 					"function": "map_properties",
 					"options": {
 						"up": {
-							'true': [
+							"\"true\"": [
 								{
 									"function": "map_properties",
 									"options": {
 										"down": {
-											'true': [
+											"\"true\"": [
 												{
 													"function": "map_properties",
 													"options": {
 														"north": {
-															'true': [
+															"\"true\"": [
 																{
 																	"function": "map_properties",
 																	"options": {
 																		"east": {
-																			'true': [
+																			"\"true\"": [
 																				{
 																					"function": "map_properties",
 																					"options": {
 																						"south": {
-																							'true': [
+																							"\"true\"": [
 																								{
 																									"function": "map_properties",
 																									"options": {
 																										"west": {
-																											'true': [
+																											"\"true\"": [
 																												{
 																													"function": "new_properties",
 																													"options": {
-																														"variant": "all_stem"
+																														"variant": "\"all_stem\""
 																													}
 																												}
 																											]
@@ -6278,7 +6172,7 @@ def mushroom_block(color: str) -> dict:
 							]
 						},
 						"material": {
-							color: [
+							f"\"{color}\"": [
 								{
 									"function": "new_block",
 									"options": f'minecraft:{color}_mushroom_block'
@@ -6315,7 +6209,7 @@ def shulker_box_colour_java(color: str, display_color=None) -> dict:
 									"color": color
 								}
 							}
-						] for data, facing in {0: "down", 1: "up", 2: "north", 3: "south", 4: "west", 5: "east"}.items()
+						] for data, facing in {0: "\"down\"", 1: "\"up\"", 2: "\"north\"", 3: "\"south\"", 4: "\"west\"", 5: "\"east\""}.items()
 					}
 				}
 			}
@@ -6345,7 +6239,7 @@ def shulker_box_colour_java(color: str, display_color=None) -> dict:
 										"block_data": str(data)
 									}
 								}
-							] for data, facing in {0: "down", 1: "up", 2: "north", 3: "south", 4: "west", 5: "east"}.items()
+							] for data, facing in {0: "\"down\"", 1: "\"up\"", 2: "\"north\"", 3: "\"south\"", 4: "\"west\"", 5: "\"east\""}.items()
 						}
 					}
 				}
@@ -6354,16 +6248,16 @@ def shulker_box_colour_java(color: str, display_color=None) -> dict:
 		"blockstate_specification": {
 			"properties": {
 				"facing": [
-					"north",
-					"east",
-					"south",
-					"west",
-					"up",
-					"down"
+					"\"north\"",
+					"\"east\"",
+					"\"south\"",
+					"\"west\"",
+					"\"up\"",
+					"\"down\""
 				]
 			},
 			"defaults": {
-				"facing": "north"
+				"facing": "\"north\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -6375,12 +6269,12 @@ def shulker_box_colour_java(color: str, display_color=None) -> dict:
 				"function": "carry_properties",
 				"options": {
 					"facing": [
-						"north",
-						"east",
-						"south",
-						"west",
-						"up",
-						"down"
+						"\"north\"",
+						"\"east\"",
+						"\"south\"",
+						"\"west\"",
+						"\"up\"",
+						"\"down\""
 					]
 				}
 			},
@@ -6414,12 +6308,12 @@ def shulker_box_colour_java(color: str, display_color=None) -> dict:
 					"function": "carry_properties",
 					"options": {
 						"facing": [
-							"north",
-							"east",
-							"south",
-							"west",
-							"up",
-							"down"
+							"\"north\"",
+							"\"east\"",
+							"\"south\"",
+							"\"west\"",
+							"\"up\"",
+							"\"down\""
 						]
 					}
 				}
