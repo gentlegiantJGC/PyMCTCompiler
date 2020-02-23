@@ -1,1 +1,1 @@
-numerical.standing_sign("minecraft", "spruce_standing_sign", "spruce", "universal_minecraft", "sign")
+numerical.standing_sign("minecraft", "spruce_standing_sign", "\"spruce\"", "universal_minecraft", "sign")

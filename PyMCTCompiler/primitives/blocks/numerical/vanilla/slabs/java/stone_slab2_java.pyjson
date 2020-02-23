@@ -1,1 +1,1 @@
-numerical.slab("minecraft", "stone_slab2", ["red_sandstone"], "universal_minecraft", "slab")
+numerical.slab("minecraft", "stone_slab2", ["\"red_sandstone\""], "universal_minecraft", "slab")

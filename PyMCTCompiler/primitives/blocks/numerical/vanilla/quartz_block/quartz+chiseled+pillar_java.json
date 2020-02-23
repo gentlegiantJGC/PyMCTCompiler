@@ -24,7 +24,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"axis": "y"
+								"axis": "\"y\""
 							}
 						}
 					],
@@ -36,7 +36,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"axis": "x"
+								"axis": "\"x\""
 							}
 						}
 					],
@@ -48,7 +48,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"axis": "z"
+								"axis": "\"z\""
 							}
 						}
 					]
@@ -96,7 +96,7 @@
 				"function": "map_properties",
 				"options": {
 					"axis": {
-						"y": [
+						"\"y\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -104,7 +104,7 @@
 								}
 							}
 						],
-						"x": [
+						"\"x\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -112,7 +112,7 @@
 								}
 							}
 						],
-						"z": [
+						"\"z\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -128,15 +128,15 @@
 	"blockstate_specification": {
 		"properties": {
 			"variant": [
-				"quartz_block",
-				"chiseled_quartz_block",
-				"quartz_pillar_x",
-				"quartz_pillar_y",
-				"quartz_pillar_z"
+				"\"quartz_block\"",
+				"\"chiseled_quartz_block\"",
+				"\"quartz_pillar_x\"",
+				"\"quartz_pillar_y\"",
+				"\"quartz_pillar_z\""
 			]
 		},
 		"defaults": {
-			"variant": "quartz_block"
+			"variant": "\"quartz_block\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -144,19 +144,19 @@
 			"function": "map_properties",
 			"options": {
 				"variant": {
-					"quartz_block": [
+					"\"quartz_block\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:quartz_block"
 						}
 					],
-					"chiseled_quartz_block": [
+					"\"chiseled_quartz_block\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:chiseled_quartz_block"
 						}
 					],
-					"quartz_pillar_y": [
+					"\"quartz_pillar_y\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:quartz_pillar"
@@ -164,11 +164,11 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"axis": "y"
+								"axis": "\"y\""
 							}
 						}
 					],
-					"quartz_pillar_x": [
+					"\"quartz_pillar_x\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:quartz_pillar"
@@ -176,11 +176,11 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"axis": "x"
+								"axis": "\"x\""
 							}
 						}
 					],
-					"quartz_pillar_z": [
+					"\"quartz_pillar_z\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:quartz_pillar"
@@ -188,7 +188,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"axis": "z"
+								"axis": "\"z\""
 							}
 						}
 					]
@@ -205,7 +205,7 @@
 			{
 				"function": "new_properties",
 				"options": {
-					"variant": "quartz_block"
+					"variant": "\"quartz_block\""
 				}
 			}
 		],
@@ -217,7 +217,7 @@
 			{
 				"function": "new_properties",
 				"options": {
-					"variant": "chiseled_quartz_block"
+					"variant": "\"chiseled_quartz_block\""
 				}
 			}
 		],
@@ -229,34 +229,34 @@
 			{
 				"function": "new_properties",
 				"options": {
-					"variant": "quartz_pillar_y"
+					"variant": "\"quartz_pillar_y\""
 				}
 			},
 			{
 				"function": "map_properties",
 				"options": {
 					"axis": {
-						"y": [
+						"\"y\"": [
 							{
 								"function": "new_properties",
 								"options": {
-									"variant": "quartz_pillar_y"
+									"variant": "\"quartz_pillar_y\""
 								}
 							}
 						],
-						"x": [
+						"\"x\"": [
 							{
 								"function": "new_properties",
 								"options": {
-									"variant": "quartz_pillar_x"
+									"variant": "\"quartz_pillar_x\""
 								}
 							}
 						],
-						"z": [
+						"\"z\"": [
 							{
 								"function": "new_properties",
 								"options": {
-									"variant": "quartz_pillar_z"
+									"variant": "\"quartz_pillar_z\""
 								}
 							}
 						]

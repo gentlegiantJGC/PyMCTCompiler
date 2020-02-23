@@ -1,1 +1,1 @@
-numerical.slab("minecraft", "wooden_slab", ["oak", "spruce", "birch", "jungle", "acacia", "dark_oak"], "universal_minecraft", "slab")
+numerical.slab("minecraft", "wooden_slab", ["\"oak\"", "\"spruce\"", "\"birch\"", "\"jungle\"", "\"acacia\"", "\"dark_oak\""], "universal_minecraft", "slab")

@@ -1,1 +1,1 @@
-numerical.trapdoor_bedrock("minecraft", "iron_trapdoor", "iron")
+numerical.trapdoor_bedrock("minecraft", "iron_trapdoor", "\"iron\"")

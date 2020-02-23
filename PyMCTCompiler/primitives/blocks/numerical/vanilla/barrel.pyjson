@@ -1,8 +1,8 @@
 numerical.bit_map(
 	"minecraft", "barrel",
 	{
-		"open": {0: "false", 8: "true"},
-		"facing": {0: "down", 1: "up", 2: "north", 3: "south", 4: "west", 5: "east"},
+		"open": {0: "\"false\"", 8: "\"true\""},
+		"facing": {0: "\"down\"", 1: "\"up\"", 2: "\"north\"", 3: "\"south\"", 4: "\"west\"", 5: "\"east\""},
 	},
 	"universal_minecraft"
 )

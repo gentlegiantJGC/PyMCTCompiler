@@ -44,16 +44,16 @@
     "blockstate_specification": {
         "properties": {
                 "facing": [
-                    "north",
-                    "east",
-                    "south",
-                    "west",
-                    "up",
-                    "down"
+                    "\"north\"",
+                    "\"east\"",
+                    "\"south\"",
+                    "\"west\"",
+                    "\"up\"",
+                    "\"down\""
                 ]
             },
         "defaults": {
-            "facing": "up"
+            "facing": "\"up\""
         }
     },
     "blockstate_to_universal": [
@@ -65,12 +65,12 @@
             "function": "carry_properties",
             "options": {
                 "facing": [
-                    "north",
-                    "east",
-                    "south",
-                    "west",
-                    "up",
-                    "down"
+                    "\"north\"",
+                    "\"east\"",
+                    "\"south\"",
+                    "\"west\"",
+                    "\"up\"",
+                    "\"down\""
                 ]
             }
         },
@@ -104,12 +104,12 @@
                 "function": "carry_properties",
                 "options": {
                     "facing": [
-                        "north",
-                        "east",
-                        "south",
-                        "west",
-                        "up",
-                        "down"
+                        "\"north\"",
+                        "\"east\"",
+                        "\"south\"",
+                        "\"west\"",
+                        "\"up\"",
+                        "\"down\""
                     ]
                 }
             }

@@ -11,7 +11,7 @@
 						}, {
 							"function": "new_properties",
 							"options": {
-								"level": "0"
+								"level": "\"0\""
 							}
 						}
 					],
@@ -22,7 +22,7 @@
 						}, {
 							"function": "new_properties",
 							"options": {
-								"level": "1"
+								"level": "\"1\""
 							}
 						}
 					],
@@ -33,7 +33,7 @@
 						}, {
 							"function": "new_properties",
 							"options": {
-								"level": "2"
+								"level": "\"2\""
 							}
 						}
 					],
@@ -44,7 +44,7 @@
 						}, {
 							"function": "new_properties",
 							"options": {
-								"level": "3"
+								"level": "\"3\""
 							}
 						}
 					]
@@ -61,7 +61,7 @@
 				"function": "map_properties",
 				"options": {
 					"level": {
-						"0": [
+						"\"0\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -69,7 +69,7 @@
 								}
 							}
 						],
-						"0.5": [
+						"\"0.5\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -77,7 +77,7 @@
 								}
 							}
 						],
-						"1": [
+						"\"1\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -85,7 +85,7 @@
 								}
 							}
 						],
-						"1.5": [
+						"\"1.5\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -93,7 +93,7 @@
 								}
 							}
 						],
-						"2": [
+						"\"2\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -101,7 +101,7 @@
 								}
 							}
 						],
-						"2.5": [
+						"\"2.5\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -109,7 +109,7 @@
 								}
 							}
 						],
-						"3": [
+						"\"3\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -124,10 +124,10 @@
 	},
 	"blockstate_specification": {
 		"properties": {
-			"level": ["0", "1", "2", "3"]
+			"level": ["\"0\"", "\"1\"", "\"2\"", "\"3\""]
 		},
 		"defaults": {
-			"level": "0"
+			"level": "\"0\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -137,7 +137,7 @@
 		}, {
 			"function": "carry_properties",
 			"options": {
-				"level": ["0", "1", "2", "3"]
+				"level": ["\"0\"", "\"1\"", "\"2\"", "\"3\""]
 			}
 		}
 	],
@@ -149,7 +149,7 @@
 			}, {
 				"function": "carry_properties",
 				"options": {
-					"level": ["0", "1", "2", "3"]
+					"level": ["\"0\"", "\"1\"", "\"2\"", "\"3\""]
 				}
 			}
 		]

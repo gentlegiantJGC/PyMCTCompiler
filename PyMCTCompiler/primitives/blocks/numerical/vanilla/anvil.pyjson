@@ -12,8 +12,8 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"facing": {0: "south", 1: "west", 2: "north", 3: "east"}[data & 3],
-								"damage": {0: "normal", 1: "chipped", 2: "damaged"}[data >> 2]
+								"facing": {0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}[data & 3],
+								"damage": {0: "\"normal\"", 1: "\"chipped\"", 2: "\"damaged\""}[data >> 2]
 							}
 						}
 					] for data in range(12)
@@ -43,11 +43,11 @@
 													"block_data": str(data4 + data3)
 												}
 											}
-										] for data3, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
+										] for data3, facing in {0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}.items()
 									}
 								}
 							}
-						] for data4, damage in {0: "normal", 4: "chipped", 8: "damaged"}.items()
+						] for data4, damage in {0: "\"normal\"", 4: "\"chipped\"", 8: "\"damaged\""}.items()
 					}
 				}
 			}
@@ -56,20 +56,20 @@
 	"blockstate_specification": {
 		"properties": {
 			"damage": [
-				"normal",
-				"chipped",
-				"damaged"
+				"\"normal\"",
+				"\"chipped\"",
+				"\"damaged\""
 			],
 			"facing": [
-				"north",
-				"south",
-				"west",
-				"east"
+				"\"north\"",
+				"\"south\"",
+				"\"west\"",
+				"\"east\""
 			]
 		},
 		"defaults": {
-			"damage": "normal",
-			"facing": "north"
+			"damage": "\"normal\"",
+			"facing": "\"north\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -81,15 +81,15 @@
 			"function": "carry_properties",
 			"options": {
 				"damage": [
-					"normal",
-					"chipped",
-					"damaged"
+					"\"normal\"",
+					"\"chipped\"",
+					"\"damaged\""
 				],
 				"facing": [
-					"north",
-					"south",
-					"west",
-					"east"
+					"\"north\"",
+					"\"south\"",
+					"\"west\"",
+					"\"east\""
 				]
 			}
 		}
@@ -104,15 +104,15 @@
 				"function": "carry_properties",
 				"options": {
 					"damage": [
-						"normal",
-						"chipped",
-						"damaged"
+						"\"normal\"",
+						"\"chipped\"",
+						"\"damaged\""
 					],
 					"facing": [
-						"north",
-						"south",
-						"west",
-						"east"
+						"\"north\"",
+						"\"south\"",
+						"\"west\"",
+						"\"east\""
 					]
 				}
 			}

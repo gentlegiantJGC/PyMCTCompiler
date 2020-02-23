@@ -12,7 +12,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"facing": {0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}[data]
+								"facing": {0: "\"down\"", 1: "\"up\"", 2: "\"south\"", 3: "\"north\"", 4: "\"east\"", 5: "\"west\""}[data]
 							}
 						},
 						{
@@ -70,7 +70,7 @@
 									"block_data": str(data)
 								}
 							}
-						] for data, facing in {0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}.items()
+						] for data, facing in {0: "\"down\"", 1: "\"up\"", 2: "\"south\"", 3: "\"north\"", 4: "\"east\"", 5: "\"west\""}.items()
 					}
 				}
 			}
@@ -79,21 +79,21 @@
 	"blockstate_specification": {
 		"properties": {
 			"facing": [
-				"north",
-				"east",
-				"south",
-				"west",
-				"up",
-				"down"
+				"\"north\"",
+				"\"east\"",
+				"\"south\"",
+				"\"west\"",
+				"\"up\"",
+				"\"down\""
 			],
 			"type": [
-				"normal",
-				"sticky"
+				"\"normal\"",
+				"\"sticky\""
 			]
 		},
 		"defaults": {
-			"facing": "north",
-			"type": "normal"
+			"facing": "\"north\"",
+			"type": "\"normal\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -101,13 +101,13 @@
 			"function": "map_properties",
 			"options": {
 				"type": {
-					"normal": [
+					"\"normal\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:piston_head"
 						},
 					],
-					"sticky": [
+					"\"sticky\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:sticky_piston_head"
@@ -120,12 +120,12 @@
 			"function": "carry_properties",
 			"options": {
 				"facing": [
-					"north",
-					"east",
-					"south",
-					"west",
-					"up",
-					"down"
+					"\"north\"",
+					"\"east\"",
+					"\"south\"",
+					"\"west\"",
+					"\"up\"",
+					"\"down\""
 				]
 			}
 		}
@@ -139,19 +139,19 @@
 			{
 				"function": "new_properties",
 				"options": {
-					"type": "normal"
+					"type": "\"normal\""
 				}
 			},
 			{
 				"function": "carry_properties",
 				"options": {
 					"facing": [
-						"north",
-						"east",
-						"south",
-						"west",
-						"up",
-						"down"
+						"\"north\"",
+						"\"east\"",
+						"\"south\"",
+						"\"west\"",
+						"\"up\"",
+						"\"down\""
 					]
 				}
 			}
@@ -164,19 +164,19 @@
 			{
 				"function": "new_properties",
 				"options": {
-					"type": "sticky"
+					"type": "\"sticky\""
 				}
 			},
 			{
 				"function": "carry_properties",
 				"options": {
 					"facing": [
-						"north",
-						"east",
-						"south",
-						"west",
-						"up",
-						"down"
+						"\"north\"",
+						"\"east\"",
+						"\"south\"",
+						"\"west\"",
+						"\"up\"",
+						"\"down\""
 					]
 				}
 			}

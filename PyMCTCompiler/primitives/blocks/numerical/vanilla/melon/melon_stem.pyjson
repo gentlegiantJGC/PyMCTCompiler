@@ -13,7 +13,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"age": str(data)
+								"age": f"\"{data}\""
 							}
 						}
 					] for data in range(8)
@@ -31,7 +31,7 @@
 				"function": "map_properties",
 				"options": {
 					"age": {
-						str(data): [
+						f"\"{data}\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -58,10 +58,10 @@
 	},
 	"blockstate_specification": {
 		"properties": {
-			"age": [str(data) for data in range(8)]
+			"age": [f"\"{data}\"" for data in range(8)]
 		},
 		"defaults": {
-			"age": "0"
+			"age": "\"0\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -72,7 +72,7 @@
 		{
 			"function": "carry_properties",
 			"options": {
-				"age": [str(data) for data in range(8)]
+				"age": [f"\"{data}\"" for data in range(8)]
 			}
 		}
 	],
@@ -85,7 +85,7 @@
 			{
 				"function": "carry_properties",
 				"options": {
-					"age": [str(data) for data in range(8)]
+					"age": [f"\"{data}\"" for data in range(8)]
 				}
 			}
 		],
@@ -97,7 +97,7 @@
 			{
 				"function": "new_properties",
 				"options": {
-					"age": "7"
+					"age": "\"7\""
 				}
 			}
 		]

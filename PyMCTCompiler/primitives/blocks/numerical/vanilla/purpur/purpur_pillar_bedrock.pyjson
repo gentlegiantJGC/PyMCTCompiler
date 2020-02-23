@@ -12,7 +12,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"axis": {0: "y", 4: "x", 8: "z"}[data & 12],
+								"axis": {0: "\"y\"", 4: "\"x\"", 8: "\"z\""}[data & 12],
 							}
 						}
 					] for data in [2, 6, 10]
@@ -37,7 +37,7 @@
 									"block_data": str(data)
 								}
 							}
-						] for data, axis in {2: "y", 6: "x", 10: "z"}.items()
+						] for data, axis in {2: "\"y\"", 6: "\"x\"", 10: "\"z\""}.items()
 					}
 				}
 			}
@@ -46,14 +46,14 @@
 	"blockstate_specification": {
 		"properties": {
 			"variant": [
-				"purpur_block",
-				"purpur_pillar_x",
-				"purpur_pillar_y",
-				"purpur_pillar_z"
+				"\"purpur_block\"",
+				"\"purpur_pillar_x\"",
+				"\"purpur_pillar_y\"",
+				"\"purpur_pillar_z\""
 			]
 		},
 		"defaults": {
-			"variant": "purpur_block"
+			"variant": "\"purpur_block\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -61,13 +61,13 @@
 			"function": "map_properties",
 			"options": {
 				"variant": {
-					"purpur_block": [
+					"\"purpur_block\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:purpur_block"
 						}
 					],
-					"purpur_pillar_x": [
+					"\"purpur_pillar_x\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:purpur_pillar"
@@ -75,11 +75,11 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"axis": "x"
+								"axis": "\"x\""
 							}
 						}
 					],
-					"purpur_pillar_y": [
+					"\"purpur_pillar_y\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:purpur_pillar"
@@ -87,11 +87,11 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"axis": "y"
+								"axis": "\"y\""
 							}
 						}
 					],
-					"purpur_pillar_z": [
+					"\"purpur_pillar_z\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:purpur_pillar"
@@ -99,7 +99,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"axis": "z"
+								"axis": "\"z\""
 							}
 						}
 					]
@@ -117,27 +117,27 @@
 				"function": "map_properties",
 				"options": {
 					"axis": {
-						"x": [
+						"\"x\"": [
 							{
 								"function": "new_properties",
 								"options": {
-									"variant": "purpur_pillar_x"
+									"variant": "\"purpur_pillar_x\""
 								}
 							}
 						],
-						"y": [
+						"\"y\"": [
 							{
 								"function": "new_properties",
 								"options": {
-									"variant": "purpur_pillar_y"
+									"variant": "\"purpur_pillar_y\""
 								}
 							}
 						],
-						"z": [
+						"\"z\"": [
 							{
 								"function": "new_properties",
 								"options": {
-									"variant": "purpur_pillar_z"
+									"variant": "\"purpur_pillar_z\""
 								}
 							}
 						]

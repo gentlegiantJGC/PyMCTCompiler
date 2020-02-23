@@ -1,6 +1,6 @@
 {
-	# 3 = rotation {0: "south", 1: "west", 2: "north", 3: "east"}
-	# 4 = subtract {0: "compare", 4: "subtract"}
+	# 3 = rotation {0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}
+	# 4 = subtract {0: "\"compare\"", 4: "\"subtract\""}
 	# 8 = powered  8
 	"to_universal": [
 		{
@@ -17,11 +17,11 @@
 							"options": {
 								"facing": facing,
 								"mode": mode,
-								"powered": "true"
+								"powered": "\"true\""
 							}
 						}
-					] for data3, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
-					for data4, mode in {0: "compare", 4: "subtract"}.items()
+					] for data3, facing in {0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}.items()
+					for data4, mode in {0: "\"compare\"", 4: "\"subtract\""}.items()
 				}
 			}
 		}
@@ -46,7 +46,7 @@
 												"function": "map_properties",
 												"options": {
 													"powered": {
-														"true": [
+														"\"true\"": [
 															{
 																"function": "new_properties",
 																"options": {
@@ -57,11 +57,11 @@
 													}
 												}
 											}
-										] for data4, mode in {0: "compare", 4: "subtract"}.items()
+										] for data4, mode in {0: "\"compare\"", 4: "\"subtract\""}.items()
 									}
 								}
 							}
-						] for data3, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
+						] for data3, facing in {0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}.items()
 					}
 				}
 			}
@@ -69,12 +69,12 @@
 	},
 	"blockstate_specification": {
 		"properties": {
-			"facing": list({0: "south", 1: "west", 2: "north", 3: "east"}.values()),
-			"mode": list({0: "compare", 4: "subtract"}.values())
+			"facing": list({0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}.values()),
+			"mode": list({0: "\"compare\"", 4: "\"subtract\""}.values())
 		},
 		"defaults": {
-			"facing": list({0: "south", 1: "west", 2: "north", 3: "east"}.values())[0],
-			"mode": list({0: "compare", 4: "subtract"}.values())[0]
+			"facing": list({0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}.values())[0],
+			"mode": list({0: "\"compare\"", 4: "\"subtract\""}.values())[0]
 		}
 	},
 	"blockstate_to_universal": [
@@ -85,14 +85,14 @@
 		{
 			"function": "carry_properties",
 			"options": {
-				"facing": list({0: "south", 1: "west", 2: "north", 3: "east"}.values()),
-				"mode": list({0: "compare", 4: "subtract"}.values())
+				"facing": list({0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}.values()),
+				"mode": list({0: "\"compare\"", 4: "\"subtract\""}.values())
 			}
 		},
 		{
 			"function": "new_properties",
 			"options": {
-				"powered": "true"
+				"powered": "\"true\""
 			}
 		}
 	],
@@ -105,15 +105,15 @@
 			{
 				"function": "carry_properties",
 				"options": {
-					"facing": list({0: "south", 1: "west", 2: "north", 3: "east"}.values()),
-					"mode": list({0: "compare", 4: "subtract"}.values())
+					"facing": list({0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}.values()),
+					"mode": list({0: "\"compare\"", 4: "\"subtract\""}.values())
 				}
 			},
 			{
 				"function": "map_properties",
 				"options": {
 					"powered": {
-						"true": [
+						"\"true\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:powered_comparator"

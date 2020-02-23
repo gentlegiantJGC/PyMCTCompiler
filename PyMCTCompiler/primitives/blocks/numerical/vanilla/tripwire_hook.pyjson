@@ -12,9 +12,9 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"powered": {0: "false", 8: "true"}[data & 8],
-								"attached": {0: "false", 4: "true"}[data & 4],
-								"facing": {0: "south", 1: "west", 2: "north", 3: "east"}[data & 3]
+								"powered": {0: "\"false\"", 8: "\"true\""}[data & 8],
+								"attached": {0: "\"false\"", 4: "\"true\""}[data & 4],
+								"facing": {0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}[data & 3]
 							}
 						}
 					] for data in range(16)
@@ -49,15 +49,15 @@
 																	"block_data": str(data8 + data4 + data3)
 																}
 															}
-														] for data3, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
+														] for data3, facing in {0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}.items()
 													}
 												}
 											}
-										] for data4, attached in {0: "false", 4: "true"}.items()
+										] for data4, attached in {0: "\"false\"", 4: "\"true\""}.items()
 									}
 								}
 							}
-						] for data8, powered in {0: "false", 8: "true"}.items()
+						] for data8, powered in {0: "\"false\"", 8: "\"true\""}.items()
 					}
 				}
 			}
@@ -66,24 +66,24 @@
 	"blockstate_specification": {
 		"properties": {
 			"attached": [
-				"true",
-				"false"
+				"\"true\"",
+				"\"false\""
 			],
 			"facing": [
-				"north",
-				"south",
-				"west",
-				"east"
+				"\"north\"",
+				"\"south\"",
+				"\"west\"",
+				"\"east\""
 			],
 			"powered": [
-				"true",
-				"false"
+				"\"true\"",
+				"\"false\""
 			]
 		},
 		"defaults": {
-			"attached": "false",
-			"facing": "north",
-			"powered": "false"
+			"attached": "\"false\"",
+			"facing": "\"north\"",
+			"powered": "\"false\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -95,18 +95,18 @@
 			"function": "carry_properties",
 			"options": {
 				"attached": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				],
 				"facing": [
-					"north",
-					"south",
-					"west",
-					"east"
+					"\"north\"",
+					"\"south\"",
+					"\"west\"",
+					"\"east\""
 				],
 				"powered": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				]
 			}
 		}
@@ -121,18 +121,18 @@
 				"function": "carry_properties",
 				"options": {
 					"attached": [
-						"true",
-						"false"
+						"\"true\"",
+						"\"false\""
 					],
 					"facing": [
-						"north",
-						"south",
-						"west",
-						"east"
+						"\"north\"",
+						"\"south\"",
+						"\"west\"",
+						"\"east\""
 					],
 					"powered": [
-						"true",
-						"false"
+						"\"true\"",
+						"\"false\""
 					]
 				}
 			}

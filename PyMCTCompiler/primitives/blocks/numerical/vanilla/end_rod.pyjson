@@ -1,5 +1,5 @@
 {
-	# 7 = facing {0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}
+	# 7 = facing {0: "\"down\"", 1: "\"up\"", 2: "\"south\"", 3: "\"north\"", 4: "\"east\"", 5: "\"west\""}
 	"to_universal": [
 		{
 			"function": "map_properties",
@@ -16,7 +16,7 @@
 								"facing": facing
 							}
 						}
-					] for data7, facing in {0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}.items()
+					] for data7, facing in {0: "\"down\"", 1: "\"up\"", 2: "\"south\"", 3: "\"north\"", 4: "\"east\"", 5: "\"west\""}.items()
 				}
 			}
 		}
@@ -38,7 +38,7 @@
 									"block_data": str(data7)
 								}
 							}
-						] for data7, facing in {0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}.items()
+						] for data7, facing in {0: "\"down\"", 1: "\"up\"", 2: "\"south\"", 3: "\"north\"", 4: "\"east\"", 5: "\"west\""}.items()
 					}
 				}
 			}
@@ -46,10 +46,10 @@
 	},
 	"blockstate_specification": {
 		"properties": {
-			"facing": list({0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}.values())
+			"facing": list({0: "\"down\"", 1: "\"up\"", 2: "\"south\"", 3: "\"north\"", 4: "\"east\"", 5: "\"west\""}.values())
 		},
 		"defaults": {
-			"facing": list({0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}.values())[0]
+			"facing": list({0: "\"down\"", 1: "\"up\"", 2: "\"south\"", 3: "\"north\"", 4: "\"east\"", 5: "\"west\""}.values())[0]
 		}
 	},
 	"blockstate_to_universal": [
@@ -60,7 +60,7 @@
 		{
 			"function": "carry_properties",
 			"options": {
-				"facing": list({0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}.values())
+				"facing": list({0: "\"down\"", 1: "\"up\"", 2: "\"south\"", 3: "\"north\"", 4: "\"east\"", 5: "\"west\""}.values())
 			}
 		}
 	],
@@ -73,7 +73,7 @@
 			{
 				"function": "carry_properties",
 				"options": {
-					"facing": list({0: "down", 1: "up", 2: "south", 3: "north", 4: "east", 5: "west"}.values()),
+					"facing": list({0: "\"down\"", 1: "\"up\"", 2: "\"south\"", 3: "\"north\"", 4: "\"east\"", 5: "\"west\""}.values()),
 				}
 			}
 		]

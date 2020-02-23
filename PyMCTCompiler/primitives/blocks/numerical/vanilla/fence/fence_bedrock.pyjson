@@ -13,10 +13,10 @@
 							"function": "new_properties",
 							"options": {
 								"material": material,
-								"north": "true",
-								"east": "true",
-								"south": "true",
-								"west": "true"
+								"\"north\"": "\"true\"",
+								"\"east\"": "\"true\"",
+								"\"south\"": "\"true\"",
+								"\"west\"": "\"true\""
 							}
 						},
 						{
@@ -32,7 +32,7 @@
 													{
 														"function": "new_properties",
 														"options": {
-															direction: "false"
+															direction: "\"false\""
 														}
 													}
 												]
@@ -40,14 +40,14 @@
 										}
 									]
 								} for coord, direction in [
-									[[0, 0, -1], "north"],
-									[[0, 0, 1], "south"],
-									[[-1, 0, 0], "west"],
-									[[1, 0, 0], "east"],
+									[[0, 0, -1], "\"north\""],
+									[[0, 0, 1], "\"south\""],
+									[[-1, 0, 0], "\"west\""],
+									[[1, 0, 0], "\"east\""],
 								]
 							]
 						}
-					] for data, material in enumerate(["oak", "spruce", "birch", "jungle", "acacia", "dark_oak"])
+					] for data, material in enumerate(["\"oak\"", "\"spruce\"", "\"birch\"", "\"jungle\"", "\"acacia\"", "\"dark_oak\""])
 				}
 			}
 		}
@@ -69,7 +69,7 @@
 									"block_data": str(data)
 								}
 							}
-						] for data, material in enumerate(["oak", "spruce", "birch", "jungle", "acacia", "dark_oak"])
+						] for data, material in enumerate(["\"oak\"", "\"spruce\"", "\"birch\"", "\"jungle\"", "\"acacia\"", "\"dark_oak\""])
 					}
 				}
 			}
@@ -77,10 +77,10 @@
 	},
 	"blockstate_specification": {
 		"properties": {
-			"material": ["oak", "spruce", "birch", "jungle", "acacia", "dark_oak"]
+			"material": ["\"oak\"", "\"spruce\"", "\"birch\"", "\"jungle\"", "\"acacia\"", "\"dark_oak\""]
 		},
 		"defaults": {
-			"material": "oak"
+			"material": "\"oak\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -91,7 +91,7 @@
 		{
 			"function": "carry_properties",
 			"options": {
-				"material": ["oak", "spruce", "birch", "jungle", "acacia", "dark_oak"]
+				"material": ["\"oak\"", "\"spruce\"", "\"birch\"", "\"jungle\"", "\"acacia\"", "\"dark_oak\""]
 			}
 		}
 	],
@@ -112,7 +112,7 @@
 									"material": material
 								}
 							}
-						] for material in ["oak", "spruce", "birch", "jungle", "acacia", "dark_oak"]
+						] for material in ["\"oak\"", "\"spruce\"", "\"birch\"", "\"jungle\"", "\"acacia\"", "\"dark_oak\""]
 					}
 				}
 			}

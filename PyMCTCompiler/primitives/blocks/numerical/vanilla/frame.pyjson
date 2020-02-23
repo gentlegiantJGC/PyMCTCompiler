@@ -1,8 +1,8 @@
 numerical.bit_map(
     "minecraft", "frame",
     {
-        "map_item": {0: "false", 8: "true"},
-        "facing": {0: "east", 1: "west", 2: "south", 3: "north"}
+        "map_item": {0: "\"false\"", 8: "\"true\""},
+        "facing": {0: "\"east\"", 1: "\"west\"", 2: "\"south\"", 3: "\"north\""}
     },
     "universal_minecraft", "item_frame_block"
 )

@@ -1,1 +1,1 @@
-numerical.glazed_terracotta("minecraft", "blue_glazed_terracotta", "blue", "bedrock", "universal_minecraft", "glazed_terracotta")
+numerical.glazed_terracotta("minecraft", "blue_glazed_terracotta", "\"blue\"", "bedrock", "universal_minecraft", "glazed_terracotta")

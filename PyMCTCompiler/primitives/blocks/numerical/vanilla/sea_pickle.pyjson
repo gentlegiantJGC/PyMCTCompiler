@@ -1,6 +1,6 @@
 {
-	# 3 = pickles {0: "0", 1: "1", 2: "2", 3: "3"}
-	# 4 = dead {0: "false", 4: "true"}
+	# 3 = pickles {0: "\"0\"", 1: "\"1\"", 2: "\"2\"", 3: "\"3\""}
+	# 4 = dead {0: "\"false\"", 4: "\"true\""}
 	"to_universal": [
 		{
 			"function": "map_properties",
@@ -18,8 +18,8 @@
 								"dead": dead
 							}
 						}
-					] for data3, pickles in {0: "0", 1: "1", 2: "2", 3: "3"}.items()
-					for data4, dead in {0: "false", 4: "true"}.items()
+					] for data3, pickles in {0: "\"0\"", 1: "\"1\"", 2: "\"2\"", 3: "\"3\""}.items()
+					for data4, dead in {0: "\"false\"", 4: "\"true\""}.items()
 				}
 			}
 		}
@@ -46,11 +46,11 @@
 													"block_data": str(data4 + data3)
 												}
 											}
-										] for data4, dead in {0: "false", 4: "true"}.items()
+										] for data4, dead in {0: "\"false\"", 4: "\"true\""}.items()
 									}
 								}
 							}
-						] for data3, pickles in {0: "0", 1: "1", 2: "2", 3: "3"}.items()
+						] for data3, pickles in {0: "\"0\"", 1: "\"1\"", 2: "\"2\"", 3: "\"3\""}.items()
 					}
 				}
 			}
@@ -58,12 +58,12 @@
 	},
 	"blockstate_specification": {
 		"properties": {
-			"pickles": list({0: "0", 1: "1", 2: "2", 3: "3"}.values()),
-			"dead": list({0: "false", 4: "true"}.values())
+			"pickles": list({0: "\"0\"", 1: "\"1\"", 2: "\"2\"", 3: "\"3\""}.values()),
+			"dead": list({0: "\"false\"", 4: "\"true\""}.values())
 		},
 		"defaults": {
-			"pickles": list({0: "0", 1: "1", 2: "2", 3: "3"}.values())[0],
-			"dead": list({0: "false", 4: "true"}.values())[0]
+			"pickles": list({0: "\"0\"", 1: "\"1\"", 2: "\"2\"", 3: "\"3\""}.values())[0],
+			"dead": list({0: "\"false\"", 4: "\"true\""}.values())[0]
 		}
 	},
 	"blockstate_to_universal": [
@@ -74,8 +74,8 @@
 		{
 			"function": "carry_properties",
 			"options": {
-				"pickles": list({0: "0", 1: "1", 2: "2", 3: "3"}.values()),
-				"dead": list({0: "false", 4: "true"}.values())
+				"pickles": list({0: "\"0\"", 1: "\"1\"", 2: "\"2\"", 3: "\"3\""}.values()),
+				"dead": list({0: "\"false\"", 4: "\"true\""}.values())
 			}
 		}
 	],
@@ -88,8 +88,8 @@
 			{
 				"function": "carry_properties",
 				"options": {
-					"pickles": list({0: "0", 1: "1", 2: "2", 3: "3"}.values()),
-					"dead": list({0: "false", 4: "true"}.values())
+					"pickles": list({0: "\"0\"", 1: "\"1\"", 2: "\"2\"", 3: "\"3\""}.values()),
+					"dead": list({0: "\"false\"", 4: "\"true\""}.values())
 				}
 			}
 		]

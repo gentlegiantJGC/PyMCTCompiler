@@ -1,1 +1,1 @@
-numerical.button_bedrock("minecraft", "birch_button", "birch", "universal_minecraft", "button")
+numerical.button_bedrock("minecraft", "birch_button", "\"birch\"", "universal_minecraft", "button")

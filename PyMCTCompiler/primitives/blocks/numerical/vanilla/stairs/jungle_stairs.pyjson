@@ -1,1 +1,1 @@
-numerical.stairs("minecraft", "jungle_stairs", "jungle", "universal_minecraft", "stairs")
+numerical.stairs("minecraft", "jungle_stairs", "\"jungle\"", "universal_minecraft", "stairs")

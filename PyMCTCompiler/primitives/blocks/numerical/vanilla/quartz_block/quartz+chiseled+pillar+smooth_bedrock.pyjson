@@ -21,9 +21,9 @@
 					2: "universal_minecraft:quartz_pillar",
 					3: "universal_minecraft:smooth_quartz"
 				}.items() for data12, axis in {
-					0: "y",
-					4: "x",
-					8: "z",
+					0: "\"y\"",
+					4: "\"x\"",
+					8: "\"z\"",
 				}.items()
 				}
 			}
@@ -47,9 +47,9 @@
 								}
 							}
 						] for data12, axis in {
-						0: "y",
-						4: "x",
-						8: "z",
+						0: "\"y\"",
+						4: "\"x\"",
+						8: "\"z\"",
 					}.items()
 					}
 				}
@@ -64,20 +64,20 @@
 	"blockstate_specification": {
 		"properties": {
 			"variant": [
-				"quartz_block",
-				"chiseled_quartz_block",
-				"quartz_pillar",
-				"smooth"
+				"\"quartz_block\"",
+				"\"chiseled_quartz_block\"",
+				"\"quartz_pillar\"",
+				"\"smooth\""
 			],
 			"axis": [
-				"x",
-				"y",
-				"z",
+				"\"x\"",
+				"\"y\"",
+				"\"z\"",
 			]
 		},
 		"defaults": {
-			"variant": "quartz_block",
-			"axis": "y"
+			"variant": "\"quartz_block\"",
+			"axis": "\"y\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -85,25 +85,25 @@
 			"function": "map_properties",
 			"options": {
 				"variant": {
-					"quartz_block": [
+					"\"quartz_block\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:quartz_block"
 						}
 					],
-					"chiseled_quartz_block": [
+					"\"chiseled_quartz_block\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:chiseled_quartz_block"
 						}
 					],
-					"quartz_pillar": [
+					"\"quartz_pillar\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:quartz_pillar"
 						}
 					],
-					"smooth": [
+					"\"smooth\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:smooth_quartz"
@@ -116,9 +116,9 @@
 			"function": "carry_properties",
 			"options": {
 				"axis": [
-					"x",
-					"y",
-					"z",
+					"\"x\"",
+					"\"y\"",
+					"\"z\"",
 				]
 			}
 		}
@@ -132,16 +132,16 @@
 			{
 				"function": "new_properties",
 				"options": {
-					"variant": "quartz_block"
+					"variant": "\"quartz_block\""
 				}
 			},
 			{
 				"function": "carry_properties",
 				"options": {
 					"axis": [
-						"x",
-						"y",
-						"z",
+						"\"x\"",
+						"\"y\"",
+						"\"z\"",
 					]
 				}
 			}
@@ -154,16 +154,16 @@
 			{
 				"function": "new_properties",
 				"options": {
-					"variant": "chiseled_quartz_block"
+					"variant": "\"chiseled_quartz_block\""
 				}
 			},
 			{
 				"function": "carry_properties",
 				"options": {
 					"axis": [
-						"x",
-						"y",
-						"z",
+						"\"x\"",
+						"\"y\"",
+						"\"z\"",
 					]
 				}
 			}
@@ -176,16 +176,16 @@
 			{
 				"function": "new_properties",
 				"options": {
-					"variant": "quartz_pillar"
+					"variant": "\"quartz_pillar\""
 				}
 			},
 			{
 				"function": "carry_properties",
 				"options": {
 					"axis": [
-						"x",
-						"y",
-						"z",
+						"\"x\"",
+						"\"y\"",
+						"\"z\"",
 					]
 				}
 			}
@@ -198,16 +198,16 @@
 			{
 				"function": "new_properties",
 				"options": {
-					"variant": "smooth"
+					"variant": "\"smooth\""
 				}
 			},
 			{
 				"function": "carry_properties",
 				"options": {
 					"axis": [
-						"x",
-						"y",
-						"z",
+						"\"x\"",
+						"\"y\"",
+						"\"z\"",
 					]
 				}
 			}

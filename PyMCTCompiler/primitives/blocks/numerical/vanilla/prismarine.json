@@ -67,13 +67,13 @@
 	"blockstate_specification": {
 		"properties": {
 			"variant": [
-				"normal",
-				"dark",
-				"bricks"
+				"\"normal\"",
+				"\"dark\"",
+				"\"bricks\""
 			]
 		},
 		"defaults": {
-			"variant": "normal"
+			"variant": "\"normal\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -81,19 +81,19 @@
 			"function": "map_properties",
 			"options": {
 				"variant": {
-					"normal": [
+					"\"normal\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:prismarine"
 						}
 					],
-					"dark": [
+					"\"dark\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:dark_prismarine"
 						}
 					],
-					"bricks": [
+					"\"bricks\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:prismarine_bricks"
@@ -112,7 +112,7 @@
 			{
 				"function": "new_properties",
 				"options": {
-					"variant": "normal"
+					"variant": "\"normal\""
 				}
 			}
 		],
@@ -124,7 +124,7 @@
 			{
 				"function": "new_properties",
 				"options": {
-					"variant": "dark"
+					"variant": "\"dark\""
 				}
 			}
 		],
@@ -136,7 +136,7 @@
 			{
 				"function": "new_properties",
 				"options": {
-					"variant": "bricks"
+					"variant": "\"bricks\""
 				}
 			}
 		]

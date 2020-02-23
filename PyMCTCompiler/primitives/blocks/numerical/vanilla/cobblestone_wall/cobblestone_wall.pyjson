@@ -16,9 +16,9 @@
 							}
 						}
 					] for data, material in enumerate([
-					"cobblestone",
-					"mossy_cobblestone",
-				])
+						"\"cobblestone\"",
+						"\"mossy_cobblestone\"",
+					])
 				}
 			}
 		}
@@ -41,9 +41,9 @@
 								}
 							}
 						] for data, material in enumerate([
-						"cobblestone",
-						"mossy_cobblestone",
-					])
+							"\"cobblestone\"",
+							"\"mossy_cobblestone\"",
+						])
 					}
 				}
 			}
@@ -52,12 +52,12 @@
 	"blockstate_specification": {
 		"properties": {
 			"material": [
-				"cobblestone",
-				"mossy_cobblestone",
+				"\"cobblestone\"",
+				"\"mossy_cobblestone\"",
 			]
 		},
 		"defaults": {
-			"material": "cobblestone"
+			"material": "\"cobblestone\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -69,8 +69,8 @@
 			"function": "carry_properties",
 			"options": {
 				"material": [
-					"cobblestone",
-					"mossy_cobblestone",
+					"\"cobblestone\"",
+					"\"mossy_cobblestone\"",
 				]
 			}
 		}
@@ -85,8 +85,8 @@
 				"function": "carry_properties",
 				"options": {
 					"material": [
-						"cobblestone",
-						"mossy_cobblestone",
+						"\"cobblestone\"",
+						"\"mossy_cobblestone\"",
 					]
 				}
 			}

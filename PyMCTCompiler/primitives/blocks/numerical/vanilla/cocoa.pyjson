@@ -12,8 +12,8 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"facing": {0: "north", 1: "south", 2: "west", 3: "east"}[data & 3],
-								"age": str(data >> 2)
+								"facing": {0: "\"north\"", 1: "\"south\"", 2: "\"west\"", 3: "\"east\""}[data & 3],
+								"age": {0: "\"0\"", 4: "\"1\"", 8: "\"2\""}[data & 12]
 							}
 						}
 					] for data in range(12)
@@ -43,11 +43,11 @@
 													"block_data": str(data4 + data3)
 												}
 											}
-										] for data3, facing in {0: "north", 1: "south", 2: "west", 3: "east"}.items()
+										] for data3, facing in {0: "\"north\"", 1: "\"south\"", 2: "\"west\"", 3: "\"east\""}.items()
 									}
 								}
 							}
-						] for data4, age in {0: "0", 4: "1", 8: "2"}.items()
+						] for data4, age in {0: "\"0\"", 4: "\"1\"", 8: "\"2\""}.items()
 					}
 				}
 			}
@@ -56,20 +56,20 @@
 	"blockstate_specification": {
 		"properties": {
 			"age": [
-				"0",
-				"1",
-				"2"
+				"\"0\"",
+				"\"1\"",
+				"\"2\""
 			],
 			"facing": [
-				"north",
-				"south",
-				"west",
-				"east"
+				"\"north\"",
+				"\"south\"",
+				"\"west\"",
+				"\"east\""
 			]
 		},
 		"defaults": {
-			"age": "0",
-			"facing": "north"
+			"age": "\"0\"",
+			"facing": "\"north\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -81,15 +81,15 @@
 			"function": "carry_properties",
 			"options": {
 				"age": [
-					"0",
-					"1",
-					"2"
+					"\"0\"",
+					"\"1\"",
+					"\"2\""
 				],
 				"facing": [
-					"north",
-					"south",
-					"west",
-					"east"
+					"\"north\"",
+					"\"south\"",
+					"\"west\"",
+					"\"east\""
 				]
 			}
 		}
@@ -104,15 +104,15 @@
 				"function": "carry_properties",
 				"options": {
 					"age": [
-						"0",
-						"1",
-						"2"
+						"\"0\"",
+						"\"1\"",
+						"\"2\""
 					],
 					"facing": [
-						"north",
-						"south",
-						"west",
-						"east"
+						"\"north\"",
+						"\"south\"",
+						"\"west\"",
+						"\"east\""
 					]
 				}
 			}

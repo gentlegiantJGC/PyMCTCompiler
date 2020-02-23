@@ -12,7 +12,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"material": {0: "oak", 1: "spruce", 2: "birch", 3: "jungle", 4: "acacia", 5: "dark_oak"}[data],
+								"material": {0: "\"oak\"", 1: "\"spruce\"", 2: "\"birch\"", 3: "\"jungle\"", 4: "\"acacia\"", 5: "\"dark_oak\""}[data],
 							}
 						}
 					] for data in range(6)
@@ -37,7 +37,7 @@
 									"block_data": str(data)
 								}
 							}
-						] for data, block in {0: "oak", 1: "spruce", 2: "birch", 3: "jungle", 4: "acacia", 5: "dark_oak"}.items()
+						] for data, block in {0: "\"oak\"", 1: "\"spruce\"", 2: "\"birch\"", 3: "\"jungle\"", 4: "\"acacia\"", 5: "\"dark_oak\""}.items()
 					}
 				}
 			}
@@ -46,16 +46,16 @@
 	"blockstate_specification": {
 		"properties": {
 			"material": [
-				"oak",
-				"spruce",
-				"birch",
-				"jungle",
-				"acacia",
-				"dark_oak"
+				"\"oak\"",
+				"\"spruce\"",
+				"\"birch\"",
+				"\"jungle\"",
+				"\"acacia\"",
+				"\"dark_oak\""
 			]
 		},
 		"defaults": {
-			"material": "oak"
+			"material": "\"oak\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -67,12 +67,12 @@
 			"function": "carry_properties",
 			"options": {
 				"material": [
-					"oak",
-					"spruce",
-					"birch",
-					"jungle",
-					"acacia",
-					"dark_oak"
+					"\"oak\"",
+					"\"spruce\"",
+					"\"birch\"",
+					"\"jungle\"",
+					"\"acacia\"",
+					"\"dark_oak\""
 				]
 			}
 		}
@@ -87,12 +87,12 @@
 				"function": "carry_properties",
 				"options": {
 					"material": [
-						"oak",
-						"spruce",
-						"birch",
-						"jungle",
-						"acacia",
-						"dark_oak"
+						"\"oak\"",
+						"\"spruce\"",
+						"\"birch\"",
+						"\"jungle\"",
+						"\"acacia\"",
+						"\"dark_oak\""
 					]
 				}
 			}

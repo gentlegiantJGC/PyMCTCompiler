@@ -1,1 +1,1 @@
-numerical.stairs("minecraft", "smooth_sandstone_stairs", "smooth_sandstone", "universal_minecraft", "stairs")
+numerical.stairs("minecraft", "smooth_sandstone_stairs", "\"smooth_sandstone\"", "universal_minecraft", "stairs")

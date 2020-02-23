@@ -12,8 +12,8 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": ["white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray",
-                                          "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"][
+                                "color": ["\"white\"", "\"orange\"", "\"magenta\"", "\"light_blue\"", "\"yellow\"", "\"lime\"", "\"pink\"", "\"gray\"",
+                                          "\"light_gray\"", "\"cyan\"", "\"purple\"", "\"blue\"", "\"brown\"", "\"green\"", "\"red\"", "\"black\""][
                                     data]
                             }
                         }
@@ -44,8 +44,8 @@
                                 }
                             }
                         ] for data, colour in enumerate(
-                            ["white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray",
-                             "cyan", "purple", "blue", "brown", "green", "red", "black"])
+                            ["\"white\"", "\"orange\"", "\"magenta\"", "\"light_blue\"", "\"yellow\"", "\"lime\"", "\"pink\"", "\"gray\"", "\"light_gray\"",
+                             "\"cyan\"", "\"purple\"", "\"blue\"", "\"brown\"", "\"green\"", "\"red\"", "\"black\""])
                     }
                 }
             }
@@ -54,35 +54,35 @@
     "blockstate_specification": {
         "properties": {
             "facing": [
-                "north",
-                "east",
-                "south",
-                "west",
-                "up",
-                "down"
+                "\"north\"",
+                "\"east\"",
+                "\"south\"",
+                "\"west\"",
+                "\"up\"",
+                "\"down\""
             ],
             "color": [
-                "white",
-                "orange",
-                "magenta",
-                "light_blue",
-                "yellow",
-                "lime",
-                "pink",
-                "gray",
-                "light_gray",
-                "cyan",
-                "purple",
-                "blue",
-                "brown",
-                "green",
-                "red",
-                "black"
+                "\"white\"",
+                "\"orange\"",
+                "\"magenta\"",
+                "\"light_blue\"",
+                "\"yellow\"",
+                "\"lime\"",
+                "\"pink\"",
+                "\"gray\"",
+                "\"light_gray\"",
+                "\"cyan\"",
+                "\"purple\"",
+                "\"blue\"",
+                "\"brown\"",
+                "\"green\"",
+                "\"red\"",
+                "\"black\""
             ]
         },
         "defaults": {
-            "facing": "up",
-            "color": "white"
+            "facing": "\"up\"",
+            "color": "\"white\""
         }
     },
     "blockstate_to_universal": [
@@ -94,30 +94,30 @@
             "function": "carry_properties",
             "options": {
                 "facing": [
-                    "north",
-                    "east",
-                    "south",
-                    "west",
-                    "up",
-                    "down"
+                    "\"north\"",
+                    "\"east\"",
+                    "\"south\"",
+                    "\"west\"",
+                    "\"up\"",
+                    "\"down\""
                 ],
                 "color": [
-                    "white",
-                    "orange",
-                    "magenta",
-                    "light_blue",
-                    "yellow",
-                    "lime",
-                    "pink",
-                    "gray",
-                    "light_gray",
-                    "cyan",
-                    "purple",
-                    "blue",
-                    "brown",
-                    "green",
-                    "red",
-                    "black"
+                    "\"white\"",
+                    "\"orange\"",
+                    "\"magenta\"",
+                    "\"light_blue\"",
+                    "\"yellow\"",
+                    "\"lime\"",
+                    "\"pink\"",
+                    "\"gray\"",
+                    "\"light_gray\"",
+                    "\"cyan\"",
+                    "\"purple\"",
+                    "\"blue\"",
+                    "\"brown\"",
+                    "\"green\"",
+                    "\"red\"",
+                    "\"black\""
                 ]
             }
         }
@@ -143,8 +143,8 @@
                                     "color": colour
                                 }
                             }
-                        ] for colour in ["white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray",
-                            "cyan", "purple", "blue", "brown", "green", "red", "black"]
+                        ] for colour in ["\"white\"", "\"orange\"", "\"magenta\"", "\"light_blue\"", "\"yellow\"", "\"lime\"", "\"pink\"", "\"gray\"", "\"light_gray\"",
+                            "\"cyan\"", "\"purple\"", "\"blue\"", "\"brown\"", "\"green\"", "\"red\"", "\"black\""]
                     }
                 }
             },
@@ -152,12 +152,12 @@
                 "function": "carry_properties",
                 "options": {
                     "facing": [
-                        "north",
-                        "east",
-                        "south",
-                        "west",
-                        "up",
-                        "down"
+                        "\"north\"",
+                        "\"east\"",
+                        "\"south\"",
+                        "\"west\"",
+                        "\"up\"",
+                        "\"down\""
                     ]
                 }
             }

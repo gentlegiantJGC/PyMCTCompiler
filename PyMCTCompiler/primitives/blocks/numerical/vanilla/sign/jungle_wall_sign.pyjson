@@ -1,1 +1,1 @@
-numerical.wall_sign("minecraft", "jungle_wall_sign", "jungle", "universal_minecraft", "wall_sign")
+numerical.wall_sign("minecraft", "jungle_wall_sign", "\"jungle\"", "universal_minecraft", "wall_sign")

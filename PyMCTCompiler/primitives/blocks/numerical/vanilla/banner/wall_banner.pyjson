@@ -1,7 +1,7 @@
 numerical.bit_map(
 	"minecraft", "wall_banner",
 	{
-		"facing": {2: "north", 3: "south", 4: "west", 5: "east"}
+		"facing": {2: "\"north\"", 3: "\"south\"", 4: "\"west\"", 5: "\"east\""}
 	},
 	"universal_minecraft",
 	defaults=[2]

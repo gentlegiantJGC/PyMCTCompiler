@@ -1,1 +1,1 @@
-numerical.button_java("minecraft", "wooden_button", "oak", "universal_minecraft", "button")
+numerical.button_java("minecraft", "wooden_button", "\"oak\"", "universal_minecraft", "button")

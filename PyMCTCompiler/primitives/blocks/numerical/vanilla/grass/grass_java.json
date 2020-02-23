@@ -12,7 +12,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"type": "dead_bush"
+								"type": "\"dead_bush\""
 							}
 						}
 					],
@@ -24,7 +24,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"type": "grass"
+								"type": "\"grass\""
 							}
 						}
 					],
@@ -36,7 +36,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"type": "fern"
+								"type": "\"fern\""
 							}
 						}
 					]
@@ -50,7 +50,7 @@
 				"function": "map_properties",
 				"options": {
 					"type": {
-						"grass": [
+						"\"grass\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:tallgrass"
@@ -62,7 +62,7 @@
 								}
 							}
 						],
-						"fern": [
+						"\"fern\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:tallgrass"
@@ -82,13 +82,13 @@
 	"blockstate_specification": {
 		"properties": {
 			"type": [
-				"grass",
-				"fern",
-				"dead_bush"
+				"\"grass\"",
+				"\"fern\"",
+				"\"dead_bush\""
 			]
 		},
 		"defaults": {
-			"type": "grass"
+			"type": "\"grass\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -96,7 +96,7 @@
 			"function": "map_properties",
 			"options": {
 				"type": {
-					"grass": [
+					"\"grass\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:plant"
@@ -104,11 +104,11 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"type": "grass"
+								"type": "\"grass\""
 							}
 						}
 					],
-					"fern": [
+					"\"fern\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:plant"
@@ -116,11 +116,11 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"type": "fern"
+								"type": "\"fern\""
 							}
 						}
 					],
-					"dead_bush": [
+					"\"dead_bush\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:plant"
@@ -128,7 +128,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"type": "dead_bush"
+								"type": "\"dead_bush\""
 							}
 						}
 					]
@@ -142,7 +142,7 @@
 				"function": "map_properties",
 				"options": {
 					"type": {
-						"grass": [
+						"\"grass\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:tallgrass"
@@ -150,11 +150,11 @@
 							{
 								"function": "new_properties",
 								"options": {
-									"type": "grass"
+									"type": "\"grass\""
 								}
 							}
 						],
-						"fern": [
+						"\"fern\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:tallgrass"
@@ -162,7 +162,7 @@
 							{
 								"function": "new_properties",
 								"options": {
-									"type": "fern"
+									"type": "\"fern\""
 								}
 							}
 						]

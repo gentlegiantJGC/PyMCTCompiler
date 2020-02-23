@@ -1,1 +1,1 @@
-numerical.fence_gate_java("minecraft", "jungle_fence_gate", "jungle", "universal_minecraft", "fence_gate")
+numerical.fence_gate_java("minecraft", "jungle_fence_gate", "\"jungle\"", "universal_minecraft", "fence_gate")

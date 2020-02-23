@@ -27,8 +27,8 @@
                                 "no_drop": no_drop_bit
                             }
                         }
-                    ] for data8, no_drop_bit in enumerate(["false", "true"])
-                    for data7, facing in [[1, 'floor'], [2, 'north'], [3, 'south'], [4, 'west'], [5, 'east']]
+                    ] for data8, no_drop_bit in enumerate(["\"false\"", "\"true\""])
+                    for data7, facing in [[1, "\"floor\""], [2, "\"north\""], [3, "\"south\""], [4, "\"west\""], [5, "\"east\""]]
                 }
             }
         }
@@ -43,7 +43,7 @@
                 "function": "map_properties",
                 "options": {
                     "no_drop": {
-                        "false": [
+                        "\"false\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -51,7 +51,7 @@
                                 }
                             }
                         ],
-                        "true": [
+                        "\"true\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -85,15 +85,15 @@
                                                 }
                                             }
                                         ] for rot, facing in enumerate([
-                                            "north",
-                                            "south",
-                                            "west",
-                                            "east"
+                                            "\"north\"",
+                                            "\"south\"",
+                                            "\"west\"",
+                                            "\"east\""
                                         ])
                                     }
                                 }
                             }
-                        ] for data8, no_drop in enumerate(["false", "true"])
+                        ] for data8, no_drop in enumerate(["\"false\"", "\"true\""])
                     }
                 }
             }
@@ -102,20 +102,20 @@
     "blockstate_specification": {
         "properties": {
             "facing": [
-                "floor",
-                "north",
-                "south",
-                "west",
-                "east"
+                "\"floor\"",
+                "\"north\"",
+                "\"south\"",
+                "\"west\"",
+                "\"east\""
             ],
             "no_drop": [
-                "true",
-                "false"
+                "\"true\"",
+                "\"false\""
             ]
         },
         "defaults": {
-            "facing": "floor",
-            "no_drop": "false"
+            "facing": "\"floor\"",
+            "no_drop": "\"false\""
         }
     },
     "blockstate_to_universal": [
@@ -128,7 +128,7 @@
                             "function": "new_block",
                             "options": "universal_minecraft:head"
                         }
-                    ] if facing == 'floor' else [
+                    ] if facing == "\"floor\"" else [
                         {
                             "function": "new_block",
                             "options": "universal_minecraft:wall_head"
@@ -139,7 +139,7 @@
                                 "facing": facing
                             }
                         }
-                    ] for facing in ['north', 'south', 'west', 'east']
+                    ] for facing in ["\"floor\"", "\"north\"", "\"south\"", "\"west\"", "\"east\""]
                 }
             }
         },
@@ -147,8 +147,8 @@
             "function": "carry_properties",
             "options": {
                 "no_drop": [
-                    "true",
-                    "false"
+                    "\"true\"",
+                    "\"false\""
                 ]
             }
         }
@@ -163,21 +163,21 @@
                 "function": "map_properties",
                 "options": {
                     "no_drop": {
-                        "false": [
+                        "\"false\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing": "floor",
-                                    "no_drop": "false"
+                                    "facing": "\"floor\"",
+                                    "no_drop": "\"false\""
                                 }
                             }
                         ],
-                        "true": [
+                        "\"true\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing": "floor",
-                                    "no_drop": "true"
+                                    "facing": "\"floor\"",
+                                    "no_drop": "\"true\""
                                 }
                             }
                         ]
@@ -194,14 +194,14 @@
                 "function": "carry_properties",
                 "options": {
                     "no_drop": [
-                        "true",
-                        "false"
+                        "\"true\"",
+                        "\"false\""
                     ],
                     "facing": [
-                        "north",
-                        "south",
-                        "west",
-                        "east"
+                        "\"north\"",
+                        "\"south\"",
+                        "\"west\"",
+                        "\"east\""
                     ]
                 }
             }

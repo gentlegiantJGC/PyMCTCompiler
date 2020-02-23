@@ -18,7 +18,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"half": "upper"
+								"half": "\"upper\""
 							}
 						}
 					],
@@ -30,7 +30,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"half": "lower"
+								"half": "\"lower\""
 							}
 						}
 					]
@@ -56,7 +56,7 @@
 				"function": "map_properties",
 				"options": {
 					"half": {
-						"upper": [
+						"\"upper\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:seagrass"
@@ -68,7 +68,7 @@
 								}
 							}
 						],
-						"lower": [
+						"\"lower\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:seagrass"
@@ -88,13 +88,13 @@
 	"blockstate_specification": {
 		"properties": {
 			"type": [
-				"default",
-				"double_top",
-				"double_bot"
+				"\"default\"",
+				"\"double_top\"",
+				"\"double_bot\""
 			]
 		},
 		"defaults": {
-			"type": "default"
+			"type": "\"default\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -102,13 +102,13 @@
 			"function": "map_properties",
 			"options": {
 				"type": {
-					"default": [
+					"\"default\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:seagrass"
 						}
 					],
-					"double_top": [
+					"\"double_top\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:tall_seagrass"
@@ -116,11 +116,11 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"half": "upper"
+								"half": "\"upper\""
 							}
 						}
 					],
-					"double_bot": [
+					"\"double_bot\"": [
 						{
 							"function": "new_block",
 							"options": "universal_minecraft:tall_seagrass"
@@ -128,7 +128,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"half": "lower"
+								"half": "\"lower\""
 							}
 						}
 					]
@@ -145,7 +145,7 @@
 			{
 				"function": "new_properties",
 				"options": {
-					"type": "default"
+					"type": "\"default\""
 				}
 			}
 		],
@@ -154,7 +154,7 @@
 				"function": "map_properties",
 				"options": {
 					"half": {
-						"upper": [
+						"\"upper\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:seagrass"
@@ -162,11 +162,11 @@
 							{
 								"function": "new_properties",
 								"options": {
-									"type": "double_top"
+									"type": "\"double_top\""
 								}
 							}
 						],
-						"lower": [
+						"\"lower\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:seagrass"
@@ -174,7 +174,7 @@
 							{
 								"function": "new_properties",
 								"options": {
-									"type": "double_bot"
+									"type": "\"double_bot\""
 								}
 							}
 						]

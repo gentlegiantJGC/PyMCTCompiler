@@ -1,1 +1,1 @@
-numerical.trapdoor_java("minecraft", "iron_trapdoor", "iron")
+numerical.trapdoor_java("minecraft", "iron_trapdoor", "\"iron\"")

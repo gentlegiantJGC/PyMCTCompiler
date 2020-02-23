@@ -15,7 +15,7 @@
 								"type": material
 							}
 						}
-					] for data, material in enumerate(["poppy", "blue_orchid", "allium", "azure_bluet", "red_tulip", "orange_tulip", "white_tulip", "pink_tulip", "oxeye_daisy"])
+					] for data, material in enumerate(["\"poppy\"", "\"blue_orchid\"", "\"allium\"", "\"azure_bluet\"", "\"red_tulip\"", "\"orange_tulip\"", "\"white_tulip\"", "\"pink_tulip\"", "\"oxeye_daisy\""])
 				}
 			}
 		}
@@ -37,7 +37,7 @@
 									"block_data": str(data)
 								}
 							}
-						] for data, material in enumerate(["poppy", "blue_orchid", "allium", "azure_bluet", "red_tulip", "orange_tulip", "white_tulip", "pink_tulip", "oxeye_daisy"])
+						] for data, material in enumerate(["\"poppy\"", "\"blue_orchid\"", "\"allium\"", "\"azure_bluet\"", "\"red_tulip\"", "\"orange_tulip\"", "\"white_tulip\"", "\"pink_tulip\"", "\"oxeye_daisy\""])
 					}
 				}
 			}
@@ -46,19 +46,19 @@
 	"blockstate_specification": {
 		"properties": {
 			"type": [
-				"poppy",
-				"blue_orchid",
-				"allium",
-				"azure_bluet",
-				"red_tulip",
-				"orange_tulip",
-				"white_tulip",
-				"pink_tulip",
-				"oxeye_daisy"
+				"\"poppy\"",
+				"\"blue_orchid\"",
+				"\"allium\"",
+				"\"azure_bluet\"",
+				"\"red_tulip\"",
+				"\"orange_tulip\"",
+				"\"white_tulip\"",
+				"\"pink_tulip\"",
+				"\"oxeye_daisy\""
 			]
 		},
 		"defaults": {
-			"type": "poppy"
+			"type": "\"poppy\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -70,15 +70,15 @@
 			"function": "carry_properties",
 			"options": {
 				"type": [
-					"poppy",
-					"blue_orchid",
-					"allium",
-					"azure_bluet",
-					"red_tulip",
-					"orange_tulip",
-					"white_tulip",
-					"pink_tulip",
-					"oxeye_daisy"
+					"\"poppy\"",
+					"\"blue_orchid\"",
+					"\"allium\"",
+					"\"azure_bluet\"",
+					"\"red_tulip\"",
+					"\"orange_tulip\"",
+					"\"white_tulip\"",
+					"\"pink_tulip\"",
+					"\"oxeye_daisy\""
 				]
 			}
 		}
@@ -100,7 +100,7 @@
 									"type": material
 								}
 							}
-						] for material in ["poppy", "blue_orchid", "allium", "azure_bluet", "red_tulip", "orange_tulip", "white_tulip", "pink_tulip", "oxeye_daisy"]
+						] for material in ["\"poppy\"", "\"blue_orchid\"", "\"allium\"", "\"azure_bluet\"", "\"red_tulip\"", "\"orange_tulip\"", "\"white_tulip\"", "\"pink_tulip\"", "\"oxeye_daisy\""]
 					}
 				}
 			}

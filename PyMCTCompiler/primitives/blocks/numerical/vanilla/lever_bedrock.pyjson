@@ -14,22 +14,22 @@
 							"options": properties
 						}
 					] for data, properties in {
-						0: {"face": "ceiling", "facing": "west", "powered": "false"},
-						1: {"face": "wall", "facing": "east", "powered": "false"},
-						2: {"face": "wall", "facing": "west", "powered": "false"},
-						3: {"face": "wall", "facing": "south", "powered": "false"},
-						4: {"face": "wall", "facing": "north", "powered": "false"},
-						5: {"face": "floor", "facing": "north", "powered": "false"},
-						6: {"face": "floor", "facing": "west", "powered": "false"},
-						7: {"face": "ceiling", "facing": "north", "powered": "false"},
-						8: {"face": "ceiling", "facing": "west", "powered": "true"},
-						9: {"face": "wall", "facing": "east", "powered": "true"},
-						10: {"face": "wall", "facing": "west", "powered": "true"},
-						11: {"face": "wall", "facing": "south", "powered": "true"},
-						12: {"face": "wall", "facing": "north", "powered": "true"},
-						13: {"face": "floor", "facing": "north", "powered": "true"},
-						14: {"face": "floor", "facing": "west", "powered": "true"},
-						15: {"face": "ceiling", "facing": "north", "powered": "true"},
+						0: {"face": "\"ceiling\"", "facing": "\"west\"", "powered": "\"false\""},
+						1: {"face": "\"wall\"", "facing": "\"east\"", "powered": "\"false\""},
+						2: {"face": "\"wall\"", "facing": "\"west\"", "powered": "\"false\""},
+						3: {"face": "\"wall\"", "facing": "\"south\"", "powered": "\"false\""},
+						4: {"face": "\"wall\"", "facing": "\"north\"", "powered": "\"false\""},
+						5: {"face": "\"floor\"", "facing": "\"north\"", "powered": "\"false\""},
+						6: {"face": "\"floor\"", "facing": "\"west\"", "powered": "\"false\""},
+						7: {"face": "\"ceiling\"", "facing": "\"north\"", "powered": "\"false\""},
+						8: {"face": "\"ceiling\"", "facing": "\"west\"", "powered": "\"true\""},
+						9: {"face": "\"wall\"", "facing": "\"east\"", "powered": "\"true\""},
+						10: {"face": "\"wall\"", "facing": "\"west\"", "powered": "\"true\""},
+						11: {"face": "\"wall\"", "facing": "\"south\"", "powered": "\"true\""},
+						12: {"face": "\"wall\"", "facing": "\"north\"", "powered": "\"true\""},
+						13: {"face": "\"floor\"", "facing": "\"north\"", "powered": "\"true\""},
+						14: {"face": "\"floor\"", "facing": "\"west\"", "powered": "\"true\""},
+						15: {"face": "\"ceiling\"", "facing": "\"north\"", "powered": "\"true\""},
 					}.items()
 				}
 			}
@@ -50,7 +50,7 @@
 								"function": "map_properties",
 								"options": {
 									"face": {
-										"ceiling": [
+										"\"ceiling\"": [
 											{
 												"function": "new_properties",
 												"options": {
@@ -68,12 +68,12 @@
 																	"block_data": str(data7 + data8)
 																}
 															}
-														] for facing, data7 in {"north": 7, "south": 7, "west": 0, "east": 0}.items()
+														] for facing, data7 in {"\"north\"": 7, "\"south\"": 7, "\"west\"": 0, "\"east\"": 0}.items()
 													}
 												}
 											}
 										],
-										"floor": [
+										"\"floor\"": [
 											{
 												"function": "new_properties",
 												"options": {
@@ -91,12 +91,12 @@
 																	"block_data": str(data7 + data8)
 																}
 															}
-														] for facing, data7 in {"north": 5, "south": 5, "west": 6, "east": 6}.items()
+														] for facing, data7 in {"\"north\"": 5, "\"south\"": 5, "\"west\"": 6, "\"east\"": 6}.items()
 													}
 												}
 											}
 										],
-										"wall": [
+										"\"wall\"": [
 											{
 												"function": "map_properties",
 												"options": {
@@ -108,7 +108,7 @@
 																	"block_data": str(data7 + data8)
 																}
 															}
-														] for data7, facing in {1: "east", 2: "west", 3: "south", 4: "north"}.items()
+														] for data7, facing in {1: "\"east\"", 2: "\"west\"", 3: "\"south\"", 4: "\"north\""}.items()
 													}
 												}
 											}
@@ -116,7 +116,7 @@
 									}
 								}
 							}
-						] for data8, powered in {0: "false", 8: "true"}.items()
+						] for data8, powered in {0: "\"false\"", 8: "\"true\""}.items()
 					}
 				}
 			}
@@ -124,12 +124,12 @@
 	},
 	"blockstate_specification": {
 		"properties": {
-			"position": ["floor_south", "floor_east", "wall_north", "wall_east", "wall_south", "wall_west", "ceiling_south", "ceiling_east"],
-			"powered": ["false", "true"]
+			"position": ["\"floor_south\"", "\"floor_east\"", "\"wall_north\"", "\"wall_east\"", "\"wall_south\"", "\"wall_west\"", "\"ceiling_south\"", "\"ceiling_east\""],
+			"powered": ["\"false\"", "\"true\""]
 		},
 		"defaults": {
-			"position": "floor_south",
-			"powered": "false"
+			"position": "\"floor_south\"",
+			"powered": "\"false\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -140,7 +140,7 @@
 		{
 			"function": "carry_properties",
 			"options": {
-				"powered": ["false", "true"]
+				"powered": ["\"false\"", "\"true\""]
 			}
 		},
 		{
@@ -153,14 +153,14 @@
 							"options": properties
 						}
 					] for position, properties in {
-						"floor_south": {"face": "floor", "facing": "south"},
-						"floor_east": {"face": "floor", "facing": "east"},
-						"wall_east": {"face": "wall", "facing": "east"},
-						"wall_west": {"face": "wall", "facing": "west"},
-						"wall_south": {"face": "wall", "facing": "south"},
-						"wall_north": {"face": "wall", "facing": "north"},
-						"ceiling_south": {"face": "ceiling", "facing": "south"},
-						"ceiling_east": {"face": "ceiling", "facing": "east"}
+						"\"floor_south\"": {"face": "\"floor\"", "facing": "\"south\""},
+						"\"floor_east\"": {"face": "\"floor\"", "facing": "\"east\""},
+						"\"wall_east\"": {"face": "\"wall\"", "facing": "\"east\""},
+						"\"wall_west\"": {"face": "\"wall\"", "facing": "\"west\""},
+						"\"wall_south\"": {"face": "\"wall\"", "facing": "\"south\""},
+						"\"wall_north\"": {"face": "\"wall\"", "facing": "\"north\""},
+						"\"ceiling_south\"": {"face": "\"ceiling\"", "facing": "\"south\""},
+						"\"ceiling_east\"": {"face": "\"ceiling\"", "facing": "\"east\""}
 					}.items()
 				}
 			}
@@ -175,18 +175,18 @@
 			{
 				"function": "carry_properties",
 				"options": {
-					"powered": ["false", "true"]
+					"powered": ["\"false\"", "\"true\""]
 				}
 			},
 			{
 				"function": "map_properties",
 				"options": {
 					"face": {
-						"ceiling": [
+						"\"ceiling\"": [
 							{
 								"function": "new_properties",
 								"options": {
-									"position": "ceiling_south"
+									"position": "\"ceiling_south\""
 								}
 							},
 							{
@@ -200,16 +200,16 @@
 													"position": position
 												}
 											}
-										] for facing, position in {"north": "ceiling_south", "south": "ceiling_south", "west": "ceiling_east", "east": "ceiling_east"}.items()
+										] for facing, position in {"\"north\"": "\"ceiling_south\"", "\"south\"": "\"ceiling_south\"", "\"west\"": "\"ceiling_east\"", "\"east\"": "\"ceiling_east\""}.items()
 									}
 								}
 							}
 						],
-						"floor": [
+						"\"floor\"": [
 							{
 								"function": "new_properties",
 								"options": {
-									"position": "floor_south"
+									"position": "\"floor_south\""
 								}
 							},
 							{
@@ -223,12 +223,12 @@
 													"position": position
 												}
 											}
-										] for facing, position in {"north": "floor_south", "south": "floor_south", "west": "floor_east", "east": "floor_east"}.items()
+										] for facing, position in {"\"north\"": "\"floor_south\"", "\"south\"": "\"floor_south\"", "\"west\"": "\"floor_east\"", "\"east\"": "\"floor_east\""}.items()
 									}
 								}
 							}
 						],
-						"wall": [
+						"\"wall\"": [
 							{
 								"function": "map_properties",
 								"options": {
@@ -240,7 +240,7 @@
 													"position": position
 												}
 											}
-										] for facing, position in {"north": "wall_north", "south": "wall_south", "west": "wall_west", "east": "wall_east"}.items()
+										] for facing, position in {"\"north\"": "\"wall_north\"", "\"south\"": "\"wall_south\"", "\"west\"": "\"wall_west\"", "\"east\"": "\"wall_east\""}.items()
 									}
 								}
 							}

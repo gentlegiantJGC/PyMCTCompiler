@@ -1,1 +1,1 @@
-numerical.pressure_plate("minecraft", "stone_pressure_plate", "stone")
+numerical.pressure_plate("minecraft", "stone_pressure_plate", "\"stone\"")

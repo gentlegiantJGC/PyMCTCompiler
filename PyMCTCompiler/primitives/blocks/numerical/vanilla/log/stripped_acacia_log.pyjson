@@ -1,1 +1,1 @@
-numerical.stripped_log_bedrock("minecraft", "stripped_acacia_log", "acacia")
+numerical.stripped_log_bedrock("minecraft", "stripped_acacia_log", "\"acacia\"")

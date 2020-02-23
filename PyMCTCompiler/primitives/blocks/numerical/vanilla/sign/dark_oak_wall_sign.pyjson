@@ -1,1 +1,1 @@
-numerical.wall_sign("minecraft", "darkoak_wall_sign", "dark_oak", "universal_minecraft", "wall_sign")
+numerical.wall_sign("minecraft", "darkoak_wall_sign", "\"dark_oak\"", "universal_minecraft", "wall_sign")

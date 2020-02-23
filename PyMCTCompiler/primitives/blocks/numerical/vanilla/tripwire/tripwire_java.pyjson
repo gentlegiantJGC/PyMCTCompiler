@@ -1,10 +1,10 @@
 numerical.bit_map(
 	"minecraft", "tripwire",
 	{
-		"disarmed": {0: "false", 8: "true"},
-		"attached": {0: "false", 4: "true"},
-		"suspended": {0: "false", 2: "true"},
-		"powered": {0: "false", 1: "true"},
+		"disarmed": {0: "\"false\"", 8: "\"true\""},
+		"attached": {0: "\"false\"", 4: "\"true\""},
+		"suspended": {0: "\"false\"", 2: "\"true\""},
+		"powered": {0: "\"false\"", 1: "\"true\""},
 	},
 	"universal_minecraft"
 )

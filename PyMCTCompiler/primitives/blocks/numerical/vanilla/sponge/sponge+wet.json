@@ -12,7 +12,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"wet": "false"
+								"wet": "\"false\""
 							}
 						}
 					],
@@ -24,7 +24,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"wet": "true"
+								"wet": "\"true\""
 							}
 						}
 					]
@@ -42,7 +42,7 @@
 				"function": "map_properties",
 				"options": {
 					"wet": {
-						"false": [
+						"\"false\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -50,7 +50,7 @@
 								}
 							}
 						],
-						"true": [
+						"\"true\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -66,12 +66,12 @@
 	"blockstate_specification": {
 		"properties": {
 			"wet": [
-				"false",
-				"true"
+				"\"false\"",
+				"\"true\""
 			]
 		},
 		"defaults": {
-			"wet": "false"
+			"wet": "\"false\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -83,8 +83,8 @@
 			"function": "carry_properties",
 			"options": {
 				"wet": [
-					"false",
-					"true"
+					"\"false\"",
+					"\"true\""
 				]
 			}
 		}
@@ -99,8 +99,8 @@
 				"function": "carry_properties",
 				"options": {
 					"wet": [
-						"false",
-						"true"
+						"\"false\"",
+						"\"true\""
 					]
 				}
 			}

@@ -1,1 +1,1 @@
-numerical.standing_sign("minecraft", "birch_standing_sign", "birch", "universal_minecraft", "sign")
+numerical.standing_sign("minecraft", "birch_standing_sign", "\"birch\"", "universal_minecraft", "sign")

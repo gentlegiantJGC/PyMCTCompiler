@@ -1,6 +1,6 @@
 {
-	# 3 = eggs {0: "0", 1: "1", 2: "2", 3: "3"}
-	# 12 = hatch {0: "0", 4: "1", 8: "2"}
+	# 3 = eggs {0: "\"0\"", 1: "\"1\"", 2: "\"2\"", 3: "\"3\""}
+	# 12 = hatch {0: "\"0\"", 4: "\"1\"", 8: "\"2\""}
 	"to_universal": [
 		{
 			"function": "map_properties",
@@ -18,8 +18,8 @@
 								"hatch": hatch
 							}
 						}
-					] for data3, eggs in {0: "0", 1: "1", 2: "2", 3: "3"}.items()
-					for data12, hatch in {0: "0", 4: "1", 8: "2"}.items()
+					] for data3, eggs in {0: "\"0\"", 1: "\"1\"", 2: "\"2\"", 3: "\"3\""}.items()
+					for data12, hatch in {0: "\"0\"", 4: "\"1\"", 8: "\"2\""}.items()
 				}
 			}
 		}
@@ -46,11 +46,11 @@
 													"block_data": str(data12 + data3)
 												}
 											}
-										] for data12, hatch in {0: "0", 4: "1", 8: "2"}.items()
+										] for data12, hatch in {0: "\"0\"", 4: "\"1\"", 8: "\"2\""}.items()
 									}
 								}
 							}
-						] for data3, eggs in {0: "0", 1: "1", 2: "2", 3: "3"}.items()
+						] for data3, eggs in {0: "\"0\"", 1: "\"1\"", 2: "\"2\"", 3: "\"3\""}.items()
 					}
 				}
 			}
@@ -58,12 +58,12 @@
 	},
 	"blockstate_specification": {
 		"properties": {
-			"eggs": list({0: "0", 1: "1", 2: "2", 3: "3"}.values()),
-			"hatch": list({0: "0", 4: "1", 8: "2"}.values())
+			"eggs": list({0: "\"0\"", 1: "\"1\"", 2: "\"2\"", 3: "\"3\""}.values()),
+			"hatch": list({0: "\"0\"", 4: "\"1\"", 8: "\"2\""}.values())
 		},
 		"defaults": {
-			"eggs": list({0: "0", 1: "1", 2: "2", 3: "3"}.values())[0],
-			"hatch": list({0: "0", 4: "1", 8: "2"}.values())[0]
+			"eggs": list({0: "\"0\"", 1: "\"1\"", 2: "\"2\"", 3: "\"3\""}.values())[0],
+			"hatch": list({0: "\"0\"", 4: "\"1\"", 8: "\"2\""}.values())[0]
 		}
 	},
 	"blockstate_to_universal": [
@@ -74,8 +74,8 @@
 		{
 			"function": "carry_properties",
 			"options": {
-				"eggs": list({0: "0", 1: "1", 2: "2", 3: "3"}.values()),
-				"hatch": list({0: "0", 4: "1", 8: "2"}.values())
+				"eggs": list({0: "\"0\"", 1: "\"1\"", 2: "\"2\"", 3: "\"3\""}.values()),
+				"hatch": list({0: "\"0\"", 4: "\"1\"", 8: "\"2\""}.values())
 			}
 		}
 	],
@@ -88,8 +88,8 @@
 			{
 				"function": "carry_properties",
 				"options": {
-					"eggs": list({0: "0", 1: "1", 2: "2", 3: "3"}.values()),
-					"hatch": list({0: "0", 4: "1", 8: "2"}.values())
+					"eggs": list({0: "\"0\"", 1: "\"1\"", 2: "\"2\"", 3: "\"3\""}.values()),
+					"hatch": list({0: "\"0\"", 4: "\"1\"", 8: "\"2\""}.values())
 				}
 			}
 		]

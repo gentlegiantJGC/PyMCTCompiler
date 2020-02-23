@@ -49,12 +49,12 @@
 	"blockstate_specification": {
 		"properties": {
 			"material": [
-				"dirt",
-				"coarse_dirt"
+				"\"dirt\"",
+				"\"coarse_dirt\""
 			]
 		},
 		"defaults": {
-			"material": "dirt"
+			"material": "\"dirt\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -87,7 +87,7 @@
 			{
 				"function": "new_properties",
 				"options": {
-					"material": "dirt"
+					"material": "\"dirt\""
 				}
 			}
 		],
@@ -99,7 +99,7 @@
 			{
 				"function": "new_properties",
 				"options": {
-					"material": "coarse_dirt"
+					"material": "\"coarse_dirt\""
 				}
 			}
 		]

@@ -15,7 +15,7 @@
 								"type": material
 							}
 						}
-					] for data, material in enumerate(["poppy", "blue_orchid", "allium", "azure_bluet", "red_tulip", "orange_tulip", "white_tulip", "pink_tulip", "oxeye_daisy", "cornflower", "lily_of_the_valley"])
+					] for data, material in enumerate(["\"poppy\"", "\"blue_orchid\"", "\"allium\"", "\"azure_bluet\"", "\"red_tulip\"", "\"orange_tulip\"", "\"white_tulip\"", "\"pink_tulip\"", "\"oxeye_daisy\"", "\"cornflower\"", "\"lily_of_the_valley\""])
 				}
 			}
 		}
@@ -37,7 +37,7 @@
 									"block_data": str(data)
 								}
 							}
-						] for data, material in enumerate(["poppy", "blue_orchid", "allium", "azure_bluet", "red_tulip", "orange_tulip", "white_tulip", "pink_tulip", "oxeye_daisy", "cornflower", "lily_of_the_valley"])
+						] for data, material in enumerate(["\"poppy\"", "\"blue_orchid\"", "\"allium\"", "\"azure_bluet\"", "\"red_tulip\"", "\"orange_tulip\"", "\"white_tulip\"", "\"pink_tulip\"", "\"oxeye_daisy\"", "\"cornflower\"", "\"lily_of_the_valley\""])
 					}
 				}
 			}
@@ -45,10 +45,10 @@
 	},
 	"blockstate_specification": {
 		"properties": {
-			"type": ["poppy", "blue_orchid", "allium", "azure_bluet", "red_tulip", "orange_tulip", "white_tulip", "pink_tulip", "oxeye_daisy", "cornflower", "lily_of_the_valley"]
+			"type": ["\"poppy\"", "\"blue_orchid\"", "\"allium\"", "\"azure_bluet\"", "\"red_tulip\"", "\"orange_tulip\"", "\"white_tulip\"", "\"pink_tulip\"", "\"oxeye_daisy\"", "\"cornflower\"", "\"lily_of_the_valley\""]
 		},
 		"defaults": {
-			"type": "poppy"
+			"type": "\"poppy\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -59,7 +59,7 @@
 		{
 			"function": "carry_properties",
 			"options": {
-				"type": ["poppy", "blue_orchid", "allium", "azure_bluet", "red_tulip", "orange_tulip", "white_tulip", "pink_tulip", "oxeye_daisy", "cornflower", "lily_of_the_valley"]
+				"type": ["\"poppy\"", "\"blue_orchid\"", "\"allium\"", "\"azure_bluet\"", "\"red_tulip\"", "\"orange_tulip\"", "\"white_tulip\"", "\"pink_tulip\"", "\"oxeye_daisy\"", "\"cornflower\"", "\"lily_of_the_valley\""]
 			}
 		}
 	],
@@ -80,7 +80,7 @@
 									"type": material
 								}
 							}
-						] for material in ["poppy", "blue_orchid", "allium", "azure_bluet", "red_tulip", "orange_tulip", "white_tulip", "pink_tulip", "oxeye_daisy", "cornflower", "lily_of_the_valley"]
+						] for material in ["\"poppy\"", "\"blue_orchid\"", "\"allium\"", "\"azure_bluet\"", "\"red_tulip\"", "\"orange_tulip\"", "\"white_tulip\"", "\"pink_tulip\"", "\"oxeye_daisy\"", "\"cornflower\"", "\"lily_of_the_valley\""]
 					}
 				}
 			}

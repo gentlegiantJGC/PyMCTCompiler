@@ -12,8 +12,8 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"facing": {0: "north", 1: "south", 2: "west", 3: "east"}[data & 3],
-								"eye": {0: "false", 4: "true"}[data & 4]
+								"facing": {0: "\"north\"", 1: "\"south\"", 2: "\"west\"", 3: "\"east\""}[data & 3],
+								"eye": {0: "\"false\"", 4: "\"true\""}[data & 4]
 							}
 						}
 					] for data in range(8)
@@ -43,11 +43,11 @@
 													"block_data": str(data4 + data3)
 												}
 											}
-										] for data3, facing in {0: "north", 1: "south", 2: "west", 3: "east"}.items()
+										] for data3, facing in {0: "\"north\"", 1: "\"south\"", 2: "\"west\"", 3: "\"east\""}.items()
 									}
 								}
 							}
-						] for data4, eye in {0: "false", 4: "true"}.items()
+						] for data4, eye in {0: "\"false\"", 4: "\"true\""}.items()
 					}
 				}
 			}
@@ -56,19 +56,19 @@
 	"blockstate_specification": {
 		"properties": {
 			"eye": [
-				"true",
-				"false"
+				"\"true\"",
+				"\"false\""
 			],
 			"facing": [
-				"north",
-				"south",
-				"west",
-				"east"
+				"\"north\"",
+				"\"south\"",
+				"\"west\"",
+				"\"east\""
 			]
 		},
 		"defaults": {
-			"facing": "south",
-			"eye": "false"
+			"facing": "\"south\"",
+			"eye": "\"false\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -80,14 +80,14 @@
 			"function": "carry_properties",
 			"options": {
 				"eye": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				],
 				"facing": [
-					"north",
-					"south",
-					"west",
-					"east"
+					"\"north\"",
+					"\"south\"",
+					"\"west\"",
+					"\"east\""
 				]
 			}
 		}
@@ -102,14 +102,14 @@
 				"function": "carry_properties",
 				"options": {
 					"eye": [
-						"true",
-						"false"
+						"\"true\"",
+						"\"false\""
 					],
 					"facing": [
-						"north",
-						"south",
-						"west",
-						"east"
+						"\"north\"",
+						"\"south\"",
+						"\"west\"",
+						"\"east\""
 					]
 				}
 			}

@@ -1,1 +1,1 @@
-numerical.stripped_log_bedrock("minecraft", "stripped_dark_oak_log", "dark_oak")
+numerical.stripped_log_bedrock("minecraft", "stripped_dark_oak_log", "\"dark_oak\"")

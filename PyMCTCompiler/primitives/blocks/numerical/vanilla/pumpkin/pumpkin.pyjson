@@ -1,1 +1,1 @@
-numerical.compass("minecraft", "pumpkin", {0: "south", 1: "west", 2: "north", 3: "east"}, "universal_minecraft")
+numerical.compass("minecraft", "pumpkin", {0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}, "universal_minecraft")

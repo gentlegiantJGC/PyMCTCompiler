@@ -15,7 +15,7 @@
 								"facing": facing
 							}
 						}
-					] for data, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
+					] for data, facing in {0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}.items()
 				}
 			}
 		}
@@ -37,7 +37,7 @@
 									"block_data": str(data)
 								}
 							}
-						] for data, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
+						] for data, facing in {0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}.items()
 					}
 				}
 			}
@@ -57,10 +57,10 @@
 	},
 	"blockstate_specification": {
 		"properties": {
-			"facing": list({0: "south", 1: "west", 2: "north", 3: "east"}.values())
+			"facing": list({0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}.values())
 		},
 		"defaults": {
-			"facing": list({0: "south", 1: "west", 2: "north", 3: "east"}.values())[0]
+			"facing": list({0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}.values())[0]
 		}
 	},
 	"blockstate_to_universal": [
@@ -71,7 +71,7 @@
 		{
 			"function": "carry_properties",
 			"options": {
-				"facing": list({0: "south", 1: "west", 2: "north", 3: "east"}.values())
+				"facing": list({0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}.values())
 			}
 		}
 	],
@@ -84,7 +84,7 @@
 			{
 				"function": "carry_properties",
 				"options": {
-					"facing": list({0: "south", 1: "west", 2: "north", 3: "east"}.values())
+					"facing": list({0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}.values())
 				}
 			}
 		],
@@ -96,7 +96,7 @@
 			{
 				"function": "new_properties",
 				"options": {
-					"facing": "south"
+					"facing": "\"south\""
 				}
 			}
 		]

@@ -12,7 +12,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"variant": "normal"
+								"variant": "\"normal\""
 							}
 						}
 					],
@@ -24,7 +24,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"variant": "mossy"
+								"variant": "\"mossy\""
 							}
 						}
 					],
@@ -36,7 +36,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"variant": "cracked"
+								"variant": "\"cracked\""
 							}
 						}
 					],
@@ -48,7 +48,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"variant": "chiseled"
+								"variant": "\"chiseled\""
 							}
 						}
 					]
@@ -66,7 +66,7 @@
 				"function": "map_properties",
 				"options": {
 					"variant": {
-						"normal": [
+						"\"normal\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -74,7 +74,7 @@
 								}
 							}
 						],
-						"mossy": [
+						"\"mossy\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -82,7 +82,7 @@
 								}
 							}
 						],
-						"cracked": [
+						"\"cracked\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -90,7 +90,7 @@
 								}
 							}
 						],
-						"chiseled": [
+						"\"chiseled\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -106,14 +106,14 @@
 	"blockstate_specification": {
 		"properties": {
 			"variant": [
-				"normal",
-				"cracked",
-				"mossy",
-				"chiseled"
+				"\"normal\"",
+				"\"cracked\"",
+				"\"mossy\"",
+				"\"chiseled\""
 			]
 		},
 		"defaults": {
-			"variant": "normal"
+			"variant": "\"normal\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -125,10 +125,10 @@
 			"function": "carry_properties",
 			"options": {
 				"variant": [
-					"normal",
-					"cracked",
-					"mossy",
-					"chiseled"
+					"\"normal\"",
+					"\"cracked\"",
+					"\"mossy\"",
+					"\"chiseled\""
 				]
 			}
 		}
@@ -143,10 +143,10 @@
 				"function": "carry_properties",
 				"options": {
 					"variant": [
-						"normal",
-						"cracked",
-						"mossy",
-						"chiseled"
+						"\"normal\"",
+						"\"cracked\"",
+						"\"mossy\"",
+						"\"chiseled\""
 					]
 				}
 			}

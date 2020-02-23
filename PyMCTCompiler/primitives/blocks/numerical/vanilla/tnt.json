@@ -16,7 +16,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"unstable": "false"
+								"unstable": "\"false\""
 							}
 						}
 					],
@@ -28,7 +28,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"unstable": "true"
+								"unstable": "\"true\""
 							}
 						}
 					]
@@ -46,7 +46,7 @@
 				"function": "map_properties",
 				"options": {
 					"unstable": {
-						"false": [
+						"\"false\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -54,7 +54,7 @@
 								}
 							}
 						],
-						"true": [
+						"\"true\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -70,12 +70,12 @@
 	"blockstate_specification": {
 		"properties": {
 			"unstable": [
-				"true",
-				"false"
+				"\"true\"",
+				"\"false\""
 			]
 		},
 		"defaults": {
-			"unstable": "false"
+			"unstable": "\"false\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -87,8 +87,8 @@
 			"function": "carry_properties",
 			"options": {
 				"unstable": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				]
 			}
 		}
@@ -103,8 +103,8 @@
 				"function": "carry_properties",
 				"options": {
 					"unstable": [
-						"true",
-						"false"
+						"\"true\"",
+						"\"false\""
 					]
 				}
 			}

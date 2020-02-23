@@ -12,7 +12,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"axis": {0: "y", 4: "x", 8: "z"}[data & 12],
+								"axis": {0: "\"y\"", 4: "\"x\"", 8: "\"z\""}[data & 12],
 							}
 						}
 					] for data in [0, 4, 8]
@@ -37,7 +37,7 @@
 									"block_data": str(data)
 								}
 							}
-						] for data, axis in {0: "y", 4: "x", 8: "z"}.items()
+						] for data, axis in {0: "\"y\"", 4: "\"x\"", 8: "\"z\""}.items()
 					}
 				}
 			}
@@ -46,13 +46,13 @@
 	"blockstate_specification": {
 		"properties": {
 			"axis": [
-				"x",
-				"y",
-				"z"
+				"\"x\"",
+				"\"y\"",
+				"\"z\""
 			]
 		},
 		"defaults": {
-			"axis": "y"
+			"axis": "\"y\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -64,9 +64,9 @@
 			"function": "carry_properties",
 			"options": {
 				"axis": [
-					"x",
-					"y",
-					"z"
+					"\"x\"",
+					"\"y\"",
+					"\"z\""
 				]
 			}
 		}
@@ -81,9 +81,9 @@
 				"function": "carry_properties",
 				"options": {
 					"axis": [
-						"x",
-						"y",
-						"z"
+						"\"x\"",
+						"\"y\"",
+						"\"z\""
 					]
 				}
 			}

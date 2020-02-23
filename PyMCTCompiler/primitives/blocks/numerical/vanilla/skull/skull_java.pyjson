@@ -21,7 +21,7 @@
                             }
                         }
                     ]
-                    for data7, facing in [[1, 'floor'], [2, 'north'], [3, 'south'], [4, 'west'], [5, 'east']]
+                    for data7, facing in [[1, "\"floor\""], [2, "\"north\""], [3, "\"south\""], [4, "\"west\""], [5, "\"east\""]]
                 }
             }
         }
@@ -56,10 +56,10 @@
                                 }
                             }
                         ] for rot, facing in enumerate([
-                            "north",
-                            "south",
-                            "west",
-                            "east"
+                            "\"north\"",
+                            "\"south\"",
+                            "\"west\"",
+                            "\"east\""
                         ])
                     }
                 }
@@ -69,15 +69,15 @@
     "blockstate_specification": {
         "properties": {
             "facing": [
-                "floor",
-                "north",
-                "south",
-                "west",
-                "east"
+                "\"floor\"",
+                "\"north\"",
+                "\"south\"",
+                "\"west\"",
+                "\"east\""
             ]
         },
         "defaults": {
-            "facing": "floor"
+            "facing": "\"floor\""
         }
     },
     "blockstate_to_universal": [
@@ -90,7 +90,7 @@
                             "function": "new_block",
                             "options": "universal_minecraft:head"
                         }
-                    ] if facing == 'floor' else [
+                    ] if facing == "\"floor\"" else [
                         {
                             "function": "new_block",
                             "options": "universal_minecraft:wall_head"
@@ -101,7 +101,7 @@
                                 "facing": facing
                             }
                         }
-                    ] for facing in ['north', 'south', 'west', 'east']
+                    ] for facing in ["\"floor\"", "\"north\"", "\"south\"", "\"west\"", "\"east\""]
                 }
             }
         }
@@ -115,7 +115,7 @@
             {
                 "function": "new_properties",
                 "options": {
-                    "facing": "floor"
+                    "facing": "\"floor\""
                 }
             }
         ],
@@ -128,10 +128,10 @@
                 "function": "carry_properties",
                 "options": {
                     "facing": [
-                        "north",
-                        "south",
-                        "west",
-                        "east"
+                        "\"north\"",
+                        "\"south\"",
+                        "\"west\"",
+                        "\"east\""
                     ]
                 }
             }

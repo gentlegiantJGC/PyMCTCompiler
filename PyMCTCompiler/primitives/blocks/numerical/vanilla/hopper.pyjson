@@ -16,7 +16,7 @@
 								"enabled": enabled
 							}
 						}
-					] for data8, enabled in {0: "false", 8: "true"}.items() for data7, facing in {0: "down", 2: "north", 3: "south", 4: "west", 5: "east"}.items()
+					] for data8, enabled in {0: "\"false\"", 8: "\"true\""}.items() for data7, facing in {0: "\"down\"", 2: "\"north\"", 3: "\"south\"", 4: "\"west\"", 5: "\"east\""}.items()
 				}
 			}
 		}
@@ -43,11 +43,11 @@
 													"block_data": str(data8 + data7)
 												}
 											}
-										] for data7, facing in {0: "down", 2: "north", 3: "south", 4: "west", 5: "east"}.items()
+										] for data7, facing in {0: "\"down\"", 2: "\"north\"", 3: "\"south\"", 4: "\"west\"", 5: "\"east\""}.items()
 									}
 								}
 							}
-						] for data8, enabled in {0: "false", 8: "true"}.items()
+						] for data8, enabled in {0: "\"false\"", 8: "\"true\""}.items()
 					}
 				}
 			}
@@ -56,20 +56,20 @@
 	"blockstate_specification": {
 		"properties": {
 			"enabled": [
-				"true",
-				"false"
+				"\"true\"",
+				"\"false\""
 			],
 			"facing": [
-				"down",
-				"north",
-				"south",
-				"west",
-				"east"
+				"\"down\"",
+				"\"north\"",
+				"\"south\"",
+				"\"west\"",
+				"\"east\""
 			]
 		},
 		"defaults": {
-			"enabled": "true",
-			"facing": "down"
+			"enabled": "\"true\"",
+			"facing": "\"down\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -81,15 +81,15 @@
 			"function": "carry_properties",
 			"options": {
 				"enabled": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				],
 				"facing": [
-					"down",
-					"north",
-					"south",
-					"west",
-					"east"
+					"\"down\"",
+					"\"north\"",
+					"\"south\"",
+					"\"west\"",
+					"\"east\""
 				]
 			}
 		}
@@ -104,15 +104,15 @@
 				"function": "carry_properties",
 				"options": {
 					"enabled": [
-						"true",
-						"false"
+						"\"true\"",
+						"\"false\""
 					],
 					"facing": [
-						"down",
-						"north",
-						"south",
-						"west",
-						"east"
+						"\"down\"",
+						"\"north\"",
+						"\"south\"",
+						"\"west\"",
+						"\"east\""
 					]
 				}
 			}

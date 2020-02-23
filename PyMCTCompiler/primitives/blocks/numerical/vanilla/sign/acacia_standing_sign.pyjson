@@ -1,1 +1,1 @@
-numerical.standing_sign("minecraft", "acacia_standing_sign", "acacia", "universal_minecraft", "sign")
+numerical.standing_sign("minecraft", "acacia_standing_sign", "\"acacia\"", "universal_minecraft", "sign")

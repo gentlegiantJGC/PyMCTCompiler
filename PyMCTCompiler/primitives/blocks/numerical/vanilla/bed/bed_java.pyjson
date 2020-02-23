@@ -12,9 +12,9 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"facing": {0: "south", 1: "west", 2: "north", 3: "east"}[data & 3],
-								"occupied": {0: "false", 4: "true"}[data & 4],
-								"part": {0: "foot", 8: "head"}[data & 8]
+								"facing": {0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}[data & 3],
+								"occupied": {0: "\"false\"", 4: "\"true\""}[data & 4],
+								"part": {0: "\"foot\"", 8: "\"head\""}[data & 8]
 							}
 						}
 					] for data in range(16)
@@ -49,15 +49,15 @@
 																	"block_data": str(data8 + data4 + data3)
 																}
 															}
-														] for data3, facing in {0: "south", 1: "west", 2: "north", 3: "east"}.items()
+														] for data3, facing in {0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}.items()
 													}
 												}
 											}
-										] for data4, occupied in {0: "false", 4: "true"}.items()
+										] for data4, occupied in {0: "\"false\"", 4: "\"true\""}.items()
 									}
 								}
 							}
-						] for data8, part in {0: "foot", 8: "head"}.items()
+						] for data8, part in {0: "\"foot\"", 8: "\"head\""}.items()
 					}
 				}
 			}
@@ -66,43 +66,43 @@
 	"blockstate_specification": {
 		"properties": {
 			"facing": [
-				"east",
-				"north",
-				"south",
-				"west"
+				"\"east\"",
+				"\"north\"",
+				"\"south\"",
+				"\"west\""
 			],
 			"occupied": [
-				"true",
-				"false"
+				"\"true\"",
+				"\"false\""
 			],
 			"part": [
-				"foot",
-				"head"
+				"\"foot\"",
+				"\"head\""
 			],
 			"color": [
-				"white",
-				"orange",
-				"magenta",
-				"light_blue",
-				"yellow",
-				"lime",
-				"pink",
-				"gray",
-				"light_gray",
-				"cyan",
-				"purple",
-				"blue",
-				"brown",
-				"green",
-				"red",
-				"black"
+				"\"white\"",
+				"\"orange\"",
+				"\"magenta\"",
+				"\"light_blue\"",
+				"\"yellow\"",
+				"\"lime\"",
+				"\"pink\"",
+				"\"gray\"",
+				"\"light_gray\"",
+				"\"cyan\"",
+				"\"purple\"",
+				"\"blue\"",
+				"\"brown\"",
+				"\"green\"",
+				"\"red\"",
+				"\"black\""
 			]
 		},
 		"defaults": {
-			"facing": "north",
-			"occupied": "false",
-			"part": "foot",
-			"color": "red"
+			"facing": "\"north\"",
+			"occupied": "\"false\"",
+			"part": "\"foot\"",
+			"color": "\"red\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -114,36 +114,36 @@
 			"function": "carry_properties",
 			"options": {
 				"facing": [
-					"east",
-					"north",
-					"south",
-					"west"
+					"\"east\"",
+					"\"north\"",
+					"\"south\"",
+					"\"west\""
 				],
 				"occupied": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				],
 				"part": [
-					"foot",
-					"head"
+					"\"foot\"",
+					"\"head\""
 				],
 				"color": [
-					"white",
-					"orange",
-					"magenta",
-					"light_blue",
-					"yellow",
-					"lime",
-					"pink",
-					"gray",
-					"light_gray",
-					"cyan",
-					"purple",
-					"blue",
-					"brown",
-					"green",
-					"red",
-					"black"
+					"\"white\"",
+					"\"orange\"",
+					"\"magenta\"",
+					"\"light_blue\"",
+					"\"yellow\"",
+					"\"lime\"",
+					"\"pink\"",
+					"\"gray\"",
+					"\"light_gray\"",
+					"\"cyan\"",
+					"\"purple\"",
+					"\"blue\"",
+					"\"brown\"",
+					"\"green\"",
+					"\"red\"",
+					"\"black\""
 				]
 			}
 		}
@@ -158,36 +158,36 @@
 				"function": "carry_properties",
 				"options": {
 					"facing": [
-						"east",
-						"north",
-						"south",
-						"west"
+						"\"east\"",
+						"\"north\"",
+						"\"south\"",
+						"\"west\""
 					],
 					"occupied": [
-						"true",
-						"false"
+						"\"true\"",
+						"\"false\""
 					],
 					"part": [
-						"foot",
-						"head"
+						"\"foot\"",
+						"\"head\""
 					],
 					"color": [
-						"white",
-						"orange",
-						"magenta",
-						"light_blue",
-						"yellow",
-						"lime",
-						"pink",
-						"gray",
-						"light_gray",
-						"cyan",
-						"purple",
-						"blue",
-						"brown",
-						"green",
-						"red",
-						"black"
+						"\"white\"",
+						"\"orange\"",
+						"\"magenta\"",
+						"\"light_blue\"",
+						"\"yellow\"",
+						"\"lime\"",
+						"\"pink\"",
+						"\"gray\"",
+						"\"light_gray\"",
+						"\"cyan\"",
+						"\"purple\"",
+						"\"blue\"",
+						"\"brown\"",
+						"\"green\"",
+						"\"red\"",
+						"\"black\""
 					]
 				}
 			}

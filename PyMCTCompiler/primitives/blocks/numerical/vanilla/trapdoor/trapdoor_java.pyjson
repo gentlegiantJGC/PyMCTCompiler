@@ -1,1 +1,1 @@
-numerical.trapdoor_java("minecraft", "trapdoor", "oak")
+numerical.trapdoor_java("minecraft", "trapdoor", "\"oak\"")
