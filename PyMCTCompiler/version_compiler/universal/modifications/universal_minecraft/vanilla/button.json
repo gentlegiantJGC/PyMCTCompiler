@@ -21,26 +21,26 @@
 					"stone"
 				],
 				"face": [
-					"floor",
-					"wall",
-					"ceiling"
+					"\"floor\"",
+					"\"wall\"",
+					"\"ceiling\""
 				],
 				"facing": [
-					"north",
-					"south",
-					"west",
-					"east"
+					"\"north\"",
+					"\"south\"",
+					"\"west\"",
+					"\"east\""
 				],
 				"powered": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				]
 			},
 			"defaults": {
 				"material": "oak",
-				"face": "wall",
-				"facing": "north",
-				"powered": "false"
+				"face": "\"wall\"",
+				"facing": "\"north\"",
+				"powered": "\"false\""
 			}
 		}
 	}

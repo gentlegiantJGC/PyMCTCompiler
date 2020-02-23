@@ -9,14 +9,14 @@
 		"stone_bricks": {
 			"properties": {
 				"variant": [
-					"normal",
+					"\"normal\"",
 					"cracked",
 					"mossy",
 					"chiseled"
 				]
 			},
 			"defaults": {
-				"variant": "normal"
+				"variant": "\"normal\""
 			}
 		}
 	}

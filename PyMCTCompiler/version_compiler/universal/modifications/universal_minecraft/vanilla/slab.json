@@ -77,14 +77,14 @@
 					"smooth_stone"
 				],
 				"type": [
-					"top",
-					"bottom",
-					"double"
+					"\"top\"",
+					"\"bottom\"",
+					"\"double\""
 				]
 			},
 			"defaults": {
 				"material": "oak",
-				"type": "bottom"
+				"type": "\"bottom\""
 			}
 		}
 	}

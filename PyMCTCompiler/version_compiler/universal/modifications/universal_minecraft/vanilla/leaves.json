@@ -19,28 +19,28 @@
 					"dark_oak"
 				],
 				"distance": [
-					"1",
-					"2",
-					"3",
-					"4",
-					"5",
-					"6",
-					"7"
+					"\"1\"",
+					"\"2\"",
+					"\"3\"",
+					"\"4\"",
+					"\"5\"",
+					"\"6\"",
+					"\"7\""
 				],
 				"persistent": [
-					"false",
-					"true"
+					"\"false\"",
+					"\"true\""
 				],
 				"check_decay": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				]
 			},
 			"defaults": {
 				"material": "oak",
-				"distance": "7",
-				"persistent": "false",
-				"check_decay": "true"
+				"distance": "\"7\"",
+				"persistent": "\"false\"",
+				"check_decay": "\"true\""
 			}
 		}
 	}

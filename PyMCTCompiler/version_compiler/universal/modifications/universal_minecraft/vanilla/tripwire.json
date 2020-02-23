@@ -6,47 +6,47 @@
 		"tripwire": {
 			"properties": {
 				"attached": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				],
 				"disarmed": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				],
 				"powered": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				],
 				"suspended": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				],
-				"east": [
-					"true",
-					"false"
+				"\"east\"": [
+					"\"true\"",
+					"\"false\""
 				],
-				"north": [
-					"true",
-					"false"
+				"\"north\"": [
+					"\"true\"",
+					"\"false\""
 				],
-				"south": [
-					"true",
-					"false"
+				"\"south\"": [
+					"\"true\"",
+					"\"false\""
 				],
-				"west": [
-					"true",
-					"false"
+				"\"west\"": [
+					"\"true\"",
+					"\"false\""
 				]
 			},
 			"defaults": {
-				"attached": "false",
-				"disarmed": "false",
-				"powered": "false",
-				"suspended": "true",
-				"east": "false",
-				"north": "false",
-				"south": "false",
-				"west": "false"
+				"attached": "\"false\"",
+				"disarmed": "\"false\"",
+				"powered": "\"false\"",
+				"suspended": "\"true\"",
+				"\"east\"": "\"false\"",
+				"\"north\"": "\"false\"",
+				"\"south\"": "\"false\"",
+				"\"west\"": "\"false\""
 			}
 		}
 	}

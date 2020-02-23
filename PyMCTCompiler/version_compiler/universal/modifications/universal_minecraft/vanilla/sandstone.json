@@ -9,14 +9,14 @@
 		"sandstone": {
 			"properties": {
 				"variant": [
-					"normal",
+					"\"normal\"",
 					"chiseled",
 					"cut",
 					"smooth"
 				]
 			},
 			"defaults": {
-				"variant": "normal"
+				"variant": "\"normal\""
 			}
 		}
 	}

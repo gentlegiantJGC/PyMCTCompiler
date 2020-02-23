@@ -6,13 +6,13 @@
 		"smooth_quartz": {
 			"properties": {
 				"axis": [
-					"x",
-					"y",
-					"z"
+					"\"x\"",
+					"\"y\"",
+					"\"z\""
 				]
 			},
 			"defaults": {
-				"axis": "y"
+				"axis": "\"y\""
 			}
 		}
 	}

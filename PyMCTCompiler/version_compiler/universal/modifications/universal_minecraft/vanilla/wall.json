@@ -16,7 +16,7 @@
 		"stone_brick_wall"
 	],
 	"add": {
-		"wall": {
+		"\"wall\"": {
 			"properties": {
 				"material": [
 					"cobblestone",
@@ -34,34 +34,34 @@
 					"sandstone",
 					"stone_brick"
 				],
-				"east": [
-					"true",
-					"false"
+				"\"east\"": [
+					"\"true\"",
+					"\"false\""
 				],
-				"north": [
-					"true",
-					"false"
+				"\"north\"": [
+					"\"true\"",
+					"\"false\""
 				],
-				"south": [
-					"true",
-					"false"
+				"\"south\"": [
+					"\"true\"",
+					"\"false\""
 				],
-				"up": [
-					"true",
-					"false"
+				"\"up\"": [
+					"\"true\"",
+					"\"false\""
 				],
-				"west": [
-					"true",
-					"false"
+				"\"west\"": [
+					"\"true\"",
+					"\"false\""
 				]
 			},
 			"defaults": {
 				"material": "cobblestone",
-				"east": "false",
-				"north": "false",
-				"south": "false",
-				"up": "true",
-				"west": "false"
+				"\"east\"": "\"false\"",
+				"\"north\"": "\"false\"",
+				"\"south\"": "\"false\"",
+				"\"up\"": "\"true\"",
+				"\"west\"": "\"false\""
 			}
 		}
 	}

@@ -31,7 +31,7 @@
 		"flower_pot": {
 			"properties": {
 				"plant": [
-					"none",
+					"\"none\"",
 					"dandelion",
 					"poppy",
 					"blue_orchid",
@@ -59,13 +59,13 @@
 					"wither_rose"
 				],
 				"update": [
-					"false",
-					"true"
+					"\"false\"",
+					"\"true\""
 				]
 			},
 			"defaults": {
-				"plant": "none",
-				"update": "false"
+				"plant": "\"none\"",
+				"update": "\"false\""
 			},
 			"unbt": "nbt.flower_pot.universal"
 		}

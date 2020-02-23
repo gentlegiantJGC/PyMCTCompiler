@@ -7,49 +7,49 @@
 		"purpur_block": {
 			"properties": {
 				"axis": [
-					"x",
-					"y",
-					"z"
+					"\"x\"",
+					"\"y\"",
+					"\"z\""
 				]
 			},
 			"defaults": {
-				"axis": "y"
+				"axis": "\"y\""
 			}
 		},
 		"chiseled_purpur_block": {
 			"properties": {
 				"axis": [
-					"x",
-					"y",
-					"z"
+					"\"x\"",
+					"\"y\"",
+					"\"z\""
 				]
 			},
 			"defaults": {
-				"axis": "y"
+				"axis": "\"y\""
 			}
 		},
 		"purpur_pillar": {
 			"properties": {
 				"axis": [
-					"x",
-					"y",
-					"z"
+					"\"x\"",
+					"\"y\"",
+					"\"z\""
 				]
 			},
 			"defaults": {
-				"axis": "y"
+				"axis": "\"y\""
 			}
 		},
 		"smooth_purpur": {
 			"properties": {
 				"axis": [
-					"x",
-					"y",
-					"z"
+					"\"x\"",
+					"\"y\"",
+					"\"z\""
 				]
 			},
 			"defaults": {
-				"axis": "y"
+				"axis": "\"y\""
 			}
 		}
 	}

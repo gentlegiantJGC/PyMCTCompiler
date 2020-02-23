@@ -10,19 +10,19 @@
 					"thick"
 				],
 				"leaves": [
-					"none",
-					"small",
-					"large"
+					"\"none\"",
+					"\"small\"",
+					"\"large\""
 				],
 				"stage": [
-					"0",
-					"1"
+					"\"0\"",
+					"\"1\""
 				]
 			},
 			"defaults": {
 				"thickness": "thin",
-				"leaves": "none",
-				"stage": "0"
+				"leaves": "\"none\"",
+				"stage": "\"0\""
 			}
 		}
 	}

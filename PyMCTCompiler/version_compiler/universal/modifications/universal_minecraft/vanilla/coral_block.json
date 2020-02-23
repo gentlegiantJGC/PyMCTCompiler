@@ -22,13 +22,13 @@
 					"horn"
 				],
 				"dead": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				]
 			},
 			"defaults": {
 				"type": "tube",
-				"dead": "false"
+				"dead": "\"false\""
 			}
 		}
 	}

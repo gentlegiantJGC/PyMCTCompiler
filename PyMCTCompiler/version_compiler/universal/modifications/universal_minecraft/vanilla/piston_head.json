@@ -6,41 +6,41 @@
 		"piston_head": {
 		    "properties": {
 		        "facing": [
-		            "north",
-		            "east",
-		            "south",
-		            "west",
-		            "up",
-		            "down"
+		            "\"north\"",
+		            "\"east\"",
+		            "\"south\"",
+		            "\"west\"",
+		            "\"up\"",
+		            "\"down\""
 		        ],
 		        "short": [
-		            "true",
-		            "false"
+		            "\"true\"",
+		            "\"false\""
 		        ]
 		    },
 		    "defaults": {
-		        "facing": "north",
-		        "short": "false"
+		        "facing": "\"north\"",
+		        "short": "\"false\""
 		    }
 		},
 		"sticky_piston_head": {
 		    "properties": {
 		        "facing": [
-		            "north",
-		            "east",
-		            "south",
-		            "west",
-		            "up",
-		            "down"
+		            "\"north\"",
+		            "\"east\"",
+		            "\"south\"",
+		            "\"west\"",
+		            "\"up\"",
+		            "\"down\""
 		        ],
 		        "short": [
-		            "true",
-		            "false"
+		            "\"true\"",
+		            "\"false\""
 		        ]
 		    },
 		    "defaults": {
-		        "facing": "north",
-		        "short": "false"
+		        "facing": "\"north\"",
+		        "short": "\"false\""
 		    }
 		}
 	}

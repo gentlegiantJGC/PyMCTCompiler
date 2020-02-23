@@ -6,12 +6,12 @@
 		"bamboo_sapling": {
 			"properties": {
 				"stage": [
-					"0",
-					"1"
+					"\"0\"",
+					"\"1\""
 				]
 			},
 			"defaults": {
-				"stage": "0"
+				"stage": "\"0\""
 			}
 		}
 	}

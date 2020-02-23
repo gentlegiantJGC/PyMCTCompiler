@@ -19,15 +19,15 @@
 					"dragon"
 				],
 				"facing": [
-					"north",
-					"south",
-					"west",
-					"east"
+					"\"north\"",
+					"\"south\"",
+					"\"west\"",
+					"\"east\""
 				]
 			},
 			"defaults": {
 				"mob": "skeleton",
-				"facing": "north"
+				"facing": "\"north\""
 			},
 			"unbt": "nbt.skull.universal"
 		}

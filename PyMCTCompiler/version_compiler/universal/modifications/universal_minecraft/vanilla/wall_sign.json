@@ -11,10 +11,10 @@
 		"wall_sign": {
 			"properties": {
 				"facing": [
-					"north",
-					"south",
-					"west",
-					"east"
+					"\"north\"",
+					"\"south\"",
+					"\"west\"",
+					"\"east\""
 				],
 				"material": [
 					"oak",
@@ -26,7 +26,7 @@
 				]
 			},
 			"defaults": {
-				"facing": "north",
+				"facing": "\"north\"",
 				"material": "oak"
 			},
 			"unbt": "nbt.sign.universal"

@@ -6,19 +6,19 @@
 		"sea_pickle": {
 			"properties": {
 				"pickles": [
-					"1",
-					"2",
-					"3",
-					"4"
+					"\"1\"",
+					"\"2\"",
+					"\"3\"",
+					"\"4\""
 				],
 				"dead": [
-					"false",
-					"true"
+					"\"false\"",
+					"\"true\""
 				]
 			},
 			"defaults": {
-				"pickles": "1",
-				"dead": "false"
+				"pickles": "\"1\"",
+				"dead": "\"false\""
 			}
 		}
 	}

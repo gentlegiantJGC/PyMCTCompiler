@@ -19,13 +19,13 @@
 					"dark_oak"
 				],
 				"stage": [
-					"0",
-					"1"
+					"\"0\"",
+					"\"1\""
 				]
 			},
 			"defaults": {
 				"material": "oak",
-				"stage": "0"
+				"stage": "\"0\""
 			}
 		}
 	}

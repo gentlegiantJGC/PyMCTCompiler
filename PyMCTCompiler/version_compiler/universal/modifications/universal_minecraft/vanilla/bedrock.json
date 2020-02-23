@@ -6,12 +6,12 @@
 		"bedrock": {
 			"properties": {
 				"infiniburn": [
-					"false",
-					"true"
+					"\"false\"",
+					"\"true\""
 				]
 			},
 			"defaults": {
-				"infiniburn": "false"
+				"infiniburn": "\"false\""
 			}
 		}
 	}

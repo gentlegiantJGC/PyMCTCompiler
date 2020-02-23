@@ -19,13 +19,13 @@
 					"large_fern"
 				],
 				"half": [
-					"upper",
-					"lower"
+					"\"upper\"",
+					"\"lower\""
 				]
 			},
 			"defaults": {
 				"type": "sunflower",
-				"half": "lower"
+				"half": "\"lower\""
 			}
 		}
 	}

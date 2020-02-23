@@ -6,17 +6,17 @@
 		"tnt": {
 			"properties": {
 				"unstable": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				],
 				"underwater": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				]
 			},
 			"defaults": {
-				"unstable": "false",
-				"underwater": "false"
+				"unstable": "\"false\"",
+				"underwater": "\"false\""
 			}
 		}
 	}

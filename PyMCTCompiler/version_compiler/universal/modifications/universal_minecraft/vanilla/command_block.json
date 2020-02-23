@@ -8,16 +8,16 @@
 		"command_block": {
 			"properties": {
 				"conditional": [
-					"false",
-					"true"
+					"\"false\"",
+					"\"true\""
 				],
 				"facing": [
-					"north",
-					"east",
-					"south",
-					"west",
-					"up",
-					"down"
+					"\"north\"",
+					"\"east\"",
+					"\"south\"",
+					"\"west\"",
+					"\"up\"",
+					"\"down\""
 				],
 				"mode": [
 					"impulse",
@@ -26,8 +26,8 @@
 				]
 			},
 			"defaults": {
-				"conditional": "false",
-				"facing": "north",
+				"conditional": "\"false\"",
+				"facing": "\"north\"",
 				"mode": "impulse"
 			},
 			"unbt": "nbt.command_block.universal"

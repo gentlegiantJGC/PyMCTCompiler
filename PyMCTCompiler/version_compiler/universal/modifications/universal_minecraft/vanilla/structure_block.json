@@ -6,16 +6,16 @@
 		"structure_block": {
 			"properties": {
 				"mode": [
-					"save",
-					"load",
-					"corner",
-					"data",
+					"\"save\"",
+					"\"load\"",
+					"\"corner\"",
+					"\"data\"",
 					"invalid",
 					"export"
 				]
 			},
 			"defaults": {
-				"mode": "save"
+				"mode": "\"save\""
 			},
 			"unbt": "nbt.structure_block.universal"
 		}
