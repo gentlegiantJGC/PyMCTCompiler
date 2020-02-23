@@ -8,13 +8,13 @@
 			"function": "carry_properties",
 			"options": {
 				"leaves": [
-					"none",
-					"small",
-					"large"
+					"\"none\"",
+					"\"small\"",
+					"\"large\""
 				],
 				"stage": [
-					"0",
-					"1"
+					"\"0\"",
+					"\"1\""
 				]
 			}
 		},
@@ -22,7 +22,7 @@
 			"function": "map_properties",
 			"options": {
 				"age": {
-					"0": [
+					"\"0\"": [
 						{
 							"function": "new_properties",
 							"options": {
@@ -30,7 +30,7 @@
 							}
 						}
 					],
-					"1": [
+					"\"1\"": [
 						{
 							"function": "new_properties",
 							"options": {
@@ -52,13 +52,13 @@
 				"function": "carry_properties",
 				"options": {
 					"leaves": [
-						"none",
-						"small",
-						"large"
+						"\"none\"",
+						"\"small\"",
+						"\"large\""
 					],
 					"stage": [
-						"0",
-						"1"
+						"\"0\"",
+						"\"1\""
 					]
 				}
 			},
@@ -70,7 +70,7 @@
 							{
 								"function": "new_properties",
 								"options": {
-									"age": "0"
+									"age": "\"0\""
 								}
 							}
 						],
@@ -78,7 +78,7 @@
 							{
 								"function": "new_properties",
 								"options": {
-									"age": "1"
+									"age": "\"1\""
 								}
 							}
 						]

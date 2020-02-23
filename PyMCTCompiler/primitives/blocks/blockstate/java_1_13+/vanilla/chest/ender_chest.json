@@ -1,10 +1,10 @@
 {
 	"specification": {
 		"properties": {
-			"facing": ["north", "south", "west", "east"]
+			"facing": ["\"north\"", "\"south\"", "\"west\"", "\"east\""]
 		},
 		"defaults": {
-			"facing": "north"
+			"facing": "\"north\""
 		}
 	},
 	"to_universal": [
@@ -14,7 +14,7 @@
 		}, {
 			"function": "carry_properties",
 			"options": {
-				"facing": ["north", "south", "west", "east"]
+				"facing": ["\"north\"", "\"south\"", "\"west\"", "\"east\""]
 			}
 		}
 	],
@@ -26,7 +26,7 @@
 			}, {
 				"function": "carry_properties",
 				"options": {
-					"facing": ["north", "south", "west", "east"]
+					"facing": ["\"north\"", "\"south\"", "\"west\"", "\"east\""]
 				}
 			}
 		]

@@ -1,1 +1,1 @@
-blockstate.material_helper("minecraft", "jungle_door", "jungle", "universal_minecraft", "door", {"facing": ["north","south","west","east"],"half": ["upper","lower"],"hinge": ["left","right"],"open": ["true","false"],"powered": ["true","false"]})
+blockstate.material_helper("minecraft", "jungle_door", "jungle", "universal_minecraft", "door", {"facing": ["\"north\"","\"south\"","\"west\"","\"east\""],"half": ["\"upper\"","\"lower\""],"hinge": ["\"left\"","\"right\""],"open": ["\"true\"","\"false\""],"powered": ["\"true\"","\"false\""]})

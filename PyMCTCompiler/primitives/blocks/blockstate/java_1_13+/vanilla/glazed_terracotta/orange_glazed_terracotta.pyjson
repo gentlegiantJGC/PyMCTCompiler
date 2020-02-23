@@ -1,1 +1,1 @@
-blockstate.colour("minecraft", "orange_glazed_terracotta", "orange", "universal_minecraft", "glazed_terracotta", {"facing": ["north","south","west","east"]})
+blockstate.colour("minecraft", "orange_glazed_terracotta", "\"orange\"", "universal_minecraft", "glazed_terracotta", {"facing": ["\"north\"","\"south\"","\"west\"","\"east\""]})

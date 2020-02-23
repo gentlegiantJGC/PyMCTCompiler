@@ -1,1 +1,1 @@
-blockstate.colour("minecraft", "white_terracotta", "white", "universal_minecraft", "stained_terracotta")
+blockstate.colour("minecraft", "white_terracotta", "\"white\"", "universal_minecraft", "stained_terracotta")

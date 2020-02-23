@@ -1,1 +1,1 @@
-blockstate.single_map("minecraft", "dragon_wall_head", "mob", "dragon", "minecraft:skeleton_wall_skull", "universal_minecraft", "wall_head", {"facing": ["north","south","west","east"]})
+blockstate.single_map("minecraft", "dragon_wall_head", "mob", "dragon", "minecraft:skeleton_wall_skull", "universal_minecraft", "wall_head", {"facing": ["\"north\"","\"south\"","\"west\"","\"east\""]})

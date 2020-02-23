@@ -2,21 +2,21 @@
 	"specification": {
 		"properties": {
 			"facing": [
-				"north",
-				"east",
-				"south",
-				"west",
-				"up",
-				"down"
+				"\"north\"",
+				"\"east\"",
+				"\"south\"",
+				"\"west\"",
+				"\"up\"",
+				"\"down\""
 			],
 			"open": [
-				"true",
-				"false"
+				"\"true\"",
+				"\"false\""
 			]
 		},
 		"defaults": {
-			"facing": "north",
-			"open": "false"
+			"facing": "\"north\"",
+			"open": "\"false\""
 		}
 	},
 	"to_universal": [
@@ -28,16 +28,16 @@
 			"function": "carry_properties",
 			"options": {
 				"facing": [
-					"north",
-					"east",
-					"south",
-					"west",
-					"up",
-					"down"
+					"\"north\"",
+					"\"east\"",
+					"\"south\"",
+					"\"west\"",
+					"\"up\"",
+					"\"down\""
 				],
 				"open": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				]
 			}
 		}
@@ -52,16 +52,16 @@
 				"function": "carry_properties",
 				"options": {
 					"facing": [
-						"north",
-						"east",
-						"south",
-						"west",
-						"up",
-						"down"
+						"\"north\"",
+						"\"east\"",
+						"\"south\"",
+						"\"west\"",
+						"\"up\"",
+						"\"down\""
 					],
 					"open": [
-						"true",
-						"false"
+						"\"true\"",
+						"\"false\""
 					]
 				}
 			}

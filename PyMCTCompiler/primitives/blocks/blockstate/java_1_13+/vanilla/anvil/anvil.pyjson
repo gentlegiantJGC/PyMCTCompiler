@@ -1,1 +1,1 @@
-blockstate.anvil("minecraft", "anvil", "normal", "universal_minecraft", "anvil")
+blockstate.anvil("minecraft", "anvil", "\"normal\"", "universal_minecraft", "anvil")

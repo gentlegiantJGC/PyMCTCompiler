@@ -1,1 +1,1 @@
-blockstate.single_map("minecraft", "sandstone", "variant", "normal", "minecraft:sandstone", "universal_minecraft", "sandstone")
+blockstate.single_map("minecraft", "sandstone", "variant", "\"normal\"", "minecraft:sandstone", "universal_minecraft", "sandstone")

@@ -1,10 +1,10 @@
 {
 	"specification": {
 		"properties": {
-			"mode": ["save", "load", "corner", "data"]
+			"mode": ["\"save\"", "\"load\"", "\"corner\"", "\"data\""]
 		},
 		"defaults": {
-			"mode": "save"
+			"mode": "\"save\""
 		}
 	},
 	"to_universal": [
@@ -14,7 +14,7 @@
 		}, {
 			"function": "carry_properties",
 			"options": {
-				"mode": ["save", "load", "corner", "data"]
+				"mode": ["\"save\"", "\"load\"", "\"corner\"", "\"data\""]
 			}
 		}
 	],
@@ -26,7 +26,7 @@
 			}, {
 				"function": "carry_properties",
 				"options": {
-					"mode": ["save", "load", "corner", "data"]
+					"mode": ["\"save\"", "\"load\"", "\"corner\"", "\"data\""]
 				}
 			}
 		]

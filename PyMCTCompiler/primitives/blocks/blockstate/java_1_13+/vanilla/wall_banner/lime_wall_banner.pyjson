@@ -1,1 +1,1 @@
-blockstate.colour("minecraft", "lime_wall_banner", "lime", "universal_minecraft", "wall_banner", {"facing": ["north","south","west","east"]})
+blockstate.colour("minecraft", "lime_wall_banner", "\"lime\"", "universal_minecraft", "wall_banner", {"facing": ["\"north\"","\"south\"","\"west\"","\"east\""]})

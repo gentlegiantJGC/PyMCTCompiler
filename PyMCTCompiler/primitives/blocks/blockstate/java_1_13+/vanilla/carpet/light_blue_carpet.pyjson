@@ -1,1 +1,1 @@
-blockstate.colour("minecraft", "light_blue_carpet", "light_blue", "universal_minecraft", "carpet")
+blockstate.colour("minecraft", "light_blue_carpet", "\"light_blue\"", "universal_minecraft", "carpet")

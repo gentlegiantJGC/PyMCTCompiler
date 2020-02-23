@@ -1,1 +1,1 @@
-blockstate.colour("minecraft", "cyan_wool", "cyan", "universal_minecraft", "wool")
+blockstate.colour("minecraft", "cyan_wool", "\"cyan\"", "universal_minecraft", "wool")

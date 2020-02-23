@@ -1,1 +1,1 @@
-blockstate.torch("minecraft", "redstone_wall_torch", True, "minecraft:redstone_torch", "universal_minecraft", "redstone_torch", {"lit": ["true", "false"]})
+blockstate.torch("minecraft", "redstone_wall_torch", True, "minecraft:redstone_torch", "universal_minecraft", "redstone_torch", {"lit": ["\"true\"", "\"false\""]})

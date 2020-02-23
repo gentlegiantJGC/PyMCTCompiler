@@ -1,1 +1,1 @@
-blockstate.material_helper("minecraft", "jungle_wall_sign", "jungle", "universal_minecraft", "wall_sign", {"facing": ["north","south","west","east"]})
+blockstate.material_helper("minecraft", "jungle_wall_sign", "jungle", "universal_minecraft", "wall_sign", {"facing": ["\"north\"","\"south\"","\"west\"","\"east\""]})

@@ -2,24 +2,24 @@
 	"specification": {
 		"properties": {
 			"facing": [
-				"north",
-				"south",
-				"west",
-				"east"
+				"\"north\"",
+				"\"south\"",
+				"\"west\"",
+				"\"east\""
 			],
 			"has_book": [
-				"true",
-				"false"
+				"\"true\"",
+				"\"false\""
 			],
 			"powered": [
-				"true",
-				"false"
+				"\"true\"",
+				"\"false\""
 			]
 		},
 		"defaults": {
-			"facing": "north",
-			"has_book": "false",
-			"powered": "false"
+			"facing": "\"north\"",
+			"has_book": "\"false\"",
+			"powered": "\"false\""
 		}
 	},
 	"to_universal": [
@@ -31,18 +31,18 @@
 			"function": "carry_properties",
 			"options": {
 				"facing": [
-					"north",
-					"south",
-					"west",
-					"east"
+					"\"north\"",
+					"\"south\"",
+					"\"west\"",
+					"\"east\""
 				],
 				"has_book": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				],
 				"powered": [
-					"true",
-					"false"
+					"\"true\"",
+					"\"false\""
 				]
 			}
 		}
@@ -57,18 +57,18 @@
 				"function": "carry_properties",
 				"options": {
 					"facing": [
-						"north",
-						"south",
-						"west",
-						"east"
+						"\"north\"",
+						"\"south\"",
+						"\"west\"",
+						"\"east\""
 					],
 					"has_book": [
-						"true",
-						"false"
+						"\"true\"",
+						"\"false\""
 					],
 					"powered": [
-						"true",
-						"false"
+						"\"true\"",
+						"\"false\""
 					]
 				}
 			}

@@ -1,1 +1,1 @@
-blockstate.material_helper("minecraft", "spruce_button", "spruce", "universal_minecraft", "button", {"face": ["floor","wall","ceiling"],"facing": ["north","south","west","east"],"powered": ["true","false"]})
+blockstate.material_helper("minecraft", "spruce_button", "spruce", "universal_minecraft", "button", {"face": ["\"floor\"","\"wall\"","\"ceiling\""],"facing": ["\"north\"","\"south\"","\"west\"","\"east\""],"powered": ["\"true\"","\"false\""]})
