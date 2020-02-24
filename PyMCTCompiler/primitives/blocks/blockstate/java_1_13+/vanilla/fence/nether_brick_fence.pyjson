@@ -1,1 +1,1 @@
-blockstate.material_helper("minecraft", "nether_brick_fence", "\"nether_brick\"", "universal_minecraft", "fence", {"\"east\"": ["\"true\"","\"false\""],"\"north\"": ["\"true\"","\"false\""],"\"south\"": ["\"true\"","\"false\""],"\"west\"": ["\"true\"","\"false\""]})
+blockstate.material_helper("minecraft", "nether_brick_fence", "\"nether_brick\"", "universal_minecraft", "fence", {"east": ["\"true\"","\"false\""],"north": ["\"true\"","\"false\""],"south": ["\"true\"","\"false\""],"west": ["\"true\"","\"false\""]})

@@ -1,1 +1,1 @@
-blockstate.material_helper("minecraft", "spruce_fence", "\"spruce\"", "universal_minecraft", "fence", {"\"east\"": ["\"true\"","\"false\""],"\"north\"": ["\"true\"","\"false\""],"\"south\"": ["\"true\"","\"false\""],"\"west\"": ["\"true\"","\"false\""]})
+blockstate.material_helper("minecraft", "spruce_fence", "\"spruce\"", "universal_minecraft", "fence", {"east": ["\"true\"","\"false\""],"north": ["\"true\"","\"false\""],"south": ["\"true\"","\"false\""],"west": ["\"true\"","\"false\""]})

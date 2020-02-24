@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "type": "wither_rose"
+                "type": "\"wither_rose\""
             }
         }
     ],
@@ -21,7 +21,7 @@
                 "function": "map_properties",
                 "options": {
                     "type": {
-                        "wither_rose": [
+                        "\"wither_rose\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:wither_rose"

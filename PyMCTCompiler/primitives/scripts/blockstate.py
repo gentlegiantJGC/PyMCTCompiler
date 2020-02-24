@@ -330,7 +330,7 @@ def stone(input_namespace: str, input_block_name: str, polished: bool, default_b
 		input_namespace,
 		input_block_name,
 		"polished",
-		'true' if polished else "\"false\"",
+		"\"true\"" if polished else "\"false\"",
 		default_block,
 		universal_namespace,
 		universal_block_name
@@ -884,7 +884,7 @@ def plant(input_namespace: str, input_block_name: str, universal_namespace: str 
 
 def double_plant(input_namespace: str, input_block_name: str, universal_namespace: str = None, universal_block_name: str = None, flower: str = None) -> dict:
 	if flower is None:
-		flower = input_block_name
+		flower = f"\"{input_block_name}\""
 
 	return single_map(
 		input_namespace,
