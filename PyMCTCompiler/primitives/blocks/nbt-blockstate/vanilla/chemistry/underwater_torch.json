@@ -12,8 +12,7 @@
         },
         "defaults": {
             "torch_facing_direction": "\"top\""
-        },
-        "nbt_properties": true
+        }
     },
     "to_universal": [
         {
