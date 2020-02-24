@@ -1,6 +1,6 @@
 from typing import Set
 from PyMCTCompiler.translation_functions import BaseTranslationFunction
-from PyMCTCompiler.helpers import verify_snbt
+from PyMCTCompiler.helpers import verify_snbt, verify_string
 
 
 class NewProperties(BaseTranslationFunction):
@@ -31,6 +31,7 @@ class NewProperties(BaseTranslationFunction):
 		assert isinstance(self['options'], dict), '"options" must be a dictionary'
 		for key, val in self['options'].items():
 			assert isinstance(key, str), '"options" keys must be strings'
+			verify_string(key)
 			if isinstance(val, list) and val[0] == 'snbt':
 				val = self['options'][key] = val[1]
 

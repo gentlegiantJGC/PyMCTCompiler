@@ -32,6 +32,10 @@ def verify_snbt(val):
 		raise Exception('This function does not work with nested data types')
 
 
+def verify_string(val):
+	assert '"' not in val, f'" character found in {val}'
+
+
 def check_specification_format(data: dict):
 	assert isinstance(data, dict), 'Specification must be a dictionary'
 	properties = data.get('properties', {})
@@ -42,6 +46,7 @@ def check_specification_format(data: dict):
 
 	for key, val in properties.items():
 		assert isinstance(key, str), 'Property names must be strings'
+		verify_string(key)
 		assert isinstance(val, list), 'Property options must be a list of strings'
 		assert all(isinstance(prop, str) for prop in val), 'All property options must be strings'
 		remove_list_duplicates(val)
