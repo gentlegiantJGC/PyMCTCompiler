@@ -15,11 +15,11 @@
 		"coral_block": {
 			"properties": {
 				"type": [
-					"tube",
-					"brain",
-					"bubble",
-					"fire",
-					"horn"
+					"\"tube\"",
+					"\"brain\"",
+					"\"bubble\"",
+					"\"fire\"",
+					"\"horn\""
 				],
 				"dead": [
 					"\"true\"",
@@ -27,7 +27,7 @@
 				]
 			},
 			"defaults": {
-				"type": "tube",
+				"type": "\"tube\"",
 				"dead": "\"false\""
 			}
 		}

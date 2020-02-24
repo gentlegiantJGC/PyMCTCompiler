@@ -11,12 +11,12 @@
 		"fence_gate": {
 			"properties": {
 				"material": [
-					"oak",
-					"spruce",
-					"birch",
-					"jungle",
-					"acacia",
-					"dark_oak"
+					"\"oak\"",
+					"\"spruce\"",
+					"\"birch\"",
+					"\"jungle\"",
+					"\"acacia\"",
+					"\"dark_oak\""
 				],
 				"facing": [
 					"\"north\"",
@@ -38,7 +38,7 @@
 				]
 			},
 			"defaults": {
-				"material": "oak",
+				"material": "\"oak\"",
 				"facing": "\"north\"",
 				"in_wall": "\"false\"",
 				"open": "\"false\"",

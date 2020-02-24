@@ -48,21 +48,21 @@ _B17 = NBTRemapHelper(
 )
 
 skull_types = [
-    "skeleton",
-    "wither_skeleton",
-    "zombie",
-    "player",
-    "creeper",
-    "dragon"
+    "\"skeleton\"",
+    "\"wither_skeleton\"",
+    "\"zombie\"",
+    "\"player\"",
+    "\"creeper\"",
+    "\"dragon\""
 ]
 
 bedrock_wall_directions = [
-    "north",
-    "south",
-    "west",
-    "east"
+    "\"north\"",
+    "\"south\"",
+    "\"west\"",
+    "\"east\""
 ]
-no_drop_bits = ["false", "true"]
+no_drop_bits = ["\"false\"", "\"true\""]
 
 _BExtra_17 = TranslationFile(
     [
@@ -131,7 +131,7 @@ _BExtra_17 = TranslationFile(
                         ] for skull_num, skull_type in enumerate(skull_types)
                     },
                     "rotation": {
-                        str(rot): [
+                        f"\"{rot}\"": [
                             {
                                 "function": "new_nbt",
                                 "options": [
@@ -236,7 +236,7 @@ _BExtra_113 = TranslationFile(
                         ] for skull_num, skull_type in enumerate(skull_types)
                     },
                     "rotation": {
-                        str(rot): [
+                        f"\"{rot}\"": [
                             {
                                 "function": "new_nbt",
                                 "options": [
@@ -317,7 +317,7 @@ _JExtra_19 = TranslationFile(
                                                             {
                                                                 "function": "new_properties",
                                                                 "options": {
-                                                                    "rotation": str(rot)
+                                                                    "rotation": f"\"{rot}\""
                                                                 }
                                                             }
                                                         ] for rot in range(16)
@@ -353,7 +353,7 @@ _JExtra_19 = TranslationFile(
                         ] for skull_num, skull_type in enumerate(skull_types)
                     },
                     "rotation": {
-                        str(rot): [
+                        f"\"{rot}\"": [
                             {
                                 "function": "new_nbt",
                                 "options": [

@@ -17,12 +17,12 @@
 		"log": {
 			"properties": {
 				"material": [
-					"oak",
-					"spruce",
-					"birch",
-					"jungle",
-					"acacia",
-					"dark_oak"
+					"\"oak\"",
+					"\"spruce\"",
+					"\"birch\"",
+					"\"jungle\"",
+					"\"acacia\"",
+					"\"dark_oak\""
 				],
 				"axis": [
 					"\"x\"",
@@ -35,7 +35,7 @@
 				]
 			},
 			"defaults": {
-				"material": "oak",
+				"material": "\"oak\"",
 				"axis": "\"y\"",
 				"stripped": "\"false\""
 			}

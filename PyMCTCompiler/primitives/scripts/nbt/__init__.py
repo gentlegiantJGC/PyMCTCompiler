@@ -204,22 +204,22 @@ class NBTRemapHelper(TranslationFile):
 
 
 colours_16 = [
-    "white",
-    "orange",
-    "magenta",
-    "light_blue",
-    "yellow",
-    "lime",
-    "pink",
-    "gray",
-    "light_gray",
-    "cyan",
-    "purple",
-    "blue",
-    "brown",
-    "green",
-    "red",
-    "black"
+    "\"white\"",
+    "\"orange\"",
+    "\"magenta\"",
+    "\"light_blue\"",
+    "\"yellow\"",
+    "\"lime\"",
+    "\"pink\"",
+    "\"gray\"",
+    "\"light_gray\"",
+    "\"cyan\"",
+    "\"purple\"",
+    "\"blue\"",
+    "\"brown\"",
+    "\"green\"",
+    "\"red\"",
+    "\"black\""
 ]
 
 colours_16_inverse = list(reversed(colours_16))

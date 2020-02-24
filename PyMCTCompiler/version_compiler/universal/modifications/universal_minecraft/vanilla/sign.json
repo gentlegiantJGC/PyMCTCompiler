@@ -29,17 +29,17 @@
 					"\"15\""
 				],
 				"material": [
-					"oak",
-					"spruce",
-					"birch",
-					"jungle",
-					"acacia",
-					"dark_oak"
+					"\"oak\"",
+					"\"spruce\"",
+					"\"birch\"",
+					"\"jungle\"",
+					"\"acacia\"",
+					"\"dark_oak\""
 				]
 			},
 			"defaults": {
 				"rotation": "\"0\"",
-				"material": "oak"
+				"material": "\"oak\""
 			},
 			"unbt": "nbt.sign.universal"
 		}

@@ -12,7 +12,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"type": "dead_bush"
+								"type": "\"dead_bush\""
 							}
 						}
 					]
@@ -26,7 +26,7 @@
 				"function": "map_properties",
 				"options": {
 					"type": {
-						"dead_bush": [
+						"\"dead_bush\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:deadbush"
@@ -51,7 +51,7 @@
 		{
 			"function": "new_properties",
 			"options": {
-				"type": "dead_bush"
+				"type": "\"dead_bush\""
 			}
 		}
 	],
@@ -61,7 +61,7 @@
 				"function": "map_properties",
 				"options": {
 					"type": {
-						"dead_bush": [
+						"\"dead_bush\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:deadbush"

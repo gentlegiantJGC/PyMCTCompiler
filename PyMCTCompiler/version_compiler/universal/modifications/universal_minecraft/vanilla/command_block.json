@@ -20,15 +20,15 @@
 					"\"down\""
 				],
 				"mode": [
-					"impulse",
-					"chain",
-					"repeating"
+					"\"impulse\"",
+					"\"chain\"",
+					"\"repeating\""
 				]
 			},
 			"defaults": {
 				"conditional": "\"false\"",
 				"facing": "\"north\"",
-				"mode": "impulse"
+				"mode": "\"impulse\""
 			},
 			"unbt": "nbt.command_block.universal"
 		}

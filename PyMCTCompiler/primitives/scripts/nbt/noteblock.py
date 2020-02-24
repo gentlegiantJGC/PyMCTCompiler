@@ -36,7 +36,7 @@ _J19 = TranslationFile(
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "note": str(data)
+                                                    "note": f"\"{data}\""
                                                 }
                                             }
                                         ] for data in range(25)
@@ -56,7 +56,7 @@ _J19 = TranslationFile(
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "powered": "false"
+                                                    "powered": "\"false\""
                                                 }
                                             }
                                         ],
@@ -64,7 +64,7 @@ _J19 = TranslationFile(
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "powered": "true"
+                                                    "powered": "\"true\""
                                                 }
                                             }
                                         ]
@@ -82,7 +82,7 @@ _J19 = TranslationFile(
             "function": "map_properties",
             "options": {
                 "note": {
-                    str(data): [
+                    f"\"{data}\"": [
                         {
                             "function": "new_nbt",
                             "options": {
@@ -93,7 +93,7 @@ _J19 = TranslationFile(
                     ] for data in range(25)
                 },
                 "powered": {
-                    "false": [
+                    "\"false\"": [
                         {
                             "function": "new_nbt",
                             "options": {
@@ -102,7 +102,7 @@ _J19 = TranslationFile(
                             }
                         }
                     ],
-                    "true": [
+                    "\"true\"": [
                         {
                             "function": "new_nbt",
                             "options": {
@@ -139,7 +139,7 @@ _B17 = TranslationFile(
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "note": str(data)
+                                                    "note": f"\"{data}\""
                                                 }
                                             }
                                         ] for data in range(25)
@@ -157,7 +157,7 @@ _B17 = TranslationFile(
             "function": "map_properties",
             "options": {
                 "note": {
-                    str(data): [
+                    f"\"{data}\"": [
                         {
                             "function": "new_nbt",
                             "options": {

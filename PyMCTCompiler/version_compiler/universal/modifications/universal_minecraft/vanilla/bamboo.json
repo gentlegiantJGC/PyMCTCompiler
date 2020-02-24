@@ -6,8 +6,8 @@
 		"bamboo": {
 			"properties": {
 				"thickness": [
-					"thin",
-					"thick"
+					"\"thin\"",
+					"\"thick\""
 				],
 				"leaves": [
 					"\"none\"",
@@ -20,7 +20,7 @@
 				]
 			},
 			"defaults": {
-				"thickness": "thin",
+				"thickness": "\"thin\"",
 				"leaves": "\"none\"",
 				"stage": "\"0\""
 			}

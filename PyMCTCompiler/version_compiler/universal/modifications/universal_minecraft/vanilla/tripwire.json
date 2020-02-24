@@ -21,19 +21,19 @@
 					"\"true\"",
 					"\"false\""
 				],
-				"\"east\"": [
+				"east": [
 					"\"true\"",
 					"\"false\""
 				],
-				"\"north\"": [
+				"north": [
 					"\"true\"",
 					"\"false\""
 				],
-				"\"south\"": [
+				"south": [
 					"\"true\"",
 					"\"false\""
 				],
-				"\"west\"": [
+				"west": [
 					"\"true\"",
 					"\"false\""
 				]
@@ -43,10 +43,10 @@
 				"disarmed": "\"false\"",
 				"powered": "\"false\"",
 				"suspended": "\"true\"",
-				"\"east\"": "\"false\"",
-				"\"north\"": "\"false\"",
-				"\"south\"": "\"false\"",
-				"\"west\"": "\"false\""
+				"east": "\"false\"",
+				"north": "\"false\"",
+				"south": "\"false\"",
+				"west": "\"false\""
 			}
 		}
 	}

@@ -12,13 +12,13 @@
 		"button": {
 			"properties": {
 				"material": [
-					"oak",
-					"spruce",
-					"birch",
-					"jungle",
-					"acacia",
-					"dark_oak",
-					"stone"
+					"\"oak\"",
+					"\"spruce\"",
+					"\"birch\"",
+					"\"jungle\"",
+					"\"acacia\"",
+					"\"dark_oak\"",
+					"\"stone\""
 				],
 				"face": [
 					"\"floor\"",
@@ -37,7 +37,7 @@
 				]
 			},
 			"defaults": {
-				"material": "oak",
+				"material": "\"oak\"",
 				"face": "\"wall\"",
 				"facing": "\"north\"",
 				"powered": "\"false\""

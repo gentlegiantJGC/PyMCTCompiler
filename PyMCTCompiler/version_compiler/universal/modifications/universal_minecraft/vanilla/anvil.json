@@ -9,9 +9,9 @@
 			"properties": {
 				"damage": [
 					"\"normal\"",
-					"chipped",
-					"damaged",
-					"broken"
+					"\"chipped\"",
+					"\"damaged\"",
+					"\"broken\""
 				],
 				"facing": [
 					"\"north\"",

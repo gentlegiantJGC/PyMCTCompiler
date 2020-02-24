@@ -11,12 +11,12 @@
 		"\"head\"": {
 			"properties": {
 				"mob": [
-					"skeleton",
-					"wither_skeleton",
-					"zombie",
-					"player",
-					"creeper",
-					"dragon"
+					"\"skeleton\"",
+					"\"wither_skeleton\"",
+					"\"zombie\"",
+					"\"player\"",
+					"\"creeper\"",
+					"\"dragon\""
 				],
 				"rotation": [
 					"\"0\"",
@@ -42,7 +42,7 @@
 				]
 			},
 			"defaults": {
-				"mob": "skeleton",
+				"mob": "\"skeleton\"",
 				"rotation": "\"0\"",
 				"no_drop": "\"false\""
 			},

@@ -5,27 +5,27 @@
 	"add": {
 		"mushroom_stem": {
             "properties": {
-                "\"down\"": [
+                "down": [
                     "\"true\"",
                     "\"false\""
                 ],
-                "\"east\"": [
+                "east": [
                     "\"true\"",
                     "\"false\""
                 ],
-                "\"north\"": [
+                "north": [
                     "\"true\"",
                     "\"false\""
                 ],
-                "\"south\"": [
+                "south": [
                     "\"true\"",
                     "\"false\""
                 ],
-                "\"up\"": [
+                "up": [
                     "\"true\"",
                     "\"false\""
                 ],
-                "\"west\"": [
+                "west": [
                     "\"true\"",
                     "\"false\""
                 ],
@@ -35,12 +35,12 @@
                 ]
             },
             "defaults": {
-                "\"down\"": "\"true\"",
-                "\"east\"": "\"true\"",
-                "\"north\"": "\"true\"",
-                "\"south\"": "\"true\"",
-                "\"up\"": "\"true\"",
-                "\"west\"": "\"true\"",
+                "down": "\"true\"",
+                "east": "\"true\"",
+                "north": "\"true\"",
+                "south": "\"true\"",
+                "up": "\"true\"",
+                "west": "\"true\"",
                 "material": "\"red\""
             }
         }

@@ -16,52 +16,52 @@
 		"stone_brick_wall"
 	],
 	"add": {
-		"\"wall\"": {
+		"wall": {
 			"properties": {
 				"material": [
-					"cobblestone",
-					"mossy_cobblestone",
-					"andesite",
-					"brick",
-					"diorite",
-					"end_stone_brick",
-					"granite",
-					"mossy_stone_brick",
-					"nether_brick",
-					"prismarine",
-					"red_nether_brick",
-					"red_sandstone",
-					"sandstone",
-					"stone_brick"
+					"\"cobblestone\"",
+					"\"mossy_cobblestone\"",
+					"\"andesite\"",
+					"\"brick\"",
+					"\"diorite\"",
+					"\"end_stone_brick\"",
+					"\"granite\"",
+					"\"mossy_stone_brick\"",
+					"\"nether_brick\"",
+					"\"prismarine\"",
+					"\"red_nether_brick\"",
+					"\"red_sandstone\"",
+					"\"sandstone\"",
+					"\"stone_brick\""
 				],
-				"\"east\"": [
+				"east": [
 					"\"true\"",
 					"\"false\""
 				],
-				"\"north\"": [
+				"north": [
 					"\"true\"",
 					"\"false\""
 				],
-				"\"south\"": [
+				"south": [
 					"\"true\"",
 					"\"false\""
 				],
-				"\"up\"": [
+				"up": [
 					"\"true\"",
 					"\"false\""
 				],
-				"\"west\"": [
+				"west": [
 					"\"true\"",
 					"\"false\""
 				]
 			},
 			"defaults": {
-				"material": "cobblestone",
-				"\"east\"": "\"false\"",
-				"\"north\"": "\"false\"",
-				"\"south\"": "\"false\"",
-				"\"up\"": "\"true\"",
-				"\"west\"": "\"false\""
+				"material": "\"cobblestone\"",
+				"east": "\"false\"",
+				"north": "\"false\"",
+				"south": "\"false\"",
+				"up": "\"true\"",
+				"west": "\"false\""
 			}
 		}
 	}

@@ -896,8 +896,8 @@ def double_plant(input_namespace: str, input_block_name: str, universal_namespac
 		universal_block_name,
 		{
 			"half": [
-				"upper",
-				"lower"
+				"\"upper\"",
+				"\"lower\""
 			]
 		}
 	)

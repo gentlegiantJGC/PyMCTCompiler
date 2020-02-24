@@ -1,1 +1,1 @@
-numerical.command_block("minecraft", "repeating_command_block", "repeating", "universal_minecraft", "command_block")
+numerical.command_block("minecraft", "repeating_command_block", "\"repeating\"", "universal_minecraft", "command_block")

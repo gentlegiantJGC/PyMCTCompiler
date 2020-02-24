@@ -84,7 +84,7 @@ _BedrockHasBook = TranslationFile(
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "has_book": "false"
+                                                    "has_book": "\"false\""
                                                 }
                                             }
                                         ],
@@ -92,7 +92,7 @@ _BedrockHasBook = TranslationFile(
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "has_book": "true"
+                                                    "has_book": "\"true\""
                                                 }
                                             }
                                         ]
@@ -110,8 +110,8 @@ _BedrockHasBook = TranslationFile(
             "function": "map_properties",
             "options": {
                 "has_book": {
-                    "false": [],
-                    "true": [
+                    "\"false\"": [],
+                    "\"true\"": [
                         {
                             "function": "new_nbt",
                             "options": [

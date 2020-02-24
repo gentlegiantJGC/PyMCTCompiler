@@ -45,12 +45,12 @@ _BedrockFacing = TranslationFile(
                                                 }
                                             }
                                         ] for facing, direction in enumerate([
-                                            "down",
-                                            "up",
-                                            "north",
-                                            "south",
-                                            "west",
-                                            "east"
+                                            "\"down\"",
+                                            "\"up\"",
+                                            "\"north\"",
+                                            "\"south\"",
+                                            "\"west\"",
+                                            "\"east\""
                                         ])
                                     }
                                 }
@@ -77,12 +77,12 @@ _BedrockFacing = TranslationFile(
                             ]
                         }
                     ] for facing, direction in enumerate([
-                        "down",
-                        "up",
-                        "north",
-                        "south",
-                        "west",
-                        "east"
+                        "\"down\"",
+                        "\"up\"",
+                        "\"north\"",
+                        "\"south\"",
+                        "\"west\"",
+                        "\"east\""
                     ])
                 }
             }

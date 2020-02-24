@@ -7,7 +7,7 @@
 		{
 			"function": "new_properties",
 			"options": {
-				"cauldron_liquid": "lava"
+				"cauldron_liquid": "\"lava\""
 			}
 		},
 		{
@@ -140,7 +140,7 @@
 				"function": "map_properties",
 				"options": {
 					"cauldron_liquid": {
-						"lava": [
+						"\"lava\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:lava_cauldron"
@@ -252,7 +252,7 @@
         {
 			"function": "new_properties",
 			"options": {
-				"cauldron_liquid": "lava"
+				"cauldron_liquid": "\"lava\""
 			}
 		}
     ],
@@ -280,7 +280,7 @@
 				"function": "map_properties",
 				"options": {
 					"cauldron_liquid": {
-						"lava": [
+						"\"lava\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:lava_cauldron"

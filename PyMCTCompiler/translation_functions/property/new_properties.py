@@ -35,9 +35,6 @@ class NewProperties(BaseTranslationFunction):
 			if isinstance(val, list) and val[0] == 'snbt':
 				val = self['options'][key] = val[1]
 
-			else:
-				raise Exception('new_properties "options" values must be SNBT')
-
 			if not isinstance(val, str):
 				raise Exception('"options" values must be strings')
 

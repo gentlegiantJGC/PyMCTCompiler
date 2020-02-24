@@ -11,12 +11,12 @@
 		"double_plant": {
 			"properties": {
 				"type": [
-					"sunflower",
-					"lilac",
-					"rose_bush",
-					"peony",
-					"tall_grass",
-					"large_fern"
+					"\"sunflower\"",
+					"\"lilac\"",
+					"\"rose_bush\"",
+					"\"peony\"",
+					"\"tall_grass\"",
+					"\"large_fern\""
 				],
 				"half": [
 					"\"upper\"",
@@ -24,7 +24,7 @@
 				]
 			},
 			"defaults": {
-				"type": "sunflower",
+				"type": "\"sunflower\"",
 				"half": "\"lower\""
 			}
 		}

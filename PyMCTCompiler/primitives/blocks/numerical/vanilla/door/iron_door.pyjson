@@ -1,1 +1,1 @@
-numerical.door("minecraft", "iron_door", "iron")
+numerical.door("minecraft", "iron_door", "\"iron\"")

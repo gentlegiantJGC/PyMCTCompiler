@@ -1664,7 +1664,7 @@ def rail(input_namespace: str, input_block_name: str, universal_namespace: str =
 				"shape": list(data_map.values())
 			},
 			"defaults": {
-				"shape": "north_south"
+				"shape": "\"north_south\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -3760,7 +3760,7 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 							{
 								"function": "new_properties",
 								"options": {
-									"half": "upper",
+									"half": "\"upper\"",
 									"powered": {0: "\"false\"", 2: "\"true\""}[data & 2],
 									"hinge": {0: "\"left\"", 1: "\"right\""}[data & 1]
 								}

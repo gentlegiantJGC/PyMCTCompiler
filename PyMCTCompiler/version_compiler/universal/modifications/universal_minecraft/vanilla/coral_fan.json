@@ -25,11 +25,11 @@
 		"coral_fan": {
 			"properties": {
 				"type": [
-					"tube",
-					"brain",
-					"bubble",
-					"fire",
-					"horn"
+					"\"tube\"",
+					"\"brain\"",
+					"\"bubble\"",
+					"\"fire\"",
+					"\"horn\""
 				],
 				"facing": [
 					"\"north\"",
@@ -44,7 +44,7 @@
 				]
 			},
 			"defaults": {
-				"type": "tube",
+				"type": "\"tube\"",
 				"facing": "\"north\"",
 				"dead": "\"false\""
 			}

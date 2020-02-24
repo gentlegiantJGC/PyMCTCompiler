@@ -12,38 +12,38 @@
         "fence": {
             "properties": {
                 "material": [
-					"oak",
-					"spruce",
-					"birch",
-					"jungle",
-					"acacia",
-					"dark_oak",
-					"nether_brick"
+					"\"oak\"",
+					"\"spruce\"",
+					"\"birch\"",
+					"\"jungle\"",
+					"\"acacia\"",
+					"\"dark_oak\"",
+					"\"nether_brick\""
 
 				],
-                "\"east\"": [
+                "east": [
                     "\"true\"",
                     "\"false\""
                 ],
-                "\"north\"": [
+                "north": [
                     "\"true\"",
                     "\"false\""
                 ],
-                "\"south\"": [
+                "south": [
                     "\"true\"",
                     "\"false\""
                 ],
-                "\"west\"": [
+                "west": [
                     "\"true\"",
                     "\"false\""
                 ]
             },
             "defaults": {
-                "material": "oak",
-                "\"east\"": "\"false\"",
-                "\"north\"": "\"false\"",
-                "\"south\"": "\"false\"",
-                "\"west\"": "\"false\""
+                "material": "\"oak\"",
+                "east": "\"false\"",
+                "north": "\"false\"",
+                "south": "\"false\"",
+                "west": "\"false\""
             }
         }
     }

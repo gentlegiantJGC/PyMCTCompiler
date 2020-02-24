@@ -34,7 +34,7 @@
                                     {
                                         "function": "new_properties",
                                         "options": {
-                                            "\"bottom\"": "\"true\""
+                                            "bottom": "\"true\""
                                         }
                                     }
                                 ]

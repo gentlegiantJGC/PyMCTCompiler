@@ -13,10 +13,10 @@
 							"function": "new_properties",
 							"options": {
 								"material": material,
-								"\"north\"": "\"true\"",
-								"\"east\"": "\"true\"",
-								"\"south\"": "\"true\"",
-								"\"west\"": "\"true\""
+								"north": "\"true\"",
+								"east": "\"true\"",
+								"south": "\"true\"",
+								"west": "\"true\""
 							}
 						},
 						{
@@ -40,10 +40,10 @@
 										}
 									]
 								} for coord, direction in [
-									[[0, 0, -1], "\"north\""],
-									[[0, 0, 1], "\"south\""],
-									[[-1, 0, 0], "\"west\""],
-									[[1, 0, 0], "\"east\""],
+									[[0, 0, -1], "north"],
+									[[0, 0, 1], "south"],
+									[[-1, 0, 0], "west"],
+									[[1, 0, 0], "east"],
 								]
 							]
 						}

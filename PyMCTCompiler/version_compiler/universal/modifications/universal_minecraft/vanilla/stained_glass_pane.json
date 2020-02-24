@@ -38,29 +38,29 @@
 					"\"red\"",
 					"\"black\""
 				],
-				"\"east\"": [
+				"east": [
 					"\"true\"",
 					"\"false\""
 				],
-				"\"north\"": [
+				"north": [
 					"\"true\"",
 					"\"false\""
 				],
-				"\"south\"": [
+				"south": [
 					"\"true\"",
 					"\"false\""
 				],
-				"\"west\"": [
+				"west": [
 					"\"true\"",
 					"\"false\""
 				]
 			},
 			"defaults": {
 				"color": "\"white\"",
-				"\"east\"": "\"false\"",
-				"\"north\"": "\"false\"",
-				"\"south\"": "\"false\"",
-				"\"west\"": "\"false\""
+				"east": "\"false\"",
+				"north": "\"false\"",
+				"south": "\"false\"",
+				"west": "\"false\""
 			}
 		}
 	}

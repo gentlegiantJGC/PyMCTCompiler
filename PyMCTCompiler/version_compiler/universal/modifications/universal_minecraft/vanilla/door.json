@@ -12,13 +12,13 @@
 		"door": {
 			"properties": {
 				"material": [
-					"oak",
-					"spruce",
-					"birch",
-					"jungle",
-					"acacia",
-					"dark_oak",
-					"iron"
+					"\"oak\"",
+					"\"spruce\"",
+					"\"birch\"",
+					"\"jungle\"",
+					"\"acacia\"",
+					"\"dark_oak\"",
+					"\"iron\""
 				],
 				"facing": [
 					"\"north\"",
@@ -44,7 +44,7 @@
 				]
 			},
 			"defaults": {
-				"material": "oak",
+				"material": "\"oak\"",
 				"facing": "\"north\"",
 				"half": "\"lower\"",
 				"hinge": "\"left\"",

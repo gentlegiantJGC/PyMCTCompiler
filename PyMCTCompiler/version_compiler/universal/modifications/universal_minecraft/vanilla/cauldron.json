@@ -6,8 +6,8 @@
 		"cauldron": {
 			"properties": {
 				"cauldron_liquid": [
-					"water",
-					"lava"
+					"\"water\"",
+					"\"lava\""
 				],
 				"level": [
 					"\"0\"",
@@ -21,7 +21,7 @@
 			},
 			"defaults": {
 				"level": "\"0\"",
-				"cauldron_liquid": "water"
+				"cauldron_liquid": "\"water\""
 			},
 			"unbt": "nbt.cauldron.universal"
 		}

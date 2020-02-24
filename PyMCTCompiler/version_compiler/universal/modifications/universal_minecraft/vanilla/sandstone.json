@@ -10,9 +10,9 @@
 			"properties": {
 				"variant": [
 					"\"normal\"",
-					"chiseled",
-					"cut",
-					"smooth"
+					"\"chiseled\"",
+					"\"cut\"",
+					"\"smooth\""
 				]
 			},
 			"defaults": {

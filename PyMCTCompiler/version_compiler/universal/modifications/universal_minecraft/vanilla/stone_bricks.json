@@ -10,9 +10,9 @@
 			"properties": {
 				"variant": [
 					"\"normal\"",
-					"cracked",
-					"mossy",
-					"chiseled"
+					"\"cracked\"",
+					"\"mossy\"",
+					"\"chiseled\""
 				]
 			},
 			"defaults": {

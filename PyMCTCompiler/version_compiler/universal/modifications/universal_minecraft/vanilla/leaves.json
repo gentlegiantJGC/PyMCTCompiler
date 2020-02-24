@@ -11,12 +11,12 @@
 		"leaves": {
 			"properties": {
 				"material": [
-					"oak",
-					"spruce",
-					"birch",
-					"jungle",
-					"acacia",
-					"dark_oak"
+					"\"oak\"",
+					"\"spruce\"",
+					"\"birch\"",
+					"\"jungle\"",
+					"\"acacia\"",
+					"\"dark_oak\""
 				],
 				"distance": [
 					"\"1\"",
@@ -37,7 +37,7 @@
 				]
 			},
 			"defaults": {
-				"material": "oak",
+				"material": "\"oak\"",
 				"distance": "\"7\"",
 				"persistent": "\"false\"",
 				"check_decay": "\"true\""
