@@ -24,6 +24,14 @@ def log_to_file(msg: str):
 	log_file.write(f'{msg}\n')
 
 
+def verify_snbt(val):
+	nbt_val = amulet_nbt.from_snbt(val)
+	if isinstance(nbt_val, amulet_nbt.TAG_String):
+		assert val[:2] == val[-2:] == '\\"', f'TAG_String {val} not in the strict format'
+	elif isinstance(nbt_val, (amulet_nbt.TAG_Compound, amulet_nbt.TAG_List)):
+		raise Exception('This function does not work with nested data types')
+
+
 def check_specification_format(data: dict):
 	assert isinstance(data, dict), 'Specification must be a dictionary'
 	properties = data.get('properties', {})
@@ -39,8 +47,8 @@ def check_specification_format(data: dict):
 		remove_list_duplicates(val)
 		assert isinstance(defaults[key], str), 'All default property values must be strings'
 		assert defaults[key] in val, 'Default property value must be in the property list'
-		if data.get('nbt_properties', False):
-			[amulet_nbt.from_snbt(val_) for val_ in val]  # verify that the snbt is valid
+		for val_ in val:
+			verify_snbt(val_)  # verify that the snbt is valid
 
 	if 'snbt' in data:
 		assert isinstance(data['snbt'], str), 'Specification "snbt" must be a string'

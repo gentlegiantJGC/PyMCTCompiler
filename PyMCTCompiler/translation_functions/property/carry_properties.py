@@ -1,6 +1,7 @@
 from typing import Set
 from PyMCTCompiler.helpers import remove_list_duplicates
 from PyMCTCompiler.translation_functions import BaseTranslationFunction
+from PyMCTCompiler.helpers import verify_snbt
 
 
 class CarryProperties(BaseTranslationFunction):
@@ -9,8 +10,7 @@ class CarryProperties(BaseTranslationFunction):
 	# {
 	# 	"function": "carry_properties",
 	# 	"options": {
-	# 		"<property_name>": ["<property_value"],
-	# 		"<nbt_property_name>": ['<SNBT>']
+	# 		"<property_name>": ['<SNBT>']
 	# 	}
 	# }
 
@@ -40,6 +40,7 @@ class CarryProperties(BaseTranslationFunction):
 			assert isinstance(val_list, list), '"options" values must be a list of strings'
 			for val in val_list:
 				assert isinstance(val, str), '"options" property values must be strings'
+				verify_snbt(val)
 			remove_list_duplicates(val_list)
 
 	def save(self, parents: list) -> dict:

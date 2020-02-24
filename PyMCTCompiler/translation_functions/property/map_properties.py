@@ -1,6 +1,7 @@
 from typing import Set
 import copy
 from PyMCTCompiler.translation_functions import BaseTranslationFunction, FunctionList
+from PyMCTCompiler.helpers import verify_snbt
 
 
 class MapProperties(BaseTranslationFunction):
@@ -10,9 +11,6 @@ class MapProperties(BaseTranslationFunction):
 	# 	"function": "map_properties",
 	# 	"options": {
 	# 		"<property_name>": {
-	# 			"<property_value": FunctionList
-	# 		},
-	# 		"<nbt_property_name>": {
 	# 			'<snbt>': FunctionList
 	# 		}
 	# 	}
@@ -55,6 +53,7 @@ class MapProperties(BaseTranslationFunction):
 			assert isinstance(val_dict, dict), '"options" values must be dictionaries'
 			for val, nest in val_dict.items():
 				assert isinstance(val, str), '"options" property values must be strings'
+				verify_snbt(val)
 				assert isinstance(nest, FunctionList)
 				nest.commit(feature_set, parents)
 

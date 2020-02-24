@@ -1,5 +1,6 @@
 from typing import Set
 from PyMCTCompiler.translation_functions import BaseTranslationFunction
+from PyMCTCompiler.helpers import verify_snbt
 
 
 class NewProperties(BaseTranslationFunction):
@@ -8,8 +9,7 @@ class NewProperties(BaseTranslationFunction):
 	# {
 	# 	"function": "new_properties",
 	# 	"options": {
-	# 		"<property_name>": "<property_value",
-	# 		"<nbt_property_name>": ['snbt', "<SNBT>"]    # eg "val", "54b", "0.0d"
+	# 		"<property_name>": "<SNBT>", # eg "val", "54b"
 	# 	}
 	# }
 
@@ -31,7 +31,16 @@ class NewProperties(BaseTranslationFunction):
 		assert isinstance(self['options'], dict), '"options" must be a dictionary'
 		for key, val in self['options'].items():
 			assert isinstance(key, str), '"options" keys must be strings'
-			assert isinstance(val, str) or (isinstance(val, list) and val[0] == 'snbt'), '"options" values must be strings'
+			if isinstance(val, list) and val[0] == 'snbt':
+				val = self['options'][key] = val[1]
+
+			else:
+				raise Exception('new_properties "options" values must be SNBT')
+
+			if not isinstance(val, str):
+				raise Exception('"options" values must be strings')
+
+			verify_snbt(val)
 
 	def save(self, parents: list) -> dict:
 		return self._function
