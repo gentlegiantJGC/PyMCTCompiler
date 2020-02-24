@@ -27,7 +27,7 @@ def log_to_file(msg: str):
 def verify_snbt(val):
 	nbt_val = amulet_nbt.from_snbt(val)
 	if isinstance(nbt_val, amulet_nbt.TAG_String):
-		assert val[:2] == val[-2:] == '\\"', f'TAG_String {val} not in the strict format'
+		assert val[0] == val[-1] == '"', f'TAG_String {val} not in the strict format'
 	elif isinstance(nbt_val, (amulet_nbt.TAG_Compound, amulet_nbt.TAG_List)):
 		raise Exception('This function does not work with nested data types')
 
