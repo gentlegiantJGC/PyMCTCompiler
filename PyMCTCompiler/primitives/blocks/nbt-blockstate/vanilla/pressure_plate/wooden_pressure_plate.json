@@ -7,7 +7,7 @@
 		{
 			"function": "new_properties",
 			"options": {
-				"material": "oak"
+				"material": "\"oak\""
 			}
 		},
 		{
@@ -156,7 +156,7 @@
 				"function": "map_properties",
 				"options": {
 					"material": {
-						"oak": [
+						"\"oak\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:wooden_pressure_plate"

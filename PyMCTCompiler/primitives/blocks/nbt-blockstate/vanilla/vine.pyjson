@@ -12,10 +12,10 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"east": {0: "false", 8: "true"}[data & 8],
-								"north": {0: "false", 4: "true"}[data & 4],
-								"west": {0: "false", 2: "true"}[data & 2],
-								"south": {0: "false", 1: "true"}[data & 1],
+								"east": {0: "\"false\"", 8: "\"true\""}[data & 8],
+								"north": {0: "\"false\"", 4: "\"true\""}[data & 4],
+								"west": {0: "\"false\"", 2: "\"true\""}[data & 2],
+								"south": {0: "\"false\"", 1: "\"true\""}[data & 1],
 							}
 						}
 					] for data in range(16)
@@ -57,19 +57,19 @@
 																					]
 																				}
 																			}
-																		] for data1, south in {0: "false", 1: "true"}.items()
+																		] for data1, south in {0: "\"false\"", 1: "\"true\""}.items()
 																	}
 																}
 															}
-														] for data2, west in {0: "false", 2: "true"}.items()
+														] for data2, west in {0: "\"false\"", 2: "\"true\""}.items()
 													}
 												}
 											}
-										] for data4, north in {0: "false", 4: "true"}.items()
+										] for data4, north in {0: "\"false\"", 4: "\"true\""}.items()
 									}
 								}
 							}
-						] for data8, east in {0: "false", 8: "true"}.items()
+						] for data8, east in {0: "\"false\"", 8: "\"true\""}.items()
 					}
 				}
 			}

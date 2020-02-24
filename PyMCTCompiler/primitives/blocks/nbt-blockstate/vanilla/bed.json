@@ -64,7 +64,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "occupied": "false"
+                                "occupied": "\"false\""
                             }
                         }
                     ],
@@ -72,7 +72,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "occupied": "true"
+                                "occupied": "\"true\""
                             }
                         }
                     ]
@@ -160,7 +160,7 @@
                         ]
                     },
                     "occupied": {
-                        "false": [
+                        "\"false\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -171,7 +171,7 @@
                                 }
                             }
                         ],
-                        "true": [
+                        "\"true\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

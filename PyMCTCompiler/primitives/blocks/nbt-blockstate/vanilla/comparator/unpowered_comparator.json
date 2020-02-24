@@ -7,7 +7,7 @@
 		{
 			"function": "new_properties",
 			"options": {
-				"powered": "false"
+				"powered": "\"false\""
 			}
 		},
 		{
@@ -124,7 +124,7 @@
 						]
 					},
 					"powered": {
-						"false": [
+						"\"false\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:unpowered_comparator"

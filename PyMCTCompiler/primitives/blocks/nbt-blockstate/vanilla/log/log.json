@@ -12,7 +12,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"material": "oak"
+								"material": "\"oak\""
 							}
 						}
 					],
@@ -20,7 +20,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"material": "spruce"
+								"material": "\"spruce\""
 							}
 						}
 					],
@@ -28,7 +28,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"material": "birch"
+								"material": "\"birch\""
 							}
 						}
 					],
@@ -36,7 +36,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"material": "jungle"
+								"material": "\"jungle\""
 							}
 						}
 					]
@@ -80,12 +80,12 @@
 				"function": "map_properties",
 				"options": {
 					"stripped": {
-						"false": [
+						"\"false\"": [
 							{
 								"function": "map_properties",
 								"options": {
 									"material": {
-										"oak": [
+										"\"oak\"": [
 											{
 												"function": "new_properties",
 												"options": {
@@ -96,7 +96,7 @@
 												}
 											}
 										],
-										"spruce": [
+										"\"spruce\"": [
 											{
 												"function": "new_properties",
 												"options": {
@@ -107,7 +107,7 @@
 												}
 											}
 										],
-										"birch": [
+										"\"birch\"": [
 											{
 												"function": "new_properties",
 												"options": {
@@ -118,7 +118,7 @@
 												}
 											}
 										],
-										"jungle": [
+										"\"jungle\"": [
 											{
 												"function": "new_properties",
 												"options": {

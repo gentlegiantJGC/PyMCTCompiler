@@ -8,7 +8,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "no_drop": "false"
+                                "no_drop": "\"false\""
                             }
                         }
                     ],
@@ -16,7 +16,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "no_drop": "true"
+                                "no_drop": "\"true\""
                             }
                         }
                     ]
@@ -53,7 +53,7 @@
                 "function": "map_properties",
                 "options": {
                     "no_drop": {
-                        "false": [
+                        "\"false\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -62,7 +62,7 @@
                                 }
                             }
                         ],
-                        "true": [
+                        "\"true\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -84,7 +84,7 @@
                 "function": "map_properties",
                 "options": {
                     "no_drop": {
-                        "false": [
+                        "\"false\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -92,7 +92,7 @@
                                 }
                             }
                         ],
-                        "true": [
+                        "\"true\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

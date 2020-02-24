@@ -80,7 +80,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "toggle": "false"
+                                "toggle": "\"false\""
                             }
                         }
                     ],
@@ -88,7 +88,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "toggle": "true"
+                                "toggle": "\"true\""
                             }
                         }
                     ]
@@ -198,7 +198,7 @@
                         ]
                     },
                     "toggle": {
-                        "false": [
+                        "\"false\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -209,7 +209,7 @@
                                 }
                             }
                         ],
-                        "true": [
+                        "\"true\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

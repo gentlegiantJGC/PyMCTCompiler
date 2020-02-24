@@ -7,8 +7,8 @@
 		{
 			"function": "new_properties",
 			"options": {
-				"facing": "up",
-				"dead": "false"
+				"facing": "\"up\"",
+				"dead": "\"false\""
 			}
 		},
 		{
@@ -87,12 +87,12 @@
 				"function": "map_properties",
 				"options": {
 					"facing": {
-						"up": [
+						"\"up\"": [
 							{
 								"function": "map_properties",
 								"options": {
 									"dead": {
-										"false": [
+										"\"false\"": [
 											{
 												"function": "new_block",
 												"options": "minecraft:coral_fan"

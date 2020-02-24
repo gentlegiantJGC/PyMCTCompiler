@@ -7,7 +7,7 @@
 		{
 			"function": "new_properties",
 			"options": {
-				"material": "jungle"
+				"material": "\"jungle\""
 			}
 		},
 		{
@@ -156,7 +156,7 @@
 				"function": "map_properties",
 				"options": {
 					"material": {
-						"jungle": [
+						"\"jungle\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:jungle_standing_sign"

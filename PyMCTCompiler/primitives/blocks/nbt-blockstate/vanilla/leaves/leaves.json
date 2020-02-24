@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "oak"
+                                "material": "\"oak\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "spruce"
+                                "material": "\"spruce\""
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "birch"
+                                "material": "\"birch\""
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "jungle"
+                                "material": "\"jungle\""
                             }
                         }
                     ]
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "persistent": "false"
+                                "persistent": "\"false\""
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "persistent": "true"
+                                "persistent": "\"true\""
                             }
                         }
                     ]
@@ -64,7 +64,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "check_decay": "false"
+                                "check_decay": "\"false\""
                             }
                         }
                     ],
@@ -72,7 +72,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "check_decay": "true"
+                                "check_decay": "\"true\""
                             }
                         }
                     ]
@@ -90,7 +90,7 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-                        "oak": [
+                        "\"oak\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -101,7 +101,7 @@
                                 }
                             }
                         ],
-                        "spruce": [
+                        "\"spruce\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -112,7 +112,7 @@
                                 }
                             }
                         ],
-                        "birch": [
+                        "\"birch\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -123,7 +123,7 @@
                                 }
                             }
                         ],
-                        "jungle": [
+                        "\"jungle\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -136,7 +136,7 @@
                         ]
                     },
                     "persistent": {
-                        "false": [
+                        "\"false\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -147,7 +147,7 @@
                                 }
                             }
                         ],
-                        "true": [
+                        "\"true\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -160,7 +160,7 @@
                         ]
                     },
                     "check_decay": {
-                        "false": [
+                        "\"false\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -171,7 +171,7 @@
                                 }
                             }
                         ],
-                        "true": [
+                        "\"true\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

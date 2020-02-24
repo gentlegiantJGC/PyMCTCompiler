@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "check_decay": "false"
+                                "check_decay": "\"false\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "check_decay": "true"
+                                "check_decay": "\"true\""
                             }
                         }
                     ]
@@ -38,7 +38,7 @@
                 "function": "map_properties",
                 "options": {
                     "check_decay": {
-                        "false": [
+                        "\"false\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -49,7 +49,7 @@
                                 }
                             }
                         ],
-                        "true": [
+                        "\"true\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

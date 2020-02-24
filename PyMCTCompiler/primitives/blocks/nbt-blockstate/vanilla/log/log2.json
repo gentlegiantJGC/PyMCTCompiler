@@ -12,7 +12,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"material": "acacia"
+								"material": "\"acacia\""
 							}
 						}
 					],
@@ -20,7 +20,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"material": "dark_oak"
+								"material": "\"dark_oak\""
 							}
 						}
 					]
@@ -64,12 +64,12 @@
 				"function": "map_properties",
 				"options": {
 					"stripped": {
-						"false": [
+						"\"false\"": [
 							{
 								"function": "map_properties",
 								"options": {
 									"material": {
-										"acacia": [
+										"\"acacia\"": [
 											{
 												"function": "new_block",
 												"options": "minecraft:log2"
@@ -84,7 +84,7 @@
 												}
 											}
 										],
-										"dark_oak": [
+										"\"dark_oak\"": [
 											{
 												"function": "new_block",
 												"options": "minecraft:log2"

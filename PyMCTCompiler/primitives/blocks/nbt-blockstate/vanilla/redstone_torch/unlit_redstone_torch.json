@@ -23,7 +23,7 @@
 		{
 			"function": "new_properties",
 			"options": {
-				"lit": "false"
+				"lit": "\"false\""
 			}
 		},
 		{
@@ -74,7 +74,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"facing": "up"
+								"facing": "\"up\""
 							}
 						}
 					]
@@ -92,7 +92,7 @@
 				"function": "map_properties",
 				"options": {
 					"lit": {
-						"false": [
+						"\"false\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:unlit_redstone_torch"
@@ -155,7 +155,7 @@
 								}
 							}
 						],
-						"up": [
+						"\"up\"": [
 							{
 								"function": "new_properties",
 								"options": {

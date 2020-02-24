@@ -68,7 +68,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing": "up"
+                                "facing": "\"up\""
                             }
                         }
                     ]
@@ -141,7 +141,7 @@
                                 }
                             }
                         ],
-                        "up": [
+                        "\"up\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

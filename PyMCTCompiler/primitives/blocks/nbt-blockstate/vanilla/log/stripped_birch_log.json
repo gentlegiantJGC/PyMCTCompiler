@@ -7,8 +7,8 @@
 		{
 			"function": "new_properties",
 			"options": {
-				"stripped": "true",
-				"material": "birch"
+				"stripped": "\"true\"",
+				"material": "\"birch\""
 			}
 		},
 		{
@@ -53,12 +53,12 @@
 				"function": "map_properties",
 				"options": {
 					"stripped": {
-						"true": [
+						"\"true\"": [
 							{
 								"function": "map_properties",
 								"options": {
 									"material": {
-										"birch": [
+										"\"birch\"": [
 											{
 												"function": "new_block",
 												"options": "minecraft:stripped_birch_log"

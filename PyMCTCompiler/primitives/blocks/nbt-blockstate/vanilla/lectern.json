@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "powered": "false"
+                                "powered": "\"false\""
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "powered": "true"
+                                "powered": "\"true\""
                             }
                         }
                     ]
@@ -118,7 +118,7 @@
                         ]
                     },
                     "powered": {
-                        "false": [
+                        "\"false\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -129,7 +129,7 @@
                                 }
                             }
                         ],
-                        "true": [
+                        "\"true\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

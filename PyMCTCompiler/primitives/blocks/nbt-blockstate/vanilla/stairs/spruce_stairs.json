@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "material": "spruce"
+                "material": "\"spruce\""
             }
         },
         {
@@ -78,7 +78,7 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-						"spruce": [
+						"\"spruce\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:spruce_stairs"

@@ -7,7 +7,7 @@
 		{
 			"function": "new_properties",
 			"options": {
-				"material": "spruce"
+				"material": "\"spruce\""
 			}
 		},
 		{
@@ -18,7 +18,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"powered": "false"
+								"powered": "\"false\""
 							}
 						}
 					],
@@ -26,7 +26,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"powered": "true"
+								"powered": "\"true\""
 							}
 						}
 					]
@@ -100,7 +100,7 @@
 				"function": "map_properties",
 				"options": {
 					"material": {
-						"spruce": [
+						"\"spruce\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:spruce_button"
@@ -185,7 +185,7 @@
 						]
 					},
 					"powered": {
-						"false": [
+						"\"false\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -196,7 +196,7 @@
 								}
 							}
 						],
-						"true": [
+						"\"true\"": [
 							{
 								"function": "new_properties",
 								"options": {

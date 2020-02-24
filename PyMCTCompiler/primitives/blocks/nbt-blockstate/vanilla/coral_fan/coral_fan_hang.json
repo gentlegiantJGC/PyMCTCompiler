@@ -64,7 +64,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"dead": "false"
+								"dead": "\"false\""
 							}
 						}
 					],
@@ -72,7 +72,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"dead": "true"
+								"dead": "\"true\""
 							}
 						}
 					]
@@ -104,7 +104,7 @@
 								"function": "map_properties",
 								"options": {
 									"dead": {
-										"false": [
+										"\"false\"": [
 											{
 												"function": "new_properties",
 												"options": {
@@ -115,7 +115,7 @@
 												}
 											}
 										],
-										"true": [
+										"\"true\"": [
 											{
 												"function": "new_properties",
 												"options": {
@@ -176,7 +176,7 @@
 								"function": "map_properties",
 								"options": {
 									"dead": {
-										"false": [
+										"\"false\"": [
 											{
 												"function": "new_properties",
 												"options": {
@@ -187,7 +187,7 @@
 												}
 											}
 										],
-										"true": [
+										"\"true\"": [
 											{
 												"function": "new_properties",
 												"options": {
@@ -248,7 +248,7 @@
 								"function": "map_properties",
 								"options": {
 									"dead": {
-										"false": [
+										"\"false\"": [
 											{
 												"function": "new_properties",
 												"options": {
@@ -259,7 +259,7 @@
 												}
 											}
 										],
-										"true": [
+										"\"true\"": [
 											{
 												"function": "new_properties",
 												"options": {
@@ -320,7 +320,7 @@
 								"function": "map_properties",
 								"options": {
 									"dead": {
-										"false": [
+										"\"false\"": [
 											{
 												"function": "new_properties",
 												"options": {
@@ -331,7 +331,7 @@
 												}
 											}
 										],
-										"true": [
+										"\"true\"": [
 											{
 												"function": "new_properties",
 												"options": {

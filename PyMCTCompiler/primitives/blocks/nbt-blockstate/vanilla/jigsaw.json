@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing": "down"
+                                "facing": "\"down\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing": "up"
+                                "facing": "\"up\""
                             }
                         }
                     ],
@@ -70,7 +70,7 @@
                 "function": "map_properties",
                 "options": {
                     "facing": {
-                        "down": [
+                        "\"down\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -81,7 +81,7 @@
                                 }
                             }
                         ],
-                        "up": [
+                        "\"up\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

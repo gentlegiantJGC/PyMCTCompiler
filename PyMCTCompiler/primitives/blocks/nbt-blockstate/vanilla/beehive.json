@@ -120,7 +120,7 @@
                 "function": "map_properties",
                 "options": {
                     "facing_direction": {
-                        "down": [
+                        "\"down\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -131,7 +131,7 @@
                                 }
                             }
                         ],
-                        "up": [
+                        "\"up\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

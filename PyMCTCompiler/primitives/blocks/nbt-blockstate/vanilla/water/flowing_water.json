@@ -7,7 +7,7 @@
 		{
 			"function": "new_properties",
 			"options": {
-				"flowing": "true"
+				"flowing": "\"true\""
 			}
 		},
 		{
@@ -19,7 +19,7 @@
 							"function": "new_properties",
 							"options": {
 								"level": "0",
-								"falling": "false"
+								"falling": "\"false\""
 							}
 						}
 					],
@@ -28,7 +28,7 @@
 							"function": "new_properties",
 							"options": {
 								"level": "1",
-								"falling": "false"
+								"falling": "\"false\""
 							}
 						}
 					],
@@ -37,7 +37,7 @@
 							"function": "new_properties",
 							"options": {
 								"level": "2",
-								"falling": "false"
+								"falling": "\"false\""
 							}
 						}
 					],
@@ -46,7 +46,7 @@
 							"function": "new_properties",
 							"options": {
 								"level": "3",
-								"falling": "false"
+								"falling": "\"false\""
 							}
 						}
 					],
@@ -55,7 +55,7 @@
 							"function": "new_properties",
 							"options": {
 								"level": "4",
-								"falling": "false"
+								"falling": "\"false\""
 							}
 						}
 					],
@@ -64,7 +64,7 @@
 							"function": "new_properties",
 							"options": {
 								"level": "5",
-								"falling": "false"
+								"falling": "\"false\""
 							}
 						}
 					],
@@ -73,7 +73,7 @@
 							"function": "new_properties",
 							"options": {
 								"level": "6",
-								"falling": "false"
+								"falling": "\"false\""
 							}
 						}
 					],
@@ -82,7 +82,7 @@
 							"function": "new_properties",
 							"options": {
 								"level": "7",
-								"falling": "false"
+								"falling": "\"false\""
 							}
 						}
 					],
@@ -91,7 +91,7 @@
 							"function": "new_properties",
 							"options": {
 								"level": "0",
-								"falling": "true"
+								"falling": "\"true\""
 							}
 						}
 					],
@@ -100,7 +100,7 @@
 							"function": "new_properties",
 							"options": {
 								"level": "1",
-								"falling": "true"
+								"falling": "\"true\""
 							}
 						}
 					],
@@ -109,7 +109,7 @@
 							"function": "new_properties",
 							"options": {
 								"level": "2",
-								"falling": "true"
+								"falling": "\"true\""
 							}
 						}
 					],
@@ -118,7 +118,7 @@
 							"function": "new_properties",
 							"options": {
 								"level": "3",
-								"falling": "true"
+								"falling": "\"true\""
 							}
 						}
 					],
@@ -127,7 +127,7 @@
 							"function": "new_properties",
 							"options": {
 								"level": "4",
-								"falling": "true"
+								"falling": "\"true\""
 							}
 						}
 					],
@@ -136,7 +136,7 @@
 							"function": "new_properties",
 							"options": {
 								"level": "5",
-								"falling": "true"
+								"falling": "\"true\""
 							}
 						}
 					],
@@ -145,7 +145,7 @@
 							"function": "new_properties",
 							"options": {
 								"level": "6",
-								"falling": "true"
+								"falling": "\"true\""
 							}
 						}
 					],
@@ -154,7 +154,7 @@
 							"function": "new_properties",
 							"options": {
 								"level": "7",
-								"falling": "true"
+								"falling": "\"true\""
 							}
 						}
 					]
@@ -172,7 +172,7 @@
 				"function": "map_properties",
 				"options": {
 					"flowing": {
-						"true": [
+						"\"true\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:flowing_water"
@@ -180,7 +180,7 @@
 						]
 					},
 					"falling": {
-						"false": [
+						"\"false\"": [
 							{
 								"function": "map_properties",
 								"options": {
@@ -277,7 +277,7 @@
 								}
 							}
 						],
-						"true": [
+						"\"true\"": [
 							{
 								"function": "map_properties",
 								"options": {

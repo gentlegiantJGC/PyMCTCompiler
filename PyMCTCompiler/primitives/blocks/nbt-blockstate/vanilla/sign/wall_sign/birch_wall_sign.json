@@ -7,7 +7,7 @@
 		{
 			"function": "new_properties",
 			"options": {
-				"material": "birch"
+				"material": "\"birch\""
 			}
 		},
 		{
@@ -18,7 +18,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"facing": "down"
+								"facing": "\"down\""
 							}
 						}
 					],
@@ -26,7 +26,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"facing": "up"
+								"facing": "\"up\""
 							}
 						}
 					],
@@ -76,7 +76,7 @@
 				"function": "map_properties",
 				"options": {
 					"material": {
-						"birch": [
+						"\"birch\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:birch_wall_sign"
@@ -84,7 +84,7 @@
 						]
 					},
 					"facing": {
-						"down": [
+						"\"down\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -95,7 +95,7 @@
 								}
 							}
 						],
-						"up": [
+						"\"up\"": [
 							{
 								"function": "new_properties",
 								"options": {

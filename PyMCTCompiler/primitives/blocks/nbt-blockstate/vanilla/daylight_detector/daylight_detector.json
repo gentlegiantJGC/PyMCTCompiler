@@ -7,7 +7,7 @@
 		{
 			"function": "new_properties",
 			"options": {
-				"inverted": "false"
+				"inverted": "\"false\""
 			}
 		},
 		{
@@ -156,7 +156,7 @@
 				"function": "map_properties",
 				"options": {
 					"inverted": {
-						"false": [
+						"\"false\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:daylight_detector"

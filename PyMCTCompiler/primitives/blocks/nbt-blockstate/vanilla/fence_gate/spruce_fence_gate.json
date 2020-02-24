@@ -7,7 +7,7 @@
 		{
 			"function": "new_properties",
 			"options": {
-				"material": "spruce"
+				"material": "\"spruce\""
 			}
 		},
 		{
@@ -52,7 +52,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"in_wall": "false"
+								"in_wall": "\"false\""
 							}
 						}
 					],
@@ -60,7 +60,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"in_wall": "true"
+								"in_wall": "\"true\""
 							}
 						}
 					]
@@ -70,7 +70,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"open": "false"
+								"open": "\"false\""
 							}
 						}
 					],
@@ -78,7 +78,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"open": "true"
+								"open": "\"true\""
 							}
 						}
 					]
@@ -96,7 +96,7 @@
 				"function": "map_properties",
 				"options": {
 					"material": {
-						"spruce": [
+						"\"spruce\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:spruce_fence_gate"
@@ -150,7 +150,7 @@
 						]
 					},
 					"in_wall": {
-						"false": [
+						"\"false\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -161,7 +161,7 @@
 								}
 							}
 						],
-						"true": [
+						"\"true\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -174,7 +174,7 @@
 						]
 					},
 					"open": {
-						"false": [
+						"\"false\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -185,7 +185,7 @@
 								}
 							}
 						],
-						"true": [
+						"\"true\"": [
 							{
 								"function": "new_properties",
 								"options": {

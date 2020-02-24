@@ -7,8 +7,8 @@
 		{
 			"function": "new_properties",
 			"options": {
-				"stripped": "true",
-				"material": "jungle"
+				"stripped": "\"true\"",
+				"material": "\"jungle\""
 			}
 		},
 		{
@@ -53,12 +53,12 @@
 				"function": "map_properties",
 				"options": {
 					"stripped": {
-						"true": [
+						"\"true\"": [
 							{
 								"function": "map_properties",
 								"options": {
 									"material": {
-										"jungle": [
+										"\"jungle\"": [
 											{
 												"function": "new_block",
 												"options": "minecraft:stripped_jungle_log"

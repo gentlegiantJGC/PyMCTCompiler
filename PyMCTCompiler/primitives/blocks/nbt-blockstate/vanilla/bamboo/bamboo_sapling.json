@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stage": "0"
+                                "stage": "\"0\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "stage": "1"
+                                "stage": "\"1\""
                             }
                         }
                     ]
@@ -30,7 +30,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sapling_type": "oak"
+                                "sapling_type": "\"oak\""
                             }
                         }
                     ],
@@ -38,7 +38,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sapling_type": "spruce"
+                                "sapling_type": "\"spruce\""
                             }
                         }
                     ],
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sapling_type": "birch"
+                                "sapling_type": "\"birch\""
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sapling_type": "jungle"
+                                "sapling_type": "\"jungle\""
                             }
                         }
                     ],
@@ -62,7 +62,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sapling_type": "acacia"
+                                "sapling_type": "\"acacia\""
                             }
                         }
                     ],
@@ -70,7 +70,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sapling_type": "dark_oak"
+                                "sapling_type": "\"dark_oak\""
                             }
                         }
                     ]
@@ -88,7 +88,7 @@
                 "function": "map_properties",
                 "options": {
                     "stage": {
-                        "0": [
+                        "\"0\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -99,7 +99,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "\"1\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -112,7 +112,7 @@
                         ]
                     },
                     "sapling_type": {
-                        "oak": [
+                        "\"oak\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -123,7 +123,7 @@
                                 }
                             }
                         ],
-                        "spruce": [
+                        "\"spruce\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -134,7 +134,7 @@
                                 }
                             }
                         ],
-                        "birch": [
+                        "\"birch\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -145,7 +145,7 @@
                                 }
                             }
                         ],
-                        "jungle": [
+                        "\"jungle\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -156,7 +156,7 @@
                                 }
                             }
                         ],
-                        "acacia": [
+                        "\"acacia\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -167,7 +167,7 @@
                                 }
                             }
                         ],
-                        "dark_oak": [
+                        "\"dark_oak\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
