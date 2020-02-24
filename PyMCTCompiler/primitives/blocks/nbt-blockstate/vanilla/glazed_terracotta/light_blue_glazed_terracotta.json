@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "color": "light_blue"
+                "color": "\"light_blue\""
             }
         },
         {
@@ -72,7 +72,7 @@
                 "function": "map_properties",
                 "options": {
                     "color": {
-                        "light_blue": [
+                        "\"light_blue\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:light_blue_glazed_terracotta"

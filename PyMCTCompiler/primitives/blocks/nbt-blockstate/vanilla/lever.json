@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "face": "ceiling",
+                                "face": "\"ceiling\"",
                                 "facing": "\"west\""
                             }
                         }
@@ -21,7 +21,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "face": "wall",
+                                "face": "\"wall\"",
                                 "facing": "\"east\""
                             }
                         }
@@ -30,7 +30,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "face": "wall",
+                                "face": "\"wall\"",
                                 "facing": "\"west\""
                             }
                         }
@@ -39,7 +39,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "face": "wall",
+                                "face": "\"wall\"",
                                 "facing": "\"south\""
                             }
                         }
@@ -48,7 +48,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "face": "wall",
+                                "face": "\"wall\"",
                                 "facing": "\"north\""
                             }
                         }
@@ -57,7 +57,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "face": "floor",
+                                "face": "\"floor\"",
                                 "facing": "\"north\""
                             }
                         }
@@ -66,7 +66,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "face": "floor",
+                                "face": "\"floor\"",
                                 "facing": "\"west\""
                             }
                         }
@@ -75,7 +75,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "face": "ceiling",
+                                "face": "\"ceiling\"",
                                 "facing": "\"north\""
                             }
                         }
@@ -112,7 +112,7 @@
                 "function": "map_properties",
                 "options": {
                     "face": {
-                        "floor": [
+                        "\"floor\"": [
                             {
                                 "function": "map_properties",
                                 "options": {
@@ -165,7 +165,7 @@
                                 }
                             }
                         ],
-                        "ceiling": [
+                        "\"ceiling\"": [
                             {
                                 "function": "map_properties",
                                 "options": {
@@ -218,7 +218,7 @@
                                 }
                             }
                         ],
-                        "wall": [
+                        "\"wall\"": [
                             {
                                 "function": "map_properties",
                                 "options": {

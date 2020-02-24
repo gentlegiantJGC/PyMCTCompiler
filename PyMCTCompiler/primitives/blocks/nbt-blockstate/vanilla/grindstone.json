@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "face": "floor"
+                                "face": "\"floor\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "face": "ceiling"
+                                "face": "\"ceiling\""
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "face": "wall"
+                                "face": "\"wall\""
                             }
                         }
                     ],
@@ -88,7 +88,7 @@
                 "function": "map_properties",
                 "options": {
                     "face": {
-                        "floor": [
+                        "\"floor\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -99,7 +99,7 @@
                                 }
                             }
                         ],
-                        "ceiling": [
+                        "\"ceiling\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -110,7 +110,7 @@
                                 }
                             }
                         ],
-                        "wall": [
+                        "\"wall\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

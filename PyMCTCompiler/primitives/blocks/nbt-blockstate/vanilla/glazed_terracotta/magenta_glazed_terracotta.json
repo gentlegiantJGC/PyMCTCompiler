@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "color": "magenta"
+                "color": "\"magenta\""
             }
         },
         {
@@ -72,7 +72,7 @@
                 "function": "map_properties",
                 "options": {
                     "color": {
-                        "magenta": [
+                        "\"magenta\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:magenta_glazed_terracotta"

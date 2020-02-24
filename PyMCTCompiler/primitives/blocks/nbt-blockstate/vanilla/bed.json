@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "part": "foot"
+                                "part": "\"foot\""
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "part": "head"
+                                "part": "\"head\""
                             }
                         }
                     ]
@@ -136,7 +136,7 @@
                         ]
                     },
                     "part": {
-                        "foot": [
+                        "\"foot\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -147,7 +147,7 @@
                                 }
                             }
                         ],
-                        "head": [
+                        "\"head\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

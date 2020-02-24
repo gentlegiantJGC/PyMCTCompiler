@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "color": "pink"
+                "color": "\"pink\""
             }
         },
         {
@@ -72,7 +72,7 @@
                 "function": "map_properties",
                 "options": {
                     "color": {
-                        "pink": [
+                        "\"pink\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:pink_glazed_terracotta"
