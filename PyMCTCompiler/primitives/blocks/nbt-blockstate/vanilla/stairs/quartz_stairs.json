@@ -78,14 +78,14 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-						"quartz": [
-							{
-								"function": "new_block",
-								"options": "minecraft:quartz_stairs"
-							}
-						]
-					},
-					"half": {
+                        "quartz": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:quartz_stairs"
+                            }
+                        ]
+                    },
+                    "half": {
                         "bottom": [
                             {
                                 "function": "new_properties",

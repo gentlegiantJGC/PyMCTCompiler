@@ -78,14 +78,14 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-						"polished_diorite": [
-							{
-								"function": "new_block",
-								"options": "minecraft:polished_diorite_stairs"
-							}
-						]
-					},
-					"half": {
+                        "polished_diorite": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:polished_diorite_stairs"
+                            }
+                        ]
+                    },
+                    "half": {
                         "bottom": [
                             {
                                 "function": "new_properties",

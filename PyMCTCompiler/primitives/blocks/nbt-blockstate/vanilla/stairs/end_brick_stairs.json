@@ -77,14 +77,14 @@
             {
                 "function": "map_properties",
                 "options": {
-					"material": {
-						"end_stone_brick": [
-							{
-								"function": "new_block",
-								"options": "minecraft:end_brick_stairs"
-							}
-						]
-					},
+                    "material": {
+                        "end_stone_brick": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:end_brick_stairs"
+                            }
+                        ]
+                    },
                     "half": {
                         "bottom": [
                             {

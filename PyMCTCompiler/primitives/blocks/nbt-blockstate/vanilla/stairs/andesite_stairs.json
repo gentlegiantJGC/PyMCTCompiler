@@ -78,14 +78,14 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-						"andesite": [
-							{
-								"function": "new_block",
-								"options": "minecraft:andesite_stairs"
-							}
-						]
-					},
-					"half": {
+                        "andesite": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:andesite_stairs"
+                            }
+                        ]
+                    },
+                    "half": {
                         "bottom": [
                             {
                                 "function": "new_properties",

@@ -78,14 +78,14 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-						"brick": [
-							{
-								"function": "new_block",
-								"options": "minecraft:brick_stairs"
-							}
-						]
-					},
-					"half": {
+                        "brick": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:brick_stairs"
+                            }
+                        ]
+                    },
+                    "half": {
                         "bottom": [
                             {
                                 "function": "new_properties",

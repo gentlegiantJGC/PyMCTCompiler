@@ -77,14 +77,14 @@
             {
                 "function": "map_properties",
                 "options": {
-					"material": {
-						"stone": [
-							{
-								"function": "new_block",
-								"options": "minecraft:normal_stone_stairs"
-							}
-						]
-					},
+                    "material": {
+                        "stone": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:normal_stone_stairs"
+                            }
+                        ]
+                    },
                     "half": {
                         "bottom": [
                             {

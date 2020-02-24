@@ -78,14 +78,14 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-						"\"jungle\"": [
-							{
-								"function": "new_block",
-								"options": "minecraft:jungle_stairs"
-							}
-						]
-					},
-					"half": {
+                        "\"jungle\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:jungle_stairs"
+                            }
+                        ]
+                    },
+                    "half": {
                         "bottom": [
                             {
                                 "function": "new_properties",

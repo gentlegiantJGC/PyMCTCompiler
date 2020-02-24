@@ -78,14 +78,14 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-						"nether_brick": [
-							{
-								"function": "new_block",
-								"options": "minecraft:nether_brick_stairs"
-							}
-						]
-					},
-					"half": {
+                        "nether_brick": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:nether_brick_stairs"
+                            }
+                        ]
+                    },
+                    "half": {
                         "bottom": [
                             {
                                 "function": "new_properties",

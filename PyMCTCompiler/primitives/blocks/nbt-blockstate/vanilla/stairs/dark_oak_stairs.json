@@ -78,14 +78,14 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-						"\"dark_oak\"": [
-							{
-								"function": "new_block",
-								"options": "minecraft:dark_oak_stairs"
-							}
-						]
-					},
-					"half": {
+                        "\"dark_oak\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:dark_oak_stairs"
+                            }
+                        ]
+                    },
+                    "half": {
                         "bottom": [
                             {
                                 "function": "new_properties",

@@ -1,160 +1,160 @@
 {
-	"to_universal": [
-		{
-			"function": "new_block",
-			"options": "universal_minecraft:leaves"
-		},
-		{
-			"function": "map_properties",
-			"options": {
-				"new_leaf_type": {
-					"\"acacia\"": [
-						{
-							"function": "new_properties",
-							"options": {
-								"material": "\"acacia\""
-							}
-						}
-					],
-					"\"dark_oak\"": [
-						{
-							"function": "new_properties",
-							"options": {
-								"material": "\"dark_oak\""
-							}
-						}
-					]
-				},
-				"persistent_bit": {
-					"0b": [
-						{
-							"function": "new_properties",
-							"options": {
-								"persistent": "\"false\""
-							}
-						}
-					],
-					"1b": [
-						{
-							"function": "new_properties",
-							"options": {
-								"persistent": "\"true\""
-							}
-						}
-					]
-				},
-				"update_bit": {
-					"0b": [
-						{
-							"function": "new_properties",
-							"options": {
-								"check_decay": "\"false\""
-							}
-						}
-					],
-					"1b": [
-						{
-							"function": "new_properties",
-							"options": {
-								"check_decay": "\"true\""
-							}
-						}
-					]
-				}
-			}
-		}
-	],
-	"from_universal": {
-		"universal_minecraft:leaves": [
-			{
-				"function": "new_block",
-				"options": "minecraft:leaves"
-			},
-			{
-				"function": "map_properties",
-				"options": {
-					"material": {
-						"\"acacia\"": [
-							{
-								"function": "new_block",
-								"options": "minecraft:leaves2"
-							},
-							{
-								"function": "new_properties",
-								"options": {
-									"new_leaf_type": [
-										"snbt",
-										"\"acacia\""
-									]
-								}
-							}
-						],
-						"\"dark_oak\"": [
-							{
-								"function": "new_block",
-								"options": "minecraft:leaves2"
-							},
-							{
-								"function": "new_properties",
-								"options": {
-									"new_leaf_type": [
-										"snbt",
-										"\"dark_oak\""
-									]
-								}
-							}
-						]
-					},
-					"persistent": {
-						"\"false\"": [
-							{
-								"function": "new_properties",
-								"options": {
-									"persistent_bit": [
-										"snbt",
-										"0b"
-									]
-								}
-							}
-						],
-						"\"true\"": [
-							{
-								"function": "new_properties",
-								"options": {
-									"persistent_bit": [
-										"snbt",
-										"1b"
-									]
-								}
-							}
-						]
-					},
-					"check_decay": {
-						"\"false\"": [
-							{
-								"function": "new_properties",
-								"options": {
-									"update_bit": [
-										"snbt",
-										"0b"
-									]
-								}
-							}
-						],
-						"\"true\"": [
-							{
-								"function": "new_properties",
-								"options": {
-									"update_bit": [
-										"snbt",
-										"1b"
-									]
-								}
-							}
-						]
-					}
-				}
-			}
-		]
-	}
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:leaves"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "new_leaf_type": {
+                    "\"acacia\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "material": "\"acacia\""
+                            }
+                        }
+                    ],
+                    "\"dark_oak\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "material": "\"dark_oak\""
+                            }
+                        }
+                    ]
+                },
+                "persistent_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "persistent": "\"false\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "persistent": "\"true\""
+                            }
+                        }
+                    ]
+                },
+                "update_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "check_decay": "\"false\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "check_decay": "\"true\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:leaves": [
+            {
+                "function": "new_block",
+                "options": "minecraft:leaves"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "material": {
+                        "\"acacia\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:leaves2"
+                            },
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "new_leaf_type": [
+                                        "snbt",
+                                        "\"acacia\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"dark_oak\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:leaves2"
+                            },
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "new_leaf_type": [
+                                        "snbt",
+                                        "\"dark_oak\""
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "persistent": {
+                        "\"false\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "persistent_bit": [
+                                        "snbt",
+                                        "0b"
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"true\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "persistent_bit": [
+                                        "snbt",
+                                        "1b"
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "check_decay": {
+                        "\"false\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "update_bit": [
+                                        "snbt",
+                                        "0b"
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"true\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "update_bit": [
+                                        "snbt",
+                                        "1b"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
 }

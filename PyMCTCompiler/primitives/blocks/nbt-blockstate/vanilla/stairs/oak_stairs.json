@@ -78,14 +78,14 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-						"\"oak\"": [
-							{
-								"function": "new_block",
-								"options": "minecraft:oak_stairs"
-							}
-						]
-					},
-					"half": {
+                        "\"oak\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:oak_stairs"
+                            }
+                        ]
+                    },
+                    "half": {
                         "bottom": [
                             {
                                 "function": "new_properties",

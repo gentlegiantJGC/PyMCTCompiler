@@ -78,14 +78,14 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-						"dark_prismarine": [
-							{
-								"function": "new_block",
-								"options": "minecraft:dark_prismarine_stairs"
-							}
-						]
-					},
-					"half": {
+                        "dark_prismarine": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:dark_prismarine_stairs"
+                            }
+                        ]
+                    },
+                    "half": {
                         "bottom": [
                             {
                                 "function": "new_properties",

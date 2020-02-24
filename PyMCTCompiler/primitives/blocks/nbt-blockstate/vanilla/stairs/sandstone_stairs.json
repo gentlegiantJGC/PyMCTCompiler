@@ -78,14 +78,14 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-						"sandstone": [
-							{
-								"function": "new_block",
-								"options": "minecraft:sandstone_stairs"
-							}
-						]
-					},
-					"half": {
+                        "sandstone": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:sandstone_stairs"
+                            }
+                        ]
+                    },
+                    "half": {
                         "bottom": [
                             {
                                 "function": "new_properties",

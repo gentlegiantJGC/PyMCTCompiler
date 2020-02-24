@@ -78,14 +78,14 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-						"polished_andesite": [
-							{
-								"function": "new_block",
-								"options": "minecraft:polished_andesite_stairs"
-							}
-						]
-					},
-					"half": {
+                        "polished_andesite": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:polished_andesite_stairs"
+                            }
+                        ]
+                    },
+                    "half": {
                         "bottom": [
                             {
                                 "function": "new_properties",

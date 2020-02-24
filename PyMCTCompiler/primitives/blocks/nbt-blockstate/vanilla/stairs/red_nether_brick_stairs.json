@@ -78,14 +78,14 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-						"red_nether_brick": [
-							{
-								"function": "new_block",
-								"options": "minecraft:red_nether_brick_stairs"
-							}
-						]
-					},
-					"half": {
+                        "red_nether_brick": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:red_nether_brick_stairs"
+                            }
+                        ]
+                    },
+                    "half": {
                         "bottom": [
                             {
                                 "function": "new_properties",

@@ -78,14 +78,14 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-						"\"spruce\"": [
-							{
-								"function": "new_block",
-								"options": "minecraft:spruce_stairs"
-							}
-						]
-					},
-					"half": {
+                        "\"spruce\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:spruce_stairs"
+                            }
+                        ]
+                    },
+                    "half": {
                         "bottom": [
                             {
                                 "function": "new_properties",

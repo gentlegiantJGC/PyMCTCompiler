@@ -1,382 +1,382 @@
 {
-	"to_universal": [
-		{
-			"function": "new_block",
-			"options": "universal_minecraft:lava"
-		},
-		{
-			"function": "new_properties",
-			"options": {
-				"flowing": "\"true\""
-			}
-		},
-		{
-			"function": "map_properties",
-			"options": {
-				"liquid_depth": {
-					"0": [
-						{
-							"function": "new_properties",
-							"options": {
-								"level": "0",
-								"falling": "\"false\""
-							}
-						}
-					],
-					"1": [
-						{
-							"function": "new_properties",
-							"options": {
-								"level": "1",
-								"falling": "\"false\""
-							}
-						}
-					],
-					"2": [
-						{
-							"function": "new_properties",
-							"options": {
-								"level": "2",
-								"falling": "\"false\""
-							}
-						}
-					],
-					"3": [
-						{
-							"function": "new_properties",
-							"options": {
-								"level": "3",
-								"falling": "\"false\""
-							}
-						}
-					],
-					"4": [
-						{
-							"function": "new_properties",
-							"options": {
-								"level": "4",
-								"falling": "\"false\""
-							}
-						}
-					],
-					"5": [
-						{
-							"function": "new_properties",
-							"options": {
-								"level": "5",
-								"falling": "\"false\""
-							}
-						}
-					],
-					"6": [
-						{
-							"function": "new_properties",
-							"options": {
-								"level": "6",
-								"falling": "\"false\""
-							}
-						}
-					],
-					"7": [
-						{
-							"function": "new_properties",
-							"options": {
-								"level": "7",
-								"falling": "\"false\""
-							}
-						}
-					],
-					"8": [
-						{
-							"function": "new_properties",
-							"options": {
-								"level": "0",
-								"falling": "\"true\""
-							}
-						}
-					],
-					"9": [
-						{
-							"function": "new_properties",
-							"options": {
-								"level": "1",
-								"falling": "\"true\""
-							}
-						}
-					],
-					"10": [
-						{
-							"function": "new_properties",
-							"options": {
-								"level": "2",
-								"falling": "\"true\""
-							}
-						}
-					],
-					"11": [
-						{
-							"function": "new_properties",
-							"options": {
-								"level": "3",
-								"falling": "\"true\""
-							}
-						}
-					],
-					"12": [
-						{
-							"function": "new_properties",
-							"options": {
-								"level": "4",
-								"falling": "\"true\""
-							}
-						}
-					],
-					"13": [
-						{
-							"function": "new_properties",
-							"options": {
-								"level": "5",
-								"falling": "\"true\""
-							}
-						}
-					],
-					"14": [
-						{
-							"function": "new_properties",
-							"options": {
-								"level": "6",
-								"falling": "\"true\""
-							}
-						}
-					],
-					"15": [
-						{
-							"function": "new_properties",
-							"options": {
-								"level": "7",
-								"falling": "\"true\""
-							}
-						}
-					]
-				}
-			}
-		}
-	],
-	"from_universal": {
-		"universal_minecraft:lava": [
-			{
-				"function": "new_block",
-				"options": "minecraft:lava"
-			},
-			{
-				"function": "map_properties",
-				"options": {
-					"flowing": {
-						"\"true\"": [
-							{
-								"function": "new_block",
-								"options": "minecraft:flowing_lava"
-							}
-						]
-					},
-					"falling": {
-						"\"false\"": [
-							{
-								"function": "map_properties",
-								"options": {
-									"level": {
-										"0": [
-											{
-												"function": "new_properties",
-												"options": {
-													"liquid_depth": [
-														"snbt",
-														"0"
-													]
-												}
-											}
-										],
-										"1": [
-											{
-												"function": "new_properties",
-												"options": {
-													"liquid_depth": [
-														"snbt",
-														"1"
-													]
-												}
-											}
-										],
-										"2": [
-											{
-												"function": "new_properties",
-												"options": {
-													"liquid_depth": [
-														"snbt",
-														"2"
-													]
-												}
-											}
-										],
-										"3": [
-											{
-												"function": "new_properties",
-												"options": {
-													"liquid_depth": [
-														"snbt",
-														"3"
-													]
-												}
-											}
-										],
-										"4": [
-											{
-												"function": "new_properties",
-												"options": {
-													"liquid_depth": [
-														"snbt",
-														"4"
-													]
-												}
-											}
-										],
-										"5": [
-											{
-												"function": "new_properties",
-												"options": {
-													"liquid_depth": [
-														"snbt",
-														"5"
-													]
-												}
-											}
-										],
-										"6": [
-											{
-												"function": "new_properties",
-												"options": {
-													"liquid_depth": [
-														"snbt",
-														"6"
-													]
-												}
-											}
-										],
-										"7": [
-											{
-												"function": "new_properties",
-												"options": {
-													"liquid_depth": [
-														"snbt",
-														"7"
-													]
-												}
-											}
-										]
-									}
-								}
-							}
-						],
-						"\"true\"": [
-							{
-								"function": "map_properties",
-								"options": {
-									"level": {
-										"0": [
-											{
-												"function": "new_properties",
-												"options": {
-													"liquid_depth": [
-														"snbt",
-														"8"
-													]
-												}
-											}
-										],
-										"1": [
-											{
-												"function": "new_properties",
-												"options": {
-													"liquid_depth": [
-														"snbt",
-														"9"
-													]
-												}
-											}
-										],
-										"2": [
-											{
-												"function": "new_properties",
-												"options": {
-													"liquid_depth": [
-														"snbt",
-														"10"
-													]
-												}
-											}
-										],
-										"3": [
-											{
-												"function": "new_properties",
-												"options": {
-													"liquid_depth": [
-														"snbt",
-														"11"
-													]
-												}
-											}
-										],
-										"4": [
-											{
-												"function": "new_properties",
-												"options": {
-													"liquid_depth": [
-														"snbt",
-														"12"
-													]
-												}
-											}
-										],
-										"5": [
-											{
-												"function": "new_properties",
-												"options": {
-													"liquid_depth": [
-														"snbt",
-														"13"
-													]
-												}
-											}
-										],
-										"6": [
-											{
-												"function": "new_properties",
-												"options": {
-													"liquid_depth": [
-														"snbt",
-														"14"
-													]
-												}
-											}
-										],
-										"7": [
-											{
-												"function": "new_properties",
-												"options": {
-													"liquid_depth": [
-														"snbt",
-														"15"
-													]
-												}
-											}
-										]
-									}
-								}
-							}
-						]
-					}
-				}
-			}
-		]
-	}
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:lava"
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "flowing": "\"true\""
+            }
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "liquid_depth": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "level": "0",
+                                "falling": "\"false\""
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "level": "1",
+                                "falling": "\"false\""
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "level": "2",
+                                "falling": "\"false\""
+                            }
+                        }
+                    ],
+                    "3": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "level": "3",
+                                "falling": "\"false\""
+                            }
+                        }
+                    ],
+                    "4": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "level": "4",
+                                "falling": "\"false\""
+                            }
+                        }
+                    ],
+                    "5": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "level": "5",
+                                "falling": "\"false\""
+                            }
+                        }
+                    ],
+                    "6": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "level": "6",
+                                "falling": "\"false\""
+                            }
+                        }
+                    ],
+                    "7": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "level": "7",
+                                "falling": "\"false\""
+                            }
+                        }
+                    ],
+                    "8": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "level": "0",
+                                "falling": "\"true\""
+                            }
+                        }
+                    ],
+                    "9": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "level": "1",
+                                "falling": "\"true\""
+                            }
+                        }
+                    ],
+                    "10": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "level": "2",
+                                "falling": "\"true\""
+                            }
+                        }
+                    ],
+                    "11": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "level": "3",
+                                "falling": "\"true\""
+                            }
+                        }
+                    ],
+                    "12": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "level": "4",
+                                "falling": "\"true\""
+                            }
+                        }
+                    ],
+                    "13": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "level": "5",
+                                "falling": "\"true\""
+                            }
+                        }
+                    ],
+                    "14": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "level": "6",
+                                "falling": "\"true\""
+                            }
+                        }
+                    ],
+                    "15": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "level": "7",
+                                "falling": "\"true\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:lava": [
+            {
+                "function": "new_block",
+                "options": "minecraft:lava"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "flowing": {
+                        "\"true\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:flowing_lava"
+                            }
+                        ]
+                    },
+                    "falling": {
+                        "\"false\"": [
+                            {
+                                "function": "map_properties",
+                                "options": {
+                                    "level": {
+                                        "0": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "liquid_depth": [
+                                                        "snbt",
+                                                        "0"
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "1": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "liquid_depth": [
+                                                        "snbt",
+                                                        "1"
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "2": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "liquid_depth": [
+                                                        "snbt",
+                                                        "2"
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "3": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "liquid_depth": [
+                                                        "snbt",
+                                                        "3"
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "4": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "liquid_depth": [
+                                                        "snbt",
+                                                        "4"
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "5": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "liquid_depth": [
+                                                        "snbt",
+                                                        "5"
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "6": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "liquid_depth": [
+                                                        "snbt",
+                                                        "6"
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "7": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "liquid_depth": [
+                                                        "snbt",
+                                                        "7"
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "\"true\"": [
+                            {
+                                "function": "map_properties",
+                                "options": {
+                                    "level": {
+                                        "0": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "liquid_depth": [
+                                                        "snbt",
+                                                        "8"
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "1": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "liquid_depth": [
+                                                        "snbt",
+                                                        "9"
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "2": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "liquid_depth": [
+                                                        "snbt",
+                                                        "10"
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "3": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "liquid_depth": [
+                                                        "snbt",
+                                                        "11"
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "4": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "liquid_depth": [
+                                                        "snbt",
+                                                        "12"
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "5": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "liquid_depth": [
+                                                        "snbt",
+                                                        "13"
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "6": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "liquid_depth": [
+                                                        "snbt",
+                                                        "14"
+                                                    ]
+                                                }
+                                            }
+                                        ],
+                                        "7": [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "liquid_depth": [
+                                                        "snbt",
+                                                        "15"
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
 }

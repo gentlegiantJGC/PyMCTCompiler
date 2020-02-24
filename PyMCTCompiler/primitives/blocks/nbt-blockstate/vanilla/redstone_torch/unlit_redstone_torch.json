@@ -1,174 +1,174 @@
 {
-	"specification": {
-		"properties": {
-			"torch_facing_direction": [
+    "specification": {
+        "properties": {
+            "torch_facing_direction": [
                 "\"top\"",
-				"\"west\"",
-				"\"east\"",
-				"\"north\"",
-				"\"south\"",
-				"\"unknown\""
+                "\"west\"",
+                "\"east\"",
+                "\"north\"",
+                "\"south\"",
+                "\"unknown\""
             ]
-		},
-		"defaults": {
-			"torch_facing_direction": "\"top\""
-		},
-		"nbt_properties": true
-	},
-	"to_universal": [
-		{
-			"function": "new_block",
-			"options": "universal_minecraft:redstone_torch"
-		},
-		{
-			"function": "new_properties",
-			"options": {
-				"lit": "\"false\""
-			}
-		},
-		{
-			"function": "map_properties",
-			"options": {
-				"torch_facing_direction": {
-					"\"unknown\"": [
-						{
-							"function": "new_properties",
-							"options": {
-								"facing": "unknown"
-							}
-						}
-					],
-					"\"west\"": [
-						{
-							"function": "new_properties",
-							"options": {
-								"facing": "\"east\""
-							}
-						}
-					],
-					"\"east\"": [
-						{
-							"function": "new_properties",
-							"options": {
-								"facing": "\"west\""
-							}
-						}
-					],
-					"\"north\"": [
-						{
-							"function": "new_properties",
-							"options": {
-								"facing": "\"south\""
-							}
-						}
-					],
-					"\"south\"": [
-						{
-							"function": "new_properties",
-							"options": {
-								"facing": "\"north\""
-							}
-						}
-					],
-					"\"top\"": [
-						{
-							"function": "new_properties",
-							"options": {
-								"facing": "\"up\""
-							}
-						}
-					]
-				}
-			}
-		}
-	],
-	"from_universal": {
-		"universal_minecraft:redstone_torch": [
-			{
-				"function": "new_block",
-				"options": "minecraft:redstone_torch"
-			},
-			{
-				"function": "map_properties",
-				"options": {
-					"lit": {
-						"\"false\"": [
-							{
-								"function": "new_block",
-								"options": "minecraft:unlit_redstone_torch"
-							}
-						]
-					},
-					"facing": {
-						"unknown": [
-							{
-								"function": "new_properties",
-								"options": {
-									"torch_facing_direction": [
-										"snbt",
-										"\"unknown\""
-									]
-								}
-							}
-						],
-						"\"west\"": [
-							{
-								"function": "new_properties",
-								"options": {
-									"torch_facing_direction": [
-										"snbt",
-										"\"east\""
-									]
-								}
-							}
-						],
-						"\"east\"": [
-							{
-								"function": "new_properties",
-								"options": {
-									"torch_facing_direction": [
-										"snbt",
-										"\"west\""
-									]
-								}
-							}
-						],
-						"\"north\"": [
-							{
-								"function": "new_properties",
-								"options": {
-									"torch_facing_direction": [
-										"snbt",
-										"\"south\""
-									]
-								}
-							}
-						],
-						"\"south\"": [
-							{
-								"function": "new_properties",
-								"options": {
-									"torch_facing_direction": [
-										"snbt",
-										"\"north\""
-									]
-								}
-							}
-						],
-						"\"up\"": [
-							{
-								"function": "new_properties",
-								"options": {
-									"torch_facing_direction": [
-										"snbt",
-										"\"top\""
-									]
-								}
-							}
-						]
-					}
-				}
-			}
-		]
-	}
+        },
+        "defaults": {
+            "torch_facing_direction": "\"top\""
+        },
+        "nbt_properties": true
+    },
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:redstone_torch"
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "lit": "\"false\""
+            }
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "torch_facing_direction": {
+                    "\"unknown\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "unknown"
+                            }
+                        }
+                    ],
+                    "\"west\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"east\""
+                            }
+                        }
+                    ],
+                    "\"east\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"west\""
+                            }
+                        }
+                    ],
+                    "\"north\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"south\""
+                            }
+                        }
+                    ],
+                    "\"south\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"north\""
+                            }
+                        }
+                    ],
+                    "\"top\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"up\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:redstone_torch": [
+            {
+                "function": "new_block",
+                "options": "minecraft:redstone_torch"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "lit": {
+                        "\"false\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:unlit_redstone_torch"
+                            }
+                        ]
+                    },
+                    "facing": {
+                        "unknown": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": [
+                                        "snbt",
+                                        "\"unknown\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"west\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": [
+                                        "snbt",
+                                        "\"east\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"east\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": [
+                                        "snbt",
+                                        "\"west\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"north\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": [
+                                        "snbt",
+                                        "\"south\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"south\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": [
+                                        "snbt",
+                                        "\"north\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"up\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": [
+                                        "snbt",
+                                        "\"top\""
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
 }

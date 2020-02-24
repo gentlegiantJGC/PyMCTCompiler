@@ -77,14 +77,14 @@
             {
                 "function": "map_properties",
                 "options": {
-					"material": {
-						"prismarine_brick": [
-							{
-								"function": "new_block",
-								"options": "minecraft:prismarine_bricks_stairs"
-							}
-						]
-					},
+                    "material": {
+                        "prismarine_brick": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:prismarine_bricks_stairs"
+                            }
+                        ]
+                    },
                     "half": {
                         "bottom": [
                             {

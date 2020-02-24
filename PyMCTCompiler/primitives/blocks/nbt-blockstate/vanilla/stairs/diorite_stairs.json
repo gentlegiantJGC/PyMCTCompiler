@@ -78,14 +78,14 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-						"diorite": [
-							{
-								"function": "new_block",
-								"options": "minecraft:diorite_stairs"
-							}
-						]
-					},
-					"half": {
+                        "diorite": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:diorite_stairs"
+                            }
+                        ]
+                    },
+                    "half": {
                         "bottom": [
                             {
                                 "function": "new_properties",

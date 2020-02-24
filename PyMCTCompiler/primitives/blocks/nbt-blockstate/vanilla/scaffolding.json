@@ -97,7 +97,11 @@
             "function": "multiblock",
             "options": [
                 {
-                    "coords": [0, -1, 0],
+                    "coords": [
+                        0,
+                        -1,
+                        0
+                    ],
                     "functions": [
                         {
                             "function": "map_block_name",

@@ -78,14 +78,14 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-						"mossy_cobblestone": [
-							{
-								"function": "new_block",
-								"options": "minecraft:mossy_cobblestone_stairs"
-							}
-						]
-					},
-					"half": {
+                        "mossy_cobblestone": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:mossy_cobblestone_stairs"
+                            }
+                        ]
+                    },
+                    "half": {
                         "bottom": [
                             {
                                 "function": "new_properties",
