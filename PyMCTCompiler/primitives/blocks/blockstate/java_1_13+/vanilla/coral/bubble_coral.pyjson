@@ -1,1 +1,1 @@
-blockstate.coral("minecraft", "bubble_coral", "bubble", False, "universal_minecraft", "coral")
+blockstate.coral("minecraft", "bubble_coral", "\"bubble\"", False, "universal_minecraft", "coral")

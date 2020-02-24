@@ -7,7 +7,7 @@
 		{
 			"function": "new_properties",
 			"options": {
-				"variant": "chiseled"
+				"variant": "\"chiseled\""
 			}
 		}
 	],
@@ -17,7 +17,7 @@
 				"function": "map_properties",
 				"options": {
 					"variant": {
-						"chiseled": [
+						"\"chiseled\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:chiseled_stone_bricks"

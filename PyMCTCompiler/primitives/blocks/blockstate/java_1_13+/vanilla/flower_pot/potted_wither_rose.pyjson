@@ -1,1 +1,1 @@
-blockstate.flower_pot("minecraft", "potted_wither_rose", "wither_rose", "universal_minecraft", "flower_pot")
+blockstate.flower_pot("minecraft", "potted_wither_rose", "\"wither_rose\"", "universal_minecraft", "flower_pot")

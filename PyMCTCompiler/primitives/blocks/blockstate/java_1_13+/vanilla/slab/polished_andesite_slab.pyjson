@@ -1,1 +1,1 @@
-blockstate.material_helper("minecraft", "polished_andesite_slab", "polished_andesite", "universal_minecraft", "slab", {"type": ["\"top\"","\"bottom\"","\"double\""]})
+blockstate.material_helper("minecraft", "polished_andesite_slab", "\"polished_andesite\"", "universal_minecraft", "slab", {"type": ["\"top\"","\"bottom\"","\"double\""]})

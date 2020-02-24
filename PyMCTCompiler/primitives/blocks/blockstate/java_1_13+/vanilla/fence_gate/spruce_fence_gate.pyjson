@@ -1,1 +1,1 @@
-blockstate.material_helper("minecraft", "spruce_fence_gate", "spruce", "universal_minecraft", "fence_gate", {"facing": ["\"north\"","\"south\"","\"west\"","\"east\""],"in_wall": ["\"true\"","\"false\""],"open": ["\"true\"","\"false\""],"powered": ["\"true\"","\"false\""]})
+blockstate.material_helper("minecraft", "spruce_fence_gate", "\"spruce\"", "universal_minecraft", "fence_gate", {"facing": ["\"north\"","\"south\"","\"west\"","\"east\""],"in_wall": ["\"true\"","\"false\""],"open": ["\"true\"","\"false\""],"powered": ["\"true\"","\"false\""]})

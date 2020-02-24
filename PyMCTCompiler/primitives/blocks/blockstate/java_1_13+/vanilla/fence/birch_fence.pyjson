@@ -1,1 +1,1 @@
-blockstate.material_helper("minecraft", "birch_fence", "birch", "universal_minecraft", "fence", {"\"east\"": ["\"true\"","\"false\""],"\"north\"": ["\"true\"","\"false\""],"\"south\"": ["\"true\"","\"false\""],"\"west\"": ["\"true\"","\"false\""]})
+blockstate.material_helper("minecraft", "birch_fence", "\"birch\"", "universal_minecraft", "fence", {"\"east\"": ["\"true\"","\"false\""],"\"north\"": ["\"true\"","\"false\""],"\"south\"": ["\"true\"","\"false\""],"\"west\"": ["\"true\"","\"false\""]})

@@ -1,1 +1,1 @@
-blockstate.leaves("minecraft", "dark_oak_leaves", "dark_oak", "universal_minecraft", "leaves")
+blockstate.leaves("minecraft", "dark_oak_leaves", "\"dark_oak\"", "universal_minecraft", "leaves")

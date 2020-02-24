@@ -1,1 +1,1 @@
-blockstate.command_block("minecraft", "chain_command_block", "chain", "universal_minecraft", "command_block")
+blockstate.command_block("minecraft", "chain_command_block", "\"chain\"", "universal_minecraft", "command_block")

@@ -1,1 +1,1 @@
-blockstate.single_map("minecraft", "infested_stone", "material", "stone", "minecraft:infested_cobblestone", "universal_minecraft", "infested_block")
+blockstate.single_map("minecraft", "infested_stone", "material", "\"stone\"", "minecraft:infested_cobblestone", "universal_minecraft", "infested_block")

@@ -1,1 +1,1 @@
-blockstate.flower_pot("minecraft", "potted_dark_oak_sapling", "dark_oak_sapling", "universal_minecraft", "flower_pot")
+blockstate.flower_pot("minecraft", "potted_dark_oak_sapling", "\"dark_oak_sapling\"", "universal_minecraft", "flower_pot")

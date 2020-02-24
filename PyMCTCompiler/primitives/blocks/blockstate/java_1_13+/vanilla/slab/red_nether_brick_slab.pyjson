@@ -1,1 +1,1 @@
-blockstate.material_helper("minecraft", "red_nether_brick_slab", "red_nether_brick", "universal_minecraft", "slab", {"type": ["\"top\"","\"bottom\"","\"double\""]})
+blockstate.material_helper("minecraft", "red_nether_brick_slab", "\"red_nether_brick\"", "universal_minecraft", "slab", {"type": ["\"top\"","\"bottom\"","\"double\""]})

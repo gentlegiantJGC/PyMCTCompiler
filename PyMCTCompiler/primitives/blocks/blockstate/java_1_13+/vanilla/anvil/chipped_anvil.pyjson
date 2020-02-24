@@ -1,1 +1,1 @@
-blockstate.anvil("minecraft", "chipped_anvil", "chipped", "universal_minecraft", "anvil")
+blockstate.anvil("minecraft", "chipped_anvil", "\"chipped\"", "universal_minecraft", "anvil")

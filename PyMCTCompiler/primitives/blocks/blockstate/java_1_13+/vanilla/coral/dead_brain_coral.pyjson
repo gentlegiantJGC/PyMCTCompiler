@@ -1,1 +1,1 @@
-blockstate.coral("minecraft", "dead_brain_coral", "brain", True, "universal_minecraft", "coral")
+blockstate.coral("minecraft", "dead_brain_coral", "\"brain\"", True, "universal_minecraft", "coral")

@@ -1,1 +1,1 @@
-blockstate.wood("minecraft", "spruce_wood", "spruce", False, "universal_minecraft", "wood")
+blockstate.wood("minecraft", "spruce_wood", "\"spruce\"", False, "universal_minecraft", "wood")

@@ -1,1 +1,1 @@
-blockstate.coral_fan("minecraft", "fire_coral_wall_fan", "fire", False, True, "universal_minecraft", "coral_fan")
+blockstate.coral_fan("minecraft", "fire_coral_wall_fan", "\"fire\"", False, True, "universal_minecraft", "coral_fan")

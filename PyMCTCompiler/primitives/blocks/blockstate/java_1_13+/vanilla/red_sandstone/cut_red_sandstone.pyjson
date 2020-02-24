@@ -1,1 +1,1 @@
-blockstate.single_map("minecraft", "cut_red_sandstone", "variant", "cut", "minecraft:red_sandstone", "universal_minecraft", "red_sandstone")
+blockstate.single_map("minecraft", "\"cut_red_sandstone\"", "variant", "\"cut\"", "minecraft:red_sandstone", "universal_minecraft", "red_sandstone")

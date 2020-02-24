@@ -1,1 +1,1 @@
-blockstate.wood("minecraft", "stripped_jungle_log", "jungle", True, "universal_minecraft", "log")
+blockstate.wood("minecraft", "stripped_jungle_log", "\"jungle\"", True, "universal_minecraft", "log")

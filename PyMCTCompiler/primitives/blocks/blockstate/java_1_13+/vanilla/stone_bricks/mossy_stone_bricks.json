@@ -7,7 +7,7 @@
 		{
 			"function": "new_properties",
 			"options": {
-				"variant": "mossy"
+				"variant": "\"mossy\""
 			}
 		}
 	],
@@ -17,7 +17,7 @@
 				"function": "map_properties",
 				"options": {
 					"variant": {
-						"mossy": [
+						"\"mossy\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:mossy_stone_bricks"

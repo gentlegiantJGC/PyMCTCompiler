@@ -1,1 +1,1 @@
-blockstate.coral_fan("minecraft", "dead_horn_coral_wall_fan", "horn", True, True, "universal_minecraft", "coral_fan")
+blockstate.coral_fan("minecraft", "dead_horn_coral_wall_fan", "\"horn\"", True, True, "universal_minecraft", "coral_fan")

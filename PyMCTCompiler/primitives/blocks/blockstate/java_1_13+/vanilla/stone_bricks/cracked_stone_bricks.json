@@ -7,7 +7,7 @@
 		{
 			"function": "new_properties",
 			"options": {
-				"variant": "cracked"
+				"variant": "\"cracked\""
 			}
 		}
 	],
@@ -17,7 +17,7 @@
 				"function": "map_properties",
 				"options": {
 					"variant": {
-						"cracked": [
+						"\"cracked\"": [
 							{
 								"function": "new_block",
 								"options": "minecraft:cracked_stone_bricks"
