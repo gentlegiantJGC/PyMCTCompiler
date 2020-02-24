@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "smooth_stone"
+                                "material": "\"smooth_stone\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "sandstone"
+                                "material": "\"sandstone\""
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "petrified_oak"
+                                "material": "\"petrified_oak\""
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "cobblestone"
+                                "material": "\"cobblestone\""
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "brick"
+                                "material": "\"brick\""
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "stone_brick"
+                                "material": "\"stone_brick\""
                             }
                         }
                     ],
@@ -60,7 +60,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "quartz"
+                                "material": "\"quartz\""
                             }
                         }
                     ],
@@ -68,7 +68,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "nether_brick"
+                                "material": "\"nether_brick\""
                             }
                         }
                     ]
@@ -118,7 +118,7 @@
                                 "function": "map_properties",
                                 "options": {
                                     "material": {
-                                        "smooth_stone": [
+                                        "\"smooth_stone\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -129,7 +129,7 @@
                                                 }
                                             }
                                         ],
-                                        "sandstone": [
+                                        "\"sandstone\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -140,7 +140,7 @@
                                                 }
                                             }
                                         ],
-                                        "petrified_oak": [
+                                        "\"petrified_oak\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -151,7 +151,7 @@
                                                 }
                                             }
                                         ],
-                                        "cobblestone": [
+                                        "\"cobblestone\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -162,7 +162,7 @@
                                                 }
                                             }
                                         ],
-                                        "brick": [
+                                        "\"brick\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -173,7 +173,7 @@
                                                 }
                                             }
                                         ],
-                                        "stone_brick": [
+                                        "\"stone_brick\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -184,7 +184,7 @@
                                                 }
                                             }
                                         ],
-                                        "quartz": [
+                                        "\"quartz\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -195,7 +195,7 @@
                                                 }
                                             }
                                         ],
-                                        "nether_brick": [
+                                        "\"nether_brick\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -224,7 +224,7 @@
                                 "function": "map_properties",
                                 "options": {
                                     "material": {
-                                        "smooth_stone": [
+                                        "\"smooth_stone\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -235,7 +235,7 @@
                                                 }
                                             }
                                         ],
-                                        "sandstone": [
+                                        "\"sandstone\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -246,7 +246,7 @@
                                                 }
                                             }
                                         ],
-                                        "petrified_oak": [
+                                        "\"petrified_oak\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -257,7 +257,7 @@
                                                 }
                                             }
                                         ],
-                                        "cobblestone": [
+                                        "\"cobblestone\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -268,7 +268,7 @@
                                                 }
                                             }
                                         ],
-                                        "brick": [
+                                        "\"brick\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -279,7 +279,7 @@
                                                 }
                                             }
                                         ],
-                                        "stone_brick": [
+                                        "\"stone_brick\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -290,7 +290,7 @@
                                                 }
                                             }
                                         ],
-                                        "quartz": [
+                                        "\"quartz\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -301,7 +301,7 @@
                                                 }
                                             }
                                         ],
-                                        "nether_brick": [
+                                        "\"nether_brick\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {

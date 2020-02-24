@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "material": "nether_brick"
+                "material": "\"nether_brick\""
             }
         }
     ],
@@ -21,7 +21,7 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-                        "nether_brick": [
+                        "\"nether_brick\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:nether_brick_fence"

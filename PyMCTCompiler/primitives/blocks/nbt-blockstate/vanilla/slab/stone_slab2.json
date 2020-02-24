@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "red_sandstone"
+                                "material": "\"red_sandstone\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "purpur"
+                                "material": "\"purpur\""
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "prismarine"
+                                "material": "\"prismarine\""
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "dark_prismarine"
+                                "material": "\"dark_prismarine\""
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "prismarine_brick"
+                                "material": "\"prismarine_brick\""
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "mossy_cobblestone"
+                                "material": "\"mossy_cobblestone\""
                             }
                         }
                     ],
@@ -60,7 +60,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "smooth_sandstone"
+                                "material": "\"smooth_sandstone\""
                             }
                         }
                     ],
@@ -68,7 +68,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "red_nether_brick"
+                                "material": "\"red_nether_brick\""
                             }
                         }
                     ]
@@ -118,7 +118,7 @@
                                 "function": "map_properties",
                                 "options": {
                                     "material": {
-                                        "red_sandstone": [
+                                        "\"red_sandstone\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab2"
@@ -133,7 +133,7 @@
                                                 }
                                             }
                                         ],
-                                        "purpur": [
+                                        "\"purpur\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab2"
@@ -148,7 +148,7 @@
                                                 }
                                             }
                                         ],
-                                        "prismarine": [
+                                        "\"prismarine\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab2"
@@ -163,7 +163,7 @@
                                                 }
                                             }
                                         ],
-                                        "dark_prismarine": [
+                                        "\"dark_prismarine\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab2"
@@ -178,7 +178,7 @@
                                                 }
                                             }
                                         ],
-                                        "prismarine_brick": [
+                                        "\"prismarine_brick\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab2"
@@ -193,7 +193,7 @@
                                                 }
                                             }
                                         ],
-                                        "mossy_cobblestone": [
+                                        "\"mossy_cobblestone\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab2"
@@ -208,7 +208,7 @@
                                                 }
                                             }
                                         ],
-                                        "smooth_sandstone": [
+                                        "\"smooth_sandstone\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab2"
@@ -223,7 +223,7 @@
                                                 }
                                             }
                                         ],
-                                        "red_nether_brick": [
+                                        "\"red_nether_brick\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab2"
@@ -256,7 +256,7 @@
                                 "function": "map_properties",
                                 "options": {
                                     "material": {
-                                        "red_sandstone": [
+                                        "\"red_sandstone\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab2"
@@ -271,7 +271,7 @@
                                                 }
                                             }
                                         ],
-                                        "purpur": [
+                                        "\"purpur\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab2"
@@ -286,7 +286,7 @@
                                                 }
                                             }
                                         ],
-                                        "prismarine": [
+                                        "\"prismarine\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab2"
@@ -301,7 +301,7 @@
                                                 }
                                             }
                                         ],
-                                        "dark_prismarine": [
+                                        "\"dark_prismarine\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab2"
@@ -316,7 +316,7 @@
                                                 }
                                             }
                                         ],
-                                        "prismarine_brick": [
+                                        "\"prismarine_brick\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab2"
@@ -331,7 +331,7 @@
                                                 }
                                             }
                                         ],
-                                        "mossy_cobblestone": [
+                                        "\"mossy_cobblestone\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab2"
@@ -346,7 +346,7 @@
                                                 }
                                             }
                                         ],
-                                        "smooth_sandstone": [
+                                        "\"smooth_sandstone\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab2"
@@ -361,7 +361,7 @@
                                                 }
                                             }
                                         ],
-                                        "red_nether_brick": [
+                                        "\"red_nether_brick\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab2"

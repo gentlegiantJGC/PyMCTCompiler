@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "material": "cobblestone"
+                "material": "\"cobblestone\""
             }
         },
         {
@@ -78,7 +78,7 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-                        "cobblestone": [
+                        "\"cobblestone\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:stone_stairs"

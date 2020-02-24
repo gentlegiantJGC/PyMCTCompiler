@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "type": "dandelion"
+                "type": "\"dandelion\""
             }
         }
     ],
@@ -21,7 +21,7 @@
                 "function": "map_properties",
                 "options": {
                     "type": {
-                        "dandelion": [
+                        "\"dandelion\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:yellow_flower"

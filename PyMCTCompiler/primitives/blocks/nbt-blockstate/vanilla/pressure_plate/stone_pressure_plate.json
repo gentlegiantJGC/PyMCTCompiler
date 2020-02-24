@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "material": "stone"
+                "material": "\"stone\""
             }
         },
         {
@@ -156,7 +156,7 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-                        "stone": [
+                        "\"stone\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:stone_pressure_plate"

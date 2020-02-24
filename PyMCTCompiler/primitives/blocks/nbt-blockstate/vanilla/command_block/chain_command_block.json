@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "mode": "chain"
+                "mode": "\"chain\""
             }
         },
         {
@@ -94,7 +94,7 @@
                 "function": "map_properties",
                 "options": {
                     "mode": {
-                        "chain": [
+                        "\"chain\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:chain_command_block"

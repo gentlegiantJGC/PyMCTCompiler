@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "mode": "repeating"
+                "mode": "\"repeating\""
             }
         },
         {
@@ -94,7 +94,7 @@
                 "function": "map_properties",
                 "options": {
                     "mode": {
-                        "repeating": [
+                        "\"repeating\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:repeating_command_block"

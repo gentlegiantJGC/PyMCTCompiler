@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "material": "end_stone_brick"
+                "material": "\"end_stone_brick\""
             }
         },
         {
@@ -78,7 +78,7 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-                        "end_stone_brick": [
+                        "\"end_stone_brick\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:end_brick_stairs"

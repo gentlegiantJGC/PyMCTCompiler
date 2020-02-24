@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "grass"
+                                "type": "\"grass\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "grass"
+                                "type": "\"grass\""
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "fern"
+                                "type": "\"fern\""
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "grass"
+                                "type": "\"grass\""
                             }
                         }
                     ]
@@ -54,7 +54,7 @@
                 "function": "map_properties",
                 "options": {
                     "type": {
-                        "grass": [
+                        "\"grass\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:tallgrass"
@@ -69,7 +69,7 @@
                                 }
                             }
                         ],
-                        "fern": [
+                        "\"fern\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:tallgrass"

@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "variant": "chiseled"
+                                "variant": "\"chiseled\""
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "variant": "cut"
+                                "variant": "\"cut\""
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "variant": "smooth"
+                                "variant": "\"smooth\""
                             }
                         }
                     ]
@@ -65,7 +65,7 @@
                                 }
                             }
                         ],
-                        "chiseled": [
+                        "\"chiseled\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -76,7 +76,7 @@
                                 }
                             }
                         ],
-                        "cut": [
+                        "\"cut\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -87,7 +87,7 @@
                                 }
                             }
                         ],
-                        "smooth": [
+                        "\"smooth\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

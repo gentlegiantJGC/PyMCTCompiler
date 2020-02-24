@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "material": "dark_prismarine"
+                "material": "\"dark_prismarine\""
             }
         },
         {
@@ -78,7 +78,7 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-                        "dark_prismarine": [
+                        "\"dark_prismarine\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:dark_prismarine_stairs"

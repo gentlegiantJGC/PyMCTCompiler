@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "material": "mossy_cobblestone"
+                "material": "\"mossy_cobblestone\""
             }
         },
         {
@@ -78,7 +78,7 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-                        "mossy_cobblestone": [
+                        "\"mossy_cobblestone\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:mossy_cobblestone_stairs"

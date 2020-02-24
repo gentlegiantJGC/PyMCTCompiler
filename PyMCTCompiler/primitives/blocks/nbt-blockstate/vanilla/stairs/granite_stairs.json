@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "material": "granite"
+                "material": "\"granite\""
             }
         },
         {
@@ -78,7 +78,7 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-                        "granite": [
+                        "\"granite\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:granite_stairs"

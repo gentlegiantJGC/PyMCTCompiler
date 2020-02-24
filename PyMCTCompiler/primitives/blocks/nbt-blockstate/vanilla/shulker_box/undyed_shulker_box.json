@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "color": "default"
+                "color": "\"default\""
             }
         }
     ],
@@ -21,7 +21,7 @@
                 "function": "map_properties",
                 "options": {
                     "color": {
-                        "default": [
+                        "\"default\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:undyed_shulker_box"

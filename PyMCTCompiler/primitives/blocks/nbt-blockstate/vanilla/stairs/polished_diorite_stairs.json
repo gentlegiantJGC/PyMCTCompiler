@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "material": "polished_diorite"
+                "material": "\"polished_diorite\""
             }
         },
         {
@@ -78,7 +78,7 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-                        "polished_diorite": [
+                        "\"polished_diorite\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:polished_diorite_stairs"

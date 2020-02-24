@@ -1,1 +1,1 @@
-nbt_blockstate.door('spruce_door', 'spruce')
+nbt_blockstate.door("spruce_door", "\"spruce\"")

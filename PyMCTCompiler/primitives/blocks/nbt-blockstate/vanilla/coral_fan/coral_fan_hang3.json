@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "horn"
+                                "type": "\"horn\""
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "horn"
+                                "type": "\"horn\""
                             }
                         }
                     ]
@@ -128,7 +128,7 @@
                                         ]
                                     },
                                     "type": {
-                                        "horn": [
+                                        "\"horn\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:coral_fan_hang3"
@@ -185,7 +185,7 @@
                                         ]
                                     },
                                     "type": {
-                                        "horn": [
+                                        "\"horn\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:coral_fan_hang3"
@@ -242,7 +242,7 @@
                                         ]
                                     },
                                     "type": {
-                                        "horn": [
+                                        "\"horn\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:coral_fan_hang3"
@@ -299,7 +299,7 @@
                                         ]
                                     },
                                     "type": {
-                                        "horn": [
+                                        "\"horn\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:coral_fan_hang3"

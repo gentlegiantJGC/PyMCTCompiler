@@ -38,7 +38,7 @@
                                 "facing": facing
                             }
                         }
-                    ] for data7, facing in [[1, 'floor'], [2, 'north'], [3, 'south'], [4, 'west'], [5, 'east']]
+                    ] for data7, facing in [[1, "\"floor\""], [2, "\"north\""], [3, "\"south\""], [4, "\"west\""], [5, "\"east\""]]
                 }
             }
         }

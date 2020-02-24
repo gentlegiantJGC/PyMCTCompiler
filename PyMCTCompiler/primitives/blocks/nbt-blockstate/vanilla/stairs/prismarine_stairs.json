@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "material": "prismarine"
+                "material": "\"prismarine\""
             }
         },
         {
@@ -78,7 +78,7 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-                        "prismarine": [
+                        "\"prismarine\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:prismarine_stairs"

@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "face": "multiple"
+                                "face": "\"multiple\""
                             }
                         }
                     ]
@@ -121,7 +121,7 @@
                                 }
                             }
                         ],
-                        "multiple": [
+                        "\"multiple\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

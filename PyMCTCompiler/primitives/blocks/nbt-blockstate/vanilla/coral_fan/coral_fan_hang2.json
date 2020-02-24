@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "bubble"
+                                "type": "\"bubble\""
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "fire"
+                                "type": "\"fire\""
                             }
                         }
                     ]
@@ -128,7 +128,7 @@
                                         ]
                                     },
                                     "type": {
-                                        "bubble": [
+                                        "\"bubble\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:coral_fan_hang2"
@@ -143,7 +143,7 @@
                                                 }
                                             }
                                         ],
-                                        "fire": [
+                                        "\"fire\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:coral_fan_hang2"
@@ -200,7 +200,7 @@
                                         ]
                                     },
                                     "type": {
-                                        "bubble": [
+                                        "\"bubble\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:coral_fan_hang2"
@@ -215,7 +215,7 @@
                                                 }
                                             }
                                         ],
-                                        "fire": [
+                                        "\"fire\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:coral_fan_hang2"
@@ -272,7 +272,7 @@
                                         ]
                                     },
                                     "type": {
-                                        "bubble": [
+                                        "\"bubble\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:coral_fan_hang2"
@@ -287,7 +287,7 @@
                                                 }
                                             }
                                         ],
-                                        "fire": [
+                                        "\"fire\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:coral_fan_hang2"
@@ -344,7 +344,7 @@
                                         ]
                                     },
                                     "type": {
-                                        "bubble": [
+                                        "\"bubble\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:coral_fan_hang2"
@@ -359,7 +359,7 @@
                                                 }
                                             }
                                         ],
-                                        "fire": [
+                                        "\"fire\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:coral_fan_hang2"

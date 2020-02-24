@@ -4,26 +4,26 @@ import itertools
 def mushroom_block(color: str) -> dict:
 	directions = {  # up, down, north, east, south, west
 		f'universal_minecraft:{color}_mushroom_block': {
-			0: ['false', 'false', 'false', 'false', 'false', 'false'],
-			1: ['true', 'false', 'true', 'false', 'false', 'true'],
-			2: ['true', 'false', 'true', 'false', 'false', 'false'],
-			3: ['true', 'false', 'true', 'true', 'false', 'false'],
-			4: ['true', 'false', 'false', 'false', 'false', 'true'],
-			5: ['true', 'false', 'false', 'false', 'false', 'false'],
-			6: ['true', 'false', 'false', 'true', 'false', 'false'],
-			7: ['true', 'false', 'false', 'false', 'true', 'true'],
-			8: ['true', 'false', 'false', 'false', 'true', 'false'],
-			9: ['true', 'false', 'false', 'true', 'true', 'false'],
-			14: ['true', 'true', 'true', 'true', 'true', 'true']
+			0: ["\"false\"", "\"false\"", "\"false\"", "\"false\"", "\"false\"", "\"false\""],
+			1: ["\"true\"", "\"false\"", "\"true\"", "\"false\"", "\"false\"", "\"true\""],
+			2: ["\"true\"", "\"false\"", "\"true\"", "\"false\"", "\"false\"", "\"false\""],
+			3: ["\"true\"", "\"false\"", "\"true\"", "\"true\"", "\"false\"", "\"false\""],
+			4: ["\"true\"", "\"false\"", "\"false\"", "\"false\"", "\"false\"", "\"true\""],
+			5: ["\"true\"", "\"false\"", "\"false\"", "\"false\"", "\"false\"", "\"false\""],
+			6: ["\"true\"", "\"false\"", "\"false\"", "\"true\"", "\"false\"", "\"false\""],
+			7: ["\"true\"", "\"false\"", "\"false\"", "\"false\"", "\"true\"", "\"true\""],
+			8: ["\"true\"", "\"false\"", "\"false\"", "\"false\"", "\"true\"", "\"false\""],
+			9: ["\"true\"", "\"false\"", "\"false\"", "\"true\"", "\"true\"", "\"false\""],
+			14: ["\"true\"", "\"true\"", "\"true\"", "\"true\"", "\"true\"", "\"true\""]
 		},
 		'universal_minecraft:mushroom_stem': {
-			10: ['false', 'false', 'true', 'true', 'true', 'true'],
-			15: ['true', 'true', 'true', 'true', 'true', 'true']
+			10: ["\"false\"", "\"false\"", "\"true\"", "\"true\"", "\"true\"", "\"true\""],
+			15: ["\"true\"", "\"true\"", "\"true\"", "\"true\"", "\"true\"", "\"true\""]
 		}
 	}
 
 	nearest_map = {}
-	for dirs in list(itertools.product(['true', 'false'], repeat=6)):
+	for dirs in list(itertools.product(["\"true\"", "\"false\""], repeat=6)):
 		count = -1
 		nearest = None
 		for data, dirs2 in directions[f'universal_minecraft:{color}_mushroom_block'].items():
@@ -66,7 +66,7 @@ def mushroom_block(color: str) -> dict:
 										"east": dirs[3],
 										"south": dirs[4],
 										"west": dirs[5],
-										"material": color
+										"material": f"\"{color}\""
 									}
 								}[block]
 							}
@@ -120,27 +120,27 @@ def mushroom_block(color: str) -> dict:
 																														]
 																													}
 																												}
-																											] for west in ('true', 'false')
+																											] for west in ("\"true\"", "\"false\"")
 																										}
 																									}
 																								}
-																							] for south in ('true', 'false')
+																							] for south in ("\"true\"", "\"false\"")
 																						}
 																					}
 																				}
-																			] for east in ('true', 'false')
+																			] for east in ("\"true\"", "\"false\"")
 																		}
 																	}
 																}
-															] for north in ('true', 'false')
+															] for north in ("\"true\"", "\"false\"")
 														}
 													}
 												}
-											] for down in ('true', 'false')
+											] for down in ("\"true\"", "\"false\"")
 										}
 									}
 								}
-							] for up in ('true', 'false')
+							] for up in ("\"true\"", "\"false\"")
 						}
 					}
 				}
@@ -162,32 +162,32 @@ def mushroom_block(color: str) -> dict:
 					"function": "map_properties",
 					"options": {
 						"up": {
-							'true': [
+							"\"true\"": [
 								{
 									"function": "map_properties",
 									"options": {
 										"down": {
-											'true': [
+											"\"true\"": [
 												{
 													"function": "map_properties",
 													"options": {
 														"north": {
-															'true': [
+															"\"true\"": [
 																{
 																	"function": "map_properties",
 																	"options": {
 																		"east": {
-																			'true': [
+																			"\"true\"": [
 																				{
 																					"function": "map_properties",
 																					"options": {
 																						"south": {
-																							'true': [
+																							"\"true\"": [
 																								{
 																									"function": "map_properties",
 																									"options": {
 																										"west": {
-																											'true': [
+																											"\"true\"": [
 																												{
 																													"function": "new_properties",
 																													"options": {
@@ -219,7 +219,7 @@ def mushroom_block(color: str) -> dict:
 							]
 						},
 						"material": {
-							color: [
+							f"\"{color}\"": [
 								{
 									"function": "new_block",
 									"options": f'minecraft:{color}_mushroom_block'
@@ -254,7 +254,7 @@ def door(block_name: str, material: str) -> dict:
 							{
 								"function": "new_properties",
 								"options": {
-									"half": "lower"
+									"half": "\"lower\""
 								}
 							},
 							{
@@ -265,7 +265,7 @@ def door(block_name: str, material: str) -> dict:
 											{
 												"function": "new_properties",
 												"options": {
-													"facing": "east"
+													"facing": "\"east\""
 												}
 											}
 										],
@@ -273,7 +273,7 @@ def door(block_name: str, material: str) -> dict:
 											{
 												"function": "new_properties",
 												"options": {
-													"facing": "south"
+													"facing": "\"south\""
 												}
 											}
 										],
@@ -281,7 +281,7 @@ def door(block_name: str, material: str) -> dict:
 											{
 												"function": "new_properties",
 												"options": {
-													"facing": "west"
+													"facing": "\"west\""
 												}
 											}
 										],
@@ -289,7 +289,7 @@ def door(block_name: str, material: str) -> dict:
 											{
 												"function": "new_properties",
 												"options": {
-													"facing": "north"
+													"facing": "\"north\""
 												}
 											}
 										]
@@ -299,7 +299,7 @@ def door(block_name: str, material: str) -> dict:
 											{
 												"function": "new_properties",
 												"options": {
-													"open": "false"
+													"open": "\"false\""
 												}
 											}
 										],
@@ -307,7 +307,7 @@ def door(block_name: str, material: str) -> dict:
 											{
 												"function": "new_properties",
 												"options": {
-													"open": "true"
+													"open": "\"true\""
 												}
 											}
 										]
@@ -332,7 +332,7 @@ def door(block_name: str, material: str) -> dict:
 															{
 																"function": "new_properties",
 																"options": {
-																	"hinge": "left"
+																	"hinge": "\"left\""
 																}
 															}
 														],
@@ -340,7 +340,7 @@ def door(block_name: str, material: str) -> dict:
 															{
 																"function": "new_properties",
 																"options": {
-																	"hinge": "right"
+																	"hinge": "\"right\""
 																}
 															}
 														]
@@ -356,7 +356,7 @@ def door(block_name: str, material: str) -> dict:
 							{
 								"function": "new_properties",
 								"options": {
-									"half": "upper"
+									"half": "\"upper\""
 								}
 							},
 							{
@@ -367,7 +367,7 @@ def door(block_name: str, material: str) -> dict:
 											{
 												"function": "new_properties",
 												"options": {
-													"hinge": "left"
+													"hinge": "\"left\""
 												}
 											}
 										],
@@ -375,7 +375,7 @@ def door(block_name: str, material: str) -> dict:
 											{
 												"function": "new_properties",
 												"options": {
-													"hinge": "right"
+													"hinge": "\"right\""
 												}
 											}
 										]
@@ -400,7 +400,7 @@ def door(block_name: str, material: str) -> dict:
 															{
 																"function": "new_properties",
 																"options": {
-																	"facing": "east"
+																	"facing": "\"east\""
 																}
 															}
 														],
@@ -408,7 +408,7 @@ def door(block_name: str, material: str) -> dict:
 															{
 																"function": "new_properties",
 																"options": {
-																	"facing": "south"
+																	"facing": "\"south\""
 																}
 															}
 														],
@@ -416,7 +416,7 @@ def door(block_name: str, material: str) -> dict:
 															{
 																"function": "new_properties",
 																"options": {
-																	"facing": "west"
+																	"facing": "\"west\""
 																}
 															}
 														],
@@ -424,7 +424,7 @@ def door(block_name: str, material: str) -> dict:
 															{
 																"function": "new_properties",
 																"options": {
-																	"facing": "north"
+																	"facing": "\"north\""
 																}
 															}
 														]
@@ -434,7 +434,7 @@ def door(block_name: str, material: str) -> dict:
 															{
 																"function": "new_properties",
 																"options": {
-																	"open": "false"
+																	"open": "\"false\""
 																}
 															}
 														],
@@ -442,7 +442,7 @@ def door(block_name: str, material: str) -> dict:
 															{
 																"function": "new_properties",
 																"options": {
-																	"open": "true"
+																	"open": "\"true\""
 																}
 															}
 														]
@@ -476,7 +476,7 @@ def door(block_name: str, material: str) -> dict:
 							]
 						},
 						"half": {
-							"lower": [
+							"\"lower\"": [
 								{
 									"function": "new_properties",
 									"options": {
@@ -490,7 +490,7 @@ def door(block_name: str, material: str) -> dict:
 									"function": "map_properties",
 									"options": {
 										"facing": {
-											"east": [
+											"\"east\"": [
 												{
 													"function": "new_properties",
 													"options": {
@@ -501,7 +501,7 @@ def door(block_name: str, material: str) -> dict:
 													}
 												}
 											],
-											"south": [
+											"\"south\"": [
 												{
 													"function": "new_properties",
 													"options": {
@@ -512,7 +512,7 @@ def door(block_name: str, material: str) -> dict:
 													}
 												}
 											],
-											"west": [
+											"\"west\"": [
 												{
 													"function": "new_properties",
 													"options": {
@@ -523,7 +523,7 @@ def door(block_name: str, material: str) -> dict:
 													}
 												}
 											],
-											"north": [
+											"\"north\"": [
 												{
 													"function": "new_properties",
 													"options": {
@@ -536,7 +536,7 @@ def door(block_name: str, material: str) -> dict:
 											]
 										},
 										"open": {
-											"false": [
+											"\"false\"": [
 												{
 													"function": "new_properties",
 													"options": {
@@ -547,7 +547,7 @@ def door(block_name: str, material: str) -> dict:
 													}
 												}
 											],
-											"true": [
+											"\"true\"": [
 												{
 													"function": "new_properties",
 													"options": {
@@ -562,7 +562,7 @@ def door(block_name: str, material: str) -> dict:
 									}
 								}
 							],
-							"upper": [
+							"\"upper\"": [
 								{
 									"function": "new_properties",
 									"options": {
@@ -576,7 +576,7 @@ def door(block_name: str, material: str) -> dict:
 									"function": "map_properties",
 									"options": {
 										"hinge": {
-											"left": [
+											"\"left\"": [
 												{
 													"function": "new_properties",
 													"options": {
@@ -587,7 +587,7 @@ def door(block_name: str, material: str) -> dict:
 													}
 												}
 											],
-											"right": [
+											"\"right\"": [
 												{
 													"function": "new_properties",
 													"options": {

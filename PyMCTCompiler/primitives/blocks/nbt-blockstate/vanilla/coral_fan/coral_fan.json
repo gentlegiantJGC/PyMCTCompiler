@@ -19,7 +19,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "tube"
+                                "type": "\"tube\""
                             }
                         }
                     ],
@@ -27,7 +27,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "brain"
+                                "type": "\"brain\""
                             }
                         }
                     ],
@@ -35,7 +35,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "bubble"
+                                "type": "\"bubble\""
                             }
                         }
                     ],
@@ -43,7 +43,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "fire"
+                                "type": "\"fire\""
                             }
                         }
                     ],
@@ -51,7 +51,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "horn"
+                                "type": "\"horn\""
                             }
                         }
                     ]
@@ -100,7 +100,7 @@
                                         ]
                                     },
                                     "type": {
-                                        "tube": [
+                                        "\"tube\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -111,7 +111,7 @@
                                                 }
                                             }
                                         ],
-                                        "brain": [
+                                        "\"brain\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -122,7 +122,7 @@
                                                 }
                                             }
                                         ],
-                                        "bubble": [
+                                        "\"bubble\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -133,7 +133,7 @@
                                                 }
                                             }
                                         ],
-                                        "fire": [
+                                        "\"fire\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -144,7 +144,7 @@
                                                 }
                                             }
                                         ],
-                                        "horn": [
+                                        "\"horn\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {

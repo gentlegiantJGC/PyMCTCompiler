@@ -155,16 +155,16 @@ def _snbt_spec_from_hex(nbt_bin: bytes, endianness='>', nbt_type: bytes = None) 
 		payload_length = struct.unpack(f'{endianness}i', nbt_bin[1:5])[0]
 		nbt_bin = nbt_bin[5:]
 		for _ in range(payload_length):
-			_, nested_obj, nbt_bin = _nbt_spec_from_hex(nbt_bin, endianness, payload_nbt_type)
+			_, nested_obj, nbt_bin = _snbt_spec_from_hex(nbt_bin, endianness, payload_nbt_type)
 			payload.append(nested_obj)
 		return name, {"type": "list", "val": payload}, nbt_bin
 	elif nbt_type == b'\x0A':
 		payload = {}
-		nested_obj = _nbt_spec_from_hex(nbt_bin, endianness)
+		nested_obj = _snbt_spec_from_hex(nbt_bin, endianness)
 		while nested_obj is not None:
 			payload[nested_obj[0]] = nested_obj[1]
 			nbt_bin = nested_obj[2]
-			nested_obj = _nbt_spec_from_hex(nbt_bin, endianness)
+			nested_obj = _snbt_spec_from_hex(nbt_bin, endianness)
 		nbt_bin = nbt_bin[1:]
 		return name, {"type": "compound", "val": payload}, nbt_bin
 	elif nbt_type == b'\x0B':

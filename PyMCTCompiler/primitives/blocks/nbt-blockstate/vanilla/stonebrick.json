@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "variant": "mossy"
+                                "variant": "\"mossy\""
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "variant": "cracked"
+                                "variant": "\"cracked\""
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "variant": "chiseled"
+                                "variant": "\"chiseled\""
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "variant": "smooth"
+                                "variant": "\"smooth\""
                             }
                         }
                     ]
@@ -73,7 +73,7 @@
                                 }
                             }
                         ],
-                        "mossy": [
+                        "\"mossy\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -84,7 +84,7 @@
                                 }
                             }
                         ],
-                        "cracked": [
+                        "\"cracked\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -95,7 +95,7 @@
                                 }
                             }
                         ],
-                        "chiseled": [
+                        "\"chiseled\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -106,7 +106,7 @@
                                 }
                             }
                         ],
-                        "smooth": [
+                        "\"smooth\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

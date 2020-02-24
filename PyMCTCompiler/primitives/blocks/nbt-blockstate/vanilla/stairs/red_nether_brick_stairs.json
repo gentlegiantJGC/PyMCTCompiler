@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "material": "red_nether_brick"
+                "material": "\"red_nether_brick\""
             }
         },
         {
@@ -78,7 +78,7 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-                        "red_nether_brick": [
+                        "\"red_nether_brick\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:red_nether_brick_stairs"

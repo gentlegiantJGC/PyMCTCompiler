@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "mossy_stone_brick"
+                                "material": "\"mossy_stone_brick\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "smooth_quartz"
+                                "material": "\"smooth_quartz\""
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "stone"
+                                "material": "\"stone\""
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "cut_sandstone"
+                                "material": "\"cut_sandstone\""
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "material": "cut_red_sandstone"
+                                "material": "\"cut_red_sandstone\""
                             }
                         }
                     ]
@@ -94,7 +94,7 @@
                                 "function": "map_properties",
                                 "options": {
                                     "material": {
-                                        "mossy_stone_brick": [
+                                        "\"mossy_stone_brick\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab4"
@@ -109,7 +109,7 @@
                                                 }
                                             }
                                         ],
-                                        "smooth_quartz": [
+                                        "\"smooth_quartz\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab4"
@@ -124,7 +124,7 @@
                                                 }
                                             }
                                         ],
-                                        "stone": [
+                                        "\"stone\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab4"
@@ -139,7 +139,7 @@
                                                 }
                                             }
                                         ],
-                                        "cut_sandstone": [
+                                        "\"cut_sandstone\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab4"
@@ -154,7 +154,7 @@
                                                 }
                                             }
                                         ],
-                                        "cut_red_sandstone": [
+                                        "\"cut_red_sandstone\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab4"
@@ -187,7 +187,7 @@
                                 "function": "map_properties",
                                 "options": {
                                     "material": {
-                                        "mossy_stone_brick": [
+                                        "\"mossy_stone_brick\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab4"
@@ -202,7 +202,7 @@
                                                 }
                                             }
                                         ],
-                                        "smooth_quartz": [
+                                        "\"smooth_quartz\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab4"
@@ -217,7 +217,7 @@
                                                 }
                                             }
                                         ],
-                                        "stone": [
+                                        "\"stone\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab4"
@@ -232,7 +232,7 @@
                                                 }
                                             }
                                         ],
-                                        "cut_sandstone": [
+                                        "\"cut_sandstone\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab4"
@@ -247,7 +247,7 @@
                                                 }
                                             }
                                         ],
-                                        "cut_red_sandstone": [
+                                        "\"cut_red_sandstone\"": [
                                             {
                                                 "function": "new_block",
                                                 "options": "minecraft:stone_slab4"

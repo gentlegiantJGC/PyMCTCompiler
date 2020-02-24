@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "mode": "impulse"
+                "mode": "\"impulse\""
             }
         },
         {
@@ -94,7 +94,7 @@
                 "function": "map_properties",
                 "options": {
                     "mode": {
-                        "impulse": [
+                        "\"impulse\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:command_block"

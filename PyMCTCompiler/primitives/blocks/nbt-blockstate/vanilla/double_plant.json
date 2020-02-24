@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "sunflower"
+                                "type": "\"sunflower\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "lilac"
+                                "type": "\"lilac\""
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "tall_grass"
+                                "type": "\"tall_grass\""
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "large_fern"
+                                "type": "\"large_fern\""
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "rose_bush"
+                                "type": "\"rose_bush\""
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "peony"
+                                "type": "\"peony\""
                             }
                         }
                     ]
@@ -88,7 +88,7 @@
                 "function": "map_properties",
                 "options": {
                     "type": {
-                        "sunflower": [
+                        "\"sunflower\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -99,7 +99,7 @@
                                 }
                             }
                         ],
-                        "lilac": [
+                        "\"lilac\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -110,7 +110,7 @@
                                 }
                             }
                         ],
-                        "tall_grass": [
+                        "\"tall_grass\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -121,7 +121,7 @@
                                 }
                             }
                         ],
-                        "large_fern": [
+                        "\"large_fern\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -132,7 +132,7 @@
                                 }
                             }
                         ],
-                        "rose_bush": [
+                        "\"rose_bush\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -143,7 +143,7 @@
                                 }
                             }
                         ],
-                        "peony": [
+                        "\"peony\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

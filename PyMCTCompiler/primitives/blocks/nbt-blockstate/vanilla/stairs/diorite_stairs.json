@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "material": "diorite"
+                "material": "\"diorite\""
             }
         },
         {
@@ -78,7 +78,7 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-                        "diorite": [
+                        "\"diorite\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:diorite_stairs"

@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "material": "iron"
+                "material": "\"iron\""
             }
         },
         {
@@ -96,7 +96,7 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-                        "iron": [
+                        "\"iron\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:iron_trapdoor"

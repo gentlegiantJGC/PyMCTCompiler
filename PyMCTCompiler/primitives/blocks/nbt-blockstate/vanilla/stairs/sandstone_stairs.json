@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "material": "sandstone"
+                "material": "\"sandstone\""
             }
         },
         {
@@ -78,7 +78,7 @@
                 "function": "map_properties",
                 "options": {
                     "material": {
-                        "sandstone": [
+                        "\"sandstone\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:sandstone_stairs"
