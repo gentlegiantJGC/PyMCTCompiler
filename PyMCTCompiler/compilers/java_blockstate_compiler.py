@@ -115,7 +115,12 @@ class JavaBlockstateCompiler(BaseCompiler):
                 default_state = next(s for s in states['states'] if s.get('default', False))
 
                 if 'properties' in default_state:
-                    states['defaults'] = default_state['properties']
+                    states['defaults'] = {}
+                    for key, val in default_state['properties'].items():
+                        states['defaults'][key] = f"\"{val}\""
+                    for prop, vals in states['properties'].items():
+                        states['properties'][prop] = [f"\"{val}\"" for val in vals]
+
                     if 'waterlogged' in states['properties']:
                         if block_string not in waterloggable:
                             waterloggable.append(block_string)

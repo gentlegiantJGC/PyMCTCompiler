@@ -63,7 +63,12 @@ class UniversalCompiler(BaseCompiler):
 				default_state = next(s for s in states['states'] if s.get('default', False))
 
 				if 'properties' in default_state:
-					states['defaults'] = default_state['properties']
+					states['defaults'] = {}
+					for key, val in default_state['properties'].items():
+						states['defaults'][key] = f"\"{val}\""
+					for prop, vals in states['properties'].items():
+						states['properties'][prop] = [f"\"{val}\"" for val in vals]
+
 				if 'defaults' in states and 'waterlogged' in states['defaults']:
 					del states['defaults']['waterlogged']
 					del states['properties']['waterlogged']
