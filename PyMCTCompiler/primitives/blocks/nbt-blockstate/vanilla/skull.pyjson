@@ -110,10 +110,10 @@
                                 }
                             }
                         ] for rot, facing in enumerate([
-                            "north",
-                            "south",
-                            "west",
-                            "east"
+                            "\"north\"",
+                            "\"south\"",
+                            "\"west\"",
+                            "\"east\""
                         ])
                     }
                 }

@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "variant": "normal"
+                                "variant": "\"normal\""
                             }
                         }
                     ],
@@ -62,7 +62,7 @@
                 "function": "map_properties",
                 "options": {
                     "variant": {
-                        "normal": [
+                        "\"normal\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

@@ -34,7 +34,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"facing": "north"
+								"facing": "\"north\""
 							}
 						}
 					],
@@ -42,7 +42,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"facing": "south"
+								"facing": "\"south\""
 							}
 						}
 					],
@@ -50,7 +50,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"facing": "west"
+								"facing": "\"west\""
 							}
 						}
 					],
@@ -58,7 +58,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"facing": "east"
+								"facing": "\"east\""
 							}
 						}
 					]
@@ -102,7 +102,7 @@
 								}
 							}
 						],
-						"north": [
+						"\"north\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -113,7 +113,7 @@
 								}
 							}
 						],
-						"south": [
+						"\"south\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -124,7 +124,7 @@
 								}
 							}
 						],
-						"west": [
+						"\"west\"": [
 							{
 								"function": "new_properties",
 								"options": {
@@ -135,7 +135,7 @@
 								}
 							}
 						],
-						"east": [
+						"\"east\"": [
 							{
 								"function": "new_properties",
 								"options": {

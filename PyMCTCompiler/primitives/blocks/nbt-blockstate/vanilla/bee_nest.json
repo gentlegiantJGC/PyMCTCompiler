@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing_direction": "north"
+                                "facing_direction": "\"north\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing_direction": "north"
+                                "facing_direction": "\"north\""
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing_direction": "north"
+                                "facing_direction": "\"north\""
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing_direction": "south"
+                                "facing_direction": "\"south\""
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing_direction": "west"
+                                "facing_direction": "\"west\""
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing_direction": "east"
+                                "facing_direction": "\"east\""
                             }
                         }
                     ]
@@ -120,7 +120,7 @@
                 "function": "map_properties",
                 "options": {
                     "facing_direction": {
-                        "north": [
+                        "\"north\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -131,7 +131,7 @@
                                 }
                             }
                         ],
-                        "south": [
+                        "\"south\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -142,7 +142,7 @@
                                 }
                             }
                         ],
-                        "west": [
+                        "\"west\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -153,7 +153,7 @@
                                 }
                             }
                         ],
-                        "east": [
+                        "\"east\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

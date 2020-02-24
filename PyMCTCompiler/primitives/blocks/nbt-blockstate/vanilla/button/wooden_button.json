@@ -37,7 +37,7 @@
 							"function": "new_properties",
 							"options": {
 								"face": "ceiling",
-								"facing": "south"
+								"facing": "\"south\""
 							}
 						}
 					],
@@ -46,7 +46,7 @@
 							"function": "new_properties",
 							"options": {
 								"face": "floor",
-								"facing": "south"
+								"facing": "\"south\""
 							}
 						}
 					],
@@ -55,7 +55,7 @@
 							"function": "new_properties",
 							"options": {
 								"face": "wall",
-								"facing": "north"
+								"facing": "\"north\""
 							}
 						}
 					],
@@ -64,7 +64,7 @@
 							"function": "new_properties",
 							"options": {
 								"face": "wall",
-								"facing": "south"
+								"facing": "\"south\""
 							}
 						}
 					],
@@ -73,7 +73,7 @@
 							"function": "new_properties",
 							"options": {
 								"face": "wall",
-								"facing": "west"
+								"facing": "\"west\""
 							}
 						}
 					],
@@ -82,7 +82,7 @@
 							"function": "new_properties",
 							"options": {
 								"face": "wall",
-								"facing": "east"
+								"facing": "\"east\""
 							}
 						}
 					]
@@ -135,7 +135,7 @@
 								"function": "map_properties",
 								"options": {
 									"facing": {
-										"north": [
+										"\"north\"": [
 											{
 												"function": "new_properties",
 												"options": {
@@ -146,7 +146,7 @@
 												}
 											}
 										],
-										"south": [
+										"\"south\"": [
 											{
 												"function": "new_properties",
 												"options": {
@@ -157,7 +157,7 @@
 												}
 											}
 										],
-										"west": [
+										"\"west\"": [
 											{
 												"function": "new_properties",
 												"options": {
@@ -168,7 +168,7 @@
 												}
 											}
 										],
-										"east": [
+										"\"east\"": [
 											{
 												"function": "new_properties",
 												"options": {
