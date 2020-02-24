@@ -138,15 +138,14 @@ def merge_primitive_specification(obj1: dict, obj2: dict) -> dict:
 	# {
 	# 	"properties": {
 	# 		"prop": [
-	# 			"values"
+	# 			"SNBT"
 	# 		]
 	# 	},
 	# 	"defaults": {
-	# 		"prop": "value"
+	# 		"prop": "SNBT"
 	# 	},
 	# 	"snbt": "snbt_str",
-	# 	"nbt_identifier": ["namespace", "base_name"],
-	# 	"nbt_properties": false
+	# 	"nbt_identifier": ["namespace", "base_name"]
 	# }
 	if 'properties' in obj2:
 		obj1.setdefault("properties", {})
@@ -166,9 +165,6 @@ def merge_primitive_specification(obj1: dict, obj2: dict) -> dict:
 			assert obj1['nbt_identifier'] == obj2['nbt_identifier'], 'nbt identifiers do not match'
 		else:
 			obj1['nbt_identifier'] = obj2['nbt_identifier']
-
-	if 'nbt_properties' in obj2:
-		obj1['nbt_properties'] = obj2['nbt_properties']
 
 	return obj1
 

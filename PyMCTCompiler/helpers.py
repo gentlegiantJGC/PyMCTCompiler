@@ -64,7 +64,7 @@ def check_specification_format(data: dict):
 		assert 'nbt_identifier' not in data, '"nbt_identifier" should only be defined if "snbt" is defined'
 
 	for key in data.keys():
-		if key not in ('properties', 'nbt_properties', 'defaults', 'snbt', "nbt_identifier"):
+		if key not in ('properties', 'defaults', 'snbt', "nbt_identifier"):
 			log_to_file(f'Extra key "{key}" found')
 
 
