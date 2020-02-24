@@ -33,7 +33,7 @@ def single_map(input_namespace: str, input_block_name: str, key: str, val: str, 
 							key: {
 								val: [
 									{
-										"function":"new_block",
+										"function": "new_block",
 										"options":  f"{input_namespace}:{input_block_name}"
 									}
 								]
@@ -292,8 +292,8 @@ def auto_id(entity_id: str, universal_blocks: List[str]):
 				"options": {
 					"type": "compound",
 					"keys": {},
-                    "self_default": [{"function": "carry_nbt", "options": {}}],
-                    "nested_default": [{"function": "carry_nbt", "options": {}}]
+					"self_default": [{"function": "carry_nbt", "options": {}}],
+					"nested_default": [{"function": "carry_nbt", "options": {}}]
 				}
 			}
 		],
@@ -330,7 +330,7 @@ def stone(input_namespace: str, input_block_name: str, polished: bool, default_b
 		input_namespace,
 		input_block_name,
 		"polished",
-		'true' if polished else 'false',
+		'true' if polished else "\"false\"",
 		default_block,
 		universal_namespace,
 		universal_block_name
@@ -368,10 +368,10 @@ def anvil(input_namespace: str, input_block_name: str, damage: str, universal_na
 		universal_block_name,
 		{
 			"facing": [
-				"north",
-				"south",
-				"west",
-				"east"
+				"\"north\"",
+				"\"south\"",
+				"\"west\"",
+				"\"east\""
 			]
 		}
 	)
@@ -388,16 +388,16 @@ def command_block(input_namespace: str, input_block_name: str, mode: str, univer
 		universal_block_name,
 		{
 			"conditional": [
-				"true",
-				"false"
+				"\"true\"",
+				"\"false\""
 			],
 			"facing": [
-				"north",
-				"east",
-				"south",
-				"west",
-				"up",
-				"down"
+				"\"north\"",
+				"\"east\"",
+				"\"south\"",
+				"\"west\"",
+				"\"up\"",
+				"\"down\""
 			]
 		}
 	)
@@ -408,7 +408,7 @@ def coral(input_namespace: str, input_block_name: str, material: str, dead: bool
 		universal_namespace = input_namespace
 	if universal_block_name is None:
 		universal_block_name = input_block_name
-	dead = 'true' if dead else 'false'
+	dead = "\"true\"" if dead else "\"false\""
 	return {
 		"to_universal": [
 			{
@@ -444,7 +444,7 @@ def coral(input_namespace: str, input_block_name: str, material: str, dead: bool
 										"dead": {
 											dead: [
 												{
-													"function":"new_block",
+													"function": "new_block",
 													"options":  f"{input_namespace}:{input_block_name}"
 												}
 											]
@@ -465,7 +465,7 @@ def coral_fan(input_namespace: str, input_block_name: str, material: str, dead: 
 		universal_namespace = input_namespace
 	if universal_block_name is None:
 		universal_block_name = input_block_name
-	dead, dead_str = ('true', 'dead_') if dead else ('false', '')
+	dead, dead_str = ("\"true\"", 'dead_') if dead else ("\"false\"", '')
 	if wall:
 		return {
 			"to_universal": [
@@ -484,10 +484,10 @@ def coral_fan(input_namespace: str, input_block_name: str, material: str, dead: 
 					"function": "carry_properties",
 					"options": {
 						"facing": [
-							"north",
-							"south",
-							"west",
-							"east"
+							"\"north\"",
+							"\"south\"",
+							"\"west\"",
+							"\"east\""
 						]
 					}
 				}
@@ -531,7 +531,7 @@ def coral_fan(input_namespace: str, input_block_name: str, material: str, dead: 
 																			"facing": facing
 																		}
 																	}
-																] for facing in ["north", "south", "west", "east"]
+																] for facing in ["\"north\"", "\"south\"", "\"west\"", "\"east\""]
 															}
 														}
 													}
@@ -558,7 +558,7 @@ def coral_fan(input_namespace: str, input_block_name: str, material: str, dead: 
 					"options": {
 						"type": material,
 						"dead": dead,
-						"facing": "up"
+						"facing": "\"up\""
 					}
 				}
 			],
@@ -590,7 +590,7 @@ def coral_fan(input_namespace: str, input_block_name: str, material: str, dead: 
 														"function": "map_properties",
 														"options": {
 															"facing": {
-																"up": [
+																"\"up\"": [
 																	{
 																		"function": "new_block",
 																		"options": f"{input_namespace}:{input_block_name}"
@@ -691,12 +691,12 @@ def material_helper(input_namespace: str, input_block_name: str, material: str, 
 		}
 
 
-def flower_pot(input_namespace: str, input_block_name: str, plant: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+def flower_pot(input_namespace: str, input_block_name: str, plant_type: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
 	return single_map(
 		input_namespace,
 		input_block_name,
 		"plant",
-		plant,
+		plant_type,
 		"minecraft:flower_pot",
 		universal_namespace,
 		universal_block_name
@@ -724,13 +724,13 @@ def leaves(input_namespace: str, input_block_name: str, material: str, universal
 				"function": "carry_properties",
 				"options": {
 					"distance": [
-						"1",
-						"2",
-						"3",
-						"4",
-						"5",
-						"6",
-						"7"
+						"\"1\"",
+						"\"2\"",
+						"\"3\"",
+						"\"4\"",
+						"\"5\"",
+						"\"6\"",
+						"\"7\""
 					]
 				}
 			},
@@ -738,21 +738,21 @@ def leaves(input_namespace: str, input_block_name: str, material: str, universal
 				"function": "map_properties",
 				"options": {
 					"persistent": {
-						"true": [
+						"\"true\"": [
 							{
 								"function": "new_properties",
 								"options": {
-									"persistent": "true",
-									"check_decay": "false"
+									"persistent": "\"true\"",
+									"check_decay": "\"false\""
 								}
 							}
 						],
-						"false": [
+						"\"false\"": [
 							{
 								"function": "new_properties",
 								"options": {
-									"persistent": "false",
-									"check_decay": "false"
+									"persistent": "\"false\"",
+									"check_decay": "\"false\""
 								}
 							}
 						]
@@ -779,17 +779,17 @@ def leaves(input_namespace: str, input_block_name: str, material: str, universal
 					"function": "carry_properties",
 					"options": {
 						"distance": [
-							"1",
-							"2",
-							"3",
-							"4",
-							"5",
-							"6",
-							"7"
+							"\"1\"",
+							"\"2\"",
+							"\"3\"",
+							"\"4\"",
+							"\"5\"",
+							"\"6\"",
+							"\"7\""
 						],
 						"persistent": [
-							"false",
-							"true"
+							"\"false\"",
+							"\"true\""
 						]
 					}
 				}
@@ -803,7 +803,7 @@ def wood(input_namespace: str, input_block_name: str, material: str, stripped: b
 		universal_namespace = input_namespace
 	if universal_block_name is None:
 		universal_block_name = input_block_name
-	stripped = 'true' if stripped else 'false'
+	stripped = "\"true\"" if stripped else "\"false\""
 	return {
 		"to_universal": [
 			{
@@ -918,12 +918,12 @@ def fluid(input_namespace: str, input_block_name: str, universal_namespace: str 
 				"function": "map_properties",
 				"options": {
 					"level": {
-						str(level): [
+						f"\"{level}\"": [
 							{
 								"function": "new_properties",
 								"options": {
-									"falling": {0: "false", 8: "true"}[level & 8],
-									"level": str(level & 7)
+									"falling": {0: "\"false\"", 8: "\"true\""}[level & 8],
+									"level": f"\"{level & 7}\""
 								}
 							}
 						] for level in range(16)
@@ -946,18 +946,18 @@ def fluid(input_namespace: str, input_block_name: str, universal_namespace: str 
 									"function": "map_properties",
 									"options": {
 										"level": {
-											str(level): [
+											f"\"{level}\"": [
 												{
 													"function": "new_properties",
 													"options": {
-														"level": str(level + data8)
+														"level": f"\"{level + data8}\""
 													}
 												}
 											] for level in range(8)
 										}
 									}
 								}
-							] for data8, falling in {0: "false", 8: "true"}.items()
+							] for data8, falling in {0: "\"false\"", 8: "\"true\""}.items()
 						}
 					}
 				}
@@ -982,7 +982,7 @@ def torch(input_namespace: str, input_block_name: str, wall: bool, default_block
 					{
 						"function": "carry_properties",
 						"options": {
-							"facing": ["north", "south", "west", "east"]
+							"facing": ["\"north\"", "\"south\"", "\"west\"", "\"east\""]
 						}
 					}
 				],
@@ -1007,7 +1007,7 @@ def torch(input_namespace: str, input_block_name: str, wall: bool, default_block
 												"facing": facing
 											}
 										}
-									] for facing in ["north", "south", "west", "east"]
+									] for facing in ["\"north\"", "\"south\"", "\"west\"", "\"east\""]
 								}
 							}
 						}
@@ -1024,7 +1024,7 @@ def torch(input_namespace: str, input_block_name: str, wall: bool, default_block
 					{
 						"function": "new_properties",
 						"options": {
-							"facing": "up"
+							"facing": "\"up\""
 						}
 					}
 				],
@@ -1038,7 +1038,7 @@ def torch(input_namespace: str, input_block_name: str, wall: bool, default_block
 							"function": "map_properties",
 							"options": {
 								"facing": {
-									"up": [
+									"\"up\"": [
 										{
 											"function": "new_block",
 											"options": f"{input_namespace}:{input_block_name}"
@@ -1053,7 +1053,7 @@ def torch(input_namespace: str, input_block_name: str, wall: bool, default_block
 	else:
 		if wall:
 			carry_properties_merge = carry_properties.copy()
-			carry_properties_merge["facing"] = ["north", "south", "west", "east"]
+			carry_properties_merge["facing"] = ["\"north\"", "\"south\"", "\"west\"", "\"east\""]
 			return {
 				"to_universal": [
 					{
@@ -1086,7 +1086,7 @@ def torch(input_namespace: str, input_block_name: str, wall: bool, default_block
 												"facing": facing
 											}
 										}
-									] for facing in ["north", "south", "west", "east"]
+									] for facing in ["\"north\"", "\"south\"", "\"west\"", "\"east\""]
 								}
 							}
 						},
@@ -1107,7 +1107,7 @@ def torch(input_namespace: str, input_block_name: str, wall: bool, default_block
 					{
 						"function": "new_properties",
 						"options": {
-							"facing": "up"
+							"facing": "\"up\""
 						}
 					},
 					{
@@ -1125,9 +1125,9 @@ def torch(input_namespace: str, input_block_name: str, wall: bool, default_block
 							"function": "map_properties",
 							"options": {
 								"facing": {
-									"up": [
+									"\"up\"": [
 										{
-											"function":"new_block",
+											"function": "new_block",
 											"options":  f"{input_namespace}:{input_block_name}"
 										}
 									]
