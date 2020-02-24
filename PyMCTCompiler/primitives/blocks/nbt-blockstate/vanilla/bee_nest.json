@@ -62,7 +62,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "honey_level": "0"
+                                "honey_level": "\"0\""
                             }
                         }
                     ],
@@ -70,7 +70,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "honey_level": "1"
+                                "honey_level": "\"1\""
                             }
                         }
                     ],
@@ -78,7 +78,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "honey_level": "2"
+                                "honey_level": "\"2\""
                             }
                         }
                     ],
@@ -86,7 +86,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "honey_level": "3"
+                                "honey_level": "\"3\""
                             }
                         }
                     ],
@@ -94,7 +94,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "honey_level": "4"
+                                "honey_level": "\"4\""
                             }
                         }
                     ],
@@ -102,7 +102,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "honey_level": "5"
+                                "honey_level": "\"5\""
                             }
                         }
                     ]
@@ -166,7 +166,7 @@
                         ]
                     },
                     "honey_level": {
-                        "0": [
+                        "\"0\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -177,7 +177,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "\"1\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -188,7 +188,7 @@
                                 }
                             }
                         ],
-                        "2": [
+                        "\"2\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -199,7 +199,7 @@
                                 }
                             }
                         ],
-                        "3": [
+                        "\"3\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -210,7 +210,7 @@
                                 }
                             }
                         ],
-                        "4": [
+                        "\"4\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -221,7 +221,7 @@
                                 }
                             }
                         ],
-                        "5": [
+                        "\"5\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

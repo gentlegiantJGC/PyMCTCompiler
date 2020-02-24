@@ -55,7 +55,7 @@
                             "function": "new_properties",
                             "options": {
                                 "type": "double",
-                                "top_slot_bit": "0"
+                                "top_slot_bit": "\"0\""
                             }
                         }
                     ],
@@ -64,7 +64,7 @@
                             "function": "new_properties",
                             "options": {
                                 "type": "double",
-                                "top_slot_bit": "1"
+                                "top_slot_bit": "\"1\""
                             }
                         }
                     ]
@@ -87,7 +87,7 @@
                                 "function": "map_properties",
                                 "options": {
                                     "top_slot_bit": {
-                                        "0": [
+                                        "\"0\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -98,7 +98,7 @@
                                                 }
                                             }
                                         ],
-                                        "1": [
+                                        "\"1\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {

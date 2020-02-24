@@ -61,7 +61,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "coral_fan_direction": "0"
+                                "coral_fan_direction": "\"0\""
                             }
                         }
                     ],
@@ -69,7 +69,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "coral_fan_direction": "1"
+                                "coral_fan_direction": "\"1\""
                             }
                         }
                     ]
@@ -157,7 +157,7 @@
                                         ]
                                     },
                                     "coral_fan_direction": {
-                                        "0": [
+                                        "\"0\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
@@ -168,7 +168,7 @@
                                                 }
                                             }
                                         ],
-                                        "1": [
+                                        "\"1\"": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {

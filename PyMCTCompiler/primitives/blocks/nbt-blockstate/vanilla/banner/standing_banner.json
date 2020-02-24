@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rotation": "0"
+                                "rotation": "\"0\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rotation": "1"
+                                "rotation": "\"1\""
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rotation": "2"
+                                "rotation": "\"2\""
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rotation": "3"
+                                "rotation": "\"3\""
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rotation": "4"
+                                "rotation": "\"4\""
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rotation": "5"
+                                "rotation": "\"5\""
                             }
                         }
                     ],
@@ -60,7 +60,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rotation": "6"
+                                "rotation": "\"6\""
                             }
                         }
                     ],
@@ -68,7 +68,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rotation": "7"
+                                "rotation": "\"7\""
                             }
                         }
                     ],
@@ -76,7 +76,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rotation": "8"
+                                "rotation": "\"8\""
                             }
                         }
                     ],
@@ -84,7 +84,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rotation": "9"
+                                "rotation": "\"9\""
                             }
                         }
                     ],
@@ -92,7 +92,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rotation": "10"
+                                "rotation": "\"10\""
                             }
                         }
                     ],
@@ -100,7 +100,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rotation": "11"
+                                "rotation": "\"11\""
                             }
                         }
                     ],
@@ -108,7 +108,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rotation": "12"
+                                "rotation": "\"12\""
                             }
                         }
                     ],
@@ -116,7 +116,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rotation": "13"
+                                "rotation": "\"13\""
                             }
                         }
                     ],
@@ -124,7 +124,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rotation": "14"
+                                "rotation": "\"14\""
                             }
                         }
                     ],
@@ -132,7 +132,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "rotation": "15"
+                                "rotation": "\"15\""
                             }
                         }
                     ]
@@ -150,7 +150,7 @@
                 "function": "map_properties",
                 "options": {
                     "rotation": {
-                        "0": [
+                        "\"0\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -161,7 +161,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "\"1\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -172,7 +172,7 @@
                                 }
                             }
                         ],
-                        "2": [
+                        "\"2\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -183,7 +183,7 @@
                                 }
                             }
                         ],
-                        "3": [
+                        "\"3\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -194,7 +194,7 @@
                                 }
                             }
                         ],
-                        "4": [
+                        "\"4\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -205,7 +205,7 @@
                                 }
                             }
                         ],
-                        "5": [
+                        "\"5\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -216,7 +216,7 @@
                                 }
                             }
                         ],
-                        "6": [
+                        "\"6\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -227,7 +227,7 @@
                                 }
                             }
                         ],
-                        "7": [
+                        "\"7\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -238,7 +238,7 @@
                                 }
                             }
                         ],
-                        "8": [
+                        "\"8\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -249,7 +249,7 @@
                                 }
                             }
                         ],
-                        "9": [
+                        "\"9\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -260,7 +260,7 @@
                                 }
                             }
                         ],
-                        "10": [
+                        "\"10\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -271,7 +271,7 @@
                                 }
                             }
                         ],
-                        "11": [
+                        "\"11\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -282,7 +282,7 @@
                                 }
                             }
                         ],
-                        "12": [
+                        "\"12\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -293,7 +293,7 @@
                                 }
                             }
                         ],
-                        "13": [
+                        "\"13\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -304,7 +304,7 @@
                                 }
                             }
                         ],
-                        "14": [
+                        "\"14\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -315,7 +315,7 @@
                                 }
                             }
                         ],
-                        "15": [
+                        "\"15\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

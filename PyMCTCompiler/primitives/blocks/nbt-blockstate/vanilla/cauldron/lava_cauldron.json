@@ -18,7 +18,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "level": "0"
+                                "level": "\"0\""
                             }
                         }
                     ],
@@ -34,7 +34,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "level": "1"
+                                "level": "\"1\""
                             }
                         }
                     ],
@@ -50,7 +50,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "level": "2"
+                                "level": "\"2\""
                             }
                         }
                     ],
@@ -66,7 +66,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "level": "3"
+                                "level": "\"3\""
                             }
                         }
                     ]
@@ -116,7 +116,7 @@
                         ]
                     },
                     "level": {
-                        "0": [
+                        "\"0\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -138,7 +138,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "\"1\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -160,7 +160,7 @@
                                 }
                             }
                         ],
-                        "2": [
+                        "\"2\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -182,7 +182,7 @@
                                 }
                             }
                         ],
-                        "3": [
+                        "\"3\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

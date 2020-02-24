@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "atomic_number": "58"
+                "atomic_number": "\"58\""
             }
         }
     ],
@@ -21,7 +21,7 @@
                 "function": "map_properties",
                 "options": {
                     "atomic_number": {
-                        "58": [
+                        "\"58\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:element_58"

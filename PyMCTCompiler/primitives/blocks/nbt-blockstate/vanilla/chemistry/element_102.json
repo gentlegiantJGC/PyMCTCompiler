@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "atomic_number": "102"
+                "atomic_number": "\"102\""
             }
         }
     ],
@@ -21,7 +21,7 @@
                 "function": "map_properties",
                 "options": {
                     "atomic_number": {
-                        "102": [
+                        "\"102\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:element_102"

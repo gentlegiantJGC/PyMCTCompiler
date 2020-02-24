@@ -33,7 +33,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "0"
+                                "color": "\"0\""
                             }
                         }
                     ],
@@ -41,7 +41,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "color": "1"
+                                "color": "\"1\""
                             }
                         }
                     ]
@@ -109,7 +109,7 @@
                 "function": "map_properties",
                 "options": {
                     "color": {
-                        "0": [
+                        "\"0\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -120,7 +120,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "\"1\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

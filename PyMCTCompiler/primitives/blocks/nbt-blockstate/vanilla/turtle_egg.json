@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "hatch": "0"
+                                "hatch": "\"0\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "hatch": "1"
+                                "hatch": "\"1\""
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "hatch": "2"
+                                "hatch": "\"2\""
                             }
                         }
                     ]
@@ -38,7 +38,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "turtle_egg_count": "1"
+                                "turtle_egg_count": "\"1\""
                             }
                         }
                     ],
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "turtle_egg_count": "2"
+                                "turtle_egg_count": "\"2\""
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "turtle_egg_count": "3"
+                                "turtle_egg_count": "\"3\""
                             }
                         }
                     ],
@@ -62,7 +62,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "turtle_egg_count": "4"
+                                "turtle_egg_count": "\"4\""
                             }
                         }
                     ]
@@ -80,7 +80,7 @@
                 "function": "map_properties",
                 "options": {
                     "hatch": {
-                        "0": [
+                        "\"0\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -91,7 +91,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "\"1\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -102,7 +102,7 @@
                                 }
                             }
                         ],
-                        "2": [
+                        "\"2\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -115,7 +115,7 @@
                         ]
                     },
                     "turtle_egg_count": {
-                        "1": [
+                        "\"1\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -126,7 +126,7 @@
                                 }
                             }
                         ],
-                        "2": [
+                        "\"2\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -137,7 +137,7 @@
                                 }
                             }
                         ],
-                        "3": [
+                        "\"3\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -148,7 +148,7 @@
                                 }
                             }
                         ],
-                        "4": [
+                        "\"4\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

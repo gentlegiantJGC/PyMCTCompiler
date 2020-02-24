@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "age": "0"
+                                "age": "\"0\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "age": "1"
+                                "age": "\"1\""
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "age": "2"
+                                "age": "\"2\""
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "age": "3"
+                                "age": "\"3\""
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "age": "4"
+                                "age": "\"4\""
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "age": "5"
+                                "age": "\"5\""
                             }
                         }
                     ]
@@ -70,7 +70,7 @@
                 "function": "map_properties",
                 "options": {
                     "age": {
-                        "0": [
+                        "\"0\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -81,7 +81,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "\"1\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -92,7 +92,7 @@
                                 }
                             }
                         ],
-                        "2": [
+                        "\"2\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -103,7 +103,7 @@
                                 }
                             }
                         ],
-                        "3": [
+                        "\"3\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -114,7 +114,7 @@
                                 }
                             }
                         ],
-                        "4": [
+                        "\"4\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -125,7 +125,7 @@
                                 }
                             }
                         ],
-                        "5": [
+                        "\"5\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

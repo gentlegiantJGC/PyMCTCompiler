@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "distance": "0"
+                                "distance": "\"0\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "distance": "1"
+                                "distance": "\"1\""
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "distance": "2"
+                                "distance": "\"2\""
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "distance": "3"
+                                "distance": "\"3\""
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "distance": "4"
+                                "distance": "\"4\""
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "distance": "5"
+                                "distance": "\"5\""
                             }
                         }
                     ],
@@ -60,7 +60,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "distance": "6"
+                                "distance": "\"6\""
                             }
                         }
                     ],
@@ -68,7 +68,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "distance": "7"
+                                "distance": "\"7\""
                             }
                         }
                     ]
@@ -131,7 +131,7 @@
                 "function": "map_properties",
                 "options": {
                     "distance": {
-                        "0": [
+                        "\"0\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -142,7 +142,7 @@
                                 }
                             }
                         ],
-                        "1": [
+                        "\"1\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -153,7 +153,7 @@
                                 }
                             }
                         ],
-                        "2": [
+                        "\"2\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -164,7 +164,7 @@
                                 }
                             }
                         ],
-                        "3": [
+                        "\"3\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -175,7 +175,7 @@
                                 }
                             }
                         ],
-                        "4": [
+                        "\"4\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -186,7 +186,7 @@
                                 }
                             }
                         ],
-                        "5": [
+                        "\"5\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -197,7 +197,7 @@
                                 }
                             }
                         ],
-                        "6": [
+                        "\"6\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -208,7 +208,7 @@
                                 }
                             }
                         ],
-                        "7": [
+                        "\"7\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
