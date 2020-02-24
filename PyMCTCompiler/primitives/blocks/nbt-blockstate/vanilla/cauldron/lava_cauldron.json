@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "cauldron_liquid": "lava"
+                "cauldron_liquid": "\"lava\""
             }
         },
         {
@@ -26,7 +26,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "level": "0.5"
+                                "level": "\"0.5\""
                             }
                         }
                     ],
@@ -42,7 +42,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "level": "1.5"
+                                "level": "\"1.5\""
                             }
                         }
                     ],
@@ -58,7 +58,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "level": "2.5"
+                                "level": "\"2.5\""
                             }
                         }
                     ],
@@ -84,7 +84,7 @@
                 "function": "map_properties",
                 "options": {
                     "cauldron_liquid": {
-                        "water": [
+                        "\"water\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:cauldron"
@@ -99,7 +99,7 @@
                                 }
                             }
                         ],
-                        "lava": [
+                        "\"lava\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:lava_cauldron"
@@ -127,7 +127,7 @@
                                 }
                             }
                         ],
-                        "0.5": [
+                        "\"0.5\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -149,7 +149,7 @@
                                 }
                             }
                         ],
-                        "1.5": [
+                        "\"1.5\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -171,7 +171,7 @@
                                 }
                             }
                         ],
-                        "2.5": [
+                        "\"2.5\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

@@ -70,7 +70,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "half": "bottom"
+                                "half": "\"bottom\""
                             }
                         }
                     ],
@@ -78,7 +78,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "half": "top"
+                                "half": "\"top\""
                             }
                         }
                     ]
@@ -174,7 +174,7 @@
                         ]
                     },
                     "half": {
-                        "bottom": [
+                        "\"bottom\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -185,7 +185,7 @@
                                 }
                             }
                         ],
-                        "top": [
+                        "\"top\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

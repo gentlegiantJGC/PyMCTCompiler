@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "shape": "north_south"
+                                "shape": "\"north_south\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "shape": "east_west"
+                                "shape": "\"east_west\""
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "shape": "ascending_east"
+                                "shape": "\"ascending_east\""
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "shape": "ascending_west"
+                                "shape": "\"ascending_west\""
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "shape": "ascending_north"
+                                "shape": "\"ascending_north\""
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "shape": "ascending_south"
+                                "shape": "\"ascending_south\""
                             }
                         }
                     ],
@@ -60,7 +60,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "shape": "south_east"
+                                "shape": "\"south_east\""
                             }
                         }
                     ],
@@ -68,7 +68,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "shape": "south_west"
+                                "shape": "\"south_west\""
                             }
                         }
                     ],
@@ -76,7 +76,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "shape": "north_west"
+                                "shape": "\"north_west\""
                             }
                         }
                     ],
@@ -84,7 +84,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "shape": "north_east"
+                                "shape": "\"north_east\""
                             }
                         }
                     ]
@@ -102,7 +102,7 @@
                 "function": "map_properties",
                 "options": {
                     "shape": {
-                        "north_south": [
+                        "\"north_south\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -113,7 +113,7 @@
                                 }
                             }
                         ],
-                        "east_west": [
+                        "\"east_west\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -124,7 +124,7 @@
                                 }
                             }
                         ],
-                        "ascending_east": [
+                        "\"ascending_east\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -135,7 +135,7 @@
                                 }
                             }
                         ],
-                        "ascending_west": [
+                        "\"ascending_west\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -146,7 +146,7 @@
                                 }
                             }
                         ],
-                        "ascending_north": [
+                        "\"ascending_north\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -157,7 +157,7 @@
                                 }
                             }
                         ],
-                        "ascending_south": [
+                        "\"ascending_south\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -168,7 +168,7 @@
                                 }
                             }
                         ],
-                        "south_east": [
+                        "\"south_east\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -179,7 +179,7 @@
                                 }
                             }
                         ],
-                        "south_west": [
+                        "\"south_west\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -190,7 +190,7 @@
                                 }
                             }
                         ],
-                        "north_west": [
+                        "\"north_west\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -201,7 +201,7 @@
                                 }
                             }
                         ],
-                        "north_east": [
+                        "\"north_east\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

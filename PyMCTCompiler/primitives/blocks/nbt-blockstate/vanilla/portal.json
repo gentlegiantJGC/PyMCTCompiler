@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "axis": "unknown"
+                                "axis": "\"unknown\""
                             }
                         }
                     ],
@@ -46,7 +46,7 @@
                 "function": "map_properties",
                 "options": {
                     "axis": {
-                        "unknown": [
+                        "\"unknown\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

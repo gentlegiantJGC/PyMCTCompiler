@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "chemistry_table_type": "compound_creator"
+                                "chemistry_table_type": "\"compound_creator\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "chemistry_table_type": "material_reducer"
+                                "chemistry_table_type": "\"material_reducer\""
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "chemistry_table_type": "element_constructor"
+                                "chemistry_table_type": "\"element_constructor\""
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "chemistry_table_type": "lab_table"
+                                "chemistry_table_type": "\"lab_table\""
                             }
                         }
                     ]
@@ -88,7 +88,7 @@
                 "function": "map_properties",
                 "options": {
                     "chemistry_table_type": {
-                        "compound_creator": [
+                        "\"compound_creator\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -99,7 +99,7 @@
                                 }
                             }
                         ],
-                        "material_reducer": [
+                        "\"material_reducer\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -110,7 +110,7 @@
                                 }
                             }
                         ],
-                        "element_constructor": [
+                        "\"element_constructor\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -121,7 +121,7 @@
                                 }
                             }
                         ],
-                        "lab_table": [
+                        "\"lab_table\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

@@ -51,7 +51,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing": "unknown"
+                                "facing": "\"unknown\""
                             }
                         }
                     ],
@@ -133,7 +133,7 @@
                         ]
                     },
                     "facing": {
-                        "unknown": [
+                        "\"unknown\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

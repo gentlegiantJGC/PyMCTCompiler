@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "double",
+                                "type": "\"double\"",
                                 "top_slot_bit": "\"0\""
                             }
                         }
@@ -63,7 +63,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "double",
+                                "type": "\"double\"",
                                 "top_slot_bit": "\"1\""
                             }
                         }
@@ -82,7 +82,7 @@
                 "function": "map_properties",
                 "options": {
                     "type": {
-                        "double": [
+                        "\"double\"": [
                             {
                                 "function": "map_properties",
                                 "options": {

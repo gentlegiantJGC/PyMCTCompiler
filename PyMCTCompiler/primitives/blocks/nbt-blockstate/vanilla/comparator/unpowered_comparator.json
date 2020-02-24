@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "mode": "compare"
+                                "mode": "\"compare\""
                             }
                         }
                     ],
@@ -60,7 +60,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "mode": "subtract"
+                                "mode": "\"subtract\""
                             }
                         }
                     ]
@@ -141,7 +141,7 @@
                         ]
                     },
                     "mode": {
-                        "compare": [
+                        "\"compare\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -152,7 +152,7 @@
                                 }
                             }
                         ],
-                        "subtract": [
+                        "\"subtract\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

@@ -22,7 +22,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "half": "upper"
+                                "half": "\"upper\""
                             }
                         }
                     ],
@@ -34,7 +34,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "half": "lower"
+                                "half": "\"lower\""
                             }
                         }
                     ]
@@ -67,7 +67,7 @@
                 "function": "map_properties",
                 "options": {
                     "half": {
-                        "upper": [
+                        "\"upper\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -78,7 +78,7 @@
                                 }
                             }
                         ],
-                        "lower": [
+                        "\"lower\"": [
                             {
                                 "function": "new_properties",
                                 "options": {

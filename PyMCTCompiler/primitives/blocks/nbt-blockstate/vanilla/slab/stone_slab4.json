@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "bottom"
+                                "type": "\"bottom\""
                             }
                         }
                     ],
@@ -62,7 +62,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "top"
+                                "type": "\"top\""
                             }
                         }
                     ]
@@ -80,7 +80,7 @@
                 "function": "map_properties",
                 "options": {
                     "type": {
-                        "bottom": [
+                        "\"bottom\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -173,7 +173,7 @@
                                 }
                             }
                         ],
-                        "top": [
+                        "\"top\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
