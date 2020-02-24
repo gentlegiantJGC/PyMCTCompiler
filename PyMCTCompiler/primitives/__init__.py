@@ -80,7 +80,12 @@ def get_block(block_format: str, primitive_group: Union[str, List[str]]) -> Prim
 	if isinstance(primitive_group, str):
 		assert primitive_group in blocks[block_format], f'"{primitive_group}" is not present in the mappings for format "{block_format}"'
 		output = copy.deepcopy(blocks[block_format][primitive_group])
-		output.commit()
+		try:
+			output.commit()
+		except Exception as e:
+			traceback.print_exc()
+			print(block_format, primitive_group)
+			raise Exception
 		return output
 	elif isinstance(primitive_group, list) and len(primitive_group) >= 1:
 		output = Primitive({})
@@ -91,7 +96,12 @@ def get_block(block_format: str, primitive_group: Union[str, List[str]]) -> Prim
 			else:
 				assert primitive in blocks[block_format], f'"{primitive}" is not present in the mappings for format "{block_format}"'
 				output.extend(copy.deepcopy(blocks[block_format][primitive]))
-		output.commit()
+		try:
+			output.commit()
+		except Exception as e:
+			traceback.print_exc()
+			print(block_format, primitive_group)
+			raise Exception
 		return output
 	else:
 		raise Exception(f'Un-supported format: {type(primitive_group)}')

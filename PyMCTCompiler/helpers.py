@@ -51,7 +51,7 @@ def check_specification_format(data: dict):
 		assert all(isinstance(prop, str) for prop in val), 'All property options must be strings'
 		remove_list_duplicates(val)
 		assert isinstance(defaults[key], str), 'All default property values must be strings'
-		assert defaults[key] in val, 'Default property value must be in the property list'
+		assert defaults[key] in val, f'Default property value ({defaults[key]}) must be in the property list ({val})'
 		for val_ in val:
 			verify_snbt(val_)  # verify that the snbt is valid
 
