@@ -1,1 +1,1 @@
-blockstate.colour("minecraft", "blue_stained_glass_pane", "\"blue\"", "universal_minecraft", "stained_glass_pane", {"\"east\"": ["\"true\"","\"false\""],"\"north\"": ["\"true\"","\"false\""],"\"south\"": ["\"true\"","\"false\""],"\"west\"": ["\"true\"","\"false\""]})
+blockstate.colour("minecraft", "blue_stained_glass_pane", "\"blue\"", "universal_minecraft", "stained_glass_pane", {"east": ["\"true\"","\"false\""],"north": ["\"true\"","\"false\""],"south": ["\"true\"","\"false\""],"west": ["\"true\"","\"false\""]})

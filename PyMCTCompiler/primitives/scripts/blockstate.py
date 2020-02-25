@@ -821,9 +821,9 @@ def wood(input_namespace: str, input_block_name: str, material: str, stripped: b
 				"function": "carry_properties",
 				"options": {
 					"axis": [
-						"x",
-						"y",
-						"z"
+						"\"x\"",
+						"\"y\"",
+						"\"z\""
 					]
 				}
 			}
@@ -856,9 +856,9 @@ def wood(input_namespace: str, input_block_name: str, material: str, stripped: b
 					"function": "carry_properties",
 					"options": {
 						"axis": [
-							"x",
-							"y",
-							"z"
+							"\"x\"",
+							"\"y\"",
+							"\"z\""
 						]
 					}
 				}
