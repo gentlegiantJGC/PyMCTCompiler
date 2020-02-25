@@ -1,5 +1,6 @@
 from typing import Set
 from PyMCTCompiler.translation_functions import BaseTranslationFunction
+from PyMCTCompiler.helpers import verify_string
 
 
 class NewBlock(BaseTranslationFunction):
@@ -25,6 +26,7 @@ class NewBlock(BaseTranslationFunction):
 
 	def _commit(self, feature_set: Set[str], parents: list):
 		assert isinstance(self['options'], str), '"options" must be a string'
+		verify_string(self['options'])
 
 	def save(self, parents: list) -> dict:
 		return self._function

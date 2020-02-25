@@ -122,7 +122,7 @@ class DiskBuffer:
 					f.write(data)
 
 		for path in old_save_cache.keys():
-			if path not in new_save_cache:
+			if path not in new_save_cache and os.path.isfile(path):
 				os.remove(path)
 
 		with open('save_cache.json', 'w') as f:
