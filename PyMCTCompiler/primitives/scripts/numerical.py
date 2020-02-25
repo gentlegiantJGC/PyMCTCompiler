@@ -6186,7 +6186,7 @@ def mushroom_block(color: str) -> dict:
 	}
 
 
-def shulker_box_colour_java(color: str, display_color=None) -> dict:
+def shulker_box_colour_java(color: str, display_color: str) -> dict:
 	if display_color is None:
 		display_color = color
 	if display_color != '':

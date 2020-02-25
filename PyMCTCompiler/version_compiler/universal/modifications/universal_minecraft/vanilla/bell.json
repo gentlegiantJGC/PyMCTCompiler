@@ -1,9 +1,9 @@
 {
 	"remove": [
-		"\"bell\""
+		"bell"
 	],
 	"add": {
-		"\"bell\"": {
+		"bell": {
 			"properties": {
 				"attachment": [
 					"\"floor\"",

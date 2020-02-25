@@ -436,7 +436,7 @@ def coral(input_namespace: str, input_block_name: str, material: str, dead: bool
 							material: [
 								{
 									"function": "new_block",
-									"options": f"minecraft:{material}_coral"
+									"options": f"minecraft:{material[1:-1]}_coral"
 								},
 								{
 									"function": "map_properties",
@@ -505,7 +505,7 @@ def coral_fan(input_namespace: str, input_block_name: str, material: str, dead: 
 								material: [
 									{
 										"function": "new_block",
-										"options": f"minecraft:{material}_coral_fan"
+										"options": f"minecraft:{material[1:-1]}_coral_fan"
 									},
 									{
 										"function": "map_properties",
@@ -514,7 +514,7 @@ def coral_fan(input_namespace: str, input_block_name: str, material: str, dead: 
 												dead: [
 													{
 														"function": "new_block",
-														"options": f"minecraft:{dead_str}{material}_coral_fan"
+														"options": f"minecraft:{dead_str}{material[1:-1]}_coral_fan"
 													},
 													{
 														"function": "map_properties",
@@ -575,7 +575,7 @@ def coral_fan(input_namespace: str, input_block_name: str, material: str, dead: 
 								material: [
 									{
 										"function": "new_block",
-										"options": f"minecraft:{material}_coral_fan"
+										"options": f"minecraft:{material[1:-1]}_coral_fan"
 									},
 									{
 										"function": "map_properties",
@@ -584,7 +584,7 @@ def coral_fan(input_namespace: str, input_block_name: str, material: str, dead: 
 												dead: [
 													{
 														"function": "new_block",
-														"options": f"minecraft:{dead_str}{material}_coral_fan"
+														"options": f"minecraft:{dead_str}{material[1:-1]}_coral_fan"
 													},
 													{
 														"function": "map_properties",
@@ -869,7 +869,7 @@ def wood(input_namespace: str, input_block_name: str, material: str, stripped: b
 
 def plant(input_namespace: str, input_block_name: str, universal_namespace: str = None, universal_block_name: str = None, flower: str = None) -> dict:
 	if flower is None:
-		flower = input_block_name
+		flower = f"\"{input_block_name}\""
 
 	return single_map(
 		input_namespace,

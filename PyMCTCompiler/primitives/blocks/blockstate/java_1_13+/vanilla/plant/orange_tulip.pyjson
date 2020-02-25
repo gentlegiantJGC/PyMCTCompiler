@@ -1,1 +1,1 @@
-blockstate.plant("minecraft", "\"orange_tulip\"", "universal_minecraft", "plant")
+blockstate.plant("minecraft", "orange_tulip", "universal_minecraft", "plant")

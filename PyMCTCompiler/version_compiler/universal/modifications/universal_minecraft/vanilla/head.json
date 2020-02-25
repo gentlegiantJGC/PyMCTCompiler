@@ -8,7 +8,7 @@
 		"dragon_head"
 	],
 	"add": {
-		"\"head\"": {
+		"head": {
 			"properties": {
 				"mob": [
 					"\"skeleton\"",
