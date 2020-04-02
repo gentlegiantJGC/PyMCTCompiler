@@ -116,3 +116,4 @@ tests/logs/
 amulet_nbt
 save_cache.json
 PyMCTCompiler/version_compiler/universal/latest
+tools/extract_bedrock_items/.rdata
