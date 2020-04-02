@@ -1,0 +1,289 @@
+{Block: {name: "minecraft:acacia_button", states: {"button_pressed_bit": 0b, "facing_direction": 0}}, Damage: 0s, Name: "minecraft:acacia_button"}
+{Block: {name: "minecraft:acacia_fence_gate", states: {direction: 0, "in_wall_bit": 0b, "open_bit": 0b}}, Damage: 0s, Name: "minecraft:acacia_fence_gate"}
+{Block: {name: "minecraft:acacia_pressure_plate", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:acacia_pressure_plate"}
+{Block: {name: "minecraft:acacia_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:acacia_stairs"}
+{Block: {name: "minecraft:acacia_standing_sign", states: {"ground_sign_direction": 0}}, Damage: 0s, Name: "minecraft:acacia_standing_sign"}
+{Block: {name: "minecraft:acacia_trapdoor", states: {direction: 0, "open_bit": 0b, "upside_down_bit": 0b}}, Damage: 0s, Name: "minecraft:acacia_trapdoor"}
+{Block: {name: "minecraft:acacia_wall_sign", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:acacia_wall_sign"}
+{Block: {name: "minecraft:activator_rail", states: {"rail_data_bit": 0b, "rail_direction": 0}}, Damage: 0s, Name: "minecraft:activator_rail"}
+{Block: {name: "minecraft:andesite_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:andesite_stairs"}
+{Block: {name: "minecraft:anvil", states: {damage: "undamaged", direction: 0}}, Damage: 0s, Name: "minecraft:anvil"}
+{Block: {name: "minecraft:bamboo", states: {"age_bit": 0b, "bamboo_leaf_size": "no_leaves", "bamboo_stalk_thickness": "thin"}}, Damage: 0s, Name: "minecraft:bamboo"}
+{Block: {name: "minecraft:bamboo_sapling", states: {"age_bit": 0b, "sapling_type": "oak"}}, Damage: 0s, Name: "minecraft:bamboo_sapling"}
+{Block: {name: "minecraft:barrel", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:barrel"}
+{Block: {name: "minecraft:barrier", states: {}}, Damage: 0s, Name: "minecraft:barrier"}
+{Block: {name: "minecraft:beacon", states: {}}, Damage: 0s, Name: "minecraft:beacon"}
+{Block: {name: "minecraft:bedrock", states: {"infiniburn_bit": 0b}}, Damage: 0s, Name: "minecraft:bedrock"}
+{Block: {name: "minecraft:bell", states: {direction: 0}}, Damage: 0s, Name: "minecraft:bell"}
+{Block: {name: "minecraft:birch_button", states: {"button_pressed_bit": 0b, "facing_direction": 0}}, Damage: 0s, Name: "minecraft:birch_button"}
+{Block: {name: "minecraft:birch_fence_gate", states: {direction: 0, "in_wall_bit": 0b, "open_bit": 0b}}, Damage: 0s, Name: "minecraft:birch_fence_gate"}
+{Block: {name: "minecraft:birch_pressure_plate", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:birch_pressure_plate"}
+{Block: {name: "minecraft:birch_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:birch_stairs"}
+{Block: {name: "minecraft:birch_standing_sign", states: {"ground_sign_direction": 0}}, Damage: 0s, Name: "minecraft:birch_standing_sign"}
+{Block: {name: "minecraft:birch_trapdoor", states: {direction: 0, "open_bit": 0b, "upside_down_bit": 0b}}, Damage: 0s, Name: "minecraft:birch_trapdoor"}
+{Block: {name: "minecraft:birch_wall_sign", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:birch_wall_sign"}
+{Block: {name: "minecraft:blast_furnace", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:blast_furnace"}
+{Block: {name: "minecraft:blue_ice", states: {}}, Damage: 0s, Name: "minecraft:blue_ice"}
+{Block: {name: "minecraft:bone_block", states: {direction: 0, "mapped_type": 0}}, Damage: 0s, Name: "minecraft:bone_block"}
+{Block: {name: "minecraft:bookshelf", states: {}}, Damage: 0s, Name: "minecraft:bookshelf"}
+{Block: {name: "minecraft:brewing_stand", states: {"brewing_stand_slot_a_bit": 0b, "brewing_stand_slot_b_bit": 0b, "brewing_stand_slot_c_bit": 0b}}, Damage: 0s, Name: "minecraft:brewingStandBlock"}
+{Block: {name: "minecraft:brick_block", states: {}}, Damage: 0s, Name: "minecraft:brick_block"}
+{Block: {name: "minecraft:brick_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:brick_stairs"}
+{Block: {name: "minecraft:brown_mushroom", states: {}}, Damage: 0s, Name: "minecraft:brown_mushroom"}
+{Block: {name: "minecraft:brown_mushroom_block", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:brown_mushroom_block"}
+{Block: {name: "minecraft:bubble_column", states: {"drag_down": 0b}}, Damage: 0s, Name: "minecraft:bubble_column"}
+{Block: {name: "minecraft:cactus", states: {age: 0}}, Damage: 0s, Name: "minecraft:cactus"}
+{Block: {name: "minecraft:carpet", states: {color: "white"}}, Damage: 0s, Name: "minecraft:carpet"}
+{Block: {name: "minecraft:carrots", states: {growth: 0}}, Damage: 0s, Name: "minecraft:carrots"}
+{Block: {name: "minecraft:cartography_table", states: {}}, Damage: 0s, Name: "minecraft:cartography_table"}
+{Block: {name: "minecraft:carved_pumpkin", states: {direction: 0}}, Damage: 0s, Name: "minecraft:carved_pumpkin"}
+{Block: {name: "minecraft:chain_command_block", states: {"conditional_bit": 0b, "facing_direction": 0}}, Damage: 0s, Name: "minecraft:chain_command_block"}
+{Block: {name: "minecraft:chemical_heat", states: {}}, Damage: 0s, Name: "minecraft:chemical_heat"}
+{Block: {name: "minecraft:chemistry_table", states: {direction: 0, "mapped_type": 0}}, Damage: 0s, Name: "minecraft:chemistry_table"}
+{Block: {name: "minecraft:chest", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:chest"}
+{Block: {name: "minecraft:chorus_flower", states: {age: 0}}, Damage: 0s, Name: "minecraft:chorus_flower"}
+{Block: {name: "minecraft:chorus_plant", states: {}}, Damage: 0s, Name: "minecraft:chorus_plant"}
+{Block: {name: "minecraft:clay", states: {}}, Damage: 0s, Name: "minecraft:clay"}
+{Block: {name: "minecraft:coal_block", states: {}}, Damage: 0s, Name: "minecraft:coal_block"}
+{Block: {name: "minecraft:coal_ore", states: {}}, Damage: 0s, Name: "minecraft:coal_ore"}
+{Block: {name: "minecraft:cobblestone", states: {}}, Damage: 0s, Name: "minecraft:cobblestone"}
+{Block: {name: "minecraft:cobblestone_wall", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:cobblestone_wall"}
+{Block: {name: "minecraft:cocoa", states: {age: 0, direction: 0}}, Damage: 0s, Name: "minecraft:cocoa"}
+{Block: {name: "minecraft:colored_torch_bp", states: {"color_bit": 0b, "torch_facing_direction": "unknown"}}, Damage: 0s, Name: "minecraft:colored_torch_bp"}
+{Block: {name: "minecraft:colored_torch_rg", states: {"color_bit": 0b, "torch_facing_direction": "unknown"}}, Damage: 0s, Name: "minecraft:colored_torch_rg"}
+{Block: {name: "minecraft:command_block", states: {"conditional_bit": 0b, "facing_direction": 0}}, Damage: 0s, Name: "minecraft:command_block"}
+{Block: {name: "minecraft:concrete", states: {color: "white"}}, Damage: 0s, Name: "minecraft:concrete"}
+{Block: {name: "minecraft:concretePowder", states: {color: "white"}}, Damage: 0s, Name: "minecraft:concrete_powder"}
+{Block: {name: "minecraft:conduit", states: {}}, Damage: 0s, Name: "minecraft:conduit"}
+{Block: {name: "minecraft:coral", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:coral"}
+{Block: {name: "minecraft:coral_block", states: {"dead_bit": 0b, "mapped_type": 0}}, Damage: 0s, Name: "minecraft:coral_block"}
+{Block: {name: "minecraft:coral_fan", states: {direction: 0, "mapped_type": 0}}, Damage: 0s, Name: "minecraft:coral_fan"}
+{Block: {name: "minecraft:coral_fan_dead", states: {direction: 0, "mapped_type": 0}}, Damage: 0s, Name: "minecraft:coral_fan_dead"}
+{Block: {name: "minecraft:coral_fan_hang", states: {"coral_direction": 0, "dead_bit": 0b, "mapped_type": 0}}, Damage: 0s, Name: "minecraft:coral_fan_hang"}
+{Block: {name: "minecraft:coral_fan_hang2", states: {"coral_direction": 0, "dead_bit": 0b, "mapped_type": 0}}, Damage: 0s, Name: "minecraft:coral_fan_hang2"}
+{Block: {name: "minecraft:coral_fan_hang3", states: {"coral_direction": 0, "dead_bit": 0b, "mapped_type": 0}}, Damage: 0s, Name: "minecraft:coral_fan_hang3"}
+{Block: {name: "minecraft:crafting_table", states: {}}, Damage: 0s, Name: "minecraft:crafting_table"}
+{Block: {name: "minecraft:dark_oak_button", states: {"button_pressed_bit": 0b, "facing_direction": 0}}, Damage: 0s, Name: "minecraft:dark_oak_button"}
+{Block: {name: "minecraft:dark_oak_fence_gate", states: {direction: 0, "in_wall_bit": 0b, "open_bit": 0b}}, Damage: 0s, Name: "minecraft:dark_oak_fence_gate"}
+{Block: {name: "minecraft:dark_oak_pressure_plate", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:dark_oak_pressure_plate"}
+{Block: {name: "minecraft:dark_oak_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:dark_oak_stairs"}
+{Block: {name: "minecraft:dark_oak_trapdoor", states: {direction: 0, "open_bit": 0b, "upside_down_bit": 0b}}, Damage: 0s, Name: "minecraft:dark_oak_trapdoor"}
+{Block: {name: "minecraft:dark_prismarine_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:dark_prismarine_stairs"}
+{Block: {name: "minecraft:darkoak_wall_sign", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:darkoak_wall_sign"}
+{Block: {name: "minecraft:daylight_detector", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:daylight_detector"}
+{Block: {name: "minecraft:daylight_detector_inverted", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:daylight_detector_inverted"}
+{Block: {name: "minecraft:deadbush", states: {}}, Damage: 0s, Name: "minecraft:deadbush"}
+{Block: {name: "minecraft:diamond_block", states: {}}, Damage: 0s, Name: "minecraft:diamond_block"}
+{Block: {name: "minecraft:diamond_ore", states: {}}, Damage: 0s, Name: "minecraft:diamond_ore"}
+{Block: {name: "minecraft:diorite_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:diorite_stairs"}
+{Block: {name: "minecraft:dirt", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:dirt"}
+{Block: {name: "minecraft:dispenser", states: {"facing_direction": 0, "triggered_bit": 0b}}, Damage: 0s, Name: "minecraft:dispenser"}
+{Block: {name: "minecraft:double_plant", states: {"mapped_type": 0, "upper_block_bit": 0b}}, Damage: 0s, Name: "minecraft:double_plant"}
+{Block: {name: "minecraft:double_wooden_slab", states: {"mapped_type": 0, "top_slot_bit": 0b}}, Damage: 0s, Name: "minecraft:double_wooden_slab"}
+{Block: {name: "minecraft:dragon_egg", states: {}}, Damage: 0s, Name: "minecraft:dragon_egg"}
+{Block: {name: "minecraft:dried_kelp_block", states: {}}, Damage: 0s, Name: "minecraft:dried_kelp_block"}
+{Block: {name: "minecraft:dropper", states: {"facing_direction": 0, "triggered_bit": 0b}}, Damage: 0s, Name: "minecraft:dropper"}
+{Block: {name: "minecraft:element_0", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_0"}
+{Block: {name: "minecraft:emerald_block", states: {}}, Damage: 0s, Name: "minecraft:emerald_block"}
+{Block: {name: "minecraft:emerald_ore", states: {}}, Damage: 0s, Name: "minecraft:emerald_ore"}
+{Block: {name: "minecraft:enchanting_table", states: {}}, Damage: 0s, Name: "minecraft:enchanting_table"}
+{Block: {name: "minecraft:end_brick_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:end_brick_stairs"}
+{Block: {name: "minecraft:end_bricks", states: {}}, Damage: 0s, Name: "minecraft:end_bricks"}
+{Block: {name: "minecraft:end_gateway", states: {}}, Damage: 0s, Name: "minecraft:end_gateway"}
+{Block: {name: "minecraft:end_portal", states: {}}, Damage: 0s, Name: "minecraft:end_portal"}
+{Block: {name: "minecraft:end_portal_frame", states: {direction: 0, "end_portal_eye_bit": 0b}}, Damage: 0s, Name: "minecraft:end_portal_frame"}
+{Block: {name: "minecraft:end_rod", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:end_rod"}
+{Block: {name: "minecraft:end_stone", states: {}}, Damage: 0s, Name: "minecraft:end_stone"}
+{Block: {name: "minecraft:ender_chest", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:ender_chest"}
+{Block: {name: "minecraft:farmland", states: {"moisturized_amount": 0}}, Damage: 0s, Name: "minecraft:farmland"}
+{Block: {name: "minecraft:fence", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:fence"}
+{Block: {name: "minecraft:fence_gate", states: {direction: 0, "in_wall_bit": 0b, "open_bit": 0b}}, Damage: 0s, Name: "minecraft:fence_gate"}
+{Block: {name: "minecraft:fire", states: {age: 0}}, Damage: 0s, Name: "minecraft:fire"}
+{Block: {name: "minecraft:fletching_table", states: {}}, Damage: 0s, Name: "minecraft:fletching_table"}
+{Block: {name: "minecraft:flowing_lava", states: {"liquid_depth": 0}}, Damage: 0s, Name: "minecraft:flowing_lava"}
+{Block: {name: "minecraft:flowing_water", states: {"liquid_depth": 0}}, Damage: 0s, Name: "minecraft:flowing_water"}
+{Block: {name: "minecraft:frosted_ice", states: {age: 0}}, Damage: 0s, Name: "minecraft:frosted_ice"}
+{Block: {name: "minecraft:furnace", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:furnace"}
+{Block: {name: "minecraft:glass", states: {}}, Damage: 0s, Name: "minecraft:glass"}
+{Block: {name: "minecraft:glass_pane", states: {}}, Damage: 0s, Name: "minecraft:glass_pane"}
+{Block: {name: "minecraft:glowingobsidian", states: {}}, Damage: 0s, Name: "minecraft:glowingobsidian"}
+{Block: {name: "minecraft:glowstone", states: {}}, Damage: 0s, Name: "minecraft:glowstone"}
+{Block: {name: "minecraft:gold_block", states: {}}, Damage: 0s, Name: "minecraft:gold_block"}
+{Block: {name: "minecraft:gold_ore", states: {}}, Damage: 0s, Name: "minecraft:gold_ore"}
+{Block: {name: "minecraft:golden_rail", states: {"rail_data_bit": 0b, "rail_direction": 0}}, Damage: 0s, Name: "minecraft:golden_rail"}
+{Block: {name: "minecraft:granite_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:granite_stairs"}
+{Block: {name: "minecraft:grass", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:grass"}
+{Block: {name: "minecraft:grass_path", states: {}}, Damage: 0s, Name: "minecraft:grass_path"}
+{Block: {name: "minecraft:gravel", states: {}}, Damage: 0s, Name: "minecraft:gravel"}
+{Block: {name: "minecraft:grindstone", states: {direction: 0}}, Damage: 0s, Name: "minecraft:grindstone"}
+{Block: {name: "minecraft:hard_glass", states: {}}, Damage: 0s, Name: "minecraft:hard_glass"}
+{Block: {name: "minecraft:hard_glass_pane", states: {}}, Damage: 0s, Name: "minecraft:hard_glass_pane"}
+{Block: {name: "minecraft:hard_stained_glass", states: {color: "white"}}, Damage: 0s, Name: "minecraft:hard_stained_glass"}
+{Block: {name: "minecraft:hard_stained_glass_pane", states: {color: "white"}}, Damage: 0s, Name: "minecraft:hard_stained_glass_pane"}
+{Block: {name: "minecraft:hardened_clay", states: {}}, Damage: 0s, Name: "minecraft:hardened_clay"}
+{Block: {name: "minecraft:hay_block", states: {direction: 0, "mapped_type": 0}}, Damage: 0s, Name: "minecraft:hay_block"}
+{Block: {name: "minecraft:heavy_weighted_pressure_plate", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:heavy_weighted_pressure_plate"}
+{Block: {name: "minecraft:ice", states: {}}, Damage: 0s, Name: "minecraft:ice"}
+{Block: {name: "minecraft:info_update", states: {}}, Damage: 0s, Name: "minecraft:info_update"}
+{Block: {name: "minecraft:info_update2", states: {}}, Damage: 0s, Name: "minecraft:info_update2"}
+{Block: {name: "minecraft:invisibleBedrock", states: {}}, Damage: 0s, Name: "minecraft:invisibleBedrock"}
+{Block: {name: "minecraft:iron_bars", states: {}}, Damage: 0s, Name: "minecraft:iron_bars"}
+{Block: {name: "minecraft:iron_block", states: {}}, Damage: 0s, Name: "minecraft:iron_block"}
+{Block: {name: "minecraft:iron_ore", states: {}}, Damage: 0s, Name: "minecraft:iron_ore"}
+{Block: {name: "minecraft:iron_trapdoor", states: {direction: 0, "open_bit": 0b, "upside_down_bit": 0b}}, Damage: 0s, Name: "minecraft:iron_trapdoor"}
+{Block: {name: "minecraft:jukebox", states: {}}, Damage: 0s, Name: "minecraft:jukebox"}
+{Block: {name: "minecraft:jungle_button", states: {"button_pressed_bit": 0b, "facing_direction": 0}}, Damage: 0s, Name: "minecraft:jungle_button"}
+{Block: {name: "minecraft:jungle_fence_gate", states: {direction: 0, "in_wall_bit": 0b, "open_bit": 0b}}, Damage: 0s, Name: "minecraft:jungle_fence_gate"}
+{Block: {name: "minecraft:jungle_pressure_plate", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:jungle_pressure_plate"}
+{Block: {name: "minecraft:jungle_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:jungle_stairs"}
+{Block: {name: "minecraft:jungle_standing_sign", states: {"ground_sign_direction": 0}}, Damage: 0s, Name: "minecraft:jungle_standing_sign"}
+{Block: {name: "minecraft:jungle_trapdoor", states: {direction: 0, "open_bit": 0b, "upside_down_bit": 0b}}, Damage: 0s, Name: "minecraft:jungle_trapdoor"}
+{Block: {name: "minecraft:jungle_wall_sign", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:jungle_wall_sign"}
+{Block: {name: "minecraft:lantern", states: {hanging: 0b}}, Damage: 0s, Name: "minecraft:lantern"}
+{Block: {name: "minecraft:lapis_block", states: {}}, Damage: 0s, Name: "minecraft:lapis_block"}
+{Block: {name: "minecraft:lapis_ore", states: {}}, Damage: 0s, Name: "minecraft:lapis_ore"}
+{Block: {name: "minecraft:lava", states: {"liquid_depth": 0}}, Damage: 0s, Name: "minecraft:lava"}
+{Block: {name: "minecraft:lava_cauldron", states: {"cauldron_liquid": "water", "fill_level": 0}}, Damage: 0s, Name: "minecraft:lava_cauldron"}
+{Block: {name: "minecraft:leaves", states: {"mapped_type": 0, "persistent_bit": 0b, "update_bit": 0b}}, Damage: 0s, Name: "minecraft:leaves"}
+{Block: {name: "minecraft:leaves2", states: {"mapped_type": 0, "persistent_bit": 0b, "update_bit": 0b}}, Damage: 0s, Name: "minecraft:leaves2"}
+{Block: {name: "minecraft:lever", states: {"facing_direction": 0, "open_bit": 0b}}, Damage: 0s, Name: "minecraft:lever"}
+{Block: {name: "minecraft:light_weighted_pressure_plate", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:light_weighted_pressure_plate"}
+{Block: {name: "minecraft:lit_furnace", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:lit_furnace"}
+{Block: {name: "minecraft:lit_pumpkin", states: {direction: 0}}, Damage: 0s, Name: "minecraft:lit_pumpkin"}
+{Block: {name: "minecraft:lit_redstone_lamp", states: {}}, Damage: 0s, Name: "minecraft:lit_redstone_lamp"}
+{Block: {name: "minecraft:lit_redstone_ore", states: {}}, Damage: 0s, Name: "minecraft:lit_redstone_ore"}
+{Block: {name: "minecraft:log", states: {direction: 0, "mapped_type": 0}}, Damage: 0s, Name: "minecraft:log"}
+{Block: {name: "minecraft:log2", states: {direction: 0, "mapped_type": 0}}, Damage: 0s, Name: "minecraft:log2"}
+{Block: {name: "minecraft:magma", states: {}}, Damage: 0s, Name: "minecraft:magma"}
+{Block: {name: "minecraft:melon_block", states: {}}, Damage: 0s, Name: "minecraft:melon_block"}
+{Block: {name: "minecraft:melon_stem", states: {growth: 0}}, Damage: 0s, Name: "minecraft:melon_stem"}
+{Block: {name: "minecraft:mob_spawner", states: {}}, Damage: 0s, Name: "minecraft:mob_spawner"}
+{Block: {name: "minecraft:monster_egg", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:monster_egg"}
+{Block: {name: "minecraft:mossy_cobblestone", states: {}}, Damage: 0s, Name: "minecraft:mossy_cobblestone"}
+{Block: {name: "minecraft:mossy_cobblestone_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:mossy_cobblestone_stairs"}
+{Block: {name: "minecraft:mossy_stone_brick_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:mossy_stone_brick_stairs"}
+{Block: {name: "minecraft:movingBlock", states: {}}, Damage: 0s, Name: "minecraft:movingBlock"}
+{Block: {name: "minecraft:mycelium", states: {}}, Damage: 0s, Name: "minecraft:mycelium"}
+{Block: {name: "minecraft:nether_brick", states: {}}, Damage: 0s, Name: "minecraft:nether_brick"}
+{Block: {name: "minecraft:nether_brick_fence", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:nether_brick_fence"}
+{Block: {name: "minecraft:nether_brick_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:nether_brick_stairs"}
+{Block: {name: "minecraft:nether_wart_block", states: {}}, Damage: 0s, Name: "minecraft:nether_wart_block"}
+{Block: {name: "minecraft:netherrack", states: {}}, Damage: 0s, Name: "minecraft:netherrack"}
+{Block: {name: "minecraft:netherreactor", states: {}}, Damage: 0s, Name: "minecraft:netherreactor"}
+{Block: {name: "minecraft:normal_stone_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:normal_stone_stairs"}
+{Block: {name: "minecraft:noteblock", states: {}}, Damage: 0s, Name: "minecraft:noteblock"}
+{Block: {name: "minecraft:oak_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:oak_stairs"}
+{Block: {name: "minecraft:observer", states: {"facing_direction": 0, "powered_bit": 0b}}, Damage: 0s, Name: "minecraft:observer"}
+{Block: {name: "minecraft:obsidian", states: {}}, Damage: 0s, Name: "minecraft:obsidian"}
+{Block: {name: "minecraft:packed_ice", states: {}}, Damage: 0s, Name: "minecraft:packed_ice"}
+{Block: {name: "minecraft:piston", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:piston"}
+{Block: {name: "minecraft:pistonArmCollision", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:pistonArmCollision"}
+{Block: {name: "minecraft:planks", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:planks"}
+{Block: {name: "minecraft:podzol", states: {}}, Damage: 0s, Name: "minecraft:podzol"}
+{Block: {name: "minecraft:polished_andesite_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:polished_andesite_stairs"}
+{Block: {name: "minecraft:polished_diorite_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:polished_diorite_stairs"}
+{Block: {name: "minecraft:polished_granite_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:polished_granite_stairs"}
+{Block: {name: "minecraft:portal", states: {axis: "unknown"}}, Damage: 0s, Name: "minecraft:portal"}
+{Block: {name: "minecraft:potatoes", states: {growth: 0}}, Damage: 0s, Name: "minecraft:potatoes"}
+{Block: {name: "minecraft:powered_comparator", states: {direction: 0, "output_lit_bit": 0b, "output_subtract_bit": 0b}}, Damage: 0s, Name: "minecraft:powered_comparator"}
+{Block: {name: "minecraft:powered_repeater", states: {direction: 0, "repeater_delay": 0}}, Damage: 0s, Name: "minecraft:powered_repeater"}
+{Block: {name: "minecraft:prismarine", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:prismarine"}
+{Block: {name: "minecraft:prismarine_bricks_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:prismarine_bricks_stairs"}
+{Block: {name: "minecraft:prismarine_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:prismarine_stairs"}
+{Block: {name: "minecraft:pumpkin", states: {direction: 0}}, Damage: 0s, Name: "minecraft:pumpkin"}
+{Block: {name: "minecraft:pumpkin_stem", states: {growth: 0}}, Damage: 0s, Name: "minecraft:pumpkin_stem"}
+{Block: {name: "minecraft:purpur_block", states: {direction: 0, "mapped_type": 0}}, Damage: 0s, Name: "minecraft:purpur_block"}
+{Block: {name: "minecraft:purpur_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:purpur_stairs"}
+{Block: {name: "minecraft:quartz_block", states: {direction: 0, "mapped_type": 0}}, Damage: 0s, Name: "minecraft:quartz_block"}
+{Block: {name: "minecraft:quartz_ore", states: {}}, Damage: 0s, Name: "minecraft:quartz_ore"}
+{Block: {name: "minecraft:quartz_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:quartz_stairs"}
+{Block: {name: "minecraft:rail", states: {"rail_direction": 0}}, Damage: 0s, Name: "minecraft:rail"}
+{Block: {name: "minecraft:red_flower", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:red_flower"}
+{Block: {name: "minecraft:red_mushroom", states: {}}, Damage: 0s, Name: "minecraft:red_mushroom"}
+{Block: {name: "minecraft:red_mushroom_block", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:red_mushroom_block"}
+{Block: {name: "minecraft:red_nether_brick", states: {}}, Damage: 0s, Name: "minecraft:red_nether_brick"}
+{Block: {name: "minecraft:red_nether_brick_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:red_nether_brick_stairs"}
+{Block: {name: "minecraft:red_sandstone", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:red_sandstone"}
+{Block: {name: "minecraft:red_sandstone_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:red_sandstone_stairs"}
+{Block: {name: "minecraft:redstone_block", states: {}}, Damage: 0s, Name: "minecraft:redstone_block"}
+{Block: {name: "minecraft:redstone_lamp", states: {}}, Damage: 0s, Name: "minecraft:redstone_lamp"}
+{Block: {name: "minecraft:redstone_ore", states: {}}, Damage: 0s, Name: "minecraft:redstone_ore"}
+{Block: {name: "minecraft:redstone_torch", states: {"torch_facing_direction": "unknown"}}, Damage: 0s, Name: "minecraft:redstone_torch"}
+{Block: {name: "minecraft:redstone_wire", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:redstone_wire"}
+{Block: {name: "minecraft:repeating_command_block", states: {"conditional_bit": 0b, "facing_direction": 0}}, Damage: 0s, Name: "minecraft:repeating_command_block"}
+{Block: {name: "minecraft:reserved6", states: {}}, Damage: 0s, Name: "minecraft:reserved6"}
+{Block: {name: "minecraft:sand", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:sand"}
+{Block: {name: "minecraft:sandstone", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:sandstone"}
+{Block: {name: "minecraft:sandstone_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:sandstone_stairs"}
+{Block: {name: "minecraft:sapling", states: {"age_bit": 0b, "sapling_type": "oak"}}, Damage: 0s, Name: "minecraft:sapling"}
+{Block: {name: "minecraft:scaffolding", states: {stability: 0, "stability_check": 0b}}, Damage: 0s, Name: "minecraft:scaffolding"}
+{Block: {name: "minecraft:seaLantern", states: {}}, Damage: 0s, Name: "minecraft:seaLantern"}
+{Block: {name: "minecraft:sea_pickle", states: {"cluster_count": 0, "dead_bit": 0b}}, Damage: 0s, Name: "minecraft:sea_pickle"}
+{Block: {name: "minecraft:seagrass", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:seagrass"}
+{Block: {name: "minecraft:shulker_box", states: {color: "white"}}, Damage: 0s, Name: "minecraft:shulker_box"}
+{Block: {name: "minecraft:slime", states: {}}, Damage: 0s, Name: "minecraft:slime"}
+{Block: {name: "minecraft:smithing_table", states: {}}, Damage: 0s, Name: "minecraft:smithing_table"}
+{Block: {name: "minecraft:smoker", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:smoker"}
+{Block: {name: "minecraft:smooth_quartz_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:smooth_quartz_stairs"}
+{Block: {name: "minecraft:smooth_red_sandstone_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:smooth_red_sandstone_stairs"}
+{Block: {name: "minecraft:smooth_sandstone_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:smooth_sandstone_stairs"}
+{Block: {name: "minecraft:smooth_stone", states: {}}, Damage: 0s, Name: "minecraft:smooth_stone"}
+{Block: {name: "minecraft:snow", states: {}}, Damage: 0s, Name: "minecraft:snow"}
+{Block: {name: "minecraft:snow_layer", states: {"covered_bit": 0b, height: 0}}, Damage: 0s, Name: "minecraft:snow_layer"}
+{Block: {name: "minecraft:soul_sand", states: {}}, Damage: 0s, Name: "minecraft:soul_sand"}
+{Block: {name: "minecraft:sponge", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:sponge"}
+{Block: {name: "minecraft:spruce_button", states: {"button_pressed_bit": 0b, "facing_direction": 0}}, Damage: 0s, Name: "minecraft:spruce_button"}
+{Block: {name: "minecraft:spruce_fence_gate", states: {direction: 0, "in_wall_bit": 0b, "open_bit": 0b}}, Damage: 0s, Name: "minecraft:spruce_fence_gate"}
+{Block: {name: "minecraft:spruce_pressure_plate", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:spruce_pressure_plate"}
+{Block: {name: "minecraft:spruce_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:spruce_stairs"}
+{Block: {name: "minecraft:spruce_standing_sign", states: {"ground_sign_direction": 0}}, Damage: 0s, Name: "minecraft:spruce_standing_sign"}
+{Block: {name: "minecraft:spruce_trapdoor", states: {direction: 0, "open_bit": 0b, "upside_down_bit": 0b}}, Damage: 0s, Name: "minecraft:spruce_trapdoor"}
+{Block: {name: "minecraft:spruce_wall_sign", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:spruce_wall_sign"}
+{Block: {name: "minecraft:stained_glass", states: {color: "white"}}, Damage: 0s, Name: "minecraft:stained_glass"}
+{Block: {name: "minecraft:stained_glass_pane", states: {color: "white"}}, Damage: 0s, Name: "minecraft:stained_glass_pane"}
+{Block: {name: "minecraft:stained_hardened_clay", states: {color: "white"}}, Damage: 0s, Name: "minecraft:stained_hardened_clay"}
+{Block: {name: "minecraft:standing_banner", states: {"ground_sign_direction": 0}}, Damage: 0s, Name: "minecraft:standing_banner"}
+{Block: {name: "minecraft:standing_sign", states: {"ground_sign_direction": 0}}, Damage: 0s, Name: "minecraft:standing_sign"}
+{Block: {name: "minecraft:sticky_piston", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:sticky_piston"}
+{Block: {name: "minecraft:stone", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:stone"}
+{Block: {name: "minecraft:stone_brick_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:stone_brick_stairs"}
+{Block: {name: "minecraft:stone_button", states: {"button_pressed_bit": 0b, "facing_direction": 0}}, Damage: 0s, Name: "minecraft:stone_button"}
+{Block: {name: "minecraft:stone_pressure_plate", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:stone_pressure_plate"}
+{Block: {name: "minecraft:stone_slab", states: {"mapped_type": 0, "top_slot_bit": 0b}}, Damage: 0s, Name: "minecraft:double_stone_slab"}
+{Block: {name: "minecraft:stone_slab2", states: {"mapped_type": 0, "top_slot_bit": 0b}}, Damage: 0s, Name: "minecraft:double_stone_slab2"}
+{Block: {name: "minecraft:stone_slab3", states: {"mapped_type": 0, "top_slot_bit": 0b}}, Damage: 0s, Name: "minecraft:double_stone_slab3"}
+{Block: {name: "minecraft:stone_slab4", states: {"mapped_type": 0, "top_slot_bit": 0b}}, Damage: 0s, Name: "minecraft:double_stone_slab4"}
+{Block: {name: "minecraft:stone_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:stone_stairs"}
+{Block: {name: "minecraft:stonebrick", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:stonebrick"}
+{Block: {name: "minecraft:stonecutter", states: {}}, Damage: 0s, Name: "minecraft:stonecutter"}
+{Block: {name: "minecraft:stripped_acacia_log", states: {direction: 0}}, Damage: 0s, Name: "minecraft:stripped_acacia_log"}
+{Block: {name: "minecraft:stripped_birch_log", states: {direction: 0}}, Damage: 0s, Name: "minecraft:stripped_birch_log"}
+{Block: {name: "minecraft:stripped_dark_oak_log", states: {direction: 0}}, Damage: 0s, Name: "minecraft:stripped_dark_oak_log"}
+{Block: {name: "minecraft:stripped_jungle_log", states: {direction: 0}}, Damage: 0s, Name: "minecraft:stripped_jungle_log"}
+{Block: {name: "minecraft:stripped_oak_log", states: {direction: 0}}, Damage: 0s, Name: "minecraft:stripped_oak_log"}
+{Block: {name: "minecraft:stripped_spruce_log", states: {direction: 0}}, Damage: 0s, Name: "minecraft:stripped_spruce_log"}
+{Block: {name: "minecraft:structure_block", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:structure_block"}
+{Block: {name: "minecraft:tallgrass", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:tallgrass"}
+{Block: {name: "minecraft:tnt", states: {"allow_underwater_bit": 0b, "explode_bit": 0b}}, Damage: 0s, Name: "minecraft:tnt"}
+{Block: {name: "minecraft:torch", states: {"torch_facing_direction": "unknown"}}, Damage: 0s, Name: "minecraft:torch"}
+{Block: {name: "minecraft:trapdoor", states: {direction: 0, "open_bit": 0b, "upside_down_bit": 0b}}, Damage: 0s, Name: "minecraft:trapdoor"}
+{Block: {name: "minecraft:trapped_chest", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:trapped_chest"}
+{Block: {name: "minecraft:tripWire", states: {"attached_bit": 0b, "disarmed_bit": 0b, "powered_bit": 0b, "suspended_bit": 0b}}, Damage: 0s, Name: "minecraft:tripWire"}
+{Block: {name: "minecraft:tripwire_hook", states: {"attached_bit": 0b, direction: 0, "powered_bit": 0b}}, Damage: 0s, Name: "minecraft:tripwire_hook"}
+{Block: {name: "minecraft:turtle_egg", states: {"cracked_state": "no_cracks", "turtle_egg_count": "one_egg"}}, Damage: 0s, Name: "minecraft:turtle_egg"}
+{Block: {name: "minecraft:underwater_torch", states: {"torch_facing_direction": "unknown"}}, Damage: 0s, Name: "minecraft:underwater_torch"}
+{Block: {name: "minecraft:undyed_shulker_box", states: {}}, Damage: 0s, Name: "minecraft:undyed_shulker_box"}
+{Block: {name: "minecraft:unlit_redstone_torch", states: {"torch_facing_direction": "unknown"}}, Damage: 0s, Name: "minecraft:unlit_redstone_torch"}
+{Block: {name: "minecraft:unpowered_comparator", states: {direction: 0, "output_lit_bit": 0b, "output_subtract_bit": 0b}}, Damage: 0s, Name: "minecraft:unpowered_comparator"}
+{Block: {name: "minecraft:unpowered_repeater", states: {direction: 0, "repeater_delay": 0}}, Damage: 0s, Name: "minecraft:unpowered_repeater"}
+{Block: {name: "minecraft:vine", states: {"vine_direction_bits": 0}}, Damage: 0s, Name: "minecraft:vine"}
+{Block: {name: "minecraft:wall_banner", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:wall_banner"}
+{Block: {name: "minecraft:wall_sign", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:wall_sign"}
+{Block: {name: "minecraft:water", states: {"liquid_depth": 0}}, Damage: 0s, Name: "minecraft:water"}
+{Block: {name: "minecraft:waterlily", states: {}}, Damage: 0s, Name: "minecraft:waterlily"}
+{Block: {name: "minecraft:web", states: {}}, Damage: 0s, Name: "minecraft:web"}
+{Block: {name: "minecraft:wooden_button", states: {"button_pressed_bit": 0b, "facing_direction": 0}}, Damage: 0s, Name: "minecraft:wooden_button"}
+{Block: {name: "minecraft:wooden_pressure_plate", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:wooden_pressure_plate"}
+{Block: {name: "minecraft:wooden_slab", states: {"mapped_type": 0, "top_slot_bit": 0b}}, Damage: 0s, Name: "minecraft:wooden_slab"}
+{Block: {name: "minecraft:wool", states: {color: "white"}}, Damage: 0s, Name: "minecraft:wool"}
+{Block: {name: "minecraft:yellow_flower", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:yellow_flower"}
