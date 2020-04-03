@@ -69,6 +69,7 @@
 {Block: {name: "minecraft:dark_oak_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:dark_oak_stairs"}
 {Block: {name: "minecraft:dark_oak_trapdoor", states: {direction: 0, "open_bit": 0b, "upside_down_bit": 0b}}, Damage: 0s, Name: "minecraft:dark_oak_trapdoor"}
 {Block: {name: "minecraft:dark_prismarine_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:dark_prismarine_stairs"}
+{Block: {name: "minecraft:darkoak_standing_sign", states: {"ground_sign_direction": 0}, version: 17432626}, Damage: 0s, Name: "minecraft:darkoak_standing_sign"}
 {Block: {name: "minecraft:darkoak_wall_sign", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:darkoak_wall_sign"}
 {Block: {name: "minecraft:daylight_detector", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:daylight_detector"}
 {Block: {name: "minecraft:daylight_detector_inverted", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:daylight_detector_inverted"}

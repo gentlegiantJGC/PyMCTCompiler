@@ -33,6 +33,7 @@
 {Block: {name: "minecraft:brown_mushroom_block", states: {"huge_mushroom_bits": 0}, version: 17432626}, Damage: 0s, Name: "minecraft:brown_mushroom_block"}
 {Block: {name: "minecraft:bubble_column", states: {"drag_down": 0b}, version: 17432626}, Damage: 0s, Name: "minecraft:bubble_column"}
 {Block: {name: "minecraft:cactus", states: {age: 0}, version: 17432626}, Damage: 0s, Name: "minecraft:cactus"}
+{Block: {name: "minecraft:campfire", states: {}, version: 17432626}, Damage: 0s, Name: "minecraft:campfire"}
 {Block: {name: "minecraft:carpet", states: {color: "white"}, version: 17432626}, Damage: 0s, Name: "minecraft:carpet"}
 {Block: {name: "minecraft:carrots", states: {growth: 0}, version: 17432626}, Damage: 0s, Name: "minecraft:carrots"}
 {Block: {name: "minecraft:cartography_table", states: {}, version: 17432626}, Damage: 0s, Name: "minecraft:cartography_table"}

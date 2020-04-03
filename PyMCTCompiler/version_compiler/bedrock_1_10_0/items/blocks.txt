@@ -280,6 +280,7 @@
 {Block: {name: "minecraft:tripWire", states: {"attached_bit": 0b, "disarmed_bit": 0b, "powered_bit": 0b, "suspended_bit": 0b}, version: 17432626}, Damage: 0s, Name: "minecraft:tripWire"}
 {Block: {name: "minecraft:tripwire_hook", states: {"attached_bit": 0b, direction: 0, "powered_bit": 0b}, version: 17432626}, Damage: 0s, Name: "minecraft:tripwire_hook"}
 {Block: {name: "minecraft:turtle_egg", states: {"cracked_state": "no_cracks", "turtle_egg_count": "one_egg"}, version: 17432626}, Damage: 0s, Name: "minecraft:turtle_egg"}
+{Block: {name: "minecraft:underwater_torch", states: {"torch_facing_direction": "unknown"}, version: 17432626}, Damage: 0s, Name: "minecraft:underwater_torch"}
 {Block: {name: "minecraft:undyed_shulker_box", states: {}, version: 17432626}, Damage: 0s, Name: "minecraft:undyed_shulker_box"}
 {Block: {name: "minecraft:unlit_redstone_torch", states: {"torch_facing_direction": "unknown"}, version: 17432626}, Damage: 0s, Name: "minecraft:unlit_redstone_torch"}
 {Block: {name: "minecraft:unpowered_comparator", states: {direction: 0, "output_lit_bit": 0b, "output_subtract_bit": 0b}, version: 17432626}, Damage: 0s, Name: "minecraft:unpowered_comparator"}

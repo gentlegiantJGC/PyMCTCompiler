@@ -121,6 +121,7 @@
 {Block: {name: "minecraft:glass", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:glass"}
 {Block: {name: "minecraft:glass_pane", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:glass_pane"}
 {Block: {name: "minecraft:glowingobsidian", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:glowingobsidian"}
+{Block: {name: "minecraft:glowstone", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:glowstone"}
 {Block: {name: "minecraft:gold_block", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:gold_block"}
 {Block: {name: "minecraft:gold_ore", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:gold_ore"}
 {Block: {name: "minecraft:golden_rail", states: {"rail_data_bit": 0b, "rail_direction": 0}, version: 17760256}, Damage: 0s, Name: "minecraft:golden_rail"}
