@@ -2014,6 +2014,7 @@ def double_slab(input_namespace: str, input_block_name: str, block_types: Union[
 		block_types = list(block_types.items())
 	else:
 		raise Exception
+	assert len(block_types) <= 8
 
 	return {
 		"to_universal": [
@@ -2021,7 +2022,7 @@ def double_slab(input_namespace: str, input_block_name: str, block_types: Union[
 				"function": "map_properties",
 				"options": {
 					"block_data": {
-						str(data): [
+						str(data + data8): [
 							{
 								"function": "new_block",
 								"options": f"{universal_namespace}:{universal_block_name}"
@@ -2033,7 +2034,7 @@ def double_slab(input_namespace: str, input_block_name: str, block_types: Union[
 									"type": "\"double\""
 								}
 							}
-						] for data, material in block_types
+						] for data8 in [0, 8] for data, material in block_types
 					}
 				}
 			}
