@@ -1598,9 +1598,18 @@ def sandstone(input_namespace: str, input_block_name: str, level: int = 1, unive
 					"options": f"{input_namespace}:{input_block_name}"
 				},
 				{
-					"function": "carry_properties",
+					"function": "map_properties",
 					"options": {
-						"variant": list(variants.values())
+						"variant": {
+							variant: [
+								{
+									"function": "new_properties",
+									"options": {
+										"material": variant
+									}
+								}
+							] for variant in variants.values()
+						}
 					}
 				}
 			]
@@ -2002,7 +2011,13 @@ def colour(input_namespace: str, input_block_name: str, universal_namespace: str
 	}
 
 
-def double_slab(input_namespace: str, input_block_name: str, block_types: Union[List[str], Dict[int, str]], universal_namespace: str = None, universal_block_name: str = None) -> dict:
+def double_slab(
+		input_namespace: str, input_block_name: str,
+		block_types: Union[List[str], Dict[int, str]],
+		universal_namespace: str = None,
+		universal_block_name: str = None,
+		merge_extra=False
+) -> dict:
 	if universal_namespace is None:
 		universal_namespace = input_namespace
 	if universal_block_name is None:
@@ -2014,7 +2029,6 @@ def double_slab(input_namespace: str, input_block_name: str, block_types: Union[
 		block_types = list(block_types.items())
 	else:
 		raise Exception
-	assert len(block_types) <= 8
 
 	return {
 		"to_universal": [
@@ -2034,7 +2048,7 @@ def double_slab(input_namespace: str, input_block_name: str, block_types: Union[
 									"type": "\"double\""
 								}
 							}
-						] for data8 in [0, 8] for data, material in block_types
+						] for data8 in range(0, 8 + 8*merge_extra, 8) for data, material in block_types
 					}
 				}
 			}
@@ -2085,15 +2099,23 @@ def double_slab(input_namespace: str, input_block_name: str, block_types: Union[
 				"options": f"{universal_namespace}:{universal_block_name}"
 			},
 			{
-				"function": "carry_properties",
+				"function": "map_properties",
 				"options": {
-					"material": [b[1] for b in block_types]
-				}
-			},
-			{
-				"function": "new_properties",
-				"options": {
-					"type": "\"double\""
+					"material": {
+						material: [
+							{
+								"function": "new_block",
+								"options": f"{universal_namespace}:{universal_block_name}"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"material": material,
+									"type": "\"double\""
+								}
+							}
+						] for _, material in block_types
+					}
 				}
 			}
 		],

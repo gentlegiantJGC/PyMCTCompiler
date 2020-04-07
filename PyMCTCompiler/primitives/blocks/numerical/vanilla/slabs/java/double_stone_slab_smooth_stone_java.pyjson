@@ -33,7 +33,7 @@
             "material": ["\"smooth_stone_block\""]
         },
         "defaults": {
-            "material": "\"smooth_stone_block\""
+            "material": "\"smooth_stone\""
         }
     },
     "blockstate_to_universal": [

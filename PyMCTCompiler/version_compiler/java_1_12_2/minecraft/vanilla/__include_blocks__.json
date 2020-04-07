@@ -38,7 +38,7 @@
 	"red_mushroom": "red_mushroom",
 	"gold_block": "gold_block",
 	"iron_block": "iron_block",
-	"double_stone_slab": ["double_stone_slab_extra_java", "double_stone_slab_smooth_stone_java", "double_stone_slab_java"],
+	"double_stone_slab": ["double_stone_slab_java", "double_stone_slab_smooth_stone_java", "double_stone_slab_smooth_sandstone_java"],
 	"stone_slab": "stone_slab_java",
 	"brick_block": "brick_block",
 	"tnt": "tnt",
