@@ -1,7 +1,7 @@
 numerical.bit_map(
 	"minecraft", "bone_block",
 	{
-		"disarmed": {0: "\"y\"", 4: "\"x\"", 8: "\"z\""}
+		"axis": {0: "\"y\"", 4: "\"x\"", 8: "\"z\""}
 	},
 	"universal_minecraft"
 )
