@@ -200,8 +200,18 @@ def bit_map(input_namespace: str, input_block_name: str, properties: Dict[str, D
 		defaults = [0] * prop_count
 	if len(defaults) != prop_count:
 		raise Exception('Defaults must be the same length as the number of properties')
+	data_map = dict(_iter_properties(properties))
+	data = [str(d) for d in sorted(data_map.keys())]
 
 	return {
+		"specification": {
+			"properties": {
+				"block_data": data
+			},
+			"defaults": {
+				"block_data": data[0]
+			}
+		},
 		"to_universal": [
 			{
 				"function": "map_properties",
@@ -216,7 +226,7 @@ def bit_map(input_namespace: str, input_block_name: str, properties: Dict[str, D
 								"function": "new_properties",
 								"options": props
 							}
-						] for data, props in _iter_properties(properties)
+						] for data, props in data_map.items()
 					}
 				}
 			}
@@ -1605,7 +1615,7 @@ def sandstone(input_namespace: str, input_block_name: str, level: int = 1, unive
 								{
 									"function": "new_properties",
 									"options": {
-										"material": variant
+										"variant": variant
 									}
 								}
 							] for variant in variants.values()
