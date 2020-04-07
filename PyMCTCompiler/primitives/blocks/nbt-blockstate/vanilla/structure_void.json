@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "structure_void_type": "\"void\""
+                                "type": "\"void\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "structure_void_type": "\"air\""
+                                "type": "\"air\""
                             }
                         }
                     ]
@@ -37,7 +37,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "structure_void_type": {
+                    "type": {
                         "\"void\"": [
                             {
                                 "function": "new_properties",
