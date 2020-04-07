@@ -23,11 +23,16 @@
 					"\"south\"",
 					"\"west\"",
 					"\"east\""
+				],
+				"no_drop": [
+					"\"false\"",
+					"\"true\""
 				]
 			},
 			"defaults": {
 				"mob": "\"skeleton\"",
-				"facing": "\"north\""
+				"facing": "\"north\"",
+				"no_drop": "\"false\""
 			},
 			"unbt": "nbt.skull.universal"
 		}

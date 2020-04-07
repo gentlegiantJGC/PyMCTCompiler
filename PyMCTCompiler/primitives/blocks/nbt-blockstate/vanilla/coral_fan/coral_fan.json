@@ -55,24 +55,6 @@
                             }
                         }
                     ]
-                },
-                "coral_fan_direction": {
-                    "0": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "coral_fan_direction": "\"0\""
-                            }
-                        }
-                    ],
-                    "1": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "coral_fan_direction": "\"1\""
-                            }
-                        }
-                    ]
                 }
             }
         }
@@ -151,30 +133,6 @@
                                                     "coral_color": [
                                                         "snbt",
                                                         "\"yellow\""
-                                                    ]
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    "coral_fan_direction": {
-                                        "\"0\"": [
-                                            {
-                                                "function": "new_properties",
-                                                "options": {
-                                                    "coral_fan_direction": [
-                                                        "snbt",
-                                                        "0"
-                                                    ]
-                                                }
-                                            }
-                                        ],
-                                        "\"1\"": [
-                                            {
-                                                "function": "new_properties",
-                                                "options": {
-                                                    "coral_fan_direction": [
-                                                        "snbt",
-                                                        "1"
                                                     ]
                                                 }
                                             }

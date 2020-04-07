@@ -7,26 +7,6 @@
         {
             "function": "map_properties",
             "options": {
-                "top_slot_bit": {
-                    "0b": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "type": "\"double\"",
-                                "top_slot_bit": "\"0\""
-                            }
-                        }
-                    ],
-                    "1b": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "type": "\"double\"",
-                                "top_slot_bit": "\"1\""
-                            }
-                        }
-                    ]
-                },
                 "wood_type": {
                     "\"oak\"": [
                         {
@@ -78,6 +58,12 @@
                     ]
                 }
             }
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "type": "\"double\""
+            }
         }
     ],
     "from_universal": {
@@ -94,30 +80,6 @@
                             {
                                 "function": "map_properties",
                                 "options": {
-                                    "top_slot_bit": {
-                                        "\"0\"": [
-                                            {
-                                                "function": "new_properties",
-                                                "options": {
-                                                    "top_slot_bit": [
-                                                        "snbt",
-                                                        "0b"
-                                                    ]
-                                                }
-                                            }
-                                        ],
-                                        "\"1\"": [
-                                            {
-                                                "function": "new_properties",
-                                                "options": {
-                                                    "top_slot_bit": [
-                                                        "snbt",
-                                                        "1b"
-                                                    ]
-                                                }
-                                            }
-                                        ]
-                                    },
                                     "material": {
                                         "\"oak\"": [
                                             {

@@ -22,7 +22,7 @@
 		"shulker_box": {
 			"properties": {
 				"color": [
-					"\"normal\"",
+					"\"default\"",
 					"\"white\"",
 					"\"orange\"",
 					"\"magenta\"",
@@ -50,7 +50,7 @@
 				]
 			},
 			"defaults": {
-				"color": "\"normal\"",
+				"color": "\"default\"",
 				"facing": "\"up\""
 			},
 			"unbt": "nbt.shulker_box.universal"

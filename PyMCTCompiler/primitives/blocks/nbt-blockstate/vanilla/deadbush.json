@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "type": "\"deadbush\""
+                "type": "\"dead_bush\""
             }
         }
     ],
@@ -21,7 +21,7 @@
                 "function": "map_properties",
                 "options": {
                     "type": {
-                        "\"deadbush\"": [
+                        "\"dead_bush\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:deadbush"

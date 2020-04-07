@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing": "\"up\""
+                                "facing": "\"down\""
                             }
                         }
                     ],
@@ -95,17 +95,6 @@
                                     "facing_direction": [
                                         "snbt",
                                         "0"
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"up\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "1"
                                     ]
                                 }
                             }

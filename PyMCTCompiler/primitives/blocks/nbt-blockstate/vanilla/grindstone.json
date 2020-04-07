@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "face": "\"multiple\""
+                                "face": "\"wall\""
                             }
                         }
                     ]
@@ -117,17 +117,6 @@
                                     "attachment": [
                                         "snbt",
                                         "\"side\""
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"multiple\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "attachment": [
-                                        "snbt",
-                                        "\"multiple\""
                                     ]
                                 }
                             }

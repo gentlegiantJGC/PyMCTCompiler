@@ -24,56 +24,6 @@
                             }
                         }
                     ]
-                },
-                "sapling_type": {
-                    "\"oak\"": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "sapling_type": "\"oak\""
-                            }
-                        }
-                    ],
-                    "\"spruce\"": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "sapling_type": "\"spruce\""
-                            }
-                        }
-                    ],
-                    "\"birch\"": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "sapling_type": "\"birch\""
-                            }
-                        }
-                    ],
-                    "\"jungle\"": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "sapling_type": "\"jungle\""
-                            }
-                        }
-                    ],
-                    "\"acacia\"": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "sapling_type": "\"acacia\""
-                            }
-                        }
-                    ],
-                    "\"dark_oak\"": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "sapling_type": "\"dark_oak\""
-                            }
-                        }
-                    ]
                 }
             }
         }
@@ -106,74 +56,6 @@
                                     "age_bit": [
                                         "snbt",
                                         "1b"
-                                    ]
-                                }
-                            }
-                        ]
-                    },
-                    "sapling_type": {
-                        "\"oak\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "sapling_type": [
-                                        "snbt",
-                                        "\"oak\""
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"spruce\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "sapling_type": [
-                                        "snbt",
-                                        "\"spruce\""
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"birch\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "sapling_type": [
-                                        "snbt",
-                                        "\"birch\""
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"jungle\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "sapling_type": [
-                                        "snbt",
-                                        "\"jungle\""
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"acacia\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "sapling_type": [
-                                        "snbt",
-                                        "\"acacia\""
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"dark_oak\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "sapling_type": [
-                                        "snbt",
-                                        "\"dark_oak\""
                                     ]
                                 }
                             }

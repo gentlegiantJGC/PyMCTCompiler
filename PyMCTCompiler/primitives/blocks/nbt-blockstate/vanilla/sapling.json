@@ -30,7 +30,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sapling_type": "\"oak\""
+                                "material": "\"oak\""
                             }
                         }
                     ],
@@ -38,7 +38,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sapling_type": "\"spruce\""
+                                "material": "\"spruce\""
                             }
                         }
                     ],
@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sapling_type": "\"birch\""
+                                "material": "\"birch\""
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sapling_type": "\"jungle\""
+                                "material": "\"jungle\""
                             }
                         }
                     ],
@@ -62,7 +62,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sapling_type": "\"acacia\""
+                                "material": "\"acacia\""
                             }
                         }
                     ],
@@ -70,7 +70,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "sapling_type": "\"dark_oak\""
+                                "material": "\"dark_oak\""
                             }
                         }
                     ]
@@ -111,7 +111,7 @@
                             }
                         ]
                     },
-                    "sapling_type": {
+                    "material": {
                         "\"oak\"": [
                             {
                                 "function": "new_properties",

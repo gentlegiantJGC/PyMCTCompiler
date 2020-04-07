@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "variant": "\"smooth\""
+                                "variant": "\"normal\""
                             }
                         }
                     ]
@@ -102,17 +102,6 @@
                                     "stone_brick_type": [
                                         "snbt",
                                         "\"chiseled\""
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"smooth\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "stone_brick_type": [
-                                        "snbt",
-                                        "\"smooth\""
                                     ]
                                 }
                             }

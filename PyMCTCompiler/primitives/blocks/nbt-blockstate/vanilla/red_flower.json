@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "\"tulip_red\""
+                                "type": "\"red_tulip\""
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "\"tulip_orange\""
+                                "type": "\"orange_tulip\""
                             }
                         }
                     ],
@@ -60,7 +60,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "\"tulip_white\""
+                                "type": "\"white_tulip\""
                             }
                         }
                     ],
@@ -68,7 +68,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "\"tulip_pink\""
+                                "type": "\"pink_tulip\""
                             }
                         }
                     ],
@@ -170,7 +170,7 @@
                                 }
                             }
                         ],
-                        "\"tulip_red\"": [
+                        "\"red_tulip\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:red_flower"
@@ -185,7 +185,7 @@
                                 }
                             }
                         ],
-                        "\"tulip_orange\"": [
+                        "\"orange_tulip\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:red_flower"
@@ -200,7 +200,7 @@
                                 }
                             }
                         ],
-                        "\"tulip_white\"": [
+                        "\"white_tulip\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:red_flower"
@@ -215,7 +215,7 @@
                                 }
                             }
                         ],
-                        "\"tulip_pink\"": [
+                        "\"pink_tulip\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:red_flower"
