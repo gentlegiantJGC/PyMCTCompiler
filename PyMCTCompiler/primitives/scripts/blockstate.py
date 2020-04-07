@@ -612,83 +612,70 @@ def coral_fan(input_namespace: str, input_block_name: str, material: str, dead: 
 		}
 
 
-def material_helper(input_namespace: str, input_block_name: str, material: str, universal_namespace: str = None, universal_block_name: str = None, carry_properties: Dict[str, List[str]] = None) -> dict:
+def material_helper(
+	input_namespace: str,
+	input_block_name: str,
+	material: str,
+	universal_namespace: str = None,
+	universal_block_name: str = None,
+	carry_properties: Dict[str, List[str]] = None,
+	default: str = ''
+) -> dict:
 	if universal_namespace is None:
 		universal_namespace = input_namespace
 	if universal_block_name is None:
 		universal_block_name = input_block_name
-	if carry_properties is None:
-		return {
-			"to_universal": [
-				{
-					"function": "new_block",
-					"options": f"{universal_namespace}:{universal_block_name}"
-				},
-				{
-					"function": "new_properties",
-					"options": {
-						"material": material
-					}
-				}
-			],
-			"from_universal": {
-				f"{universal_namespace}:{universal_block_name}": [
-					{
-						"function": "map_properties",
-						"options": {
-							"material": {
-								material: [
-									{
-										"function": "new_block",
-										"options": f"{input_namespace}:{input_block_name}"
-									}
-								]
-							}
-						}
-					}
-				]
+
+	tu = [
+		{
+			"function": "new_block",
+			"options": f"{universal_namespace}:{universal_block_name}"
+		},
+		{
+			"function": "new_properties",
+			"options": {
+				"material": material
 			}
 		}
-	else:
-		return {
-			"to_universal": [
-				{
-					"function": "new_block",
-					"options": f"{universal_namespace}:{universal_block_name}"
-				},
-				{
-					"function": "new_properties",
-					"options": {
-						"material": material
-					}
-				},
-				{
-					"function": "carry_properties",
-					"options": carry_properties
-				}
-			],
-			"from_universal": {
-				f"{universal_namespace}:{universal_block_name}": [
-					{
-						"function": "map_properties",
-						"options": {
-							"material": {
-								material: [
-									{
-										"function": "new_block",
-										"options": f"{input_namespace}:{input_block_name}"
-									}
-								]
-							}
+	]
+	fu = [
+		{
+			"function": "map_properties",
+			"options": {
+				"material": {
+					material: [
+						{
+							"function": "new_block",
+							"options": f"{input_namespace}:{input_block_name}"
 						}
-					},
-					{
-						"function": "carry_properties",
-						"options": carry_properties
-					}
-				]
+					]
+				}
 			}
 		}
+	]
+	if default:
+		fu.insert(
+			0,
+			{
+				"function": "new_block",
+				"options": default
+			}
+		)
+	if carry_properties is not None:
+		tu.append({
+			"function": "carry_properties",
+			"options": carry_properties
+		})
+		fu.append({
+			"function": "carry_properties",
+			"options": carry_properties
+		})
+	return {
+		"to_universal": tu,
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": fu
+		}
+	}
 
 
 def flower_pot(input_namespace: str, input_block_name: str, plant_type: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:

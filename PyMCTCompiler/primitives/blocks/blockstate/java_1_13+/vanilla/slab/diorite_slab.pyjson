@@ -1,1 +1,1 @@
-blockstate.material_helper("minecraft", "diorite_slab", "\"diorite\"", "universal_minecraft", "slab", {"type": ["\"top\"","\"bottom\"","\"double\""]})
+blockstate.material_helper("minecraft", "diorite_slab", "\"diorite\"", "universal_minecraft", "slab", {"type": ["\"top\"","\"bottom\"","\"double\""]}, default="minecraft:stone_slab")

@@ -40,6 +40,10 @@ def mushroom_block(color: str) -> dict:
 	return {
 		"to_universal": [
 			{
+				"function": "new_block",
+				"options": f'universal_minecraft:{color}_mushroom_block'
+			},
+			{
 				"function": "map_properties",
 				"options": {
 					"huge_mushroom_bits": {

@@ -1,6 +1,10 @@
 {
     "to_universal": [
         {
+            "function": "new_block",
+            "options": "universal_minecraft:head"
+        },
+        {
             "function": "map_properties",
             "options": {
                 "no_drop_bit": {

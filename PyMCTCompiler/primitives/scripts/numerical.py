@@ -2384,6 +2384,10 @@ def stairs(input_namespace: str, input_block_name: str, material: str, universal
 		"blockstate_from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
 				{
+					"function": "new_block",
+					"options": "minecraft:oak_stairs"
+				},
+				{
 					"function": "map_properties",
 					"options": {
 						"material": {
@@ -2542,6 +2546,10 @@ def button_bedrock(input_namespace: str, input_block_name: str, material: str, u
 		"from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
 				{
+					"function": "new_block",
+					"options": "minecraft:stone_button"
+				},
+				{
 					"function": "map_properties",
 					"options": {
 						"material": {
@@ -2652,6 +2660,10 @@ def button_bedrock(input_namespace: str, input_block_name: str, material: str, u
 		"blockstate_from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
 				{
+					"function": "new_block",
+					"options": "minecraft:stone_button"
+				},
+				{
 					"function": "carry_properties",
 					"options": {
 						"powered": ["\"false\"", "\"true\""]
@@ -2747,6 +2759,10 @@ def button_java(input_namespace: str, input_block_name: str, material: str, univ
 		],
 		"from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
+				{
+					"function": "new_block",
+					"options": "minecraft:stone_button"
+				},
 				{
 					"function": "map_properties",
 					"options": {
@@ -2856,6 +2872,10 @@ def button_java(input_namespace: str, input_block_name: str, material: str, univ
 		],
 		"blockstate_from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
+				{
+					"function": "new_block",
+					"options": "minecraft:stone_button"
+				},
 				{
 					"function": "carry_properties",
 					"options": {
@@ -4060,6 +4080,10 @@ def trapdoor_bedrock(input_namespace: str, input_block_name: str, material: str)
 		"from_universal": {
 			"universal_minecraft:trapdoor": [
 				{
+					"function": "new_block",
+					"options": "minecraft:trapdoor"
+				},
+				{
 					"function": "map_properties",
 					"options": {
 						"material": {
@@ -4159,6 +4183,10 @@ def trapdoor_bedrock(input_namespace: str, input_block_name: str, material: str)
 		"blockstate_from_universal": {
 			"universal_minecraft:trapdoor": [
 				{
+					"function": "new_block",
+					"options": "minecraft:trapdoor"
+				},
+				{
 					"function": "map_properties",
 					"options": {
 						"material": {
@@ -4228,6 +4256,10 @@ def trapdoor_java(input_namespace: str, input_block_name: str, material: str) ->
 		],
 		"from_universal": {
 			"universal_minecraft:trapdoor": [
+				{
+					"function": "new_block",
+					"options": "minecraft:trapdoor"
+				},
 				{
 					"function": "map_properties",
 					"options": {
@@ -4328,6 +4360,10 @@ def trapdoor_java(input_namespace: str, input_block_name: str, material: str) ->
 		"blockstate_from_universal": {
 			"universal_minecraft:trapdoor": [
 				{
+					"function": "new_block",
+					"options": "minecraft:trapdoor"
+				},
+				{
 					"function": "map_properties",
 					"options": {
 						"material": {
@@ -4397,6 +4433,10 @@ def pressure_plate(input_namespace: str, input_block_name: str, material: str) -
 		"from_universal": {
 			"universal_minecraft:pressure_plate": [
 				{
+					"function": "new_block",
+					"options": "minecraft:stone_pressure_plate"
+				},
+				{
 					"function": "map_properties",
 					"options": {
 						"material": {
@@ -4455,6 +4495,10 @@ def pressure_plate(input_namespace: str, input_block_name: str, material: str) -
 		],
 		"blockstate_from_universal": {
 			"universal_minecraft:pressure_plate": [
+				{
+					"function": "new_block",
+					"options": "minecraft:stone_pressure_plate"
+				},
 				{
 					"function": "map_properties",
 					"options": {
@@ -4931,6 +4975,10 @@ def standing_sign(input_namespace: str, input_block_name: str, material: str, un
 		"from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
 				{
+					"function": "new_block",
+					"options": "minecraft:standing_sign"
+				},
+				{
 					"function": "map_properties",
 					"options": {
 						"rotation": {
@@ -4983,6 +5031,10 @@ def standing_sign(input_namespace: str, input_block_name: str, material: str, un
 		],
 		"blockstate_from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
+				{
+					"function": "new_block",
+					"options": "minecraft:standing_sign"
+				},
 				{
 					"function": "map_properties",
 					"options": {
@@ -5039,6 +5091,10 @@ def wall_sign(input_namespace: str, input_block_name: str, material: str, univer
 		"from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
 				{
+					"function": "new_block",
+					"options": "minecraft:wall_sign"
+				},
+				{
 					"function": "map_properties",
 					"options": {
 						"facing": {
@@ -5091,6 +5147,10 @@ def wall_sign(input_namespace: str, input_block_name: str, material: str, univer
 		],
 		"blockstate_from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
+				{
+					"function": "new_block",
+					"options": "minecraft:wall_sign"
+				},
 				{
 					"function": "map_properties",
 					"options": {

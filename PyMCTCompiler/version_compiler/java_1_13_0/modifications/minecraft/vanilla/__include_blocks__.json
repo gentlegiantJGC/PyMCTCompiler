@@ -239,7 +239,7 @@
 	"dark_oak_slab": "dark_oak_slab",
 	"petrified_oak_slab": "petrified_oak_slab",
 	"brick_slab": "brick_slab",
-	"stone_slab": "stone_slab",
+	"stone_slab": "stone_slab_13",
 	"cobblestone_slab": "cobblestone_slab",
 	"stone_brick_slab": "stone_brick_slab",
 	"sandstone_slab": "sandstone_slab",
@@ -360,7 +360,6 @@
 	"mossy_stone_bricks": "mossy_stone_bricks",
 	"chiseled_stone_bricks": "chiseled_stone_bricks",
 	"beetroots": "beetroots",
-	"sweet_berry_bush": "sweet_berry_bush",
 	"cobblestone_wall": "cobblestone_wall",
 	"mossy_cobblestone_wall": "mossy_cobblestone_wall",
 

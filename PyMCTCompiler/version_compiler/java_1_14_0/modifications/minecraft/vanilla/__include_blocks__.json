@@ -25,6 +25,7 @@
 	"cornflower": "cornflower",
 	"wither_rose": "wither_rose",
 	"lily_of_the_valley": "lily_of_the_valley",
+	"sweet_berry_bush": "sweet_berry_bush",
 
 	"potted_cornflower": "potted_cornflower",
 	"potted_wither_rose": "potted_wither_rose",
@@ -32,6 +33,7 @@
 	"potted_bamboo": "potted_bamboo",
 	"bamboo": "bamboo",
 
+	"stone_slab": "stone_slab",
 	"smooth_stone_slab": "smooth_stone_slab",
 	"cut_sandstone_slab": "cut_sandstone_slab",
 	"cut_red_sandstone_slab": "cut_red_sandstone_slab",

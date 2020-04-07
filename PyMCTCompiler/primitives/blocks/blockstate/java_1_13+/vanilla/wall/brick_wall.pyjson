@@ -1,1 +1,1 @@
-blockstate.material_helper("minecraft", "brick_wall", "\"brick\"", "universal_minecraft", "wall", {"east": ["\"true\"","\"false\""],"north": ["\"true\"","\"false\""],"south": ["\"true\"","\"false\""],"up": ["\"true\"","\"false\""],"west": ["\"true\"","\"false\""]})
+blockstate.material_helper("minecraft", "brick_wall", "\"brick\"", "universal_minecraft", "wall", {"east": ["\"true\"","\"false\""],"north": ["\"true\"","\"false\""],"south": ["\"true\"","\"false\""],"up": ["\"true\"","\"false\""],"west": ["\"true\"","\"false\""]}, default="minecraft:cobblestone_wall")
