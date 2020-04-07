@@ -1,1 +1,1 @@
-numerical.stairs("minecraft", "end_brick_stairs", "\"end_brick\"", "universal_minecraft", "stairs")
+numerical.stairs("minecraft", "end_brick_stairs", "\"end_stone_brick\"", "universal_minecraft", "stairs")
