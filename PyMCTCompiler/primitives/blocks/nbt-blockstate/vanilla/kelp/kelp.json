@@ -170,6 +170,15 @@
                 "options": "minecraft:kelp"
             },
             {
+                "function": "new_properties",
+                "options": {
+                    "age": [
+                        "snbt",
+                        "15"
+                    ]
+                }
+            },
+            {
                 "function": "map_properties",
                 "options": {
                     "age": {
@@ -348,116 +357,6 @@
                                     ]
                                 }
                             }
-                        ],
-                        "\"16\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "age": [
-                                        "snbt",
-                                        "15"
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"17\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "age": [
-                                        "snbt",
-                                        "15"
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"18\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "age": [
-                                        "snbt",
-                                        "15"
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"19\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "age": [
-                                        "snbt",
-                                        "15"
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"20\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "age": [
-                                        "snbt",
-                                        "15"
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"21\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "age": [
-                                        "snbt",
-                                        "15"
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"22\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "age": [
-                                        "snbt",
-                                        "15"
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"23\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "age": [
-                                        "snbt",
-                                        "15"
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"24\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "age": [
-                                        "snbt",
-                                        "15"
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"25\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "age": [
-                                        "snbt",
-                                        "15"
-                                    ]
-                                }
-                            }
                         ]
                     }
                 }
@@ -467,6 +366,15 @@
             {
                 "function": "new_block",
                 "options": "minecraft:kelp"
+            },
+            {
+                "function": "new_properties",
+                "options": {
+                    "age": [
+                        "snbt",
+                        "15"
+                    ]
+                }
             },
             {
                 "function": "map_properties",

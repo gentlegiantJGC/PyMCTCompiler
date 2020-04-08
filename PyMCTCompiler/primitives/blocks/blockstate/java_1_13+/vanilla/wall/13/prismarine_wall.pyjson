@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "prismarine_wall", "\"prismarine\"", "universal_minecraft", "wall", default="minecraft:cobblestone_wall")

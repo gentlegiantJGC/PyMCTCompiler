@@ -1,9 +1,9 @@
 {
 	"remove": [
-		"kelp_plant"
+		"weeping_vines_plant"
 	],
 	"add": {
-		"kelp_plant": {
+		"weeping_vines_plant": {
 			"properties": {
 				"age": [
 					"\"0\"",

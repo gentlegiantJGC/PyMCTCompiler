@@ -1,0 +1,206 @@
+{
+	"to_universal": [
+		{
+			"function": "map_properties",
+			"options": {
+				"north": {
+					"\"false\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"north": "\"none\""
+							}
+						}
+					],
+					"\"true\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"north": "\"low\""
+							}
+						}
+					]
+				},
+				"east": {
+					"\"false\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"east": "\"none\""
+							}
+						}
+					],
+					"\"true\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"east": "\"low\""
+							}
+						}
+					]
+				},
+				"south": {
+					"\"false\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"south": "\"none\""
+							}
+						}
+					],
+					"\"true\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"south": "\"low\""
+							}
+						}
+					]
+				},
+				"west": {
+					"\"false\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"west": "\"none\""
+							}
+						}
+					],
+					"\"true\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"west": "\"low\""
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"function": "carry_properties",
+			"options": {
+				"up": ["\"true\"", "\"false\""]
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:wall": [
+			{
+				"function": "map_properties",
+				"options": {
+					"north": {
+						"\"none\"": [
+							{
+								"function": "new_properties",
+								"options": {
+									"north": "\"false\""
+								}
+							}
+						],
+						"\"low\"": [
+							{
+								"function": "new_properties",
+								"options": {
+									"north": "\"true\""
+								}
+							}
+						],
+						"\"tall\"": [
+							{
+								"function": "new_properties",
+								"options": {
+									"north": "\"true\""
+								}
+							}
+						]
+					},
+					"east": {
+						"\"none\"": [
+							{
+								"function": "new_properties",
+								"options": {
+									"north": "\"false\""
+								}
+							}
+						],
+						"\"low\"": [
+							{
+								"function": "new_properties",
+								"options": {
+									"north": "\"true\""
+								}
+							}
+						],
+						"\"tall\"": [
+							{
+								"function": "new_properties",
+								"options": {
+									"north": "\"true\""
+								}
+							}
+						]
+					},
+					"south": {
+						"\"none\"": [
+							{
+								"function": "new_properties",
+								"options": {
+									"north": "\"false\""
+								}
+							}
+						],
+						"\"low\"": [
+							{
+								"function": "new_properties",
+								"options": {
+									"north": "\"true\""
+								}
+							}
+						],
+						"\"tall\"": [
+							{
+								"function": "new_properties",
+								"options": {
+									"north": "\"true\""
+								}
+							}
+						]
+					},
+					"west": {
+						"\"none\"": [
+							{
+								"function": "new_properties",
+								"options": {
+									"north": "\"false\""
+								}
+							}
+						],
+						"\"low\"": [
+							{
+								"function": "new_properties",
+								"options": {
+									"north": "\"true\""
+								}
+							}
+						],
+						"\"tall\"": [
+							{
+								"function": "new_properties",
+								"options": {
+									"north": "\"true\""
+								}
+							}
+						]
+					}
+				}
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"up": ["\"true\"", "\"false\""]
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "brick_wall", "\"brick\"", "universal_minecraft", "wall", default="minecraft:cobblestone_wall")

@@ -126,7 +126,10 @@ def blocks_from_server(version_path: str, version_str: List[str] = None):
 					raise Exception(f'This failed for some reason\n{e}')
 
 
-launcher_manifest = json.load(urlopen('https://launchermeta.mojang.com/mc/game/version_manifest.json'))
+try:
+	launcher_manifest = json.load(urlopen('https://launchermeta.mojang.com/mc/game/version_manifest.json'))
+except:
+	launcher_manifest = None
 
 
 def get_latest_server(path: str):
@@ -136,13 +139,16 @@ def get_latest_server(path: str):
 	else:
 		last_version = ''
 
-	new_version = launcher_manifest['latest']['release']
-	if new_version != last_version:
-		download_server_jar(path, new_version.split('.'))
-		with open(os.path.join(path, 'latest'), 'w') as f:
-			f.write(new_version)
-		if os.path.isdir(os.path.join(path, 'generated')):
-			shutil.rmtree(os.path.join(path, 'generated'))
+	if launcher_manifest is None:
+		print('Could not access the internet to check the newest version')
+	else:
+		new_version = launcher_manifest['latest']['release']
+		if new_version != last_version:
+			download_server_jar(path, new_version.split('.'))
+			with open(os.path.join(path, 'latest'), 'w') as f:
+				f.write(new_version)
+			if os.path.isdir(os.path.join(path, 'generated')):
+				shutil.rmtree(os.path.join(path, 'generated'))
 
 
 def download_server_jar(path: str, version_str: List[str] = None):

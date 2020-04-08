@@ -363,31 +363,38 @@ b_plants_19 = {
 }
 
 b_blockstate_plants = {
-    "\"dandelion\"": ["minecraft:yellow_flower", "{}", 17629184],
-    "\"poppy\"": ["minecraft:red_flower", "{flower_type: \"poppy\"}", 17629184],
-    "\"blue_orchid\"": ["minecraft:red_flower", "{flower_type: \"orchid\"}", 17629184],
-    "\"allium\"": ["minecraft:red_flower", "{flower_type: \"allium\"}", 17629184],
-    "\"azure_bluet\"": ["minecraft:red_flower", "{flower_type: \"houstonia\"}", 17629184],
-    "\"red_tulip\"": ["minecraft:red_flower", "{flower_type: \"tulip_red\"}", 17629184],
-    "\"orange_tulip\"": ["minecraft:red_flower", "{flower_type: \"tulip_orange\"}", 17629184],
-    "\"white_tulip\"": ["minecraft:red_flower", "{flower_type: \"tulip_white\"}", 17629184],
-    "\"pink_tulip\"": ["minecraft:red_flower", "{flower_type: \"tulip_pink\"}", 17629184],
-    "\"oxeye_daisy\"": ["minecraft:red_flower", "{flower_type: \"oxeye\"}", 17629184],
-    "\"oak_sapling\"": ["minecraft:sapling", "{age_bit: 0b, sapling_type: \"oak\"}", 17629184],
-    "\"spruce_sapling\"": ["minecraft:sapling", "{age_bit: 0b, sapling_type: \"spruce\"}", 17629184],
-    "\"birch_sapling\"": ["minecraft:sapling", "{age_bit: 0b, sapling_type: \"birch\"}", 17629184],
-    "\"jungle_sapling\"": ["minecraft:sapling", "{age_bit: 0b, sapling_type: \"jungle\"}", 17629184],
-    "\"acacia_sapling\"": ["minecraft:sapling", "{age_bit: 0b, sapling_type: \"acacia\"}", 17629184],
-    "\"dark_oak_sapling\"": ["minecraft:sapling", "{age_bit: 0b, sapling_type: \"dark_oak\"}", 17629184],
-    "\"red_mushroom\"": ["minecraft:red_mushroom", "{}", 17629184],
-    "\"brown_mushroom\"": ["minecraft:brown_mushroom", "{}", 17629184],
-    "\"fern\"": ["minecraft:tallgrass", "{tall_grass_type: \"fern\"}", 17629184],
-    "\"dead_bush\"": ["minecraft:deadbush", "{}", 17629184],
-    "\"cactus\"": ["minecraft:cactus", "{age: 0}", 17629184],
-    "\"bamboo\"": ["minecraft:bamboo", "{age_bit: 0, bamboo_leaf_size: \"no_leaves\", bamboo_stalk_thickness: \"thin\"}", 17629184],
-    "\"cornflower\"": ["minecraft:red_flower", "{flower_type: \"cornflower\"}", 17629184],
-    "\"lily_of_the_valley\"": ["minecraft:red_flower", "{flower_type: \"lily_of_the_valley\"}", 17629184],
-    "\"wither_rose\"": ["minecraft:wither_rose", "{}", 17629184]
+    "\"dandelion\"": ("minecraft:yellow_flower", "{}", 17629184),
+    "\"poppy\"": ("minecraft:red_flower", "{flower_type: \"poppy\"}", 17629184),
+    "\"blue_orchid\"": ("minecraft:red_flower", "{flower_type: \"orchid\"}", 17629184),
+    "\"allium\"": ("minecraft:red_flower", "{flower_type: \"allium\"}", 17629184),
+    "\"azure_bluet\"": ("minecraft:red_flower", "{flower_type: \"houstonia\"}", 17629184),
+    "\"red_tulip\"": ("minecraft:red_flower", "{flower_type: \"tulip_red\"}", 17629184),
+    "\"orange_tulip\"": ("minecraft:red_flower", "{flower_type: \"tulip_orange\"}", 17629184),
+    "\"white_tulip\"": ("minecraft:red_flower", "{flower_type: \"tulip_white\"}", 17629184),
+    "\"pink_tulip\"": ("minecraft:red_flower", "{flower_type: \"tulip_pink\"}", 17629184),
+    "\"oxeye_daisy\"": ("minecraft:red_flower", "{flower_type: \"oxeye\"}", 17629184),
+    "\"oak_sapling\"": ("minecraft:sapling", "{age_bit: 0b, sapling_type: \"oak\"}", 17629184),
+    "\"spruce_sapling\"": ("minecraft:sapling", "{age_bit: 0b, sapling_type: \"spruce\"}", 17629184),
+    "\"birch_sapling\"": ("minecraft:sapling", "{age_bit: 0b, sapling_type: \"birch\"}", 17629184),
+    "\"jungle_sapling\"": ("minecraft:sapling", "{age_bit: 0b, sapling_type: \"jungle\"}", 17629184),
+    "\"acacia_sapling\"": ("minecraft:sapling", "{age_bit: 0b, sapling_type: \"acacia\"}", 17629184),
+    "\"dark_oak_sapling\"": ("minecraft:sapling", "{age_bit: 0b, sapling_type: \"dark_oak\"}", 17629184),
+    "\"red_mushroom\"": ("minecraft:red_mushroom", "{}", 17629184),
+    "\"brown_mushroom\"": ("minecraft:brown_mushroom", "{}", 17629184),
+    "\"fern\"": ("minecraft:tallgrass", "{tall_grass_type: \"fern\"}", 17629184),
+    "\"dead_bush\"": ("minecraft:deadbush", "{}", 17629184),
+    "\"cactus\"": ("minecraft:cactus", "{age: 0}", 17629184),
+    "\"bamboo\"": ("minecraft:bamboo", "{age_bit: 0, bamboo_leaf_size: \"no_leaves\", bamboo_stalk_thickness: \"thin\"}", 17629184),
+    "\"cornflower\"": ("minecraft:red_flower", "{flower_type: \"cornflower\"}", 17629184),
+    "\"lily_of_the_valley\"": ("minecraft:red_flower", "{flower_type: \"lily_of_the_valley\"}", 17629184),
+    "\"wither_rose\"": ("minecraft:wither_rose", "{}", 17629184)
+}
+
+b_blockstate_plants_16 = {
+    "\"crimson_fungus\"": ("minecraft:crimson_fungus", "{}", 17760256),
+    "\"crimson_roots\"": ("minecraft:crimson_roots", "{}", 17760256),
+    "\"warped_fungus\"": ("minecraft:warped_fungus", "{}", 17760256),
+    "\"warped_roots\"": ("minecraft:warped_roots", "{}", 17760256)
 }
 
 _J19 = TranslationFile(
@@ -413,6 +420,11 @@ _B19 = TranslationFile(
 _B113 = TranslationFile(
     pot_item_to_universal_blockstate_bedrock(b_blockstate_plants),
     pot_item_from_universal_blockstate_bedrock(b_blockstate_plants)
+)
+
+_B116 = TranslationFile(
+    pot_item_to_universal_blockstate_bedrock(b_blockstate_plants_16),
+    pot_item_from_universal_blockstate_bedrock(b_blockstate_plants_16)
 )
 
 j19 = merge(
@@ -441,5 +453,10 @@ b19 = merge(
 
 b113 = merge(
     [EmptyNBT('minecraft:flower_pot'), _B113, bedrock_is_movable],
+    ['universal_minecraft:flower_pot']
+)
+
+b116 = merge(
+    [EmptyNBT('minecraft:flower_pot'), _B113, _B116, bedrock_is_movable],
     ['universal_minecraft:flower_pot']
 )

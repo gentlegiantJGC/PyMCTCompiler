@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:nether_sprouts"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:nether_sprouts": [
+            {
+                "function": "new_block",
+                "options": "minecraft:nether_sprouts"
+            }
+        ]
+    }
+}

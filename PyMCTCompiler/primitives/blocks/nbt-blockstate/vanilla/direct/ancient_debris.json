@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:ancient_debris"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:ancient_debris": [
+            {
+                "function": "new_block",
+                "options": "minecraft:ancient_debris"
+            }
+        ]
+    }
+}

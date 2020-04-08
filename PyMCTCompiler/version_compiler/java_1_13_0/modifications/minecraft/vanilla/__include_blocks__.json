@@ -360,8 +360,8 @@
 	"mossy_stone_bricks": "mossy_stone_bricks",
 	"chiseled_stone_bricks": "chiseled_stone_bricks",
 	"beetroots": "beetroots",
-	"cobblestone_wall": "cobblestone_wall",
-	"mossy_cobblestone_wall": "mossy_cobblestone_wall",
+	"cobblestone_wall": ["cobblestone_wall", "wall_property_remap"],
+	"mossy_cobblestone_wall": ["mossy_cobblestone_wall", "wall_property_remap"],
 
 
 	"moving_piston": [">nbt.moving_block.j113", "moving_piston"],

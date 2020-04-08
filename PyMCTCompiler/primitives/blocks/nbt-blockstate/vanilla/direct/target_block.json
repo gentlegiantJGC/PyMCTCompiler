@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:target"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:target": [
+            {
+                "function": "new_block",
+                "options": "minecraft:target_block"
+            }
+        ]
+    }
+}
