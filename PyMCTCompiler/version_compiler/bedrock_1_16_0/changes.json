@@ -319,6 +319,27 @@
             }
         }
     },
+    "minecraft:allow": {
+        "block_added": {
+            "properties": {},
+            "defaults": {},
+            "types": {}
+        }
+    },
+    "minecraft:deny": {
+        "block_added": {
+            "properties": {},
+            "defaults": {},
+            "types": {}
+        }
+    },
+    "minecraft:border_block": {
+        "block_added": {
+            "properties": {},
+            "defaults": {},
+            "types": {}
+        }
+    },
     "minecraft:blue_fire": {
         "block_added": {
             "properties": {

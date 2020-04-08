@@ -6,7 +6,9 @@
 		"jungle_trapdoor",
 		"acacia_trapdoor",
 		"dark_oak_trapdoor",
-		"iron_trapdoor"
+		"iron_trapdoor",
+		"crimson_trapdoor",
+		"warped_trapdoor"
 	],
 	"add": {
 		"trapdoor": {
@@ -18,7 +20,9 @@
 					"\"jungle\"",
 					"\"acacia\"",
 					"\"dark_oak\"",
-					"\"iron\""
+					"\"iron\"",
+					"\"crimson\"",
+					"\"warped\""
 				],
 				"facing": [
 					"\"north\"",

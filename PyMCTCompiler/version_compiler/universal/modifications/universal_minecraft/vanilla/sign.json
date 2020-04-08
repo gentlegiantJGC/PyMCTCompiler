@@ -5,7 +5,9 @@
 		"birch_sign",
 		"jungle_sign",
 		"acacia_sign",
-		"dark_oak_sign"
+		"dark_oak_sign",
+		"crimson_sign",
+		"warped_sign"
 	],
 	"add": {
 		"sign": {
@@ -34,7 +36,9 @@
 					"\"birch\"",
 					"\"jungle\"",
 					"\"acacia\"",
-					"\"dark_oak\""
+					"\"dark_oak\"",
+					"\"crimson\"",
+					"\"warped\""
 				]
 			},
 			"defaults": {

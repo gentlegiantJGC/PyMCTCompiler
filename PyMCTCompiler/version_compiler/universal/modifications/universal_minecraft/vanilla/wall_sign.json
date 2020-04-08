@@ -5,7 +5,9 @@
 		"birch_wall_sign",
 		"jungle_wall_sign",
 		"acacia_wall_sign",
-		"dark_oak_wall_sign"
+		"dark_oak_wall_sign",
+		"crimson_wall_sign",
+		"warped_wall_sign"
 	],
 	"add": {
 		"wall_sign": {
@@ -22,7 +24,9 @@
 					"\"birch\"",
 					"\"jungle\"",
 					"\"acacia\"",
-					"\"dark_oak\""
+					"\"dark_oak\"",
+					"\"crimson\"",
+					"\"warped\""
 				]
 			},
 			"defaults": {

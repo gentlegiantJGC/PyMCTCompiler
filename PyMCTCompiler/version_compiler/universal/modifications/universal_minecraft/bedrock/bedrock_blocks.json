@@ -9,6 +9,9 @@
 		"info_update2": {},
 		"reserved6": {},
 		"invisible_bedrock": {},
-		"camera": {}
+		"camera": {},
+		"allow": {},
+	    "deny": {},
+	    "border_block": {}
 	}
 }

@@ -6,7 +6,9 @@
 		"jungle_door",
 		"acacia_door",
 		"dark_oak_door",
-		"iron_door"
+		"iron_door",
+		"crimson_door",
+		"warped_door"
 	],
 	"add": {
 		"door": {
@@ -18,7 +20,9 @@
 					"\"jungle\"",
 					"\"acacia\"",
 					"\"dark_oak\"",
-					"\"iron\""
+					"\"iron\"",
+					"\"crimson\"",
+					"\"warped\""
 				],
 				"facing": [
 					"\"north\"",

@@ -6,7 +6,9 @@
 		"jungle_button",
 		"acacia_button",
 		"dark_oak_button",
-		"stone_button"
+		"stone_button",
+		"crimson_button",
+		"warped_button"
 	],
 	"add": {
 		"button": {
@@ -18,7 +20,9 @@
 					"\"jungle\"",
 					"\"acacia\"",
 					"\"dark_oak\"",
-					"\"stone\""
+					"\"stone\"",
+					"\"crimson\"",
+					"\"warped\""
 				],
 				"face": [
 					"\"floor\"",

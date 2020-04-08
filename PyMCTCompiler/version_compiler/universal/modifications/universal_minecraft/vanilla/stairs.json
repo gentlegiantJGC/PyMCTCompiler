@@ -30,7 +30,9 @@
 		"smooth_quartz_stairs",
 		"smooth_red_sandstone_stairs",
 		"smooth_sandstone_stairs",
-		"stone_stairs"
+		"stone_stairs",
+		"crimson_stairs",
+		"warped_stairs"
 	],
 	"add": {
 		"stairs": {
@@ -66,7 +68,9 @@
 					"\"smooth_quartz\"",
 					"\"smooth_red_sandstone\"",
 					"\"smooth_sandstone\"",
-					"\"stone\""
+					"\"stone\"",
+					"\"crimson\"",
+					"\"warped\""
 				],
 				"facing": [
 					"\"north\"",

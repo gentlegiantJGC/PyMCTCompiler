@@ -25,7 +25,11 @@
 		"potted_bamboo",
 		"potted_cornflower",
 		"potted_lily_of_the_valley",
-		"potted_wither_rose"
+		"potted_wither_rose",
+		"potted_crimson_roots",
+		"potted_crimson_fungus",
+		"potted_warped_roots",
+		"potted_warped_fungus"
 	],
 	"add": {
 		"flower_pot": {
@@ -56,7 +60,11 @@
 					"\"bamboo\"",
 					"\"cornflower\"",
 					"\"lily_of_the_valley\"",
-					"\"wither_rose\""
+					"\"wither_rose\"",
+					"\"crimson_roots\"",
+					"\"crimson_fungus\"",
+					"\"warped_roots\"",
+					"\"warped_fungus\""
 				],
 				"update": [
 					"\"false\"",

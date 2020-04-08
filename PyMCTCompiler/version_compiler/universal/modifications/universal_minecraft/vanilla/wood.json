@@ -11,7 +11,12 @@
 		"stripped_birch_wood",
 		"stripped_jungle_wood",
 		"stripped_acacia_wood",
-		"stripped_dark_oak_wood"
+		"stripped_dark_oak_wood",
+
+		"crimson_hyphae",
+		"warped_hyphae",
+		"stripped_crimson_hyphae",
+		"stripped_warped_hyphae"
 	],
 	"add": {
 		"wood": {
@@ -22,7 +27,9 @@
 					"\"birch\"",
 					"\"jungle\"",
 					"\"acacia\"",
-					"\"dark_oak\""
+					"\"dark_oak\"",
+					"\"crimson\"",
+					"\"warped\""
 				],
 				"axis": [
 					"\"x\"",

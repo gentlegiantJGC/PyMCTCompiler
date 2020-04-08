@@ -6,7 +6,9 @@
 		"jungle_pressure_plate",
 		"acacia_pressure_plate",
 		"dark_oak_pressure_plate",
-		"stone_pressure_plate"
+		"stone_pressure_plate",
+		"crimson_pressure_plate",
+		"warped_pressure_plate"
 	],
 	"add": {
 		"pressure_plate": {
@@ -18,7 +20,9 @@
 					"\"jungle\"",
 					"\"acacia\"",
 					"\"dark_oak\"",
-					"\"stone\""
+					"\"stone\"",
+					"\"crimson\"",
+					"\"warped\""
 				],
 				"powered": [
 					"\"true\"",

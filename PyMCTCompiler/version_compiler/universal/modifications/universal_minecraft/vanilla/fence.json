@@ -6,7 +6,9 @@
 		"jungle_fence",
 		"acacia_fence",
 		"dark_oak_fence",
-        "nether_brick_fence"
+        "nether_brick_fence",
+		"crimson_fence",
+		"warped_fence"
 	],
 	"add": {
         "fence": {
@@ -18,8 +20,9 @@
 					"\"jungle\"",
 					"\"acacia\"",
 					"\"dark_oak\"",
-					"\"nether_brick\""
-
+					"\"nether_brick\"",
+					"\"crimson\"",
+					"\"warped\""
 				],
                 "east": [
                     "\"true\"",
