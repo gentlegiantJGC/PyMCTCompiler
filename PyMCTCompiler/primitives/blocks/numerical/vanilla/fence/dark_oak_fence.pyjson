@@ -1,1 +1,1 @@
-numerical.fence_java("minecraft", "dark_oak_fence", "\"dark_oak\"", "universal_minecraft", "fence")
+numerical.fence_java("minecraft", "dark_oak_fence", "\"dark_oak\"", "universal_minecraft", "fence", default="minecraft:fence")

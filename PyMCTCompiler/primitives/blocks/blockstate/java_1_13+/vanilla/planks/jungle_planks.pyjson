@@ -1,1 +1,1 @@
-blockstate.material_helper("minecraft", "jungle_planks", "\"jungle\"", "universal_minecraft", "planks")
+blockstate.material_helper("minecraft", "jungle_planks", "\"jungle\"", "universal_minecraft", "planks", default="minecraft:oak_planks")

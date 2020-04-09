@@ -1,1 +1,1 @@
-blockstate.wood("minecraft", "spruce_log", "\"spruce\"", False, "universal_minecraft", "log")
+blockstate.wood("minecraft", "spruce_log", "\"spruce\"", False, "universal_minecraft", "log", default="minecraft:oak_log")

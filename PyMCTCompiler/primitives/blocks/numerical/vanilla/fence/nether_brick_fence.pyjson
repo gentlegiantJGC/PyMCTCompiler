@@ -1,1 +1,1 @@
-numerical.fence_java("minecraft", "nether_brick_fence", "\"nether_brick\"", "universal_minecraft", "fence")
+numerical.fence_java("minecraft", "nether_brick_fence", "\"nether_brick\"", "universal_minecraft", "fence", default="minecraft:fence")

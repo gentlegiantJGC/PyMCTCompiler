@@ -785,7 +785,7 @@ def leaves(input_namespace: str, input_block_name: str, material: str, universal
 	}
 
 
-def wood(input_namespace: str, input_block_name: str, material: str, stripped: bool, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+def wood(input_namespace: str, input_block_name: str, material: str, stripped: bool, universal_namespace: str = None, universal_block_name: str = None, default='') -> dict:
 	if universal_namespace is None:
 		universal_namespace = input_namespace
 	if universal_block_name is None:
@@ -817,6 +817,10 @@ def wood(input_namespace: str, input_block_name: str, material: str, stripped: b
 		],
 		"from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
+				{
+					"function": "new_block",
+					"options": default or "minecraft:air"
+				},
 				{
 					"function": "map_properties",
 					"options": {

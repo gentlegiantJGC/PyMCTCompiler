@@ -1,1 +1,1 @@
-blockstate.material_helper("minecraft", "spruce_sapling", "\"spruce\"", "universal_minecraft", "sapling", {"stage": ["\"0\"","\"1\""]})
+blockstate.material_helper("minecraft", "spruce_sapling", "\"spruce\"", "universal_minecraft", "sapling", {"stage": ["\"0\"","\"1\""]}, default="minecraft:oak_sapling")

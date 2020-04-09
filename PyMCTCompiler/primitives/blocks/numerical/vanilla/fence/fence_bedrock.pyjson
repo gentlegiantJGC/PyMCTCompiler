@@ -55,6 +55,10 @@
 	"from_universal": {
 		"universal_minecraft:fence": [
 			{
+				"function": "new_block",
+				"options": "minecraft:fence"
+			},
+			{
 				"function": "map_properties",
 				"options": {
 					"material": {
@@ -97,6 +101,10 @@
 	],
 	"blockstate_from_universal": {
 		"universal_minecraft:fence": [
+			{
+				"function": "new_block",
+				"options": "minecraft:fence"
+			},
 			{
 				"function": "map_properties",
 				"options": {

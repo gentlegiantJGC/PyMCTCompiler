@@ -1,1 +1,1 @@
-numerical.door("minecraft", "wooden_door", "\"oak\"")
+numerical.door("minecraft", "wooden_door", "\"oak\"", default="minecraft:wooden_door")

@@ -704,6 +704,10 @@ def log(input_namespace: str, input_block_name: str) -> dict:
 		"from_universal": {
 			"universal_minecraft:log": [
 				{
+					"function": "new_block",
+					"options": "minecraft:log"
+				},
+				{
 					"function": "map_properties",
 					"options": {
 						"axis": {
@@ -733,6 +737,10 @@ def log(input_namespace: str, input_block_name: str) -> dict:
 				}
 			],
 			"universal_minecraft:wood": [
+				{
+					"function": "new_block",
+					"options": "minecraft:log"
+				},
 				{
 					"function": "map_properties",
 					"options": {
@@ -822,6 +830,10 @@ def log(input_namespace: str, input_block_name: str) -> dict:
 		"blockstate_from_universal": {
 			"universal_minecraft:log": [
 				{
+					"function": "new_block",
+					"options": "minecraft:log"
+				},
+				{
 					"function": "carry_properties",
 					"options": {
 						"material": list(material_pallet.values()),
@@ -847,6 +859,10 @@ def log(input_namespace: str, input_block_name: str) -> dict:
 				}
 			],
 			"universal_minecraft:wood": [
+				{
+					"function": "new_block",
+					"options": "minecraft:log"
+				},
 				{
 					"function": "carry_properties",
 					"options": {
@@ -922,6 +938,10 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 		"from_universal": {
 			"universal_minecraft:log": [
 				{
+					"function": "new_block",
+					"options": "minecraft:log"
+				},
+				{
 					"function": "map_properties",
 					"options": {
 						"stripped": {
@@ -960,6 +980,10 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 				}
 			],
 			"universal_minecraft:wood": [
+				{
+					"function": "new_block",
+					"options": "minecraft:log"
+				},
 				{
 					"function": "map_properties",
 					"options": {
@@ -1058,6 +1082,10 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 		"blockstate_from_universal": {
 			"universal_minecraft:log": [
 				{
+					"function": "new_block",
+					"options": "minecraft:log"
+				},
+				{
 					"function": "carry_properties",
 					"options": {
 						"axis": [
@@ -1097,6 +1125,10 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
 				}
 			],
 			"universal_minecraft:wood": [
+				{
+					"function": "new_block",
+					"options": "minecraft:log"
+				},
 				{
 					"function": "map_properties",
 					"options": {
@@ -1180,6 +1212,10 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 		"from_universal": {
 			"universal_minecraft:log": [
 				{
+					"function": "new_block",
+					"options": "minecraft:log"
+				},
+				{
 					"function": "map_properties",
 					"options": {
 						"stripped": {
@@ -1213,6 +1249,10 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 				}
 			],
 			"universal_minecraft:wood": [
+				{
+					"function": "new_block",
+					"options": "minecraft:log"
+				},
 				{
 					"function": "map_properties",
 					"options": {
@@ -1333,6 +1373,10 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 		"blockstate_from_universal": {
 			"universal_minecraft:log": [
 				{
+					"function": "new_block",
+					"options": "minecraft:log"
+				},
+				{
 					"function": "carry_properties",
 					"options": {
 						"axis": [
@@ -1366,6 +1410,10 @@ def stripped_log_bedrock(input_namespace: str, input_block_name: str, material: 
 				}
 			],
 			"universal_minecraft:wood": [
+				{
+					"function": "new_block",
+					"options": "minecraft:log"
+				},
 				{
 					"function": "map_properties",
 					"options": {
@@ -3045,7 +3093,7 @@ def glazed_terracotta(input_namespace: str, input_block_name: str, color: str, p
 	}
 
 
-def fence_java(input_namespace: str, input_block_name: str, material: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+def fence_java(input_namespace: str, input_block_name: str, material: str, universal_namespace: str = None, universal_block_name: str = None, default='') -> dict:
 	if universal_namespace is None:
 		universal_namespace = input_namespace
 	if universal_block_name is None:
@@ -3107,6 +3155,10 @@ def fence_java(input_namespace: str, input_block_name: str, material: str, unive
 		"from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
 				{
+					"function": "new_block",
+					"options": default or "minecraft:air"
+				},
+				{
 					"function": "map_properties",
 					"options": {
 						"material": {
@@ -3142,6 +3194,10 @@ def fence_java(input_namespace: str, input_block_name: str, material: str, unive
 		"blockstate_from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
 				{
+					"function": "new_block",
+					"options": default or "minecraft:air"
+				},
+				{
 					"function": "map_properties",
 					"options": {
 						"material": {
@@ -3159,7 +3215,7 @@ def fence_java(input_namespace: str, input_block_name: str, material: str, unive
 	}
 
 
-def fence_gate_bedrock(input_namespace: str, input_block_name: str, material: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+def fence_gate_bedrock(input_namespace: str, input_block_name: str, material: str, universal_namespace: str = None, universal_block_name: str = None, default='') -> dict:
 	if universal_namespace is None:
 		universal_namespace = input_namespace
 	if universal_block_name is None:
@@ -3191,6 +3247,10 @@ def fence_gate_bedrock(input_namespace: str, input_block_name: str, material: st
 		],
 		"from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
+				{
+					"function": "new_block",
+					"options": default or "minecraft:air"
+				},
 				{
 					"function": "map_properties",
 					"options": {
@@ -3269,6 +3329,10 @@ def fence_gate_bedrock(input_namespace: str, input_block_name: str, material: st
 		"blockstate_from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
 				{
+					"function": "new_block",
+					"options": default or "minecraft:air"
+				},
+				{
 					"function": "map_properties",
 					"options": {
 						"material": {
@@ -3294,7 +3358,7 @@ def fence_gate_bedrock(input_namespace: str, input_block_name: str, material: st
 	}
 
 
-def fence_gate_java(input_namespace: str, input_block_name: str, material: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+def fence_gate_java(input_namespace: str, input_block_name: str, material: str, universal_namespace: str = None, universal_block_name: str = None, default='') -> dict:
 	if universal_namespace is None:
 		universal_namespace = input_namespace
 	if universal_block_name is None:
@@ -3326,6 +3390,10 @@ def fence_gate_java(input_namespace: str, input_block_name: str, material: str, 
 		],
 		"from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
+				{
+					"function": "new_block",
+					"options": default or "minecraft:air"
+				},
 				{
 					"function": "map_properties",
 					"options": {
@@ -3403,6 +3471,10 @@ def fence_gate_java(input_namespace: str, input_block_name: str, material: str, 
 		],
 		"blockstate_from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
+				{
+					"function": "new_block",
+					"options": default or "minecraft:air"
+				},
 				{
 					"function": "map_properties",
 					"options": {
@@ -3745,7 +3817,7 @@ def furnace(input_namespace: str, input_block_name: str, lit: bool, universal_na
 	}
 
 
-def door(input_namespace: str, input_block_name: str, material: str) -> dict:
+def door(input_namespace: str, input_block_name: str, material: str, default='') -> dict:
 	return {
 		"to_universal": [
 			{
@@ -3857,6 +3929,10 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 		],
 		"from_universal": {
 			"universal_minecraft:door": [
+				{
+					"function": "new_block",
+					"options": default or 'minecraft:air'
+				},
 				{
 					"function": "map_properties",
 					"options": {
@@ -4001,6 +4077,10 @@ def door(input_namespace: str, input_block_name: str, material: str) -> dict:
 		],
 		"blockstate_from_universal": {
 			"universal_minecraft:door": [
+				{
+					"function": "new_block",
+					"options": default or 'minecraft:air'
+				},
 				{
 					"function": "map_properties",
 					"options": {

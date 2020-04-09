@@ -1,1 +1,1 @@
-numerical.fence_gate_bedrock("minecraft", "dark_oak_fence_gate", "\"dark_oak\"", "universal_minecraft", "fence_gate")
+numerical.fence_gate_bedrock("minecraft", "dark_oak_fence_gate", "\"dark_oak\"", "universal_minecraft", "fence_gate", default="minecraft:fence_gate")
