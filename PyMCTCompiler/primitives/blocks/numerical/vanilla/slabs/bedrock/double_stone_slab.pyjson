@@ -1,1 +1,1 @@
-numerical.double_slab("minecraft", "double_stone_slab", ["\"smooth_stone\"", "\"sandstone\"", "\"petrified_oak\"", "\"cobblestone\"", "\"brick\"", "\"stone_brick\"", "\"quartz\"", "\"nether_brick\""], "universal_minecraft", "slab")
+numerical.double_slab("minecraft", "double_stone_slab", ["\"smooth_stone\"", "\"sandstone\"", "\"petrified_oak\"", "\"cobblestone\"", "\"brick\"", "\"stone_brick\"", "\"quartz\"", "\"nether_brick\""], "universal_minecraft", "slab", merge_extra=True)
