@@ -1,0 +1,18 @@
+{
+            "format_version": 1,
+            "header": {
+                "description": "1.12.28.0",
+                "name": "1.12.28.0",
+                "uuid": "79dd4970-47f3-442b-b916-1c63a0e38e5b",
+                "version": [0, 0, 1],
+                "min_engine_version": [1, 8, 0]
+            },
+            "modules": [
+                {
+                    "description": "1.12.28.0",
+                    "type": "data",
+                    "uuid": "51b81270-b8a8-48de-a856-b863e8edd7fd",
+                    "version": [0, 0, 1]
+                }
+            ]
+        }

@@ -56,7 +56,7 @@ with open(os.path.join(pack, 'items/setup.mcfunction'), 'w') as f:
             'scoreboard objectives add t dummy',
             'scoreboard players set @a t 10000',
             f'fill ~-1 ~-2 ~-1 ~{x+1} ~10 ~33 barrier 0 outline',
-            f'fill ~ ~-2 ~ ~{x} ~-1 ~32 chest',
+            f'fill ~ ~-2 ~ ~{x} ~-2 ~32 chest',
             f'fill ~ ~-1 ~ ~{x} ~-1 ~32 hopper',
             'give @s repeating_command_block'
         ]
