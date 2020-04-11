@@ -114,9 +114,9 @@ class DiskBuffer:
 		for path, data in self.files_to_save.items():
 			path = os.path.join(PyMCTCompiler.compiled_dir, *path) + '.json'
 			data = json.dumps(data, indent=4)
-			h = new_save_cache[path] = hashlib.sha1(data.encode('utf8')).hexdigest()
+			h = new_save_cache[path.lower()] = hashlib.sha1(data.encode('utf8')).hexdigest()
 
-			if path not in old_save_cache or old_save_cache[path] != h:
+			if path.lower() not in old_save_cache or old_save_cache[path.lower()] != h:
 				os.makedirs(os.path.dirname(path), exist_ok=True)
 				with open(path, 'w') as f:
 					f.write(data)
