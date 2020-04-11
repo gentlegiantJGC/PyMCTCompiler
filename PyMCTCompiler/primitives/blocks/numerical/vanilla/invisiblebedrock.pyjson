@@ -1,1 +1,1 @@
-numerical.default("minecraft", "invisiblebedrock", "universal_minecraft", "invisible_bedrock")
+numerical.default("minecraft", "invisibleBedrock", "universal_minecraft", "invisible_bedrock")
