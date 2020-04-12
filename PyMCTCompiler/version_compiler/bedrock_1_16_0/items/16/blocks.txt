@@ -51,6 +51,7 @@
 {Block: {name: "minecraft:carved_pumpkin", states: {direction: 0}, version: 17760256}, Damage: 0s, Name: "minecraft:carved_pumpkin"}
 {Block: {name: "minecraft:chain_command_block", states: {"conditional_bit": 0b, "facing_direction": 0}, version: 17760256}, Damage: 0s, Name: "minecraft:chain_command_block"}
 {Block: {name: "minecraft:chemical_heat", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:chemical_heat"}
+{Block: {name: "minecraft:chemistry_table", states: {"chemistry_table_type": "compound_creator", direction: 0}, version: 17760256}, Damage: 0s, Name: "minecraft:chemistry_table"}
 {Block: {name: "minecraft:chest", states: {"facing_direction": 0}, version: 17760256}, Damage: 0s, Name: "minecraft:chest"}
 {Block: {name: "minecraft:chorus_flower", states: {age: 0}, version: 17760256}, Damage: 0s, Name: "minecraft:chorus_flower"}
 {Block: {name: "minecraft:chorus_plant", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:chorus_plant"}
@@ -60,6 +61,8 @@
 {Block: {name: "minecraft:cobblestone", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:cobblestone"}
 {Block: {name: "minecraft:cobblestone_wall", states: {"wall_block_type": "cobblestone", "wall_connection_type_east": "none", "wall_connection_type_north": "none", "wall_connection_type_south": "none", "wall_connection_type_west": "none", "wall_post_bit": 0b}, version: 17760256}, Damage: 0s, Name: "minecraft:cobblestone_wall"}
 {Block: {name: "minecraft:cocoa", states: {age: 0, direction: 0}, version: 17760256}, Damage: 0s, Name: "minecraft:cocoa"}
+{Block: {name: "minecraft:colored_torch_bp", states: {"color_bit": 0b, "torch_facing_direction": "unknown"}, version: 17760256}, Damage: 0s, Name: "minecraft:colored_torch_bp"}
+{Block: {name: "minecraft:colored_torch_rg", states: {"color_bit": 0b, "torch_facing_direction": "unknown"}, version: 17760256}, Damage: 0s, Name: "minecraft:colored_torch_rg"}
 {Block: {name: "minecraft:command_block", states: {"conditional_bit": 0b, "facing_direction": 0}, version: 17760256}, Damage: 0s, Name: "minecraft:command_block"}
 {Block: {name: "minecraft:composter", states: {"composter_fill_level": 0}, version: 17760256}, Damage: 0s, Name: "minecraft:composter"}
 {Block: {name: "minecraft:concrete", states: {color: "white"}, version: 17760256}, Damage: 0s, Name: "minecraft:concrete"}
@@ -115,6 +118,124 @@
 {Block: {name: "minecraft:dragon_egg", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:dragon_egg"}
 {Block: {name: "minecraft:dried_kelp_block", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:dried_kelp_block"}
 {Block: {name: "minecraft:dropper", states: {"facing_direction": 0, "triggered_bit": 0b}, version: 17760256}, Damage: 0s, Name: "minecraft:dropper"}
+{Block: {name: "minecraft:element_0", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_0"}
+{Block: {name: "minecraft:element_1", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_1"}
+{Block: {name: "minecraft:element_10", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_10"}
+{Block: {name: "minecraft:element_100", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_100"}
+{Block: {name: "minecraft:element_101", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_101"}
+{Block: {name: "minecraft:element_102", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_102"}
+{Block: {name: "minecraft:element_103", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_103"}
+{Block: {name: "minecraft:element_104", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_104"}
+{Block: {name: "minecraft:element_105", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_105"}
+{Block: {name: "minecraft:element_106", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_106"}
+{Block: {name: "minecraft:element_107", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_107"}
+{Block: {name: "minecraft:element_108", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_108"}
+{Block: {name: "minecraft:element_109", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_109"}
+{Block: {name: "minecraft:element_11", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_11"}
+{Block: {name: "minecraft:element_110", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_110"}
+{Block: {name: "minecraft:element_111", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_111"}
+{Block: {name: "minecraft:element_112", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_112"}
+{Block: {name: "minecraft:element_113", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_113"}
+{Block: {name: "minecraft:element_114", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_114"}
+{Block: {name: "minecraft:element_115", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_115"}
+{Block: {name: "minecraft:element_116", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_116"}
+{Block: {name: "minecraft:element_117", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_117"}
+{Block: {name: "minecraft:element_118", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_118"}
+{Block: {name: "minecraft:element_12", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_12"}
+{Block: {name: "minecraft:element_13", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_13"}
+{Block: {name: "minecraft:element_14", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_14"}
+{Block: {name: "minecraft:element_15", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_15"}
+{Block: {name: "minecraft:element_16", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_16"}
+{Block: {name: "minecraft:element_17", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_17"}
+{Block: {name: "minecraft:element_18", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_18"}
+{Block: {name: "minecraft:element_19", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_19"}
+{Block: {name: "minecraft:element_2", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_2"}
+{Block: {name: "minecraft:element_20", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_20"}
+{Block: {name: "minecraft:element_21", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_21"}
+{Block: {name: "minecraft:element_22", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_22"}
+{Block: {name: "minecraft:element_23", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_23"}
+{Block: {name: "minecraft:element_24", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_24"}
+{Block: {name: "minecraft:element_25", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_25"}
+{Block: {name: "minecraft:element_26", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_26"}
+{Block: {name: "minecraft:element_27", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_27"}
+{Block: {name: "minecraft:element_28", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_28"}
+{Block: {name: "minecraft:element_29", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_29"}
+{Block: {name: "minecraft:element_3", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_3"}
+{Block: {name: "minecraft:element_30", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_30"}
+{Block: {name: "minecraft:element_31", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_31"}
+{Block: {name: "minecraft:element_32", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_32"}
+{Block: {name: "minecraft:element_33", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_33"}
+{Block: {name: "minecraft:element_34", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_34"}
+{Block: {name: "minecraft:element_35", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_35"}
+{Block: {name: "minecraft:element_36", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_36"}
+{Block: {name: "minecraft:element_37", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_37"}
+{Block: {name: "minecraft:element_38", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_38"}
+{Block: {name: "minecraft:element_39", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_39"}
+{Block: {name: "minecraft:element_4", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_4"}
+{Block: {name: "minecraft:element_40", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_40"}
+{Block: {name: "minecraft:element_41", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_41"}
+{Block: {name: "minecraft:element_42", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_42"}
+{Block: {name: "minecraft:element_43", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_43"}
+{Block: {name: "minecraft:element_44", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_44"}
+{Block: {name: "minecraft:element_45", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_45"}
+{Block: {name: "minecraft:element_46", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_46"}
+{Block: {name: "minecraft:element_47", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_47"}
+{Block: {name: "minecraft:element_48", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_48"}
+{Block: {name: "minecraft:element_49", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_49"}
+{Block: {name: "minecraft:element_5", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_5"}
+{Block: {name: "minecraft:element_50", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_50"}
+{Block: {name: "minecraft:element_51", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_51"}
+{Block: {name: "minecraft:element_52", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_52"}
+{Block: {name: "minecraft:element_53", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_53"}
+{Block: {name: "minecraft:element_54", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_54"}
+{Block: {name: "minecraft:element_55", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_55"}
+{Block: {name: "minecraft:element_56", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_56"}
+{Block: {name: "minecraft:element_57", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_57"}
+{Block: {name: "minecraft:element_58", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_58"}
+{Block: {name: "minecraft:element_59", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_59"}
+{Block: {name: "minecraft:element_6", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_6"}
+{Block: {name: "minecraft:element_60", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_60"}
+{Block: {name: "minecraft:element_61", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_61"}
+{Block: {name: "minecraft:element_63", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_63"}
+{Block: {name: "minecraft:element_64", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_64"}
+{Block: {name: "minecraft:element_65", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_65"}
+{Block: {name: "minecraft:element_66", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_66"}
+{Block: {name: "minecraft:element_67", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_67"}
+{Block: {name: "minecraft:element_68", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_68"}
+{Block: {name: "minecraft:element_69", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_69"}
+{Block: {name: "minecraft:element_7", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_7"}
+{Block: {name: "minecraft:element_70", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_70"}
+{Block: {name: "minecraft:element_71", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_71"}
+{Block: {name: "minecraft:element_72", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_72"}
+{Block: {name: "minecraft:element_73", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_73"}
+{Block: {name: "minecraft:element_74", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_74"}
+{Block: {name: "minecraft:element_75", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_75"}
+{Block: {name: "minecraft:element_76", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_76"}
+{Block: {name: "minecraft:element_77", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_77"}
+{Block: {name: "minecraft:element_78", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_78"}
+{Block: {name: "minecraft:element_79", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_79"}
+{Block: {name: "minecraft:element_8", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_8"}
+{Block: {name: "minecraft:element_80", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_80"}
+{Block: {name: "minecraft:element_81", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_81"}
+{Block: {name: "minecraft:element_82", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_82"}
+{Block: {name: "minecraft:element_83", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_83"}
+{Block: {name: "minecraft:element_84", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_84"}
+{Block: {name: "minecraft:element_85", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_85"}
+{Block: {name: "minecraft:element_86", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_86"}
+{Block: {name: "minecraft:element_87", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_87"}
+{Block: {name: "minecraft:element_88", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_88"}
+{Block: {name: "minecraft:element_89", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_89"}
+{Block: {name: "minecraft:element_9", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_9"}
+{Block: {name: "minecraft:element_90", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_90"}
+{Block: {name: "minecraft:element_91", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_91"}
+{Block: {name: "minecraft:element_92", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_92"}
+{Block: {name: "minecraft:element_93", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_93"}
+{Block: {name: "minecraft:element_94", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_94"}
+{Block: {name: "minecraft:element_95", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_95"}
+{Block: {name: "minecraft:element_96", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_96"}
+{Block: {name: "minecraft:element_97", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_97"}
+{Block: {name: "minecraft:element_98", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_98"}
+{Block: {name: "minecraft:element_99", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:element_99"}
 {Block: {name: "minecraft:emerald_block", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:emerald_block"}
 {Block: {name: "minecraft:emerald_ore", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:emerald_ore"}
 {Block: {name: "minecraft:enchanting_table", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:enchanting_table"}
@@ -151,6 +272,8 @@
 {Block: {name: "minecraft:grindstone", states: {attachment: "standing", direction: 0}, version: 17760256}, Damage: 0s, Name: "minecraft:grindstone"}
 {Block: {name: "minecraft:hard_glass", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:hard_glass"}
 {Block: {name: "minecraft:hard_glass_pane", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:hard_glass_pane"}
+{Block: {name: "minecraft:hard_stained_glass", states: {color: "white"}, version: 17760256}, Damage: 0s, Name: "minecraft:hard_stained_glass"}
+{Block: {name: "minecraft:hard_stained_glass_pane", states: {color: "white"}, version: 17760256}, Damage: 0s, Name: "minecraft:hard_stained_glass_pane"}
 {Block: {name: "minecraft:hardened_clay", states: {}, version: 17760256}, Damage: 0s, Name: "minecraft:hardened_clay"}
 {Block: {name: "minecraft:hay_block", states: {deprecated: 0, "pillar_axis": "y"}, version: 17760256}, Damage: 0s, Name: "minecraft:hay_block"}
 {Block: {name: "minecraft:heavy_weighted_pressure_plate", states: {"redstone_signal": 0}, version: 17760256}, Damage: 0s, Name: "minecraft:heavy_weighted_pressure_plate"}
@@ -186,6 +309,7 @@
 {Block: {name: "minecraft:light_block", states: {"block_light_level": 0}, version: 17760256}, Damage: 0s, Name: "minecraft:light_block"}
 {Block: {name: "minecraft:light_blue_glazed_terracotta", states: {"facing_direction": 0}, version: 17760256}, Damage: 0s, Name: "minecraft:light_blue_glazed_terracotta"}
 {Block: {name: "minecraft:light_weighted_pressure_plate", states: {"redstone_signal": 0}, version: 17760256}, Damage: 0s, Name: "minecraft:light_weighted_pressure_plate"}
+{Block: {name: "minecraft:lime_glazed_terracotta", states: {"facing_direction": 0}, version: 17760256}, Damage: 0s, Name: "minecraft:lime_glazed_terracotta"}
 {Block: {name: "minecraft:lit_blast_furnace", states: {"facing_direction": 0}, version: 17760256}, Damage: 0s, Name: "minecraft:lit_blast_furnace"}
 {Block: {name: "minecraft:lit_furnace", states: {"facing_direction": 0}, version: 17760256}, Damage: 0s, Name: "minecraft:lit_furnace"}
 {Block: {name: "minecraft:lit_pumpkin", states: {direction: 0}, version: 17760256}, Damage: 0s, Name: "minecraft:lit_pumpkin"}
