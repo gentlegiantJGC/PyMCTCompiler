@@ -1,5 +1,0 @@
-allow
-border_block
-camera
-chalkboard
-deny

@@ -1,4 +1,0 @@
-bee_nest
-beehive
-honey_block
-honeycomb_block
