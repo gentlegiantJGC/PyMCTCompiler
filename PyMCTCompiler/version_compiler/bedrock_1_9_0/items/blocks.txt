@@ -1,4 +1,5 @@
 {Block: {name: "minecraft:acacia_button", states: {"button_pressed_bit": 0b, "facing_direction": 0}}, Damage: 0s, Name: "minecraft:acacia_button"}
+{Block: {name: "minecraft:acacia_door", states: {direction: 0, "door_hinge_bit": 0b, "open_bit": 0b, "upper_block_bit": 0b}}, Damage: 0s, Name: "minecraft:acacia_door"}
 {Block: {name: "minecraft:acacia_fence_gate", states: {direction: 0, "in_wall_bit": 0b, "open_bit": 0b}}, Damage: 0s, Name: "minecraft:acacia_fence_gate"}
 {Block: {name: "minecraft:acacia_pressure_plate", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:acacia_pressure_plate"}
 {Block: {name: "minecraft:acacia_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:acacia_stairs"}
@@ -13,9 +14,12 @@
 {Block: {name: "minecraft:barrel", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:barrel"}
 {Block: {name: "minecraft:barrier", states: {}}, Damage: 0s, Name: "minecraft:barrier"}
 {Block: {name: "minecraft:beacon", states: {}}, Damage: 0s, Name: "minecraft:beacon"}
+{Block: {name: "minecraft:bed", states: {direction: 0, "head_piece_bit": 0b, "occupied_bit": 0b}}, Damage: 0s, Name: "minecraft:bed"}
 {Block: {name: "minecraft:bedrock", states: {"infiniburn_bit": 0b}}, Damage: 0s, Name: "minecraft:bedrock"}
+{Block: {name: "minecraft:beetroot", states: {growth: 0}}, Damage: 0s, Name: "minecraft:beetroot"}
 {Block: {name: "minecraft:bell", states: {direction: 0}}, Damage: 0s, Name: "minecraft:bell"}
 {Block: {name: "minecraft:birch_button", states: {"button_pressed_bit": 0b, "facing_direction": 0}}, Damage: 0s, Name: "minecraft:birch_button"}
+{Block: {name: "minecraft:birch_door", states: {direction: 0, "door_hinge_bit": 0b, "open_bit": 0b, "upper_block_bit": 0b}}, Damage: 0s, Name: "minecraft:birch_door"}
 {Block: {name: "minecraft:birch_fence_gate", states: {direction: 0, "in_wall_bit": 0b, "open_bit": 0b}}, Damage: 0s, Name: "minecraft:birch_fence_gate"}
 {Block: {name: "minecraft:birch_pressure_plate", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:birch_pressure_plate"}
 {Block: {name: "minecraft:birch_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:birch_stairs"}
@@ -36,10 +40,12 @@
 {Block: {name: "minecraft:brown_mushroom_block", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:brown_mushroom_block"}
 {Block: {name: "minecraft:bubble_column", states: {"drag_down": 0b}}, Damage: 0s, Name: "minecraft:bubble_column"}
 {Block: {name: "minecraft:cactus", states: {age: 0}}, Damage: 0s, Name: "minecraft:cactus"}
+{Block: {name: "minecraft:cake", states: {"bite_counter": 0}}, Damage: 0s, Name: "minecraft:cake"}
 {Block: {name: "minecraft:carpet", states: {color: "white"}}, Damage: 0s, Name: "minecraft:carpet"}
 {Block: {name: "minecraft:carrots", states: {growth: 0}}, Damage: 0s, Name: "minecraft:carrots"}
 {Block: {name: "minecraft:cartography_table", states: {}}, Damage: 0s, Name: "minecraft:cartography_table"}
 {Block: {name: "minecraft:carved_pumpkin", states: {direction: 0}}, Damage: 0s, Name: "minecraft:carved_pumpkin"}
+{Block: {name: "minecraft:cauldron", states: {"cauldron_liquid": "water", "fill_level": 0}}, Damage: 0s, Name: "minecraft:cauldron"}
 {Block: {name: "minecraft:chain_command_block", states: {"conditional_bit": 0b, "facing_direction": 0}}, Damage: 0s, Name: "minecraft:chain_command_block"}
 {Block: {name: "minecraft:chemical_heat", states: {}}, Damage: 0s, Name: "minecraft:chemical_heat"}
 {Block: {name: "minecraft:chemistry_table", states: {direction: 0, "mapped_type": 0}}, Damage: 0s, Name: "minecraft:chemistry_table"}
@@ -68,6 +74,7 @@
 {Block: {name: "minecraft:crafting_table", states: {}}, Damage: 0s, Name: "minecraft:crafting_table"}
 {Block: {name: "minecraft:cyan_glazed_terracotta", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:glazedTerracotta.cyan"}
 {Block: {name: "minecraft:dark_oak_button", states: {"button_pressed_bit": 0b, "facing_direction": 0}}, Damage: 0s, Name: "minecraft:dark_oak_button"}
+{Block: {name: "minecraft:dark_oak_door", states: {direction: 0, "door_hinge_bit": 0b, "open_bit": 0b, "upper_block_bit": 0b}}, Damage: 0s, Name: "minecraft:dark_oak_door"}
 {Block: {name: "minecraft:dark_oak_fence_gate", states: {direction: 0, "in_wall_bit": 0b, "open_bit": 0b}}, Damage: 0s, Name: "minecraft:dark_oak_fence_gate"}
 {Block: {name: "minecraft:dark_oak_pressure_plate", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:dark_oak_pressure_plate"}
 {Block: {name: "minecraft:dark_oak_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:dark_oak_stairs"}
@@ -85,110 +92,17 @@
 {Block: {name: "minecraft:dirt", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:dirt"}
 {Block: {name: "minecraft:dispenser", states: {"facing_direction": 0, "triggered_bit": 0b}}, Damage: 0s, Name: "minecraft:dispenser"}
 {Block: {name: "minecraft:double_plant", states: {"mapped_type": 0, "upper_block_bit": 0b}}, Damage: 0s, Name: "minecraft:double_plant"}
+{Block: {name: "minecraft:double_stone_slab", states: {"mapped_type": 0, "top_slot_bit": 0b}}, Damage: 0s, Name: "minecraft:double_stone_slab"}
+{Block: {name: "minecraft:double_stone_slab2", states: {"mapped_type": 0, "top_slot_bit": 0b}}, Damage: 0s, Name: "minecraft:double_stone_slab2"}
+{Block: {name: "minecraft:double_stone_slab3", states: {"mapped_type": 0, "top_slot_bit": 0b}}, Damage: 0s, Name: "minecraft:double_stone_slab3"}
+{Block: {name: "minecraft:double_stone_slab4", states: {"mapped_type": 0, "top_slot_bit": 0b}}, Damage: 0s, Name: "minecraft:double_stone_slab4"}
 {Block: {name: "minecraft:double_wooden_slab", states: {"mapped_type": 0, "top_slot_bit": 0b}}, Damage: 0s, Name: "minecraft:double_wooden_slab"}
 {Block: {name: "minecraft:dragon_egg", states: {}}, Damage: 0s, Name: "minecraft:dragon_egg"}
 {Block: {name: "minecraft:dried_kelp_block", states: {}}, Damage: 0s, Name: "minecraft:dried_kelp_block"}
 {Block: {name: "minecraft:dropper", states: {"facing_direction": 0, "triggered_bit": 0b}}, Damage: 0s, Name: "minecraft:dropper"}
 {Block: {name: "minecraft:element_0", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_0"}
 {Block: {name: "minecraft:element_1", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_1"}
-{Block: {name: "minecraft:element_2", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_2"}
-{Block: {name: "minecraft:element_3", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_3"}
-{Block: {name: "minecraft:element_4", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_4"}
-{Block: {name: "minecraft:element_5", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_5"}
-{Block: {name: "minecraft:element_6", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_6"}
-{Block: {name: "minecraft:element_7", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_7"}
-{Block: {name: "minecraft:element_8", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_8"}
-{Block: {name: "minecraft:element_9", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_9"}
 {Block: {name: "minecraft:element_10", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_10"}
-{Block: {name: "minecraft:element_11", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_11"}
-{Block: {name: "minecraft:element_12", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_12"}
-{Block: {name: "minecraft:element_13", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_13"}
-{Block: {name: "minecraft:element_14", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_14"}
-{Block: {name: "minecraft:element_15", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_15"}
-{Block: {name: "minecraft:element_16", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_16"}
-{Block: {name: "minecraft:element_17", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_17"}
-{Block: {name: "minecraft:element_18", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_18"}
-{Block: {name: "minecraft:element_19", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_19"}
-{Block: {name: "minecraft:element_20", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_20"}
-{Block: {name: "minecraft:element_21", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_21"}
-{Block: {name: "minecraft:element_22", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_22"}
-{Block: {name: "minecraft:element_23", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_23"}
-{Block: {name: "minecraft:element_24", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_24"}
-{Block: {name: "minecraft:element_25", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_25"}
-{Block: {name: "minecraft:element_26", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_26"}
-{Block: {name: "minecraft:element_27", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_27"}
-{Block: {name: "minecraft:element_28", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_28"}
-{Block: {name: "minecraft:element_29", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_29"}
-{Block: {name: "minecraft:element_30", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_30"}
-{Block: {name: "minecraft:element_31", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_31"}
-{Block: {name: "minecraft:element_32", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_32"}
-{Block: {name: "minecraft:element_33", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_33"}
-{Block: {name: "minecraft:element_34", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_34"}
-{Block: {name: "minecraft:element_35", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_35"}
-{Block: {name: "minecraft:element_36", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_36"}
-{Block: {name: "minecraft:element_37", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_37"}
-{Block: {name: "minecraft:element_38", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_38"}
-{Block: {name: "minecraft:element_39", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_39"}
-{Block: {name: "minecraft:element_40", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_40"}
-{Block: {name: "minecraft:element_41", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_41"}
-{Block: {name: "minecraft:element_42", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_42"}
-{Block: {name: "minecraft:element_43", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_43"}
-{Block: {name: "minecraft:element_44", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_44"}
-{Block: {name: "minecraft:element_45", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_45"}
-{Block: {name: "minecraft:element_46", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_46"}
-{Block: {name: "minecraft:element_47", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_47"}
-{Block: {name: "minecraft:element_48", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_48"}
-{Block: {name: "minecraft:element_49", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_49"}
-{Block: {name: "minecraft:element_50", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_50"}
-{Block: {name: "minecraft:element_51", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_51"}
-{Block: {name: "minecraft:element_52", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_52"}
-{Block: {name: "minecraft:element_53", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_53"}
-{Block: {name: "minecraft:element_54", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_54"}
-{Block: {name: "minecraft:element_55", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_55"}
-{Block: {name: "minecraft:element_56", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_56"}
-{Block: {name: "minecraft:element_57", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_57"}
-{Block: {name: "minecraft:element_58", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_58"}
-{Block: {name: "minecraft:element_59", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_59"}
-{Block: {name: "minecraft:element_60", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_60"}
-{Block: {name: "minecraft:element_61", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_61"}
-{Block: {name: "minecraft:element_62", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_62"}
-{Block: {name: "minecraft:element_63", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_63"}
-{Block: {name: "minecraft:element_64", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_64"}
-{Block: {name: "minecraft:element_65", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_65"}
-{Block: {name: "minecraft:element_66", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_66"}
-{Block: {name: "minecraft:element_67", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_67"}
-{Block: {name: "minecraft:element_68", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_68"}
-{Block: {name: "minecraft:element_69", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_69"}
-{Block: {name: "minecraft:element_70", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_70"}
-{Block: {name: "minecraft:element_71", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_71"}
-{Block: {name: "minecraft:element_72", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_72"}
-{Block: {name: "minecraft:element_73", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_73"}
-{Block: {name: "minecraft:element_74", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_74"}
-{Block: {name: "minecraft:element_75", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_75"}
-{Block: {name: "minecraft:element_76", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_76"}
-{Block: {name: "minecraft:element_77", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_77"}
-{Block: {name: "minecraft:element_78", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_78"}
-{Block: {name: "minecraft:element_79", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_79"}
-{Block: {name: "minecraft:element_80", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_80"}
-{Block: {name: "minecraft:element_81", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_81"}
-{Block: {name: "minecraft:element_82", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_82"}
-{Block: {name: "minecraft:element_83", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_83"}
-{Block: {name: "minecraft:element_84", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_84"}
-{Block: {name: "minecraft:element_85", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_85"}
-{Block: {name: "minecraft:element_86", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_86"}
-{Block: {name: "minecraft:element_87", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_87"}
-{Block: {name: "minecraft:element_88", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_88"}
-{Block: {name: "minecraft:element_89", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_89"}
-{Block: {name: "minecraft:element_90", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_90"}
-{Block: {name: "minecraft:element_91", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_91"}
-{Block: {name: "minecraft:element_92", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_92"}
-{Block: {name: "minecraft:element_93", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_93"}
-{Block: {name: "minecraft:element_94", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_94"}
-{Block: {name: "minecraft:element_95", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_95"}
-{Block: {name: "minecraft:element_96", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_96"}
-{Block: {name: "minecraft:element_97", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_97"}
-{Block: {name: "minecraft:element_98", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_98"}
-{Block: {name: "minecraft:element_99", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_99"}
 {Block: {name: "minecraft:element_100", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_100"}
 {Block: {name: "minecraft:element_101", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_101"}
 {Block: {name: "minecraft:element_102", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_102"}
@@ -199,6 +113,7 @@
 {Block: {name: "minecraft:element_107", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_107"}
 {Block: {name: "minecraft:element_108", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_108"}
 {Block: {name: "minecraft:element_109", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_109"}
+{Block: {name: "minecraft:element_11", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_11"}
 {Block: {name: "minecraft:element_110", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_110"}
 {Block: {name: "minecraft:element_111", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_111"}
 {Block: {name: "minecraft:element_112", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_112"}
@@ -208,6 +123,102 @@
 {Block: {name: "minecraft:element_116", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_116"}
 {Block: {name: "minecraft:element_117", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_117"}
 {Block: {name: "minecraft:element_118", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_118"}
+{Block: {name: "minecraft:element_12", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_12"}
+{Block: {name: "minecraft:element_13", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_13"}
+{Block: {name: "minecraft:element_14", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_14"}
+{Block: {name: "minecraft:element_15", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_15"}
+{Block: {name: "minecraft:element_16", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_16"}
+{Block: {name: "minecraft:element_17", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_17"}
+{Block: {name: "minecraft:element_18", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_18"}
+{Block: {name: "minecraft:element_19", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_19"}
+{Block: {name: "minecraft:element_2", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_2"}
+{Block: {name: "minecraft:element_20", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_20"}
+{Block: {name: "minecraft:element_21", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_21"}
+{Block: {name: "minecraft:element_22", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_22"}
+{Block: {name: "minecraft:element_23", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_23"}
+{Block: {name: "minecraft:element_24", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_24"}
+{Block: {name: "minecraft:element_25", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_25"}
+{Block: {name: "minecraft:element_26", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_26"}
+{Block: {name: "minecraft:element_27", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_27"}
+{Block: {name: "minecraft:element_28", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_28"}
+{Block: {name: "minecraft:element_29", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_29"}
+{Block: {name: "minecraft:element_3", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_3"}
+{Block: {name: "minecraft:element_30", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_30"}
+{Block: {name: "minecraft:element_31", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_31"}
+{Block: {name: "minecraft:element_32", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_32"}
+{Block: {name: "minecraft:element_33", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_33"}
+{Block: {name: "minecraft:element_34", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_34"}
+{Block: {name: "minecraft:element_35", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_35"}
+{Block: {name: "minecraft:element_36", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_36"}
+{Block: {name: "minecraft:element_37", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_37"}
+{Block: {name: "minecraft:element_38", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_38"}
+{Block: {name: "minecraft:element_39", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_39"}
+{Block: {name: "minecraft:element_4", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_4"}
+{Block: {name: "minecraft:element_40", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_40"}
+{Block: {name: "minecraft:element_41", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_41"}
+{Block: {name: "minecraft:element_42", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_42"}
+{Block: {name: "minecraft:element_43", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_43"}
+{Block: {name: "minecraft:element_44", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_44"}
+{Block: {name: "minecraft:element_45", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_45"}
+{Block: {name: "minecraft:element_46", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_46"}
+{Block: {name: "minecraft:element_47", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_47"}
+{Block: {name: "minecraft:element_48", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_48"}
+{Block: {name: "minecraft:element_49", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_49"}
+{Block: {name: "minecraft:element_5", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_5"}
+{Block: {name: "minecraft:element_50", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_50"}
+{Block: {name: "minecraft:element_51", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_51"}
+{Block: {name: "minecraft:element_52", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_52"}
+{Block: {name: "minecraft:element_53", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_53"}
+{Block: {name: "minecraft:element_54", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_54"}
+{Block: {name: "minecraft:element_55", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_55"}
+{Block: {name: "minecraft:element_56", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_56"}
+{Block: {name: "minecraft:element_57", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_57"}
+{Block: {name: "minecraft:element_58", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_58"}
+{Block: {name: "minecraft:element_59", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_59"}
+{Block: {name: "minecraft:element_6", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_6"}
+{Block: {name: "minecraft:element_60", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_60"}
+{Block: {name: "minecraft:element_61", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_61"}
+{Block: {name: "minecraft:element_62", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_62"}
+{Block: {name: "minecraft:element_63", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_63"}
+{Block: {name: "minecraft:element_64", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_64"}
+{Block: {name: "minecraft:element_65", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_65"}
+{Block: {name: "minecraft:element_66", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_66"}
+{Block: {name: "minecraft:element_67", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_67"}
+{Block: {name: "minecraft:element_68", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_68"}
+{Block: {name: "minecraft:element_69", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_69"}
+{Block: {name: "minecraft:element_7", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_7"}
+{Block: {name: "minecraft:element_70", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_70"}
+{Block: {name: "minecraft:element_71", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_71"}
+{Block: {name: "minecraft:element_72", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_72"}
+{Block: {name: "minecraft:element_73", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_73"}
+{Block: {name: "minecraft:element_74", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_74"}
+{Block: {name: "minecraft:element_75", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_75"}
+{Block: {name: "minecraft:element_76", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_76"}
+{Block: {name: "minecraft:element_77", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_77"}
+{Block: {name: "minecraft:element_78", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_78"}
+{Block: {name: "minecraft:element_79", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_79"}
+{Block: {name: "minecraft:element_8", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_8"}
+{Block: {name: "minecraft:element_80", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_80"}
+{Block: {name: "minecraft:element_81", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_81"}
+{Block: {name: "minecraft:element_82", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_82"}
+{Block: {name: "minecraft:element_83", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_83"}
+{Block: {name: "minecraft:element_84", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_84"}
+{Block: {name: "minecraft:element_85", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_85"}
+{Block: {name: "minecraft:element_86", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_86"}
+{Block: {name: "minecraft:element_87", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_87"}
+{Block: {name: "minecraft:element_88", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_88"}
+{Block: {name: "minecraft:element_89", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_89"}
+{Block: {name: "minecraft:element_9", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_9"}
+{Block: {name: "minecraft:element_90", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_90"}
+{Block: {name: "minecraft:element_91", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_91"}
+{Block: {name: "minecraft:element_92", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_92"}
+{Block: {name: "minecraft:element_93", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_93"}
+{Block: {name: "minecraft:element_94", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_94"}
+{Block: {name: "minecraft:element_95", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_95"}
+{Block: {name: "minecraft:element_96", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_96"}
+{Block: {name: "minecraft:element_97", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_97"}
+{Block: {name: "minecraft:element_98", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_98"}
+{Block: {name: "minecraft:element_99", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:element_99"}
 {Block: {name: "minecraft:emerald_block", states: {}}, Damage: 0s, Name: "minecraft:emerald_block"}
 {Block: {name: "minecraft:emerald_ore", states: {}}, Damage: 0s, Name: "minecraft:emerald_ore"}
 {Block: {name: "minecraft:enchanting_table", states: {}}, Damage: 0s, Name: "minecraft:enchanting_table"}
@@ -224,8 +235,10 @@
 {Block: {name: "minecraft:fence_gate", states: {direction: 0, "in_wall_bit": 0b, "open_bit": 0b}}, Damage: 0s, Name: "minecraft:fence_gate"}
 {Block: {name: "minecraft:fire", states: {age: 0}}, Damage: 0s, Name: "minecraft:fire"}
 {Block: {name: "minecraft:fletching_table", states: {}}, Damage: 0s, Name: "minecraft:fletching_table"}
+{Block: {name: "minecraft:flower_pot", states: {"update_bit": 0b}}, Damage: 0s, Name: "minecraft:flower_pot"}
 {Block: {name: "minecraft:flowing_lava", states: {"liquid_depth": 0}}, Damage: 0s, Name: "minecraft:flowing_lava"}
 {Block: {name: "minecraft:flowing_water", states: {"liquid_depth": 0}}, Damage: 0s, Name: "minecraft:flowing_water"}
+{Block: {name: "minecraft:frame", states: {"item_frame_map_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:frame"}
 {Block: {name: "minecraft:frosted_ice", states: {age: 0}}, Damage: 0s, Name: "minecraft:frosted_ice"}
 {Block: {name: "minecraft:furnace", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:furnace"}
 {Block: {name: "minecraft:glass", states: {}}, Damage: 0s, Name: "minecraft:glass"}
@@ -249,22 +262,26 @@
 {Block: {name: "minecraft:hardened_clay", states: {}}, Damage: 0s, Name: "minecraft:hardened_clay"}
 {Block: {name: "minecraft:hay_block", states: {direction: 0, "mapped_type": 0}}, Damage: 0s, Name: "minecraft:hay_block"}
 {Block: {name: "minecraft:heavy_weighted_pressure_plate", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:heavy_weighted_pressure_plate"}
+{Block: {name: "minecraft:hopper", states: {"facing_direction": 0, "toggle_bit": 0b}}, Damage: 0s, Name: "minecraft:hopper"}
 {Block: {name: "minecraft:ice", states: {}}, Damage: 0s, Name: "minecraft:ice"}
 {Block: {name: "minecraft:info_update", states: {}}, Damage: 0s, Name: "minecraft:info_update"}
 {Block: {name: "minecraft:info_update2", states: {}}, Damage: 0s, Name: "minecraft:info_update2"}
 {Block: {name: "minecraft:invisibleBedrock", states: {}}, Damage: 0s, Name: "minecraft:invisibleBedrock"}
 {Block: {name: "minecraft:iron_bars", states: {}}, Damage: 0s, Name: "minecraft:iron_bars"}
 {Block: {name: "minecraft:iron_block", states: {}}, Damage: 0s, Name: "minecraft:iron_block"}
+{Block: {name: "minecraft:iron_door", states: {direction: 0, "door_hinge_bit": 0b, "open_bit": 0b, "upper_block_bit": 0b}}, Damage: 0s, Name: "minecraft:iron_door"}
 {Block: {name: "minecraft:iron_ore", states: {}}, Damage: 0s, Name: "minecraft:iron_ore"}
 {Block: {name: "minecraft:iron_trapdoor", states: {direction: 0, "open_bit": 0b, "upside_down_bit": 0b}}, Damage: 0s, Name: "minecraft:iron_trapdoor"}
 {Block: {name: "minecraft:jukebox", states: {}}, Damage: 0s, Name: "minecraft:jukebox"}
 {Block: {name: "minecraft:jungle_button", states: {"button_pressed_bit": 0b, "facing_direction": 0}}, Damage: 0s, Name: "minecraft:jungle_button"}
+{Block: {name: "minecraft:jungle_door", states: {direction: 0, "door_hinge_bit": 0b, "open_bit": 0b, "upper_block_bit": 0b}}, Damage: 0s, Name: "minecraft:jungle_door"}
 {Block: {name: "minecraft:jungle_fence_gate", states: {direction: 0, "in_wall_bit": 0b, "open_bit": 0b}}, Damage: 0s, Name: "minecraft:jungle_fence_gate"}
 {Block: {name: "minecraft:jungle_pressure_plate", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:jungle_pressure_plate"}
 {Block: {name: "minecraft:jungle_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:jungle_stairs"}
 {Block: {name: "minecraft:jungle_standing_sign", states: {"ground_sign_direction": 0}}, Damage: 0s, Name: "minecraft:jungle_standing_sign"}
 {Block: {name: "minecraft:jungle_trapdoor", states: {direction: 0, "open_bit": 0b, "upside_down_bit": 0b}}, Damage: 0s, Name: "minecraft:jungle_trapdoor"}
 {Block: {name: "minecraft:jungle_wall_sign", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:jungle_wall_sign"}
+{Block: {name: "minecraft:kelp", states: {age: 0}}, Damage: 0s, Name: "minecraft:kelp"}
 {Block: {name: "minecraft:ladder", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:ladder"}
 {Block: {name: "minecraft:lantern", states: {hanging: 0b}}, Damage: 0s, Name: "minecraft:lantern"}
 {Block: {name: "minecraft:lapis_block", states: {}}, Damage: 0s, Name: "minecraft:lapis_block"}
@@ -297,6 +314,7 @@
 {Block: {name: "minecraft:nether_brick", states: {}}, Damage: 0s, Name: "minecraft:nether_brick"}
 {Block: {name: "minecraft:nether_brick_fence", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:nether_brick_fence"}
 {Block: {name: "minecraft:nether_brick_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:nether_brick_stairs"}
+{Block: {name: "minecraft:nether_wart", states: {age: 0}}, Damage: 0s, Name: "minecraft:nether_wart"}
 {Block: {name: "minecraft:nether_wart_block", states: {}}, Damage: 0s, Name: "minecraft:nether_wart_block"}
 {Block: {name: "minecraft:netherrack", states: {}}, Damage: 0s, Name: "minecraft:netherrack"}
 {Block: {name: "minecraft:netherreactor", states: {}}, Damage: 0s, Name: "minecraft:netherreactor"}
@@ -344,6 +362,7 @@
 {Block: {name: "minecraft:redstone_ore", states: {}}, Damage: 0s, Name: "minecraft:redstone_ore"}
 {Block: {name: "minecraft:redstone_torch", states: {"torch_facing_direction": "unknown"}}, Damage: 0s, Name: "minecraft:redstone_torch"}
 {Block: {name: "minecraft:redstone_wire", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:redstone_wire"}
+{Block: {name: "minecraft:reeds", states: {age: 0}}, Damage: 0s, Name: "minecraft:reeds"}
 {Block: {name: "minecraft:repeating_command_block", states: {"conditional_bit": 0b, "facing_direction": 0}}, Damage: 0s, Name: "minecraft:repeating_command_block"}
 {Block: {name: "minecraft:reserved6", states: {}}, Damage: 0s, Name: "minecraft:reserved6"}
 {Block: {name: "minecraft:sand", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:sand"}
@@ -356,6 +375,7 @@
 {Block: {name: "minecraft:seaLantern", states: {}}, Damage: 0s, Name: "minecraft:seaLantern"}
 {Block: {name: "minecraft:shulker_box", states: {color: "white"}}, Damage: 0s, Name: "minecraft:shulker_box"}
 {Block: {name: "minecraft:silver_glazed_terracotta", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:glazedTerracotta.silver"}
+{Block: {name: "minecraft:skull", states: {"facing_direction": 0, "no_drop_bit": 0b}}, Damage: 0s, Name: "minecraft:skull"}
 {Block: {name: "minecraft:slime", states: {}}, Damage: 0s, Name: "minecraft:slime"}
 {Block: {name: "minecraft:smithing_table", states: {}}, Damage: 0s, Name: "minecraft:smithing_table"}
 {Block: {name: "minecraft:smoker", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:smoker"}
@@ -368,6 +388,7 @@
 {Block: {name: "minecraft:soul_sand", states: {}}, Damage: 0s, Name: "minecraft:soul_sand"}
 {Block: {name: "minecraft:sponge", states: {"mapped_type": 0}}, Damage: 0s, Name: "minecraft:sponge"}
 {Block: {name: "minecraft:spruce_button", states: {"button_pressed_bit": 0b, "facing_direction": 0}}, Damage: 0s, Name: "minecraft:spruce_button"}
+{Block: {name: "minecraft:spruce_door", states: {direction: 0, "door_hinge_bit": 0b, "open_bit": 0b, "upper_block_bit": 0b}}, Damage: 0s, Name: "minecraft:spruce_door"}
 {Block: {name: "minecraft:spruce_fence_gate", states: {direction: 0, "in_wall_bit": 0b, "open_bit": 0b}}, Damage: 0s, Name: "minecraft:spruce_fence_gate"}
 {Block: {name: "minecraft:spruce_pressure_plate", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:spruce_pressure_plate"}
 {Block: {name: "minecraft:spruce_stairs", states: {"upside_down_bit": 0b, "weirdo_direction": 0}}, Damage: 0s, Name: "minecraft:spruce_stairs"}
@@ -417,8 +438,10 @@
 {Block: {name: "minecraft:water", states: {"liquid_depth": 0}}, Damage: 0s, Name: "minecraft:water"}
 {Block: {name: "minecraft:waterlily", states: {}}, Damage: 0s, Name: "minecraft:waterlily"}
 {Block: {name: "minecraft:web", states: {}}, Damage: 0s, Name: "minecraft:web"}
+{Block: {name: "minecraft:wheat", states: {growth: 0}}, Damage: 0s, Name: "minecraft:wheat"}
 {Block: {name: "minecraft:white_glazed_terracotta", states: {"facing_direction": 0}}, Damage: 0s, Name: "minecraft:glazedTerracotta.white"}
 {Block: {name: "minecraft:wooden_button", states: {"button_pressed_bit": 0b, "facing_direction": 0}}, Damage: 0s, Name: "minecraft:wooden_button"}
+{Block: {name: "minecraft:wooden_door", states: {direction: 0, "door_hinge_bit": 0b, "open_bit": 0b, "upper_block_bit": 0b}}, Damage: 0s, Name: "minecraft:wooden_door"}
 {Block: {name: "minecraft:wooden_pressure_plate", states: {"redstone_signal": 0}}, Damage: 0s, Name: "minecraft:wooden_pressure_plate"}
 {Block: {name: "minecraft:wooden_slab", states: {"mapped_type": 0, "top_slot_bit": 0b}}, Damage: 0s, Name: "minecraft:wooden_slab"}
 {Block: {name: "minecraft:wool", states: {color: "white"}}, Damage: 0s, Name: "minecraft:wool"}
