@@ -16,7 +16,6 @@
 {Damage: 0s, Name: "minecraft:beetroot_soup"}
 {Damage: 0s, Name: "minecraft:birch_door"}
 {Damage: 0s, Name: "minecraft:birch_sign"}
-{Damage: 0s, Name: "minecraft:bleach"}
 {Damage: 0s, Name: "minecraft:blaze_powder"}
 {Damage: 0s, Name: "minecraft:blaze_rod"}
 {Damage: 0s, Name: "minecraft:bleach"}
@@ -136,6 +135,8 @@
 {Damage: 0s, Name: "minecraft:iron_pickaxe", tag: {Damage: 0}}
 {Damage: 0s, Name: "minecraft:iron_shovel", tag: {Damage: 0}}
 {Damage: 0s, Name: "minecraft:iron_sword", tag: {Damage: 0}}
+{Damage: 0s, Name: "minecraft:item.crimson_door"}
+{Damage: 0s, Name: "minecraft:item.warped_door"}
 {Damage: 0s, Name: "minecraft:jungle_door"}
 {Damage: 0s, Name: "minecraft:jungle_sign"}
 {Damage: 0s, Name: "minecraft:kelp"}
