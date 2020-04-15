@@ -17,7 +17,7 @@ matches = {
     # "item_match": re.compile(b'item\.(?!tile)(?P<match>[._a-zA-Z0-9]+?)(?<!\.name)\0'),  # A list of item identifiers. (note these are the old ids but are still used)
     # "tile_match": re.compile(b'(?<!minecraft:)(?<!item\.)tile\.(?P<match>[._a-zA-Z0-9]+?)(?<!\.name)\0'),  # catches block names but also some junk
     "minecraft": re.compile(b'(?<=minecraft:)(?P<match>[._a-zA-Z0-9]+?)\0'),  # catches all namespaced strings
-    "str": re.compile(b'(?P<match>[:._a-zA-Z0-9]+?)\0')  # catches all namespaced strings
+    "str": re.compile(b'\0(?P<match>[:._a-zA-Z0-9]+?)\0')  # catches all namespaced strings
 }
 
 

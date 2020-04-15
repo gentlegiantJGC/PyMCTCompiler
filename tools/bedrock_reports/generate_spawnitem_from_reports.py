@@ -38,7 +38,7 @@ def main(path):
                 if slot == 27:
                     with open(os.path.join(spawn_path, f'chest{x}_{z}.mcfunction'), 'w') as f:
                         f.write('\n'.join(commands))
-                    main_commands.append(f'execute @a[scores={{t={(x * 16 + z + 80) // 16}}}] ~ ~ ~ function spawn_{version}/chest{x}_{z}')
+                    main_commands.append(f'execute @a[scores={{t={(x * 16 + z) // 16}}}] ~ ~ ~ function spawn_{version}/chest{x}_{z}')
                     commands.clear()
 
                     z += 1
@@ -50,7 +50,7 @@ def main(path):
         if commands:
             with open(os.path.join(spawn_path, f'chest{x}_{z}.mcfunction'), 'w') as f:
                 f.write('\n'.join(commands))
-            main_commands.append(f'execute @a[scores={{t={(x * 16 + z + 80) // 16}}}] ~ ~ ~ function spawn_{version}/chest{x}_{z}')
+            main_commands.append(f'execute @a[scores={{t={(x * 16 + z) // 16}}}] ~ ~ ~ function spawn_{version}/chest{x}_{z}')
             commands.clear()
 
         main_commands.append('scoreboard players add @a t 1')
