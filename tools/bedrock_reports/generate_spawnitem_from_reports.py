@@ -16,11 +16,14 @@ def main(path):
         with open(dump_file_path) as f:
             item_ids = f.read().split('\n')
         function_path = os.path.join(os.path.dirname(dump_file_path), 'functions')
-        shutil.rmtree(function_path)
+        if os.path.isdir(function_path):
+            shutil.rmtree(function_path)
+
+        version = os.path.basename(os.path.dirname(dump_file_path)).replace('.', '_')
 
         # spawnitem
 
-        spawn_path = os.path.join(function_path, 'spawn')
+        spawn_path = os.path.join(function_path, f'spawn_{version}')
         os.makedirs(spawn_path, exist_ok=True)
         main_commands = []
         x = 0
@@ -35,7 +38,7 @@ def main(path):
                 if slot == 27:
                     with open(os.path.join(spawn_path, f'chest{x}_{z}.mcfunction'), 'w') as f:
                         f.write('\n'.join(commands))
-                    main_commands.append(f'execute @a[scores={{t={(x * 16 + z + 80) // 16}}}] ~ ~ ~ function spawn/chest{x}_{z}')
+                    main_commands.append(f'execute @a[scores={{t={(x * 16 + z + 80) // 16}}}] ~ ~ ~ function spawn_{version}/chest{x}_{z}')
                     commands.clear()
 
                     z += 1
@@ -47,7 +50,7 @@ def main(path):
         if commands:
             with open(os.path.join(spawn_path, f'chest{x}_{z}.mcfunction'), 'w') as f:
                 f.write('\n'.join(commands))
-            main_commands.append(f'execute @a[scores={{t={(x * 16 + z + 80) // 16}}}] ~ ~ ~ function spawn/chest{x}_{z}')
+            main_commands.append(f'execute @a[scores={{t={(x * 16 + z + 80) // 16}}}] ~ ~ ~ function spawn_{version}/chest{x}_{z}')
             commands.clear()
 
         main_commands.append('scoreboard players add @a t 1')

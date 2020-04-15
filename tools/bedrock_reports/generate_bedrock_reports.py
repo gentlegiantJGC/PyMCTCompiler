@@ -21,8 +21,10 @@ matches = {
 }
 
 
-def main(path):
+def main(path, must_contain=''):
     for dump_file_path in glob.glob(os.path.join(path, '**', '*.DMP'), recursive=True):
+        if must_contain and must_contain not in dump_file_path:
+            continue
         print(dump_file_path)
         matched_strings: Dict[str, Set[str]] = {match_name: set() for match_name in matches.keys()}
         with open(dump_file_path, 'rb') as f:
@@ -41,7 +43,12 @@ def main(path):
 
 
 def filter_matches(matched_strings):
-    matched_strings["item_id"] = set(s[5:] if s.startswith('tile.') else s for s in matched_strings["minecraft"] if s in matched_strings["str"])
+    item_id = matched_strings["item_id"] = set()
+    for s in matched_strings["minecraft"]:
+        if s in matched_strings["str"]:
+            if s.startswith('tile.'):
+                item_id.add(s[5:])
+            item_id.add(s)
     del matched_strings["minecraft"]
     del matched_strings["str"]
 
