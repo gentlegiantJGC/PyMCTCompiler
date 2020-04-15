@@ -108,9 +108,11 @@ venv.bak/
 
 # Temporary file locations
 *.jar
+*.DMP
 log.txt
 *.log.gz
 **/generated/reports/
+functions
 tests/logs/
 
 amulet_nbt
