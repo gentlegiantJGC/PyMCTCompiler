@@ -51,7 +51,7 @@ _J19 = NBTRemapHelper(
         ),
         (
             ("CustomName", "string", []),
-            ("CustomName", "string", [("utags", "compound")])
+            (None, None, None)
         ),
         (
             ("LastOutput", "string", []),
@@ -74,7 +74,7 @@ _J19 = NBTRemapHelper(
             ("TrackOutput", "byte", [("utags", "compound")])
         )
     ],
-    '{conditionMet: 0b, auto: 0b, CustomName: "{\\"text\\":\\"@\\"}", powered: 0b, Command: "", SuccessCount: 0, TrackOutput: 1b}'
+    '{conditionMet: 0b, auto: 0b, powered: 0b, Command: "", SuccessCount: 0, TrackOutput: 1b}'
 )
 
 _J19_command_stats = NBTRemapHelper(
@@ -95,6 +95,42 @@ _J112_update_last = NBTRemapHelper(
         )
     ],
     '{UpdateLastExecution: 1b}'
+)
+
+_JOldCustomName = TranslationFile(
+    [
+        {
+            "function": "code",
+            "options": {
+                "input": ["nbt"],
+                "output": ["new_nbt"],
+                "function": "bedrock_cmd_custom_name_2u"
+            }
+        }
+    ],
+    [
+        {
+            "function": "code",
+            "options": {
+                "input": ["nbt"],
+                "output": ["new_nbt"],
+                "function": "bedrock_cmd_custom_name_fu"
+            }
+        }
+    ],
+    {
+        "snbt": "{CustomName: \"@\"}"
+    }
+)
+
+_J113 = NBTRemapHelper(
+    [
+        (
+            ("CustomName", "string", []),
+            ("CustomName", "string", [("utags", "compound")])
+        )
+    ],
+    '{CustomName: "{\\"text\\":\\"@\\"}"}'
 )
 
 _B113 = NBTRemapHelper(
@@ -189,24 +225,24 @@ _BCustomName = TranslationFile(
         }
     ],
     {
-        "snbt": "{CustomName: ""}"
+        "snbt": "{CustomName: \"\"}"
     }
 )
 
 j19 = merge(
-    [EmptyNBT('minecraft:command_block'), _J19, _J19_command_stats],
+    [EmptyNBT('minecraft:command_block'), _J19, _J19_command_stats, _JOldCustomName],
     ['universal_minecraft:command_block'],
     abstract=True
 )
 
 j112 = merge(
-    [EmptyNBT('minecraft:command_block'), _J19, _J19_command_stats, _J112_update_last],
+    [EmptyNBT('minecraft:command_block'), _J19, _J19_command_stats, _JOldCustomName, _J112_update_last],
     ['universal_minecraft:command_block'],
     abstract=True
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:command_block'), _J19, _J112_update_last, java_keep_packed],
+    [EmptyNBT('minecraft:command_block'), _J19, _J112_update_last, _J113, java_keep_packed],
     ['universal_minecraft:command_block']
 )
 
