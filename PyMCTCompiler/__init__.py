@@ -9,7 +9,7 @@ from PyMCTCompiler import version_compiler
 from PyMCTCompiler.helpers import log_to_file
 from PyMCTCompiler.disk_buffer import disk_buffer
 
-compiled_dir = './compiled_json'
+compiled_dir = './build'
 path = os.path.dirname(__file__)
 
 
@@ -39,8 +39,17 @@ def build(compiled_dir_):
 		compiler.build()
 		log_to_file(f'\tFinished in {round(time.time() - t, 2)} seconds')
 
-	code_functions.save(os.path.join(os.path.dirname(compiled_dir), 'code_functions'))
+	code_functions.save(os.path.join(compiled_dir, 'code_functions'))
 
 	disk_buffer.save()
+
+	try:
+		with open(os.path.join(compiled_dir, 'build_number')) as f:
+			last_build_number = int(f.read())
+	except:
+		last_build_number = -1
+	with open(os.path.join(compiled_dir, 'build_number'), 'w') as f:
+		f.write(str(last_build_number+1))
+
 	log_to_file(f'\nFinished compiling all versions in {round(time.time() - t2, 2)}')
 

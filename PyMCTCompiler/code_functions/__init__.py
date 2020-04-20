@@ -31,7 +31,8 @@ def get(code_function_name) -> None:
 
 
 def save(path):
-    shutil.rmtree(path)
+    if os.path.isdir(path):
+        shutil.rmtree(path)
     os.makedirs(path)
     for code_function_name in used_code_primitives:
         code_function = code_primitives[code_function_name]

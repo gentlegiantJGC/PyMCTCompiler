@@ -112,7 +112,7 @@ class DiskBuffer:
 		new_save_cache = {}
 
 		for path, data in self.files_to_save.items():
-			path = os.path.join(PyMCTCompiler.compiled_dir, *path) + '.json'
+			path = os.path.join(PyMCTCompiler.compiled_dir, 'json', *path) + '.json'
 			data = json.dumps(data, indent=4)
 			h = new_save_cache[path.lower()] = hashlib.sha1(data.encode('utf8')).hexdigest()
 
