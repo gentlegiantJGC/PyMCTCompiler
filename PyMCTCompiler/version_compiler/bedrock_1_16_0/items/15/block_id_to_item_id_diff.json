@@ -1,0 +1,18 @@
+{
+	"minecraft:brewing_stand": "minecraft:brewingstandblock",
+	"minecraft:concretePowder": "minecraft:concrete_powder",
+	"minecraft:double_stone_slab": "minecraft:real_double_stone_slab",
+	"minecraft:double_stone_slab2": "minecraft:real_double_stone_slab2",
+	"minecraft:double_stone_slab3": "minecraft:real_double_stone_slab3",
+	"minecraft:double_stone_slab4": "minecraft:real_double_stone_slab4",
+	"minecraft:invisibleBedrock": "minecraft:invisiblebedrock",
+	"minecraft:movingBlock": "minecraft:movingblock",
+	"minecraft:pistonArmCollision": "minecraft:pistonarmcollision",
+	"minecraft:seaLantern": "minecraft:sealantern",
+	"minecraft:stickyPistonArmCollision": "minecraft:stickypistonarmcollision",
+	"minecraft:stone_slab": "minecraft:double_stone_slab",
+	"minecraft:stone_slab2": "minecraft:double_stone_slab2",
+	"minecraft:stone_slab3": "minecraft:double_stone_slab3",
+	"minecraft:stone_slab4": "minecraft:double_stone_slab4",
+	"minecraft:tripWire": "minecraft:tripwire"
+}
