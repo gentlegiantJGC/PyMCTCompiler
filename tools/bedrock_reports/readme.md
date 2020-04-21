@@ -6,7 +6,7 @@ This program takes a .DMP file created through the task manager and extracts all
 
 This program takes the reports generated in 1 and creates a behaviour pack of spawnitem commands. This should be run in game which will determine if that id is an item.
 
-# 3) ../dump_nbt.py
+# 3) dump_items.py
 
 This program is an operation plugin for Amulet that will extract the items in the selection to a text file.
 
@@ -22,8 +22,8 @@ This program will use the map created in 4 to generate a behaviour pack of repla
 
 Note some of these commands may crash the game so you will have to find and remove the commands that cause crashes.
 
-# 6) use 3 to extract the block data from the block items again
+# 6) create_block_item_spec.py
 
-# 7) generate_spec.py
+This is another Amulet operation which will generate a file resembling the spec file exported by Bedrock using the `/dumpblockpalette` command in the newer versions.
 
-This program will generate a file resembling the spec file exported by Bedrock using the `/dumpblockpalette` command in the newer versions.
+In Amulet select all the chests created from the behaviour pack created in 5
