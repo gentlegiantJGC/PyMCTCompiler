@@ -34,7 +34,7 @@ def main(path):
 
         main_commands.append('scoreboard players add @a t 1')
 
-        with open(os.path.join(functions_path, 'setup.mcfunction'), 'w') as f:
+        with open(os.path.join(replaceitem_path, 'setup.mcfunction'), 'w') as f:
             f.write('\n'.join(
                 [
                     'scoreboard objectives add t dummy',
