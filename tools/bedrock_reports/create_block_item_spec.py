@@ -10,7 +10,7 @@ import amulet_nbt
 if TYPE_CHECKING:
     from amulet.api.world import World
 
-snbt_dir = r"C:\Users\james_000\Desktop"
+snbt_dir = r"./"
 
 
 dtype_map = {
