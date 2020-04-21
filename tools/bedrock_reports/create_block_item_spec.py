@@ -57,7 +57,7 @@ def snbt(
                             "states": create_states(states)
                         })
 
-    with open(os.path.join(snbt_dir, 'block_palette.json'), 'w') as f:
+    with open(os.path.join(snbt_dir, 'block_item_palette.json'), 'w') as f:
         json.dump(palette, f, indent='\t')
 
 
