@@ -1,8 +1,8 @@
 """
-A program that given a .DMP file will generate reports of what exists for that version.
+A program that given a list of potential item ids will generate a behaviour pack of
+spawnitem commands to spawn the names as items.
 
-A .DMP file is the dump of the program memory generated through the windows task manager.
-Task manager -> right click program -> Create dump file
+Use generate_bedrock_reports.py to generate the list of potential item ids.
 """
 
 import glob
