@@ -111,7 +111,7 @@ class BaseCompiler:
             "platform": self.platform,
             "version": self.version,
         }
-        if self.platform == 'java':
+        if self._data_version is not None:
             init['data_version'] = self._data_version
         assert all(val is not None for val in init.values())
         return init
