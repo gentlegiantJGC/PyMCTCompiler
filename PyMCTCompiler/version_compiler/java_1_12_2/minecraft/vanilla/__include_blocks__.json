@@ -220,8 +220,8 @@
 	"command_block": ["impulse_command_block", ">nbt.command_block.j112"],
 	"repeating_command_block": ["repeating_command_block", ">nbt.command_block.j112"],
 	"chain_command_block": ["chain_command_block", ">nbt.command_block.j112"],
-	"unpowered_comparator": ["java_unpowered_comparator", ">nbt.comparator.j112"],
-	"powered_comparator": "java_powered_comparator",
+	"unpowered_comparator": ["java_comparator", ">nbt.comparator.j112"],
+	"powered_comparator": ["java_comparator", ">nbt.comparator.j112"],
 	"daylight_detector": ["daylight_detector_base", "daylight_detector_normal", ">nbt.daylight_detector.j112"],
 	"daylight_detector_inverted": ["daylight_detector_base", "daylight_detector_inverted", ">nbt.daylight_detector.j112"],
 	"dispenser": ["dispenser", ">nbt.dispenser.j112"],
@@ -255,7 +255,7 @@
 	"red_shulker_box": ["red_shulker_box", ">nbt.shulker_box.j111"],
 	"black_shulker_box": ["black_shulker_box", ">nbt.shulker_box.j111"],
 	"standing_sign": ["standing_sign", ">nbt.sign.j19"],
-	"wall_sign": ["wall_sign"],
+	"wall_sign": ["wall_sign", ">nbt.sign.wall_j19"],
 	"skull": [">nbt.skull.j19", "skull_java"],
 	"structure_block": null
 

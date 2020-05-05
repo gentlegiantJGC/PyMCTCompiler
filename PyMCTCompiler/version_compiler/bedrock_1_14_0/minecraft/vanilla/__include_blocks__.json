@@ -1,7 +1,7 @@
 {
     "kelp": "kelp14",
-    "beehive": "beehive",
-    "bee_nest": "bee_nest",
+    "beehive": ["beehive", ">nbt.beehive.b114"],
+    "bee_nest": ["bee_nest", ">nbt.beehive.b114_nest"],
     "honey_block": "honey_block",
     "honeycomb_block": "honeycomb_block"
 }

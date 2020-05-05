@@ -1,3 +1,5 @@
 {
-	"bell": [">nbt.bell.j114", "bell_j115"]
+	"bell": [">nbt.bell.j114", "bell_j115"],
+	"beehive": [">nbt.beehive.j115", "beehive"],
+	"bee_nest": [">nbt.beehive.j115_nest", "bee_nest"]
 }
