@@ -77,6 +77,12 @@
 		},
 		"sticky_piston": {
 			"unbt": "nbt.piston.universal_sticky"
+		},
+		"beehive": {
+			"unbt": "nbt.beehive.universal"
+		},
+		"bee_nest": {
+			"unbt": "nbt.beehive.universal"
 		}
 	}
 }
