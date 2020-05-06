@@ -41,7 +41,6 @@ class BaseCompiler:
         self._blocks: Dict[Tuple[str, str], Dict[str, List[str]]] = None
         self._entities: Dict[Tuple[str, str], Dict[str, List[str]]] = None
         self._biomes = None
-        self._block_entity_map = None
 
     @property
     def block_format(self) -> str:
@@ -174,34 +173,11 @@ class BaseCompiler:
 
         return self._biomes
 
-    @property
-    def block_entity_map(self):
-        if self._block_entity_map is None:
-            if self.block_entity_format == "str-id":
-                self._load_from_parent('block_entity_map', {})
-
-                block_entity_map_path = os.path.join(self._directory, '__block_entity_map__.json')
-                if os.path.isfile(block_entity_map_path):
-                    with open(block_entity_map_path) as f:
-                        block_entity_data = json.load(f)
-                    for be, namespaced_be in block_entity_data.items():
-                        if namespaced_be is None:
-                            if be in self._block_entity_map:
-                                del self._block_entity_map[be]
-                        else:
-                            self._block_entity_map[be] = namespaced_be
-            else:
-                self._block_entity_map = {}
-
-        return self._block_entity_map
-
     def build(self):
         self._build_blocks()
         self._pad_from_universal()
         self._build_entities()
         self._build_biomes()
-        if self.block_entity_format == "str-id":
-            self._save_block_entity_map()
         self._save_init()
 
     def _build_blocks(self):
@@ -249,9 +225,6 @@ class BaseCompiler:
             if universal_biome not in biomes["universal2version"]:
                 biomes["universal2version"][universal_biome] = biomes["universal2version"][version_biome]
         disk_buffer.save_json_object(('versions', self.version_name, '__biome_data__'), biomes)
-
-    def _save_block_entity_map(self):
-        disk_buffer.save_json_object(('versions', self.version_name, '__block_entity_map__'), self.block_entity_map)
 
 
 from PyMCTCompiler import version_compiler
