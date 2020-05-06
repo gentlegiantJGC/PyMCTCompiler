@@ -172,7 +172,7 @@ def merge_primitive_specification(obj1: dict, obj2: dict) -> dict:
 
 	if 'nbt_identifier' in obj2:
 		if 'nbt_identifier' in obj1:
-			assert obj1['nbt_identifier'] == obj2['nbt_identifier'], 'nbt identifiers do not match'
+			assert obj1['nbt_identifier'] == obj2['nbt_identifier'], f'nbt identifiers do not match {obj1["nbt_identifier"]}, {obj2["nbt_identifier"]}'
 		else:
 			obj1['nbt_identifier'] = obj2['nbt_identifier']
 

@@ -81,12 +81,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:end_gateway'), _B17, bedrock_is_movable],
+    [EmptyNBT(':EndGateway'), _B17, bedrock_is_movable],
     ['universal_minecraft:end_gateway'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:end_gateway'), _B17, bedrock_is_movable],
+    [EmptyNBT(':EndGateway'), _B17, bedrock_is_movable],
     ['universal_minecraft:end_gateway']
 )

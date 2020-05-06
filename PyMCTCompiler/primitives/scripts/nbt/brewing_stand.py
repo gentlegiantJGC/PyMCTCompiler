@@ -68,12 +68,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:brewing_stand'), _B113, bedrock_items_5, bedrock_is_movable],
+    [EmptyNBT(':BrewingStand'), _B113, bedrock_items_5, bedrock_is_movable],
     ['universal_minecraft:brewing_stand'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:brewing_stand'), _B113, bedrock_items_5, bedrock_is_movable],
+    [EmptyNBT(':BrewingStand'), _B113, bedrock_items_5, bedrock_is_movable],
     ['universal_minecraft:brewing_stand']
 )

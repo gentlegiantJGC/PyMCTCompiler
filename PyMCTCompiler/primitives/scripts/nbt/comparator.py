@@ -41,12 +41,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:comparator'), _ComparatorBase, bedrock_is_movable],
+    [EmptyNBT(':Comparator'), _ComparatorBase, bedrock_is_movable],
     ['universal_minecraft:comparator'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:comparator'), _ComparatorBase, bedrock_is_movable],
+    [EmptyNBT(':Comparator'), _ComparatorBase, bedrock_is_movable],
     ['universal_minecraft:comparator']
 )

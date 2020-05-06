@@ -31,12 +31,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:dropper'), bedrock_items_9, bedrock_is_movable],
+    [EmptyNBT(':Dropper'), bedrock_items_9, bedrock_is_movable],
     ['universal_minecraft:dropper'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:dropper'), bedrock_items_9, bedrock_is_movable],
+    [EmptyNBT(':Dropper'), bedrock_items_9, bedrock_is_movable],
     ['universal_minecraft:dropper']
 )

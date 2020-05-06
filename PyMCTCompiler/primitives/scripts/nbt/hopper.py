@@ -45,12 +45,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:hopper'), _TransferCooldown, bedrock_is_movable, bedrock_items_5],
+    [EmptyNBT(':Hopper'), _TransferCooldown, bedrock_is_movable, bedrock_items_5],
     ['universal_minecraft:hopper'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:hopper'), _TransferCooldown, bedrock_is_movable, bedrock_items_5],
+    [EmptyNBT(':Hopper'), _TransferCooldown, bedrock_is_movable, bedrock_items_5],
     ['universal_minecraft:hopper']
 )

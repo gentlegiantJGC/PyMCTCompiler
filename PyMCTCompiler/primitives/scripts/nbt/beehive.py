@@ -22,11 +22,11 @@ j115_nest = merge(
 )
 
 b114 = merge(
-    [EmptyNBT('minecraft:beehive'), bedrock_is_movable],
+    [EmptyNBT(':Beehive'), bedrock_is_movable],
     ['universal_minecraft:beehive']
 )
 
 b114_nest = merge(
-    [EmptyNBT('minecraft:beehive'), bedrock_is_movable],
+    [EmptyNBT(':Beehive'), bedrock_is_movable],
     ['universal_minecraft:bee_nest']
 )

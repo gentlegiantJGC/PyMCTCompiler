@@ -117,23 +117,23 @@ _BedrockSticky = TranslationFile(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:piston_block'), _B17, _BedrockNormal, bedrock_is_movable],
+    [EmptyNBT(':piston_block'), _B17, _BedrockNormal, bedrock_is_movable],
     ['universal_minecraft:piston'],
     abstract=True
 )
 
 b17_sticky = merge(
-    [EmptyNBT('minecraft:piston_block'), _B17, _BedrockSticky, bedrock_is_movable],
+    [EmptyNBT(':PistonArm'), _B17, _BedrockSticky, bedrock_is_movable],
     ['universal_minecraft:sticky_piston'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:piston_block'), _B17, _BedrockNormal, bedrock_is_movable],
+    [EmptyNBT(':PistonArm'), _B17, _BedrockNormal, bedrock_is_movable],
     ['universal_minecraft:piston'],
 )
 
 b113_sticky = merge(
-    [EmptyNBT('minecraft:piston_block'), _B17, _BedrockSticky, bedrock_is_movable],
+    [EmptyNBT(':PistonArm'), _B17, _BedrockSticky, bedrock_is_movable],
     ['universal_minecraft:sticky_piston'],
 )

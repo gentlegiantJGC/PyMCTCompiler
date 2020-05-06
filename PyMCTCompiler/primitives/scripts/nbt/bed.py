@@ -143,12 +143,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:bed'), _B17, bedrock_is_movable],
+    [EmptyNBT(':Bed'), _B17, bedrock_is_movable],
     ['universal_minecraft:bed'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:bed'), _B17, bedrock_is_movable],
+    [EmptyNBT(':Bed'), _B17, bedrock_is_movable],
     ['universal_minecraft:bed']
 )

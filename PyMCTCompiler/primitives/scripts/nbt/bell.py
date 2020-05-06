@@ -45,12 +45,12 @@ j114 = merge(
 )
 
 b111 = merge(
-    [EmptyNBT('minecraft:bell'), _B111, bedrock_is_movable],
+    [EmptyNBT(':Bell'), _B111, bedrock_is_movable],
     ['universal_minecraft:bell'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:bell'), _B111, bedrock_is_movable],
+    [EmptyNBT(':Bell'), _B111, bedrock_is_movable],
     ['universal_minecraft:bell']
 )

@@ -182,12 +182,12 @@ j19 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:note_block'), _B17, bedrock_is_movable],
+    [EmptyNBT(':Music'), _B17, bedrock_is_movable],
     ['universal_minecraft:note_block'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:note_block'), _B17, bedrock_is_movable],
+    [EmptyNBT(':Music'), _B17, bedrock_is_movable],
     ['universal_minecraft:note_block']
 )

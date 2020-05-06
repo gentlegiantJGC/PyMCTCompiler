@@ -105,12 +105,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:shulker_box'), bedrock_findable, bedrock_is_movable, bedrock_items_27, _BedrockFacing],
+    [EmptyNBT(':ShulkerBox'), bedrock_findable, bedrock_is_movable, bedrock_items_27, _BedrockFacing],
     ['universal_minecraft:shulker_box'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:shulker_box'), bedrock_findable, bedrock_is_movable, bedrock_items_27, _BedrockFacing],
+    [EmptyNBT(':ShulkerBox'), bedrock_findable, bedrock_is_movable, bedrock_items_27, _BedrockFacing],
     ['universal_minecraft:shulker_box']
 )

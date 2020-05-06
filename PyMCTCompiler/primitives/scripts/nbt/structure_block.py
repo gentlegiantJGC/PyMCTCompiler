@@ -102,6 +102,6 @@ j113 = merge(
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:structure_block'), bedrock_is_movable, bedrock_is_movable],
+    [EmptyNBT(':StructureBlock'), bedrock_is_movable, bedrock_is_movable],
     ['universal_minecraft:structure_block']
 )

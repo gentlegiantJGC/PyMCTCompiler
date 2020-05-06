@@ -434,29 +434,29 @@ j19 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:flower_pot'), _B17, bedrock_is_movable],
+    [EmptyNBT(':FlowerPot'), _B17, bedrock_is_movable],
     ['universal_minecraft:flower_pot'],
     abstract=True
 )
 
 b18 = merge(
-    [EmptyNBT('minecraft:flower_pot'), _B17, _B18, bedrock_is_movable],
+    [EmptyNBT(':FlowerPot'), _B17, _B18, bedrock_is_movable],
     ['universal_minecraft:flower_pot'],
     abstract=True
 )
 
 b19 = merge(
-    [EmptyNBT('minecraft:flower_pot'), _B17, _B18, _B19, bedrock_is_movable],
+    [EmptyNBT(':FlowerPot'), _B17, _B18, _B19, bedrock_is_movable],
     ['universal_minecraft:flower_pot'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:flower_pot'), _B113, bedrock_is_movable],
+    [EmptyNBT(':FlowerPot'), _B113, bedrock_is_movable],
     ['universal_minecraft:flower_pot']
 )
 
 b116 = merge(
-    [EmptyNBT('minecraft:flower_pot'), _B113, _B116, bedrock_is_movable],
+    [EmptyNBT(':FlowerPot'), _B113, _B116, bedrock_is_movable],
     ['universal_minecraft:flower_pot']
 )

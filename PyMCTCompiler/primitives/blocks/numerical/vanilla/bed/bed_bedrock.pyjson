@@ -103,9 +103,7 @@
 			"occupied": "\"false\"",
 			"part": "\"foot\"",
 			"color": "\"red\""
-		},
-		"nbt_identifier": ["minecraft", "bed"],
-		"snbt": "{isMovable:1b}"
+		}
 	},
 	"blockstate_to_universal": [
 		{

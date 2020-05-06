@@ -32,12 +32,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:dispenser'), bedrock_items_9, bedrock_is_movable],
+    [EmptyNBT(':Dispenser'), bedrock_items_9, bedrock_is_movable],
     ['universal_minecraft:dispenser'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:dispenser'), bedrock_items_9, bedrock_is_movable],
+    [EmptyNBT(':Dispenser'), bedrock_items_9, bedrock_is_movable],
     ['universal_minecraft:dispenser']
 )

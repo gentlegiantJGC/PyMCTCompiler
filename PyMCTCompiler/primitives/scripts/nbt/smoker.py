@@ -31,12 +31,12 @@ j114 = merge(
 )
 
 b111 = merge(
-    [EmptyNBT('minecraft:smoker'), bedrock_furnace_base, bedrock_items_3, bedrock_is_movable],
+    [EmptyNBT(':Smoker'), bedrock_furnace_base, bedrock_items_3, bedrock_is_movable],
     ['universal_minecraft:smoker'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:smoker'), bedrock_furnace_base, bedrock_items_3, bedrock_is_movable],
+    [EmptyNBT(':Smoker'), bedrock_furnace_base, bedrock_items_3, bedrock_is_movable],
     ['universal_minecraft:smoker']
 )

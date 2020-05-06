@@ -117,12 +117,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:mob_spawner'), _JBShared, _B17, bedrock_is_movable],
+    [EmptyNBT(':MobSpawner'), _JBShared, _B17, bedrock_is_movable],
     ['universal_minecraft:spawner'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:mob_spawner'), _JBShared, _B17, bedrock_is_movable],
+    [EmptyNBT(':MobSpawner'), _JBShared, _B17, bedrock_is_movable],
     ['universal_minecraft:spawner']
 )

@@ -89,12 +89,12 @@ j114 = merge(
 )
 
 b111 = merge(
-    [EmptyNBT('minecraft:campfire'), _B111, bedrock_is_movable],
+    [EmptyNBT(':Campfire'), _B111, bedrock_is_movable],
     ['universal_minecraft:campfire'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:campfire'), _B111, bedrock_is_movable],
+    [EmptyNBT(':Campfire'), _B111, bedrock_is_movable],
     ['universal_minecraft:campfire']
 )

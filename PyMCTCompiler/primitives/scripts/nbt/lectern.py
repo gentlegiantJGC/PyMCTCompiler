@@ -134,12 +134,12 @@ j114 = merge(
 )
 
 b110 = merge(
-    [EmptyNBT('minecraft:lectern'), _B110, _BedrockHasBook, bedrock_is_movable],
+    [EmptyNBT(':Lectern'), _B110, _BedrockHasBook, bedrock_is_movable],
     ['universal_minecraft:lectern'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:lectern'), _B110, _BedrockHasBook, bedrock_is_movable],
+    [EmptyNBT(':Lectern'), _B110, _BedrockHasBook, bedrock_is_movable],
     ['universal_minecraft:lectern']
 )

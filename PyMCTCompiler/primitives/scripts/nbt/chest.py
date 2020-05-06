@@ -60,23 +60,23 @@ trapped_j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:chest'), bedrock_findable, bedrock_items_27, bedrock_is_movable],
+    [EmptyNBT(':Chest'), bedrock_findable, bedrock_items_27, bedrock_is_movable],
     ['universal_minecraft:chest'],
     abstract=True
 )
 
 trapped_b17 = merge(
-    [EmptyNBT('minecraft:chest'), bedrock_findable, bedrock_items_27, bedrock_is_movable],
+    [EmptyNBT(':Chest'), bedrock_findable, bedrock_items_27, bedrock_is_movable],
     ['universal_minecraft:trapped_chest'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:chest'), bedrock_findable, bedrock_items_27, bedrock_is_movable],
+    [EmptyNBT(':Chest'), bedrock_findable, bedrock_items_27, bedrock_is_movable],
     ['universal_minecraft:chest']
 )
 
 trapped_b113 = merge(
-    [EmptyNBT('minecraft:chest'), bedrock_findable, bedrock_items_27, bedrock_is_movable],
+    [EmptyNBT(':Chest'), bedrock_findable, bedrock_items_27, bedrock_is_movable],
     ['universal_minecraft:trapped_chest']
 )

@@ -29,12 +29,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:daylight_detector'), bedrock_is_movable],
+    [EmptyNBT(':DaylightDetector'), bedrock_is_movable],
     ['universal_minecraft:daylight_detector'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:daylight_detector'), bedrock_is_movable],
+    [EmptyNBT(':DaylightDetector'), bedrock_is_movable],
     ['universal_minecraft:daylight_detector']
 )

@@ -51,12 +51,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:jukebox'), _B17, bedrock_is_movable],
+    [EmptyNBT(':Jukebox'), _B17, bedrock_is_movable],
     ['universal_minecraft:jukebox'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:jukebox'), _B17, bedrock_is_movable],
+    [EmptyNBT(':Jukebox'), _B17, bedrock_is_movable],
     ['universal_minecraft:jukebox']
 )

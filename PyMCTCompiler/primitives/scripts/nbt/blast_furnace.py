@@ -34,12 +34,12 @@ j114 = merge(
 )
 
 b111 = merge(
-    [EmptyNBT('minecraft:blast_furnace'), bedrock_furnace_base, bedrock_items_3, bedrock_is_movable],
+    [EmptyNBT(':BlastFurnace'), bedrock_furnace_base, bedrock_items_3, bedrock_is_movable],
     ['universal_minecraft:blast_furnace'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:blast_furnace'), bedrock_furnace_base, bedrock_items_3, bedrock_is_movable],
+    [EmptyNBT(':BlastFurnace'), bedrock_furnace_base, bedrock_items_3, bedrock_is_movable],
     ['universal_minecraft:blast_furnace']
 )

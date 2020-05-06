@@ -67,12 +67,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:beacon'), _B113, bedrock_is_movable],
+    [EmptyNBT(':Beacon'), _B113, bedrock_is_movable],
     ['universal_minecraft:beacon'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:beacon'), _B113, bedrock_is_movable],
+    [EmptyNBT(':Beacon'), _B113, bedrock_is_movable],
     ['universal_minecraft:beacon']
 )

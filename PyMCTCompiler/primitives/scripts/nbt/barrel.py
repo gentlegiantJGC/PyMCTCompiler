@@ -19,12 +19,12 @@ j114 = merge(
 )
 
 b111 = merge(
-    [EmptyNBT('minecraft:barrel'), bedrock_findable, bedrock_items_27, bedrock_is_movable],
+    [EmptyNBT(':Barrel'), bedrock_findable, bedrock_items_27, bedrock_is_movable],
     ['universal_minecraft:barrel'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:barrel'), bedrock_findable, bedrock_items_27, bedrock_is_movable],
+    [EmptyNBT(':Barrel'), bedrock_findable, bedrock_items_27, bedrock_is_movable],
     ['universal_minecraft:barrel']
 )

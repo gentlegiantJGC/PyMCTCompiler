@@ -30,12 +30,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:ender_chest'), bedrock_findable, bedrock_is_movable],
+    [EmptyNBT(':EnderChest'), bedrock_findable, bedrock_is_movable],
     ['universal_minecraft:ender_chest'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:ender_chest'), bedrock_findable, bedrock_is_movable],
+    [EmptyNBT(':EnderChest'), bedrock_findable, bedrock_is_movable],
     ['universal_minecraft:ender_chest']
 )

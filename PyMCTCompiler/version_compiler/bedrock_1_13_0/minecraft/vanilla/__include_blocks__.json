@@ -207,7 +207,7 @@
 	"beetroot": "beetroot",
 	"stonecutter": "stonecutter",
 	"glowingobsidian": "glowingobsidian",
-	"netherreactor": "netherreactor",
+	"netherreactor": [">nbt.nether_reactor.b113", "netherreactor"],
 	"info_update": "info_update",
 	"info_update2": "info_update2",
 	"observer": "observer",
@@ -281,7 +281,7 @@
 	"lantern": "lantern",
 	"composter": "composter",
 	"campfire": [">nbt.campfire.b111", "campfire"],
-	"jigsaw": "jigsaw",
+	"jigsaw": [">nbt.jigsaw.b113", "jigsaw"],
 	"scaffolding": "scaffolding",
 
 	"stone_slab3": "stone_slab3",

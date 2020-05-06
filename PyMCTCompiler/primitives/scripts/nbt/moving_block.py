@@ -96,12 +96,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:moving_block')],
+    [EmptyNBT(':MovingBlock'), bedrock_is_movable],
     ['universal_minecraft:moving_piston'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:moving_block'), _B113],
+    [EmptyNBT(':MovingBlock'), _B113, bedrock_is_movable],
     ['universal_minecraft:moving_piston']
 )

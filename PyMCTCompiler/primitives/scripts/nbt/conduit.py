@@ -48,12 +48,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:conduit'), _B113, bedrock_is_movable],
+    [EmptyNBT(':Conduit'), _B113, bedrock_is_movable],
     ['universal_minecraft:conduit'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:conduit'), _B113, bedrock_is_movable],
+    [EmptyNBT(':Conduit'), _B113, bedrock_is_movable],
     ['universal_minecraft:conduit']
 )

@@ -48,12 +48,12 @@ _B113 = NBTRemapHelper(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:item_frame'), _B113, bedrock_is_movable, bedrock_item_1],
+    [EmptyNBT(':ItemFrame'), _B113, bedrock_is_movable, bedrock_item_1],
     ['universal_minecraft:item_frame_block'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:item_frame'), _B113, bedrock_is_movable, bedrock_item_1],
+    [EmptyNBT(':ItemFrame'), _B113, bedrock_is_movable, bedrock_item_1],
     ['universal_minecraft:item_frame_block']
 )

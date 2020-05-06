@@ -192,23 +192,23 @@ wall_j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:banner'), _B17, _Base2Color, _PaternColorFix, bedrock_is_movable],
+    [EmptyNBT(':Banner'), _B17, _Base2Color, _PaternColorFix, bedrock_is_movable],
     ['universal_minecraft:banner'],
     abstract=True
 )
 
 wall_b17 = merge(
-    [EmptyNBT('minecraft:banner'), _B17, _Base2Color, _PaternColorFix, bedrock_is_movable],
+    [EmptyNBT(':Banner'), _B17, _Base2Color, _PaternColorFix, bedrock_is_movable],
     ['universal_minecraft:wall_banner'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:banner'), _B17, _Base2Color, _PaternColorFix, bedrock_is_movable],
+    [EmptyNBT(':Banner'), _B17, _Base2Color, _PaternColorFix, bedrock_is_movable],
     ['universal_minecraft:banner']
 )
 
 wall_b113 = merge(
-    [EmptyNBT('minecraft:banner'), _B17, _Base2Color, _PaternColorFix, bedrock_is_movable],
+    [EmptyNBT(':Banner'), _B17, _Base2Color, _PaternColorFix, bedrock_is_movable],
     ['universal_minecraft:wall_banner']
 )

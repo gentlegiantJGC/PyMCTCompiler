@@ -247,12 +247,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:command_block'), _B113, _BCustomName, bedrock_is_movable],
+    [EmptyNBT(':CommandBlock'), _B113, _BCustomName, bedrock_is_movable],
     ['universal_minecraft:command_block'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:command_block'), _B113, _BCustomName, bedrock_is_movable],
+    [EmptyNBT(':CommandBlock'), _B113, _BCustomName, bedrock_is_movable],
     ['universal_minecraft:command_block']
 )

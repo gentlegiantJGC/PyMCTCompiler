@@ -408,12 +408,12 @@ wall_j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:skull'), _B17, _BExtra_17, bedrock_is_movable],
+    [EmptyNBT(':Skull'), _B17, _BExtra_17, bedrock_is_movable],
     ['universal_minecraft:head', 'universal_minecraft:wall_head'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:skull'), _B17, _BExtra_113, bedrock_is_movable],
+    [EmptyNBT(':Skull'), _B17, _BExtra_113, bedrock_is_movable],
     ['universal_minecraft:head', 'universal_minecraft:wall_head']
 )

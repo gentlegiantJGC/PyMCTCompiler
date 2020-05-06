@@ -29,12 +29,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:end_portal'), bedrock_is_movable],
+    [EmptyNBT(':EndPortal'), bedrock_is_movable],
     ['universal_minecraft:end_portal'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:end_portal'), bedrock_is_movable],
+    [EmptyNBT(':EndPortal'), bedrock_is_movable],
     ['universal_minecraft:end_portal']
 )

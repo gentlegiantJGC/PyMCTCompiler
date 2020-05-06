@@ -36,12 +36,12 @@ _B110 = NBTRemapHelper(
 )
 
 b110 = merge(
-    [EmptyNBT('minecraft:cauldron'), _B110, bedrock_is_movable],
+    [EmptyNBT(':Cauldron'), _B110, bedrock_is_movable],
     ['universal_minecraft:cauldron'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:cauldron'), _B110, bedrock_is_movable],
+    [EmptyNBT(':Cauldron'), _B110, bedrock_is_movable],
     ['universal_minecraft:cauldron']
 )

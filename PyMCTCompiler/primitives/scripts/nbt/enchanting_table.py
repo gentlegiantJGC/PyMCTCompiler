@@ -40,12 +40,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT('minecraft:enchanting_table'), _B17, bedrock_is_movable],
+    [EmptyNBT(':EnchantTable'), _B17, bedrock_is_movable],
     ['universal_minecraft:enchanting_table'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT('minecraft:enchanting_table'), _B17, bedrock_is_movable],
+    [EmptyNBT(':EnchantTable'), _B17, bedrock_is_movable],
     ['universal_minecraft:enchanting_table']
 )

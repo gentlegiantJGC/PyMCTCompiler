@@ -200,7 +200,7 @@
 	"beetroot": "beetroot_bedrock",
 	"stonecutter": "stonecutter_old",
 	"glowingobsidian": "glowing_obsidian",
-	"netherreactor": "netherreactor",
+	"netherreactor": [">nbt.nether_reactor.b17", "netherreactor"],
 	"info_update": "info_update",
 	"info_update2": "info_update2",
 	"observer": "observer",
