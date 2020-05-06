@@ -1,7 +1,7 @@
 {
-	"Barrel": "minecraft:barrel",
-	"Bell": "minecraft:bell",
-	"BlastFurnace": "minecraft:blast_furnace",
-	"Smoker": "minecraft:smoker",
-	"Campfire": "minecraft:campfire"
+	"Barrel": ":Barrel",
+	"Bell": ":Bell",
+	"BlastFurnace": ":BlastFurnace",
+	"Smoker": ":Smoker",
+	"Campfire": ":Campfire"
 }

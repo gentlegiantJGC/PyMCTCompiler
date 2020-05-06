@@ -1,4 +1,4 @@
 {
-	"JigsawBlock": "minecraft:jigsaw",
-	"Lectern": "minecraft:lectern"
+	"JigsawBlock": ":JigsawBlock",
+	"Lectern": ":Lectern"
 }
