@@ -14,7 +14,7 @@ class NumericalCompiler(BaseCompiler):
 
     def build(self):
         BaseCompiler.build(self)
-        if self.block_format == 'numerical':
+        if self.block_format in ('numerical', 'pseudo-numerical'):
             self._save_numerical_block_map()
 
     @property
@@ -26,6 +26,8 @@ class NumericalCompiler(BaseCompiler):
         if os.path.isfile(numerical_block_map_path):
             with open(numerical_block_map_path) as f:
                 numerical_block_map = json.load(f)
+        else:
+            numerical_block_map = {}
 
         for string_block_id, numerical_block_id in numerical_block_map.items():
             if numerical_block_id is None and string_block_id in self._numerical_block_map:

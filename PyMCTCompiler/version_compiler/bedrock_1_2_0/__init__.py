@@ -3,6 +3,7 @@ import os
 
 compiler = NumericalCompiler(
     os.path.dirname(__file__),
-    version=[1, 7, 0],
-    parent_version='bedrock_1_2_0'
+    block_format="pseudo-numerical",
+    version=[1, 2, 0],
+    parent_version='bedrock_1_1_0'
 )
