@@ -1,0 +1,5 @@
+{
+	"conduit": ["conduit", ">nbt.conduit.b17"],
+	"turtle_egg": "turtle_egg",
+	"bubble_column": "bubble_column"
+}
