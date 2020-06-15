@@ -1,0 +1,83 @@
+{
+    "to_universal": [
+        {
+            "function": "new_properties",
+            "options": {
+                "north": "\"none\"",
+                "east": "\"none\"",
+                "south": "\"none\"",
+                "west": "\"none\""
+            }
+        },
+        {
+            "function": "multiblock",
+            "options": [
+                {
+                    "coords": coord,
+                    "functions": [
+                        {
+                            "function": "map_block_name",
+                            "options": {
+                                "minecraft:air": [
+                                    {
+                                        "function": "new_properties",
+                                        "options": {
+                                            direction: "\"low\""
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                } for coord, direction in [
+                    [[0, 0, -1], "north"],
+                    [[0, 0, 1], "south"],
+                    [[-1, 0, 0], "west"],
+                    [[1, 0, 0], "east"],
+                ]
+            ]
+        }
+    ],
+    "from_universal": {},
+    "blockstate_specification": {},
+    "blockstate_to_universal": [
+        {
+            "function": "new_properties",
+            "options": {
+                "north": "\"none\"",
+                "east": "\"none\"",
+                "south": "\"none\"",
+                "west": "\"none\""
+            }
+        },
+        {
+            "function": "multiblock",
+            "options": [
+                {
+                    "coords": coord,
+                    "functions": [
+                        {
+                            "function": "map_block_name",
+                            "options": {
+                                "minecraft:air": [
+                                    {
+                                        "function": "new_properties",
+                                        "options": {
+                                            direction: "\"low\""
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                } for coord, direction in [
+                    [[0, 0, -1], "north"],
+                    [[0, 0, 1], "south"],
+                    [[-1, 0, 0], "west"],
+                    [[1, 0, 0], "east"],
+                ]
+            ]
+        }
+    ],
+    "blockstate_from_universal": {}
+}

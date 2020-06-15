@@ -53,5 +53,5 @@
 	"smooth_quartz_stairs": "smooth_quartz_stairs",
 	"smooth_red_sandstone_stairs": "smooth_red_sandstone_stairs",
 	"smooth_sandstone_stairs": "smooth_sandstone_stairs",
-	"cobblestone_wall": "cobblestone_wall+"
+	"cobblestone_wall": ["cobblestone_wall+", "wall_connections"]
 }

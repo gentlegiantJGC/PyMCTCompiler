@@ -1,6 +1,6 @@
 {
 	"jukebox": ["jukebox", ">nbt.jukebox.b17"],
-	"stained_glass_pane": "stained_glass_pane",
+	"stained_glass_pane": ["stained_glass_pane", "cardinal_connections"],
 	"standing_banner": [">nbt.banner.b17", "standing_banner"],
 	"wall_banner": [">nbt.banner.wall_b17", "wall_banner"],
 
