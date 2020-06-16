@@ -37,7 +37,7 @@ _B17 = TranslationFile(
                                 "function": "map_nbt",
                                 "options": {
                                     "cases": {
-                                        str(num): [
+                                        f"{num}b": [
                                             {
                                                 "function": "new_properties",
                                                 "options": {
