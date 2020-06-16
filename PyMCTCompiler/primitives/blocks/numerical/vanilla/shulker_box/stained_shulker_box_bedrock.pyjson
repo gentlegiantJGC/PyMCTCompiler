@@ -35,7 +35,7 @@
                         colour: [
                             {
                                 "function": "new_block",
-                                "options": f"minecraft:undyed_shulker_box"
+                                "options": f"minecraft:shulker_box"
                             },
                             {
                                 "function": "new_properties",
