@@ -11,7 +11,7 @@ class Code(BaseTranslationFunction):
 	# 	"options": {
 	# 		"input": ["namespace", "base_name", "properties", "nbt"],  # all of these inputs and output are optional. Change these lists to modify
 	# 		"output": ["output_name", "output_type", "new_properties", "new_nbt"],
-	# 		"function": "function_name"  # this links to a lua funciton in the lua directory with the file name function_name.lua
+	# 		"function": "function_name"  # this links to a code function in the code_functions directory with the file name function_name.py
 	# 	}
 	# }
 
@@ -22,17 +22,17 @@ class Code(BaseTranslationFunction):
 		"""Used to merge two primitive files together.
 		The formats do not need to be identical but close enough that the data can stack."""
 		if self['options'] != other['options']:
-			print('Lua function did not match')
+			print('code function did not match')
 		self['options'] = other['options']
 
 	def _compiled_extend(self, other: BaseTranslationFunction, parents: list):
 		"""Used to merge two completed translations together.
 		The formats must match in such a way that the two base translations do not interfere."""
-		assert self['options'] == other['options'], '"lua" must be the same when merging'
+		assert self['options'] == other['options'], '"code" must be the same when merging'
 
 	def _commit(self, feature_set: Set[str], parents: list):
 		if 'input' in self['options']:
-			assert isinstance(self['options']['input'], list) and all(i in ["namespace", "base_name", "properties", "nbt"] for i in self['options']['input'])
+			assert isinstance(self['options']['input'], list) and all(i in ["namespace", "base_name", "properties", "nbt", "location"] for i in self['options']['input'])
 		if 'output' in self['options']:
 			assert isinstance(self['options']['output'], list) and all(i in ["output_name", "output_type", "new_properties", "new_nbt"] for i in self['options']['output'])
 		assert isinstance(self['options']['function'], str), '"options" must be a string'
