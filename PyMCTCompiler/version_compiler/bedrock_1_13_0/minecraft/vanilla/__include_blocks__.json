@@ -300,7 +300,7 @@
 	"camera": "camera",
 
 	"wood": "wood",
-	"hard_glass_pane": "hard_glass_pane",
+	"hard_glass_pane": ["hard_glass_pane", "cardinal_connections"],
 	"hard_stained_glass_pane": ["hard_stained_glass_pane", "cardinal_connections"],
 	"chemical_heat": "chemical_heat",
 	"colored_torch_rg": "colored_torch_rg",

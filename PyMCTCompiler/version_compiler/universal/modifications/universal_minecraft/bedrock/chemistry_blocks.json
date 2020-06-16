@@ -1,6 +1,31 @@
 {
 	"add": {
-		"hard_glass_pane": {},
+		"hard_glass_pane": {
+			"properties": {
+				"east": [
+					"\"true\"",
+					"\"false\""
+				],
+				"north": [
+					"\"true\"",
+					"\"false\""
+				],
+				"south": [
+					"\"true\"",
+					"\"false\""
+				],
+				"west": [
+					"\"true\"",
+					"\"false\""
+				]
+			},
+			"defaults": {
+				"east": "\"false\"",
+				"north": "\"false\"",
+				"south": "\"false\"",
+				"west": "\"false\""
+			}
+		},
 		"hard_stained_glass_pane": {
 			"properties": {
 				"color": [
@@ -20,10 +45,30 @@
 					"\"green\"",
 					"\"red\"",
 					"\"black\""
+				],
+				"east": [
+					"\"true\"",
+					"\"false\""
+				],
+				"north": [
+					"\"true\"",
+					"\"false\""
+				],
+				"south": [
+					"\"true\"",
+					"\"false\""
+				],
+				"west": [
+					"\"true\"",
+					"\"false\""
 				]
 			},
 			"defaults": {
-				"color": "\"white\""
+				"color": "\"white\"",
+				"east": "\"false\"",
+				"north": "\"false\"",
+				"south": "\"false\"",
+				"west": "\"false\""
 			}
 		},
 		"chemical_heat": {},
