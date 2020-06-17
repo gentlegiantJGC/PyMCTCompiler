@@ -137,7 +137,25 @@ _BConnections = {
                 }
             }
         ],
-        []
+        [
+            {
+                "function": "map_properties",
+                "options": {
+                    "type": {
+                        "\"right\"": [
+                            {
+                                "function": "code",
+                                "options": {
+                                    "input": ["properties", "location"],
+                                    "output": ["new_nbt"],
+                                    "function": "bedrock_chest_fu"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
     ) for block_id in ("chest", "trapped_chest")
 }
 
