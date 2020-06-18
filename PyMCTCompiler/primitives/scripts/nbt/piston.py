@@ -10,6 +10,88 @@ Default
 B1.14
 {AttachedBlocks: [], BreakBlocks: [], LastProgress: 0.0f, NewState: 0b, Progress: 0.0f, State: 0b, Sticky: 0b, id: "PistonArm", isMovable: 1b}
 {AttachedBlocks: [], BreakBlocks: [], LastProgress: 0.0f, NewState: 0b, Progress: 0.0f, State: 0b, Sticky: 1b, id: "PistonArm", isMovable: 1b}
+
+
+Java:
+    minecraft:piston
+        {
+            facing: north/south/west/east,
+            extended: true/false  # is the piston in its extended state or not
+        }
+        None
+        # can sometimes be represented by a moving_piston block
+        
+    minecraft:sticky_piston
+        same as above
+    minecraft:piston_head  # shared by both types of piston
+        {
+            facing: north/south/west/east/up/down,
+            short: true/false  # is the shaft of the piston short. To stop the back clipping through the back of the block
+            type: normal/sticky  # is the piston a normal or sticky piston
+        }
+        None
+        # can sometimes be represented by a moving_piston block
+        
+    minecraft:moving_piston  # moving block
+        this block is used for regular blocks that are moving as well as the piston itself
+        {
+            facing: north/south/west/east/up/down,
+            type: normal/sticky  # is the piston a normal or sticky piston
+        }
+        {
+            blockState: {the chunk block state this block represents},
+            facing: 0-5 same as facing property,
+            progress: 
+            extending: 0/1b,
+            source: 0/1b is this block the piston head
+        }
+
+Bedrock: 
+    piston-base
+        {
+            facing_direction: 0-5
+        }
+        {id: "PistonArm",    # this block entity is only ever in the base piston block. The actual arm doesn't have a block entity
+            AttachedBlocks: [], 
+            BreakBlocks: [], 
+            
+            LastProgress: 0.0f,  # 0.0 = contracted, 0.5 = half extended, 1.0 = fully extended
+            Progress: 0.0f,  # same as above but lags by one frame
+            
+            State: 0b,  # 0 = contracted, 1 = half extended, 2 = fully extended, 3 = half contracted
+            NewState: 0b,  # seems to update at the same time as the above
+            
+            isMovable: 1b  # 1 when the piston is collapsed and 0 when extended
+        }
+    minecraft:piston
+        piston-base
+        {
+            Sticky: 0b,  # is the block a sticky piston (I don't know why they can't just use the block id)
+        }
+    minecraft:sticky_piston
+        piston-base
+        {
+            Sticky: 1b,
+        }
+    minecraft:pistonarmcollision
+        {
+            facing_direction: 0-5
+        }
+        None
+    minecraft:stickypistonarmcollision      (added around 1.13)
+        {
+            facing_direction: 0-5
+        }
+        None
+    minecraft:movingBlock
+        {
+            blockState: {Name: "minecraft:stone"}, 
+            facing: 4,  # same as property
+            progress: 0.5f, 
+            source: 0b, 
+            extending: 1b, 
+            isMovable: 1b
+        }
 """
 
 universal = {
