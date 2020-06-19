@@ -58,8 +58,8 @@ class NumericalCompiler(BaseCompiler):
                 block_primitive_file = primitives.get_block(self.primitive_block_format, primitive_data)
 
                 for prefix in ('blockstate_', ''):
-                    assert f'{prefix}to_universal' in block_primitive_file, f'Key to_universal must be defined'
-                    assert f'{prefix}from_universal' in block_primitive_file, f'Key from_universal must be defined'
+                    assert f'{prefix}to_universal' in block_primitive_file, f'Key {prefix}to_universal must be defined'
+                    assert f'{prefix}from_universal' in block_primitive_file, f'Key {prefix}from_universal must be defined'
 
                 default_spec = {'blockstate': {}, 'numerical': {"properties": {"block_data": [str(data) for data in range(16)]}, "defaults": {"block_data": "0"}}}
 

@@ -1,0 +1,152 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:redstone_wire"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "redstone_signal": {
+                    str(power): [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "power": f"\"{power}\""
+                            }
+                        }
+                    ] for power in range(16)
+                }
+            }
+        },
+        {
+            "function": "multiblock",
+            "options": [
+                {
+                    "coords": coord,
+                    "functions": [
+                        {
+                            "function": "map_block_name",
+                            "options": {
+                                **{
+                                    block_id: [
+                                        {
+                                            "function": "multiblock",
+                                            "options": [
+                                                {
+                                                    "coords": [0, -1, 0],
+                                                    "functions": [
+                                                        {
+                                                            "function": "map_block_name",
+                                                            "options": {
+                                                                "minecraft:redstone_wire": [
+                                                                    {
+                                                                        "function": "new_properties",
+                                                                        "options": {
+                                                                            direction: "\"side\""
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ] for block_id in lists.blocks.redstone_transparrent_blocks
+                                },
+                                **{
+                                    block_id: [
+                                        {
+                                            "function": "new_properties",
+                                            "options": {
+                                                direction: "\"side\""
+                                            }
+                                        }
+                                    ] for block_id in lists.blocks.redstone_connect_blocks
+                                }
+                            }
+                        }
+                    ]
+                } for coord, direction in [
+                    [[0, 0, -1], "north"],
+                    [[0, 0, 1], "south"],
+                    [[-1, 0, 0], "west"],
+                    [[1, 0, 0], "east"],
+                ]
+            ] + [
+                {
+                    "coords": [0, 1, 0],
+                    "functions": [
+                        {
+                            "function": "map_block_name",
+                            "options": {
+                                block_id: [
+                                    {
+                                        "function": "multiblock",
+                                        "options": [
+                                            {
+                                                "coords": coord,
+                                                "functions": [
+                                                    {
+                                                        "function": "map_block_name",
+                                                        "options": {
+                                                            "minecraft:redstone_wire": [
+                                                                {
+                                                                    "function": "new_properties",
+                                                                    "options": {
+                                                                        direction: "\"up\""
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            } for coord, direction in [
+                                                [[0, 0, -1], "north"],
+                                                [[0, 0, 1], "south"],
+                                                [[-1, 0, 0], "west"],
+                                                [[1, 0, 0], "east"],
+                                            ]
+                                        ]
+                                    }
+                                ] for block_id in lists.blocks.redstone_transparrent_blocks
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+        # if the block above is in lists.blocks.redstone_transparrent_blocks
+            # for each block to the side and up one (just side if relative to the last) if the block is redstone_wire set "up" property
+        # for each of the blocks to the side
+        #   if the block is in lists.blocks.redstone_transparrent_blocks and the block below is redstone_wire set "side" property
+        #   if the block is in lists.blocks.redstone_connect_blocks set "side" property
+    ],
+    "from_universal": {
+        "universal_minecraft:redstone_wire": [
+            {
+                "function": "new_block",
+                "options": "minecraft:redstone_wire"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "power": {
+                        f"\"{power}\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "redstone_signal": [
+                                        "snbt",
+                                        str(power)
+                                    ]
+                                }
+                            }
+                        ] for power in range(16)
+                    }
+                }
+            }
+        ]
+    }
+}

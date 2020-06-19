@@ -48,7 +48,7 @@
 	"torch": "torch",
 	"fire": "fire",
 	"oak_stairs": "oak_stairs",
-	"redstone_wire": "redstone_wire",
+	"redstone_wire": ["redstone_wire", "redstone_wire_connections"],
 	"diamond_ore": "diamond_ore",
 	"diamond_block": "diamond_block",
 	"crafting_table": "crafting_table",
