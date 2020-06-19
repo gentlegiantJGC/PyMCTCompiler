@@ -152,11 +152,15 @@ _B17 = NBTRemapHelper(
             ("Progress", "float", [("utags", "compound")])
         ),
         (
+            ("State", "byte", []),
+            ("State", "byte", [("utags", "compound")])
+        ),
+        (
             ("Sticky", "byte", []),
             (None, None, None)
         )
     ],
-    "{AttachedBlocks: [], BreakBlocks: [], LastProgress: 0.0f, NewState: 0b, Progress: 0.0f}"
+    "{AttachedBlocks: [], BreakBlocks: [], LastProgress: 0.0f, NewState: 0b, Progress: 0.0f, State: 0b}"
 )
 
 _BedrockState = [
@@ -206,7 +210,7 @@ _BedrockNormal = TranslationFile(
         ]
     },
     {
-        "snbt": "{Sticky: 0b, State: 0b}"
+        "snbt": "{Sticky: 0b}"
     }
 )
 
@@ -226,7 +230,7 @@ _BedrockSticky = TranslationFile(
         ]
     },
     {
-        "snbt": "{Sticky: 1b, State: 0b}"
+        "snbt": "{Sticky: 1b}"
     }
 )
 
