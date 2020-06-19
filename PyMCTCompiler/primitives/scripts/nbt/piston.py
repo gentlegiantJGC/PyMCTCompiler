@@ -12,6 +12,11 @@ B1.14
 {AttachedBlocks: [], BreakBlocks: [], LastProgress: 0.0f, NewState: 0b, Progress: 0.0f, State: 0b, Sticky: 1b, id: "PistonArm", isMovable: 1b}
 
 
+Universal structure
+    base piston block
+        has block entity storing bedrock extension information
+
+
 Java:
     minecraft:piston
         {

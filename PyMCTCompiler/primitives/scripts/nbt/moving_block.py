@@ -1,4 +1,4 @@
-from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge
+from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge, TranslationFile
 from .common import java_keep_packed, bedrock_is_movable
 
 """
@@ -25,9 +25,9 @@ universal = {
             progress: 0.5f, 
             source: 0b, 
             extending: 1b,
-            pistonPosX: 0, 
-            pistonPosY: 0, 
-            pistonPosZ: 0
+            pistonPosdX: 0, 
+            pistonPosdY: 0, 
+            pistonPosdZ: 0
         }
     }"""
 }
@@ -58,50 +58,76 @@ _J113 = NBTRemapHelper(
     '{blockState: {Name: "minecraft:stone"}, facing: 4, progress: 0.5f, source: 0b, extending: 1b}'
 )
 
-_B113 = NBTRemapHelper(
+_B113_Blocks = NBTRemapHelper(
     [
         (
             ("movingBlock", "compound", []),
             ("bedrockBlockState", "compound", [("utags", "compound")])
         ),
         (
-            ("movingBlock", "compound", []),
+            ("movingBlockExtra", "compound", []),
             ("bedrockExtraBlockState", "compound", [("utags", "compound")])
         ),
         (
             ("pistonPosX", "int", []),
-            ("pistonPosX", "int", [("utags", "compound")])
+            (None, None, None)
         ),
         (
             ("pistonPosY", "int", []),
-            ("pistonPosY", "int", [("utags", "compound")])
+            (None, None, None)
         ),
         (
             ("pistonPosZ", "int", []),
-            ("pistonPosZ", "int", [("utags", "compound")])
+            (None, None, None)
         )
     ],
-    '{blockState: {Name: "minecraft:stone"}, facing: 4, progress: 0.5f, source: 0b, extending: 1b}'
+    '{movingBlock: {name: "minecraft:stone", states: {"stone_type": "stone"}, version: 17629184}, movingBlockExtra: {name: "minecraft:air", states: {}, version: 17629184}}'
+)
+
+_B113_Pos = TranslationFile(
+    [
+        {
+            "function": "code",
+            "options": {
+                "input": ["nbt", "location"],
+                "output": ["new_nbt"],
+                "function": "bedrock_moving_block_pos_2u"
+            }
+        }
+    ],
+    [
+        {
+            "function": "code",
+            "options": {
+                "input": ["nbt", "location"],
+                "output": ["new_nbt"],
+                "function": "bedrock_moving_block_pos_fu"
+            }
+        }
+    ],
+    {
+        "snbt": "{pistonPosX: 0, pistonPosY: 0, pistonPosZ: 0}"
+    }
 )
 
 j19 = merge(
     [EmptyNBT('minecraft:piston'), _J113, java_keep_packed],
-    ['universal_minecraft:moving_piston'],
+    ['universal_minecraft:moving_block'],
     abstract=True
 )
 
 j113 = merge(
     [EmptyNBT('minecraft:piston'), _J113, java_keep_packed],
-    ['universal_minecraft:moving_piston']
+    ['universal_minecraft:moving_block']
 )
 
 b17 = merge(
     [EmptyNBT(':MovingBlock'), bedrock_is_movable],
-    ['universal_minecraft:moving_piston'],
+    ['universal_minecraft:moving_block'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT(':MovingBlock'), _B113, bedrock_is_movable],
-    ['universal_minecraft:moving_piston']
+    [EmptyNBT(':MovingBlock'), _B113_Blocks, _B113_Pos, bedrock_is_movable],
+    ['universal_minecraft:moving_block']
 )
