@@ -152,19 +152,46 @@ _B17 = NBTRemapHelper(
             ("Progress", "float", [("utags", "compound")])
         ),
         (
-            ("State", "byte", []),
-            ("State", "byte", [("utags", "compound")])
-        ),
-        (
             ("Sticky", "byte", []),
             (None, None, None)
         )
     ],
-    "{AttachedBlocks: [], BreakBlocks: [], LastProgress: 0.0f, NewState: 0b, Progress: 0.0f, State: 0b}"
+    "{AttachedBlocks: [], BreakBlocks: [], LastProgress: 0.0f, NewState: 0b, Progress: 0.0f}"
 )
 
+_BedrockState = [
+    {
+        "function": "walk_input_nbt",
+        "options": {
+            "type": "compound",
+            "keys": {
+                "State": {
+                    "type": "byte",
+                    "functions": [
+                        {
+                            "function": "map_nbt",
+                            "options": {
+                                "cases": {
+                                    f"{num}b": [
+                                        {
+                                            "function": "new_properties",
+                                            "options": {
+                                                "extended": "\"true\""
+                                            }
+                                        }
+                                    ] for num in range(1, 4)
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+]
+
 _BedrockNormal = TranslationFile(
-    [],
+    _BedrockState,
     {
         "universal_minecraft:piston": [
             {
@@ -179,12 +206,12 @@ _BedrockNormal = TranslationFile(
         ]
     },
     {
-        "snbt": "{Sticky: 0b}"
+        "snbt": "{Sticky: 0b, State: 0b}"
     }
 )
 
 _BedrockSticky = TranslationFile(
-    [],
+    _BedrockState,
     {
         "universal_minecraft:sticky_piston": [
             {
@@ -199,7 +226,7 @@ _BedrockSticky = TranslationFile(
         ]
     },
     {
-        "snbt": "{Sticky: 1b}"
+        "snbt": "{Sticky: 1b, State: 0b}"
     }
 )
 
