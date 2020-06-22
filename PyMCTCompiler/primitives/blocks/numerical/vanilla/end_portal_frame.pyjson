@@ -12,7 +12,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"facing": {0: "\"north\"", 1: "\"south\"", 2: "\"west\"", 3: "\"east\""}[data & 3],
+								"facing": {0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}[data & 3],
 								"eye": {0: "\"false\"", 4: "\"true\""}[data & 4]
 							}
 						}
@@ -43,7 +43,7 @@
 													"block_data": str(data4 + data3)
 												}
 											}
-										] for data3, facing in {0: "\"north\"", 1: "\"south\"", 2: "\"west\"", 3: "\"east\""}.items()
+										] for data3, facing in {0: "\"south\"", 1: "\"west\"", 2: "\"north\"", 3: "\"east\""}.items()
 									}
 								}
 							}
