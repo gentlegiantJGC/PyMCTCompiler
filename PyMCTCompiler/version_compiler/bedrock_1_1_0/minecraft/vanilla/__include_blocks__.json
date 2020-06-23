@@ -236,5 +236,5 @@
 	"standing_sign": [">nbt.sign.b17", "standing_sign"],
 	"wall_sign": [">nbt.sign.wall_b17", "wall_sign"],
 	"skull": ["skull", ">nbt.skull.b17"],
-	"movingBlock": [">nbt.moving_block.b17", "moving_block"]
+	"movingBlock": [">nbt.moving_block.b17", "moving_block_bedrock"]
 }

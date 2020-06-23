@@ -3,6 +3,8 @@ from .common import java_keep_packed, bedrock_is_movable
 
 """
 Default
+J112    "minecraft:piston"
+
 J113    "minecraft:piston"
 {blockState: {Name: "minecraft:slime_block"}, facing: 4, progress: 0.5f, source: 0b, extending: 1b}
 {blockState: {Properties: {axis: "y"}, Name: "minecraft:stripped_oak_log"}, facing: 4, progress: 0.5f, source: 0b, extending: 1b}
@@ -18,6 +20,7 @@ universal = {
     "snbt": """{
         utags: {
             isMovable: 1b,
+            javaNumericalBlockState: {blockId: 1, blockData: 0},
             javaBlockState: {Name: "minecraft:stone"},
             bedrockBlockState: {name: "minecraft:stone", states: {"stone_type": "stone"}, version: 17629184},
             bedrockExtraBlockState: {name: "minecraft:air", states: {}, version: 17629184},
@@ -32,12 +35,8 @@ universal = {
     }"""
 }
 
-_J113 = NBTRemapHelper(
+_JBase = NBTRemapHelper(
     [
-        (
-            ("blockState", "compound", []),
-            ("javaBlockState", "compound", [("utags", "compound")])
-        ),
         (
             ("facing", "int", []),
             ("facing", "int", [("utags", "compound")])
@@ -55,7 +54,31 @@ _J113 = NBTRemapHelper(
             ("extending", "byte", [("utags", "compound")])
         )
     ],
-    '{blockState: {Name: "minecraft:stone"}, facing: 4, progress: 0.5f, source: 0b, extending: 1b}'
+    '{facing: 4, progress: 0.5f, source: 0b, extending: 1b}'
+)
+
+_J19 = NBTRemapHelper(
+    [
+        (
+            ("blockId", "int", []),
+            ("blockId", "int", [("utags", "compound"), ("javaNumericalBlockState", "compound")])
+        ),
+        (
+            ("blockData", "int", []),
+            ("blockData", "int", [("utags", "compound"), ("javaNumericalBlockState", "compound")])
+        )
+    ],
+    '{blockId: 1, blockData: 0}'
+)
+
+_J113 = NBTRemapHelper(
+    [
+        (
+            ("blockState", "compound", []),
+            ("javaBlockState", "compound", [("utags", "compound")])
+        )
+    ],
+    '{blockState: {Name: "minecraft:stone"}}'
 )
 
 _B113_Blocks = NBTRemapHelper(
@@ -111,13 +134,13 @@ _B113_Pos = TranslationFile(
 )
 
 j19 = merge(
-    [EmptyNBT('minecraft:piston'), _J113, java_keep_packed],
+    [EmptyNBT('minecraft:piston'), _J19, _JBase, java_keep_packed],
     ['universal_minecraft:moving_block'],
     abstract=True
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:piston'), _J113, java_keep_packed],
+    [EmptyNBT('minecraft:piston'), _J113, _JBase, java_keep_packed],
     ['universal_minecraft:moving_block']
 )
 

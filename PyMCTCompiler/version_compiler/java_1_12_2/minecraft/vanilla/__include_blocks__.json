@@ -31,7 +31,7 @@
 	"deadbush": "deadbush",
 	"piston": "piston_java",
 	"wool": "wool",
-	"piston_extension": null,
+	"piston_extension": [">nbt.moving_block.j19", "moving_block_java"],
 	"yellow_flower": "yellow_flower",
 	"red_flower": "red_flower",
 	"brown_mushroom": "brown_mushroom",

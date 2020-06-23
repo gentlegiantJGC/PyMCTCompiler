@@ -7,59 +7,48 @@
                     str(data8 + data7): [
                         {
                             "function": "new_block",
-                            "options": block_id
+                            "options": "universal_minecraft:moving_block"
                         },
                         {
                             "function": "new_properties",
                             "options": {
+                                "type": sticky,
                                 "facing": facing
                             }
                         }
-                    ] for data8, block_id in {0: "universal_minecraft:piston_head", 8: "universal_minecraft:sticky_piston_head"}.items()
+                    ] for data8, sticky in {0: "\"normal\"", 8: "\"sticky\""}.items()
                     for data7, facing in {0: "\"down\"", 1: "\"up\"", 2: "\"north\"", 3: "\"south\"", 4: "\"west\"", 5: "\"east\""}.items()
                 }
             }
         }
     ],
     "from_universal": {
-        "universal_minecraft:piston_head": [
+        "universal_minecraft:moving_block": [
             {
                 "function": "new_block",
-                "options": "minecraft:piston_head"
+                "options": "minecraft:piston_extension"
             },
             {
                 "function": "map_properties",
                 "options": {
-                    "facing": {
-                        facing: [
+                    "type": {
+                        sticky: [
                             {
-                                "function": "new_properties",
+                                "function": "map_properties",
                                 "options": {
-                                    "block_data": str(data)
+                                    "facing": {
+                                        facing: [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "block_data": str(data8 + data7)
+                                                }
+                                            }
+                                        ] for data7, facing in {0: "\"down\"", 1: "\"up\"", 2: "\"north\"", 3: "\"south\"", 4: "\"west\"", 5: "\"east\""}.items()
+                                    }
                                 }
                             }
-                        ] for data, facing in {0: "\"down\"", 1: "\"up\"", 2: "\"north\"", 3: "\"south\"", 4: "\"west\"", 5: "\"east\""}.items()
-                    }
-                }
-            }
-        ],
-        "universal_minecraft:sticky_piston_head": [
-            {
-                "function": "new_block",
-                "options": "minecraft:piston_head"
-            },
-            {
-                "function": "map_properties",
-                "options": {
-                    "facing": {
-                        facing: [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "block_data": str(data)
-                                }
-                            }
-                        ] for data, facing in {0: "\"down\"", 1: "\"up\"", 2: "\"north\"", 3: "\"south\"", 4: "\"west\"", 5: "\"east\""}.items()
+                        ] for data8, sticky in {0: "\"normal\"", 8: "\"sticky\""}.items()
                     }
                 }
             }
@@ -120,40 +109,15 @@
         }
     ],
     "blockstate_from_universal": {
-        "universal_minecraft:piston_head": [
+        "universal_minecraft:moving_block": [
             {
                 "function": "new_block",
-                "options": "minecraft:piston_head"
+                "options": "minecraft:piston_extension"
             },
             {
                 "function": "new_properties",
                 "options": {
                     "type": "\"normal\""
-                }
-            },
-            {
-                "function": "carry_properties",
-                "options": {
-                    "facing": [
-                        "\"north\"",
-                        "\"east\"",
-                        "\"south\"",
-                        "\"west\"",
-                        "\"up\"",
-                        "\"down\""
-                    ]
-                }
-            }
-        ],
-        "universal_minecraft:sticky_piston_head": [
-            {
-                "function": "new_block",
-                "options": "minecraft:piston_head"
-            },
-            {
-                "function": "new_properties",
-                "options": {
-                    "type": "\"sticky\""
                 }
             },
             {
