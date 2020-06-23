@@ -8,7 +8,8 @@
 		"dark_oak_pressure_plate",
 		"stone_pressure_plate",
 		"crimson_pressure_plate",
-		"warped_pressure_plate"
+		"warped_pressure_plate",
+		"polished_blackstone_pressure_plate"
 	],
 	"add": {
 		"pressure_plate": {
@@ -22,7 +23,8 @@
 					"\"dark_oak\"",
 					"\"stone\"",
 					"\"crimson\"",
-					"\"warped\""
+					"\"warped\"",
+					"\"polished_blackstone\""
 				],
 				"powered": [
 					"\"true\"",

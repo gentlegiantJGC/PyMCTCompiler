@@ -32,7 +32,10 @@
 		"smooth_sandstone_stairs",
 		"stone_stairs",
 		"crimson_stairs",
-		"warped_stairs"
+		"warped_stairs",
+		"blackstone_stairs",
+		"polished_blackstone_brick_stairs",
+		"polished_blackstone_stairs"
 	],
 	"add": {
 		"stairs": {
@@ -70,7 +73,10 @@
 					"\"smooth_sandstone\"",
 					"\"stone\"",
 					"\"crimson\"",
-					"\"warped\""
+					"\"warped\"",
+					"\"blackstone\"",
+					"\"polished_blackstone_brick\"",
+					"\"polished_blackstone\""
 				],
 				"facing": [
 					"\"north\"",

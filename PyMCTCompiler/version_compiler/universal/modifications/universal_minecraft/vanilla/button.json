@@ -8,7 +8,8 @@
 		"dark_oak_button",
 		"stone_button",
 		"crimson_button",
-		"warped_button"
+		"warped_button",
+		"polished_blackstone_button"
 	],
 	"add": {
 		"button": {
@@ -22,7 +23,8 @@
 					"\"dark_oak\"",
 					"\"stone\"",
 					"\"crimson\"",
-					"\"warped\""
+					"\"warped\"",
+					"\"polished_blackstone\""
 				],
 				"face": [
 					"\"floor\"",

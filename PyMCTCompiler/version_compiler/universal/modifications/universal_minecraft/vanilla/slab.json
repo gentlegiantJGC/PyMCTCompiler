@@ -36,7 +36,10 @@
 		"smooth_sandstone_slab",
 		"smooth_stone_slab",
 		"crimson_slab",
-		"warped_slab"
+		"warped_slab",
+		"blackstone_slab",
+		"polished_blackstone_brick_slab",
+		"polished_blackstone_slab"
 	],
 	"add": {
 		"slab": {
@@ -78,7 +81,10 @@
 					"\"smooth_sandstone\"",
 					"\"smooth_stone\"",
 					"\"crimson\"",
-					"\"warped\""
+					"\"warped\"",
+					"\"blackstone\"",
+					"\"polished_blackstone_brick\"",
+					"\"polished_blackstone\""
 				],
 				"type": [
 					"\"top\"",
