@@ -74,6 +74,27 @@
 					}
 				}
 			}
+		],
+		"universal_minecraft:sticky_piston_head": [
+			{
+				"function": "new_block",
+				"options": "minecraft:pistonArmCollision"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"facing": {
+						facing: [
+							{
+								"function": "new_properties",
+								"options": {
+									"block_data": str(data)
+								}
+							}
+						] for data, facing in {0: "\"down\"", 1: "\"up\"", 2: "\"south\"", 3: "\"north\"", 4: "\"east\"", 5: "\"west\""}.items()
+					}
+				}
+			}
 		]
 	},
 	"blockstate_specification": {

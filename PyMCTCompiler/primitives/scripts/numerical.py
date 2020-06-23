@@ -1879,6 +1879,7 @@ def piston_bedrock(input_namespace: str, input_block_name: str, universal_namesp
 		universal_namespace = input_namespace
 	if universal_block_name is None:
 		universal_block_name = input_block_name
+	rotations = {0: "\"down\"", 1: "\"up\"", 2: "\"south\"", 3: "\"north\"", 4: "\"east\"", 5: "\"west\""}
 	return {
 		"to_universal": [
 			{
@@ -1893,7 +1894,7 @@ def piston_bedrock(input_namespace: str, input_block_name: str, universal_namesp
 							{
 								"function": "new_properties",
 								"options": {
-									"facing": {0: "\"down\"", 1: "\"up\"", 2: "\"south\"", 3: "\"north\"", 4: "\"east\"", 5: "\"west\""}[data]
+									"facing": rotations[data]
 								}
 							}
 						] for data in range(6)
@@ -1918,7 +1919,7 @@ def piston_bedrock(input_namespace: str, input_block_name: str, universal_namesp
 										"block_data": str(data)
 									}
 								}
-							] for data, facing in {0: "\"down\"", 1: "\"up\"", 2: "\"south\"", 3: "\"north\"", 4: "\"east\"", 5: "\"west\""}.items()
+							] for data, facing in rotations.items()
 						}
 					}
 				}
@@ -1967,6 +1968,140 @@ def piston_bedrock(input_namespace: str, input_block_name: str, universal_namesp
 				{
 					"function": "carry_properties",
 					"options": {
+						"facing": [
+							"\"north\"",
+							"\"east\"",
+							"\"south\"",
+							"\"west\"",
+							"\"up\"",
+							"\"down\""
+						]
+					}
+				}
+			]
+		}
+	}
+
+
+def piston_java(input_namespace: str, input_block_name: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
+	if universal_namespace is None:
+		universal_namespace = input_namespace
+	if universal_block_name is None:
+		universal_block_name = input_block_name
+	extended = {0: "\"false\"",  8: "\"true\""}
+	rotations = {0: "\"down\"", 1: "\"up\"", 2: "\"north\"", 3: "\"south\"", 4: "\"west\"", 5: "\"east\""}
+
+	return {
+		"to_universal": [
+			{
+				"function": "map_properties",
+				"options": {
+					"block_data": {
+						str(data8 + data7): [
+							{
+								"function": "new_block",
+								"options": f"{universal_namespace}:{universal_block_name}"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"facing": facing,
+									"extended": extended
+								}
+							}
+						] for data8, extended in extended.items() for data7, facing in rotations.items()
+					}
+				}
+			}
+		],
+		"from_universal": {
+			f"{universal_namespace}:{universal_block_name}": [
+				{
+					"function": "new_block",
+					"options": f"{input_namespace}:{input_block_name}"
+				},
+				{
+					"function": "map_properties",
+					"options": {
+						"extended": {
+							extended: [
+								{
+									"function": "map_properties",
+									"options": {
+										"facing": {
+											facing: [
+												{
+													"function": "new_properties",
+													"options": {
+														"block_data": str(data8 + data7)
+													}
+												}
+											] for data7, facing in rotations.items()
+										}
+									}
+								}
+							] for data8, extended in extended.items()
+						}
+					}
+				}
+			]
+		},
+		"blockstate_specification": {
+			"properties": {
+				"extended": [
+					"\"true\"",
+					"\"false\""
+				],
+				"facing": [
+					"\"north\"",
+					"\"east\"",
+					"\"south\"",
+					"\"west\"",
+					"\"up\"",
+					"\"down\""
+				]
+			},
+			"defaults": {
+				"extended": "\"false\"",
+				"facing": "\"north\""
+			}
+		},
+		"blockstate_to_universal": [
+			{
+				"function": "new_block",
+				"options": f"{universal_namespace}:{universal_block_name}"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"extended": [
+						"\"true\"",
+						"\"false\""
+					],
+					"facing": [
+						"\"north\"",
+						"\"east\"",
+						"\"south\"",
+						"\"west\"",
+						"\"up\"",
+						"\"down\""
+					]
+				}
+			}
+		],
+		"blockstate_from_universal": {
+			f"{universal_namespace}:{universal_block_name}": [
+				{
+					"function": "new_block",
+					"options": f"{input_namespace}:{input_block_name}"
+				},
+				{
+					"function": "carry_properties",
+					"options": {
+						"extended": [
+							"\"true\"",
+							"\"false\""
+						],
 						"facing": [
 							"\"north\"",
 							"\"east\"",

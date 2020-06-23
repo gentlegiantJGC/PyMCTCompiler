@@ -25,11 +25,11 @@
 	"sandstone": "sandstone+chiseled+cut",
 	"golden_rail": "golden_rail",
 	"detector_rail": "detector_rail",
-	"sticky_piston": null,
+	"sticky_piston": "sticky_piston_java",
 	"web": "web",
 	"tallgrass": "grass_java",
 	"deadbush": "deadbush",
-	"piston": null,
+	"piston": "piston_java",
 	"wool": "wool",
 	"piston_extension": null,
 	"yellow_flower": "yellow_flower",
@@ -208,7 +208,7 @@
 	"concrete_powder": "concrete_powder",
 
 
-	"piston_head": null,
+	"piston_head": "piston_head_java",
 
 	"standing_banner": ["standing_banner", ">nbt.banner.j112"],
 	"wall_banner": ["wall_banner", ">nbt.banner.wall_j112"],
