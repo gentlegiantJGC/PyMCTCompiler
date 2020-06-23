@@ -81,16 +81,8 @@ _J113 = NBTRemapHelper(
     '{blockState: {Name: "minecraft:stone"}}'
 )
 
-_B113_Blocks = NBTRemapHelper(
+_B_Base = NBTRemapHelper(
     [
-        (
-            ("movingBlock", "compound", []),
-            ("bedrockBlockState", "compound", [("utags", "compound")])
-        ),
-        (
-            ("movingBlockExtra", "compound", []),
-            ("bedrockExtraBlockState", "compound", [("utags", "compound")])
-        ),
         (
             ("pistonPosX", "int", []),
             (None, None, None)
@@ -104,10 +96,38 @@ _B113_Blocks = NBTRemapHelper(
             (None, None, None)
         )
     ],
+    '{}'
+)
+
+_B17_Blocks = NBTRemapHelper(
+    [
+        (
+            ("movingBlock", "compound", []),
+            ("bedrockBlockState", "compound", [("utags", "compound")])
+        ),
+        (
+            ("movingBlockExtra", "compound", []),
+            ("bedrockExtraBlockState", "compound", [("utags", "compound")])
+        )
+    ],
+    '{movingBlock: {name: "minecraft:stone", val: 0s}, movingBlockExtra: {name: "minecraft:air", val: 0s}}'
+)
+
+_B113_Blocks = NBTRemapHelper(
+    [
+        (
+            ("movingBlock", "compound", []),
+            ("bedrockBlockState", "compound", [("utags", "compound")])
+        ),
+        (
+            ("movingBlockExtra", "compound", []),
+            ("bedrockExtraBlockState", "compound", [("utags", "compound")])
+        )
+    ],
     '{movingBlock: {name: "minecraft:stone", states: {"stone_type": "stone"}, version: 17629184}, movingBlockExtra: {name: "minecraft:air", states: {}, version: 17629184}}'
 )
 
-_B113_Pos = TranslationFile(
+_B_Pos = TranslationFile(
     [
         {
             "function": "code",
@@ -145,12 +165,12 @@ j113 = merge(
 )
 
 b17 = merge(
-    [EmptyNBT(':MovingBlock'), bedrock_is_movable],
+    [EmptyNBT(':MovingBlock'), _B17_Blocks, _B_Base, _B_Pos, bedrock_is_movable],
     ['universal_minecraft:moving_block'],
     abstract=True
 )
 
 b113 = merge(
-    [EmptyNBT(':MovingBlock'), _B113_Blocks, _B113_Pos, bedrock_is_movable],
+    [EmptyNBT(':MovingBlock'), _B113_Blocks, _B_Base, _B_Pos, bedrock_is_movable],
     ['universal_minecraft:moving_block']
 )
