@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "crimson_slab", "\"crimson\"", "universal_minecraft", "slab", {"type": ["\"top\"","\"bottom\"","\"double\""]}, default="minecraft:stone_slab")

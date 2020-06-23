@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "polished_blackstone_brick_stairs", "\"polished_blackstone_brick\"", "universal_minecraft", "stairs", {"facing": ["\"north\"","\"south\"","\"west\"","\"east\""],"half": ["\"top\"","\"bottom\""],"shape": ["\"straight\"","\"inner_left\"","\"inner_right\"","\"outer_left\"","\"outer_right\""]}, default="minecraft:oak_stairs")

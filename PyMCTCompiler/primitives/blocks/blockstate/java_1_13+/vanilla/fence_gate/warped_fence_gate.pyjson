@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "warped_fence_gate", "\"warped\"", "universal_minecraft", "fence_gate", {"facing": ["\"north\"","\"south\"","\"west\"","\"east\""],"in_wall": ["\"true\"","\"false\""],"open": ["\"true\"","\"false\""],"powered": ["\"true\"","\"false\""]}, default="minecraft:oak_fence_gate")

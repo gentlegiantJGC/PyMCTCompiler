@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "crimson_pressure_plate", "\"crimson\"", "universal_minecraft", "pressure_plate", {"powered": ["\"true\"","\"false\""]}, default="minecraft:oak_pressure_plate")
