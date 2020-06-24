@@ -1,4 +1,5 @@
 import json
+import os
 
 
 def to_snbt(nbt_type, value):
@@ -210,5 +211,6 @@ for (namespace, base_name), block in blocks.items():
 			}
 		)
 
+	os.makedirs("./temp", exist_ok=True)
 	with open(f'./temp/{base_name}.json', 'w') as f:
 		json.dump(primitive, f, indent=4)
