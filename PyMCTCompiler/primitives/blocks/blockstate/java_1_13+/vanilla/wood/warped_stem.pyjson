@@ -1,0 +1,1 @@
+blockstate.wood("minecraft", "warped_stem", "\"warped\"", False, "universal_minecraft", "log", default="minecraft:oak_log")

@@ -1,25 +1,19 @@
 {
-	"basalt": null,
-	"polished_basalt": null,
-	"soul_torch": null,
-	"soul_wall_torch": null,
+	"soul_torch": "soul_torch",
+	"soul_wall_torch": "soul_wall_torch",
 
-	"warped_stem": null,
-	"stripped_warped_stem": null,
-	"warped_hyphae": null,
-	"stripped_warped_hyphae": null,
+	"warped_stem": "warped_stem",
+	"stripped_warped_stem": "stripped_warped_stem",
+	"warped_hyphae": "warped_hyphae",
+	"stripped_warped_hyphae": "stripped_warped_hyphae",
 
-	"crimson_stem": null,
-	"stripped_crimson_stem": null,
-	"crimson_hyphae": null,
-	"stripped_crimson_hyphae": null,
+	"crimson_stem": "crimson_stem",
+	"stripped_crimson_stem": "stripped_crimson_stem",
+	"crimson_hyphae": "crimson_hyphae",
+	"stripped_crimson_hyphae": "stripped_crimson_hyphae",
 
-	"weeping_vines": null,
-	"weeping_vines_plant": null,
-	"twisting_vines": null,
-	"twisting_vines_plant": null,
-	"crimson_planks": null,
-	"warped_planks": null,
+	"crimson_planks": "crimson_planks",
+	"warped_planks": "warped_planks",
 
 	"crimson_slab": "crimson_slab",
 	"warped_slab": "warped_slab",
@@ -80,10 +74,5 @@
 	"mossy_cobblestone_wall": "mossy_cobblestone_wall_16",
 	"mossy_stone_brick_wall": "mossy_stone_brick_wall_16",
 	"nether_brick_wall": "nether_brick_wall_16",
-	"prismarine_wall": "prismarine_wall_16",
-
-	"quartz_bricks": null,
-
-	"chiseled_nether_bricks": null,
-	"cracked_nether_bricks": null
+	"prismarine_wall": "prismarine_wall_16"
 }

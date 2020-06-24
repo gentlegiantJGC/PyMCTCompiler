@@ -1,0 +1,1 @@
+blockstate.wood("minecraft", "stripped_warped_hyphae", "\"warped\"", True, "universal_minecraft", "wood", default="minecraft:oak_wood")

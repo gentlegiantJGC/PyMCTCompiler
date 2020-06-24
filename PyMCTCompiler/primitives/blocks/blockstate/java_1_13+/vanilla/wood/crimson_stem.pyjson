@@ -1,0 +1,1 @@
+blockstate.wood("minecraft", "crimson_stem", "\"crimson\"", False, "universal_minecraft", "log", default="minecraft:oak_log")

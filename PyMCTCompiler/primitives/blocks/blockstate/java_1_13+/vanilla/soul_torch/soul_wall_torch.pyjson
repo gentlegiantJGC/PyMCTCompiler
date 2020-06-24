@@ -1,0 +1,1 @@
+blockstate.torch("minecraft", "soul_wall_torch", True, "minecraft:soul_torch", "universal_minecraft", "soul_torch")
