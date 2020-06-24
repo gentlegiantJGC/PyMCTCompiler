@@ -1,0 +1,101 @@
+{
+	"specification": {
+	    "properties": {
+	        "facing": [
+	            "\"north\"",
+	            "\"south\"",
+	            "\"west\"",
+	            "\"east\""
+	        ]
+	    },
+	    "defaults": {
+	        "facing": "\"north\""
+	    }
+	},
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:melon_stem"
+		},
+		{
+			"function": "new_properties",
+			"options": {
+				"age": "\"7\""
+			}
+		},
+		{
+			"function": "carry_properties",
+			"options": {
+				"facing": [
+		            "\"north\"",
+		            "\"south\"",
+		            "\"west\"",
+		            "\"east\""
+		        ]
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:melon_stem": [
+			{
+				"function": "new_block",
+				"options": "minecraft:melon_stem"
+			},
+			{
+			"function": "map_properties",
+				"options": {
+					"facing": {
+						"\"north\"": [
+							{
+								"function": "new_block",
+								"options": "minecraft:attached_melon_stem"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"facing": "\"north\""
+								}
+							}
+						],
+						"\"south\"": [
+							{
+								"function": "new_block",
+								"options": "minecraft:attached_melon_stem"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"facing": "\"south\""
+								}
+							}
+						],
+						"\"west\"": [
+							{
+								"function": "new_block",
+								"options": "minecraft:attached_melon_stem"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"facing": "\"west\""
+								}
+							}
+						],
+						"\"east\"": [
+							{
+								"function": "new_block",
+								"options": "minecraft:attached_melon_stem"
+							},
+							{
+								"function": "new_properties",
+								"options": {
+									"facing": "\"east\""
+								}
+							}
+						]
+					}
+				}
+			}
+		]
+	}
+}

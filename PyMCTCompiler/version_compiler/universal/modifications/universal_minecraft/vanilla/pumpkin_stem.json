@@ -1,0 +1,33 @@
+{
+	"remove": [
+		"pumpkin_stem",
+		"attached_pumpkin_stem"
+	],
+	"add": {
+        "pumpkin_stem": {
+            "properties": {
+                "facing": [
+		            "\"none\"",
+		            "\"north\"",
+		            "\"south\"",
+		            "\"west\"",
+		            "\"east\""
+		        ],
+	            "age": [
+		            "\"0\"",
+		            "\"1\"",
+		            "\"2\"",
+		            "\"3\"",
+		            "\"4\"",
+		            "\"5\"",
+		            "\"6\"",
+		            "\"7\""
+		        ]
+            },
+            "defaults": {
+                "facing": "\"none\"",
+                "age": "\"0\""
+            }
+        }
+    }
+}

@@ -42,18 +42,6 @@
 					}
 				}
 			}
-		],
-		"universal_minecraft:attached_pumpkin_stem": [
-			{
-				"function": "new_block",
-				"options": "minecraft:pumpkin_stem"
-			},
-			{
-				"function": "new_properties",
-				"options": {
-					"block_data": "7"
-				}
-			}
 		]
 	},
 	"blockstate_specification": {
@@ -86,18 +74,6 @@
 				"function": "carry_properties",
 				"options": {
 					"age": [f"\"{data}\"" for data in range(8)]
-				}
-			}
-		],
-		"universal_minecraft:attached_pumpkin_stem": [
-			{
-				"function": "new_block",
-				"options": "minecraft:pumpkin_stem"
-			},
-			{
-				"function": "new_properties",
-				"options": {
-					"age": "\"7\""
 				}
 			}
 		]

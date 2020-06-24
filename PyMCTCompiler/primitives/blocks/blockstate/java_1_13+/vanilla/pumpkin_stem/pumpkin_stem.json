@@ -1,0 +1,72 @@
+{
+	"specification": {
+	    "properties": {
+	        "age": [
+	            "\"0\"",
+	            "\"1\"",
+	            "\"2\"",
+	            "\"3\"",
+	            "\"4\"",
+	            "\"5\"",
+	            "\"6\"",
+	            "\"7\""
+	        ]
+	    },
+	    "defaults": {
+	        "age": "\"0\""
+	    }
+	},
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:pumpkin_stem"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
+				"age": [
+		            "\"0\"",
+		            "\"1\"",
+		            "\"2\"",
+		            "\"3\"",
+		            "\"4\"",
+		            "\"5\"",
+		            "\"6\"",
+		            "\"7\""
+		        ]
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:pumpkin_stem": [
+			{
+				"function": "new_block",
+				"options": "minecraft:pumpkin_stem"
+			},
+			{
+			"function": "map_properties",
+				"options": {
+					"facing": {
+						"\"none\"": [
+							{
+								"function": "carry_properties",
+								"options": {
+									"age": [
+							            "\"0\"",
+							            "\"1\"",
+							            "\"2\"",
+							            "\"3\"",
+							            "\"4\"",
+							            "\"5\"",
+							            "\"6\"",
+							            "\"7\""
+							        ]
+								}
+							}
+						]
+					}
+				}
+			}
+		]
+	}
+}

@@ -362,7 +362,10 @@
 	"beetroots": "beetroots",
 	"cobblestone_wall": ["cobblestone_wall", "wall_property_remap"],
 	"mossy_cobblestone_wall": ["mossy_cobblestone_wall", "wall_property_remap"],
-
+	"melon_stem": "melon_stem",
+	"attached_melon_stem": "attached_melon_stem",
+	"pumpkin_stem": "pumpkin_stem",
+	"attached_pumpkin_stem": "attached_pumpkin_stem",
 
 	"moving_piston": [">nbt.moving_block.j113", "moving_piston"],
 

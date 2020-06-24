@@ -5,8 +5,8 @@
 
 	"flower_pot": ["flower_pot", ">nbt.flower_pot.b116"],
 	"jigsaw": "jigsaw_16",
-	"pumpkin_stem": null,
-	"melon_stem": null,
+	"pumpkin_stem": "pumpkin_stem_16",
+	"melon_stem": "melon_stem_16",
 
 	"ancient_debris": "ancient_debris",
 	"basalt": "basalt",
