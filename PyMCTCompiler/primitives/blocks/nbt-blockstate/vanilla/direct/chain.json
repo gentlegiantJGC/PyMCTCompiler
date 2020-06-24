@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:chain"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:chain": [
+            {
+                "function": "new_block",
+                "options": "minecraft:chain"
+            }
+        ]
+    }
+}

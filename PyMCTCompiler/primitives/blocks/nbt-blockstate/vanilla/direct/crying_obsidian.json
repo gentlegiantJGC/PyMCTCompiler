@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:crying_obsidian"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:crying_obsidian": [
+            {
+                "function": "new_block",
+                "options": "minecraft:crying_obsidian"
+            }
+        ]
+    }
+}

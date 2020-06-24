@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:lodestone"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:lodestone": [
+            {
+                "function": "new_block",
+                "options": "minecraft:lodestone"
+            }
+        ]
+    }
+}

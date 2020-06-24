@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:cracked_nether_bricks"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:cracked_nether_bricks": [
+            {
+                "function": "new_block",
+                "options": "minecraft:cracked_nether_bricks"
+            }
+        ]
+    }
+}
