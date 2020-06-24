@@ -17,7 +17,7 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:soul_fire_torch"
+            "options": "universal_minecraft:soul_torch"
         },
         {
             "function": "map_properties",
@@ -76,7 +76,7 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:soul_fire_torch": [
+        "universal_minecraft:soul_torch": [
             {
                 "function": "new_block",
                 "options": "minecraft:soul_torch"

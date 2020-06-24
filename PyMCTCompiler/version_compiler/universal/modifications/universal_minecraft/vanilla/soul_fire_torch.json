@@ -1,10 +1,10 @@
 {
 	"remove": [
-		"soul_fire_torch",
-		"soul_fire_wall_torch"
+		"soul_torch",
+		"soul_wall_torch"
 	],
 	"add": {
-		"soul_fire_torch": {
+		"soul_torch": {
 			"properties": {
 				"facing": [
 					"\"up\"",

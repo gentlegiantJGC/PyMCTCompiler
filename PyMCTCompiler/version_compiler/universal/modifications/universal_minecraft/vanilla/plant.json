@@ -15,11 +15,7 @@
 		"dead_bush",
 		"cornflower",
 		"wither_rose",
-		"lily_of_the_valley",
-		"crimson_roots",
-		"crimson_fungus",
-		"warped_roots",
-		"warped_fungus"
+		"lily_of_the_valley"
 	],
 	"add": {
 		"plant": {
@@ -40,11 +36,7 @@
 					"\"dead_bush\"",
 					"\"cornflower\"",
 					"\"wither_rose\"",
-					"\"lily_of_the_valley\"",
-					"\"crimson_roots\"",
-					"\"crimson_fungus\"",
-					"\"warped_roots\"",
-					"\"warped_fungus\""
+					"\"lily_of_the_valley\""
 				]
 			},
 			"defaults": {
