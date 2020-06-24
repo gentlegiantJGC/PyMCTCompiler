@@ -1,0 +1,125 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:respawn_anchor"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "respawn_anchor_charge": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "charges": "\"0\""
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "charges": "\"1\""
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "charges": "\"2\""
+                            }
+                        }
+                    ],
+                    "3": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "charges": "\"3\""
+                            }
+                        }
+                    ],
+                    "4": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "charges": "\"4\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:respawn_anchor": [
+            {
+                "function": "new_block",
+                "options": "minecraft:respawn_anchor"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "charges": {
+                        "\"0\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "respawn_anchor_charge": [
+                                        "snbt",
+                                        "0"
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"1\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "respawn_anchor_charge": [
+                                        "snbt",
+                                        "1"
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"2\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "respawn_anchor_charge": [
+                                        "snbt",
+                                        "2"
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"3\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "respawn_anchor_charge": [
+                                        "snbt",
+                                        "3"
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"4\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "respawn_anchor_charge": [
+                                        "snbt",
+                                        "4"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

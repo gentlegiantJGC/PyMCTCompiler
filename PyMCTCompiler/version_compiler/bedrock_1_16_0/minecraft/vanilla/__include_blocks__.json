@@ -60,6 +60,7 @@
 	"stripped_warped_hyphae": "stripped_warped_hyphae",
 	"warped_trapdoor": "warped_trapdoor",
 	"weeping_vines": "weeping_vines",
+	"twisting_vines": "twisting_vines",
 
 	"polished_blackstone_wall": ["polished_blackstone_wall", "wall_connections_16"],
 	"blackstone_wall": ["blackstone_wall", "wall_connections_16"],
@@ -72,19 +73,17 @@
 	"polished_blackstone_double_slab": "polished_blackstone_double_slab",
 	"polished_blackstone_brick_double_slab": "polished_blackstone_brick_double_slab",
 
-	"polished_blackstone_button": null,
+	"polished_blackstone_button": "polished_blackstone_button",
 
-	"blackstone_stairs": null,
-	"polished_blackstone_brick_stairs": null,
-	"polished_blackstone_stairs": null,
+	"blackstone_stairs": "blackstone_stairs",
+	"polished_blackstone_brick_stairs": "polished_blackstone_brick_stairs",
+	"polished_blackstone_stairs": "polished_blackstone_stairs",
 
-	"polished_blackstone_pressure_plate": null,
+	"polished_blackstone_pressure_plate": "polished_blackstone_pressure_plate",
 
-	"twisting_vines": null,
-	"respawn_anchor": null,
+	"respawn_anchor": "respawn_anchor",
 
-
-	"soul_campfire": null,
+	"soul_campfire": "soul_campfire",
 	"gilded_blackstone": "gilded_blackstone",
 
 	"nether_gold_ore": "nether_gold_ore",

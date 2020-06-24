@@ -1,0 +1,148 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:soul_campfire"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "direction": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"north\""
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"east\""
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"south\""
+                            }
+                        }
+                    ],
+                    "3": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"west\""
+                            }
+                        }
+                    ]
+                },
+                "extinguished": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "lit": "\"true\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "lit": "\"false\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:soul_campfire": [
+            {
+                "function": "new_block",
+                "options": "minecraft:soul_campfire"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "facing": {
+                        "\"north\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "0"
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"east\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "1"
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"south\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "2"
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"west\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": [
+                                        "snbt",
+                                        "3"
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "lit": {
+                        "\"true\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "extinguished": [
+                                        "snbt",
+                                        "0b"
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"false\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "extinguished": [
+                                        "snbt",
+                                        "1b"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
