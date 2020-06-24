@@ -9,7 +9,7 @@
         "universal_minecraft:target": [
             {
                 "function": "new_block",
-                "options": "minecraft:target_block"
+                "options": "minecraft:target"
             }
         ]
     }

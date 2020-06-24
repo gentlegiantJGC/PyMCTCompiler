@@ -40,7 +40,7 @@
         "universal_minecraft:basalt": [
             {
                 "function": "new_block",
-                "options": "minecraft:basalt_block"
+                "options": "minecraft:basalt"
             },
             {
                 "function": "map_properties",

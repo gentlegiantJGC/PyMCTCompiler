@@ -2,14 +2,14 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:soul_fire"
+            "options": "universal_minecraft:soul_soil"
         }
     ],
     "from_universal": {
-        "universal_minecraft:soul_fire": [
+        "universal_minecraft:soul_soil": [
             {
                 "function": "new_block",
-                "options": "minecraft:blue_fire"
+                "options": "minecraft:soul_soil"
             }
         ]
     }
