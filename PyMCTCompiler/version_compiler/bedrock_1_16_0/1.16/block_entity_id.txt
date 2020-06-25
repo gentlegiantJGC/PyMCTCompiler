@@ -28,6 +28,7 @@ ItemFrame
 Jigsaw
 Jukebox
 Lectern
+Lodestone
 MobSpawner
 Moving
 Music

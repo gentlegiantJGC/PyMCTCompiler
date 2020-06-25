@@ -81,6 +81,7 @@ spider
 splash_potion
 squid
 stray
+strider
 thrown_trident
 tnt
 tnt_minecart
@@ -101,6 +102,7 @@ wither_skull_dangerous
 wolf
 xp_bottle
 xp_orb
+zoglin
 zombie
 zombie_horse
 zombie_pigman
