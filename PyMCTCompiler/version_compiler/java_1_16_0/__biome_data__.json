@@ -1,0 +1,24 @@
+{
+    "add": {
+        "biomes": {
+            "minecraft:soul_sand_valley": [
+                170,
+                "universal_minecraft:soul_sand_valley"
+            ],
+            "minecraft:crimson_forest": [
+                171,
+                "universal_minecraft:crimson_forest"
+            ],
+            "minecraft:warped_forest": [
+                172,
+                "universal_minecraft:warped_forest"
+            ],
+            "minecraft:basalt_deltas": [
+                173,
+                "universal_minecraft:basalt_deltas"
+            ]
+        },
+        "universal_remap": {}
+    },
+    "remove": []
+}
