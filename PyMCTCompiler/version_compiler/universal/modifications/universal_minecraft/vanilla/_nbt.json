@@ -83,6 +83,9 @@
 		},
 		"bee_nest": {
 			"unbt": "nbt.beehive.universal"
+		},
+		"lodestone": {
+			"unbt": "nbt.lodestone.universal"
 		}
 	}
 }
