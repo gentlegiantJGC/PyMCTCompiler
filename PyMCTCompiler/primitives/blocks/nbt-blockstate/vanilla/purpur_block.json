@@ -17,7 +17,7 @@
                     "\"chiseled\"": [
                         {
                             "function": "new_block",
-                            "options": "universal_minecraft:chiseled_purpur_block"
+                            "options": "universal_minecraft:purpur_block"
                         }
                     ],
                     "\"lines\"": [
@@ -29,7 +29,7 @@
                     "\"smooth\"": [
                         {
                             "function": "new_block",
-                            "options": "universal_minecraft:smooth_purpur"
+                            "options": "universal_minecraft:purpur_block"
                         }
                     ]
                 },
@@ -74,102 +74,11 @@
                     "chisel_type": [
                         "snbt",
                         "\"default\""
-                    ]
-                }
-            },
-            {
-                "function": "map_properties",
-                "options": {
-                    "axis": {
-                        "\"y\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"y\""
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"x\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"x\""
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"z\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"z\""
-                                    ]
-                                }
-                            }
-                        ]
-                    }
-                }
-            }
-        ],
-        "universal_minecraft:chiseled_purpur_block": [
-            {
-                "function": "new_block",
-                "options": "minecraft:purpur_block"
-            },
-            {
-                "function": "new_properties",
-                "options": {
-                    "chisel_type": [
+                    ],
+                    "pillar_axis": [
                         "snbt",
-                        "\"chiseled\""
+                        "\"y\""
                     ]
-                }
-            },
-            {
-                "function": "map_properties",
-                "options": {
-                    "axis": {
-                        "\"y\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"y\""
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"x\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"x\""
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"z\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"z\""
-                                    ]
-                                }
-                            }
-                        ]
-                    }
                 }
             }
         ],
@@ -184,61 +93,6 @@
                     "chisel_type": [
                         "snbt",
                         "\"lines\""
-                    ]
-                }
-            },
-            {
-                "function": "map_properties",
-                "options": {
-                    "axis": {
-                        "\"y\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"y\""
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"x\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"x\""
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"z\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"z\""
-                                    ]
-                                }
-                            }
-                        ]
-                    }
-                }
-            }
-        ],
-        "universal_minecraft:smooth_purpur": [
-            {
-                "function": "new_block",
-                "options": "minecraft:purpur_block"
-            },
-            {
-                "function": "new_properties",
-                "options": {
-                    "chisel_type": [
-                        "snbt",
-                        "\"smooth\""
                     ]
                 }
             },
