@@ -1,4 +1,4 @@
-from PyMCTranslate.py3.raw_text import section_string_to_raw_text_list
+from PyMCTranslate.py3.util.raw_text import section_string_to_raw_text_list
 
 
 def main(nbt):
@@ -10,5 +10,12 @@ def main(nbt):
             processed_text = section_string_to_raw_text_list(text)
 
     return [
-        ["", "compound", [("utags", "compound")], f"Text{line_num + 1}", ["string", line]] for line_num, line in enumerate(processed_text)
+        [
+            "",
+            "compound",
+            [("utags", "compound")],
+            f"Text{line_num + 1}",
+            ["string", line],
+        ]
+        for line_num, line in enumerate(processed_text)
     ]
