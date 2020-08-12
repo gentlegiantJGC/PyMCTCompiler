@@ -1,0 +1,17 @@
+{
+    "minecraft:chain": {
+        "properties_added": [
+            "axis"
+        ]
+    },
+    "minecraft:lantern": {
+        "properties_added": [
+            "waterlogged"
+        ]
+    },
+    "minecraft:soul_lantern": {
+        "properties_added": [
+            "waterlogged"
+        ]
+    }
+}
