@@ -6086,13 +6086,13 @@ def mushroom_block(color: str) -> dict:
 		count = -1
 		nearest = None
 		for data, dirs2 in directions[f'universal_minecraft:{color}_mushroom_block'].items():
-			count_temp = sum(d1 == d2 for d1, d2 in zip(dirs, dirs2))
-			if count_temp == 6:
+			matching_faces = sum(d1 == d2 for d1, d2 in zip(dirs, dirs2))
+			if matching_faces == 6:
 				nearest_map[dirs] = data
 				break
-			elif count_temp > count:
+			elif matching_faces > count and all([d2 == "\"true\"" if d1 == "\"true\"" else True for d1, d2 in zip(dirs, dirs2)]):
 				nearest = data
-				count = count_temp
+				count = matching_faces
 		else:
 			nearest_map[dirs] = nearest
 
@@ -6209,19 +6209,19 @@ def mushroom_block(color: str) -> dict:
 				{
 					"function": "new_properties",
 					"options": {
-						"block_data": "10"
+						"block_data": "15"
 					}
 				},
 				{
 					"function": "map_properties",
 					"options": {
 						"up": {
-							"\"true\"": [
+							"\"false\"": [
 								{
 									"function": "map_properties",
 									"options": {
 										"down": {
-											"\"true\"": [
+											"\"false\"": [
 												{
 													"function": "map_properties",
 													"options": {
@@ -6245,7 +6245,7 @@ def mushroom_block(color: str) -> dict:
 																												{
 																													"function": "new_properties",
 																													"options": {
-																														"block_data": "15"
+																														"block_data": "10"
 																													}
 																												}
 																											]
