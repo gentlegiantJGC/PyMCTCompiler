@@ -2009,7 +2009,38 @@ def piston_java(input_namespace: str, input_block_name: str, universal_namespace
 									"extended": extended
 								}
 							}
-						] for data8, extended in extended.items() for data7, facing in rotations.items()
+						] + [
+							{
+								"function": "new_nbt",
+								"options": [
+									{
+										"path": [["utags", "compound"]],
+										"key": "LastProgress",
+										"value": "1.0f"
+									},
+									{
+										"path": [["utags", "compound"]],
+										"key": "Progress",
+										"value": "1.0f"
+									},
+									{
+										"path": [["utags", "compound"]],
+										"key": "State",
+										"value": "2b"
+									},
+									{
+										"path": [["utags", "compound"]],
+										"key": "NewState",
+										"value": "2b"
+									},
+									{
+										"path": [["utags", "compound"]],
+										"key": "isMovable",
+										"value": "0"
+									}
+								]
+							}
+						] * bool(data8) for data8, extended in extended.items() for data7, facing in rotations.items()
 					}
 				}
 			}
