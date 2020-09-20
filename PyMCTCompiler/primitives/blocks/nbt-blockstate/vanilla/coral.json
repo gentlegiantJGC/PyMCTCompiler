@@ -1,125 +1,173 @@
 {
-    "to_universal": [
-        {
-            "function": "new_block",
-            "options": "universal_minecraft:coral"
-        },
-        {
-            "function": "map_properties",
-            "options": {
-                "coral_color": {
-                    "\"blue\"": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "type": "\"tube\""
-                            }
-                        }
-                    ],
-                    "\"pink\"": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "type": "\"brain\""
-                            }
-                        }
-                    ],
-                    "\"purple\"": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "type": "\"bubble\""
-                            }
-                        }
-                    ],
-                    "\"red\"": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "type": "\"fire\""
-                            }
-                        }
-                    ],
-                    "\"yellow\"": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "type": "\"horn\""
-                            }
-                        }
-                    ]
-                }
-            }
-        }
-    ],
-    "from_universal": {
-        "universal_minecraft:coral": [
-            {
-                "function": "new_block",
-                "options": "minecraft:coral"
-            },
-            {
-                "function": "map_properties",
-                "options": {
-                    "type": {
-                        "\"tube\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "coral_color": [
-                                        "snbt",
-                                        "\"blue\""
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"brain\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "coral_color": [
-                                        "snbt",
-                                        "\"pink\""
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"bubble\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "coral_color": [
-                                        "snbt",
-                                        "\"purple\""
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"fire\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "coral_color": [
-                                        "snbt",
-                                        "\"red\""
-                                    ]
-                                }
-                            }
-                        ],
-                        "\"horn\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "coral_color": [
-                                        "snbt",
-                                        "\"yellow\""
-                                    ]
-                                }
-                            }
-                        ]
-                    }
-                }
-            }
-        ]
-    }
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:coral"
+		},
+		{
+			"function": "map_properties",
+			"options": {
+				"coral_color": {
+					"\"blue\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"type": "\"tube\""
+							}
+						}
+					],
+					"\"pink\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"type": "\"brain\""
+							}
+						}
+					],
+					"\"purple\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"type": "\"bubble\""
+							}
+						}
+					],
+					"\"red\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"type": "\"fire\""
+							}
+						}
+					],
+					"\"yellow\"": [
+						{
+							"function": "new_properties",
+							"options": {
+								"type": "\"horn\""
+							}
+						}
+					]
+				},
+				"dead_bit": {
+					"0b": [
+						{
+							"function": "new_properties",
+							"options": {
+								"dead": [
+									"snbt",
+									"\"false\""
+								]
+							}
+						}
+					],
+					"1b": [
+						{
+							"function": "new_properties",
+							"options": {
+								"dead": [
+									"snbt",
+									"\"true\""
+								]
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:coral": [
+			{
+				"function": "new_block",
+				"options": "minecraft:coral"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"type": {
+						"\"tube\"": [
+							{
+								"function": "new_properties",
+								"options": {
+									"coral_color": [
+										"snbt",
+										"\"blue\""
+									]
+								}
+							}
+						],
+						"\"brain\"": [
+							{
+								"function": "new_properties",
+								"options": {
+									"coral_color": [
+										"snbt",
+										"\"pink\""
+									]
+								}
+							}
+						],
+						"\"bubble\"": [
+							{
+								"function": "new_properties",
+								"options": {
+									"coral_color": [
+										"snbt",
+										"\"purple\""
+									]
+								}
+							}
+						],
+						"\"fire\"": [
+							{
+								"function": "new_properties",
+								"options": {
+									"coral_color": [
+										"snbt",
+										"\"red\""
+									]
+								}
+							}
+						],
+						"\"horn\"": [
+							{
+								"function": "new_properties",
+								"options": {
+									"coral_color": [
+										"snbt",
+										"\"yellow\""
+									]
+								}
+							}
+						]
+					},
+					"dead": {
+						"\"false\"": [
+							{
+								"function": "new_properties",
+								"options": {
+									"dead_bit": [
+										"snbt",
+										"0b"
+									]
+								}
+							}
+						],
+						"\"true\"": [
+							{
+								"function": "new_properties",
+								"options": {
+									"dead_bit": [
+										"snbt",
+										"1b"
+									]
+								}
+							}
+						]
+					}
+				}
+			}
+		]
+	}
 }
