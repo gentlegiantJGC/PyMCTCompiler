@@ -418,7 +418,7 @@ def coral(input_namespace: str, input_block_name: str, material: str, dead: bool
 			{
 				"function": "new_properties",
 				"options": {
-					"type": material,
+					"coral_type": material,
 					"dead": dead
 				}
 			}
@@ -432,7 +432,7 @@ def coral(input_namespace: str, input_block_name: str, material: str, dead: bool
 				{
 					"function": "map_properties",
 					"options": {
-						"type": {
+						"coral_type": {
 							material: [
 								{
 									"function": "new_block",
@@ -476,7 +476,7 @@ def coral_fan(input_namespace: str, input_block_name: str, material: str, dead: 
 				{
 					"function": "new_properties",
 					"options": {
-						"type": material,
+						"coral_type": material,
 						"dead": dead
 					}
 				},
@@ -501,7 +501,7 @@ def coral_fan(input_namespace: str, input_block_name: str, material: str, dead: 
 					{
 						"function": "map_properties",
 						"options": {
-							"type": {
+							"coral_type": {
 								material: [
 									{
 										"function": "new_block",
@@ -556,7 +556,7 @@ def coral_fan(input_namespace: str, input_block_name: str, material: str, dead: 
 				{
 					"function": "new_properties",
 					"options": {
-						"type": material,
+						"coral_type": material,
 						"dead": dead,
 						"facing": "\"up\""
 					}
@@ -571,7 +571,7 @@ def coral_fan(input_namespace: str, input_block_name: str, material: str, dead: 
 					{
 						"function": "map_properties",
 						"options": {
-							"type": {
+							"coral_type": {
 								material: [
 									{
 										"function": "new_block",
@@ -865,7 +865,7 @@ def plant(input_namespace: str, input_block_name: str, universal_namespace: str 
 	return single_map(
 		input_namespace,
 		input_block_name,
-		"type",
+		"plant_type",
 		flower,
 		"minecraft:dandelion",
 		universal_namespace,
@@ -880,7 +880,7 @@ def double_plant(input_namespace: str, input_block_name: str, universal_namespac
 	return single_map(
 		input_namespace,
 		input_block_name,
-		"type",
+		"plant_type",
 		flower,
 		"minecraft:dandelion",
 		universal_namespace,

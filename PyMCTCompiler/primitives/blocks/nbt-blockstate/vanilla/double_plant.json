@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "\"sunflower\""
+                                "plant_type": "\"sunflower\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "\"lilac\""
+                                "plant_type": "\"lilac\""
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "\"tall_grass\""
+                                "plant_type": "\"tall_grass\""
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "\"large_fern\""
+                                "plant_type": "\"large_fern\""
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "\"rose_bush\""
+                                "plant_type": "\"rose_bush\""
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "\"peony\""
+                                "plant_type": "\"peony\""
                             }
                         }
                     ]
@@ -87,7 +87,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "type": {
+                    "plant_type": {
                         "\"sunflower\"": [
                             {
                                 "function": "new_properties",

@@ -13,7 +13,7 @@
 							"options": {
 								"facing": "\"west\"",
 								"dead": "\"false\"",
-								"type": "\"horn\""
+								"coral_type": "\"horn\""
 							}
 						}
 					],
@@ -26,7 +26,7 @@
 							"options": {
 								"facing": "\"west\"",
 								"dead": "\"true\"",
-								"type": "\"horn\""
+								"coral_type": "\"horn\""
 							}
 						}
 					],
@@ -39,7 +39,7 @@
 							"options": {
 								"facing": "\"east\"",
 								"dead": "\"false\"",
-								"type": "\"horn\""
+								"coral_type": "\"horn\""
 							}
 						}
 					],
@@ -52,7 +52,7 @@
 							"options": {
 								"facing": "\"east\"",
 								"dead": "\"true\"",
-								"type": "\"horn\""
+								"coral_type": "\"horn\""
 							}
 						}
 					],
@@ -65,7 +65,7 @@
 							"options": {
 								"facing": "\"north\"",
 								"dead": "\"false\"",
-								"type": "\"horn\""
+								"coral_type": "\"horn\""
 							}
 						}
 					],
@@ -78,7 +78,7 @@
 							"options": {
 								"facing": "\"north\"",
 								"dead": "\"true\"",
-								"type": "\"horn\""
+								"coral_type": "\"horn\""
 							}
 						}
 					],
@@ -91,7 +91,7 @@
 							"options": {
 								"facing": "\"south\"",
 								"dead": "\"false\"",
-								"type": "\"horn\""
+								"coral_type": "\"horn\""
 							}
 						}
 					],
@@ -104,7 +104,7 @@
 							"options": {
 								"facing": "\"south\"",
 								"dead": "\"true\"",
-								"type": "\"horn\""
+								"coral_type": "\"horn\""
 							}
 						}
 					]
@@ -130,7 +130,7 @@
 											{
 												"function": "map_properties",
 												"options": {
-													"type": {
+													"coral_type": {
 														"\"horn\"": [
 															{
 																"function": "new_properties",
@@ -150,7 +150,7 @@
 											{
 												"function": "map_properties",
 												"options": {
-													"type": {
+													"coral_type": {
 														"\"horn\"": [
 															{
 																"function": "new_properties",
@@ -179,7 +179,7 @@
 											{
 												"function": "map_properties",
 												"options": {
-													"type": {
+													"coral_type": {
 														"\"horn\"": [
 															{
 																"function": "new_properties",
@@ -199,7 +199,7 @@
 											{
 												"function": "map_properties",
 												"options": {
-													"type": {
+													"coral_type": {
 														"\"horn\"": [
 															{
 																"function": "new_properties",
@@ -228,7 +228,7 @@
 											{
 												"function": "map_properties",
 												"options": {
-													"type": {
+													"coral_type": {
 														"\"horn\"": [
 															{
 																"function": "new_properties",
@@ -248,7 +248,7 @@
 											{
 												"function": "map_properties",
 												"options": {
-													"type": {
+													"coral_type": {
 														"\"horn\"": [
 															{
 																"function": "new_properties",
@@ -277,7 +277,7 @@
 											{
 												"function": "map_properties",
 												"options": {
-													"type": {
+													"coral_type": {
 														"\"horn\"": [
 															{
 																"function": "new_properties",
@@ -297,7 +297,7 @@
 											{
 												"function": "map_properties",
 												"options": {
-													"type": {
+													"coral_type": {
 														"\"horn\"": [
 															{
 																"function": "new_properties",
@@ -326,12 +326,12 @@
 		"properties": {
 			"facing": ["\"west\"", "\"east\"", "\"north\"", "\"south\""],
 			"dead": ["\"false\"", "\"true\""],
-			"type": ["\"horn\""]
+			"coral_type": ["\"horn\""]
 		},
 		"defaults": {
 			"facing": "\"west\"",
 			"dead": "\"false\"",
-			"type": "\"horn\""
+			"coral_type": "\"horn\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -343,7 +343,7 @@
 			"options": {
 				"facing": ["\"west\"", "\"east\"", "\"north\"", "\"south\""],
 				"dead": ["\"false\"", "\"true\""],
-				"type": ["\"horn\""]
+				"coral_type": ["\"horn\""]
 			}
 		}
 	],
@@ -365,14 +365,14 @@
 											{
 												"function": "map_properties",
 												"options": {
-													"type": {
+													"coral_type": {
 														"\"horn\"": [
 															{
 																"function": "new_properties",
 																"options": {
 																	"facing": "\"west\"",
 																	"dead": "\"false\"",
-																	"type": "\"horn\""
+																	"coral_type": "\"horn\""
 																}
 															}, {
 																"function": "new_block",
@@ -387,14 +387,14 @@
 											{
 												"function": "map_properties",
 												"options": {
-													"type": {
+													"coral_type": {
 														"\"horn\"": [
 															{
 																"function": "new_properties",
 																"options": {
 																	"facing": "\"west\"",
 																	"dead": "\"true\"",
-																	"type": "\"horn\""
+																	"coral_type": "\"horn\""
 																}
 															}, {
 																"function": "new_block",
@@ -418,14 +418,14 @@
 											{
 												"function": "map_properties",
 												"options": {
-													"type": {
+													"coral_type": {
 														"\"horn\"": [
 															{
 																"function": "new_properties",
 																"options": {
 																	"facing": "\"east\"",
 																	"dead": "\"false\"",
-																	"type": "\"horn\""
+																	"coral_type": "\"horn\""
 																}
 															}, {
 																"function": "new_block",
@@ -440,14 +440,14 @@
 											{
 												"function": "map_properties",
 												"options": {
-													"type": {
+													"coral_type": {
 														"\"horn\"": [
 															{
 																"function": "new_properties",
 																"options": {
 																	"facing": "\"east\"",
 																	"dead": "\"true\"",
-																	"type": "\"horn\""
+																	"coral_type": "\"horn\""
 																}
 															}, {
 																"function": "new_block",
@@ -471,14 +471,14 @@
 											{
 												"function": "map_properties",
 												"options": {
-													"type": {
+													"coral_type": {
 														"\"horn\"": [
 															{
 																"function": "new_properties",
 																"options": {
 																	"facing": "\"north\"",
 																	"dead": "\"false\"",
-																	"type": "\"horn\""
+																	"coral_type": "\"horn\""
 																}
 															}, {
 																"function": "new_block",
@@ -493,14 +493,14 @@
 											{
 												"function": "map_properties",
 												"options": {
-													"type": {
+													"coral_type": {
 														"\"horn\"": [
 															{
 																"function": "new_properties",
 																"options": {
 																	"facing": "\"north\"",
 																	"dead": "\"true\"",
-																	"type": "\"horn\""
+																	"coral_type": "\"horn\""
 																}
 															}, {
 																"function": "new_block",
@@ -524,14 +524,14 @@
 											{
 												"function": "map_properties",
 												"options": {
-													"type": {
+													"coral_type": {
 														"\"horn\"": [
 															{
 																"function": "new_properties",
 																"options": {
 																	"facing": "\"south\"",
 																	"dead": "\"false\"",
-																	"type": "\"horn\""
+																	"coral_type": "\"horn\""
 																}
 															}, {
 																"function": "new_block",
@@ -546,14 +546,14 @@
 											{
 												"function": "map_properties",
 												"options": {
-													"type": {
+													"coral_type": {
 														"\"horn\"": [
 															{
 																"function": "new_properties",
 																"options": {
 																	"facing": "\"south\"",
 																	"dead": "\"true\"",
-																	"type": "\"horn\""
+																	"coral_type": "\"horn\""
 																}
 															}, {
 																"function": "new_block",

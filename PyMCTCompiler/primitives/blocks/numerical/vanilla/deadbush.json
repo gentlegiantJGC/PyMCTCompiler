@@ -12,7 +12,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"type": "\"dead_bush\""
+								"plant_type": "\"dead_bush\""
 							}
 						}
 					]
@@ -25,7 +25,7 @@
 			{
 				"function": "map_properties",
 				"options": {
-					"type": {
+					"plant_type": {
 						"\"dead_bush\"": [
 							{
 								"function": "new_block",
@@ -51,7 +51,7 @@
 		{
 			"function": "new_properties",
 			"options": {
-				"type": "\"dead_bush\""
+				"plant_type": "\"dead_bush\""
 			}
 		}
 	],
@@ -60,7 +60,7 @@
 			{
 				"function": "map_properties",
 				"options": {
-					"type": {
+					"plant_type": {
 						"\"dead_bush\"": [
 							{
 								"function": "new_block",

@@ -46,7 +46,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "\"tube\""
+                                "coral_type": "\"tube\""
                             }
                         }
                     ],
@@ -54,7 +54,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "\"brain\""
+                                "coral_type": "\"brain\""
                             }
                         }
                     ]
@@ -127,7 +127,7 @@
                                             }
                                         ]
                                     },
-                                    "type": {
+                                    "coral_type": {
                                         "\"tube\"": [
                                             {
                                                 "function": "new_block",
@@ -199,7 +199,7 @@
                                             }
                                         ]
                                     },
-                                    "type": {
+                                    "coral_type": {
                                         "\"tube\"": [
                                             {
                                                 "function": "new_block",
@@ -271,7 +271,7 @@
                                             }
                                         ]
                                     },
-                                    "type": {
+                                    "coral_type": {
                                         "\"tube\"": [
                                             {
                                                 "function": "new_block",
@@ -343,7 +343,7 @@
                                             }
                                         ]
                                     },
-                                    "type": {
+                                    "coral_type": {
                                         "\"tube\"": [
                                             {
                                                 "function": "new_block",

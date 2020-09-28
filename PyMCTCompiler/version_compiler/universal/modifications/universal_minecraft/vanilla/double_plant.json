@@ -10,7 +10,7 @@
 	"add": {
 		"double_plant": {
 			"properties": {
-				"type": [
+				"plant_type": [
 					"\"sunflower\"",
 					"\"lilac\"",
 					"\"rose_bush\"",
@@ -24,7 +24,7 @@
 				]
 			},
 			"defaults": {
-				"type": "\"sunflower\"",
+				"plant_type": "\"sunflower\"",
 				"half": "\"lower\""
 			}
 		}

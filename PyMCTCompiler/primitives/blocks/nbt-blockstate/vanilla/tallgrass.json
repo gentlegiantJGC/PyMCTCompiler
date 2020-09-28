@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "\"grass\""
+                                "plant_type": "\"grass\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "\"grass\""
+                                "plant_type": "\"grass\""
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "\"fern\""
+                                "plant_type": "\"fern\""
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "type": "\"grass\""
+                                "plant_type": "\"grass\""
                             }
                         }
                     ]
@@ -53,7 +53,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "type": {
+                    "plant_type": {
                         "\"grass\"": [
                             {
                                 "function": "new_block",

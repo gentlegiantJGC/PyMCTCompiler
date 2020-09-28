@@ -12,7 +12,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"type": "\"dandelion\""
+								"plant_type": "\"dandelion\""
 							}
 						}
 					]
@@ -25,7 +25,7 @@
 			{
 				"function": "map_properties",
 				"options": {
-					"type": {
+					"plant_type": {
 						"\"dandelion\"": [
 							{
 								"function": "new_block",
@@ -51,7 +51,7 @@
 		{
 			"function": "new_properties",
 			"options": {
-				"type": "\"dandelion\""
+				"plant_type": "\"dandelion\""
 			}
 		}
 	],
@@ -60,7 +60,7 @@
 			{
 				"function": "map_properties",
 				"options": {
-					"type": {
+					"plant_type": {
 						"\"dandelion\"": [
 							{
 								"function": "new_block",

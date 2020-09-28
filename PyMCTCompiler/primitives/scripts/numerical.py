@@ -4976,7 +4976,7 @@ def coral(input_namespace: str, input_block_name: str, universal_namespace: str 
 							{
 								"function": "new_properties",
 								"options": {
-									"type": material
+									"coral_type": material
 								}
 							}
 						] for data, material in {0: "\"tube\"", 1: "\"brain\"", 2: "\"bubble\"", 3: "\"fire\"", 4: "\"horn\""}.items()
@@ -4993,7 +4993,7 @@ def coral(input_namespace: str, input_block_name: str, universal_namespace: str 
 				{
 					"function": "map_properties",
 					"options": {
-						"type": {
+						"coral_type": {
 							material: [
 								{
 									"function": "new_properties",
@@ -5009,7 +5009,7 @@ def coral(input_namespace: str, input_block_name: str, universal_namespace: str 
 		},
 		"blockstate_specification": {
 			"properties": {
-				"type": [
+				"coral_type": [
 					"\"tube\"",
 					"\"brain\"",
 					"\"bubble\"",
@@ -5018,7 +5018,7 @@ def coral(input_namespace: str, input_block_name: str, universal_namespace: str 
 				]
 			},
 			"defaults": {
-				"type": "\"tube\""
+				"coral_type": "\"tube\""
 			}
 		},
 		"blockstate_to_universal": [
@@ -5029,7 +5029,7 @@ def coral(input_namespace: str, input_block_name: str, universal_namespace: str 
 			{
 				"function": "carry_properties",
 				"options": {
-					"type": [
+					"coral_type": [
 						"\"tube\"",
 						"\"brain\"",
 						"\"bubble\"",
@@ -5048,7 +5048,7 @@ def coral(input_namespace: str, input_block_name: str, universal_namespace: str 
 				{
 					"function": "carry_properties",
 					"options": {
-						"type": [
+						"coral_type": [
 							"\"tube\"",
 							"\"brain\"",
 							"\"bubble\"",
@@ -5081,7 +5081,7 @@ def coral_block(input_namespace: str, input_block_name: str, universal_namespace
 							{
 								"function": "new_properties",
 								"options": {
-									"type": {0: "\"tube\"", 1: "\"brain\"", 2: "\"bubble\"", 3: "\"fire\"", 4: "\"horn\""}[data & 7],
+									"coral_type": {0: "\"tube\"", 1: "\"brain\"", 2: "\"bubble\"", 3: "\"fire\"", 4: "\"horn\""}[data & 7],
 									"dead": {0: "\"false\"", 8: "\"true\""}[data & 8]
 								}
 							}
@@ -5104,7 +5104,7 @@ def coral_block(input_namespace: str, input_block_name: str, universal_namespace
 								{
 									"function": "map_properties",
 									"options": {
-										"type": {
+										"coral_type": {
 											material: [
 												{
 													"function": "new_properties",
@@ -5124,7 +5124,7 @@ def coral_block(input_namespace: str, input_block_name: str, universal_namespace
 		},
 		"blockstate_specification": {
 			"properties": {
-				"type": [
+				"coral_type": [
 					"\"tube\"",
 					"\"brain\"",
 					"\"bubble\"",
@@ -5137,7 +5137,7 @@ def coral_block(input_namespace: str, input_block_name: str, universal_namespace
 				]
 			},
 			"defaults": {
-				"type": "\"tube\"",
+				"coral_type": "\"tube\"",
 				"dead": "\"false\""
 			}
 		},
@@ -5149,7 +5149,7 @@ def coral_block(input_namespace: str, input_block_name: str, universal_namespace
 			{
 				"function": "carry_properties",
 				"options": {
-					"type": [
+					"coral_type": [
 						"\"tube\"",
 						"\"brain\"",
 						"\"bubble\"",
@@ -5172,7 +5172,7 @@ def coral_block(input_namespace: str, input_block_name: str, universal_namespace
 				{
 					"function": "carry_properties",
 					"options": {
-						"type": [
+						"coral_type": [
 							"\"tube\"",
 							"\"brain\"",
 							"\"bubble\"",

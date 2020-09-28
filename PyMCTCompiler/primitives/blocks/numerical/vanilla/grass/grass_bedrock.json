@@ -12,7 +12,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"type": "\"grass\""
+								"plant_type": "\"grass\""
 							}
 						}
 					],
@@ -24,7 +24,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"type": "\"grass\""
+								"plant_type": "\"grass\""
 							}
 						}
 					],
@@ -36,7 +36,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"type": "\"fern\""
+								"plant_type": "\"fern\""
 							}
 						}
 					],
@@ -48,7 +48,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"type": "\"fern\""
+								"plant_type": "\"fern\""
 							}
 						}
 					]
@@ -61,7 +61,7 @@
 			{
 				"function": "map_properties",
 				"options": {
-					"type": {
+					"plant_type": {
 						"\"grass\"": [
 							{
 								"function": "new_block",
@@ -93,20 +93,20 @@
 	},
 	"blockstate_specification": {
 		"properties": {
-			"type": [
+			"plant_type": [
 				"\"grass\"",
 				"\"fern\""
 			]
 		},
 		"defaults": {
-			"type": "\"grass\""
+			"plant_type": "\"grass\""
 		}
 	},
 	"blockstate_to_universal": [
 		{
 			"function": "map_properties",
 			"options": {
-				"type": {
+				"plant_type": {
 					"\"grass\"": [
 						{
 							"function": "new_block",
@@ -115,7 +115,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"type": "\"grass\""
+								"plant_type": "\"grass\""
 							}
 						}
 					],
@@ -127,7 +127,7 @@
 						{
 							"function": "new_properties",
 							"options": {
-								"type": "\"fern\""
+								"plant_type": "\"fern\""
 							}
 						}
 					]
@@ -140,7 +140,7 @@
 			{
 				"function": "map_properties",
 				"options": {
-					"type": {
+					"plant_type": {
 						"\"grass\"": [
 							{
 								"function": "new_block",
@@ -149,7 +149,7 @@
 							{
 								"function": "new_properties",
 								"options": {
-									"type": "\"grass\""
+									"plant_type": "\"grass\""
 								}
 							}
 						],
@@ -161,7 +161,7 @@
 							{
 								"function": "new_properties",
 								"options": {
-									"type": "\"fern\""
+									"plant_type": "\"fern\""
 								}
 							}
 						]

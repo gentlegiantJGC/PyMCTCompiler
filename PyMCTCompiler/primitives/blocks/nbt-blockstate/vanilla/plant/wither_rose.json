@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "type": "\"wither_rose\""
+                "plant_type": "\"wither_rose\""
             }
         }
     ],
@@ -20,7 +20,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "type": {
+                    "plant_type": {
                         "\"wither_rose\"": [
                             {
                                 "function": "new_block",

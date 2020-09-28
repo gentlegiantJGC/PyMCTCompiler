@@ -13,7 +13,7 @@
 							"options": {
 								"facing": "\"up\"",
 								"dead": "\"true\"",
-								"type": "\"tube\""
+								"coral_type": "\"tube\""
 							}
 						}
 					],
@@ -26,7 +26,7 @@
 							"options": {
 								"facing": "\"up\"",
 								"dead": "\"true\"",
-								"type": "\"brain\""
+								"coral_type": "\"brain\""
 							}
 						}
 					],
@@ -39,7 +39,7 @@
 							"options": {
 								"facing": "\"up\"",
 								"dead": "\"true\"",
-								"type": "\"bubble\""
+								"coral_type": "\"bubble\""
 							}
 						}
 					],
@@ -52,7 +52,7 @@
 							"options": {
 								"facing": "\"up\"",
 								"dead": "\"true\"",
-								"type": "\"fire\""
+								"coral_type": "\"fire\""
 							}
 						}
 					],
@@ -65,7 +65,7 @@
 							"options": {
 								"facing": "\"up\"",
 								"dead": "\"true\"",
-								"type": "\"horn\""
+								"coral_type": "\"horn\""
 							}
 						}
 					]
@@ -91,7 +91,7 @@
 											{
 												"function": "map_properties",
 												"options": {
-													"type": {
+													"coral_type": {
 														"\"tube\"": [
 															{
 																"function": "new_properties",
@@ -162,10 +162,10 @@
 	},
 	"blockstate_specification": {
 		"properties": {
-			"type": ["\"tube\"", "\"brain\"", "\"bubble\"", "\"fire\"", "\"horn\""]
+			"coral_type": ["\"tube\"", "\"brain\"", "\"bubble\"", "\"fire\"", "\"horn\""]
 		},
 		"defaults": {
-			"type": "\"tube\""
+			"coral_type": "\"tube\""
 		}
 	},
 	"blockstate_to_universal": [
@@ -175,7 +175,7 @@
 		}, {
 			"function": "carry_properties",
 			"options": {
-				"type": ["\"tube\"", "\"brain\"", "\"bubble\"", "\"fire\"", "\"horn\""]
+				"coral_type": ["\"tube\"", "\"brain\"", "\"bubble\"", "\"fire\"", "\"horn\""]
 			}
 		}, {
 			"function": "new_properties",
@@ -207,12 +207,12 @@
 											{
 												"function": "map_properties",
 												"options": {
-													"type": {
+													"coral_type": {
 														"\"tube\"": [
 															{
 																"function": "new_properties",
 																"options": {
-																	"type": "\"tube\""
+																	"coral_type": "\"tube\""
 																}
 															}
 														],
@@ -220,7 +220,7 @@
 															{
 																"function": "new_properties",
 																"options": {
-																	"type": "\"brain\""
+																	"coral_type": "\"brain\""
 																}
 															}
 														],
@@ -228,7 +228,7 @@
 															{
 																"function": "new_properties",
 																"options": {
-																	"type": "\"bubble\""
+																	"coral_type": "\"bubble\""
 																}
 															}
 														],
@@ -236,7 +236,7 @@
 															{
 																"function": "new_properties",
 																"options": {
-																	"type": "\"fire\""
+																	"coral_type": "\"fire\""
 																}
 															}
 														],
@@ -244,7 +244,7 @@
 															{
 																"function": "new_properties",
 																"options": {
-																	"type": "\"horn\""
+																	"coral_type": "\"horn\""
 																}
 															}
 														]

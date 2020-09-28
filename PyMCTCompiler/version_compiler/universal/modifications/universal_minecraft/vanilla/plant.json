@@ -20,7 +20,7 @@
 	"add": {
 		"plant": {
 			"properties": {
-				"type": [
+				"plant_type": [
 					"\"dandelion\"",
 					"\"poppy\"",
 					"\"blue_orchid\"",
@@ -40,7 +40,7 @@
 				]
 			},
 			"defaults": {
-				"type": "\"dandelion\""
+				"plant_type": "\"dandelion\""
 			}
 		}
 	}
