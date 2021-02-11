@@ -1,0 +1,22 @@
+{
+    "minecraft:stripped_crimson_hyphae": {
+        "properties_removed": [
+            "deprecated"
+        ]
+    },
+    "minecraft:stripped_crimson_stem": {
+        "properties_removed": [
+            "deprecated"
+        ]
+    },
+    "minecraft:stripped_warped_hyphae": {
+        "properties_removed": [
+            "deprecated"
+        ]
+    },
+    "minecraft:stripped_warped_stem": {
+        "properties_removed": [
+            "deprecated"
+        ]
+    }
+}

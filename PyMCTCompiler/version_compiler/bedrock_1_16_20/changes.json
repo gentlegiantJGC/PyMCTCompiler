@@ -1,0 +1,30 @@
+{
+    "minecraft:beehive": {
+        "properties_removed": [
+            "facing_direction"
+        ],
+        "properties_added": [
+            "direction"
+        ]
+    },
+    "minecraft:bee_nest": {
+        "properties_removed": [
+            "facing_direction"
+        ],
+        "properties_added": [
+            "direction"
+        ]
+    },
+    "minecraft:chain": {
+        "properties_added": [
+            "pillar_axis"
+        ]
+    },
+    "minecraft:unknown": {
+        "block_added": {
+            "properties": {},
+            "defaults": {},
+            "types": {}
+        }
+    }
+}
