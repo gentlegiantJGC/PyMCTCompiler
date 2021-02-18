@@ -2285,6 +2285,10 @@ def double_slab(
 						"type": {
 							"\"double\"": [
 								{
+									"function": "new_block",
+									"options": "minecraft:double_stone_slab"
+								},
+								{
 									"function": "map_properties",
 									"options": {
 										"material": {
@@ -2413,6 +2417,16 @@ def slab(input_namespace: str, input_block_name: str, block_types: List[str], un
 					"options": {
 						"type": {
 							position: [
+								{
+									"function": "new_block",
+									"options": "minecraft:stone_slab"
+								},
+								{
+									"function": "new_properties",
+									"options": {
+										"block_data": str(data8 * 8)
+									}
+								},
 								{
 									"function": "map_properties",
 									"options": {
