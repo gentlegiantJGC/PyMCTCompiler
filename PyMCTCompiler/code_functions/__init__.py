@@ -34,6 +34,8 @@ def save(path):
     if os.path.isdir(path):
         shutil.rmtree(path)
     os.makedirs(path)
+    with open(os.path.join(path, '__init__.py'), 'w') as l_:
+        pass
     for code_function_name in used_code_primitives:
         code_function = code_primitives[code_function_name]
         with open(os.path.join(path, f'{code_function_name}.py'), 'w') as l_:
