@@ -37,7 +37,7 @@ Java
 _J114 = NBTRemapHelper(
     [
         (
-            ("book", "compound", []),
+            ("Book", "compound", []),
             ("Book", "compound", [("utags", "compound")])
         ),
         (
