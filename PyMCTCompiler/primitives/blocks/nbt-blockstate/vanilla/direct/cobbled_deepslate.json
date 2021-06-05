@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:cobbled_deepslate"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:cobbled_deepslate": [
+            {
+                "function": "new_block",
+                "options": "minecraft:cobbled_deepslate"
+            }
+        ]
+    }
+}

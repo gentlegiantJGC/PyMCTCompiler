@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:amethyst_block"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:amethyst_block": [
+            {
+                "function": "new_block",
+                "options": "minecraft:amethyst_block"
+            }
+        ]
+    }
+}

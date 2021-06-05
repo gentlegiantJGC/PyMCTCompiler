@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:waxed_exposed_cut_copper"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:waxed_exposed_cut_copper": [
+            {
+                "function": "new_block",
+                "options": "minecraft:waxed_exposed_cut_copper"
+            }
+        ]
+    }
+}

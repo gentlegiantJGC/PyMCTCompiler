@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:chiseled_deepslate"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:chiseled_deepslate": [
+            {
+                "function": "new_block",
+                "options": "minecraft:chiseled_deepslate"
+            }
+        ]
+    }
+}

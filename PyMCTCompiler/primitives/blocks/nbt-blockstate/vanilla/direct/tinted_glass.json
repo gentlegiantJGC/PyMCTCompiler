@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:tinted_glass"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:tinted_glass": [
+            {
+                "function": "new_block",
+                "options": "minecraft:tinted_glass"
+            }
+        ]
+    }
+}

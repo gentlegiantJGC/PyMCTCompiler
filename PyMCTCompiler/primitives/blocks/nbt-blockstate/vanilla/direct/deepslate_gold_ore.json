@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:deepslate_gold_ore"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:deepslate_gold_ore": [
+            {
+                "function": "new_block",
+                "options": "minecraft:deepslate_gold_ore"
+            }
+        ]
+    }
+}

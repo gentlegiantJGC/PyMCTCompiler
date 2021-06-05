@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:powder_snow"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:powder_snow": [
+            {
+                "function": "new_block",
+                "options": "minecraft:powder_snow"
+            }
+        ]
+    }
+}

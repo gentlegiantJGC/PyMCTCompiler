@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:hanging_roots"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:hanging_roots": [
+            {
+                "function": "new_block",
+                "options": "minecraft:hanging_roots"
+            }
+        ]
+    }
+}

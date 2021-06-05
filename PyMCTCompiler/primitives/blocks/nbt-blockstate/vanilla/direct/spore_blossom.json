@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:spore_blossom"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:spore_blossom": [
+            {
+                "function": "new_block",
+                "options": "minecraft:spore_blossom"
+            }
+        ]
+    }
+}

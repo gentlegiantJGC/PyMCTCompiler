@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:cracked_deepslate_tiles"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:cracked_deepslate_tiles": [
+            {
+                "function": "new_block",
+                "options": "minecraft:cracked_deepslate_tiles"
+            }
+        ]
+    }
+}
