@@ -1,6 +1,6 @@
 from typing import Set
 import copy
-from PyMCTCompiler.translation_functions import BaseTranslationFunction, FunctionList
+from PyMCTCompiler.translation_functions.base_translation_function import BaseTranslationFunction, FunctionList
 
 
 class MapBlockName(BaseTranslationFunction):

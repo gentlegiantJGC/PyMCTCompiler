@@ -1,6 +1,7 @@
 from typing import Set
 import copy
-from PyMCTCompiler.translation_functions import BaseTranslationFunction, FunctionList, extend_feature_set
+from PyMCTCompiler import translation_functions
+from PyMCTCompiler.translation_functions.base_translation_function import BaseTranslationFunction, FunctionList
 from PyMCTCompiler.helpers import log_to_file
 
 
@@ -42,7 +43,7 @@ class WalkInputNBT(BaseTranslationFunction):
 			assert isinstance(self['path'], list)
 			assert all(isinstance(p, list) and len(p) == 2 and isinstance(p[0], (int, str)) and isinstance(p[1], str) for p in self['path'])
 		feature_set_ = copy.deepcopy(feature_set)
-		for function_name in extend_feature_set.get(self.function_name, []):
+		for function_name in translation_functions.extend_feature_set.get(self.function_name, []):
 			feature_set_.add(function_name)
 		self['options'].commit(feature_set_, parents)
 

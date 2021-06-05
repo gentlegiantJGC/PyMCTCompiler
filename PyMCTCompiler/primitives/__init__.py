@@ -5,7 +5,7 @@ import copy
 from typing import Union, List, Dict
 import amulet_nbt
 from amulet_nbt import TAG_Compound
-from PyMCTCompiler.translation_functions import FunctionList
+from PyMCTCompiler.translation_functions.base_translation_function import FunctionList
 
 
 def _load_file(path: str) -> dict:

@@ -6,7 +6,7 @@ import hashlib
 import PyMCTCompiler
 from PyMCTCompiler.helpers import log_to_file, check_specification_format
 if TYPE_CHECKING:
-	from PyMCTCompiler.translation_functions import FunctionList
+	from PyMCTCompiler.translation_functions.base_translation_function import FunctionList
 
 
 class DiskBuffer:

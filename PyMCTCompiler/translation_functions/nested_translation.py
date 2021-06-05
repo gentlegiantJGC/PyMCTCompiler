@@ -1,6 +1,6 @@
 from typing import Set, List
 import copy
-from PyMCTCompiler.translation_functions import BaseTranslationFunction, FunctionList
+from PyMCTCompiler.translation_functions.base_translation_function import BaseTranslationFunction, FunctionList
 from PyMCTCompiler.disk_buffer import disk_buffer
 
 

@@ -2,7 +2,7 @@ import os
 import traceback
 import copy
 from typing import Union, List, Dict, Set
-from PyMCTCompiler.translation_functions import FunctionList
+from PyMCTCompiler.translation_functions.base_translation_function import FunctionList
 from PyMCTCompiler.primitives import _load_file
 
 print('Loading Nested Primitives ...')

@@ -4,9 +4,11 @@ import glob
 import json
 import copy
 
+import PyMCTCompiler
 from PyMCTCompiler.helpers import log_to_file
 from PyMCTCompiler.disk_buffer import disk_buffer
-from PyMCTCompiler.translation_functions import FunctionList, NewBlock
+from PyMCTCompiler.translation_functions.base_translation_function import FunctionList
+from PyMCTCompiler.translation_functions import NewBlock
 
 
 class BaseCompiler:
@@ -93,8 +95,8 @@ class BaseCompiler:
     def _load_parent(self):
         if not self._loaded_parent:
             if self._parent_name is not None:
-                if hasattr(version_compiler, self._parent_name) and hasattr(getattr(version_compiler, self._parent_name), 'compiler'):
-                    self._parent = getattr(version_compiler, self._parent_name).compiler
+                if hasattr(PyMCTCompiler.version_compiler, self._parent_name) and hasattr(getattr(PyMCTCompiler.version_compiler, self._parent_name), 'compiler'):
+                    self._parent = getattr(PyMCTCompiler.version_compiler, self._parent_name).compiler
                 else:
                     log_to_file(f'Could not find version {self._parent_name}')
             self._loaded_parent = True
@@ -187,6 +189,7 @@ class BaseCompiler:
         # ensure that every state in the universal format gets mapped to something
         for key, fun in disk_buffer.translations['from_universal'].items():
             if len(key) == 6 and key[0] == self.version_name and key[1] == 'block' and isinstance(fun, FunctionList) and not any(isinstance(sub_fun, NewBlock) for sub_fun in fun.function_list):
+                log_to_file(f"Missing default block in {key}")
                 fun.function_list.insert(
                     0,
                     NewBlock(
@@ -225,6 +228,3 @@ class BaseCompiler:
             if universal_biome not in biomes["universal2version"]:
                 biomes["universal2version"][universal_biome] = biomes["universal2version"][version_biome]
         disk_buffer.save_json_object(('versions', self.version_name, '__biome_data__'), biomes)
-
-
-from PyMCTCompiler import version_compiler

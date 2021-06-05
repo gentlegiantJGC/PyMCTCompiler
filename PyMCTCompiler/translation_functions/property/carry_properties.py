@@ -1,6 +1,6 @@
 from typing import Set
 from PyMCTCompiler.helpers import remove_list_duplicates
-from PyMCTCompiler.translation_functions import BaseTranslationFunction
+from PyMCTCompiler.translation_functions.base_translation_function import BaseTranslationFunction
 from PyMCTCompiler.helpers import verify_snbt, verify_string
 
 

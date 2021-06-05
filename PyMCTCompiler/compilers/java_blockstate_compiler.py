@@ -7,7 +7,7 @@ import PyMCTCompiler
 from PyMCTCompiler import primitives
 from PyMCTCompiler.disk_buffer import disk_buffer
 from PyMCTCompiler.helpers import blocks_from_server, load_json_file
-from PyMCTCompiler.translation_functions import FunctionList
+from PyMCTCompiler.translation_functions.base_translation_function import FunctionList
 
 
 def minify_blocks(blocks: dict) -> dict:
