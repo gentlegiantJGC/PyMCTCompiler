@@ -114,7 +114,7 @@ property_name_remap = {
     "explode_bit": ["unstable", bool_map],
     "extinguished": ["lit", {"0": "true", "1": "false"}],
     "facing_direction": [
-        "facing_direction",
+        "facing",
         {"0": "down", "1": "up", "2": "north", "3": "south", "4": "west", "5": "east"},
     ],
     "fill_level": ["level", {}],
@@ -227,14 +227,17 @@ property_name_remap = {
         {"0": "east", "1": "west", "2": "south", "3": "north"},
     ],
     "wood_type": ["material", {}],
+    "wall_connection_type_north": ["north", {"none": "none", "short": "low", "tall": "tall"}],
+    "wall_connection_type_east": ["east", {"none": "none", "short": "low", "tall": "tall"}],
+    "wall_connection_type_south": ["south", {"none": "none", "short": "low", "tall": "tall"}],
+    "wall_connection_type_west": ["west", {"none": "none", "short": "low", "tall": "tall"}],
+    "big_dripleaf_tilt": ["tilt", {
+        "none": "none",
+        "unstable": "unstable",
+        "partial_tilt": "partial",
+        "full_tilt": "full"
+    }]
 }
-
-for key, val in property_name_remap.items():
-    val_ = val[1]
-    for snbt in val_.values():
-        if amulet_nbt.from_snbt(snbt).to_snbt() != snbt:
-            print(key)
-
 
 with open("block_palette") as f:
     block_palette = json.load(f)
@@ -298,10 +301,10 @@ for (namespace, base_name), block in blocks.items():
                                         ): (
                                             amulet_nbt.from_snbt(
                                                 property_name_remap[prop][1][val]
+                                                if prop in property_name_remap
+                                                and val in property_name_remap[prop][1]
+                                                else val
                                             ).to_snbt()
-                                            if prop in property_name_remap
-                                            and val in property_name_remap[prop][1]
-                                            else val
                                         )
                                     },
                                 }
@@ -325,10 +328,10 @@ for (namespace, base_name), block in blocks.items():
                             (
                                 amulet_nbt.from_snbt(
                                     property_name_remap[prop][1][val]
+                                    if prop in property_name_remap
+                                    and val in property_name_remap[prop][1]
+                                    else val
                                 ).to_snbt()
-                                if prop in property_name_remap
-                                and val in property_name_remap[prop][1]
-                                else val
                             ): [
                                 {
                                     "function": "new_properties",
