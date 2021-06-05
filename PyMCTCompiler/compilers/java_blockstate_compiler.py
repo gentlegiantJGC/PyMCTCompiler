@@ -69,9 +69,10 @@ class JavaBlockstateCompiler(BaseCompiler):
 
     @property
     def always_waterlogged(self) -> List[str]:
-        waterlogged = []
-        if hasattr(self._parent, 'always_waterlogged'):
+        try:
             waterlogged = self._parent.always_waterlogged
+        except:
+            waterlogged = []
         waterlogged_path = os.path.join(self._directory, '__always_waterlogged__.json')
         if os.path.isfile(waterlogged_path):
             with open(waterlogged_path) as f:
