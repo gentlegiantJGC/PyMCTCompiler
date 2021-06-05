@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "weathered_cut_copper_slab", "\"weathered_cut_copper\"", "universal_minecraft", "slab", {"type": ["\"top\"","\"bottom\"","\"double\""]}, default="minecraft:stone_slab")

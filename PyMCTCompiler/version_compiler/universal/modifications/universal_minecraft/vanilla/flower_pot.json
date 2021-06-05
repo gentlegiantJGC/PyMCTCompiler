@@ -29,7 +29,9 @@
 		"potted_crimson_fungus",
 		"potted_warped_fungus",
 		"potted_crimson_roots",
-		"potted_warped_roots"
+		"potted_warped_roots",
+		"potted_azalea_bush",
+		"potted_flowering_azalea_bush"
 	],
 	"add": {
 		"flower_pot": {
@@ -64,7 +66,9 @@
 					"\"crimson_roots\"",
 					"\"crimson_fungus\"",
 					"\"warped_roots\"",
-					"\"warped_fungus\""
+					"\"warped_fungus\"",
+					"\"azalea_bush\"",
+					"\"flowering_azalea_bush\""
 				],
 				"update": [
 					"\"false\"",

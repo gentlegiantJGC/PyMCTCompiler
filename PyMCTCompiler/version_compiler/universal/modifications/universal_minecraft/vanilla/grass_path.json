@@ -1,0 +1,8 @@
+{
+	"remove": [
+		"dirt_path"
+	],
+	"add": {
+		"grass_path": {}
+	}
+}

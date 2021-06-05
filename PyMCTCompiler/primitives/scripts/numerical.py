@@ -549,6 +549,10 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 		"from_universal": {
 			f"{to_namespace}:{to_block_name}": [
 				{
+					"function": "new_block",
+					"options": "minecraft:leaves"
+				},
+				{
 					"function": "map_properties",
 					"options": {
 						property8: {
@@ -627,6 +631,10 @@ def leaves(namespace: str, block_name: str, platform: str, to_namespace: str = "
 		],
 		"blockstate_from_universal": {
 			f"{to_namespace}:{to_block_name}": [
+				{
+					"function": "new_block",
+					"options": "minecraft:leaves"
+				},
 				{
 					"function": "carry_properties",
 					"options": {

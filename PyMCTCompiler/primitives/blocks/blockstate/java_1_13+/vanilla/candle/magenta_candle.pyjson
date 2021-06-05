@@ -1,0 +1,1 @@
+blockstate.colour("minecraft", "magenta_candle", "\"magenta\"", "universal_minecraft", "candle", {"candles": ["\"1\"","\"2\"","\"3\"","\"4\""],"lit": ["\"true\"","\"false\""]})

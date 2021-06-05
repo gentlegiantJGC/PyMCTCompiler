@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "polished_deepslate_slab", "\"polished_deepslate\"", "universal_minecraft", "slab", {"type": ["\"top\"","\"bottom\"","\"double\""]}, default="minecraft:stone_slab")

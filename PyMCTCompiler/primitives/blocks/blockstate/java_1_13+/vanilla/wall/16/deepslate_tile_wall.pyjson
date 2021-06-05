@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "deepslate_tile_wall", "\"deepslate_tile\"", "universal_minecraft", "wall", {"east": ["\"none\"","\"low\"","\"tall\""],"north": ["\"none\"","\"low\"","\"tall\""],"south": ["\"none\"","\"low\"","\"tall\""],"up": ["\"true\"","\"false\""],"west": ["\"none\"","\"low\"","\"tall\""]}, default="minecraft:cobblestone_wall")

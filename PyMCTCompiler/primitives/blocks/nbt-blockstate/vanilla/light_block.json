@@ -2,7 +2,7 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:light_block"
+            "options": "universal_minecraft:light"
         },
         {
             "function": "map_properties",
@@ -12,7 +12,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "block_light_level": "\"0\""
+                                "level": "\"0\""
                             }
                         }
                     ],
@@ -20,7 +20,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "block_light_level": "\"1\""
+                                "level": "\"1\""
                             }
                         }
                     ],
@@ -28,7 +28,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "block_light_level": "\"2\""
+                                "level": "\"2\""
                             }
                         }
                     ],
@@ -36,7 +36,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "block_light_level": "\"3\""
+                                "level": "\"3\""
                             }
                         }
                     ],
@@ -44,7 +44,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "block_light_level": "\"4\""
+                                "level": "\"4\""
                             }
                         }
                     ],
@@ -52,7 +52,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "block_light_level": "\"5\""
+                                "level": "\"5\""
                             }
                         }
                     ],
@@ -60,7 +60,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "block_light_level": "\"6\""
+                                "level": "\"6\""
                             }
                         }
                     ],
@@ -68,7 +68,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "block_light_level": "\"7\""
+                                "level": "\"7\""
                             }
                         }
                     ],
@@ -76,7 +76,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "block_light_level": "\"8\""
+                                "level": "\"8\""
                             }
                         }
                     ],
@@ -84,7 +84,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "block_light_level": "\"9\""
+                                "level": "\"9\""
                             }
                         }
                     ],
@@ -92,7 +92,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "block_light_level": "\"10\""
+                                "level": "\"10\""
                             }
                         }
                     ],
@@ -100,7 +100,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "block_light_level": "\"11\""
+                                "level": "\"11\""
                             }
                         }
                     ],
@@ -108,7 +108,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "block_light_level": "\"12\""
+                                "level": "\"12\""
                             }
                         }
                     ],
@@ -116,7 +116,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "block_light_level": "\"13\""
+                                "level": "\"13\""
                             }
                         }
                     ],
@@ -124,7 +124,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "block_light_level": "\"14\""
+                                "level": "\"14\""
                             }
                         }
                     ],
@@ -132,7 +132,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "block_light_level": "\"15\""
+                                "level": "\"15\""
                             }
                         }
                     ]
@@ -141,7 +141,7 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:light_block": [
+        "universal_minecraft:light": [
             {
                 "function": "new_block",
                 "options": "minecraft:light_block"
@@ -149,7 +149,7 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "block_light_level": {
+                    "level": {
                         "\"0\"": [
                             {
                                 "function": "new_properties",

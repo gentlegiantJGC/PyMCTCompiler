@@ -1,0 +1,1 @@
+blockstate.colour("minecraft", "white_candle_cake", "\"white\"", "universal_minecraft", "candle_cake", {"lit": ["\"true\"","\"false\""]})
