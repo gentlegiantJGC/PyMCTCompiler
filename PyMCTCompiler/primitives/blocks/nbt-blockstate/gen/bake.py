@@ -150,67 +150,70 @@ for blockstate in block_palette['blocks']:
 			if value not in blocks[(namespace, base_name)]['properties'][prop['name']]:
 				blocks[(namespace, base_name)]['properties'][prop['name']].append(value)
 
-with open('skip_blocks') as f:
-	skip_blocks = set(json.load(f))
+with open('whitelist') as f:
+	whitelist = set(json.load(f))
 
 
 for (namespace, base_name), block in blocks.items():
-	if base_name in skip_blocks:
-		continue
-	primitive = {
-		"to_universal": [
-			{
-				"function": "new_block",
-				"options": f"universal_{namespace}:{base_name}"
-			}
-		],
-		"from_universal": {
-			f"universal_{namespace}:{base_name}": [
+	if base_name in whitelist:
+		primitive = {
+			"to_universal": [
 				{
 					"function": "new_block",
-					"options": f'{namespace}:{base_name}'
+					"options": f"universal_{namespace}:{base_name}"
 				}
-			]
+			],
+			"from_universal": {
+				f"universal_{namespace}:{base_name}": [
+					{
+						"function": "new_block",
+						"options": f'{namespace}:{base_name}'
+					}
+				]
+			}
 		}
-	}
 
-	if len(block['properties']) > 0:
-		primitive['to_universal'].append(
-			{
-				"function": "map_properties",
-				"options": {
-					prop: {
-						snbt_val: [
-							{
-								"function": "new_properties",
-								"options": {
-									(property_name_remap[prop][0] if prop in property_name_remap else prop): (property_name_remap[prop][1][val] if prop in property_name_remap and val in property_name_remap[prop][1] else val)
+		if len(block['properties']) > 0:
+			primitive['to_universal'].append(
+				{
+					"function": "map_properties",
+					"options": {
+						prop: {
+							snbt_val: [
+								{
+									"function": "new_properties",
+									"options": {
+										(property_name_remap[prop][0] if prop in property_name_remap else prop): (property_name_remap[prop][1][val] if prop in property_name_remap and val in property_name_remap[prop][1] else val)
+									}
 								}
-							}
-						] for snbt_val, val in block['properties'][prop]
-					} for prop in block['properties'].keys()
+							] for snbt_val, val in block['properties'][prop]
+						} for prop in block['properties'].keys()
+					}
 				}
-			}
-		)
+			)
 
-		primitive['from_universal'][f"universal_{namespace}:{base_name}"].append(
-			{
-				"function": "map_properties",
-				"options": {
-					(property_name_remap[prop][0] if prop in property_name_remap else prop): {
-						(property_name_remap[prop][1][val] if prop in property_name_remap and val in property_name_remap[prop][1] else val): [
-							{
-								"function": "new_properties",
-								"options": {
-									prop: ['snbt', snbt_val]
+			primitive['from_universal'][f"universal_{namespace}:{base_name}"].append(
+				{
+					"function": "map_properties",
+					"options": {
+						(property_name_remap[prop][0] if prop in property_name_remap else prop): {
+							(property_name_remap[prop][1][val] if prop in property_name_remap and val in property_name_remap[prop][1] else val): [
+								{
+									"function": "new_properties",
+									"options": {
+										prop: ['snbt', snbt_val]
+									}
 								}
-							}
-						] for snbt_val, val in block['properties'][prop]
-					} for prop in block['properties'].keys()
+							] for snbt_val, val in block['properties'][prop]
+						} for prop in block['properties'].keys()
+					}
 				}
-			}
-		)
+			)
 
-	os.makedirs("./temp", exist_ok=True)
-	with open(f'./temp/{base_name}.json', 'w') as f:
-		json.dump(primitive, f, indent=4)
+			os.makedirs("./temp", exist_ok=True)
+			with open(f'./temp/{base_name}.json', 'w') as f:
+				json.dump(primitive, f, indent=4)
+		else:
+			os.makedirs("./temp/direct", exist_ok=True)
+			with open(f'./temp/direct/{base_name}.json', 'w') as f:
+				json.dump(primitive, f, indent=4)
