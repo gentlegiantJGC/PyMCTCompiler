@@ -750,6 +750,10 @@ def leaves(input_namespace: str, input_block_name: str, material: str, universal
 		"from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
 				{
+					"function": "new_block",
+					"options": "minecraft:oak_leaves"
+				},
+				{
 					"function": "map_properties",
 					"options": {
 						"material": {
