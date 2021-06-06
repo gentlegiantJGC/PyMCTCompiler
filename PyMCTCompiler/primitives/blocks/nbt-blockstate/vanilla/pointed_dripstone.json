@@ -1,0 +1,167 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:pointed_dripstone"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "dripstone_thickness": {
+                    "\"tip\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "thickness": "\"tip\""
+                            }
+                        }
+                    ],
+                    "\"frustum\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "thickness": "\"frustum\""
+                            }
+                        }
+                    ],
+                    "\"middle\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "thickness": "\"middle\""
+                            }
+                        }
+                    ],
+                    "\"base\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "thickness": "\"base\""
+                            }
+                        }
+                    ],
+                    "\"merge\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "thickness": "\"tip_merge\""
+                            }
+                        }
+                    ]
+                },
+                "hanging": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "vertical_direction": "\"up\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "vertical_direction": "\"down\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:pointed_dripstone": [
+            {
+                "function": "new_block",
+                "options": "minecraft:pointed_dripstone"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "thickness": {
+                        "\"tip\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "dripstone_thickness": [
+                                        "snbt",
+                                        "\"tip\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"frustum\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "dripstone_thickness": [
+                                        "snbt",
+                                        "\"frustum\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"middle\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "dripstone_thickness": [
+                                        "snbt",
+                                        "\"middle\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"base\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "dripstone_thickness": [
+                                        "snbt",
+                                        "\"base\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"tip_merge\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "dripstone_thickness": [
+                                        "snbt",
+                                        "\"merge\""
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "vertical_direction": {
+                        "\"up\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "hanging": [
+                                        "snbt",
+                                        "0b"
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"down\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "hanging": [
+                                        "snbt",
+                                        "1b"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

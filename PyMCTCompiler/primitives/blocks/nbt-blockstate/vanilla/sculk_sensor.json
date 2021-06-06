@@ -1,0 +1,68 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:sculk_sensor"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "powered_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "power": "\"0\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "power": "\"1\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:sculk_sensor": [
+            {
+                "function": "new_block",
+                "options": "minecraft:sculk_sensor"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "power": {
+                        "\"0\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "powered_bit": [
+                                        "snbt",
+                                        "0b"
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"1\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "powered_bit": [
+                                        "snbt",
+                                        "1b"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

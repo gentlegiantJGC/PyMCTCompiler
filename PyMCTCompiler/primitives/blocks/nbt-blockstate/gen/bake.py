@@ -236,7 +236,8 @@ property_name_remap = {
         "unstable": "unstable",
         "partial_tilt": "partial",
         "full_tilt": "full"
-    }]
+    }],
+    "growing_plant_age": ["age", {str(n): f"\"{n}\"" for n in range(26)}]
 }
 
 with open("block_palette") as f:
