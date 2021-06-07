@@ -14,11 +14,16 @@
 				"map_item": [
 					"\"true\"",
 					"\"false\""
+				],
+				"glowing": [
+					"\"true\"",
+					"\"false\""
 				]
 			},
 			"defaults": {
 				"facing": "\"north\"",
-				"map_item": "\"false\""
+				"map_item": "\"false\"",
+				"glowing": "\"false\""
 			},
 			"unbt": "nbt.item_frame_block.universal"
 		}

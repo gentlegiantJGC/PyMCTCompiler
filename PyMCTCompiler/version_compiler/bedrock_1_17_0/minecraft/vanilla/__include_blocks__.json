@@ -52,7 +52,7 @@
 	"exposed_cut_copper_stairs": "exposed_cut_copper_stairs",
 	"exposed_double_cut_copper_slab": "exposed_double_cut_copper_slab",
 	"flowering_azalea": "flowering_azalea",
-	"glow_frame": "glow_frame",
+	"glow_frame": [">nbt.item_frame_block.glow_b117", "glow_frame"],
 	"glow_lichen": "glow_lichen",
 	"hanging_roots": "hanging_roots",
 	"infested_deepslate": "infested_deepslate",

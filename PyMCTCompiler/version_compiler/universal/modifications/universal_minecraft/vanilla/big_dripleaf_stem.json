@@ -1,0 +1,27 @@
+{
+	"remove": [
+		"big_dripleaf_stem"
+	],
+	"add": {
+		"big_dripleaf_stem": {
+            "properties": {
+                "facing": [
+                    "\"north\"",
+                    "\"south\"",
+                    "\"west\"",
+                    "\"east\""
+                ],
+                "tilt": [
+                    "\"none\"",
+                    "\"unstable\"",
+                    "\"partial\"",
+                    "\"full\""
+                ]
+            },
+            "defaults": {
+                "facing": "\"north\"",
+                "tilt": "\"none\""
+            }
+        }
+	}
+}
