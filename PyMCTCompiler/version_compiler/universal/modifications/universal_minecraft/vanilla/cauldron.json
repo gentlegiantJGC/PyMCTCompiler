@@ -1,13 +1,17 @@
 {
 	"remove": [
-		"cauldron"
+		"cauldron",
+		"water_cauldron",
+		"lava_cauldron",
+		"powder_snow_cauldron"
 	],
 	"add": {
 		"cauldron": {
 			"properties": {
 				"cauldron_liquid": [
 					"\"water\"",
-					"\"lava\""
+					"\"lava\"",
+					"\"powder_snow\""
 				],
 				"level": [
 					"\"0\"",

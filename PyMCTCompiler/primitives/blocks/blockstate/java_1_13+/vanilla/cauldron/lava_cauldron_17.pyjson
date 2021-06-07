@@ -1,0 +1,45 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:cauldron"
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "cauldron_liquid": "\"lava\"",
+                "level": "\"3\""
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:cauldron": [
+            {
+                "function": "new_block",
+                "options": "minecraft:cauldron"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "level": {
+                        f"\"{d/2}\"": [
+                            {
+                                "function": "map_properties",
+                                "options": {
+                                    "cauldron_liquid": {
+                                        "\"lava\"": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:lava_cauldron"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ] for d in range(1, 7)
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -8,19 +8,11 @@
             "function": "map_properties",
             "options": {
                 "cauldron_liquid": {
-                    "\"water\"": [
+                    "\"powder_snow\"": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "cauldron_liquid": "\"water\""
-                            }
-                        }
-                    ],
-                    "\"lava\"": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "cauldron_liquid": "\"lava\""
+                                "cauldron_liquid": "\"powder_snow\""
                             }
                         }
                     ]
@@ -96,13 +88,13 @@
                 "function": "map_properties",
                 "options": {
                     "cauldron_liquid": {
-                        "\"water\"": [
+                        "\"powder_snow\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
                                     "cauldron_liquid": [
                                         "snbt",
-                                        "\"water\""
+                                        "\"powder_snow\""
                                     ]
                                 }
                             }

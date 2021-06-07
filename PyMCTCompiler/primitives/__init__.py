@@ -2,6 +2,7 @@ import json
 import os
 import traceback
 import copy
+import math
 from typing import Union, List, Dict
 import amulet_nbt
 from amulet_nbt import TAG_Compound

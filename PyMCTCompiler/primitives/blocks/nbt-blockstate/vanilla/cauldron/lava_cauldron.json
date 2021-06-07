@@ -5,14 +5,26 @@
             "options": "universal_minecraft:cauldron"
         },
         {
-            "function": "new_properties",
-            "options": {
-                "cauldron_liquid": "\"lava\""
-            }
-        },
-        {
             "function": "map_properties",
             "options": {
+                "cauldron_liquid": {
+                    "\"water\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "cauldron_liquid": "\"water\""
+                            }
+                        }
+                    ],
+                    "\"lava\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "cauldron_liquid": "\"lava\""
+                            }
+                        }
+                    ]
+                },
                 "fill_level": {
                     "0": [
                         {
@@ -84,21 +96,6 @@
                 "function": "map_properties",
                 "options": {
                     "cauldron_liquid": {
-                        "\"water\"": [
-                            {
-                                "function": "new_block",
-                                "options": "minecraft:cauldron"
-                            },
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "cauldron_liquid": [
-                                        "snbt",
-                                        "\"water\""
-                                    ]
-                                }
-                            }
-                        ],
                         "\"lava\"": [
                             {
                                 "function": "new_block",

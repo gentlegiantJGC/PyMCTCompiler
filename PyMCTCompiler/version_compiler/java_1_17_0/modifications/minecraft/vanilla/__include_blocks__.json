@@ -73,5 +73,10 @@
 	"infested_deepslate": "infested_deepslate",
 
 	"potted_azalea_bush": "potted_azalea_bush",
-	"potted_flowering_azalea_bush": "potted_flowering_azalea_bush"
+	"potted_flowering_azalea_bush": "potted_flowering_azalea_bush",
+
+	"cauldron": "cauldron_17",
+	"water_cauldron": "water_cauldron_17",
+	"lava_cauldron": "lava_cauldron_17",
+	"powder_snow_cauldron": "powder_snow_cauldron_17"
 }

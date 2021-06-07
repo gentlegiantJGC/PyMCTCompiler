@@ -1,0 +1,22 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:cauldron"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:cauldron": [
+            {
+                "function": "new_block",
+                "options": "minecraft:cauldron"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "level": {}
+                }
+            }
+        ]
+    }
+}
