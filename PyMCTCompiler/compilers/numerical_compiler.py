@@ -63,14 +63,18 @@ class NumericalCompiler(BaseCompiler):
 
                 default_spec = {'blockstate': {}, 'numerical': {"properties": {"block_data": [str(data) for data in range(16)]}, "defaults": {"block_data": "0"}}}
 
-                for file_format in ('numerical', 'blockstate'):
-                    prefix = 'blockstate_' if file_format == 'blockstate' else ''
-                    spec = default_spec[file_format]
-                    if f'{prefix}specification' in block_primitive_file:
-                        for key, val in block_primitive_file[f'{prefix}specification'].items():
-                            spec[key] = val
-                    block_primitive_file[f'{prefix}specification'] = spec
-                    self._save_data('block', 'block', block_primitive_file, self.version_name, file_format, namespace, sub_name, block_base_name, prefix)
+                try:
+                    for file_format in ('numerical', 'blockstate'):
+                        prefix = 'blockstate_' if file_format == 'blockstate' else ''
+                        spec = default_spec[file_format]
+                        if f'{prefix}specification' in block_primitive_file:
+                            for key, val in block_primitive_file[f'{prefix}specification'].items():
+                                spec[key] = val
+                        block_primitive_file[f'{prefix}specification'] = spec
+                        self._save_data('block', 'block', block_primitive_file, self.version_name, file_format, namespace, sub_name, block_base_name, prefix)
+                except Exception as e:
+                    print(f"Could not merge primitive file {primitive_data}")
+                    raise e
 
     def _build_entities(self):
         for (namespace, sub_name), entity_data in self.entities.items():
