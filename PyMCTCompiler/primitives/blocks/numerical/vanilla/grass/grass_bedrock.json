@@ -59,6 +59,10 @@
 	"from_universal": {
 		"universal_minecraft:plant": [
 			{
+				"function": "new_block",
+				"options": "minecraft:yellow_flower"
+			},
+			{
 				"function": "map_properties",
 				"options": {
 					"plant_type": {
@@ -137,6 +141,10 @@
 	],
 	"blockstate_from_universal": {
 		"universal_minecraft:plant": [
+			{
+				"function": "new_block",
+				"options": "minecraft:yellow_flower"
+			},
 			{
 				"function": "map_properties",
 				"options": {

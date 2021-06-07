@@ -69,6 +69,10 @@
     "from_universal": {
         "universal_minecraft:glazed_terracotta": [
             {
+                "function": "new_block",
+                "options": "minecraft:white_glazed_terracotta"
+            },
+            {
                 "function": "map_properties",
                 "options": {
                     "color": {

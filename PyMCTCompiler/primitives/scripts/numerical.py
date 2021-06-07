@@ -363,6 +363,10 @@ def liquid(input_namespace: str, input_block_name: str, flowing_: bool, universa
 		"from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
 				{
+					"function": "new_block",
+					"options": f"{input_namespace}:{input_block_name}"
+				},
+				{
 					"function": "map_properties",
 					"options": {
 						"flowing": {
@@ -456,6 +460,10 @@ def liquid(input_namespace: str, input_block_name: str, flowing_: bool, universa
 		],
 		"blockstate_from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
+				{
+					"function": "new_block",
+					"options": f"{input_namespace}:{input_block_name}"
+				},
 				{
 					"function": "carry_properties",
 					"options": {
@@ -1617,6 +1625,10 @@ def sandstone(input_namespace: str, input_block_name: str, level: int = 1, unive
 		"from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
 				{
+					"function": "new_block",
+					"options": f"{input_namespace}:{input_block_name}"
+				},
+				{
 					"function": "map_properties",
 					"options": {
 						"variant": {
@@ -1802,6 +1814,10 @@ def rail2(input_namespace: str, input_block_name: str, universal_namespace: str 
 		],
 		"from_universal": {
 			f"{universal_namespace}:{universal_block_name}": [
+				{
+					"function": "new_block",
+					"options": f"{input_namespace}:{input_block_name}"
+				},
 				{
 					"function": "map_properties",
 					"options": {

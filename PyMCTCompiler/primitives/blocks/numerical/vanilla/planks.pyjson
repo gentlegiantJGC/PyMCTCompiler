@@ -23,6 +23,10 @@
 	"from_universal": {
 		"universal_minecraft:planks": [
 			{
+				"function": "new_block",
+				"options": "minecraft:planks"
+			},
+			{
 				"function": "map_properties",
 				"options": {
 					"material": {

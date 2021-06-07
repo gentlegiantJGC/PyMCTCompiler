@@ -1,6 +1,10 @@
 {
 	"to_universal": [
 		{
+			"function": "new_block",
+			"options": "universal_minecraft:sapling"
+		},
+		{
 			"function": "map_properties",
 			"options": {
 				"block_data": {
@@ -23,6 +27,10 @@
 	],
 	"from_universal": {
 		"universal_minecraft:sapling": [
+			{
+				"function": "new_block",
+				"options": "minecraft:sapling"
+			},
 			{
 				"function": "map_properties",
 				"options": {
