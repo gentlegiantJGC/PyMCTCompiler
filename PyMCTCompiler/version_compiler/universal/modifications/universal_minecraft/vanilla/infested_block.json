@@ -5,8 +5,7 @@
 		"infested_stone_bricks",
 		"infested_cracked_stone_bricks",
 		"infested_mossy_stone_bricks",
-		"infested_chiseled_stone_bricks",
-		"infested_deepslate"
+		"infested_chiseled_stone_bricks"
 	],
 	"add": {
 		"infested_block": {
@@ -17,8 +16,7 @@
 					"\"stone_bricks\"",
 					"\"cracked_stone_bricks\"",
 					"\"mossy_stone_bricks\"",
-					"\"chiseled_stone_bricks\"",
-					"\"deepslate\""
+					"\"chiseled_stone_bricks\""
 				]
 			},
 			"defaults": {

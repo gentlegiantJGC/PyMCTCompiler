@@ -2,29 +2,81 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:infested_block"
+            "options": "universal_minecraft:infested_deepslate"
         },
         {
-            "function": "new_properties",
+            "function": "map_properties",
             "options": {
-                "material": "\"deepslate\""
+                "pillar_axis": {
+                    "\"y\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "axis": "\"y\""
+                            }
+                        }
+                    ],
+                    "\"x\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "axis": "\"x\""
+                            }
+                        }
+                    ],
+                    "\"z\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "axis": "\"z\""
+                            }
+                        }
+                    ]
+                }
             }
         }
     ],
     "from_universal": {
-        "universal_minecraft:infested_block": [
+        "universal_minecraft:infested_deepslate": [
             {
                 "function": "new_block",
-                "options": "minecraft:monster_egg"
+                "options": "minecraft:infested_deepslate"
             },
             {
                 "function": "map_properties",
                 "options": {
-                    "material": {
-                        "\"deepslate\"": [
+                    "axis": {
+                        "\"y\"": [
                             {
-                                "function": "new_block",
-                                "options": "minecraft:infested_deepslate"
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": [
+                                        "snbt",
+                                        "\"y\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"x\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": [
+                                        "snbt",
+                                        "\"x\""
+                                    ]
+                                }
+                            }
+                        ],
+                        "\"z\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": [
+                                        "snbt",
+                                        "\"z\""
+                                    ]
+                                }
                             }
                         ]
                     }
