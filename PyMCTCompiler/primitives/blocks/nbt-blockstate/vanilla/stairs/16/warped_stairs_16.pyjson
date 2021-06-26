@@ -1,0 +1,1 @@
+nbt_blockstate.stair_connections("minecraft:warped_stairs", "\"warped\"", (1, 16, 0))

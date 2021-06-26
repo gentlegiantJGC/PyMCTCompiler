@@ -84,9 +84,8 @@ def get_block(block_format: str, primitive_group: Union[str, List[str]]) -> Prim
 		try:
 			output.commit()
 		except Exception as e:
-			traceback.print_exc()
 			print(block_format, primitive_group)
-			raise Exception
+			raise e
 		return output
 	elif isinstance(primitive_group, list) and len(primitive_group) >= 1:
 		output = Primitive({})
@@ -181,32 +180,37 @@ def merge_primitive_specification(obj1: dict, obj2: dict) -> dict:
 
 
 from .scripts import *
-print('Loading Primitives ...')
+
 blocks: Dict[str, Dict[str, Primitive]] = {'numerical': {}, 'blockstate': {}, 'nbt-blockstate': {}}
 entities: Dict[str, Primitive] = {}
 
-for start_folder in blocks:
-	for root, dirs, files in os.walk(f'{os.path.dirname(__file__)}/blocks/{start_folder}'):
+
+def setup():
+	print('Loading Primitives ...')
+	for start_folder in blocks:
+		for root, dirs, files in os.walk(f'{os.path.dirname(__file__)}/blocks/{start_folder}'):
+			for f in files:
+				if os.path.splitext(f)[0] in blocks[start_folder]:
+					print(f'Block name "{os.path.splitext(f)[0]}" is define twice')
+				if f.endswith('.json') or f.endswith('.pyjson'):
+					try:
+						blocks[start_folder][os.path.splitext(f)[0]] = Primitive(_load_file(f'{root}/{f}'))
+					except Exception as e:
+						print(f'Failed to load {root}/{f}\n{e}')
+						print(traceback.print_tb(e.__traceback__))
+
+	for root, dirs, files in os.walk(f'{os.path.dirname(__file__)}/entities'):
 		for f in files:
-			if os.path.splitext(f)[0] in blocks[start_folder]:
+			if os.path.splitext(f)[0] in entities:
 				print(f'Block name "{os.path.splitext(f)[0]}" is define twice')
-			if f.endswith('.json') or f.endswith('.pyjson'):
-				try:
-					blocks[start_folder][os.path.splitext(f)[0]] = Primitive(_load_file(f'{root}/{f}'))
-				except Exception as e:
-					print(f'Failed to load {root}/{f}\n{e}')
-					print(traceback.print_tb(e.__traceback__))
+			try:
+				entities[os.path.splitext(f)[0]] = Primitive(_load_file(f'{root}/{f}'))
+			except Exception as e:
+				print(f'Failed to load {root}/{f}\n{e}')
+				print(traceback.print_tb(e.__traceback__))
 
-for root, dirs, files in os.walk(f'{os.path.dirname(__file__)}/entities'):
-	for f in files:
-		if os.path.splitext(f)[0] in entities:
-			print(f'Block name "{os.path.splitext(f)[0]}" is define twice')
-		try:
-			entities[os.path.splitext(f)[0]] = Primitive(_load_file(f'{root}/{f}'))
-		except Exception as e:
-			print(f'Failed to load {root}/{f}\n{e}')
-			print(traceback.print_tb(e.__traceback__))
+	print('\tFinished Loading Primitives')
 
-print('\tFinished Loading Primitives')
+setup()
 
 from PyMCTCompiler.primitives import nested

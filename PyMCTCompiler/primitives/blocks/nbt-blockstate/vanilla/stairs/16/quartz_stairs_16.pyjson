@@ -1,0 +1,1 @@
+nbt_blockstate.stair_connections("minecraft:quartz_stairs", "\"quartz\"", (1, 16, 0))

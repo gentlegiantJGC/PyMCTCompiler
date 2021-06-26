@@ -1,0 +1,1 @@
+nbt_blockstate.stair_connections("minecraft:normal_stone_stairs", "\"stone\"", (1, 16, 0))

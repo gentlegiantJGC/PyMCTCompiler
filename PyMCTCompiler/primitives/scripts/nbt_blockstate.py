@@ -1,4 +1,6 @@
 import itertools
+from typing import Tuple
+from PyMCTCompiler.primitives.scripts.lists.blocks import get_stairs
 
 
 def mushroom_block(color: str) -> dict:
@@ -612,3 +614,199 @@ def door(block_name: str, material: str) -> dict:
 			]
 		}
 	}
+
+def stair_connections(block_name: str, material: str, version: Tuple[int, int, int]) -> dict:
+    stair_blocks = get_stairs(version)
+    return {
+        "to_universal": [
+            {
+                "function": "new_block",
+                "options": "universal_minecraft:stairs"
+            },
+            {
+                "function": "new_properties",
+                "options": {
+                    "material": material
+                }
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "upside_down_bit": {
+                        f"{upside_down}b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "half": ["\"bottom\"", "\"top\""][upside_down]
+                                }
+                            },
+                            {
+                                "function": "map_properties",
+                                "options": {
+                                    "weirdo_direction": {
+                                        str(weirdo_direction): [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "facing": ["\"east\"", "\"west\"", "\"south\"", "\"north\""][weirdo_direction]
+                                                }
+                                            }
+                                        ] + [
+                                            {
+                                                "function": "multiblock",
+                                                "options": {
+                                                    "coords": [
+                                                        [
+                                                            [-1, 0, 0],
+                                                            [1, 0, 0],
+                                                            [0, 0, -1],
+                                                            [0, 0, 1],
+                                                        ],
+                                                        [
+                                                            [1, 0, 0],
+                                                            [-1, 0, 0],
+                                                            [0, 0, 1],
+                                                            [0, 0, -1],
+                                                        ]
+                                                    ][shape][weirdo_direction],
+                                                    "functions": [
+                                                        {
+                                                            "function": "map_block_name",
+                                                            "options": {
+                                                                block: [
+                                                                    {
+                                                                        "function": "map_properties",
+                                                                        "options": {
+                                                                            "upside_down_bit": {
+                                                                                f"{upside_down}b": [
+                                                                                    {
+                                                                                        "function": "map_properties",
+                                                                                        "options": {
+                                                                                            "weirdo_direction": {
+                                                                                                str(
+                                                                                                    [
+                                                                                                        [2, 3, 1, 0],
+                                                                                                        [3, 2, 0, 1]
+                                                                                                    ][side][weirdo_direction]
+                                                                                                ): [
+                                                                                                    {
+                                                                                                        "function": "new_properties",
+                                                                                                        "options": {
+                                                                                                            "shape": f"\"{'outer' if shape else 'inner'}_{'left' if side else 'right'}\""
+                                                                                                        }
+                                                                                                    }
+                                                                                                ] for side in range(2)
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                ] for block in stair_blocks
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            } for shape in range(2)
+                                        ] for weirdo_direction in range(4)
+                                    }
+                                }
+                            }
+                        ] for upside_down in range(2)
+                    }
+                }
+            }
+        ],
+        "from_universal": {
+            "universal_minecraft:stairs": [
+                {
+                    "function": "new_block",
+                    "options": "minecraft:oak_stairs"
+                },
+                {
+                    "function": "map_properties",
+                    "options": {
+                        "material": {
+                            material: [
+                                {
+                                    "function": "new_block",
+                                    "options": block_name
+                                }
+                            ]
+                        },
+                        "half": {
+                            "\"bottom\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "upside_down_bit": [
+                                            "snbt",
+                                            "0b"
+                                        ]
+                                    }
+                                }
+                            ],
+                            "\"top\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "upside_down_bit": [
+                                            "snbt",
+                                            "1b"
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        "facing": {
+                            "\"east\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "weirdo_direction": [
+                                            "snbt",
+                                            "0"
+                                        ]
+                                    }
+                                }
+                            ],
+                            "\"west\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "weirdo_direction": [
+                                            "snbt",
+                                            "1"
+                                        ]
+                                    }
+                                }
+                            ],
+                            "\"south\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "weirdo_direction": [
+                                            "snbt",
+                                            "2"
+                                        ]
+                                    }
+                                }
+                            ],
+                            "\"north\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "weirdo_direction": [
+                                            "snbt",
+                                            "3"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
