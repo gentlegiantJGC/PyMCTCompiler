@@ -2,11 +2,11 @@
 	"specification": {
 		"properties": {
 			"facing": ["\"north\"", "\"south\"", "\"west\"", "\"east\""],
-			"connection": ["\"none\"", "\"left\"", "\"right\""]
+			"type": ["\"single\"", "\"left\"", "\"right\""]
 		},
 		"defaults": {
 			"facing": "\"north\"",
-			"connection": "\"none\""
+			"type": "\"single\""
 		}
 	},
 	"to_universal": [
