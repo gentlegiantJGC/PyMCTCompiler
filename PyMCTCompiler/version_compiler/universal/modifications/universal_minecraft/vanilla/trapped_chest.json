@@ -1,0 +1,27 @@
+{
+	"remove": [
+		"trapped_chest"
+	],
+	"add": {
+		"trapped_chest": {
+			"properties": {
+		        "facing": [
+		            "\"north\"",
+		            "\"south\"",
+		            "\"west\"",
+		            "\"east\""
+		        ],
+		        "connection": [
+		            "\"none\"",
+		            "\"left\"",
+		            "\"right\""
+		        ]
+		    },
+		    "defaults": {
+		        "facing": "\"north\"",
+		        "connection": "\"none\""
+		    },
+			"unbt": "nbt.chest.universal_trapped"
+		}
+	}
+}

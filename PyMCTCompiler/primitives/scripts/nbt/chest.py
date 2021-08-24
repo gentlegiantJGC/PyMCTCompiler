@@ -141,7 +141,7 @@ _BConnections = {
             {
                 "function": "map_properties",
                 "options": {
-                    "type": {
+                    "connection": {
                         "\"right\"": [
                             {
                                 "function": "code",

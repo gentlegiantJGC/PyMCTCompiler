@@ -1,11 +1,5 @@
 {
 	"add": {
-		"chest": {
-			"unbt": "nbt.chest.universal"
-		},
-		"trapped_chest": {
-			"unbt": "nbt.chest.universal_trapped"
-		},
 		"dispenser": {
 			"unbt": "nbt.dispenser.universal"
 		},
