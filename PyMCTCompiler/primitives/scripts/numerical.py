@@ -3182,7 +3182,7 @@ def glazed_terracotta(input_namespace: str, input_block_name: str, color: str, p
 	if platform == 'java':
 		directions = {0: "\"south\"", 2: "\"north\"", 3: "\"east\"", 1: "\"west\""}
 	elif platform == 'bedrock':
-		directions = {2: "\"north\"", 3: "\"south\"", 4: "\"west\"", 5: "\"east\""}
+		directions = {2: "\"north\"", 3: "\"south\"", 4: "\"west\"", 5: "\"east\"", 0: "\"null0\"", 1: "\"null1\""}
 	else:
 		raise Exception(f'Unknown platform {platform}')
 
