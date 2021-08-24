@@ -53,7 +53,7 @@ class MapProperties(BaseTranslationFunction):
 			verify_string(key)
 			assert isinstance(val_dict, dict), '"options" values must be dictionaries'
 			for val, nest in val_dict.items():
-				assert isinstance(val, str), '"options" property values must be strings'
+				assert isinstance(val, str), f'"options" property values must be strings, {val_dict}'
 				verify_snbt(val)
 				assert isinstance(nest, FunctionList)
 				nest.commit(feature_set, parents)

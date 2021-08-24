@@ -158,7 +158,7 @@ class NBTBlockstateCompiler(BaseCompiler):
 					block_primitive_file = primitives.get_block('nbt-blockstate', primitive_data)
 				except Exception as e:
 					print(self.version_name, namespace, block_base_name)
-					raise Exception(e)
+					raise Exception(e) from e
 
 				assert 'to_universal' in block_primitive_file, f'Key to_universal must be defined'
 				assert 'from_universal' in block_primitive_file, f'Key from_universal must be defined'
