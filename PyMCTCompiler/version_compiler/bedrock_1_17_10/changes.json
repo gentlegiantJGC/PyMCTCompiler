@@ -1,0 +1,682 @@
+{
+    "minecraft:black_candle": {
+        "block_added": {
+            "properties": {
+                "candles": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "candles": 0,
+                "lit": 0
+            },
+            "types": {
+                "candles": "int",
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:black_candle_cake": {
+        "block_added": {
+            "properties": {
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "lit": 0
+            },
+            "types": {
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:blue_candle": {
+        "block_added": {
+            "properties": {
+                "candles": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "candles": 0,
+                "lit": 0
+            },
+            "types": {
+                "candles": "int",
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:blue_candle_cake": {
+        "block_added": {
+            "properties": {
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "lit": 0
+            },
+            "types": {
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:brown_candle": {
+        "block_added": {
+            "properties": {
+                "candles": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "candles": 0,
+                "lit": 0
+            },
+            "types": {
+                "candles": "int",
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:brown_candle_cake": {
+        "block_added": {
+            "properties": {
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "lit": 0
+            },
+            "types": {
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:candle": {
+        "block_added": {
+            "properties": {
+                "candles": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "candles": 0,
+                "lit": 0
+            },
+            "types": {
+                "candles": "int",
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:candle_cake": {
+        "block_added": {
+            "properties": {
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "lit": 0
+            },
+            "types": {
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:cyan_candle": {
+        "block_added": {
+            "properties": {
+                "candles": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "candles": 0,
+                "lit": 0
+            },
+            "types": {
+                "candles": "int",
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:cyan_candle_cake": {
+        "block_added": {
+            "properties": {
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "lit": 0
+            },
+            "types": {
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:gray_candle": {
+        "block_added": {
+            "properties": {
+                "candles": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "candles": 0,
+                "lit": 0
+            },
+            "types": {
+                "candles": "int",
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:gray_candle_cake": {
+        "block_added": {
+            "properties": {
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "lit": 0
+            },
+            "types": {
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:green_candle": {
+        "block_added": {
+            "properties": {
+                "candles": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "candles": 0,
+                "lit": 0
+            },
+            "types": {
+                "candles": "int",
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:green_candle_cake": {
+        "block_added": {
+            "properties": {
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "lit": 0
+            },
+            "types": {
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:light_blue_candle": {
+        "block_added": {
+            "properties": {
+                "candles": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "candles": 0,
+                "lit": 0
+            },
+            "types": {
+                "candles": "int",
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:light_blue_candle_cake": {
+        "block_added": {
+            "properties": {
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "lit": 0
+            },
+            "types": {
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:light_gray_candle": {
+        "block_added": {
+            "properties": {
+                "candles": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "candles": 0,
+                "lit": 0
+            },
+            "types": {
+                "candles": "int",
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:light_gray_candle_cake": {
+        "block_added": {
+            "properties": {
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "lit": 0
+            },
+            "types": {
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:lime_candle": {
+        "block_added": {
+            "properties": {
+                "candles": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "candles": 0,
+                "lit": 0
+            },
+            "types": {
+                "candles": "int",
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:lime_candle_cake": {
+        "block_added": {
+            "properties": {
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "lit": 0
+            },
+            "types": {
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:magenta_candle": {
+        "block_added": {
+            "properties": {
+                "candles": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "candles": 0,
+                "lit": 0
+            },
+            "types": {
+                "candles": "int",
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:magenta_candle_cake": {
+        "block_added": {
+            "properties": {
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "lit": 0
+            },
+            "types": {
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:orange_candle": {
+        "block_added": {
+            "properties": {
+                "candles": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "candles": 0,
+                "lit": 0
+            },
+            "types": {
+                "candles": "int",
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:orange_candle_cake": {
+        "block_added": {
+            "properties": {
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "lit": 0
+            },
+            "types": {
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:pink_candle": {
+        "block_added": {
+            "properties": {
+                "candles": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "candles": 0,
+                "lit": 0
+            },
+            "types": {
+                "candles": "int",
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:pink_candle_cake": {
+        "block_added": {
+            "properties": {
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "lit": 0
+            },
+            "types": {
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:purple_candle": {
+        "block_added": {
+            "properties": {
+                "candles": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "candles": 0,
+                "lit": 0
+            },
+            "types": {
+                "candles": "int",
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:purple_candle_cake": {
+        "block_added": {
+            "properties": {
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "lit": 0
+            },
+            "types": {
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:red_candle": {
+        "block_added": {
+            "properties": {
+                "candles": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "candles": 0,
+                "lit": 0
+            },
+            "types": {
+                "candles": "int",
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:red_candle_cake": {
+        "block_added": {
+            "properties": {
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "lit": 0
+            },
+            "types": {
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:white_candle": {
+        "block_added": {
+            "properties": {
+                "candles": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "candles": 0,
+                "lit": 0
+            },
+            "types": {
+                "candles": "int",
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:white_candle_cake": {
+        "block_added": {
+            "properties": {
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "lit": 0
+            },
+            "types": {
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:yellow_candle": {
+        "block_added": {
+            "properties": {
+                "candles": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "candles": 0,
+                "lit": 0
+            },
+            "types": {
+                "candles": "int",
+                "lit": "byte"
+            }
+        }
+    },
+    "minecraft:yellow_candle_cake": {
+        "block_added": {
+            "properties": {
+                "lit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "lit": 0
+            },
+            "types": {
+                "lit": "byte"
+            }
+        }
+    }
+}
