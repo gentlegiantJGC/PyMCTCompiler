@@ -612,3 +612,181 @@ def door(block_name: str, material: str) -> dict:
             ]
         }
     }
+
+
+def candle(colour: str):
+    return {
+        "to_universal": [
+            {
+                "function": "new_block",
+                "options": "universal_minecraft:candle"
+            },
+            {
+                "function": "new_properties",
+                "options": {
+                    "color": colour if colour else "\"default\""
+                }
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "candles": {
+                        f"{candles}": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "candles": f"\"{candles+1}\""
+                                }
+                            }
+                        ] for candles in range(4)
+                    },
+                    "lit": {
+                        "0b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "lit": "\"false\""
+                                }
+                            }
+                        ],
+                        "1b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "lit": "\"true\""
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "from_universal": {
+            "universal_minecraft:candle": [
+                {
+                    "function": "new_block",
+                    "options": "minecraft:candle"
+                },
+                {
+                    "function": "map_properties",
+                    "options": {
+                        "candles": {
+                            f"\"{candles+1}\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "candles": f"{candles}"
+                                    }
+                                }
+                            ] for candles in range(4)
+                        },
+                        "lit": {
+                            "\"false\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "lit": "0b"
+                                    }
+                                }
+                            ],
+                            "\"true\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "lit": "1b"
+                                    }
+                                }
+                            ]
+                        },
+                        "color": {
+                            colour if colour else "\"default\"": [
+                                {
+                                    "function": "new_block",
+                                    "options": f"minecraft:{colour + '_' if colour else ''}candle"
+                                },
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
+
+
+def candle_cake(colour: str):
+    return {
+        "to_universal": [
+            {
+                "function": "new_block",
+                "options": "universal_minecraft:candle_cake"
+            },
+            {
+                "function": "new_properties",
+                "options": {
+                    "color": colour if colour else "\"default\""
+                }
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "lit": {
+                        "0b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "lit": "\"false\""
+                                }
+                            }
+                        ],
+                        "1b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "lit": "\"true\""
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "from_universal": {
+            "universal_minecraft:candle_cake": [
+                {
+                    "function": "new_block",
+                    "options": "minecraft:candle_cake"
+                },
+                {
+                    "function": "map_properties",
+                    "options": {
+                        "lit": {
+                            "\"false\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "lit": "0b"
+                                    }
+                                }
+                            ],
+                            "\"true\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "lit": "1b"
+                                    }
+                                }
+                            ]
+                        },
+                        "color": {
+                            colour if colour else "\"default\"": [
+                                {
+                                    "function": "new_block",
+                                    "options": f"minecraft:{colour + '_' if colour else ''}candle_cake"
+                                },
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
