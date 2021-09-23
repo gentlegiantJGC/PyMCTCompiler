@@ -624,7 +624,7 @@ def candle(colour: str):
             {
                 "function": "new_properties",
                 "options": {
-                    "color": colour if colour else "\"default\""
+                    "color": f"\"{colour}\"" if colour else "\"default\""
                 }
             },
             {
@@ -699,7 +699,7 @@ def candle(colour: str):
                             ]
                         },
                         "color": {
-                            colour if colour else "\"default\"": [
+                            f"\"{colour}\"" if colour else "\"default\"": [
                                 {
                                     "function": "new_block",
                                     "options": f"minecraft:{colour + '_' if colour else ''}candle"
@@ -723,7 +723,7 @@ def candle_cake(colour: str):
             {
                 "function": "new_properties",
                 "options": {
-                    "color": colour if colour else "\"default\""
+                    "color": f"\"{colour}\"" if colour else "\"default\""
                 }
             },
             {
@@ -778,7 +778,7 @@ def candle_cake(colour: str):
                             ]
                         },
                         "color": {
-                            colour if colour else "\"default\"": [
+                            f"\"{colour}\"" if colour else "\"default\"": [
                                 {
                                     "function": "new_block",
                                     "options": f"minecraft:{colour + '_' if colour else ''}candle_cake"
