@@ -71,7 +71,7 @@ _BText = TranslationFile(
         }
     ],
     {
-        "snbt": "{Text: ""}"
+        "snbt": '{Text: ""}'
     }
 )
 
