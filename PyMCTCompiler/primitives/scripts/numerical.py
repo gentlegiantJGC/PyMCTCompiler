@@ -5619,16 +5619,162 @@ def command_block(input_namespace: str, input_block_name: str, mode: str, univer
 def noteblock(input_namespace: str, input_block_name: str, platform: str, feature_level: str, universal_namespace: str = None, universal_block_name: str = None) -> dict:
 	instruments = None
 	if platform == 'java':
-		instruments = {}
-	# "snare",
-	# "hat",
-	# "basedrum",
-	# "bell",
-	# "flute",
-	# "chime",
-	# "guitar",
-	# "xylophone"
-	# "harp",
+		instruments = {
+			"\"flute\"": [
+				"minecraft:clay"
+			],
+			"\"bell\"": [
+				"minecraft:gold_block"
+			],
+			"\"guitar\"": [
+				"minecraft:wool"
+			],
+			"\"chime\"": [
+				"minecraft:packed_ice"
+			],
+			"\"xylophone\"": [
+				"minecraft:bone_block"
+			],
+			"\"basedrum\"": [
+				"minecraft:bedrock",
+				"minecraft:black_glazed_terracotta",
+				"minecraft:blue_glazed_terracotta",
+				"minecraft:brick_block",
+				"minecraft:brick_stairs",
+				"minecraft:brown_glazed_terracotta",
+				"minecraft:coal_block",
+				"minecraft:coal_ore",
+				"minecraft:cobblestone",
+				"minecraft:cobblestone_wall",
+				"minecraft:concrete",
+				"minecraft:cyan_glazed_terracotta",
+				"minecraft:diamond_ore",
+				"minecraft:dispenser",
+				"minecraft:double_stone_slab",
+				"minecraft:double_stone_slab2",
+				"minecraft:dropper",
+				"minecraft:emerald_ore",
+				"minecraft:enchanting_table",
+				"minecraft:ender_chest",
+				"minecraft:end_bricks",
+				"minecraft:end_portal_frame",
+				"minecraft:end_stone",
+				"minecraft:furnace",
+				"minecraft:gold_ore",
+				"minecraft:gray_glazed_terracotta",
+				"minecraft:green_glazed_terracotta",
+				"minecraft:hardened_clay",
+				"minecraft:iron_ore",
+				"minecraft:lapis_ore",
+				"minecraft:light_blue_glazed_terracotta",
+				"minecraft:lime_glazed_terracotta",
+				"minecraft:lit_furnace",
+				"minecraft:lit_redstone_ore",
+				"minecraft:magenta_glazed_terracotta",
+				"minecraft:magma",
+				"minecraft:mob_spawner",
+				"minecraft:mossy_cobblestone",
+				"minecraft:netherrack",
+				"minecraft:nether_brick",
+				"minecraft:nether_brick_fence",
+				"minecraft:nether_brick_stairs",
+				"minecraft:observer",
+				"minecraft:obsidian",
+				"minecraft:orange_glazed_terracotta",
+				"minecraft:pink_glazed_terracotta",
+				"minecraft:prismarine",
+				"minecraft:purple_glazed_terracotta",
+				"minecraft:purpur_block",
+				"minecraft:purpur_double_slab",
+				"minecraft:purpur_pillar",
+				"minecraft:purpur_slab",
+				"minecraft:purpur_stairs",
+				"minecraft:quartz_block",
+				"minecraft:quartz_ore",
+				"minecraft:quartz_stairs",
+				"minecraft:redstone_ore",
+				"minecraft:red_glazed_terracotta",
+				"minecraft:red_nether_brick",
+				"minecraft:red_sandstone",
+				"minecraft:red_sandstone_stairs",
+				"minecraft:sandstone",
+				"minecraft:sandstone_stairs",
+				"minecraft:silver_glazed_terracotta",
+				"minecraft:stained_hardened_clay",
+				"minecraft:stone",
+				"minecraft:stonebrick",
+				"minecraft:stone_brick_stairs",
+				"minecraft:stone_pressure_plate",
+				"minecraft:stone_slab",
+				"minecraft:stone_slab2",
+				"minecraft:stone_stairs",
+				"minecraft:white_glazed_terracotta",
+				"minecraft:yellow_glazed_terracotta"
+			],
+			"\"snare\"": [
+				"minecraft:concrete_powder",
+				"minecraft:gravel",
+				"minecraft:sand",
+				"minecraft:soul_sand"
+			],
+			"\"hat\"": [
+				"minecraft:beacon",
+				"minecraft:glass",
+				"minecraft:glass_pane",
+				"minecraft:glowstone",
+				"minecraft:sea_lantern",
+				"minecraft:stained_glass",
+				"minecraft:stained_glass_pane"
+			],
+			"\"bass\"": [
+				"minecraft:acacia_door",
+				"minecraft:acacia_fence",
+				"minecraft:acacia_fence_gate",
+				"minecraft:acacia_stairs",
+				"minecraft:birch_door",
+				"minecraft:birch_fence",
+				"minecraft:birch_fence_gate",
+				"minecraft:birch_stairs",
+				"minecraft:bookshelf",
+				"minecraft:brown_mushroom_block",
+				"minecraft:chest",
+				"minecraft:crafting_table",
+				"minecraft:dark_oak_door",
+				"minecraft:dark_oak_fence",
+				"minecraft:dark_oak_fence_gate",
+				"minecraft:dark_oak_stairs",
+				"minecraft:daylight_detector",
+				"minecraft:daylight_detector_inverted",
+				"minecraft:double_wooden_slab",
+				"minecraft:fence",
+				"minecraft:fence_gate",
+				"minecraft:jukebox",
+				"minecraft:jungle_door",
+				"minecraft:jungle_fence",
+				"minecraft:jungle_fence_gate",
+				"minecraft:jungle_stairs",
+				"minecraft:log",
+				"minecraft:log2",
+				"minecraft:noteblock",
+				"minecraft:oak_stairs",
+				"minecraft:planks",
+				"minecraft:red_mushroom_block",
+				"minecraft:spruce_door",
+				"minecraft:spruce_fence",
+				"minecraft:spruce_fence_gate",
+				"minecraft:spruce_stairs",
+				"minecraft:standing_banner",
+				"minecraft:standing_sign",
+				"minecraft:trapdoor",
+				"minecraft:trapped_chest",
+				"minecraft:wall_banner",
+				"minecraft:wall_sign",
+				"minecraft:wooden_door",
+				"minecraft:wooden_pressure_plate",
+				"minecraft:wooden_slab"
+			],
+			# "\"harp\"": [],  # this is the default
+		}
 	elif platform == 'bedrock':
 		if feature_level == '1.0.0':
 			instruments = {
@@ -5879,6 +6025,27 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 							}
 						}
 					}
+				},
+				{
+					"function": "multiblock",
+					"options": {
+						"coords": [0, -1, 0],
+						"functions": [
+							{
+								"function": "map_block_name",
+								"options": {
+									block_name: [
+										{
+											"function": "new_properties",
+											"options": {
+												"instrument": instrument
+											}
+										}
+									] for instrument in instruments.keys() for block_name in instruments[instrument]
+								}
+							}
+						]
+					}
 				}
 			],
 			"from_universal": {
@@ -5945,6 +6112,27 @@ def noteblock(input_namespace: str, input_block_name: str, platform: str, featur
 					"options": {
 						"note": [f"\"{data}\"" for data in range(25)],
 						"powered": ["\"false\"", "\"true\""]
+					}
+				},
+				{
+					"function": "multiblock",
+					"options": {
+						"coords": [0, -1, 0],
+						"functions": [
+							{
+								"function": "map_block_name",
+								"options": {
+									block_name: [
+										{
+											"function": "new_properties",
+											"options": {
+												"instrument": instrument
+											}
+										}
+									] for instrument in instruments.keys() for block_name in instruments[instrument]
+								}
+							}
+						]
 					}
 				}
 			],
