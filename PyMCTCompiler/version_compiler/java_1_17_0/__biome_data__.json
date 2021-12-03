@@ -1,0 +1,16 @@
+{
+    "add": {
+        "biomes": {
+            "minecraft:dripstone_caves": [
+                174,
+                "universal_minecraft:dripstone_caves"
+            ],
+            "minecraft:lush_caves": [
+                175,
+                "universal_minecraft:lush_caves"
+            ]
+        },
+        "universal_remap": {}
+    },
+    "remove": []
+}

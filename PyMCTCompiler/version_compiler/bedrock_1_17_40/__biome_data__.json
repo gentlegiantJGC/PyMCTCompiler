@@ -1,0 +1,12 @@
+{
+	"add": {
+		"biomes": {
+		    "minecraft:stony_peaks": [
+		        189,
+		        "universal_minecraft:stony_peaks"
+		    ]
+		},
+		"universal_remap": {}
+    },
+    "remove": []
+}

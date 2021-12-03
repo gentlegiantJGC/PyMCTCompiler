@@ -1,0 +1,32 @@
+{
+    "add": {
+        "biomes": {
+            "minecraft:meadow": [
+                176,
+                "universal_minecraft:meadow"
+            ],
+            "minecraft:grove": [
+                177,
+                "universal_minecraft:grove"
+            ],
+            "minecraft:snowy_slopes": [
+                178,
+                "universal_minecraft:snowy_slopes"
+            ],
+            "minecraft:jagged_peaks": [
+                179,
+                "universal_minecraft:jagged_peaks"
+            ],
+            "minecraft:frozen_peaks": [
+                180,
+                "universal_minecraft:frozen_peaks"
+            ],
+            "minecraft:stony_peaks": [
+                181,
+                "universal_minecraft:stony_peaks"
+            ]
+        },
+        "universal_remap": {}
+    },
+    "remove": []
+}

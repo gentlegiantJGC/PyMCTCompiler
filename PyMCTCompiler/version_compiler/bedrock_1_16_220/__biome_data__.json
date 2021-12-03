@@ -1,0 +1,36 @@
+{
+	"add": {
+		"biomes": {
+		    "minecraft:jagged_peaks": [
+		        182,
+		        "universal_minecraft:jagged_peaks"
+		    ],
+		    "minecraft:frozen_peaks": [
+		        183,
+		        "universal_minecraft:frozen_peaks"
+		    ],
+			"minecraft:snowy_slopes": [
+				184,
+				"universal_minecraft:snowy_slopes"
+			],
+			"minecraft:grove": [
+				185,
+				"universal_minecraft:grove"
+			],
+			"minecraft:meadow": [
+				186,
+				"universal_minecraft:meadow"
+			],
+			"minecraft:lush_caves": [
+				187,
+				"universal_minecraft:lush_caves"
+			],
+			"minecraft:dripstone_caves": [
+				188,
+				"universal_minecraft:dripstone_caves"
+			]
+		},
+		"universal_remap": {}
+    },
+    "remove": []
+}
