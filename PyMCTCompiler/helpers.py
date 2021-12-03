@@ -1,5 +1,7 @@
+import glob
 import os
 import shutil
+import subprocess
 from typing import Union, List
 from urllib.request import urlopen
 import json
@@ -99,31 +101,66 @@ def remove_list_duplicates(val: list):
 			i += 1
 
 
-def blocks_from_server(version_path: str, version_str: List[str] = None):
-	if not os.path.isfile(f'{version_path}/generated/reports/blocks.json'):
-		if not os.path.isfile(f'{version_path}/server.jar'):
-			download_server_jar(f'{version_path}', version_str)
-		# try and find a version of java with which to extract the blocks.json file
+_JavaPath = None
+
+
+def find_java() -> str:
+	"""Find the path to java vm."""
+	global _JavaPath
+	if _JavaPath is None:
 		try:
-			os.system(f'java -cp {version_path}/server.jar net.minecraft.data.Main --reports --output {version_path}/generated')
+			if not subprocess.call("java -version"):
+				# check if java is on the path
+				_JavaPath = "java"
 		except:
-			print('Could not find global Java. Trying to find the one packaged with Minecraft')
+			pass
+		if _JavaPath is None:
+			print('Java was not on the path. Trying to find the one packaged with Minecraft')
 			if os.path.isdir(r'C:\Program Files (x86)\Minecraft\runtime'):
 				path = r'C:\Program Files (x86)\Minecraft\runtime'
 			elif os.path.isdir(r'C:\Program Files\Minecraft\runtime'):
 				path = r'C:\Program Files\Minecraft\runtime'
 			else:
 				raise Exception('Could not find where the Minecraft launcher is saved')
-			java_path = None
-			for (dirpath, _, filenames) in os.walk(path):
-				if 'java.exe' in filenames:
-					java_path = f'{dirpath}/java.exe'
-					break
-			if java_path is not None:
-				try:
-					os.system(f'{java_path} -cp {version_path}/server.jar net.minecraft.data.Main --reports --output {version_path}/generated')
-				except Exception as e:
-					raise Exception(f'This failed for some reason\n{e}')
+			paths = glob.glob(os.path.join(path, "**", "java.exe"), recursive=True)
+			if paths:
+				_JavaPath = paths[0]
+			else:
+				raise Exception("Could not find java")
+	return _JavaPath
+
+
+def blocks_from_server(version_path: str, version_str: List[str] = None):
+	if not os.path.isfile(f'{version_path}/generated/reports/blocks.json'):
+		if not os.path.isfile(f'{version_path}/server.jar'):
+			download_server_jar(f'{version_path}', version_str)
+		# try and find a version of java with which to extract the blocks.json file
+
+		# try the old command
+		if subprocess.call(
+			[
+				find_java(),
+				"-cp",
+				f'{version_path}/server.jar',
+				'net.minecraft.data.Main',
+				'--reports',
+				'--output',
+				f'{version_path}/generated'
+			]
+		):
+			# if that errors call the new command
+			if subprocess.call(
+				[
+					find_java(),
+					"-DbundlerMainClass=net.minecraft.data.Main",
+					"-jar",
+					f'{version_path}/server.jar',
+					'--reports',
+					'--output',
+					f'{version_path}/generated'
+				]
+			):
+				raise Exception("Could not extract reports")
 
 
 try:
