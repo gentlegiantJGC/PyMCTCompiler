@@ -262,9 +262,23 @@
             "universal_minecraft:deep_warm_ocean": "universal_minecraft:deep_ocean",
             "universal_minecraft:deep_lukewarm_ocean": "universal_minecraft:deep_ocean",
             "universal_minecraft:deep_cold_ocean": "universal_minecraft:deep_ocean",
-            "universal_minecraft:deep_frozen_ocean,": "universal_minecraft:frozen_ocean",
+            "universal_minecraft:deep_frozen_ocean": "universal_minecraft:frozen_ocean",
             "universal_minecraft:bamboo_jungle": "universal_minecraft:jungle",
-            "universal_minecraft:bamboo_jungle_hills": "universal_minecraft:jungle_hills"
+            "universal_minecraft:bamboo_jungle_hills": "universal_minecraft:jungle_hills",
+            "universal_minecraft:legacy_frozen_ocean": "universal_minecraft:frozen_ocean",
+            "universal_minecraft:the_void": "universal_minecraft:plains",
+            "universal_minecraft:soul_sand_valley": "universal_minecraft:nether",
+            "universal_minecraft:crimson_forest": "universal_minecraft:nether",
+            "universal_minecraft:warped_forest": "universal_minecraft:nether",
+            "universal_minecraft:basalt_deltas": "universal_minecraft:nether",
+            "universal_minecraft:jagged_peaks": "universal_minecraft:mountains",
+            "universal_minecraft:frozen_peaks": "universal_minecraft:snowy_mountains",
+            "universal_minecraft:snowy_slopes": "universal_minecraft:snowy_mountains",
+            "universal_minecraft:stony_peaks": "universal_minecraft:mountains",
+            "universal_minecraft:grove": "universal_minecraft:plains",
+            "universal_minecraft:meadow": "universal_minecraft:plains",
+            "universal_minecraft:dripstone_caves": "universal_minecraft:plains",
+            "universal_minecraft:lush_caves": "universal_minecraft:plains"
         }
     },
     "remove": []
