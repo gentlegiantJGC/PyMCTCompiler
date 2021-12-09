@@ -167835,28 +167835,6 @@
 		},
 		{
 			"data": 0,
-			"name": "minecraft:sculk_sensor",
-			"states": [
-				{
-					"name": "powered_bit",
-					"type": "byte",
-					"value": 0
-				}
-			]
-		},
-		{
-			"data": 1,
-			"name": "minecraft:sculk_sensor",
-			"states": [
-				{
-					"name": "powered_bit",
-					"type": "byte",
-					"value": 1
-				}
-			]
-		},
-		{
-			"data": 0,
 			"name": "minecraft:sea_pickle",
 			"states": [
 				{

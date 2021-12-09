@@ -1299,22 +1299,6 @@
             "types": {}
         }
     },
-    "minecraft:sculk_sensor": {
-        "block_added": {
-            "properties": {
-                "powered_bit": [
-                    0,
-                    1
-                ]
-            },
-            "defaults": {
-                "powered_bit": 0
-            },
-            "types": {
-                "powered_bit": "byte"
-            }
-        }
-    },
     "minecraft:small_amethyst_bud": {
         "block_added": {
             "properties": {
