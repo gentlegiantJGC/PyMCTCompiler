@@ -1,1 +1,1 @@
-amulet_nbt
+amulet_nbt~=2.0
