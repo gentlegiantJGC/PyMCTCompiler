@@ -154,10 +154,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "ground_sign_direction": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "ground_sign_direction": "0"
                                 }
                             }
                         ],
@@ -165,10 +162,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "ground_sign_direction": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "ground_sign_direction": "1"
                                 }
                             }
                         ],
@@ -176,10 +170,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "ground_sign_direction": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "ground_sign_direction": "2"
                                 }
                             }
                         ],
@@ -187,10 +178,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "ground_sign_direction": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "ground_sign_direction": "3"
                                 }
                             }
                         ],
@@ -198,10 +186,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "ground_sign_direction": [
-                                        "snbt",
-                                        "4"
-                                    ]
+                                    "ground_sign_direction": "4"
                                 }
                             }
                         ],
@@ -209,10 +194,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "ground_sign_direction": [
-                                        "snbt",
-                                        "5"
-                                    ]
+                                    "ground_sign_direction": "5"
                                 }
                             }
                         ],
@@ -220,10 +202,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "ground_sign_direction": [
-                                        "snbt",
-                                        "6"
-                                    ]
+                                    "ground_sign_direction": "6"
                                 }
                             }
                         ],
@@ -231,10 +210,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "ground_sign_direction": [
-                                        "snbt",
-                                        "7"
-                                    ]
+                                    "ground_sign_direction": "7"
                                 }
                             }
                         ],
@@ -242,10 +218,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "ground_sign_direction": [
-                                        "snbt",
-                                        "8"
-                                    ]
+                                    "ground_sign_direction": "8"
                                 }
                             }
                         ],
@@ -253,10 +226,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "ground_sign_direction": [
-                                        "snbt",
-                                        "9"
-                                    ]
+                                    "ground_sign_direction": "9"
                                 }
                             }
                         ],
@@ -264,10 +234,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "ground_sign_direction": [
-                                        "snbt",
-                                        "10"
-                                    ]
+                                    "ground_sign_direction": "10"
                                 }
                             }
                         ],
@@ -275,10 +242,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "ground_sign_direction": [
-                                        "snbt",
-                                        "11"
-                                    ]
+                                    "ground_sign_direction": "11"
                                 }
                             }
                         ],
@@ -286,10 +250,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "ground_sign_direction": [
-                                        "snbt",
-                                        "12"
-                                    ]
+                                    "ground_sign_direction": "12"
                                 }
                             }
                         ],
@@ -297,10 +258,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "ground_sign_direction": [
-                                        "snbt",
-                                        "13"
-                                    ]
+                                    "ground_sign_direction": "13"
                                 }
                             }
                         ],
@@ -308,10 +266,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "ground_sign_direction": [
-                                        "snbt",
-                                        "14"
-                                    ]
+                                    "ground_sign_direction": "14"
                                 }
                             }
                         ],
@@ -319,10 +274,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "ground_sign_direction": [
-                                        "snbt",
-                                        "15"
-                                    ]
+                                    "ground_sign_direction": "15"
                                 }
                             }
                         ]

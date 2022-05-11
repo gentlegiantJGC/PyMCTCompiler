@@ -60,10 +60,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "allow_underwater_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
+                                    "allow_underwater_bit": "0b"
                                 }
                             }
                         ],
@@ -71,10 +68,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "allow_underwater_bit": [
-                                        "snbt",
-                                        "1b"
-                                    ]
+                                    "allow_underwater_bit": "1b"
                                 }
                             }
                         ]
@@ -84,10 +78,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "explode_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
+                                    "explode_bit": "0b"
                                 }
                             }
                         ],
@@ -95,10 +86,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "explode_bit": [
-                                        "snbt",
-                                        "1b"
-                                    ]
+                                    "explode_bit": "1b"
                                 }
                             }
                         ]

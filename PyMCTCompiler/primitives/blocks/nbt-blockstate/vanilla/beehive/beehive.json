@@ -124,10 +124,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "facing_direction": "0"
                                 }
                             }
                         ],
@@ -135,10 +132,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "facing_direction": "1"
                                 }
                             }
                         ],
@@ -146,10 +140,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "facing_direction": "2"
                                 }
                             }
                         ],
@@ -157,10 +148,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "facing_direction": "3"
                                 }
                             }
                         ],
@@ -168,10 +156,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "4"
-                                    ]
+                                    "facing_direction": "4"
                                 }
                             }
                         ],
@@ -179,10 +164,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "5"
-                                    ]
+                                    "facing_direction": "5"
                                 }
                             }
                         ]
@@ -192,10 +174,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "honey_level": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "honey_level": "0"
                                 }
                             }
                         ],
@@ -203,10 +182,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "honey_level": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "honey_level": "1"
                                 }
                             }
                         ],
@@ -214,10 +190,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "honey_level": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "honey_level": "2"
                                 }
                             }
                         ],
@@ -225,10 +198,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "honey_level": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "honey_level": "3"
                                 }
                             }
                         ],
@@ -236,10 +206,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "honey_level": [
-                                        "snbt",
-                                        "4"
-                                    ]
+                                    "honey_level": "4"
                                 }
                             }
                         ],
@@ -247,10 +214,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "honey_level": [
-                                        "snbt",
-                                        "5"
-                                    ]
+                                    "honey_level": "5"
                                 }
                             }
                         ]

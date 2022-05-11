@@ -104,10 +104,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "cauldron_liquid": [
-                                        "snbt",
-                                        "\"lava\""
-                                    ]
+                                    "cauldron_liquid": "\"lava\""
                                 }
                             }
                         ]
@@ -117,10 +114,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "fill_level": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "fill_level": "0"
                                 }
                             }
                         ],
@@ -128,10 +122,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "fill_level": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "fill_level": "1"
                                 }
                             }
                         ],
@@ -139,10 +130,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "fill_level": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "fill_level": "2"
                                 }
                             }
                         ],
@@ -150,10 +138,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "fill_level": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "fill_level": "3"
                                 }
                             }
                         ],
@@ -161,10 +146,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "fill_level": [
-                                        "snbt",
-                                        "4"
-                                    ]
+                                    "fill_level": "4"
                                 }
                             }
                         ],
@@ -172,10 +154,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "fill_level": [
-                                        "snbt",
-                                        "5"
-                                    ]
+                                    "fill_level": "5"
                                 }
                             }
                         ],
@@ -183,10 +162,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "fill_level": [
-                                        "snbt",
-                                        "6"
-                                    ]
+                                    "fill_level": "6"
                                 }
                             }
                         ]

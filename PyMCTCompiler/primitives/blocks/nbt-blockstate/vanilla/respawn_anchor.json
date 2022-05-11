@@ -66,10 +66,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "respawn_anchor_charge": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "respawn_anchor_charge": "0"
                                 }
                             }
                         ],
@@ -77,10 +74,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "respawn_anchor_charge": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "respawn_anchor_charge": "1"
                                 }
                             }
                         ],
@@ -88,10 +82,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "respawn_anchor_charge": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "respawn_anchor_charge": "2"
                                 }
                             }
                         ],
@@ -99,10 +90,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "respawn_anchor_charge": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "respawn_anchor_charge": "3"
                                 }
                             }
                         ],
@@ -110,10 +98,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "respawn_anchor_charge": [
-                                        "snbt",
-                                        "4"
-                                    ]
+                                    "respawn_anchor_charge": "4"
                                 }
                             }
                         ]

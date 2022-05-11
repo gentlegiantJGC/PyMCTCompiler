@@ -118,10 +118,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"y\""
-                                    ]
+                                    "pillar_axis": "\"y\""
                                 }
                             }
                         ],
@@ -129,10 +126,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"x\""
-                                    ]
+                                    "pillar_axis": "\"x\""
                                 }
                             }
                         ],
@@ -140,10 +134,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"z\""
-                                    ]
+                                    "pillar_axis": "\"z\""
                                 }
                             }
                         ]
@@ -153,10 +144,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "wood_type": [
-                                        "snbt",
-                                        material
-                                    ]
+                                    "wood_type": material
                                 }
                             },
                             {
@@ -167,10 +155,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "stripped_bit": [
-                                                        "snbt",
-                                                        "0b"
-                                                    ]
+                                                    "stripped_bit": "0b"
                                                 }
                                             }
                                         ],
@@ -178,10 +163,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "stripped_bit": [
-                                                        "snbt",
-                                                        "1b"
-                                                    ]
+                                                    "stripped_bit": "1b"
                                                 }
                                             }
                                         ]

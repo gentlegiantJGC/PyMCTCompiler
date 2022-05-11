@@ -74,10 +74,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "monster_egg_stone_type": [
-                                        "snbt",
-                                        "\"stone\""
-                                    ]
+                                    "monster_egg_stone_type": "\"stone\""
                                 }
                             }
                         ],
@@ -85,10 +82,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "monster_egg_stone_type": [
-                                        "snbt",
-                                        "\"cobblestone\""
-                                    ]
+                                    "monster_egg_stone_type": "\"cobblestone\""
                                 }
                             }
                         ],
@@ -96,10 +90,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "monster_egg_stone_type": [
-                                        "snbt",
-                                        "\"stone_brick\""
-                                    ]
+                                    "monster_egg_stone_type": "\"stone_brick\""
                                 }
                             }
                         ],
@@ -107,10 +98,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "monster_egg_stone_type": [
-                                        "snbt",
-                                        "\"mossy_stone_brick\""
-                                    ]
+                                    "monster_egg_stone_type": "\"mossy_stone_brick\""
                                 }
                             }
                         ],
@@ -118,10 +106,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "monster_egg_stone_type": [
-                                        "snbt",
-                                        "\"cracked_stone_brick\""
-                                    ]
+                                    "monster_egg_stone_type": "\"cracked_stone_brick\""
                                 }
                             }
                         ],
@@ -129,10 +114,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "monster_egg_stone_type": [
-                                        "snbt",
-                                        "\"chiseled_stone_brick\""
-                                    ]
+                                    "monster_egg_stone_type": "\"chiseled_stone_brick\""
                                 }
                             }
                         ]

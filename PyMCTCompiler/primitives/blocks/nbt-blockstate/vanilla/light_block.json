@@ -154,10 +154,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "block_light_level": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "block_light_level": "0"
                                 }
                             }
                         ],
@@ -165,10 +162,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "block_light_level": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "block_light_level": "1"
                                 }
                             }
                         ],
@@ -176,10 +170,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "block_light_level": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "block_light_level": "2"
                                 }
                             }
                         ],
@@ -187,10 +178,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "block_light_level": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "block_light_level": "3"
                                 }
                             }
                         ],
@@ -198,10 +186,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "block_light_level": [
-                                        "snbt",
-                                        "4"
-                                    ]
+                                    "block_light_level": "4"
                                 }
                             }
                         ],
@@ -209,10 +194,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "block_light_level": [
-                                        "snbt",
-                                        "5"
-                                    ]
+                                    "block_light_level": "5"
                                 }
                             }
                         ],
@@ -220,10 +202,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "block_light_level": [
-                                        "snbt",
-                                        "6"
-                                    ]
+                                    "block_light_level": "6"
                                 }
                             }
                         ],
@@ -231,10 +210,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "block_light_level": [
-                                        "snbt",
-                                        "7"
-                                    ]
+                                    "block_light_level": "7"
                                 }
                             }
                         ],
@@ -242,10 +218,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "block_light_level": [
-                                        "snbt",
-                                        "8"
-                                    ]
+                                    "block_light_level": "8"
                                 }
                             }
                         ],
@@ -253,10 +226,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "block_light_level": [
-                                        "snbt",
-                                        "9"
-                                    ]
+                                    "block_light_level": "9"
                                 }
                             }
                         ],
@@ -264,10 +234,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "block_light_level": [
-                                        "snbt",
-                                        "10"
-                                    ]
+                                    "block_light_level": "10"
                                 }
                             }
                         ],
@@ -275,10 +242,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "block_light_level": [
-                                        "snbt",
-                                        "11"
-                                    ]
+                                    "block_light_level": "11"
                                 }
                             }
                         ],
@@ -286,10 +250,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "block_light_level": [
-                                        "snbt",
-                                        "12"
-                                    ]
+                                    "block_light_level": "12"
                                 }
                             }
                         ],
@@ -297,10 +258,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "block_light_level": [
-                                        "snbt",
-                                        "13"
-                                    ]
+                                    "block_light_level": "13"
                                 }
                             }
                         ],
@@ -308,10 +266,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "block_light_level": [
-                                        "snbt",
-                                        "14"
-                                    ]
+                                    "block_light_level": "14"
                                 }
                             }
                         ],
@@ -319,10 +274,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "block_light_level": [
-                                        "snbt",
-                                        "15"
-                                    ]
+                                    "block_light_level": "15"
                                 }
                             }
                         ]

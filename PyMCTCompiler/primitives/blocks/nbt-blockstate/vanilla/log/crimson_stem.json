@@ -73,10 +73,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"y\""
-                                    ]
+                                    "pillar_axis": "\"y\""
                                 }
                             }
                         ],
@@ -84,10 +81,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"x\""
-                                    ]
+                                    "pillar_axis": "\"x\""
                                 }
                             }
                         ],
@@ -95,10 +89,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"z\""
-                                    ]
+                                    "pillar_axis": "\"z\""
                                 }
                             }
                         ]

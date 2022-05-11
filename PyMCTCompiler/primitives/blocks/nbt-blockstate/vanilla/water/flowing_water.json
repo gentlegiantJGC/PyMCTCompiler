@@ -189,10 +189,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "liquid_depth": [
-                                                        "snbt",
-                                                        "0"
-                                                    ]
+                                                    "liquid_depth": "0"
                                                 }
                                             }
                                         ],
@@ -200,10 +197,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "liquid_depth": [
-                                                        "snbt",
-                                                        "1"
-                                                    ]
+                                                    "liquid_depth": "1"
                                                 }
                                             }
                                         ],
@@ -211,10 +205,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "liquid_depth": [
-                                                        "snbt",
-                                                        "2"
-                                                    ]
+                                                    "liquid_depth": "2"
                                                 }
                                             }
                                         ],
@@ -222,10 +213,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "liquid_depth": [
-                                                        "snbt",
-                                                        "3"
-                                                    ]
+                                                    "liquid_depth": "3"
                                                 }
                                             }
                                         ],
@@ -233,10 +221,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "liquid_depth": [
-                                                        "snbt",
-                                                        "4"
-                                                    ]
+                                                    "liquid_depth": "4"
                                                 }
                                             }
                                         ],
@@ -244,10 +229,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "liquid_depth": [
-                                                        "snbt",
-                                                        "5"
-                                                    ]
+                                                    "liquid_depth": "5"
                                                 }
                                             }
                                         ],
@@ -255,10 +237,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "liquid_depth": [
-                                                        "snbt",
-                                                        "6"
-                                                    ]
+                                                    "liquid_depth": "6"
                                                 }
                                             }
                                         ],
@@ -266,10 +245,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "liquid_depth": [
-                                                        "snbt",
-                                                        "7"
-                                                    ]
+                                                    "liquid_depth": "7"
                                                 }
                                             }
                                         ]
@@ -286,10 +262,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "liquid_depth": [
-                                                        "snbt",
-                                                        "8"
-                                                    ]
+                                                    "liquid_depth": "8"
                                                 }
                                             }
                                         ],
@@ -297,10 +270,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "liquid_depth": [
-                                                        "snbt",
-                                                        "9"
-                                                    ]
+                                                    "liquid_depth": "9"
                                                 }
                                             }
                                         ],
@@ -308,10 +278,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "liquid_depth": [
-                                                        "snbt",
-                                                        "10"
-                                                    ]
+                                                    "liquid_depth": "10"
                                                 }
                                             }
                                         ],
@@ -319,10 +286,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "liquid_depth": [
-                                                        "snbt",
-                                                        "11"
-                                                    ]
+                                                    "liquid_depth": "11"
                                                 }
                                             }
                                         ],
@@ -330,10 +294,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "liquid_depth": [
-                                                        "snbt",
-                                                        "12"
-                                                    ]
+                                                    "liquid_depth": "12"
                                                 }
                                             }
                                         ],
@@ -341,10 +302,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "liquid_depth": [
-                                                        "snbt",
-                                                        "13"
-                                                    ]
+                                                    "liquid_depth": "13"
                                                 }
                                             }
                                         ],
@@ -352,10 +310,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "liquid_depth": [
-                                                        "snbt",
-                                                        "14"
-                                                    ]
+                                                    "liquid_depth": "14"
                                                 }
                                             }
                                         ],
@@ -363,10 +318,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "liquid_depth": [
-                                                        "snbt",
-                                                        "15"
-                                                    ]
+                                                    "liquid_depth": "15"
                                                 }
                                             }
                                         ]

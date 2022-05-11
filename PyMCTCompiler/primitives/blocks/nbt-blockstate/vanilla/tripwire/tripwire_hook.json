@@ -94,10 +94,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "attached_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
+                                    "attached_bit": "0b"
                                 }
                             }
                         ],
@@ -105,10 +102,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "attached_bit": [
-                                        "snbt",
-                                        "1b"
-                                    ]
+                                    "attached_bit": "1b"
                                 }
                             }
                         ]
@@ -118,10 +112,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "direction": "0"
                                 }
                             }
                         ],
@@ -129,10 +120,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "direction": "1"
                                 }
                             }
                         ],
@@ -140,10 +128,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "direction": "2"
                                 }
                             }
                         ],
@@ -151,10 +136,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "direction": "3"
                                 }
                             }
                         ]
@@ -164,10 +146,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "powered_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
+                                    "powered_bit": "0b"
                                 }
                             }
                         ],
@@ -175,10 +154,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "powered_bit": [
-                                        "snbt",
-                                        "1b"
-                                    ]
+                                    "powered_bit": "1b"
                                 }
                             }
                         ]

@@ -90,10 +90,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "upside_down_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
+                                    "upside_down_bit": "0b"
                                 }
                             }
                         ],
@@ -101,10 +98,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "upside_down_bit": [
-                                        "snbt",
-                                        "1b"
-                                    ]
+                                    "upside_down_bit": "1b"
                                 }
                             }
                         ]
@@ -114,10 +108,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "weirdo_direction": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "weirdo_direction": "0"
                                 }
                             }
                         ],
@@ -125,10 +116,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "weirdo_direction": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "weirdo_direction": "1"
                                 }
                             }
                         ],
@@ -136,10 +124,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "weirdo_direction": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "weirdo_direction": "2"
                                 }
                             }
                         ],
@@ -147,10 +132,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "weirdo_direction": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "weirdo_direction": "3"
                                 }
                             }
                         ]

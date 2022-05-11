@@ -38,7 +38,7 @@
             {
                 "function": "new_properties",
                 "options": {
-                    "facing_direction": ["snbt", "1"],
+                    "facing_direction": "1",
                 }
             }
         ],
@@ -55,7 +55,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": ["snbt", str(rot + 2)]
+                                    "facing_direction": str(rot + 2)
                                 }
                             }
                         ] for rot, facing in enumerate([

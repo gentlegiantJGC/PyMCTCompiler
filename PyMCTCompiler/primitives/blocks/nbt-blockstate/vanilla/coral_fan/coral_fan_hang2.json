@@ -94,10 +94,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "coral_direction": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "coral_direction": "0"
                                 }
                             },
                             {
@@ -108,10 +105,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "dead_bit": [
-                                                        "snbt",
-                                                        "0b"
-                                                    ]
+                                                    "dead_bit": "0b"
                                                 }
                                             }
                                         ],
@@ -119,10 +113,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "dead_bit": [
-                                                        "snbt",
-                                                        "1b"
-                                                    ]
+                                                    "dead_bit": "1b"
                                                 }
                                             }
                                         ]
@@ -136,10 +127,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "coral_hang_type_bit": [
-                                                        "snbt",
-                                                        "0b"
-                                                    ]
+                                                    "coral_hang_type_bit": "0b"
                                                 }
                                             }
                                         ],
@@ -151,10 +139,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "coral_hang_type_bit": [
-                                                        "snbt",
-                                                        "1b"
-                                                    ]
+                                                    "coral_hang_type_bit": "1b"
                                                 }
                                             }
                                         ]
@@ -166,10 +151,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "coral_direction": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "coral_direction": "1"
                                 }
                             },
                             {
@@ -180,10 +162,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "dead_bit": [
-                                                        "snbt",
-                                                        "0b"
-                                                    ]
+                                                    "dead_bit": "0b"
                                                 }
                                             }
                                         ],
@@ -191,10 +170,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "dead_bit": [
-                                                        "snbt",
-                                                        "1b"
-                                                    ]
+                                                    "dead_bit": "1b"
                                                 }
                                             }
                                         ]
@@ -208,10 +184,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "coral_hang_type_bit": [
-                                                        "snbt",
-                                                        "0b"
-                                                    ]
+                                                    "coral_hang_type_bit": "0b"
                                                 }
                                             }
                                         ],
@@ -223,10 +196,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "coral_hang_type_bit": [
-                                                        "snbt",
-                                                        "1b"
-                                                    ]
+                                                    "coral_hang_type_bit": "1b"
                                                 }
                                             }
                                         ]
@@ -238,10 +208,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "coral_direction": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "coral_direction": "2"
                                 }
                             },
                             {
@@ -252,10 +219,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "dead_bit": [
-                                                        "snbt",
-                                                        "0b"
-                                                    ]
+                                                    "dead_bit": "0b"
                                                 }
                                             }
                                         ],
@@ -263,10 +227,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "dead_bit": [
-                                                        "snbt",
-                                                        "1b"
-                                                    ]
+                                                    "dead_bit": "1b"
                                                 }
                                             }
                                         ]
@@ -280,10 +241,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "coral_hang_type_bit": [
-                                                        "snbt",
-                                                        "0b"
-                                                    ]
+                                                    "coral_hang_type_bit": "0b"
                                                 }
                                             }
                                         ],
@@ -295,10 +253,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "coral_hang_type_bit": [
-                                                        "snbt",
-                                                        "1b"
-                                                    ]
+                                                    "coral_hang_type_bit": "1b"
                                                 }
                                             }
                                         ]
@@ -310,10 +265,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "coral_direction": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "coral_direction": "3"
                                 }
                             },
                             {
@@ -324,10 +276,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "dead_bit": [
-                                                        "snbt",
-                                                        "0b"
-                                                    ]
+                                                    "dead_bit": "0b"
                                                 }
                                             }
                                         ],
@@ -335,10 +284,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "dead_bit": [
-                                                        "snbt",
-                                                        "1b"
-                                                    ]
+                                                    "dead_bit": "1b"
                                                 }
                                             }
                                         ]
@@ -352,10 +298,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "coral_hang_type_bit": [
-                                                        "snbt",
-                                                        "0b"
-                                                    ]
+                                                    "coral_hang_type_bit": "0b"
                                                 }
                                             }
                                         ],
@@ -367,10 +310,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "coral_hang_type_bit": [
-                                                        "snbt",
-                                                        "1b"
-                                                    ]
+                                                    "coral_hang_type_bit": "1b"
                                                 }
                                             }
                                         ]

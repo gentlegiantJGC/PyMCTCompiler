@@ -84,10 +84,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "cracked_state": [
-                                        "snbt",
-                                        "\"no_cracks\""
-                                    ]
+                                    "cracked_state": "\"no_cracks\""
                                 }
                             }
                         ],
@@ -95,10 +92,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "cracked_state": [
-                                        "snbt",
-                                        "\"cracked\""
-                                    ]
+                                    "cracked_state": "\"cracked\""
                                 }
                             }
                         ],
@@ -106,10 +100,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "cracked_state": [
-                                        "snbt",
-                                        "\"max_cracked\""
-                                    ]
+                                    "cracked_state": "\"max_cracked\""
                                 }
                             }
                         ]
@@ -119,10 +110,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "turtle_egg_count": [
-                                        "snbt",
-                                        "\"one_egg\""
-                                    ]
+                                    "turtle_egg_count": "\"one_egg\""
                                 }
                             }
                         ],
@@ -130,10 +118,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "turtle_egg_count": [
-                                        "snbt",
-                                        "\"two_egg\""
-                                    ]
+                                    "turtle_egg_count": "\"two_egg\""
                                 }
                             }
                         ],
@@ -141,10 +126,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "turtle_egg_count": [
-                                        "snbt",
-                                        "\"three_egg\""
-                                    ]
+                                    "turtle_egg_count": "\"three_egg\""
                                 }
                             }
                         ],
@@ -152,10 +134,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "turtle_egg_count": [
-                                        "snbt",
-                                        "\"four_egg\""
-                                    ]
+                                    "turtle_egg_count": "\"four_egg\""
                                 }
                             }
                         ]

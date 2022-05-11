@@ -42,10 +42,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "powered_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
+                                    "powered_bit": "0b"
                                 }
                             }
                         ],
@@ -53,10 +50,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "powered_bit": [
-                                        "snbt",
-                                        "1b"
-                                    ]
+                                    "powered_bit": "1b"
                                 }
                             }
                         ]

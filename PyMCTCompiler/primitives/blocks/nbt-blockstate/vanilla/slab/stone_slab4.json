@@ -84,10 +84,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "top_slot_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
+                                    "top_slot_bit": "0b"
                                 }
                             },
                             {
@@ -102,10 +99,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "stone_slab_type_4": [
-                                                        "snbt",
-                                                        "\"mossy_stone_brick\""
-                                                    ]
+                                                    "stone_slab_type_4": "\"mossy_stone_brick\""
                                                 }
                                             }
                                         ],
@@ -117,10 +111,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "stone_slab_type_4": [
-                                                        "snbt",
-                                                        "\"smooth_quartz\""
-                                                    ]
+                                                    "stone_slab_type_4": "\"smooth_quartz\""
                                                 }
                                             }
                                         ],
@@ -132,10 +123,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "stone_slab_type_4": [
-                                                        "snbt",
-                                                        "\"stone\""
-                                                    ]
+                                                    "stone_slab_type_4": "\"stone\""
                                                 }
                                             }
                                         ],
@@ -147,10 +135,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "stone_slab_type_4": [
-                                                        "snbt",
-                                                        "\"cut_sandstone\""
-                                                    ]
+                                                    "stone_slab_type_4": "\"cut_sandstone\""
                                                 }
                                             }
                                         ],
@@ -162,10 +147,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "stone_slab_type_4": [
-                                                        "snbt",
-                                                        "\"cut_red_sandstone\""
-                                                    ]
+                                                    "stone_slab_type_4": "\"cut_red_sandstone\""
                                                 }
                                             }
                                         ]
@@ -177,10 +159,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "top_slot_bit": [
-                                        "snbt",
-                                        "1b"
-                                    ]
+                                    "top_slot_bit": "1b"
                                 }
                             },
                             {
@@ -195,10 +174,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "stone_slab_type_4": [
-                                                        "snbt",
-                                                        "\"mossy_stone_brick\""
-                                                    ]
+                                                    "stone_slab_type_4": "\"mossy_stone_brick\""
                                                 }
                                             }
                                         ],
@@ -210,10 +186,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "stone_slab_type_4": [
-                                                        "snbt",
-                                                        "\"smooth_quartz\""
-                                                    ]
+                                                    "stone_slab_type_4": "\"smooth_quartz\""
                                                 }
                                             }
                                         ],
@@ -225,10 +198,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "stone_slab_type_4": [
-                                                        "snbt",
-                                                        "\"stone\""
-                                                    ]
+                                                    "stone_slab_type_4": "\"stone\""
                                                 }
                                             }
                                         ],
@@ -240,10 +210,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "stone_slab_type_4": [
-                                                        "snbt",
-                                                        "\"cut_sandstone\""
-                                                    ]
+                                                    "stone_slab_type_4": "\"cut_sandstone\""
                                                 }
                                             }
                                         ],
@@ -255,10 +222,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "stone_slab_type_4": [
-                                                        "snbt",
-                                                        "\"cut_red_sandstone\""
-                                                    ]
+                                                    "stone_slab_type_4": "\"cut_red_sandstone\""
                                                 }
                                             }
                                         ]

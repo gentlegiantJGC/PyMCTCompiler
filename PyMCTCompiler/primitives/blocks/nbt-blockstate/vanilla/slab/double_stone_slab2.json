@@ -105,10 +105,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "stone_slab_type_2": [
-                                                        "snbt",
-                                                        "\"red_sandstone\""
-                                                    ]
+                                                    "stone_slab_type_2": "\"red_sandstone\""
                                                 }
                                             }
                                         ],
@@ -120,10 +117,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "stone_slab_type_2": [
-                                                        "snbt",
-                                                        "\"purpur\""
-                                                    ]
+                                                    "stone_slab_type_2": "\"purpur\""
                                                 }
                                             }
                                         ],
@@ -135,10 +129,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "stone_slab_type_2": [
-                                                        "snbt",
-                                                        "\"prismarine_rough\""
-                                                    ]
+                                                    "stone_slab_type_2": "\"prismarine_rough\""
                                                 }
                                             }
                                         ],
@@ -150,10 +141,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "stone_slab_type_2": [
-                                                        "snbt",
-                                                        "\"prismarine_dark\""
-                                                    ]
+                                                    "stone_slab_type_2": "\"prismarine_dark\""
                                                 }
                                             }
                                         ],
@@ -165,10 +153,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "stone_slab_type_2": [
-                                                        "snbt",
-                                                        "\"prismarine_brick\""
-                                                    ]
+                                                    "stone_slab_type_2": "\"prismarine_brick\""
                                                 }
                                             }
                                         ],
@@ -180,10 +165,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "stone_slab_type_2": [
-                                                        "snbt",
-                                                        "\"mossy_cobblestone\""
-                                                    ]
+                                                    "stone_slab_type_2": "\"mossy_cobblestone\""
                                                 }
                                             }
                                         ],
@@ -195,10 +177,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "stone_slab_type_2": [
-                                                        "snbt",
-                                                        "\"smooth_sandstone\""
-                                                    ]
+                                                    "stone_slab_type_2": "\"smooth_sandstone\""
                                                 }
                                             }
                                         ],
@@ -210,10 +189,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "stone_slab_type_2": [
-                                                        "snbt",
-                                                        "\"red_nether_brick\""
-                                                    ]
+                                                    "stone_slab_type_2": "\"red_nether_brick\""
                                                 }
                                             }
                                         ]

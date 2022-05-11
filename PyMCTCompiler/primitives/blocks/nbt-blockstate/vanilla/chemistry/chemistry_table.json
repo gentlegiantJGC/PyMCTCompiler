@@ -92,10 +92,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "chemistry_table_type": [
-                                        "snbt",
-                                        "\"compound_creator\""
-                                    ]
+                                    "chemistry_table_type": "\"compound_creator\""
                                 }
                             }
                         ],
@@ -103,10 +100,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "chemistry_table_type": [
-                                        "snbt",
-                                        "\"material_reducer\""
-                                    ]
+                                    "chemistry_table_type": "\"material_reducer\""
                                 }
                             }
                         ],
@@ -114,10 +108,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "chemistry_table_type": [
-                                        "snbt",
-                                        "\"element_constructor\""
-                                    ]
+                                    "chemistry_table_type": "\"element_constructor\""
                                 }
                             }
                         ],
@@ -125,10 +116,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "chemistry_table_type": [
-                                        "snbt",
-                                        "\"lab_table\""
-                                    ]
+                                    "chemistry_table_type": "\"lab_table\""
                                 }
                             }
                         ]
@@ -138,10 +126,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "direction": "0"
                                 }
                             }
                         ],
@@ -149,10 +134,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "direction": "1"
                                 }
                             }
                         ],
@@ -160,10 +142,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "direction": "2"
                                 }
                             }
                         ],
@@ -171,10 +150,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "direction": "3"
                                 }
                             }
                         ]

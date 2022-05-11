@@ -248,10 +248,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "growing_plant_age": "0"
                                 }
                             }
                         ],
@@ -259,10 +256,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "growing_plant_age": "1"
                                 }
                             }
                         ],
@@ -270,10 +264,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "growing_plant_age": "2"
                                 }
                             }
                         ],
@@ -281,10 +272,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "growing_plant_age": "3"
                                 }
                             }
                         ],
@@ -292,10 +280,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "4"
-                                    ]
+                                    "growing_plant_age": "4"
                                 }
                             }
                         ],
@@ -303,10 +288,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "5"
-                                    ]
+                                    "growing_plant_age": "5"
                                 }
                             }
                         ],
@@ -314,10 +296,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "6"
-                                    ]
+                                    "growing_plant_age": "6"
                                 }
                             }
                         ],
@@ -325,10 +304,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "7"
-                                    ]
+                                    "growing_plant_age": "7"
                                 }
                             }
                         ],
@@ -336,10 +312,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "8"
-                                    ]
+                                    "growing_plant_age": "8"
                                 }
                             }
                         ],
@@ -347,10 +320,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "9"
-                                    ]
+                                    "growing_plant_age": "9"
                                 }
                             }
                         ],
@@ -358,10 +328,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "10"
-                                    ]
+                                    "growing_plant_age": "10"
                                 }
                             }
                         ],
@@ -369,10 +336,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "11"
-                                    ]
+                                    "growing_plant_age": "11"
                                 }
                             }
                         ],
@@ -380,10 +344,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "12"
-                                    ]
+                                    "growing_plant_age": "12"
                                 }
                             }
                         ],
@@ -391,10 +352,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "13"
-                                    ]
+                                    "growing_plant_age": "13"
                                 }
                             }
                         ],
@@ -402,10 +360,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "14"
-                                    ]
+                                    "growing_plant_age": "14"
                                 }
                             }
                         ],
@@ -413,10 +368,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "15"
-                                    ]
+                                    "growing_plant_age": "15"
                                 }
                             }
                         ],
@@ -424,10 +376,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "16"
-                                    ]
+                                    "growing_plant_age": "16"
                                 }
                             }
                         ],
@@ -435,10 +384,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "17"
-                                    ]
+                                    "growing_plant_age": "17"
                                 }
                             }
                         ],
@@ -446,10 +392,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "18"
-                                    ]
+                                    "growing_plant_age": "18"
                                 }
                             }
                         ],
@@ -457,10 +400,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "19"
-                                    ]
+                                    "growing_plant_age": "19"
                                 }
                             }
                         ],
@@ -468,10 +408,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "20"
-                                    ]
+                                    "growing_plant_age": "20"
                                 }
                             }
                         ],
@@ -479,10 +416,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "21"
-                                    ]
+                                    "growing_plant_age": "21"
                                 }
                             }
                         ],
@@ -490,10 +424,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "22"
-                                    ]
+                                    "growing_plant_age": "22"
                                 }
                             }
                         ],
@@ -501,10 +432,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "23"
-                                    ]
+                                    "growing_plant_age": "23"
                                 }
                             }
                         ],
@@ -512,10 +440,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "24"
-                                    ]
+                                    "growing_plant_age": "24"
                                 }
                             }
                         ],
@@ -523,10 +448,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growing_plant_age": [
-                                        "snbt",
-                                        "25"
-                                    ]
+                                    "growing_plant_age": "25"
                                 }
                             }
                         ]

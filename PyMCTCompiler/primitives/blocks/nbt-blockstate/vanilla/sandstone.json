@@ -58,10 +58,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "sand_stone_type": [
-                                        "snbt",
-                                        "\"default\""
-                                    ]
+                                    "sand_stone_type": "\"default\""
                                 }
                             }
                         ],
@@ -69,10 +66,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "sand_stone_type": [
-                                        "snbt",
-                                        "\"heiroglyphs\""
-                                    ]
+                                    "sand_stone_type": "\"heiroglyphs\""
                                 }
                             }
                         ],
@@ -80,10 +74,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "sand_stone_type": [
-                                        "snbt",
-                                        "\"cut\""
-                                    ]
+                                    "sand_stone_type": "\"cut\""
                                 }
                             }
                         ],
@@ -91,10 +82,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "sand_stone_type": [
-                                        "snbt",
-                                        "\"smooth\""
-                                    ]
+                                    "sand_stone_type": "\"smooth\""
                                 }
                             }
                         ]

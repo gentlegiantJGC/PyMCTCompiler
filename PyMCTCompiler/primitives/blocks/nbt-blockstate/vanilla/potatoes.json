@@ -90,10 +90,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growth": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "growth": "0"
                                 }
                             }
                         ],
@@ -101,10 +98,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growth": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "growth": "1"
                                 }
                             }
                         ],
@@ -112,10 +106,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growth": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "growth": "2"
                                 }
                             }
                         ],
@@ -123,10 +114,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growth": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "growth": "3"
                                 }
                             }
                         ],
@@ -134,10 +122,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growth": [
-                                        "snbt",
-                                        "4"
-                                    ]
+                                    "growth": "4"
                                 }
                             }
                         ],
@@ -145,10 +130,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growth": [
-                                        "snbt",
-                                        "5"
-                                    ]
+                                    "growth": "5"
                                 }
                             }
                         ],
@@ -156,10 +138,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growth": [
-                                        "snbt",
-                                        "6"
-                                    ]
+                                    "growth": "6"
                                 }
                             }
                         ],
@@ -167,10 +146,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growth": [
-                                        "snbt",
-                                        "7"
-                                    ]
+                                    "growth": "7"
                                 }
                             }
                         ]

@@ -42,10 +42,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "hanging": [
-                                        "snbt",
-                                        "0b"
-                                    ]
+                                    "hanging": "0b"
                                 }
                             }
                         ],
@@ -53,10 +50,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "hanging": [
-                                        "snbt",
-                                        "1b"
-                                    ]
+                                    "hanging": "1b"
                                 }
                             }
                         ]

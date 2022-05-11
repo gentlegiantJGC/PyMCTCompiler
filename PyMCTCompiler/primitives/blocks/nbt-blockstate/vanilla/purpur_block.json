@@ -71,14 +71,8 @@
             {
                 "function": "new_properties",
                 "options": {
-                    "chisel_type": [
-                        "snbt",
-                        "\"default\""
-                    ],
-                    "pillar_axis": [
-                        "snbt",
-                        "\"y\""
-                    ]
+                    "chisel_type": "\"default\"",
+                    "pillar_axis": "\"y\""
                 }
             }
         ],
@@ -90,10 +84,7 @@
             {
                 "function": "new_properties",
                 "options": {
-                    "chisel_type": [
-                        "snbt",
-                        "\"lines\""
-                    ]
+                    "chisel_type": "\"lines\""
                 }
             },
             {
@@ -104,10 +95,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"y\""
-                                    ]
+                                    "pillar_axis": "\"y\""
                                 }
                             }
                         ],
@@ -115,10 +103,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"x\""
-                                    ]
+                                    "pillar_axis": "\"x\""
                                 }
                             }
                         ],
@@ -126,10 +111,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"z\""
-                                    ]
+                                    "pillar_axis": "\"z\""
                                 }
                             }
                         ]

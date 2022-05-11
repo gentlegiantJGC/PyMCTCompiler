@@ -106,10 +106,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "rail_direction": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "rail_direction": "0"
                                 }
                             }
                         ],
@@ -117,10 +114,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "rail_direction": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "rail_direction": "1"
                                 }
                             }
                         ],
@@ -128,10 +122,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "rail_direction": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "rail_direction": "2"
                                 }
                             }
                         ],
@@ -139,10 +130,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "rail_direction": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "rail_direction": "3"
                                 }
                             }
                         ],
@@ -150,10 +138,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "rail_direction": [
-                                        "snbt",
-                                        "4"
-                                    ]
+                                    "rail_direction": "4"
                                 }
                             }
                         ],
@@ -161,10 +146,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "rail_direction": [
-                                        "snbt",
-                                        "5"
-                                    ]
+                                    "rail_direction": "5"
                                 }
                             }
                         ],
@@ -172,10 +154,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "rail_direction": [
-                                        "snbt",
-                                        "6"
-                                    ]
+                                    "rail_direction": "6"
                                 }
                             }
                         ],
@@ -183,10 +162,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "rail_direction": [
-                                        "snbt",
-                                        "7"
-                                    ]
+                                    "rail_direction": "7"
                                 }
                             }
                         ],
@@ -194,10 +170,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "rail_direction": [
-                                        "snbt",
-                                        "8"
-                                    ]
+                                    "rail_direction": "8"
                                 }
                             }
                         ],
@@ -205,10 +178,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "rail_direction": [
-                                        "snbt",
-                                        "9"
-                                    ]
+                                    "rail_direction": "9"
                                 }
                             }
                         ]

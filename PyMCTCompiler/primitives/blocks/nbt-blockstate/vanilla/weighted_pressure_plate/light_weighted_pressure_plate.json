@@ -154,10 +154,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "redstone_signal": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "redstone_signal": "0"
                                 }
                             }
                         ],
@@ -165,10 +162,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "redstone_signal": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "redstone_signal": "1"
                                 }
                             }
                         ],
@@ -176,10 +170,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "redstone_signal": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "redstone_signal": "2"
                                 }
                             }
                         ],
@@ -187,10 +178,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "redstone_signal": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "redstone_signal": "3"
                                 }
                             }
                         ],
@@ -198,10 +186,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "redstone_signal": [
-                                        "snbt",
-                                        "4"
-                                    ]
+                                    "redstone_signal": "4"
                                 }
                             }
                         ],
@@ -209,10 +194,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "redstone_signal": [
-                                        "snbt",
-                                        "5"
-                                    ]
+                                    "redstone_signal": "5"
                                 }
                             }
                         ],
@@ -220,10 +202,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "redstone_signal": [
-                                        "snbt",
-                                        "6"
-                                    ]
+                                    "redstone_signal": "6"
                                 }
                             }
                         ],
@@ -231,10 +210,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "redstone_signal": [
-                                        "snbt",
-                                        "7"
-                                    ]
+                                    "redstone_signal": "7"
                                 }
                             }
                         ],
@@ -242,10 +218,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "redstone_signal": [
-                                        "snbt",
-                                        "8"
-                                    ]
+                                    "redstone_signal": "8"
                                 }
                             }
                         ],
@@ -253,10 +226,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "redstone_signal": [
-                                        "snbt",
-                                        "9"
-                                    ]
+                                    "redstone_signal": "9"
                                 }
                             }
                         ],
@@ -264,10 +234,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "redstone_signal": [
-                                        "snbt",
-                                        "10"
-                                    ]
+                                    "redstone_signal": "10"
                                 }
                             }
                         ],
@@ -275,10 +242,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "redstone_signal": [
-                                        "snbt",
-                                        "11"
-                                    ]
+                                    "redstone_signal": "11"
                                 }
                             }
                         ],
@@ -286,10 +250,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "redstone_signal": [
-                                        "snbt",
-                                        "12"
-                                    ]
+                                    "redstone_signal": "12"
                                 }
                             }
                         ],
@@ -297,10 +258,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "redstone_signal": [
-                                        "snbt",
-                                        "13"
-                                    ]
+                                    "redstone_signal": "13"
                                 }
                             }
                         ],
@@ -308,10 +266,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "redstone_signal": [
-                                        "snbt",
-                                        "14"
-                                    ]
+                                    "redstone_signal": "14"
                                 }
                             }
                         ],
@@ -319,10 +274,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "redstone_signal": [
-                                        "snbt",
-                                        "15"
-                                    ]
+                                    "redstone_signal": "15"
                                 }
                             }
                         ]

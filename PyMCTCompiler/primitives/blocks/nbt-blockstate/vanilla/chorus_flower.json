@@ -74,10 +74,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "age": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "age": "0"
                                 }
                             }
                         ],
@@ -85,10 +82,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "age": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "age": "1"
                                 }
                             }
                         ],
@@ -96,10 +90,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "age": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "age": "2"
                                 }
                             }
                         ],
@@ -107,10 +98,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "age": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "age": "3"
                                 }
                             }
                         ],
@@ -118,10 +106,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "age": [
-                                        "snbt",
-                                        "4"
-                                    ]
+                                    "age": "4"
                                 }
                             }
                         ],
@@ -129,10 +114,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "age": [
-                                        "snbt",
-                                        "5"
-                                    ]
+                                    "age": "5"
                                 }
                             }
                         ]

@@ -154,10 +154,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
-                                        "snbt",
-                                        "\"white\""
-                                    ]
+                                    "color": "\"white\""
                                 }
                             }
                         ],
@@ -165,10 +162,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
-                                        "snbt",
-                                        "\"orange\""
-                                    ]
+                                    "color": "\"orange\""
                                 }
                             }
                         ],
@@ -176,10 +170,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
-                                        "snbt",
-                                        "\"magenta\""
-                                    ]
+                                    "color": "\"magenta\""
                                 }
                             }
                         ],
@@ -187,10 +178,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
-                                        "snbt",
-                                        "\"light_blue\""
-                                    ]
+                                    "color": "\"light_blue\""
                                 }
                             }
                         ],
@@ -198,10 +186,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
-                                        "snbt",
-                                        "\"yellow\""
-                                    ]
+                                    "color": "\"yellow\""
                                 }
                             }
                         ],
@@ -209,10 +194,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
-                                        "snbt",
-                                        "\"lime\""
-                                    ]
+                                    "color": "\"lime\""
                                 }
                             }
                         ],
@@ -220,10 +202,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
-                                        "snbt",
-                                        "\"pink\""
-                                    ]
+                                    "color": "\"pink\""
                                 }
                             }
                         ],
@@ -231,10 +210,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
-                                        "snbt",
-                                        "\"gray\""
-                                    ]
+                                    "color": "\"gray\""
                                 }
                             }
                         ],
@@ -242,10 +218,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
-                                        "snbt",
-                                        "\"silver\""
-                                    ]
+                                    "color": "\"silver\""
                                 }
                             }
                         ],
@@ -253,10 +226,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
-                                        "snbt",
-                                        "\"cyan\""
-                                    ]
+                                    "color": "\"cyan\""
                                 }
                             }
                         ],
@@ -264,10 +234,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
-                                        "snbt",
-                                        "\"purple\""
-                                    ]
+                                    "color": "\"purple\""
                                 }
                             }
                         ],
@@ -275,10 +242,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
-                                        "snbt",
-                                        "\"blue\""
-                                    ]
+                                    "color": "\"blue\""
                                 }
                             }
                         ],
@@ -286,10 +250,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
-                                        "snbt",
-                                        "\"brown\""
-                                    ]
+                                    "color": "\"brown\""
                                 }
                             }
                         ],
@@ -297,10 +258,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
-                                        "snbt",
-                                        "\"green\""
-                                    ]
+                                    "color": "\"green\""
                                 }
                             }
                         ],
@@ -308,10 +266,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
-                                        "snbt",
-                                        "\"red\""
-                                    ]
+                                    "color": "\"red\""
                                 }
                             }
                         ],
@@ -319,10 +274,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "color": [
-                                        "snbt",
-                                        "\"black\""
-                                    ]
+                                    "color": "\"black\""
                                 }
                             }
                         ]

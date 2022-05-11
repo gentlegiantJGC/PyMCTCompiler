@@ -29,10 +29,7 @@
             {
                 "function": "new_properties",
                 "options": {
-                    "sand_type": [
-                        "snbt",
-                        "\"normal\""
-                    ]
+                    "sand_type": "\"normal\""
                 }
             }
         ],
@@ -44,10 +41,7 @@
             {
                 "function": "new_properties",
                 "options": {
-                    "sand_type": [
-                        "snbt",
-                        "\"red\""
-                    ]
+                    "sand_type": "\"red\""
                 }
             }
         ]

@@ -66,10 +66,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "stone_brick_type": [
-                                        "snbt",
-                                        "\"default\""
-                                    ]
+                                    "stone_brick_type": "\"default\""
                                 }
                             }
                         ],
@@ -77,10 +74,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "stone_brick_type": [
-                                        "snbt",
-                                        "\"mossy\""
-                                    ]
+                                    "stone_brick_type": "\"mossy\""
                                 }
                             }
                         ],
@@ -88,10 +82,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "stone_brick_type": [
-                                        "snbt",
-                                        "\"cracked\""
-                                    ]
+                                    "stone_brick_type": "\"cracked\""
                                 }
                             }
                         ],
@@ -99,10 +90,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "stone_brick_type": [
-                                        "snbt",
-                                        "\"chiseled\""
-                                    ]
+                                    "stone_brick_type": "\"chiseled\""
                                 }
                             }
                         ]

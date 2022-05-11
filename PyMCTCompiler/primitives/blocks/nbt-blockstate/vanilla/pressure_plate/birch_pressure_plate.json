@@ -168,10 +168,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "redstone_signal": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "redstone_signal": "0"
                                 }
                             }
                         ],
@@ -179,10 +176,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "redstone_signal": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "redstone_signal": "1"
                                 }
                             }
                         ]

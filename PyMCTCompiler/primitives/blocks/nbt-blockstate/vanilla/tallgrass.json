@@ -62,10 +62,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "tall_grass_type": [
-                                        "snbt",
-                                        "\"default\""
-                                    ]
+                                    "tall_grass_type": "\"default\""
                                 }
                             }
                         ],
@@ -77,10 +74,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "tall_grass_type": [
-                                        "snbt",
-                                        "\"fern\""
-                                    ]
+                                    "tall_grass_type": "\"fern\""
                                 }
                             }
                         ]

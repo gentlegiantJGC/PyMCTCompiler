@@ -42,10 +42,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "age_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
+                                    "age_bit": "0b"
                                 }
                             }
                         ],
@@ -53,10 +50,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "age_bit": [
-                                        "snbt",
-                                        "1b"
-                                    ]
+                                    "age_bit": "1b"
                                 }
                             }
                         ]

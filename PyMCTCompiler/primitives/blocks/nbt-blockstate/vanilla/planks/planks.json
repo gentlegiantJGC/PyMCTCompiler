@@ -74,10 +74,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "wood_type": [
-                                        "snbt",
-                                        "\"oak\""
-                                    ]
+                                    "wood_type": "\"oak\""
                                 }
                             }
                         ],
@@ -85,10 +82,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "wood_type": [
-                                        "snbt",
-                                        "\"spruce\""
-                                    ]
+                                    "wood_type": "\"spruce\""
                                 }
                             }
                         ],
@@ -96,10 +90,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "wood_type": [
-                                        "snbt",
-                                        "\"birch\""
-                                    ]
+                                    "wood_type": "\"birch\""
                                 }
                             }
                         ],
@@ -107,10 +98,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "wood_type": [
-                                        "snbt",
-                                        "\"jungle\""
-                                    ]
+                                    "wood_type": "\"jungle\""
                                 }
                             }
                         ],
@@ -118,10 +106,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "wood_type": [
-                                        "snbt",
-                                        "\"acacia\""
-                                    ]
+                                    "wood_type": "\"acacia\""
                                 }
                             }
                         ],
@@ -129,10 +114,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "wood_type": [
-                                        "snbt",
-                                        "\"dark_oak\""
-                                    ]
+                                    "wood_type": "\"dark_oak\""
                                 }
                             }
                         ]

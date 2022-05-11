@@ -99,10 +99,7 @@
             {
                 "function": "new_properties",
                 "options": {
-                    "stone_type": [
-                        "snbt",
-                        "\"stone\""
-                    ]
+                    "stone_type": "\"stone\""
                 }
             }
         ],
@@ -119,10 +116,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "stone_type": [
-                                        "snbt",
-                                        "\"granite\""
-                                    ]
+                                    "stone_type": "\"granite\""
                                 }
                             }
                         ],
@@ -130,10 +124,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "stone_type": [
-                                        "snbt",
-                                        "\"granite_smooth\""
-                                    ]
+                                    "stone_type": "\"granite_smooth\""
                                 }
                             }
                         ]
@@ -154,10 +145,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "stone_type": [
-                                        "snbt",
-                                        "\"diorite\""
-                                    ]
+                                    "stone_type": "\"diorite\""
                                 }
                             }
                         ],
@@ -165,10 +153,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "stone_type": [
-                                        "snbt",
-                                        "\"diorite_smooth\""
-                                    ]
+                                    "stone_type": "\"diorite_smooth\""
                                 }
                             }
                         ]
@@ -189,10 +174,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "stone_type": [
-                                        "snbt",
-                                        "\"andesite\""
-                                    ]
+                                    "stone_type": "\"andesite\""
                                 }
                             }
                         ],
@@ -200,10 +182,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "stone_type": [
-                                        "snbt",
-                                        "\"andesite_smooth\""
-                                    ]
+                                    "stone_type": "\"andesite_smooth\""
                                 }
                             }
                         ]

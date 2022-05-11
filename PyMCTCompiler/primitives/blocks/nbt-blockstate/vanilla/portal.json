@@ -50,10 +50,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "portal_axis": [
-                                        "snbt",
-                                        "\"x\""
-                                    ]
+                                    "portal_axis": "\"x\""
                                 }
                             }
                         ],
@@ -61,10 +58,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "portal_axis": [
-                                        "snbt",
-                                        "\"z\""
-                                    ]
+                                    "portal_axis": "\"z\""
                                 }
                             }
                         ]

@@ -84,10 +84,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "dripstone_thickness": [
-                                        "snbt",
-                                        "\"tip\""
-                                    ]
+                                    "dripstone_thickness": "\"tip\""
                                 }
                             }
                         ],
@@ -95,10 +92,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "dripstone_thickness": [
-                                        "snbt",
-                                        "\"frustum\""
-                                    ]
+                                    "dripstone_thickness": "\"frustum\""
                                 }
                             }
                         ],
@@ -106,10 +100,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "dripstone_thickness": [
-                                        "snbt",
-                                        "\"middle\""
-                                    ]
+                                    "dripstone_thickness": "\"middle\""
                                 }
                             }
                         ],
@@ -117,10 +108,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "dripstone_thickness": [
-                                        "snbt",
-                                        "\"base\""
-                                    ]
+                                    "dripstone_thickness": "\"base\""
                                 }
                             }
                         ],
@@ -128,10 +116,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "dripstone_thickness": [
-                                        "snbt",
-                                        "\"merge\""
-                                    ]
+                                    "dripstone_thickness": "\"merge\""
                                 }
                             }
                         ]
@@ -141,10 +126,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "hanging": [
-                                        "snbt",
-                                        "0b"
-                                    ]
+                                    "hanging": "0b"
                                 }
                             }
                         ],
@@ -152,10 +134,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "hanging": [
-                                        "snbt",
-                                        "1b"
-                                    ]
+                                    "hanging": "1b"
                                 }
                             }
                         ]

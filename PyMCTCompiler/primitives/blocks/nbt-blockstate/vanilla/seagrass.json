@@ -51,10 +51,7 @@
             {
                 "function": "new_properties",
                 "options": {
-                    "sea_grass_type": [
-                        "snbt",
-                        "\"default\""
-                    ]
+                    "sea_grass_type": "\"default\""
                 }
             }
         ],
@@ -71,10 +68,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "sea_grass_type": [
-                                        "snbt",
-                                        "\"double_top\""
-                                    ]
+                                    "sea_grass_type": "\"double_top\""
                                 }
                             }
                         ],
@@ -82,10 +76,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "sea_grass_type": [
-                                        "snbt",
-                                        "\"double_bot\""
-                                    ]
+                                    "sea_grass_type": "\"double_bot\""
                                 }
                             }
                         ]

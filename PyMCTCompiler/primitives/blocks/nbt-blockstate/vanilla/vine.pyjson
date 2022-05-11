@@ -52,9 +52,7 @@
 																			{
 																				"function": "new_properties",
 																				"options": {
-																					"vine_direction_bits": [
-																						"snbt", str(data8 + data4 + data2 + data1)
-																					]
+																					"vine_direction_bits": str(data8 + data4 + data2 + data1)
 																				}
 																			}
 																		] for data1, south in {0: "\"false\"", 1: "\"true\""}.items()

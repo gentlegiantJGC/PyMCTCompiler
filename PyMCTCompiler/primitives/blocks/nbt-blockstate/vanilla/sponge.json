@@ -42,10 +42,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "sponge_type": [
-                                        "snbt",
-                                        "\"dry\""
-                                    ]
+                                    "sponge_type": "\"dry\""
                                 }
                             }
                         ],
@@ -53,10 +50,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "sponge_type": [
-                                        "snbt",
-                                        "\"wet\""
-                                    ]
+                                    "sponge_type": "\"wet\""
                                 }
                             }
                         ]

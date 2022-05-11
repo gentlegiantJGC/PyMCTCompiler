@@ -89,10 +89,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "old_log_type": [
-                                                        "snbt",
-                                                        "\"oak\""
-                                                    ]
+                                                    "old_log_type": "\"oak\""
                                                 }
                                             }
                                         ],
@@ -100,10 +97,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "old_log_type": [
-                                                        "snbt",
-                                                        "\"spruce\""
-                                                    ]
+                                                    "old_log_type": "\"spruce\""
                                                 }
                                             }
                                         ],
@@ -111,10 +105,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "old_log_type": [
-                                                        "snbt",
-                                                        "\"birch\""
-                                                    ]
+                                                    "old_log_type": "\"birch\""
                                                 }
                                             }
                                         ],
@@ -122,10 +113,7 @@
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "old_log_type": [
-                                                        "snbt",
-                                                        "\"jungle\""
-                                                    ]
+                                                    "old_log_type": "\"jungle\""
                                                 }
                                             }
                                         ]
@@ -139,10 +127,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"y\""
-                                    ]
+                                    "pillar_axis": "\"y\""
                                 }
                             }
                         ],
@@ -150,10 +135,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"x\""
-                                    ]
+                                    "pillar_axis": "\"x\""
                                 }
                             }
                         ],
@@ -161,10 +143,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "pillar_axis": [
-                                        "snbt",
-                                        "\"z\""
-                                    ]
+                                    "pillar_axis": "\"z\""
                                 }
                             }
                         ]

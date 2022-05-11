@@ -92,10 +92,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "facing_direction": "0"
                                 }
                             }
                         ],
@@ -103,10 +100,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "facing_direction": "2"
                                 }
                             }
                         ],
@@ -114,10 +108,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "facing_direction": "3"
                                 }
                             }
                         ],
@@ -125,10 +116,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "4"
-                                    ]
+                                    "facing_direction": "4"
                                 }
                             }
                         ],
@@ -136,10 +124,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "5"
-                                    ]
+                                    "facing_direction": "5"
                                 }
                             }
                         ]
@@ -149,10 +134,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "toggle_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
+                                    "toggle_bit": "0b"
                                 }
                             }
                         ],
@@ -160,10 +142,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "toggle_bit": [
-                                        "snbt",
-                                        "1b"
-                                    ]
+                                    "toggle_bit": "1b"
                                 }
                             }
                         ]

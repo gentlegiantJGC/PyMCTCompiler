@@ -74,10 +74,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "persistent_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
+                                    "persistent_bit": "0b"
                                 }
                             }
                         ],
@@ -85,10 +82,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "persistent_bit": [
-                                        "snbt",
-                                        "1b"
-                                    ]
+                                    "persistent_bit": "1b"
                                 }
                             }
                         ]
@@ -98,10 +92,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "update_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
+                                    "update_bit": "0b"
                                 }
                             }
                         ],
@@ -109,10 +100,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "update_bit": [
-                                        "snbt",
-                                        "1b"
-                                    ]
+                                    "update_bit": "1b"
                                 }
                             }
                         ]

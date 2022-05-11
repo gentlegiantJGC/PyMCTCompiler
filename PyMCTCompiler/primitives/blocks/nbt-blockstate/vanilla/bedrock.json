@@ -42,10 +42,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "infiniburn_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
+                                    "infiniburn_bit": "0b"
                                 }
                             }
                         ],
@@ -53,10 +50,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "infiniburn_bit": [
-                                        "snbt",
-                                        "1b"
-                                    ]
+                                    "infiniburn_bit": "1b"
                                 }
                             }
                         ]

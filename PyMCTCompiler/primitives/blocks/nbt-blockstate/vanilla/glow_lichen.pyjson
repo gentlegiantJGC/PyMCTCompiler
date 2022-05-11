@@ -64,10 +64,7 @@
                                                                                                             {
                                                                                                                 "function": "new_properties",
                                                                                                                 "options": {
-                                                                                                                    "multi_face_direction_bits": [
-                                                                                                                        "snbt",
-                                                                                                                        str(data_32 + data_16 + data_8 + data_4 + data_2 + data_1)
-                                                                                                                    ]
+                                                                                                                    "multi_face_direction_bits": str(data_32 + data_16 + data_8 + data_4 + data_2 + data_1)
                                                                                                                 }
                                                                                                             }
                                                                                                         ] for down_state, data_1 in (("\"false\"", 0), ("\"true\"", 1))

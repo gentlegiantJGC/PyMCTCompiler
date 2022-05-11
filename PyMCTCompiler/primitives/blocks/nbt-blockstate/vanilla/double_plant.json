@@ -92,10 +92,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "double_plant_type": [
-                                        "snbt",
-                                        "\"sunflower\""
-                                    ]
+                                    "double_plant_type": "\"sunflower\""
                                 }
                             }
                         ],
@@ -103,10 +100,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "double_plant_type": [
-                                        "snbt",
-                                        "\"syringa\""
-                                    ]
+                                    "double_plant_type": "\"syringa\""
                                 }
                             }
                         ],
@@ -114,10 +108,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "double_plant_type": [
-                                        "snbt",
-                                        "\"grass\""
-                                    ]
+                                    "double_plant_type": "\"grass\""
                                 }
                             }
                         ],
@@ -125,10 +116,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "double_plant_type": [
-                                        "snbt",
-                                        "\"fern\""
-                                    ]
+                                    "double_plant_type": "\"fern\""
                                 }
                             }
                         ],
@@ -136,10 +124,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "double_plant_type": [
-                                        "snbt",
-                                        "\"rose\""
-                                    ]
+                                    "double_plant_type": "\"rose\""
                                 }
                             }
                         ],
@@ -147,10 +132,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "double_plant_type": [
-                                        "snbt",
-                                        "\"paeonia\""
-                                    ]
+                                    "double_plant_type": "\"paeonia\""
                                 }
                             }
                         ]
@@ -160,10 +142,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "upper_block_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
+                                    "upper_block_bit": "0b"
                                 }
                             }
                         ],
@@ -171,10 +150,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "upper_block_bit": [
-                                        "snbt",
-                                        "1b"
-                                    ]
+                                    "upper_block_bit": "1b"
                                 }
                             }
                         ]

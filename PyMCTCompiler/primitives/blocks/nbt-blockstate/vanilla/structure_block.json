@@ -74,10 +74,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "structure_block_type": [
-                                        "snbt",
-                                        "\"data\""
-                                    ]
+                                    "structure_block_type": "\"data\""
                                 }
                             }
                         ],
@@ -85,10 +82,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "structure_block_type": [
-                                        "snbt",
-                                        "\"save\""
-                                    ]
+                                    "structure_block_type": "\"save\""
                                 }
                             }
                         ],
@@ -96,10 +90,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "structure_block_type": [
-                                        "snbt",
-                                        "\"load\""
-                                    ]
+                                    "structure_block_type": "\"load\""
                                 }
                             }
                         ],
@@ -107,10 +98,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "structure_block_type": [
-                                        "snbt",
-                                        "\"corner\""
-                                    ]
+                                    "structure_block_type": "\"corner\""
                                 }
                             }
                         ],
@@ -118,10 +106,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "structure_block_type": [
-                                        "snbt",
-                                        "\"invalid\""
-                                    ]
+                                    "structure_block_type": "\"invalid\""
                                 }
                             }
                         ],
@@ -129,10 +114,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "structure_block_type": [
-                                        "snbt",
-                                        "\"export\""
-                                    ]
+                                    "structure_block_type": "\"export\""
                                 }
                             }
                         ]

@@ -42,10 +42,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "structure_void_type": [
-                                        "snbt",
-                                        "\"void\""
-                                    ]
+                                    "structure_void_type": "\"void\""
                                 }
                             }
                         ],
@@ -53,10 +50,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "structure_void_type": [
-                                        "snbt",
-                                        "\"air\""
-                                    ]
+                                    "structure_void_type": "\"air\""
                                 }
                             }
                         ]

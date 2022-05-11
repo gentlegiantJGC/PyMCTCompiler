@@ -84,10 +84,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "coral_color": [
-                                        "snbt",
-                                        "\"blue\""
-                                    ]
+                                    "coral_color": "\"blue\""
                                 }
                             }
                         ],
@@ -95,10 +92,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "coral_color": [
-                                        "snbt",
-                                        "\"pink\""
-                                    ]
+                                    "coral_color": "\"pink\""
                                 }
                             }
                         ],
@@ -106,10 +100,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "coral_color": [
-                                        "snbt",
-                                        "\"purple\""
-                                    ]
+                                    "coral_color": "\"purple\""
                                 }
                             }
                         ],
@@ -117,10 +108,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "coral_color": [
-                                        "snbt",
-                                        "\"red\""
-                                    ]
+                                    "coral_color": "\"red\""
                                 }
                             }
                         ],
@@ -128,10 +116,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "coral_color": [
-                                        "snbt",
-                                        "\"yellow\""
-                                    ]
+                                    "coral_color": "\"yellow\""
                                 }
                             }
                         ]
@@ -141,10 +126,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "dead_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
+                                    "dead_bit": "0b"
                                 }
                             }
                         ],
@@ -152,10 +134,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "dead_bit": [
-                                        "snbt",
-                                        "1b"
-                                    ]
+                                    "dead_bit": "1b"
                                 }
                             }
                         ]

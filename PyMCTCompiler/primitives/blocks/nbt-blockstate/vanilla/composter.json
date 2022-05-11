@@ -98,10 +98,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "composter_fill_level": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "composter_fill_level": "0"
                                 }
                             }
                         ],
@@ -109,10 +106,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "composter_fill_level": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "composter_fill_level": "1"
                                 }
                             }
                         ],
@@ -120,10 +114,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "composter_fill_level": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "composter_fill_level": "2"
                                 }
                             }
                         ],
@@ -131,10 +122,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "composter_fill_level": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "composter_fill_level": "3"
                                 }
                             }
                         ],
@@ -142,10 +130,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "composter_fill_level": [
-                                        "snbt",
-                                        "4"
-                                    ]
+                                    "composter_fill_level": "4"
                                 }
                             }
                         ],
@@ -153,10 +138,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "composter_fill_level": [
-                                        "snbt",
-                                        "5"
-                                    ]
+                                    "composter_fill_level": "5"
                                 }
                             }
                         ],
@@ -164,10 +146,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "composter_fill_level": [
-                                        "snbt",
-                                        "6"
-                                    ]
+                                    "composter_fill_level": "6"
                                 }
                             }
                         ],
@@ -175,10 +154,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "composter_fill_level": [
-                                        "snbt",
-                                        "7"
-                                    ]
+                                    "composter_fill_level": "7"
                                 }
                             }
                         ],
@@ -186,10 +162,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "composter_fill_level": [
-                                        "snbt",
-                                        "8"
-                                    ]
+                                    "composter_fill_level": "8"
                                 }
                             }
                         ]

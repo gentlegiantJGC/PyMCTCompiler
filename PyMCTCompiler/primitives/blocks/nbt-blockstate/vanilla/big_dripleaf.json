@@ -101,10 +101,7 @@
             {
                 "function": "new_properties",
                 "options": {
-                    "big_dripleaf_head": [
-                        "snbt",
-                        "0b"
-                    ]
+                    "big_dripleaf_head": "0b"
                 }
             },
             {
@@ -115,10 +112,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "big_dripleaf_tilt": [
-                                        "snbt",
-                                        "\"none\""
-                                    ]
+                                    "big_dripleaf_tilt": "\"none\""
                                 }
                             }
                         ],
@@ -126,10 +120,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "big_dripleaf_tilt": [
-                                        "snbt",
-                                        "\"unstable\""
-                                    ]
+                                    "big_dripleaf_tilt": "\"unstable\""
                                 }
                             }
                         ],
@@ -137,10 +128,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "big_dripleaf_tilt": [
-                                        "snbt",
-                                        "\"partial_tilt\""
-                                    ]
+                                    "big_dripleaf_tilt": "\"partial_tilt\""
                                 }
                             }
                         ],
@@ -148,10 +136,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "big_dripleaf_tilt": [
-                                        "snbt",
-                                        "\"full_tilt\""
-                                    ]
+                                    "big_dripleaf_tilt": "\"full_tilt\""
                                 }
                             }
                         ]
@@ -161,10 +146,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "direction": "0"
                                 }
                             }
                         ],
@@ -172,10 +154,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "direction": "1"
                                 }
                             }
                         ],
@@ -183,10 +162,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "direction": "2"
                                 }
                             }
                         ],
@@ -194,10 +170,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "direction": "3"
                                 }
                             }
                         ]
@@ -213,10 +186,7 @@
             {
                 "function": "new_properties",
                 "options": {
-                    "big_dripleaf_head": [
-                        "snbt",
-                        "1b"
-                    ]
+                    "big_dripleaf_head": "1b"
                 }
             },
             {
@@ -227,10 +197,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "big_dripleaf_tilt": [
-                                        "snbt",
-                                        "\"none\""
-                                    ]
+                                    "big_dripleaf_tilt": "\"none\""
                                 }
                             }
                         ],
@@ -238,10 +205,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "big_dripleaf_tilt": [
-                                        "snbt",
-                                        "\"unstable\""
-                                    ]
+                                    "big_dripleaf_tilt": "\"unstable\""
                                 }
                             }
                         ],
@@ -249,10 +213,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "big_dripleaf_tilt": [
-                                        "snbt",
-                                        "\"partial_tilt\""
-                                    ]
+                                    "big_dripleaf_tilt": "\"partial_tilt\""
                                 }
                             }
                         ],
@@ -260,10 +221,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "big_dripleaf_tilt": [
-                                        "snbt",
-                                        "\"full_tilt\""
-                                    ]
+                                    "big_dripleaf_tilt": "\"full_tilt\""
                                 }
                             }
                         ]
@@ -273,10 +231,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "direction": "0"
                                 }
                             }
                         ],
@@ -284,10 +239,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "direction": "1"
                                 }
                             }
                         ],
@@ -295,10 +247,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "direction": "2"
                                 }
                             }
                         ],
@@ -306,10 +255,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "direction": "3"
                                 }
                             }
                         ]

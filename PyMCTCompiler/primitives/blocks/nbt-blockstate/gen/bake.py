@@ -336,7 +336,7 @@ for (namespace, base_name), block in blocks.items():
                             ): [
                                 {
                                     "function": "new_properties",
-                                    "options": {prop: ["snbt", snbt_val]},
+                                    "options": {prop: snbt_val},
                                 }
                             ]
                             for snbt_val, val in block["properties"][prop]

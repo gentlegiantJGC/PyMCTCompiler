@@ -135,10 +135,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "stability": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "stability": "0"
                                 }
                             }
                         ],
@@ -146,10 +143,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "stability": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "stability": "1"
                                 }
                             }
                         ],
@@ -157,10 +151,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "stability": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "stability": "2"
                                 }
                             }
                         ],
@@ -168,10 +159,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "stability": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "stability": "3"
                                 }
                             }
                         ],
@@ -179,10 +167,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "stability": [
-                                        "snbt",
-                                        "4"
-                                    ]
+                                    "stability": "4"
                                 }
                             }
                         ],
@@ -190,10 +175,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "stability": [
-                                        "snbt",
-                                        "5"
-                                    ]
+                                    "stability": "5"
                                 }
                             }
                         ],
@@ -201,10 +183,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "stability": [
-                                        "snbt",
-                                        "6"
-                                    ]
+                                    "stability": "6"
                                 }
                             }
                         ],
@@ -212,10 +191,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "stability": [
-                                        "snbt",
-                                        "7"
-                                    ]
+                                    "stability": "7"
                                 }
                             }
                         ]
@@ -225,10 +201,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "stability_check": [
-                                        "snbt",
-                                        "1b"
-                                    ]
+                                    "stability_check": "1b"
                                 }
                             }
                         ],
@@ -236,10 +209,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "stability_check": [
-                                        "snbt",
-                                        "0b"
-                                    ]
+                                    "stability_check": "0b"
                                 }
                             }
                         ]

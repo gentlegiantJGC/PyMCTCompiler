@@ -39,10 +39,7 @@
             {
                 "function": "new_properties",
                 "options": {
-                    "prismarine_block_type": [
-                        "snbt",
-                        "\"default\""
-                    ]
+                    "prismarine_block_type": "\"default\""
                 }
             }
         ],
@@ -54,10 +51,7 @@
             {
                 "function": "new_properties",
                 "options": {
-                    "prismarine_block_type": [
-                        "snbt",
-                        "\"dark\""
-                    ]
+                    "prismarine_block_type": "\"dark\""
                 }
             }
         ],
@@ -69,10 +63,7 @@
             {
                 "function": "new_properties",
                 "options": {
-                    "prismarine_block_type": [
-                        "snbt",
-                        "\"bricks\""
-                    ]
+                    "prismarine_block_type": "\"bricks\""
                 }
             }
         ]

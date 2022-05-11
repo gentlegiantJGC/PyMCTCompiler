@@ -29,10 +29,7 @@
             {
                 "function": "new_properties",
                 "options": {
-                    "dirt_type": [
-                        "snbt",
-                        "\"normal\""
-                    ]
+                    "dirt_type": "\"normal\""
                 }
             }
         ],
@@ -44,10 +41,7 @@
             {
                 "function": "new_properties",
                 "options": {
-                    "dirt_type": [
-                        "snbt",
-                        "\"coarse\""
-                    ]
+                    "dirt_type": "\"coarse\""
                 }
             }
         ]

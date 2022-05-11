@@ -98,10 +98,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "item_frame_map_bit": [
-                                        "snbt",
-                                        "0b"
-                                    ]
+                                    "item_frame_map_bit": "0b"
                                 }
                             }
                         ],
@@ -109,10 +106,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "item_frame_map_bit": [
-                                        "snbt",
-                                        "1b"
-                                    ]
+                                    "item_frame_map_bit": "1b"
                                 }
                             }
                         ]
@@ -122,10 +116,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "facing_direction": "0"
                                 }
                             }
                         ],
@@ -133,10 +124,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "facing_direction": "1"
                                 }
                             }
                         ],
@@ -144,10 +132,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "facing_direction": "2"
                                 }
                             }
                         ],
@@ -155,10 +140,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "facing_direction": "3"
                                 }
                             }
                         ],
@@ -166,10 +148,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "4"
-                                    ]
+                                    "facing_direction": "4"
                                 }
                             }
                         ],
@@ -177,10 +156,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": [
-                                        "snbt",
-                                        "5"
-                                    ]
+                                    "facing_direction": "5"
                                 }
                             }
                         ]

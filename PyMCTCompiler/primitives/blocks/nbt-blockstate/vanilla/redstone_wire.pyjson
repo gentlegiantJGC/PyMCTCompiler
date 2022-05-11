@@ -141,10 +141,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "redstone_signal": [
-                                        "snbt",
-                                        str(power)
-                                    ]
+                                    "redstone_signal": str(power)
                                 }
                             }
                         ] for power in range(16)

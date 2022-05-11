@@ -61,8 +61,8 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": ["snbt", "1"],
-                                    "no_drop_bit": ["snbt", "0b"],
+                                    "facing_direction": "1",
+                                    "no_drop_bit": "0b",
                                 }
                             }
                         ],
@@ -70,8 +70,8 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": ["snbt", "1"],
-                                    "no_drop_bit": ["snbt", "1b"],
+                                    "facing_direction": "1",
+                                    "no_drop_bit": "1b",
                                 }
                             }
                         ]
@@ -92,7 +92,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "no_drop_bit": ["snbt", "0b"],
+                                    "no_drop_bit": "0b",
                                 }
                             }
                         ],
@@ -100,7 +100,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "no_drop_bit": ["snbt", "1b"],
+                                    "no_drop_bit": "1b",
                                 }
                             }
                         ]
@@ -110,7 +110,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "facing_direction": ["snbt", str(rot + 2)]
+                                    "facing_direction": str(rot + 2)
                                 }
                             }
                         ] for rot, facing in enumerate([

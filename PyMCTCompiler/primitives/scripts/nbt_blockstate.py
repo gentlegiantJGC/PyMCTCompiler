@@ -118,10 +118,7 @@ def mushroom_block(color: str) -> dict:
                                                                                                                 {
                                                                                                                     "function": "new_properties",
                                                                                                                     "options": {
-                                                                                                                        "huge_mushroom_bits": [
-                                                                                                                            "snbt",
-                                                                                                                            str(nearest_map[(up, down, north, east, south, west)])
-                                                                                                                        ]
+                                                                                                                        "huge_mushroom_bits": str(nearest_map[(up, down, north, east, south, west)])
                                                                                                                     }
                                                                                                                 }
                                                                                                             ] for west in ("\"true\"", "\"false\"")
@@ -157,9 +154,7 @@ def mushroom_block(color: str) -> dict:
                 {
                     "function": "new_properties",
                     "options": {
-                        "huge_mushroom_bits": [
-                            "snbt", "15"
-                        ]
+                        "huge_mushroom_bits": "15"
                     }
                 },
                 {
@@ -195,9 +190,7 @@ def mushroom_block(color: str) -> dict:
                                                                                                                 {
                                                                                                                     "function": "new_properties",
                                                                                                                     "options": {
-                                                                                                                        "huge_mushroom_bits": [
-                                                                                                                            "snbt", "10"
-                                                                                                                        ]
+                                                                                                                        "huge_mushroom_bits": "10"
                                                                                                                     }
                                                                                                                 }
                                                                                                             ]
@@ -484,10 +477,7 @@ def door(block_name: str, material: str) -> dict:
                                 {
                                     "function": "new_properties",
                                     "options": {
-                                        "upper_block_bit": [
-                                            "snbt",
-                                            "0b"
-                                        ]
+                                        "upper_block_bit": "0b"
                                     }
                                 },
                                 {
@@ -498,10 +488,7 @@ def door(block_name: str, material: str) -> dict:
                                                 {
                                                     "function": "new_properties",
                                                     "options": {
-                                                        "direction": [
-                                                            "snbt",
-                                                            "0"
-                                                        ]
+                                                        "direction": "0"
                                                     }
                                                 }
                                             ],
@@ -509,10 +496,7 @@ def door(block_name: str, material: str) -> dict:
                                                 {
                                                     "function": "new_properties",
                                                     "options": {
-                                                        "direction": [
-                                                            "snbt",
-                                                            "1"
-                                                        ]
+                                                        "direction": "1"
                                                     }
                                                 }
                                             ],
@@ -520,10 +504,7 @@ def door(block_name: str, material: str) -> dict:
                                                 {
                                                     "function": "new_properties",
                                                     "options": {
-                                                        "direction": [
-                                                            "snbt",
-                                                            "2"
-                                                        ]
+                                                        "direction": "2"
                                                     }
                                                 }
                                             ],
@@ -531,10 +512,7 @@ def door(block_name: str, material: str) -> dict:
                                                 {
                                                     "function": "new_properties",
                                                     "options": {
-                                                        "direction": [
-                                                            "snbt",
-                                                            "3"
-                                                        ]
+                                                        "direction": "3"
                                                     }
                                                 }
                                             ]
@@ -544,10 +522,7 @@ def door(block_name: str, material: str) -> dict:
                                                 {
                                                     "function": "new_properties",
                                                     "options": {
-                                                        "open_bit": [
-                                                            "snbt",
-                                                            "0b"
-                                                        ]
+                                                        "open_bit": "0b"
                                                     }
                                                 }
                                             ],
@@ -555,10 +530,7 @@ def door(block_name: str, material: str) -> dict:
                                                 {
                                                     "function": "new_properties",
                                                     "options": {
-                                                        "open_bit": [
-                                                            "snbt",
-                                                            "1b"
-                                                        ]
+                                                        "open_bit": "1b"
                                                     }
                                                 }
                                             ]
@@ -570,10 +542,7 @@ def door(block_name: str, material: str) -> dict:
                                 {
                                     "function": "new_properties",
                                     "options": {
-                                        "upper_block_bit": [
-                                            "snbt",
-                                            "1b"
-                                        ]
+                                        "upper_block_bit": "1b"
                                     }
                                 },
                                 {
@@ -584,10 +553,7 @@ def door(block_name: str, material: str) -> dict:
                                                 {
                                                     "function": "new_properties",
                                                     "options": {
-                                                        "door_hinge_bit": [
-                                                            "snbt",
-                                                            "0b"
-                                                        ]
+                                                        "door_hinge_bit": "0b"
                                                     }
                                                 }
                                             ],
@@ -595,10 +561,7 @@ def door(block_name: str, material: str) -> dict:
                                                 {
                                                     "function": "new_properties",
                                                     "options": {
-                                                        "door_hinge_bit": [
-                                                            "snbt",
-                                                            "1b"
-                                                        ]
+                                                        "door_hinge_bit": "1b"
                                                     }
                                                 }
                                             ]

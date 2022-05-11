@@ -84,10 +84,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "age": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "age": "0"
                                 }
                             }
                         ],
@@ -95,10 +92,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "age": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "age": "1"
                                 }
                             }
                         ],
@@ -106,10 +100,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "age": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "age": "2"
                                 }
                             }
                         ]
@@ -119,10 +110,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "0"
-                                    ]
+                                    "direction": "0"
                                 }
                             }
                         ],
@@ -130,10 +118,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "1"
-                                    ]
+                                    "direction": "1"
                                 }
                             }
                         ],
@@ -141,10 +126,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "2"
-                                    ]
+                                    "direction": "2"
                                 }
                             }
                         ],
@@ -152,10 +134,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": [
-                                        "snbt",
-                                        "3"
-                                    ]
+                                    "direction": "3"
                                 }
                             }
                         ]
