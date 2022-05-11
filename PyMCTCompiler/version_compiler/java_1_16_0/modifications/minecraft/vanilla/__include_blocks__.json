@@ -1,5 +1,5 @@
 {
-	"jigsaw": "jigsaw_16",
+	"jigsaw": [">nbt.jigsaw.j116", "jigsaw_16"],
 
 	"soul_torch": "soul_torch",
 	"soul_wall_torch": "soul_wall_torch",
