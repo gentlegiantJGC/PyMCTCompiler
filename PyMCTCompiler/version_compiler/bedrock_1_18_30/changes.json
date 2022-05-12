@@ -1,7 +1,153 @@
 {
+    "minecraft:concretePowder": {
+        "block_removed": true
+    },
+    "minecraft:invisibleBedrock": {
+        "block_removed": true
+    },
+    "minecraft:movingBlock": {
+        "block_removed": true
+    },
+    "minecraft:pistonArmCollision": {
+        "block_removed": true
+    },
+    "minecraft:seaLantern": {
+        "block_removed": true
+    },
     "minecraft:skull": {
         "properties_removed": [
             "no_drop_bit"
         ]
+    },
+    "minecraft:stickyPistonArmCollision": {
+        "block_removed": true
+    },
+    "minecraft:tripWire": {
+        "block_removed": true
+    },
+    "minecraft:concrete_powder": {
+        "block_added": {
+            "properties": {
+                "color": [
+                    "white",
+                    "orange",
+                    "magenta",
+                    "light_blue",
+                    "yellow",
+                    "lime",
+                    "pink",
+                    "gray",
+                    "silver",
+                    "cyan",
+                    "purple",
+                    "blue",
+                    "brown",
+                    "green",
+                    "red",
+                    "black"
+                ]
+            },
+            "defaults": {
+                "color": "white"
+            },
+            "types": {
+                "color": "string"
+            }
+        }
+    },
+    "minecraft:invisible_bedrock": {
+        "block_added": {
+            "properties": {},
+            "defaults": {},
+            "types": {}
+        }
+    },
+    "minecraft:moving_block": {
+        "block_added": {
+            "properties": {},
+            "defaults": {},
+            "types": {}
+        }
+    },
+    "minecraft:piston_arm_collision": {
+        "block_added": {
+            "properties": {
+                "facing_direction": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ]
+            },
+            "defaults": {
+                "facing_direction": 0
+            },
+            "types": {
+                "facing_direction": "int"
+            }
+        }
+    },
+    "minecraft:sea_lantern": {
+        "block_added": {
+            "properties": {},
+            "defaults": {},
+            "types": {}
+        }
+    },
+    "minecraft:sticky_piston_arm_collision": {
+        "block_added": {
+            "properties": {
+                "facing_direction": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ]
+            },
+            "defaults": {
+                "facing_direction": 0
+            },
+            "types": {
+                "facing_direction": "int"
+            }
+        }
+    },
+    "minecraft:trip_wire": {
+        "block_added": {
+            "properties": {
+                "attached_bit": [
+                    0,
+                    1
+                ],
+                "disarmed_bit": [
+                    0,
+                    1
+                ],
+                "powered_bit": [
+                    0,
+                    1
+                ],
+                "suspended_bit": [
+                    0,
+                    1
+                ]
+            },
+            "defaults": {
+                "attached_bit": 0,
+                "disarmed_bit": 0,
+                "powered_bit": 0,
+                "suspended_bit": 0
+            },
+            "types": {
+                "attached_bit": "byte",
+                "disarmed_bit": "byte",
+                "powered_bit": "byte",
+                "suspended_bit": "byte"
+            }
+        }
     }
 }

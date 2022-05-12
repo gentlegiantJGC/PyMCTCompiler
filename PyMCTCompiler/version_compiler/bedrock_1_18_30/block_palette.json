@@ -110760,7 +110760,7 @@
 		},
 		{
 			"data": 0,
-			"name": "minecraft:concretePowder",
+			"name": "minecraft:concrete_powder",
 			"states": [
 				{
 					"name": "color",
@@ -110771,7 +110771,7 @@
 		},
 		{
 			"data": 1,
-			"name": "minecraft:concretePowder",
+			"name": "minecraft:concrete_powder",
 			"states": [
 				{
 					"name": "color",
@@ -110782,7 +110782,7 @@
 		},
 		{
 			"data": 2,
-			"name": "minecraft:concretePowder",
+			"name": "minecraft:concrete_powder",
 			"states": [
 				{
 					"name": "color",
@@ -110793,7 +110793,7 @@
 		},
 		{
 			"data": 3,
-			"name": "minecraft:concretePowder",
+			"name": "minecraft:concrete_powder",
 			"states": [
 				{
 					"name": "color",
@@ -110804,7 +110804,7 @@
 		},
 		{
 			"data": 4,
-			"name": "minecraft:concretePowder",
+			"name": "minecraft:concrete_powder",
 			"states": [
 				{
 					"name": "color",
@@ -110815,7 +110815,7 @@
 		},
 		{
 			"data": 5,
-			"name": "minecraft:concretePowder",
+			"name": "minecraft:concrete_powder",
 			"states": [
 				{
 					"name": "color",
@@ -110826,7 +110826,7 @@
 		},
 		{
 			"data": 6,
-			"name": "minecraft:concretePowder",
+			"name": "minecraft:concrete_powder",
 			"states": [
 				{
 					"name": "color",
@@ -110837,7 +110837,7 @@
 		},
 		{
 			"data": 7,
-			"name": "minecraft:concretePowder",
+			"name": "minecraft:concrete_powder",
 			"states": [
 				{
 					"name": "color",
@@ -110848,7 +110848,7 @@
 		},
 		{
 			"data": 8,
-			"name": "minecraft:concretePowder",
+			"name": "minecraft:concrete_powder",
 			"states": [
 				{
 					"name": "color",
@@ -110859,7 +110859,7 @@
 		},
 		{
 			"data": 9,
-			"name": "minecraft:concretePowder",
+			"name": "minecraft:concrete_powder",
 			"states": [
 				{
 					"name": "color",
@@ -110870,7 +110870,7 @@
 		},
 		{
 			"data": 10,
-			"name": "minecraft:concretePowder",
+			"name": "minecraft:concrete_powder",
 			"states": [
 				{
 					"name": "color",
@@ -110881,7 +110881,7 @@
 		},
 		{
 			"data": 11,
-			"name": "minecraft:concretePowder",
+			"name": "minecraft:concrete_powder",
 			"states": [
 				{
 					"name": "color",
@@ -110892,7 +110892,7 @@
 		},
 		{
 			"data": 12,
-			"name": "minecraft:concretePowder",
+			"name": "minecraft:concrete_powder",
 			"states": [
 				{
 					"name": "color",
@@ -110903,7 +110903,7 @@
 		},
 		{
 			"data": 13,
-			"name": "minecraft:concretePowder",
+			"name": "minecraft:concrete_powder",
 			"states": [
 				{
 					"name": "color",
@@ -110914,7 +110914,7 @@
 		},
 		{
 			"data": 14,
-			"name": "minecraft:concretePowder",
+			"name": "minecraft:concrete_powder",
 			"states": [
 				{
 					"name": "color",
@@ -110925,7 +110925,7 @@
 		},
 		{
 			"data": 15,
-			"name": "minecraft:concretePowder",
+			"name": "minecraft:concrete_powder",
 			"states": [
 				{
 					"name": "color",
@@ -136790,7 +136790,7 @@
 		},
 		{
 			"data": 0,
-			"name": "minecraft:invisibleBedrock",
+			"name": "minecraft:invisible_bedrock",
 			"states": []
 		},
 		{
@@ -145455,7 +145455,7 @@
 		},
 		{
 			"data": 0,
-			"name": "minecraft:movingBlock",
+			"name": "minecraft:moving_block",
 			"states": []
 		},
 		{
@@ -146820,7 +146820,7 @@
 		},
 		{
 			"data": 0,
-			"name": "minecraft:pistonArmCollision",
+			"name": "minecraft:piston_arm_collision",
 			"states": [
 				{
 					"name": "facing_direction",
@@ -146831,7 +146831,7 @@
 		},
 		{
 			"data": 1,
-			"name": "minecraft:pistonArmCollision",
+			"name": "minecraft:piston_arm_collision",
 			"states": [
 				{
 					"name": "facing_direction",
@@ -146842,7 +146842,7 @@
 		},
 		{
 			"data": 2,
-			"name": "minecraft:pistonArmCollision",
+			"name": "minecraft:piston_arm_collision",
 			"states": [
 				{
 					"name": "facing_direction",
@@ -146853,7 +146853,7 @@
 		},
 		{
 			"data": 3,
-			"name": "minecraft:pistonArmCollision",
+			"name": "minecraft:piston_arm_collision",
 			"states": [
 				{
 					"name": "facing_direction",
@@ -146864,7 +146864,7 @@
 		},
 		{
 			"data": 4,
-			"name": "minecraft:pistonArmCollision",
+			"name": "minecraft:piston_arm_collision",
 			"states": [
 				{
 					"name": "facing_direction",
@@ -146875,7 +146875,7 @@
 		},
 		{
 			"data": 5,
-			"name": "minecraft:pistonArmCollision",
+			"name": "minecraft:piston_arm_collision",
 			"states": [
 				{
 					"name": "facing_direction",
@@ -168620,7 +168620,7 @@
 		},
 		{
 			"data": 0,
-			"name": "minecraft:seaLantern",
+			"name": "minecraft:sea_lantern",
 			"states": []
 		},
 		{
@@ -173480,7 +173480,7 @@
 		},
 		{
 			"data": 0,
-			"name": "minecraft:stickyPistonArmCollision",
+			"name": "minecraft:sticky_piston_arm_collision",
 			"states": [
 				{
 					"name": "facing_direction",
@@ -173491,7 +173491,7 @@
 		},
 		{
 			"data": 1,
-			"name": "minecraft:stickyPistonArmCollision",
+			"name": "minecraft:sticky_piston_arm_collision",
 			"states": [
 				{
 					"name": "facing_direction",
@@ -173502,7 +173502,7 @@
 		},
 		{
 			"data": 2,
-			"name": "minecraft:stickyPistonArmCollision",
+			"name": "minecraft:sticky_piston_arm_collision",
 			"states": [
 				{
 					"name": "facing_direction",
@@ -173513,7 +173513,7 @@
 		},
 		{
 			"data": 3,
-			"name": "minecraft:stickyPistonArmCollision",
+			"name": "minecraft:sticky_piston_arm_collision",
 			"states": [
 				{
 					"name": "facing_direction",
@@ -173524,7 +173524,7 @@
 		},
 		{
 			"data": 4,
-			"name": "minecraft:stickyPistonArmCollision",
+			"name": "minecraft:sticky_piston_arm_collision",
 			"states": [
 				{
 					"name": "facing_direction",
@@ -173535,7 +173535,7 @@
 		},
 		{
 			"data": 5,
-			"name": "minecraft:stickyPistonArmCollision",
+			"name": "minecraft:sticky_piston_arm_collision",
 			"states": [
 				{
 					"name": "facing_direction",
@@ -176393,7 +176393,7 @@
 		},
 		{
 			"data": 0,
-			"name": "minecraft:tripWire",
+			"name": "minecraft:trip_wire",
 			"states": [
 				{
 					"name": "attached_bit",
@@ -176419,7 +176419,7 @@
 		},
 		{
 			"data": 1,
-			"name": "minecraft:tripWire",
+			"name": "minecraft:trip_wire",
 			"states": [
 				{
 					"name": "attached_bit",
@@ -176445,7 +176445,7 @@
 		},
 		{
 			"data": 2,
-			"name": "minecraft:tripWire",
+			"name": "minecraft:trip_wire",
 			"states": [
 				{
 					"name": "attached_bit",
@@ -176471,7 +176471,7 @@
 		},
 		{
 			"data": 3,
-			"name": "minecraft:tripWire",
+			"name": "minecraft:trip_wire",
 			"states": [
 				{
 					"name": "attached_bit",
@@ -176497,7 +176497,7 @@
 		},
 		{
 			"data": 4,
-			"name": "minecraft:tripWire",
+			"name": "minecraft:trip_wire",
 			"states": [
 				{
 					"name": "attached_bit",
@@ -176523,7 +176523,7 @@
 		},
 		{
 			"data": 5,
-			"name": "minecraft:tripWire",
+			"name": "minecraft:trip_wire",
 			"states": [
 				{
 					"name": "attached_bit",
@@ -176549,7 +176549,7 @@
 		},
 		{
 			"data": 6,
-			"name": "minecraft:tripWire",
+			"name": "minecraft:trip_wire",
 			"states": [
 				{
 					"name": "attached_bit",
@@ -176575,7 +176575,7 @@
 		},
 		{
 			"data": 7,
-			"name": "minecraft:tripWire",
+			"name": "minecraft:trip_wire",
 			"states": [
 				{
 					"name": "attached_bit",
@@ -176601,7 +176601,7 @@
 		},
 		{
 			"data": 8,
-			"name": "minecraft:tripWire",
+			"name": "minecraft:trip_wire",
 			"states": [
 				{
 					"name": "attached_bit",
@@ -176627,7 +176627,7 @@
 		},
 		{
 			"data": 9,
-			"name": "minecraft:tripWire",
+			"name": "minecraft:trip_wire",
 			"states": [
 				{
 					"name": "attached_bit",
@@ -176653,7 +176653,7 @@
 		},
 		{
 			"data": 10,
-			"name": "minecraft:tripWire",
+			"name": "minecraft:trip_wire",
 			"states": [
 				{
 					"name": "attached_bit",
@@ -176679,7 +176679,7 @@
 		},
 		{
 			"data": 11,
-			"name": "minecraft:tripWire",
+			"name": "minecraft:trip_wire",
 			"states": [
 				{
 					"name": "attached_bit",
@@ -176705,7 +176705,7 @@
 		},
 		{
 			"data": 12,
-			"name": "minecraft:tripWire",
+			"name": "minecraft:trip_wire",
 			"states": [
 				{
 					"name": "attached_bit",
@@ -176731,7 +176731,7 @@
 		},
 		{
 			"data": 13,
-			"name": "minecraft:tripWire",
+			"name": "minecraft:trip_wire",
 			"states": [
 				{
 					"name": "attached_bit",
@@ -176757,7 +176757,7 @@
 		},
 		{
 			"data": 14,
-			"name": "minecraft:tripWire",
+			"name": "minecraft:trip_wire",
 			"states": [
 				{
 					"name": "attached_bit",
@@ -176783,7 +176783,7 @@
 		},
 		{
 			"data": 15,
-			"name": "minecraft:tripWire",
+			"name": "minecraft:trip_wire",
 			"states": [
 				{
 					"name": "attached_bit",

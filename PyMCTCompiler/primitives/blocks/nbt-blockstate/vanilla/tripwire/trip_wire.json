@@ -1,0 +1,170 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:tripwire"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "attached_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "attached": "\"false\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "attached": "\"true\""
+                            }
+                        }
+                    ]
+                },
+                "disarmed_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "disarmed": "\"false\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "disarmed": "\"true\""
+                            }
+                        }
+                    ]
+                },
+                "powered_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "powered": "\"false\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "powered": "\"true\""
+                            }
+                        }
+                    ]
+                },
+                "suspended_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "suspended": "\"false\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "suspended": "\"true\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:tripwire": [
+            {
+                "function": "new_block",
+                "options": "minecraft:trip_wire"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "attached": {
+                        "\"false\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "attached_bit": "0b"
+                                }
+                            }
+                        ],
+                        "\"true\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "attached_bit": "1b"
+                                }
+                            }
+                        ]
+                    },
+                    "disarmed": {
+                        "\"false\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "disarmed_bit": "0b"
+                                }
+                            }
+                        ],
+                        "\"true\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "disarmed_bit": "1b"
+                                }
+                            }
+                        ]
+                    },
+                    "powered": {
+                        "\"false\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "powered_bit": "0b"
+                                }
+                            }
+                        ],
+                        "\"true\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "powered_bit": "1b"
+                                }
+                            }
+                        ]
+                    },
+                    "suspended": {
+                        "\"false\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "suspended_bit": "0b"
+                                }
+                            }
+                        ],
+                        "\"true\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "suspended_bit": "1b"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
