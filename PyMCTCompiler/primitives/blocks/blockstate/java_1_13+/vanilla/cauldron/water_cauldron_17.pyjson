@@ -27,7 +27,7 @@
                 "function": "map_properties",
                 "options": {
                     "level": {
-                        f"\"{d/2}\"": [
+                        f"\"{d/2 if d%2 else int(d/2)}\"": [
                             {
                                 "function": "map_properties",
                                 "options": {
