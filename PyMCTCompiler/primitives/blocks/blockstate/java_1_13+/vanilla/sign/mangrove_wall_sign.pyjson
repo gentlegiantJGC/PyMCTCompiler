@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "mangrove_wall_sign", "\"mangrove\"", "universal_minecraft", "wall_sign", {"facing": ["\"north\"","\"south\"","\"west\"","\"east\""]}, default="minecraft:oak_wall_sign")

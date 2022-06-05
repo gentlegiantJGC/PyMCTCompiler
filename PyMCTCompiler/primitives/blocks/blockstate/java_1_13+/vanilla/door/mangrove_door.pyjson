@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "mangrove_door", "\"mangrove\"", "universal_minecraft", "door", {"facing": ["\"north\"","\"south\"","\"west\"","\"east\""],"half": ["\"upper\"","\"lower\""],"hinge": ["\"left\"","\"right\""],"open": ["\"true\"","\"false\""],"powered": ["\"true\"","\"false\""]}, default="minecraft:oak_door")

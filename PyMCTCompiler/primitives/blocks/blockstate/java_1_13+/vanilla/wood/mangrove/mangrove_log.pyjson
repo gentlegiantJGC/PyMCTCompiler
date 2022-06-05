@@ -1,0 +1,1 @@
+blockstate.wood("minecraft", "mangrove_log", "\"mangrove\"", False, "universal_minecraft", "log", default="minecraft:oak_log")
