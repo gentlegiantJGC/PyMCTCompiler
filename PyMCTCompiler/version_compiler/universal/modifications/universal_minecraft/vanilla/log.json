@@ -1,22 +1,23 @@
 {
 	"remove": [
 		"oak_log",
-		"spruce_log",
-		"birch_log",
-		"jungle_log",
-		"acacia_log",
-		"dark_oak_log",
 		"stripped_oak_log",
+		"spruce_log",
 		"stripped_spruce_log",
+		"birch_log",
 		"stripped_birch_log",
+		"jungle_log",
 		"stripped_jungle_log",
+		"acacia_log",
 		"stripped_acacia_log",
+		"dark_oak_log",
 		"stripped_dark_oak_log",
-
 		"crimson_stem",
-		"warped_stem",
 		"stripped_crimson_stem",
-		"stripped_warped_stem"
+		"warped_stem",
+		"stripped_warped_stem",
+		"mangrove_log",
+		"stripped_mangrove_log"
 	],
 	"add": {
 		"log": {
@@ -28,6 +29,7 @@
 					"\"jungle\"",
 					"\"acacia\"",
 					"\"dark_oak\"",
+					"\"mangrove\"",
 					"\"crimson\"",
 					"\"warped\""
 				],

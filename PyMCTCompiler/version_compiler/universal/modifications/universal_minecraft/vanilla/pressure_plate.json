@@ -9,7 +9,8 @@
 		"stone_pressure_plate",
 		"crimson_pressure_plate",
 		"warped_pressure_plate",
-		"polished_blackstone_pressure_plate"
+		"polished_blackstone_pressure_plate",
+		"mangrove_pressure_plate"
 	],
 	"add": {
 		"pressure_plate": {
@@ -21,6 +22,7 @@
 					"\"jungle\"",
 					"\"acacia\"",
 					"\"dark_oak\"",
+					"\"mangrove\"",
 					"\"stone\"",
 					"\"crimson\"",
 					"\"warped\"",

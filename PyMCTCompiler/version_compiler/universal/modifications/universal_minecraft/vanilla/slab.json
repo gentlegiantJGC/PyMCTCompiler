@@ -51,7 +51,9 @@
 		"cobbled_deepslate_slab",
 		"polished_deepslate_slab",
 		"deepslate_tile_slab",
-		"deepslate_brick_slab"
+		"deepslate_brick_slab",
+		"mangrove_slab",
+		"mud_brick_slab"
 	],
 	"add": {
 		"slab": {
@@ -63,6 +65,7 @@
 					"\"jungle\"",
 					"\"acacia\"",
 					"\"dark_oak\"",
+					"\"mangrove\"",
 					"\"petrified_oak\"",
 					"\"brick\"",
 					"\"stone\"",
@@ -108,7 +111,8 @@
 					"\"cobbled_deepslate\"",
 					"\"polished_deepslate\"",
 					"\"deepslate_tile\"",
-					"\"deepslate_brick\""
+					"\"deepslate_brick\"",
+					"\"mud_brick\""
 				],
 				"type": [
 					"\"top\"",

@@ -7,7 +7,8 @@
 		"acacia_planks",
 		"dark_oak_planks",
 		"crimson_planks",
-		"warped_planks"
+		"warped_planks",
+		"mangrove_planks"
 	],
 	"add": {
 		"planks": {
@@ -19,6 +20,7 @@
 					"\"jungle\"",
 					"\"acacia\"",
 					"\"dark_oak\"",
+					"\"mangrove\"",
 					"\"crimson\"",
 					"\"warped\""
 				]

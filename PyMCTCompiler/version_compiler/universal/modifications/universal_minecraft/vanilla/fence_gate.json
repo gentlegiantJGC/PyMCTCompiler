@@ -7,7 +7,8 @@
 		"acacia_fence_gate",
 		"dark_oak_fence_gate",
 		"crimson_fence_gate",
-		"warped_fence_gate"
+		"warped_fence_gate",
+		"mangrove_fence_gate"
 	],
 	"add": {
 		"fence_gate": {
@@ -19,6 +20,7 @@
 					"\"jungle\"",
 					"\"acacia\"",
 					"\"dark_oak\"",
+					"\"mangrove\"",
 					"\"crimson\"",
 					"\"warped\""
 				],

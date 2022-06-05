@@ -9,7 +9,8 @@
 		"stone_button",
 		"crimson_button",
 		"warped_button",
-		"polished_blackstone_button"
+		"polished_blackstone_button",
+		"mangrove_button"
 	],
 	"add": {
 		"button": {
@@ -21,6 +22,7 @@
 					"\"jungle\"",
 					"\"acacia\"",
 					"\"dark_oak\"",
+					"\"mangrove\"",
 					"\"stone\"",
 					"\"crimson\"",
 					"\"warped\"",

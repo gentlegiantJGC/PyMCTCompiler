@@ -31,7 +31,8 @@
 		"potted_crimson_roots",
 		"potted_warped_roots",
 		"potted_azalea_bush",
-		"potted_flowering_azalea_bush"
+		"potted_flowering_azalea_bush",
+		"potted_mangrove_propagule"
 	],
 	"add": {
 		"flower_pot": {
@@ -68,7 +69,8 @@
 					"\"warped_roots\"",
 					"\"warped_fungus\"",
 					"\"azalea_bush\"",
-					"\"flowering_azalea_bush\""
+					"\"flowering_azalea_bush\"",
+					"\"mangrove_propagule\""
 				],
 				"update": [
 					"\"false\"",
