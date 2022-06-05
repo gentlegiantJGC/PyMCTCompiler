@@ -101,13 +101,10 @@ class DiskBuffer:
 				data.commit(None, [])  # validate the translation
 				self.save_json_object(('versions',) + path[:3] + (direction,) + path[3:], data.save([]))  # add the file to the dictionary to be saved
 
-		if os.path.isfile('save_cache.json'):
-			try:
-				with open('save_cache.json') as f:
-					old_save_cache = json.load(f)
-			except:
-				old_save_cache = {}
-		else:
+		try:
+			with open('cache/save_cache.json') as f:
+				old_save_cache = json.load(f)
+		except:
 			old_save_cache = {}
 		new_save_cache = {}
 
@@ -125,7 +122,8 @@ class DiskBuffer:
 			if path not in new_save_cache and os.path.isfile(path):
 				os.remove(path)
 
-		with open('save_cache.json', 'w') as f:
+		os.makedirs("cache", exist_ok=True)
+		with open("cache/save_cache.json", "w") as f:
 			json.dump(new_save_cache, f, indent=4)
 
 
