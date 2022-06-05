@@ -417,14 +417,28 @@
         }
     },
     "minecraft:pumpkin_stem": {
-        "properties_added": [
-            "facing_direction"
-        ]
+        "properties_added": {
+            "facing_direction": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        }
     },
     "minecraft:melon_stem": {
-        "properties_added": [
-            "facing_direction"
-        ]
+        "properties_added": {
+            "facing_direction": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        }
     },
     "minecraft:warped_trapdoor": {
         "block_added": {
@@ -530,13 +544,32 @@
         }
     },
     "minecraft:cobblestone_wall": {
-        "properties_added": [
-            "wall_connection_type_east",
-            "wall_connection_type_north",
-            "wall_connection_type_south",
-            "wall_connection_type_west",
-            "wall_post_bit"
-        ]
+        "properties_added": {
+            "wall_connection_type_east": [
+                "none",
+                "short",
+                "tall"
+            ],
+            "wall_connection_type_north": [
+                "none",
+                "short",
+                "tall"
+            ],
+            "wall_connection_type_south": [
+                "none",
+                "short",
+                "tall"
+            ],
+            "wall_connection_type_west": [
+                "none",
+                "short",
+                "tall"
+            ],
+            "wall_post_bit": [
+                0,
+                1
+            ]
+        }
     },
     "minecraft:crimson_stairs": {
         "block_added": {
@@ -957,9 +990,14 @@
         }
     },
     "minecraft:jigsaw": {
-        "properties_added": [
-            "rotation"
-        ]
+        "properties_added": {
+            "rotation": [
+                0,
+                1,
+                2,
+                3
+            ]
+        }
     },
     "minecraft:warped_fence_gate": {
         "block_added": {

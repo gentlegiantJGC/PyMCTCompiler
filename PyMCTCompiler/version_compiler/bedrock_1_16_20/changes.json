@@ -3,22 +3,36 @@
         "properties_removed": [
             "facing_direction"
         ],
-        "properties_added": [
-            "direction"
-        ]
+        "properties_added": {
+            "direction": [
+                0,
+                1,
+                2,
+                3
+            ]
+        }
     },
     "minecraft:bee_nest": {
         "properties_removed": [
             "facing_direction"
         ],
-        "properties_added": [
-            "direction"
-        ]
+        "properties_added": {
+            "direction": [
+                0,
+                1,
+                2,
+                3
+            ]
+        }
     },
     "minecraft:chain": {
-        "properties_added": [
-            "pillar_axis"
-        ]
+        "properties_added": {
+            "pillar_axis": [
+                "y",
+                "x",
+                "z"
+            ]
+        }
     },
     "minecraft:unknown": {
         "block_added": {

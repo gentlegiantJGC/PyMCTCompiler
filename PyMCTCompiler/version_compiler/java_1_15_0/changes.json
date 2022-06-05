@@ -1,8 +1,11 @@
 {
     "minecraft:bell": {
-        "properties_added": [
-            "powered"
-        ]
+        "properties_added": {
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
     },
     "minecraft:bee_nest": {
         "block_added": {

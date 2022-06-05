@@ -1,8 +1,11 @@
 {
     "minecraft:tnt": {
-        "properties_added": [
-            "unstable"
-        ]
+        "properties_added": {
+            "unstable": [
+                "true",
+                "false"
+            ]
+        }
     },
     "minecraft:dead_tube_coral": {
         "block_added": {
@@ -70,33 +73,51 @@
         }
     },
     "minecraft:tube_coral": {
-        "properties_added": [
-            "waterlogged"
-        ]
+        "properties_added": {
+            "waterlogged": [
+                "true",
+                "false"
+            ]
+        }
     },
     "minecraft:brain_coral": {
-        "properties_added": [
-            "waterlogged"
-        ]
+        "properties_added": {
+            "waterlogged": [
+                "true",
+                "false"
+            ]
+        }
     },
     "minecraft:bubble_coral": {
-        "properties_added": [
-            "waterlogged"
-        ]
+        "properties_added": {
+            "waterlogged": [
+                "true",
+                "false"
+            ]
+        }
     },
     "minecraft:fire_coral": {
-        "properties_added": [
-            "waterlogged"
-        ]
+        "properties_added": {
+            "waterlogged": [
+                "true",
+                "false"
+            ]
+        }
     },
     "minecraft:horn_coral": {
-        "properties_added": [
-            "waterlogged"
-        ]
+        "properties_added": {
+            "waterlogged": [
+                "true",
+                "false"
+            ]
+        }
     },
     "minecraft:conduit": {
-        "properties_added": [
-            "waterlogged"
-        ]
+        "properties_added": {
+            "waterlogged": [
+                "true",
+                "false"
+            ]
+        }
     }
 }

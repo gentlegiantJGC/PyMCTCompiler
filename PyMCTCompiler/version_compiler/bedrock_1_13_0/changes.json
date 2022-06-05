@@ -42,17 +42,25 @@
         "properties_removed": [
             "direction"
         ],
-        "properties_added": [
-            "pillar_axis"
-        ]
+        "properties_added": {
+            "pillar_axis": [
+                "y",
+                "x",
+                "z"
+            ]
+        }
     },
     "minecraft:stripped_oak_log": {
         "properties_removed": [
             "direction"
         ],
-        "properties_added": [
-            "pillar_axis"
-        ]
+        "properties_added": {
+            "pillar_axis": [
+                "y",
+                "x",
+                "z"
+            ]
+        }
     },
     "minecraft:ladder": {
         "values_removed": {
@@ -74,9 +82,13 @@
         "properties_removed": [
             "direction"
         ],
-        "properties_added": [
-            "pillar_axis"
-        ]
+        "properties_added": {
+            "pillar_axis": [
+                "y",
+                "x",
+                "z"
+            ]
+        }
     },
     "minecraft:dispenser": {
         "values_removed": {
@@ -157,9 +169,18 @@
         "properties_removed": [
             "facing_direction"
         ],
-        "properties_added": [
-            "lever_direction"
-        ]
+        "properties_added": {
+            "lever_direction": [
+                "down_east_west",
+                "east",
+                "west",
+                "south",
+                "north",
+                "up_north_south",
+                "up_east_west",
+                "down_north_south"
+            ]
+        }
     },
     "minecraft:stone_button": {
         "values_removed": {
@@ -181,9 +202,13 @@
         "properties_removed": [
             "direction"
         ],
-        "properties_added": [
-            "pillar_axis"
-        ]
+        "properties_added": {
+            "pillar_axis": [
+                "y",
+                "x",
+                "z"
+            ]
+        }
     },
     "minecraft:cake": {
         "values_removed": {
@@ -204,9 +229,13 @@
         "properties_removed": [
             "direction"
         ],
-        "properties_added": [
-            "pillar_axis"
-        ]
+        "properties_added": {
+            "pillar_axis": [
+                "y",
+                "x",
+                "z"
+            ]
+        }
     },
     "minecraft:dropper": {
         "values_removed": {
@@ -291,9 +320,13 @@
         "properties_removed": [
             "direction"
         ],
-        "properties_added": [
-            "pillar_axis"
-        ]
+        "properties_added": {
+            "pillar_axis": [
+                "y",
+                "x",
+                "z"
+            ]
+        }
     },
     "minecraft:hopper": {
         "values_removed": {
@@ -307,17 +340,25 @@
         "properties_removed": [
             "direction"
         ],
-        "properties_added": [
-            "pillar_axis"
-        ]
+        "properties_added": {
+            "pillar_axis": [
+                "y",
+                "x",
+                "z"
+            ]
+        }
     },
     "minecraft:hay_block": {
         "properties_removed": [
             "direction"
         ],
-        "properties_added": [
-            "pillar_axis"
-        ]
+        "properties_added": {
+            "pillar_axis": [
+                "y",
+                "x",
+                "z"
+            ]
+        }
     },
     "minecraft:black_glazed_terracotta": {
         "values_removed": {
@@ -347,9 +388,16 @@
         "properties_removed": [
             "weirdo_direction"
         ],
-        "properties_added": [
-            "facing_direction"
-        ]
+        "properties_added": {
+            "facing_direction": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        }
     },
     "minecraft:chorus_flower": {
         "values_removed": {
@@ -387,9 +435,13 @@
         "properties_removed": [
             "direction"
         ],
-        "properties_added": [
-            "pillar_axis"
-        ]
+        "properties_added": {
+            "pillar_axis": [
+                "y",
+                "x",
+                "z"
+            ]
+        }
     },
     "minecraft:white_glazed_terracotta": {
         "values_removed": {
@@ -491,25 +543,37 @@
         "properties_removed": [
             "direction"
         ],
-        "properties_added": [
-            "pillar_axis"
-        ]
+        "properties_added": {
+            "pillar_axis": [
+                "y",
+                "x",
+                "z"
+            ]
+        }
     },
     "minecraft:stripped_birch_log": {
         "properties_removed": [
             "direction"
         ],
-        "properties_added": [
-            "pillar_axis"
-        ]
+        "properties_added": {
+            "pillar_axis": [
+                "y",
+                "x",
+                "z"
+            ]
+        }
     },
     "minecraft:stripped_dark_oak_log": {
         "properties_removed": [
             "direction"
         ],
-        "properties_added": [
-            "pillar_axis"
-        ]
+        "properties_added": {
+            "pillar_axis": [
+                "y",
+                "x",
+                "z"
+            ]
+        }
     },
     "minecraft:blast_furnace": {
         "values_removed": {
@@ -637,14 +701,21 @@
         }
     },
     "minecraft:coral": {
-        "properties_added": [
-            "dead_bit"
-        ]
+        "properties_added": {
+            "dead_bit": [
+                0,
+                1
+            ]
+        }
     },
     "minecraft:wood": {
-        "properties_added": [
-            "pillar_axis"
-        ]
+        "properties_added": {
+            "pillar_axis": [
+                "y",
+                "x",
+                "z"
+            ]
+        }
     },
     "minecraft:camera": {
         "block_added": {

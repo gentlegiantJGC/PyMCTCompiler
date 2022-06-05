@@ -843,9 +843,22 @@
         "properties_removed": [
             "facing"
         ],
-        "properties_added": [
-            "orientation"
-        ]
+        "properties_added": {
+            "orientation": [
+                "down_east",
+                "down_north",
+                "down_south",
+                "down_west",
+                "up_east",
+                "up_north",
+                "up_south",
+                "up_west",
+                "west_up",
+                "east_up",
+                "north_up",
+                "south_up"
+            ]
+        }
     },
     "minecraft:nether_gold_ore": {
         "block_added": {

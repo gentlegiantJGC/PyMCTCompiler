@@ -53,7 +53,7 @@ def find_blocks_changes(old_blocks: dict, new_blocks: dict):
             old_block_data = old_blocks[block]
             for prop, prop_data in block_data['properties'].items():
                 if prop not in old_block_data['properties']:
-                    changes.setdefault(block, {}).setdefault('properties_added', []).append(prop)
+                    changes.setdefault(block, {}).setdefault('properties_added', {})[prop] = prop_data
                 else:
                     if block_data['defaults'][prop] != old_block_data['defaults'][prop]:
                         changes.setdefault(block, {}).setdefault('default_changed', {})[prop] = [old_block_data['defaults'][prop], block_data['defaults'][prop]]
