@@ -1,0 +1,747 @@
+{
+    "minecraft:acacia_leaves": {
+        "properties_added": {
+            "waterlogged": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:azalea_leaves": {
+        "properties_added": {
+            "waterlogged": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:birch_leaves": {
+        "properties_added": {
+            "waterlogged": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:dark_oak_leaves": {
+        "properties_added": {
+            "waterlogged": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:flowering_azalea_leaves": {
+        "properties_added": {
+            "waterlogged": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:frogspawn": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:jungle_leaves": {
+        "properties_added": {
+            "waterlogged": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:mangrove_button": {
+        "block_added": {
+            "properties": {
+                "face": [
+                    "floor",
+                    "wall",
+                    "ceiling"
+                ],
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "face": "wall",
+                "facing": "north",
+                "powered": "false"
+            }
+        }
+    },
+    "minecraft:mangrove_door": {
+        "block_added": {
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "half": [
+                    "upper",
+                    "lower"
+                ],
+                "hinge": [
+                    "left",
+                    "right"
+                ],
+                "open": [
+                    "true",
+                    "false"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "facing": "north",
+                "half": "lower",
+                "hinge": "left",
+                "open": "false",
+                "powered": "false"
+            }
+        }
+    },
+    "minecraft:mangrove_fence": {
+        "block_added": {
+            "properties": {
+                "east": [
+                    "true",
+                    "false"
+                ],
+                "north": [
+                    "true",
+                    "false"
+                ],
+                "south": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ],
+                "west": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "east": "false",
+                "north": "false",
+                "south": "false",
+                "waterlogged": "false",
+                "west": "false"
+            }
+        }
+    },
+    "minecraft:mangrove_fence_gate": {
+        "block_added": {
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "in_wall": [
+                    "true",
+                    "false"
+                ],
+                "open": [
+                    "true",
+                    "false"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "facing": "north",
+                "in_wall": "false",
+                "open": "false",
+                "powered": "false"
+            }
+        }
+    },
+    "minecraft:mangrove_leaves": {
+        "block_added": {
+            "properties": {
+                "distance": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7"
+                ],
+                "persistent": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "distance": "7",
+                "persistent": "false",
+                "waterlogged": "false"
+            }
+        }
+    },
+    "minecraft:mangrove_log": {
+        "block_added": {
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ]
+            },
+            "defaults": {
+                "axis": "y"
+            }
+        }
+    },
+    "minecraft:mangrove_planks": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:mangrove_pressure_plate": {
+        "block_added": {
+            "properties": {
+                "powered": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "powered": "false"
+            }
+        }
+    },
+    "minecraft:mangrove_propagule": {
+        "block_added": {
+            "properties": {
+                "age": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "hanging": [
+                    "true",
+                    "false"
+                ],
+                "stage": [
+                    "0",
+                    "1"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "age": "0",
+                "hanging": "false",
+                "stage": "0",
+                "waterlogged": "false"
+            }
+        }
+    },
+    "minecraft:mangrove_roots": {
+        "block_added": {
+            "properties": {
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "waterlogged": "false"
+            }
+        }
+    },
+    "minecraft:mangrove_sign": {
+        "block_added": {
+            "properties": {
+                "rotation": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "rotation": "0",
+                "waterlogged": "false"
+            }
+        }
+    },
+    "minecraft:mangrove_slab": {
+        "block_added": {
+            "properties": {
+                "type": [
+                    "top",
+                    "bottom",
+                    "double"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "type": "bottom",
+                "waterlogged": "false"
+            }
+        }
+    },
+    "minecraft:mangrove_stairs": {
+        "block_added": {
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "half": [
+                    "top",
+                    "bottom"
+                ],
+                "shape": [
+                    "straight",
+                    "inner_left",
+                    "inner_right",
+                    "outer_left",
+                    "outer_right"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "facing": "north",
+                "half": "bottom",
+                "shape": "straight",
+                "waterlogged": "false"
+            }
+        }
+    },
+    "minecraft:mangrove_trapdoor": {
+        "block_added": {
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "half": [
+                    "top",
+                    "bottom"
+                ],
+                "open": [
+                    "true",
+                    "false"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "facing": "north",
+                "half": "bottom",
+                "open": "false",
+                "powered": "false",
+                "waterlogged": "false"
+            }
+        }
+    },
+    "minecraft:mangrove_wall_sign": {
+        "block_added": {
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "facing": "north",
+                "waterlogged": "false"
+            }
+        }
+    },
+    "minecraft:mangrove_wood": {
+        "block_added": {
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ]
+            },
+            "defaults": {
+                "axis": "y"
+            }
+        }
+    },
+    "minecraft:mud": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:mud_brick_slab": {
+        "block_added": {
+            "properties": {
+                "type": [
+                    "top",
+                    "bottom",
+                    "double"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "type": "bottom",
+                "waterlogged": "false"
+            }
+        }
+    },
+    "minecraft:mud_brick_stairs": {
+        "block_added": {
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "half": [
+                    "top",
+                    "bottom"
+                ],
+                "shape": [
+                    "straight",
+                    "inner_left",
+                    "inner_right",
+                    "outer_left",
+                    "outer_right"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "facing": "north",
+                "half": "bottom",
+                "shape": "straight",
+                "waterlogged": "false"
+            }
+        }
+    },
+    "minecraft:mud_brick_wall": {
+        "block_added": {
+            "properties": {
+                "east": [
+                    "none",
+                    "low",
+                    "tall"
+                ],
+                "north": [
+                    "none",
+                    "low",
+                    "tall"
+                ],
+                "south": [
+                    "none",
+                    "low",
+                    "tall"
+                ],
+                "up": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ],
+                "west": [
+                    "none",
+                    "low",
+                    "tall"
+                ]
+            },
+            "defaults": {
+                "east": "none",
+                "north": "none",
+                "south": "none",
+                "up": "true",
+                "waterlogged": "false",
+                "west": "none"
+            }
+        }
+    },
+    "minecraft:mud_bricks": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:muddy_mangrove_roots": {
+        "block_added": {
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ]
+            },
+            "defaults": {
+                "axis": "y"
+            }
+        }
+    },
+    "minecraft:oak_leaves": {
+        "properties_added": {
+            "waterlogged": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:ochre_froglight": {
+        "block_added": {
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ]
+            },
+            "defaults": {
+                "axis": "y"
+            }
+        }
+    },
+    "minecraft:packed_mud": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:pearlescent_froglight": {
+        "block_added": {
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ]
+            },
+            "defaults": {
+                "axis": "y"
+            }
+        }
+    },
+    "minecraft:potted_mangrove_propagule": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:reinforced_deepslate": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:sculk": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:sculk_catalyst": {
+        "block_added": {
+            "properties": {
+                "bloom": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "bloom": "false"
+            }
+        }
+    },
+    "minecraft:sculk_shrieker": {
+        "block_added": {
+            "properties": {
+                "can_summon": [
+                    "true",
+                    "false"
+                ],
+                "shrieking": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "can_summon": "false",
+                "shrieking": "false",
+                "waterlogged": "false"
+            }
+        }
+    },
+    "minecraft:sculk_vein": {
+        "block_added": {
+            "properties": {
+                "down": [
+                    "true",
+                    "false"
+                ],
+                "east": [
+                    "true",
+                    "false"
+                ],
+                "north": [
+                    "true",
+                    "false"
+                ],
+                "south": [
+                    "true",
+                    "false"
+                ],
+                "up": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ],
+                "west": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "down": "false",
+                "east": "false",
+                "north": "false",
+                "south": "false",
+                "up": "false",
+                "waterlogged": "false",
+                "west": "false"
+            }
+        }
+    },
+    "minecraft:spruce_leaves": {
+        "properties_added": {
+            "waterlogged": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:stripped_mangrove_log": {
+        "block_added": {
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ]
+            },
+            "defaults": {
+                "axis": "y"
+            }
+        }
+    },
+    "minecraft:stripped_mangrove_wood": {
+        "block_added": {
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ]
+            },
+            "defaults": {
+                "axis": "y"
+            }
+        }
+    },
+    "minecraft:verdant_froglight": {
+        "block_added": {
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ]
+            },
+            "defaults": {
+                "axis": "y"
+            }
+        }
+    }
+}
