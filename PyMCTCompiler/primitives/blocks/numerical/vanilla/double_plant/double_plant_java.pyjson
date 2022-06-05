@@ -1,0 +1,176 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:double_plant"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "block_data": {
+                    **{
+                        str(data): [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "half": "\"lower\"",
+                                    "plant_type": plant_type
+                                }
+                            }
+                        ] for data, plant_type in ((0, "\"sunflower\""), (1, "\"lilac\""), (2, "\"tall_grass\""), (3, "\"large_fern\""), (4, "\"rose_bush\""), (5, "\"peony\""), (6, "\"sunflower\""), (7, "\"sunflower\""))
+                    },
+                    **{
+                        str(data): [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "half": "\"upper\""
+                                }
+                            },
+                            {
+                                "function": "multiblock",
+                                "options": [
+                                    {
+                                        "coords": [0, -1, 0],
+                                        "functions": [
+                                            {
+                                                "function": "map_block_name",
+                                                "options": {
+                                                    "minecraft:double_plant": [
+                                                        {
+                                                            "function": "map_properties",
+                                                            "options": {
+                                                                "block_data": {
+                                                                    str(data): [
+                                                                        {
+                                                                            "function": "new_properties",
+                                                                            "options": {
+                                                                                "plant_type": plant_type
+                                                                            }
+                                                                        }
+                                                                    ] for data, plant_type in ((0, "\"sunflower\""), (1, "\"lilac\""), (2, "\"tall_grass\""), (3, "\"large_fern\""), (4, "\"rose_bush\""), (5, "\"peony\""), (6, "\"sunflower\""), (7, "\"sunflower\""))
+                                                                },
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ] for data in range(8, 16)
+                    }
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:double_plant": [
+            {
+                "function": "new_block",
+                "options": "minecraft:double_plant"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "half": {
+                        "\"lower\"": [
+                            {
+                                "function": "map_properties",
+                                "options": {
+                                    "plant_type": {
+                                        plant_type: [
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "block_data": str(data)
+                                                }
+                                            }
+                                        ] for data, plant_type in ((0, "\"sunflower\""), (1, "\"lilac\""), (2, "\"tall_grass\""), (3, "\"large_fern\""), (4, "\"rose_bush\""), (5, "\"peony\""))
+                                    }
+                                }
+                            }
+                        ],
+                        "\"upper\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "block_data": "10"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "blockstate_specification": {
+        "properties": {
+            "half": [
+                "\"lower\"",
+                "\"upper\""
+            ],
+            "plant_type": [
+                "\"sunflower\"",
+                "\"lilac\"",
+                "\"tall_grass\"",
+                "\"large_fern\"",
+                "\"rose_bush\"",
+                "\"peony\""
+            ]
+        },
+        "defaults": {
+            "half": "\"lower\"",
+            "plant_type": "\"sunflower\""
+        }
+    },
+    "blockstate_to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:double_plant"
+        },
+        {
+            "function": "carry_properties",
+            "options": {
+                "half": [
+                    "\"lower\"",
+                    "\"upper\""
+                ],
+                "plant_type": [
+                    "\"sunflower\"",
+                    "\"lilac\"",
+                    "\"tall_grass\"",
+                    "\"large_fern\"",
+                    "\"rose_bush\"",
+                    "\"peony\""
+                ]
+            }
+        }
+    ],
+    "blockstate_from_universal": {
+        "universal_minecraft:double_plant": [
+            {
+                "function": "new_block",
+                "options": "minecraft:double_plant"
+            },
+            {
+                "function": "carry_properties",
+                "options": {
+                    "half": [
+                        "\"lower\"",
+                        "\"upper\""
+                    ],
+                    "plant_type": [
+                        "\"sunflower\"",
+                        "\"lilac\"",
+                        "\"tall_grass\"",
+                        "\"large_fern\"",
+                        "\"rose_bush\"",
+                        "\"peony\""
+                    ]
+                }
+            }
+        ]
+    }
+}
