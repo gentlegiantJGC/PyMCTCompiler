@@ -1,0 +1,47 @@
+{
+	"minecraft:mangrove_log": null,
+	"minecraft:stripped_mangrove_log": null,
+	"minecraft:mangrove_wood": null,
+	"minecraft:stripped_mangrove_wood": null,
+	"minecraft:mangrove_planks": null,
+	"minecraft:mangrove_slab": null,
+	"minecraft:mangrove_double_slab": null,
+	"minecraft:mangrove_pressure_plate": null,
+	"minecraft:mangrove_standing_sign": null,
+	"minecraft:mangrove_wall_sign": null,
+	"minecraft:mangrove_trapdoor": null,
+	"minecraft:mangrove_stairs": null,
+	"minecraft:mangrove_fence_gate": null,
+	"minecraft:mangrove_door": null,
+	"minecraft:mangrove_fence": null,
+	"minecraft:mangrove_leaves": null,
+	"minecraft:mangrove_button": null,
+
+	"minecraft:mangrove_propagule_hanging": null,
+	"minecraft:mangrove_roots": null,
+	"minecraft:muddy_mangrove_roots": null,
+	"minecraft:mangrove_propagule": null,
+
+	"minecraft:mud": null,
+	"minecraft:packed_mud": null,
+	"minecraft:mud_bricks": null,
+	"minecraft:mud_brick_wall": null,
+	"minecraft:mud_brick_slab": null,
+	"minecraft:mud_brick_stairs": null,
+	"minecraft:mud_brick_double_slab": null,
+
+	"minecraft:sculk": null,
+	"minecraft:sculk_vein": null,
+	"minecraft:sculk_shrieker": null,
+	"minecraft:sculk_catalyst": null,
+	"minecraft:sculk_sensor": null,
+
+	"minecraft:frog_spawn": null,
+	"minecraft:ochre_froglight": null,
+	"minecraft:pearlescent_froglight": null,
+	"minecraft:verdant_froglight": null,
+
+	"minecraft:reinforced_deepslate": null,
+
+	"minecraft:client_request_placeholder_block": null
+}
