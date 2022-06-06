@@ -1,0 +1,16 @@
+{
+	"add": {
+		"biomes": {
+			"minecraft:deep_dark": [
+				190,
+				"universal_minecraft:deep_dark"
+			],
+			"minecraft:mangrove_swamp": [
+				191,
+				"universal_minecraft:mangrove_swamp"
+			]
+		},
+		"universal_remap": {}
+	},
+	"remove": []
+}
