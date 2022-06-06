@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:mud_bricks"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:mud_bricks": [
+            {
+                "function": "new_block",
+                "options": "minecraft:mud_bricks"
+            }
+        ]
+    }
+}

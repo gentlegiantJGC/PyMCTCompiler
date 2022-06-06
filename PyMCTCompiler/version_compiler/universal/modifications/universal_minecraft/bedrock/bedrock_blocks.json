@@ -12,6 +12,7 @@
 		"camera": {},
 		"allow": {},
 	    "deny": {},
-	    "border_block": {}
+	    "border_block": {},
+	    "client_request_placeholder_block": {}
 	}
 }

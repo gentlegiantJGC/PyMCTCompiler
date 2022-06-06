@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:client_request_placeholder_block"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:client_request_placeholder_block": [
+            {
+                "function": "new_block",
+                "options": "minecraft:client_request_placeholder_block"
+            }
+        ]
+    }
+}

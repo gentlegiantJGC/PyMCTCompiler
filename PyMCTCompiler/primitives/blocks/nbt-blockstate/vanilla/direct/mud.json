@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:mud"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:mud": [
+            {
+                "function": "new_block",
+                "options": "minecraft:mud"
+            }
+        ]
+    }
+}
