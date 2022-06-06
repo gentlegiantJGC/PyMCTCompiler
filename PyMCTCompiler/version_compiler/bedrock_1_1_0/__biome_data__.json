@@ -297,7 +297,9 @@
 			"universal_minecraft:grove": "universal_minecraft:plains",
 			"universal_minecraft:meadow": "universal_minecraft:plains",
 			"universal_minecraft:dripstone_caves": "universal_minecraft:plains",
-			"universal_minecraft:lush_caves": "universal_minecraft:plains"
+			"universal_minecraft:lush_caves": "universal_minecraft:plains",
+			"universal_minecraft:deep_dark": "universal_minecraft:plains",
+			"universal_minecraft:mangrove_swamp": "universal_minecraft:swamp"
 		}
     },
     "remove": []
