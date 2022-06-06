@@ -6,7 +6,7 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:muddy_mangrove_roots": [
+        "universal_minecraft:mangrove_roots": [
             {
                 "function": "new_block",
                 "options": "minecraft:mangrove_roots"
