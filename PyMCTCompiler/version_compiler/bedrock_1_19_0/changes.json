@@ -384,38 +384,6 @@
             }
         }
     },
-    "minecraft:mangrove_propagule_hanging": {
-        "block_added": {
-            "properties": {
-                "facing_direction": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5
-                ],
-                "growth": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7
-                ]
-            },
-            "defaults": {
-                "facing_direction": 0,
-                "growth": 0
-            },
-            "types": {
-                "facing_direction": "int",
-                "growth": "int"
-            }
-        }
-    },
     "minecraft:mangrove_fence_gate": {
         "block_added": {
             "properties": {
@@ -620,32 +588,25 @@
     "minecraft:mangrove_propagule": {
         "block_added": {
             "properties": {
-                "facing_direction": [
+                "hanging": [
                     0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5
+                    1
                 ],
-                "growth": [
+                "propagule_stage": [
                     0,
                     1,
                     2,
                     3,
-                    4,
-                    5,
-                    6,
-                    7
+                    4
                 ]
             },
             "defaults": {
-                "facing_direction": 0,
-                "growth": 0
+                "hanging": 0,
+                "propagule_stage": 0
             },
             "types": {
-                "facing_direction": "int",
-                "growth": "int"
+                "hanging": "byte",
+                "propagule_stage": "int"
             }
         }
     },

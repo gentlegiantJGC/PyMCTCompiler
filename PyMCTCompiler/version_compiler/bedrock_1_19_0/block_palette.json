@@ -127934,774 +127934,6 @@
 		},
 		{
 			"data": 0,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 0
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 0
-				}
-			]
-		},
-		{
-			"data": 1,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 0
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 1
-				}
-			]
-		},
-		{
-			"data": 2,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 0
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 2
-				}
-			]
-		},
-		{
-			"data": 3,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 0
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 3
-				}
-			]
-		},
-		{
-			"data": 4,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 0
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 4
-				}
-			]
-		},
-		{
-			"data": 5,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 0
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 5
-				}
-			]
-		},
-		{
-			"data": 6,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 0
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 6
-				}
-			]
-		},
-		{
-			"data": 7,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 0
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 7
-				}
-			]
-		},
-		{
-			"data": 8,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 1
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 0
-				}
-			]
-		},
-		{
-			"data": 9,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 1
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 1
-				}
-			]
-		},
-		{
-			"data": 10,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 1
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 2
-				}
-			]
-		},
-		{
-			"data": 11,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 1
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 3
-				}
-			]
-		},
-		{
-			"data": 12,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 1
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 4
-				}
-			]
-		},
-		{
-			"data": 13,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 1
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 5
-				}
-			]
-		},
-		{
-			"data": 14,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 1
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 6
-				}
-			]
-		},
-		{
-			"data": 15,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 1
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 7
-				}
-			]
-		},
-		{
-			"data": 16,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 2
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 0
-				}
-			]
-		},
-		{
-			"data": 17,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 2
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 1
-				}
-			]
-		},
-		{
-			"data": 18,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 2
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 2
-				}
-			]
-		},
-		{
-			"data": 19,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 2
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 3
-				}
-			]
-		},
-		{
-			"data": 20,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 2
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 4
-				}
-			]
-		},
-		{
-			"data": 21,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 2
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 5
-				}
-			]
-		},
-		{
-			"data": 22,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 2
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 6
-				}
-			]
-		},
-		{
-			"data": 23,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 2
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 7
-				}
-			]
-		},
-		{
-			"data": 24,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 3
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 0
-				}
-			]
-		},
-		{
-			"data": 25,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 3
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 1
-				}
-			]
-		},
-		{
-			"data": 26,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 3
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 2
-				}
-			]
-		},
-		{
-			"data": 27,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 3
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 3
-				}
-			]
-		},
-		{
-			"data": 28,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 3
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 4
-				}
-			]
-		},
-		{
-			"data": 29,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 3
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 5
-				}
-			]
-		},
-		{
-			"data": 30,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 3
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 6
-				}
-			]
-		},
-		{
-			"data": 31,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 3
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 7
-				}
-			]
-		},
-		{
-			"data": 32,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 4
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 0
-				}
-			]
-		},
-		{
-			"data": 33,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 4
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 1
-				}
-			]
-		},
-		{
-			"data": 34,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 4
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 2
-				}
-			]
-		},
-		{
-			"data": 35,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 4
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 3
-				}
-			]
-		},
-		{
-			"data": 36,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 4
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 4
-				}
-			]
-		},
-		{
-			"data": 37,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 4
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 5
-				}
-			]
-		},
-		{
-			"data": 38,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 4
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 6
-				}
-			]
-		},
-		{
-			"data": 39,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 4
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 7
-				}
-			]
-		},
-		{
-			"data": 40,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 5
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 0
-				}
-			]
-		},
-		{
-			"data": 41,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 5
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 1
-				}
-			]
-		},
-		{
-			"data": 42,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 5
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 2
-				}
-			]
-		},
-		{
-			"data": 43,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 5
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 3
-				}
-			]
-		},
-		{
-			"data": 44,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 5
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 4
-				}
-			]
-		},
-		{
-			"data": 45,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 5
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 5
-				}
-			]
-		},
-		{
-			"data": 46,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 5
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 6
-				}
-			]
-		},
-		{
-			"data": 47,
-			"name": "minecraft:mangrove_propagule_hanging",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 5
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 7
-				}
-			]
-		},
-		{
-			"data": 0,
 			"name": "minecraft:yellow_candle_cake",
 			"states": [
 				{
@@ -171984,770 +171216,152 @@
 			"states": []
 		},
 		{
-			"data": 0,
 			"name": "minecraft:mangrove_propagule",
 			"states": [
 				{
-					"name": "facing_direction",
-					"type": "int",
+					"name": "hanging",
+					"type": "byte",
 					"value": 0
 				},
 				{
-					"name": "growth",
-					"type": "int",
-					"value": 0
-				}
-			]
-		},
-		{
-			"data": 1,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 0
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 1
-				}
-			]
-		},
-		{
-			"data": 2,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 0
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 2
-				}
-			]
-		},
-		{
-			"data": 3,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 0
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 3
-				}
-			]
-		},
-		{
-			"data": 4,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 0
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 4
-				}
-			]
-		},
-		{
-			"data": 5,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 0
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 5
-				}
-			]
-		},
-		{
-			"data": 6,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 0
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 6
-				}
-			]
-		},
-		{
-			"data": 7,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 0
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 7
-				}
-			]
-		},
-		{
-			"data": 8,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 1
-				},
-				{
-					"name": "growth",
+					"name": "propagule_stage",
 					"type": "int",
 					"value": 0
 				}
 			]
 		},
 		{
-			"data": 9,
 			"name": "minecraft:mangrove_propagule",
 			"states": [
 				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 1
+					"name": "hanging",
+					"type": "byte",
+					"value": 0
 				},
 				{
-					"name": "growth",
+					"name": "propagule_stage",
 					"type": "int",
 					"value": 1
 				}
 			]
 		},
 		{
-			"data": 10,
 			"name": "minecraft:mangrove_propagule",
 			"states": [
 				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 1
+					"name": "hanging",
+					"type": "byte",
+					"value": 0
 				},
 				{
-					"name": "growth",
+					"name": "propagule_stage",
 					"type": "int",
 					"value": 2
 				}
 			]
 		},
 		{
-			"data": 11,
 			"name": "minecraft:mangrove_propagule",
 			"states": [
 				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 1
+					"name": "hanging",
+					"type": "byte",
+					"value": 0
 				},
 				{
-					"name": "growth",
+					"name": "propagule_stage",
 					"type": "int",
 					"value": 3
 				}
 			]
 		},
 		{
-			"data": 12,
 			"name": "minecraft:mangrove_propagule",
 			"states": [
 				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 1
+					"name": "hanging",
+					"type": "byte",
+					"value": 0
 				},
 				{
-					"name": "growth",
+					"name": "propagule_stage",
 					"type": "int",
 					"value": 4
 				}
 			]
 		},
 		{
-			"data": 13,
 			"name": "minecraft:mangrove_propagule",
 			"states": [
 				{
-					"name": "facing_direction",
-					"type": "int",
+					"name": "hanging",
+					"type": "byte",
 					"value": 1
 				},
 				{
-					"name": "growth",
-					"type": "int",
-					"value": 5
-				}
-			]
-		},
-		{
-			"data": 14,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 1
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 6
-				}
-			]
-		},
-		{
-			"data": 15,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 1
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 7
-				}
-			]
-		},
-		{
-			"data": 16,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 2
-				},
-				{
-					"name": "growth",
+					"name": "propagule_stage",
 					"type": "int",
 					"value": 0
 				}
 			]
 		},
 		{
-			"data": 17,
 			"name": "minecraft:mangrove_propagule",
 			"states": [
 				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 2
+					"name": "hanging",
+					"type": "byte",
+					"value": 1
 				},
 				{
-					"name": "growth",
+					"name": "propagule_stage",
 					"type": "int",
 					"value": 1
 				}
 			]
 		},
 		{
-			"data": 18,
 			"name": "minecraft:mangrove_propagule",
 			"states": [
 				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 2
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 2
-				}
-			]
-		},
-		{
-			"data": 19,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 2
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 3
-				}
-			]
-		},
-		{
-			"data": 20,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 2
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 4
-				}
-			]
-		},
-		{
-			"data": 21,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 2
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 5
-				}
-			]
-		},
-		{
-			"data": 22,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 2
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 6
-				}
-			]
-		},
-		{
-			"data": 23,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 2
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 7
-				}
-			]
-		},
-		{
-			"data": 24,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 3
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 0
-				}
-			]
-		},
-		{
-			"data": 25,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 3
-				},
-				{
-					"name": "growth",
-					"type": "int",
+					"name": "hanging",
+					"type": "byte",
 					"value": 1
-				}
-			]
-		},
-		{
-			"data": 26,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 3
 				},
 				{
-					"name": "growth",
+					"name": "propagule_stage",
 					"type": "int",
 					"value": 2
 				}
 			]
 		},
 		{
-			"data": 27,
 			"name": "minecraft:mangrove_propagule",
 			"states": [
 				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 3
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 3
-				}
-			]
-		},
-		{
-			"data": 28,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 3
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 4
-				}
-			]
-		},
-		{
-			"data": 29,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 3
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 5
-				}
-			]
-		},
-		{
-			"data": 30,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 3
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 6
-				}
-			]
-		},
-		{
-			"data": 31,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 3
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 7
-				}
-			]
-		},
-		{
-			"data": 32,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 4
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 0
-				}
-			]
-		},
-		{
-			"data": 33,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 4
-				},
-				{
-					"name": "growth",
-					"type": "int",
+					"name": "hanging",
+					"type": "byte",
 					"value": 1
-				}
-			]
-		},
-		{
-			"data": 34,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 4
 				},
 				{
-					"name": "growth",
-					"type": "int",
-					"value": 2
-				}
-			]
-		},
-		{
-			"data": 35,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 4
-				},
-				{
-					"name": "growth",
+					"name": "propagule_stage",
 					"type": "int",
 					"value": 3
 				}
 			]
 		},
 		{
-			"data": 36,
 			"name": "minecraft:mangrove_propagule",
 			"states": [
 				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 4
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 4
-				}
-			]
-		},
-		{
-			"data": 37,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 4
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 5
-				}
-			]
-		},
-		{
-			"data": 38,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 4
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 6
-				}
-			]
-		},
-		{
-			"data": 39,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 4
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 7
-				}
-			]
-		},
-		{
-			"data": 40,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 5
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 0
-				}
-			]
-		},
-		{
-			"data": 41,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 5
-				},
-				{
-					"name": "growth",
-					"type": "int",
+					"name": "hanging",
+					"type": "byte",
 					"value": 1
-				}
-			]
-		},
-		{
-			"data": 42,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 5
 				},
 				{
-					"name": "growth",
-					"type": "int",
-					"value": 2
-				}
-			]
-		},
-		{
-			"data": 43,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 5
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 3
-				}
-			]
-		},
-		{
-			"data": 44,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 5
-				},
-				{
-					"name": "growth",
+					"name": "propagule_stage",
 					"type": "int",
 					"value": 4
-				}
-			]
-		},
-		{
-			"data": 45,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 5
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 5
-				}
-			]
-		},
-		{
-			"data": 46,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 5
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 6
-				}
-			]
-		},
-		{
-			"data": 47,
-			"name": "minecraft:mangrove_propagule",
-			"states": [
-				{
-					"name": "facing_direction",
-					"type": "int",
-					"value": 5
-				},
-				{
-					"name": "growth",
-					"type": "int",
-					"value": 7
 				}
 			]
 		},

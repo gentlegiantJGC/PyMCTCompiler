@@ -5,15 +5,9 @@
             "options": "universal_minecraft:mangrove_propagule"
         },
         {
-            "function": "new_properties",
-            "options": {
-                "hanging": "\"false\""
-            }
-        },
-        {
             "function": "map_properties",
             "options": {
-                "growth": {
+                "propagule_stage": {
                     "0": [
                         {
                             "function": "new_properties",
@@ -53,28 +47,22 @@
                                 "age": "\"4\""
                             }
                         }
-                    ],
-                    "5": [
+                    ]
+                },
+                "hanging": {
+                    "0b": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "age": "\"5\""
+                                "hanging": "\"false\""
                             }
                         }
                     ],
-                    "6": [
+                    "1b": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "age": "\"6\""
-                            }
-                        }
-                    ],
-                    "7": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "age": "\"7\""
+                                "hanging": "\"true\""
                             }
                         }
                     ]
@@ -91,20 +79,12 @@
             {
                 "function": "map_properties",
                 "options": {
-                    "hanging": {
-                        "\"false\"": [
-                            {
-                                "function": "new_block",
-                                "options": "minecraft:mangrove_propagule"
-                            }
-                        ]
-                    },
                     "age": {
                         "\"0\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growth": "0"
+                                    "propagule_stage": "0"
                                 }
                             }
                         ],
@@ -112,7 +92,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growth": "1"
+                                    "propagule_stage": "1"
                                 }
                             }
                         ],
@@ -120,7 +100,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growth": "2"
+                                    "propagule_stage": "2"
                                 }
                             }
                         ],
@@ -128,7 +108,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growth": "3"
+                                    "propagule_stage": "3"
                                 }
                             }
                         ],
@@ -136,31 +116,25 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growth": "4"
+                                    "propagule_stage": "4"
                                 }
                             }
-                        ],
-                        "\"5\"": [
+                        ]
+                    },
+                    "hanging": {
+                        "\"false\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growth": "5"
+                                    "hanging": "0b"
                                 }
                             }
                         ],
-                        "\"6\"": [
+                        "\"true\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "growth": "6"
-                                }
-                            }
-                        ],
-                        "\"7\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "growth": "7"
+                                    "hanging": "1b"
                                 }
                             }
                         ]
