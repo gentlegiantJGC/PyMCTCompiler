@@ -70,7 +70,7 @@ class JavaBlockstateCompiler(BaseCompiler):
     @property
     def always_waterlogged(self) -> List[str]:
         try:
-            waterlogged = self._parent.always_waterlogged
+            waterlogged = self.parent.always_waterlogged
         except:
             waterlogged = []
         waterlogged_path = os.path.join(self._directory, '__always_waterlogged__.json')
