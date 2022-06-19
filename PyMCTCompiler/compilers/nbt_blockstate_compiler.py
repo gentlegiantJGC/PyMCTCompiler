@@ -1,12 +1,13 @@
 import os
-import traceback
 import json
+import copy
 
-import PyMCTCompiler
 from .base_compiler import BaseCompiler
 from PyMCTCompiler import primitives
 from PyMCTCompiler.disk_buffer import disk_buffer
-from PyMCTCompiler.helpers import log_to_file, load_json_file
+from PyMCTCompiler.helpers import load_json_file
+
+Undefined = object()
 
 """
 Summary
@@ -32,25 +33,6 @@ def to_snbt(nbt_type, value):
 		return f'"{value}"'
 	else:
 		raise NotImplemented
-	
-	
-def minify_blocks(blocks: dict) -> dict:
-	blocks_out = {}
-	for block in blocks['blocks']:
-		block_out = blocks_out.setdefault(block['name'], {
-			"properties": {},
-			"defaults": {},
-			"types": {}
-		})
-		for state in block['states']:
-			prop, prop_type, val = state['name'], state['type'], state['value']
-			block_out['properties'].setdefault(prop, [])
-			if val not in block_out['properties'][prop]:
-				block_out['properties'][prop].append(val)
-			block_out['defaults'].setdefault(prop, val)
-			block_out['types'].setdefault(prop, prop_type)
-
-	return blocks_out
 
 
 def find_blocks_changes(old_blocks: dict, new_blocks: dict):
@@ -61,43 +43,50 @@ def find_blocks_changes(old_blocks: dict, new_blocks: dict):
 	# default changed
 	# value added
 	# value removed
-	old_blocks = minify_blocks(old_blocks)
-	new_blocks = minify_blocks(new_blocks)
-
 	changes = {}
-	for block, block_data in old_blocks.items():
-		if block not in new_blocks:
-			changes.setdefault(block, {})['block_removed'] = True
-		else:
-			new_block_data = new_blocks[block]
-			for prop, prop_data in block_data['properties'].items():
-				if prop not in new_block_data['properties']:
-					changes.setdefault(block, {}).setdefault('properties_removed', []).append(prop)
-				else:
-					for val in prop_data:
-						if val not in new_block_data['properties'][prop]:
-							changes.setdefault(block, {}).setdefault('values_removed', {}).setdefault(prop, []).append(val)
 
-	for block, block_data in new_blocks.items():
-		if block not in old_blocks:
-			changes.setdefault(block, {})['block_added'] = block_data
+	old_keys = old_blocks.keys()
+	new_keys = new_blocks.keys()
+
+	for block in old_blocks | new_blocks:
+		if block not in new_blocks:
+			changes.setdefault(":".join(block), {})['block_removed'] = True
+
+		elif block not in old_blocks:
+			changes.setdefault(":".join(block), {})['block_added'] = new_blocks[block]
+
 		else:
-			old_block_data = old_blocks[block]
-			for prop, prop_data in block_data['properties'].items():
-				if prop not in old_block_data['properties']:
-					changes.setdefault(block, {}).setdefault('properties_added', {})[prop] = prop_data
-				else:
-					if block_data['defaults'][prop] != old_block_data['defaults'][prop]:
-						changes.setdefault(block, {}).setdefault('default_changed', {})[prop] = [old_block_data['defaults'][prop], block_data['defaults'][prop]]
-					if block_data['types'][prop] != old_block_data['types'][prop]:
-						changes.setdefault(block, {}).setdefault('type_changed', {})[prop] = [old_block_data['types'][prop], block_data['types'][prop]]
-					for val in prop_data:
-						if val not in old_block_data['properties'][prop]:
-							changes.setdefault(block, {}).setdefault('values_added', {}).setdefault(prop, []).append(val)
+			for block in old_keys & new_keys:
+				old_block_data = old_blocks[block]
+				new_block_data = new_blocks[block]
+
+				for prop in old_block_data["properties"].keys() | new_block_data["properties"].keys():
+					if prop not in new_block_data['properties']:
+						changes.setdefault(":".join(block), {}).setdefault('properties_removed', {})[prop] = old_block_data['properties'][prop]
+					elif prop not in old_block_data['properties']:
+						changes.setdefault(":".join(block), {}).setdefault('properties_added', {})[prop] = new_block_data['properties'][prop]
+					else:
+						old_prop_data = set(old_block_data['properties'][prop])
+						new_prop_data = set(new_block_data['properties'][prop])
+
+						values_removed = old_prop_data - new_prop_data
+						values_added = new_prop_data - old_prop_data
+						if values_removed:
+							changes.setdefault(":".join(block), {}).setdefault('values_removed', {})[prop] = list(values_removed)
+						if values_added:
+							changes.setdefault(":".join(block), {}).setdefault('values_added', {})[prop] = list(values_added)
+
+						if new_block_data['defaults'][prop] != old_block_data['defaults'][prop]:
+							changes.setdefault(":".join(block), {}).setdefault('default_changed', {})[prop] = [old_block_data['defaults'][prop], new_block_data['defaults'][prop]]
+
 	return changes
 
 
 class NBTBlockstateCompiler(BaseCompiler):
+	def __init__(self, *args, **kwargs):
+		super().__init__(*args, **kwargs)
+		self._block_palette = Undefined
+
 	def _save_data(self, version_type, universal_type, data, version_name, namespace, sub_name, block_base_name):
 		assert universal_type in ('block', 'entity'), f'Universal type "{universal_type}" is not known'
 		if 'specification' in data:
@@ -111,42 +100,51 @@ class NBTBlockstateCompiler(BaseCompiler):
 				print(self.version_name, namespace, block_base_name, namespace2, base_name2)
 				raise Exception(e)
 
-	def _build_blocks(self):
-		if os.path.isfile(os.path.join(self._directory, 'block_palette.json')):
-
-			# load the block list
-			block_palette: dict = load_json_file(os.path.join(self._directory, 'block_palette.json'))
-
-			old_block_palette_path = os.path.join(self._directory, '..', self._parent_name, 'block_palette.json')
-			if os.path.isfile(old_block_palette_path) and not os.path.isfile(os.path.join(self._directory, 'changes.json')):
-				with open(old_block_palette_path) as f:
-					old_block_palette = json.load(f)
-				with open(os.path.join(self._directory, 'changes.json'), 'w') as f:
-					json.dump(
-						find_blocks_changes(old_block_palette, block_palette),
-						f,
-						indent=4
-					)
-			blocks = {}
-
-			for blockstate in block_palette['blocks']:
+	@property
+	def block_palette(self) -> dict:
+		if self._block_palette is Undefined:
+			self._block_palette = {}
+			for blockstate in load_json_file(os.path.join(self._directory, 'block_palette.json'))['blocks']:
 				namespace, base_name = blockstate['name'].split(':', 1)
-				if (namespace, base_name) not in blocks:
-					blocks[(namespace, base_name)] = {
+				if (namespace, base_name) not in self._block_palette:
+					self._block_palette[(namespace, base_name)] = {
 						"properties": {prop['name']: [to_snbt(prop['type'], prop['value'])] for prop in blockstate['states']},
 						"defaults": {prop['name']: to_snbt(prop['type'], prop['value']) for prop in blockstate['states']}
 					}
 				else:
 					for prop in blockstate['states']:
 						snbt_value = to_snbt(prop['type'], prop['value'])
-						if snbt_value not in blocks[(namespace, base_name)]['properties'][prop['name']]:
-							blocks[(namespace, base_name)]['properties'][prop['name']].append(snbt_value)
+						if snbt_value not in self._block_palette[(namespace, base_name)]['properties'][prop['name']]:
+							self._block_palette[(namespace, base_name)]['properties'][prop['name']].append(snbt_value)
 
-			for (namespace, base_name), spec in blocks.items():
-				disk_buffer.add_specification(self.version_name, 'block', 'blockstate', namespace, 'vanilla', base_name, spec)
+			if self.parent is not None and self.data_version == self.parent.data_version:
+				# If the block version has not changed then carry over all blocks that are removed.
+				# In theory the removed blocks should still be valid within the same block version.
+				for key, data in (self.parent.block_palette if self.parent is not None and self.data_version == self.parent.data_version else {}).items():
+					if key in self._block_palette:
+						if  self._block_palette[key] != data:
+							print(f"Block version has not changed but block data has changed for block {key}\n{data}\n{self._block_palette[key]}")
+					else:
+						self._block_palette[key] = data
 
+		return copy.deepcopy(self._block_palette)
+
+	def _build_blocks(self):
+		block_palette = self.block_palette
+		try:
+			parent_block_palette = self.parent.block_palette
+		except AttributeError:
+			pass
 		else:
-			raise Exception(f'Could not find {self.version_name}/block_palette.json')
+			with open(os.path.join(self._directory, 'changes.json'), 'w') as f:
+				json.dump(
+					find_blocks_changes(parent_block_palette, block_palette),
+					f,
+					indent=4
+				)
+
+		for (namespace, base_name), spec in block_palette.items():
+			disk_buffer.add_specification(self.version_name, 'block', 'blockstate', namespace, 'vanilla', base_name, spec)
 
 		for (namespace, sub_name), block_data in self.blocks.items():
 			# iterate through all namespaces ('minecraft', ...) and sub_names  ('vanilla', 'chemistry'...)

@@ -1,4 +1,6 @@
-from typing import Dict, Tuple, Union, List
+from __future__ import annotations
+
+from typing import Dict, Tuple, Union, List, Optional
 import os
 import glob
 import json
@@ -9,6 +11,9 @@ from PyMCTCompiler.helpers import log_to_file
 from PyMCTCompiler.disk_buffer import disk_buffer
 from PyMCTCompiler.translation_functions.base_translation_function import FunctionList
 from PyMCTCompiler.translation_functions import NewBlock
+
+
+Unloaded = object()
 
 
 class BaseCompiler:
@@ -22,7 +27,7 @@ class BaseCompiler:
                  entity_coord_format=None,
                  platform=None,
                  version=None,
-                 data_version=None
+                 data_version: int = None
                  ):
         self._directory = directory
 
@@ -37,12 +42,21 @@ class BaseCompiler:
         self._parent_name = parent_version
         self.version_name = None
 
-        self._loaded_parent = False
-        self._parent: Union[BaseCompiler, None] = None
+        self._parent: Union[BaseCompiler, None, Unloaded] = Unloaded
 
         self._blocks: Dict[Tuple[str, str], Dict[str, List[str]]] = None
         self._entities: Dict[Tuple[str, str], Dict[str, List[str]]] = None
         self._biomes = None
+
+    @property
+    def parent(self) -> Optional[BaseCompiler]:
+        if self._parent is Unloaded:
+            self._parent = None if self._parent_name is None else getattr(PyMCTCompiler.version_compiler, self._parent_name).compiler
+        return self._parent
+
+    @property
+    def data_version(self):
+        return self._data_version
 
     @property
     def block_format(self) -> str:
@@ -82,24 +96,15 @@ class BaseCompiler:
         return getattr(self, f'_{attr}')
 
     def _load_from_parent(self, attr: str, default=None):
-        self._load_parent()
-        if self._parent is not None:
-            data = copy.deepcopy(getattr(self._parent, attr))
+        if self.parent is None:
+            data = default
+        else:
+            data = copy.deepcopy(getattr(self.parent, attr))
             if data is None:
                 data = default
-        else:
-            data = default
+
         setattr(self, f'_{attr}', data)
         return data
-
-    def _load_parent(self):
-        if not self._loaded_parent:
-            if self._parent_name is not None:
-                if hasattr(PyMCTCompiler.version_compiler, self._parent_name) and hasattr(getattr(PyMCTCompiler.version_compiler, self._parent_name), 'compiler'):
-                    self._parent = getattr(PyMCTCompiler.version_compiler, self._parent_name).compiler
-                else:
-                    log_to_file(f'Could not find version {self._parent_name}')
-            self._loaded_parent = True
 
     @property
     def _init(self) -> dict:
