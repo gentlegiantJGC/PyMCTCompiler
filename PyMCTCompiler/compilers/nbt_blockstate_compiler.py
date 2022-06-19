@@ -1,12 +1,13 @@
 import os
-import traceback
 import json
+import copy
 
-import PyMCTCompiler
 from .base_compiler import BaseCompiler
 from PyMCTCompiler import primitives
 from PyMCTCompiler.disk_buffer import disk_buffer
-from PyMCTCompiler.helpers import log_to_file, load_json_file
+from PyMCTCompiler.helpers import load_json_file
+
+Undefined = object()
 
 """
 Summary
@@ -98,6 +99,10 @@ def find_blocks_changes(old_blocks: dict, new_blocks: dict):
 
 
 class NBTBlockstateCompiler(BaseCompiler):
+	def __init__(self, *args, **kwargs):
+		super().__init__(*args, **kwargs)
+		self._block_palette = Undefined
+
 	def _save_data(self, version_type, universal_type, data, version_name, namespace, sub_name, block_base_name):
 		assert universal_type in ('block', 'entity'), f'Universal type "{universal_type}" is not known'
 		if 'specification' in data:
@@ -130,20 +135,34 @@ class NBTBlockstateCompiler(BaseCompiler):
 			blocks = {}
 
 			for blockstate in block_palette['blocks']:
+	@property
+	def block_palette(self) -> dict:
+		if self._block_palette is Undefined:
+			self._block_palette = {}
+			for blockstate in load_json_file(os.path.join(self._directory, 'block_palette.json'))['blocks']:
 				namespace, base_name = blockstate['name'].split(':', 1)
-				if (namespace, base_name) not in blocks:
-					blocks[(namespace, base_name)] = {
+				if (namespace, base_name) not in self._block_palette:
+					self._block_palette[(namespace, base_name)] = {
 						"properties": {prop['name']: [to_snbt(prop['type'], prop['value'])] for prop in blockstate['states']},
 						"defaults": {prop['name']: to_snbt(prop['type'], prop['value']) for prop in blockstate['states']}
 					}
 				else:
 					for prop in blockstate['states']:
 						snbt_value = to_snbt(prop['type'], prop['value'])
-						if snbt_value not in blocks[(namespace, base_name)]['properties'][prop['name']]:
-							blocks[(namespace, base_name)]['properties'][prop['name']].append(snbt_value)
+						if snbt_value not in self._block_palette[(namespace, base_name)]['properties'][prop['name']]:
+							self._block_palette[(namespace, base_name)]['properties'][prop['name']].append(snbt_value)
 
-			for (namespace, base_name), spec in blocks.items():
-				disk_buffer.add_specification(self.version_name, 'block', 'blockstate', namespace, 'vanilla', base_name, spec)
+			if self.parent is not None and self.data_version == self.parent.data_version:
+				# If the block version has not changed then carry over all blocks that are removed.
+				# In theory the removed blocks should still be valid within the same block version.
+				for key, data in (self.parent.block_palette if self.parent is not None and self.data_version == self.parent.data_version else {}).items():
+					if key in self._block_palette:
+						if  self._block_palette[key] != data:
+							print(f"Block version has not changed but block data has changed for block {key}\n{data}\n{self._block_palette[key]}")
+					else:
+						self._block_palette[key] = data
+
+		return copy.deepcopy(self._block_palette)
 
 		else:
 			raise Exception(f'Could not find {self.version_name}/block_palette.json')
