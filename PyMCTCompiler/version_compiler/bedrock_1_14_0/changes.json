@@ -1,36 +1,53 @@
 {
     "minecraft:kelp": {
-        "properties_removed": [
-            "age"
-        ],
+        "properties_removed": {
+            "age": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15"
+            ]
+        },
         "properties_added": {
             "kelp_age": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                13,
-                14,
-                15,
-                16,
-                17,
-                18,
-                19,
-                20,
-                21,
-                22,
-                23,
-                24,
-                25
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16",
+                "17",
+                "18",
+                "19",
+                "20",
+                "21",
+                "22",
+                "23",
+                "24",
+                "25"
             ]
         }
     },
@@ -38,29 +55,25 @@
         "block_added": {
             "properties": {
                 "facing_direction": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
                 ],
                 "honey_level": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
                 ]
             },
             "defaults": {
-                "facing_direction": 0,
-                "honey_level": 0
-            },
-            "types": {
-                "facing_direction": "int",
-                "honey_level": "int"
+                "facing_direction": "0",
+                "honey_level": "0"
             }
         }
     },
@@ -68,44 +81,38 @@
         "block_added": {
             "properties": {
                 "facing_direction": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
                 ],
                 "honey_level": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
                 ]
             },
             "defaults": {
-                "facing_direction": 0,
-                "honey_level": 0
-            },
-            "types": {
-                "facing_direction": "int",
-                "honey_level": "int"
+                "facing_direction": "0",
+                "honey_level": "0"
             }
         }
     },
     "minecraft:honey_block": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:honeycomb_block": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     }
 }

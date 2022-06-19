@@ -1,4 +1,12 @@
 {
+    "minecraft:skull": {
+        "properties_removed": {
+            "no_drop_bit": [
+                "0b",
+                "1b"
+            ]
+        }
+    },
     "minecraft:concretePowder": {
         "block_removed": true
     },
@@ -14,11 +22,6 @@
     "minecraft:seaLantern": {
         "block_removed": true
     },
-    "minecraft:skull": {
-        "properties_removed": [
-            "no_drop_bit"
-        ]
-    },
     "minecraft:stickyPistonArmCollision": {
         "block_removed": true
     },
@@ -29,90 +32,78 @@
         "block_added": {
             "properties": {
                 "color": [
-                    "white",
-                    "orange",
-                    "magenta",
-                    "light_blue",
-                    "yellow",
-                    "lime",
-                    "pink",
-                    "gray",
-                    "silver",
-                    "cyan",
-                    "purple",
-                    "blue",
-                    "brown",
-                    "green",
-                    "red",
-                    "black"
+                    "\"white\"",
+                    "\"orange\"",
+                    "\"magenta\"",
+                    "\"light_blue\"",
+                    "\"yellow\"",
+                    "\"lime\"",
+                    "\"pink\"",
+                    "\"gray\"",
+                    "\"silver\"",
+                    "\"cyan\"",
+                    "\"purple\"",
+                    "\"blue\"",
+                    "\"brown\"",
+                    "\"green\"",
+                    "\"red\"",
+                    "\"black\""
                 ]
             },
             "defaults": {
-                "color": "white"
-            },
-            "types": {
-                "color": "string"
+                "color": "\"white\""
             }
         }
     },
     "minecraft:invisible_bedrock": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:moving_block": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:piston_arm_collision": {
         "block_added": {
             "properties": {
                 "facing_direction": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
                 ]
             },
             "defaults": {
-                "facing_direction": 0
-            },
-            "types": {
-                "facing_direction": "int"
+                "facing_direction": "0"
             }
         }
     },
     "minecraft:sea_lantern": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:sticky_piston_arm_collision": {
         "block_added": {
             "properties": {
                 "facing_direction": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
                 ]
             },
             "defaults": {
-                "facing_direction": 0
-            },
-            "types": {
-                "facing_direction": "int"
+                "facing_direction": "0"
             }
         }
     },
@@ -120,33 +111,27 @@
         "block_added": {
             "properties": {
                 "attached_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "disarmed_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "powered_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "suspended_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "attached_bit": 0,
-                "disarmed_bit": 0,
-                "powered_bit": 0,
-                "suspended_bit": 0
-            },
-            "types": {
-                "attached_bit": "byte",
-                "disarmed_bit": "byte",
-                "powered_bit": "byte",
-                "suspended_bit": "byte"
+                "attached_bit": "0b",
+                "disarmed_bit": "0b",
+                "powered_bit": "0b",
+                "suspended_bit": "0b"
             }
         }
     }

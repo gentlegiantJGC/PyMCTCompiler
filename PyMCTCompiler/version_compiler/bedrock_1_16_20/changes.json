@@ -1,44 +1,57 @@
 {
-    "minecraft:beehive": {
-        "properties_removed": [
-            "facing_direction"
-        ],
-        "properties_added": {
-            "direction": [
-                0,
-                1,
-                2,
-                3
-            ]
-        }
-    },
     "minecraft:bee_nest": {
-        "properties_removed": [
-            "facing_direction"
-        ],
+        "properties_removed": {
+            "facing_direction": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ]
+        },
         "properties_added": {
             "direction": [
-                0,
-                1,
-                2,
-                3
+                "0",
+                "1",
+                "2",
+                "3"
             ]
         }
     },
     "minecraft:chain": {
         "properties_added": {
             "pillar_axis": [
-                "y",
-                "x",
-                "z"
+                "\"y\"",
+                "\"x\"",
+                "\"z\""
+            ]
+        }
+    },
+    "minecraft:beehive": {
+        "properties_removed": {
+            "facing_direction": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ]
+        },
+        "properties_added": {
+            "direction": [
+                "0",
+                "1",
+                "2",
+                "3"
             ]
         }
     },
     "minecraft:unknown": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     }
 }

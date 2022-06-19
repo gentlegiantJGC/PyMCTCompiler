@@ -3,15 +3,12 @@
         "block_added": {
             "properties": {
                 "top_slot_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "top_slot_bit": 0
-            },
-            "types": {
-                "top_slot_bit": "byte"
+                "top_slot_bit": "0b"
             }
         }
     },
@@ -19,52 +16,43 @@
         "block_added": {
             "properties": {
                 "active": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "can_summon": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "active": 0,
-                "can_summon": 0
-            },
-            "types": {
-                "active": "byte",
-                "can_summon": "byte"
+                "active": "0b",
+                "can_summon": "0b"
             }
         }
     },
     "minecraft:packed_mud": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:muddy_mangrove_roots": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:mangrove_log": {
         "block_added": {
             "properties": {
                 "pillar_axis": [
-                    "y",
-                    "x",
-                    "z"
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
                 ]
             },
             "defaults": {
-                "pillar_axis": "y"
-            },
-            "types": {
-                "pillar_axis": "string"
+                "pillar_axis": "\"y\""
             }
         }
     },
@@ -72,15 +60,12 @@
         "block_added": {
             "properties": {
                 "top_slot_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "top_slot_bit": 0
-            },
-            "types": {
-                "top_slot_bit": "byte"
+                "top_slot_bit": "0b"
             }
         }
     },
@@ -88,66 +73,55 @@
         "block_added": {
             "properties": {
                 "wall_connection_type_east": [
-                    "none",
-                    "short",
-                    "tall"
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
                 ],
                 "wall_connection_type_north": [
-                    "none",
-                    "short",
-                    "tall"
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
                 ],
                 "wall_connection_type_south": [
-                    "none",
-                    "short",
-                    "tall"
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
                 ],
                 "wall_connection_type_west": [
-                    "none",
-                    "short",
-                    "tall"
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
                 ],
                 "wall_post_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "wall_connection_type_east": "none",
-                "wall_connection_type_north": "none",
-                "wall_connection_type_south": "none",
-                "wall_connection_type_west": "none",
-                "wall_post_bit": 0
-            },
-            "types": {
-                "wall_connection_type_east": "string",
-                "wall_connection_type_north": "string",
-                "wall_connection_type_south": "string",
-                "wall_connection_type_west": "string",
-                "wall_post_bit": "byte"
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
             }
         }
     },
     "minecraft:mangrove_planks": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:mangrove_slab": {
         "block_added": {
             "properties": {
                 "top_slot_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "top_slot_bit": 0
-            },
-            "types": {
-                "top_slot_bit": "byte"
+                "top_slot_bit": "0b"
             }
         }
     },
@@ -155,16 +129,13 @@
         "block_added": {
             "properties": {
                 "pillar_axis": [
-                    "y",
-                    "x",
-                    "z"
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
                 ]
             },
             "defaults": {
-                "pillar_axis": "y"
-            },
-            "types": {
-                "pillar_axis": "string"
+                "pillar_axis": "\"y\""
             }
         }
     },
@@ -172,15 +143,12 @@
         "block_added": {
             "properties": {
                 "bloom": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "bloom": 0
-            },
-            "types": {
-                "bloom": "byte"
+                "bloom": "0b"
             }
         }
     },
@@ -188,29 +156,26 @@
         "block_added": {
             "properties": {
                 "redstone_signal": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7,
-                    8,
-                    9,
-                    10,
-                    11,
-                    12,
-                    13,
-                    14,
-                    15
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
                 ]
             },
             "defaults": {
-                "redstone_signal": 0
-            },
-            "types": {
-                "redstone_signal": "int"
+                "redstone_signal": "0"
             }
         }
     },
@@ -218,15 +183,12 @@
         "block_added": {
             "properties": {
                 "top_slot_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "top_slot_bit": 0
-            },
-            "types": {
-                "top_slot_bit": "byte"
+                "top_slot_bit": "0b"
             }
         }
     },
@@ -234,22 +196,18 @@
         "block_added": {
             "properties": {
                 "pillar_axis": [
-                    "y",
-                    "x",
-                    "z"
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
                 ],
                 "stripped_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "pillar_axis": "y",
-                "stripped_bit": 0
-            },
-            "types": {
-                "pillar_axis": "string",
-                "stripped_bit": "byte"
+                "pillar_axis": "\"y\"",
+                "stripped_bit": "0b"
             }
         }
     },
@@ -257,29 +215,26 @@
         "block_added": {
             "properties": {
                 "ground_sign_direction": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7,
-                    8,
-                    9,
-                    10,
-                    11,
-                    12,
-                    13,
-                    14,
-                    15
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
                 ]
             },
             "defaults": {
-                "ground_sign_direction": 0
-            },
-            "types": {
-                "ground_sign_direction": "int"
+                "ground_sign_direction": "0"
             }
         }
     },
@@ -287,76 +242,87 @@
         "block_added": {
             "properties": {
                 "pillar_axis": [
-                    "y",
-                    "x",
-                    "z"
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
                 ]
             },
             "defaults": {
-                "pillar_axis": "y"
+                "pillar_axis": "\"y\""
+            }
+        }
+    },
+    "minecraft:stone_block_slab": {
+        "block_added": {
+            "properties": {
+                "stone_slab_type": [
+                    "\"smooth_stone\"",
+                    "\"sandstone\"",
+                    "\"wood\"",
+                    "\"cobblestone\"",
+                    "\"brick\"",
+                    "\"stone_brick\"",
+                    "\"quartz\"",
+                    "\"nether_brick\""
+                ],
+                "top_slot_bit": [
+                    "0b",
+                    "1b"
+                ]
             },
-            "types": {
-                "pillar_axis": "string"
+            "defaults": {
+                "stone_slab_type": "\"smooth_stone\"",
+                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:client_request_placeholder_block": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:sculk_sensor": {
         "block_added": {
             "properties": {
                 "powered_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "powered_bit": 0
-            },
-            "types": {
-                "powered_bit": "byte"
+                "powered_bit": "0b"
             }
         }
     },
     "minecraft:frog_spawn": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:mangrove_trapdoor": {
         "block_added": {
             "properties": {
                 "direction": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ],
                 "open_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "upside_down_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "direction": 0,
-                "open_bit": 0,
-                "upside_down_bit": 0
-            },
-            "types": {
-                "direction": "int",
-                "open_bit": "byte",
-                "upside_down_bit": "byte"
+                "direction": "0",
+                "open_bit": "0b",
+                "upside_down_bit": "0b"
             }
         }
     },
@@ -364,23 +330,19 @@
         "block_added": {
             "properties": {
                 "upside_down_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "weirdo_direction": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ]
             },
             "defaults": {
-                "upside_down_bit": 0,
-                "weirdo_direction": 0
-            },
-            "types": {
-                "upside_down_bit": "byte",
-                "weirdo_direction": "int"
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
             }
         }
     },
@@ -388,29 +350,24 @@
         "block_added": {
             "properties": {
                 "direction": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ],
                 "in_wall_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "open_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "direction": 0,
-                "in_wall_bit": 0,
-                "open_bit": 0
-            },
-            "types": {
-                "direction": "int",
-                "in_wall_bit": "byte",
-                "open_bit": "byte"
+                "direction": "0",
+                "in_wall_bit": "0b",
+                "open_bit": "0b"
             }
         }
     },
@@ -418,19 +375,16 @@
         "block_added": {
             "properties": {
                 "facing_direction": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
                 ]
             },
             "defaults": {
-                "facing_direction": 0
-            },
-            "types": {
-                "facing_direction": "int"
+                "facing_direction": "0"
             }
         }
     },
@@ -438,73 +392,130 @@
         "block_added": {
             "properties": {
                 "upside_down_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "weirdo_direction": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ]
             },
             "defaults": {
-                "upside_down_bit": 0,
-                "weirdo_direction": 0
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            }
+        }
+    },
+    "minecraft:stone_block_slab2": {
+        "block_added": {
+            "properties": {
+                "stone_slab_type_2": [
+                    "\"red_sandstone\"",
+                    "\"purpur\"",
+                    "\"prismarine_rough\"",
+                    "\"prismarine_dark\"",
+                    "\"prismarine_brick\"",
+                    "\"mossy_cobblestone\"",
+                    "\"smooth_sandstone\"",
+                    "\"red_nether_brick\""
+                ],
+                "top_slot_bit": [
+                    "0b",
+                    "1b"
+                ]
             },
-            "types": {
-                "upside_down_bit": "byte",
-                "weirdo_direction": "int"
+            "defaults": {
+                "stone_slab_type_2": "\"red_sandstone\"",
+                "top_slot_bit": "0b"
+            }
+        }
+    },
+    "minecraft:stone_block_slab3": {
+        "block_added": {
+            "properties": {
+                "stone_slab_type_3": [
+                    "\"end_stone_brick\"",
+                    "\"smooth_red_sandstone\"",
+                    "\"polished_andesite\"",
+                    "\"andesite\"",
+                    "\"diorite\"",
+                    "\"polished_diorite\"",
+                    "\"granite\"",
+                    "\"polished_granite\""
+                ],
+                "top_slot_bit": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "stone_slab_type_3": "\"end_stone_brick\"",
+                "top_slot_bit": "0b"
+            }
+        }
+    },
+    "minecraft:stone_block_slab4": {
+        "block_added": {
+            "properties": {
+                "stone_slab_type_4": [
+                    "\"mossy_stone_brick\"",
+                    "\"smooth_quartz\"",
+                    "\"stone\"",
+                    "\"cut_sandstone\"",
+                    "\"cut_red_sandstone\""
+                ],
+                "top_slot_bit": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "stone_slab_type_4": "\"mossy_stone_brick\"",
+                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:reinforced_deepslate": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:mangrove_roots": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:mangrove_door": {
         "block_added": {
             "properties": {
                 "direction": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ],
                 "door_hinge_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "open_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "upper_block_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "direction": 0,
-                "door_hinge_bit": 0,
-                "open_bit": 0,
-                "upper_block_bit": 0
-            },
-            "types": {
-                "direction": "int",
-                "door_hinge_bit": "byte",
-                "open_bit": "byte",
-                "upper_block_bit": "byte"
+                "direction": "0",
+                "door_hinge_bit": "0b",
+                "open_bit": "0b",
+                "upper_block_bit": "0b"
             }
         }
     },
@@ -512,16 +523,82 @@
         "block_added": {
             "properties": {
                 "pillar_axis": [
-                    "y",
-                    "x",
-                    "z"
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
                 ]
             },
             "defaults": {
-                "pillar_axis": "y"
+                "pillar_axis": "\"y\""
+            }
+        }
+    },
+    "minecraft:double_stone_block_slab2": {
+        "block_added": {
+            "properties": {
+                "stone_slab_type_2": [
+                    "\"red_sandstone\"",
+                    "\"purpur\"",
+                    "\"prismarine_rough\"",
+                    "\"prismarine_dark\"",
+                    "\"prismarine_brick\"",
+                    "\"mossy_cobblestone\"",
+                    "\"smooth_sandstone\"",
+                    "\"red_nether_brick\""
+                ],
+                "top_slot_bit": [
+                    "0b",
+                    "1b"
+                ]
             },
-            "types": {
-                "pillar_axis": "string"
+            "defaults": {
+                "stone_slab_type_2": "\"red_sandstone\"",
+                "top_slot_bit": "0b"
+            }
+        }
+    },
+    "minecraft:double_stone_block_slab3": {
+        "block_added": {
+            "properties": {
+                "stone_slab_type_3": [
+                    "\"end_stone_brick\"",
+                    "\"smooth_red_sandstone\"",
+                    "\"polished_andesite\"",
+                    "\"andesite\"",
+                    "\"diorite\"",
+                    "\"polished_diorite\"",
+                    "\"granite\"",
+                    "\"polished_granite\""
+                ],
+                "top_slot_bit": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "stone_slab_type_3": "\"end_stone_brick\"",
+                "top_slot_bit": "0b"
+            }
+        }
+    },
+    "minecraft:double_stone_block_slab4": {
+        "block_added": {
+            "properties": {
+                "stone_slab_type_4": [
+                    "\"mossy_stone_brick\"",
+                    "\"smooth_quartz\"",
+                    "\"stone\"",
+                    "\"cut_sandstone\"",
+                    "\"cut_red_sandstone\""
+                ],
+                "top_slot_bit": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "stone_slab_type_4": "\"mossy_stone_brick\"",
+                "top_slot_bit": "0b"
             }
         }
     },
@@ -529,117 +606,122 @@
         "block_added": {
             "properties": {
                 "pillar_axis": [
-                    "y",
-                    "x",
-                    "z"
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
                 ]
             },
             "defaults": {
-                "pillar_axis": "y"
+                "pillar_axis": "\"y\""
+            }
+        }
+    },
+    "minecraft:double_stone_block_slab": {
+        "block_added": {
+            "properties": {
+                "stone_slab_type": [
+                    "\"smooth_stone\"",
+                    "\"sandstone\"",
+                    "\"wood\"",
+                    "\"cobblestone\"",
+                    "\"brick\"",
+                    "\"stone_brick\"",
+                    "\"quartz\"",
+                    "\"nether_brick\""
+                ],
+                "top_slot_bit": [
+                    "0b",
+                    "1b"
+                ]
             },
-            "types": {
-                "pillar_axis": "string"
+            "defaults": {
+                "stone_slab_type": "\"smooth_stone\"",
+                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:mangrove_fence": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:mangrove_leaves": {
         "block_added": {
             "properties": {
                 "persistent_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "update_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "persistent_bit": 0,
-                "update_bit": 0
-            },
-            "types": {
-                "persistent_bit": "byte",
-                "update_bit": "byte"
+                "persistent_bit": "0b",
+                "update_bit": "0b"
             }
         }
     },
     "minecraft:mud": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:mud_bricks": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:mangrove_propagule": {
         "block_added": {
             "properties": {
                 "hanging": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "propagule_stage": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4"
                 ]
             },
             "defaults": {
-                "hanging": 0,
-                "propagule_stage": 0
-            },
-            "types": {
-                "hanging": "byte",
-                "propagule_stage": "int"
+                "hanging": "0b",
+                "propagule_stage": "0"
             }
         }
     },
     "minecraft:sculk": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:mangrove_button": {
         "block_added": {
             "properties": {
                 "button_pressed_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "facing_direction": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
                 ]
             },
             "defaults": {
-                "button_pressed_bit": 0,
-                "facing_direction": 0
-            },
-            "types": {
-                "button_pressed_bit": "byte",
-                "facing_direction": "int"
+                "button_pressed_bit": "0b",
+                "facing_direction": "0"
             }
         }
     },
@@ -647,77 +729,74 @@
         "block_added": {
             "properties": {
                 "multi_face_direction_bits": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7,
-                    8,
-                    9,
-                    10,
-                    11,
-                    12,
-                    13,
-                    14,
-                    15,
-                    16,
-                    17,
-                    18,
-                    19,
-                    20,
-                    21,
-                    22,
-                    23,
-                    24,
-                    25,
-                    26,
-                    27,
-                    28,
-                    29,
-                    30,
-                    31,
-                    32,
-                    33,
-                    34,
-                    35,
-                    36,
-                    37,
-                    38,
-                    39,
-                    40,
-                    41,
-                    42,
-                    43,
-                    44,
-                    45,
-                    46,
-                    47,
-                    48,
-                    49,
-                    50,
-                    51,
-                    52,
-                    53,
-                    54,
-                    55,
-                    56,
-                    57,
-                    58,
-                    59,
-                    60,
-                    61,
-                    62,
-                    63
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "32",
+                    "33",
+                    "34",
+                    "35",
+                    "36",
+                    "37",
+                    "38",
+                    "39",
+                    "40",
+                    "41",
+                    "42",
+                    "43",
+                    "44",
+                    "45",
+                    "46",
+                    "47",
+                    "48",
+                    "49",
+                    "50",
+                    "51",
+                    "52",
+                    "53",
+                    "54",
+                    "55",
+                    "56",
+                    "57",
+                    "58",
+                    "59",
+                    "60",
+                    "61",
+                    "62",
+                    "63"
                 ]
             },
             "defaults": {
-                "multi_face_direction_bits": 0
-            },
-            "types": {
-                "multi_face_direction_bits": "int"
+                "multi_face_direction_bits": "0"
             }
         }
     },
@@ -725,16 +804,13 @@
         "block_added": {
             "properties": {
                 "pillar_axis": [
-                    "y",
-                    "x",
-                    "z"
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
                 ]
             },
             "defaults": {
-                "pillar_axis": "y"
-            },
-            "types": {
-                "pillar_axis": "string"
+                "pillar_axis": "\"y\""
             }
         }
     }

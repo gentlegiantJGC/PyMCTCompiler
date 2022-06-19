@@ -1,17 +1,76 @@
 {
+    "minecraft:pumpkin_stem": {
+        "properties_added": {
+            "facing_direction": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ]
+        }
+    },
+    "minecraft:cobblestone_wall": {
+        "properties_added": {
+            "wall_post_bit": [
+                "0b",
+                "1b"
+            ],
+            "wall_connection_type_south": [
+                "\"none\"",
+                "\"short\"",
+                "\"tall\""
+            ],
+            "wall_connection_type_north": [
+                "\"none\"",
+                "\"short\"",
+                "\"tall\""
+            ],
+            "wall_connection_type_east": [
+                "\"none\"",
+                "\"short\"",
+                "\"tall\""
+            ],
+            "wall_connection_type_west": [
+                "\"none\"",
+                "\"short\"",
+                "\"tall\""
+            ]
+        }
+    },
+    "minecraft:melon_stem": {
+        "properties_added": {
+            "facing_direction": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ]
+        }
+    },
+    "minecraft:jigsaw": {
+        "properties_added": {
+            "rotation": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
+        }
+    },
     "minecraft:crimson_double_slab": {
         "block_added": {
             "properties": {
                 "top_slot_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "top_slot_bit": 0
-            },
-            "types": {
-                "top_slot_bit": "byte"
+                "top_slot_bit": "0b"
             }
         }
     },
@@ -19,43 +78,36 @@
         "block_added": {
             "properties": {
                 "wall_connection_type_east": [
-                    "none",
-                    "short",
-                    "tall"
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
                 ],
                 "wall_connection_type_north": [
-                    "none",
-                    "short",
-                    "tall"
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
                 ],
                 "wall_connection_type_south": [
-                    "none",
-                    "short",
-                    "tall"
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
                 ],
                 "wall_connection_type_west": [
-                    "none",
-                    "short",
-                    "tall"
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
                 ],
                 "wall_post_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "wall_connection_type_east": "none",
-                "wall_connection_type_north": "none",
-                "wall_connection_type_south": "none",
-                "wall_connection_type_west": "none",
-                "wall_post_bit": 0
-            },
-            "types": {
-                "wall_connection_type_east": "string",
-                "wall_connection_type_north": "string",
-                "wall_connection_type_south": "string",
-                "wall_connection_type_west": "string",
-                "wall_post_bit": "byte"
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
             }
         }
     },
@@ -63,39 +115,36 @@
         "block_added": {
             "properties": {
                 "twisting_vines_age": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7,
-                    8,
-                    9,
-                    10,
-                    11,
-                    12,
-                    13,
-                    14,
-                    15,
-                    16,
-                    17,
-                    18,
-                    19,
-                    20,
-                    21,
-                    22,
-                    23,
-                    24,
-                    25
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25"
                 ]
             },
             "defaults": {
-                "twisting_vines_age": 0
-            },
-            "types": {
-                "twisting_vines_age": "int"
+                "twisting_vines_age": "0"
             }
         }
     },
@@ -103,15 +152,12 @@
         "block_added": {
             "properties": {
                 "top_slot_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "top_slot_bit": 0
-            },
-            "types": {
-                "top_slot_bit": "byte"
+                "top_slot_bit": "0b"
             }
         }
     },
@@ -119,35 +165,29 @@
         "block_added": {
             "properties": {
                 "direction": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ],
                 "door_hinge_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "open_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "upper_block_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "direction": 0,
-                "door_hinge_bit": 0,
-                "open_bit": 0,
-                "upper_block_bit": 0
-            },
-            "types": {
-                "direction": "int",
-                "door_hinge_bit": "byte",
-                "open_bit": "byte",
-                "upper_block_bit": "byte"
+                "direction": "0",
+                "door_hinge_bit": "0b",
+                "open_bit": "0b",
+                "upper_block_bit": "0b"
             }
         }
     },
@@ -155,18 +195,15 @@
         "block_added": {
             "properties": {
                 "respawn_anchor_charge": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4"
                 ]
             },
             "defaults": {
-                "respawn_anchor_charge": 0
-            },
-            "types": {
-                "respawn_anchor_charge": "int"
+                "respawn_anchor_charge": "0"
             }
         }
     },
@@ -174,25 +211,21 @@
         "block_added": {
             "properties": {
                 "button_pressed_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "facing_direction": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
                 ]
             },
             "defaults": {
-                "button_pressed_bit": 0,
-                "facing_direction": 0
-            },
-            "types": {
-                "button_pressed_bit": "byte",
-                "facing_direction": "int"
+                "button_pressed_bit": "0b",
+                "facing_direction": "0"
             }
         }
     },
@@ -200,24 +233,20 @@
         "block_added": {
             "properties": {
                 "deprecated": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ],
                 "pillar_axis": [
-                    "y",
-                    "x",
-                    "z"
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
                 ]
             },
             "defaults": {
-                "deprecated": 0,
-                "pillar_axis": "y"
-            },
-            "types": {
-                "deprecated": "int",
-                "pillar_axis": "string"
+                "deprecated": "0",
+                "pillar_axis": "\"y\""
             }
         }
     },
@@ -225,23 +254,19 @@
         "block_added": {
             "properties": {
                 "direction": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ],
                 "extinguished": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "direction": 0,
-                "extinguished": 0
-            },
-            "types": {
-                "direction": "int",
-                "extinguished": "byte"
+                "direction": "0",
+                "extinguished": "0b"
             }
         }
     },
@@ -249,29 +274,26 @@
         "block_added": {
             "properties": {
                 "ground_sign_direction": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7,
-                    8,
-                    9,
-                    10,
-                    11,
-                    12,
-                    13,
-                    14,
-                    15
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
                 ]
             },
             "defaults": {
-                "ground_sign_direction": 0
-            },
-            "types": {
-                "ground_sign_direction": "int"
+                "ground_sign_direction": "0"
             }
         }
     },
@@ -279,50 +301,42 @@
         "block_added": {
             "properties": {
                 "facing_direction": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
                 ]
             },
             "defaults": {
-                "facing_direction": 0
-            },
-            "types": {
-                "facing_direction": "int"
+                "facing_direction": "0"
             }
         }
     },
     "minecraft:warped_nylium": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:gilded_blackstone": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:basalt": {
         "block_added": {
             "properties": {
                 "pillar_axis": [
-                    "y",
-                    "x",
-                    "z"
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
                 ]
             },
             "defaults": {
-                "pillar_axis": "y"
-            },
-            "types": {
-                "pillar_axis": "string"
+                "pillar_axis": "\"y\""
             }
         }
     },
@@ -330,49 +344,41 @@
         "block_added": {
             "properties": {
                 "button_pressed_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "facing_direction": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
                 ]
             },
             "defaults": {
-                "button_pressed_bit": 0,
-                "facing_direction": 0
-            },
-            "types": {
-                "button_pressed_bit": "byte",
-                "facing_direction": "int"
+                "button_pressed_bit": "0b",
+                "facing_direction": "0"
             }
         }
     },
     "minecraft:crimson_planks": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:crimson_stem": {
         "block_added": {
             "properties": {
                 "pillar_axis": [
-                    "y",
-                    "x",
-                    "z"
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
                 ]
             },
             "defaults": {
-                "pillar_axis": "y"
-            },
-            "types": {
-                "pillar_axis": "string"
+                "pillar_axis": "\"y\""
             }
         }
     },
@@ -380,116 +386,80 @@
         "block_added": {
             "properties": {
                 "weeping_vines_age": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7,
-                    8,
-                    9,
-                    10,
-                    11,
-                    12,
-                    13,
-                    14,
-                    15,
-                    16,
-                    17,
-                    18,
-                    19,
-                    20,
-                    21,
-                    22,
-                    23,
-                    24,
-                    25
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25"
                 ]
             },
             "defaults": {
-                "weeping_vines_age": 0
-            },
-            "types": {
-                "weeping_vines_age": "int"
+                "weeping_vines_age": "0"
             }
-        }
-    },
-    "minecraft:pumpkin_stem": {
-        "properties_added": {
-            "facing_direction": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5
-            ]
-        }
-    },
-    "minecraft:melon_stem": {
-        "properties_added": {
-            "facing_direction": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5
-            ]
         }
     },
     "minecraft:warped_trapdoor": {
         "block_added": {
             "properties": {
                 "direction": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ],
                 "open_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "upside_down_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "direction": 0,
-                "open_bit": 0,
-                "upside_down_bit": 0
-            },
-            "types": {
-                "direction": "int",
-                "open_bit": "byte",
-                "upside_down_bit": "byte"
+                "direction": "0",
+                "open_bit": "0b",
+                "upside_down_bit": "0b"
             }
         }
     },
     "minecraft:nether_gold_ore": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:polished_blackstone_slab": {
         "block_added": {
             "properties": {
                 "top_slot_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "top_slot_bit": 0
-            },
-            "types": {
-                "top_slot_bit": "byte"
+                "top_slot_bit": "0b"
             }
         }
     },
@@ -497,218 +467,160 @@
         "block_added": {
             "properties": {
                 "top_slot_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "top_slot_bit": 0
-            },
-            "types": {
-                "top_slot_bit": "byte"
+                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:lodestone": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:soul_torch": {
         "block_added": {
             "properties": {
                 "torch_facing_direction": [
-                    "unknown",
-                    "west",
-                    "east",
-                    "north",
-                    "south",
-                    "top"
+                    "\"unknown\"",
+                    "\"west\"",
+                    "\"east\"",
+                    "\"north\"",
+                    "\"south\"",
+                    "\"top\""
                 ]
             },
             "defaults": {
-                "torch_facing_direction": "unknown"
-            },
-            "types": {
-                "torch_facing_direction": "string"
+                "torch_facing_direction": "\"unknown\""
             }
         }
     },
     "minecraft:warped_roots": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
-        }
-    },
-    "minecraft:cobblestone_wall": {
-        "properties_added": {
-            "wall_connection_type_east": [
-                "none",
-                "short",
-                "tall"
-            ],
-            "wall_connection_type_north": [
-                "none",
-                "short",
-                "tall"
-            ],
-            "wall_connection_type_south": [
-                "none",
-                "short",
-                "tall"
-            ],
-            "wall_connection_type_west": [
-                "none",
-                "short",
-                "tall"
-            ],
-            "wall_post_bit": [
-                0,
-                1
-            ]
+            "defaults": {}
         }
     },
     "minecraft:crimson_stairs": {
         "block_added": {
             "properties": {
                 "upside_down_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "weirdo_direction": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ]
             },
             "defaults": {
-                "upside_down_bit": 0,
-                "weirdo_direction": 0
-            },
-            "types": {
-                "upside_down_bit": "byte",
-                "weirdo_direction": "int"
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
             }
         }
     },
     "minecraft:crimson_roots": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:warped_planks": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:chain": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:allow": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:deny": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:border_block": {
         "block_added": {
             "properties": {
                 "wall_connection_type_east": [
-                    "none",
-                    "short",
-                    "tall"
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
                 ],
                 "wall_connection_type_north": [
-                    "none",
-                    "short",
-                    "tall"
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
                 ],
                 "wall_connection_type_south": [
-                    "none",
-                    "short",
-                    "tall"
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
                 ],
                 "wall_connection_type_west": [
-                    "none",
-                    "short",
-                    "tall"
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
                 ],
                 "wall_post_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "wall_connection_type_east": "none",
-                "wall_connection_type_north": "none",
-                "wall_connection_type_south": "none",
-                "wall_connection_type_west": "none",
-                "wall_post_bit": 0
-            },
-            "types": {
-                "wall_connection_type_east": "string",
-                "wall_connection_type_north": "string",
-                "wall_connection_type_south": "string",
-                "wall_connection_type_west": "string",
-                "wall_post_bit": "byte"
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
             }
         }
     },
     "minecraft:crimson_nylium": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:chiseled_nether_bricks": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:blackstone_stairs": {
         "block_added": {
             "properties": {
                 "upside_down_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "weirdo_direction": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ]
             },
             "defaults": {
-                "upside_down_bit": 0,
-                "weirdo_direction": 0
-            },
-            "types": {
-                "upside_down_bit": "byte",
-                "weirdo_direction": "int"
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
             }
         }
     },
@@ -716,52 +628,43 @@
         "block_added": {
             "properties": {
                 "direction": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ],
                 "in_wall_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "open_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "direction": 0,
-                "in_wall_bit": 0,
-                "open_bit": 0
-            },
-            "types": {
-                "direction": "int",
-                "in_wall_bit": "byte",
-                "open_bit": "byte"
+                "direction": "0",
+                "in_wall_bit": "0b",
+                "open_bit": "0b"
             }
         }
     },
     "minecraft:nether_sprouts": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:polished_blackstone_brick_double_slab": {
         "block_added": {
             "properties": {
                 "top_slot_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "top_slot_bit": 0
-            },
-            "types": {
-                "top_slot_bit": "byte"
+                "top_slot_bit": "0b"
             }
         }
     },
@@ -769,111 +672,95 @@
         "block_added": {
             "properties": {
                 "redstone_signal": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7,
-                    8,
-                    9,
-                    10,
-                    11,
-                    12,
-                    13,
-                    14,
-                    15
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
                 ]
             },
             "defaults": {
-                "redstone_signal": 0
-            },
-            "types": {
-                "redstone_signal": "int"
+                "redstone_signal": "0"
             }
         }
     },
     "minecraft:cracked_polished_blackstone_bricks": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:polished_blackstone_bricks": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:warped_door": {
         "block_added": {
             "properties": {
                 "direction": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ],
                 "door_hinge_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "open_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "upper_block_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "direction": 0,
-                "door_hinge_bit": 0,
-                "open_bit": 0,
-                "upper_block_bit": 0
-            },
-            "types": {
-                "direction": "int",
-                "door_hinge_bit": "byte",
-                "open_bit": "byte",
-                "upper_block_bit": "byte"
+                "direction": "0",
+                "door_hinge_bit": "0b",
+                "open_bit": "0b",
+                "upper_block_bit": "0b"
             }
         }
     },
     "minecraft:shroomlight": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:stripped_crimson_hyphae": {
         "block_added": {
             "properties": {
                 "deprecated": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ],
                 "pillar_axis": [
-                    "y",
-                    "x",
-                    "z"
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
                 ]
             },
             "defaults": {
-                "deprecated": 0,
-                "pillar_axis": "y"
-            },
-            "types": {
-                "deprecated": "int",
-                "pillar_axis": "string"
+                "deprecated": "0",
+                "pillar_axis": "\"y\""
             }
         }
     },
@@ -881,25 +768,21 @@
         "block_added": {
             "properties": {
                 "button_pressed_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "facing_direction": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
                 ]
             },
             "defaults": {
-                "button_pressed_bit": 0,
-                "facing_direction": 0
-            },
-            "types": {
-                "button_pressed_bit": "byte",
-                "facing_direction": "int"
+                "button_pressed_bit": "0b",
+                "facing_direction": "0"
             }
         }
     },
@@ -907,29 +790,26 @@
         "block_added": {
             "properties": {
                 "age": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7,
-                    8,
-                    9,
-                    10,
-                    11,
-                    12,
-                    13,
-                    14,
-                    15
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
                 ]
             },
             "defaults": {
-                "age": 0
-            },
-            "types": {
-                "age": "int"
+                "age": "0"
             }
         }
     },
@@ -937,95 +817,71 @@
         "block_added": {
             "properties": {
                 "pillar_axis": [
-                    "y",
-                    "x",
-                    "z"
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
                 ]
             },
             "defaults": {
-                "pillar_axis": "y"
-            },
-            "types": {
-                "pillar_axis": "string"
+                "pillar_axis": "\"y\""
             }
         }
     },
     "minecraft:crying_obsidian": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:stripped_warped_stem": {
         "block_added": {
             "properties": {
                 "deprecated": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ],
                 "pillar_axis": [
-                    "y",
-                    "x",
-                    "z"
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
                 ]
             },
             "defaults": {
-                "deprecated": 0,
-                "pillar_axis": "y"
-            },
-            "types": {
-                "deprecated": "int",
-                "pillar_axis": "string"
+                "deprecated": "0",
+                "pillar_axis": "\"y\""
             }
         }
     },
     "minecraft:soul_soil": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
-        }
-    },
-    "minecraft:jigsaw": {
-        "properties_added": {
-            "rotation": [
-                0,
-                1,
-                2,
-                3
-            ]
+            "defaults": {}
         }
     },
     "minecraft:warped_fence_gate": {
         "block_added": {
             "properties": {
                 "direction": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ],
                 "in_wall_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "open_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "direction": 0,
-                "in_wall_bit": 0,
-                "open_bit": 0
-            },
-            "types": {
-                "direction": "int",
-                "in_wall_bit": "byte",
-                "open_bit": "byte"
+                "direction": "0",
+                "in_wall_bit": "0b",
+                "open_bit": "0b"
             }
         }
     },
@@ -1033,69 +889,58 @@
         "block_added": {
             "properties": {
                 "pillar_axis": [
-                    "y",
-                    "x",
-                    "z"
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
                 ]
             },
             "defaults": {
-                "pillar_axis": "y"
-            },
-            "types": {
-                "pillar_axis": "string"
+                "pillar_axis": "\"y\""
             }
         }
     },
     "minecraft:warped_wart_block": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:crimson_fungus": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:warped_fungus": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:target": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:stripped_crimson_stem": {
         "block_added": {
             "properties": {
                 "deprecated": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ],
                 "pillar_axis": [
-                    "y",
-                    "x",
-                    "z"
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
                 ]
             },
             "defaults": {
-                "deprecated": 0,
-                "pillar_axis": "y"
-            },
-            "types": {
-                "deprecated": "int",
-                "pillar_axis": "string"
+                "deprecated": "0",
+                "pillar_axis": "\"y\""
             }
         }
     },
@@ -1103,29 +948,24 @@
         "block_added": {
             "properties": {
                 "direction": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ],
                 "open_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "upside_down_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "direction": 0,
-                "open_bit": 0,
-                "upside_down_bit": 0
-            },
-            "types": {
-                "direction": "int",
-                "open_bit": "byte",
-                "upside_down_bit": "byte"
+                "direction": "0",
+                "open_bit": "0b",
+                "upside_down_bit": "0b"
             }
         }
     },
@@ -1133,29 +973,26 @@
         "block_added": {
             "properties": {
                 "ground_sign_direction": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7,
-                    8,
-                    9,
-                    10,
-                    11,
-                    12,
-                    13,
-                    14,
-                    15
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
                 ]
             },
             "defaults": {
-                "ground_sign_direction": 0
-            },
-            "types": {
-                "ground_sign_direction": "int"
+                "ground_sign_direction": "0"
             }
         }
     },
@@ -1163,94 +1000,81 @@
         "block_added": {
             "properties": {
                 "facing_direction": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
                 ]
             },
             "defaults": {
-                "facing_direction": 0
-            },
-            "types": {
-                "facing_direction": "int"
+                "facing_direction": "0"
             }
         }
     },
     "minecraft:blackstone": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:warped_stairs": {
         "block_added": {
             "properties": {
                 "upside_down_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "weirdo_direction": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ]
             },
             "defaults": {
-                "upside_down_bit": 0,
-                "weirdo_direction": 0
-            },
-            "types": {
-                "upside_down_bit": "byte",
-                "weirdo_direction": "int"
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
             }
         }
     },
     "minecraft:crimson_fence": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:warped_fence": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:warped_pressure_plate": {
         "block_added": {
             "properties": {
                 "redstone_signal": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7,
-                    8,
-                    9,
-                    10,
-                    11,
-                    12,
-                    13,
-                    14,
-                    15
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
                 ]
             },
             "defaults": {
-                "redstone_signal": 0
-            },
-            "types": {
-                "redstone_signal": "int"
+                "redstone_signal": "0"
             }
         }
     },
@@ -1258,15 +1082,12 @@
         "block_added": {
             "properties": {
                 "top_slot_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "top_slot_bit": 0
-            },
-            "types": {
-                "top_slot_bit": "byte"
+                "top_slot_bit": "0b"
             }
         }
     },
@@ -1274,15 +1095,12 @@
         "block_added": {
             "properties": {
                 "top_slot_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "top_slot_bit": 0
-            },
-            "types": {
-                "top_slot_bit": "byte"
+                "top_slot_bit": "0b"
             }
         }
     },
@@ -1290,53 +1108,44 @@
         "block_added": {
             "properties": {
                 "hanging": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "hanging": 0
-            },
-            "types": {
-                "hanging": "byte"
+                "hanging": "0b"
             }
         }
     },
     "minecraft:netherite_block": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:ancient_debris": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:polished_blackstone_brick_stairs": {
         "block_added": {
             "properties": {
                 "upside_down_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "weirdo_direction": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ]
             },
             "defaults": {
-                "upside_down_bit": 0,
-                "weirdo_direction": 0
-            },
-            "types": {
-                "upside_down_bit": "byte",
-                "weirdo_direction": "int"
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
             }
         }
     },
@@ -1344,43 +1153,36 @@
         "block_added": {
             "properties": {
                 "wall_connection_type_east": [
-                    "none",
-                    "short",
-                    "tall"
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
                 ],
                 "wall_connection_type_north": [
-                    "none",
-                    "short",
-                    "tall"
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
                 ],
                 "wall_connection_type_south": [
-                    "none",
-                    "short",
-                    "tall"
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
                 ],
                 "wall_connection_type_west": [
-                    "none",
-                    "short",
-                    "tall"
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
                 ],
                 "wall_post_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "wall_connection_type_east": "none",
-                "wall_connection_type_north": "none",
-                "wall_connection_type_south": "none",
-                "wall_connection_type_west": "none",
-                "wall_post_bit": 0
-            },
-            "types": {
-                "wall_connection_type_east": "string",
-                "wall_connection_type_north": "string",
-                "wall_connection_type_south": "string",
-                "wall_connection_type_west": "string",
-                "wall_post_bit": "byte"
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
             }
         }
     },
@@ -1388,66 +1190,55 @@
         "block_added": {
             "properties": {
                 "wall_connection_type_east": [
-                    "none",
-                    "short",
-                    "tall"
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
                 ],
                 "wall_connection_type_north": [
-                    "none",
-                    "short",
-                    "tall"
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
                 ],
                 "wall_connection_type_south": [
-                    "none",
-                    "short",
-                    "tall"
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
                 ],
                 "wall_connection_type_west": [
-                    "none",
-                    "short",
-                    "tall"
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
                 ],
                 "wall_post_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "wall_connection_type_east": "none",
-                "wall_connection_type_north": "none",
-                "wall_connection_type_south": "none",
-                "wall_connection_type_west": "none",
-                "wall_post_bit": 0
-            },
-            "types": {
-                "wall_connection_type_east": "string",
-                "wall_connection_type_north": "string",
-                "wall_connection_type_south": "string",
-                "wall_connection_type_west": "string",
-                "wall_post_bit": "byte"
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
             }
         }
     },
     "minecraft:chiseled_polished_blackstone": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:blackstone_double_slab": {
         "block_added": {
             "properties": {
                 "top_slot_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "top_slot_bit": 0
-            },
-            "types": {
-                "top_slot_bit": "byte"
+                "top_slot_bit": "0b"
             }
         }
     },
@@ -1455,46 +1246,38 @@
         "block_added": {
             "properties": {
                 "top_slot_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "top_slot_bit": 0
-            },
-            "types": {
-                "top_slot_bit": "byte"
+                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:polished_blackstone": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:polished_blackstone_stairs": {
         "block_added": {
             "properties": {
                 "upside_down_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ],
                 "weirdo_direction": [
-                    0,
-                    1,
-                    2,
-                    3
+                    "0",
+                    "1",
+                    "2",
+                    "3"
                 ]
             },
             "defaults": {
-                "upside_down_bit": 0,
-                "weirdo_direction": 0
-            },
-            "types": {
-                "upside_down_bit": "byte",
-                "weirdo_direction": "int"
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
             }
         }
     },
@@ -1502,15 +1285,12 @@
         "block_added": {
             "properties": {
                 "top_slot_bit": [
-                    0,
-                    1
+                    "0b",
+                    "1b"
                 ]
             },
             "defaults": {
-                "top_slot_bit": 0
-            },
-            "types": {
-                "top_slot_bit": "byte"
+                "top_slot_bit": "0b"
             }
         }
     },
@@ -1518,29 +1298,26 @@
         "block_added": {
             "properties": {
                 "redstone_signal": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7,
-                    8,
-                    9,
-                    10,
-                    11,
-                    12,
-                    13,
-                    14,
-                    15
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
                 ]
             },
             "defaults": {
-                "redstone_signal": 0
-            },
-            "types": {
-                "redstone_signal": "int"
+                "redstone_signal": "0"
             }
         }
     },
@@ -1548,16 +1325,13 @@
         "block_added": {
             "properties": {
                 "pillar_axis": [
-                    "y",
-                    "x",
-                    "z"
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
                 ]
             },
             "defaults": {
-                "pillar_axis": "y"
-            },
-            "types": {
-                "pillar_axis": "string"
+                "pillar_axis": "\"y\""
             }
         }
     },
@@ -1565,31 +1339,26 @@
         "block_added": {
             "properties": {
                 "pillar_axis": [
-                    "y",
-                    "x",
-                    "z"
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
                 ]
             },
             "defaults": {
-                "pillar_axis": "y"
-            },
-            "types": {
-                "pillar_axis": "string"
+                "pillar_axis": "\"y\""
             }
         }
     },
     "minecraft:cracked_nether_bricks": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     },
     "minecraft:quartz_bricks": {
         "block_added": {
             "properties": {},
-            "defaults": {},
-            "types": {}
+            "defaults": {}
         }
     }
 }
