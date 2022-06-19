@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "material": "\"mud_brick\""
+                "material": "\"deepslate_tile\""
             }
         },
         {
@@ -38,7 +38,7 @@
         "universal_minecraft:slab": [
             {
                 "function": "new_block",
-                "options": "minecraft:stone_slab"
+                "options": "minecraft:stone_block_slab"
             },
             {
                 "function": "map_properties",
@@ -55,10 +55,10 @@
                                 "function": "map_properties",
                                 "options": {
                                     "material": {
-                                        "\"mud_brick\"": [
+                                        "\"deepslate_tile\"": [
                                             {
                                                 "function": "new_block",
-                                                "options": "minecraft:mud_brick_slab"
+                                                "options": "minecraft:deepslate_tile_slab"
                                             }
                                         ]
                                     }
@@ -76,10 +76,10 @@
                                 "function": "map_properties",
                                 "options": {
                                     "material": {
-                                        "\"mud_brick\"": [
+                                        "\"deepslate_tile\"": [
                                             {
                                                 "function": "new_block",
-                                                "options": "minecraft:mud_brick_slab"
+                                                "options": "minecraft:deepslate_tile_slab"
                                             }
                                         ]
                                     }

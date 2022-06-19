@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "material": "\"mangrove\""
+                "material": "\"cobbled_deepslate\""
             }
         },
         {
@@ -38,7 +38,7 @@
         "universal_minecraft:slab": [
             {
                 "function": "new_block",
-                "options": "minecraft:stone_slab"
+                "options": "minecraft:stone_block_slab"
             },
             {
                 "function": "map_properties",
@@ -55,10 +55,10 @@
                                 "function": "map_properties",
                                 "options": {
                                     "material": {
-                                        "\"mangrove\"": [
+                                        "\"cobbled_deepslate\"": [
                                             {
                                                 "function": "new_block",
-                                                "options": "minecraft:mangrove_slab"
+                                                "options": "minecraft:cobbled_deepslate_slab"
                                             }
                                         ]
                                     }
@@ -76,10 +76,10 @@
                                 "function": "map_properties",
                                 "options": {
                                     "material": {
-                                        "\"mangrove\"": [
+                                        "\"cobbled_deepslate\"": [
                                             {
                                                 "function": "new_block",
-                                                "options": "minecraft:mangrove_slab"
+                                                "options": "minecraft:cobbled_deepslate_slab"
                                             }
                                         ]
                                     }

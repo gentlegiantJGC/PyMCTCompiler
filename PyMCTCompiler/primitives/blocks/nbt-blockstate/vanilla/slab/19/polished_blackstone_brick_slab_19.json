@@ -1,0 +1,94 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:slab"
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "material": "\"polished_blackstone_brick\""
+            }
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "top_slot_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "type": "\"bottom\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "type": "\"top\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:slab": [
+            {
+                "function": "new_block",
+                "options": "minecraft:stone_block_slab"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "type": {
+                        "\"bottom\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "top_slot_bit": "0b"
+                                }
+                            },
+                            {
+                                "function": "map_properties",
+                                "options": {
+                                    "material": {
+                                        "\"polished_blackstone_brick\"": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:polished_blackstone_brick_slab"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "\"top\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "top_slot_bit": "1b"
+                                }
+                            },
+                            {
+                                "function": "map_properties",
+                                "options": {
+                                    "material": {
+                                        "\"polished_blackstone_brick\"": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:polished_blackstone_brick_slab"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

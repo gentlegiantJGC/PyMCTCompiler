@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "material": "\"mud_brick\"",
+                "material": "\"polished_deepslate\"",
                 "type": "\"double\""
             }
         }
@@ -16,7 +16,7 @@
         "universal_minecraft:slab": [
             {
                 "function": "new_block",
-                "options": "minecraft:stone_slab"
+                "options": "minecraft:stone_block_slab"
             },
             {
                 "function": "map_properties",
@@ -27,10 +27,10 @@
                                 "function": "map_properties",
                                 "options": {
                                     "material": {
-                                        "\"mud_brick\"": [
+                                        "\"polished_deepslate\"": [
                                             {
                                                 "function": "new_block",
-                                                "options": "minecraft:mud_brick_double_slab"
+                                                "options": "minecraft:polished_deepslate_double_slab"
                                             }
                                         ]
                                     }
