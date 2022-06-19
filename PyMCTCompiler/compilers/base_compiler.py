@@ -27,7 +27,7 @@ class BaseCompiler:
                  entity_coord_format=None,
                  platform=None,
                  version=None,
-                 data_version=None
+                 data_version: int = None
                  ):
         self._directory = directory
 
@@ -53,6 +53,10 @@ class BaseCompiler:
         if self._parent is Unloaded:
             self._parent = None if self._parent_name is None else getattr(PyMCTCompiler.version_compiler, self._parent_name).compiler
         return self._parent
+
+    @property
+    def data_version(self):
+        return self._data_version
 
     @property
     def block_format(self) -> str:
