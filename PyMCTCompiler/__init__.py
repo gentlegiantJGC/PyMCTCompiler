@@ -44,11 +44,11 @@ def build(compiled_dir_):
 	disk_buffer.save()
 
 	try:
-		with open(os.path.join(compiled_dir, 'build_number')) as f:
+		with open(os.path.join(compiled_dir, 'build_number.json')) as f:
 			last_build_number = int(f.read())
 	except:
 		last_build_number = -1
-	with open(os.path.join(compiled_dir, 'build_number'), 'w') as f:
+	with open(os.path.join(compiled_dir, 'build_number.json'), 'w') as f:
 		f.write(str(last_build_number+1))
 
 	log_to_file(f'\nFinished compiling all versions in {round(time.time() - t2, 2)}')
