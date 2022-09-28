@@ -80,6 +80,18 @@
 		},
 		"lodestone": {
 			"unbt": "nbt.lodestone.universal"
+		},
+		"sculk_catalyst": {
+			"unbt": "nbt.sculk_catalyst.universal"
+		},
+		"sculk_sensor": {
+			"unbt": "nbt.sculk_sensor.universal"
+		},
+		"sculk_shrieker": {
+			"unbt": "nbt.sculk_shrieker.universal"
+		},
+		"spore_blossom": {
+			"unbt": "nbt.spore_blossom.universal"
 		}
 	}
 }

@@ -81,7 +81,7 @@
 	"small_amethyst_bud": "small_amethyst_bud",
 	"small_dripleaf_block": "small_dripleaf_block",
 	"smooth_basalt": "smooth_basalt",
-	"spore_blossom": "spore_blossom",
+	"spore_blossom": [">nbt.spore_blossom.b119", "spore_blossom"],
 	"tinted_glass": "tinted_glass",
 	"tuff": "tuff",
 	"waxed_copper": "waxed_copper",

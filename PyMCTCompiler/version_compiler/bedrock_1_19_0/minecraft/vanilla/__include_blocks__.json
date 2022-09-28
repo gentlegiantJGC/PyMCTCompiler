@@ -31,9 +31,9 @@
 
 	"sculk": "sculk",
 	"sculk_vein": "sculk_vein",
-	"sculk_shrieker": "sculk_shrieker",
-	"sculk_catalyst": "sculk_catalyst",
-	"sculk_sensor": "sculk_sensor",
+	"sculk_shrieker": [">nbt.sculk_shrieker.b119", "sculk_shrieker"],
+	"sculk_catalyst": [">nbt.sculk_catalyst.b119", "sculk_catalyst"],
+	"sculk_sensor": [">nbt.sculk_sensor.b119", "sculk_sensor"],
 
 	"frog_spawn": "frog_spawn",
 	"ochre_froglight": "ochre_froglight",

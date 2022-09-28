@@ -38,7 +38,7 @@ _B116 = NBTRemapHelper(
             ("target", "string", [("utags", "compound")])
         )
     ],
-    "{final_state: \"minecraft:air\", joint: \"rollable\", name: \"minecraft:empty\", pool: \"minecraft:empty\", target: \"minecraft:empty\"}"
+    "{final_state: \"minecraft:air\", joint: \"rollable\", name: \"minecraft:empty\", target: \"minecraft:empty\", target_pool: \"minecraft:empty\"}"
 )
 
 b110 = merge(
