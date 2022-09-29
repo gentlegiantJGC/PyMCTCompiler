@@ -65,7 +65,7 @@ def check_specification_format(data: dict):
 		try:
 			amulet_nbt.from_snbt(data['snbt'])
 		except:
-			raise Exception(f'Error in snbt')
+			raise Exception(f'Error in snbt: {data["snbt"]}')
 		assert 'nbt_identifier' in data and isinstance(data['nbt_identifier'], list) and len(data['nbt_identifier']) == 2 and all(isinstance(a, str) for a in data['nbt_identifier']), 'if "snbt" is defined then "nbt_identifier" must be defined and be [namespace, base_name]'
 	else:
 		assert 'nbt_identifier' not in data, '"nbt_identifier" should only be defined if "snbt" is defined'
