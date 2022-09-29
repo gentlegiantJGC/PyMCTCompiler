@@ -1,21 +1,4 @@
 {
-    "minecraft:stripped_crimson_hyphae": {
-        "properties_removed": {
-            "deprecated": [
-                "0",
-                "1",
-                "2",
-                "3"
-            ]
-        }
-    },
-    "minecraft:cauldron": {
-        "values_added": {
-            "cauldron_liquid": [
-                "\"powder_snow\""
-            ]
-        }
-    },
     "minecraft:stripped_warped_stem": {
         "properties_removed": {
             "deprecated": [
@@ -36,7 +19,24 @@
             ]
         }
     },
+    "minecraft:cauldron": {
+        "values_added": {
+            "cauldron_liquid": [
+                "\"powder_snow\""
+            ]
+        }
+    },
     "minecraft:stripped_warped_hyphae": {
+        "properties_removed": {
+            "deprecated": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
+        }
+    },
+    "minecraft:stripped_crimson_hyphae": {
         "properties_removed": {
             "deprecated": [
                 "0",

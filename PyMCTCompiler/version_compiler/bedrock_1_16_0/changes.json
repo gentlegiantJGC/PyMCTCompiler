@@ -1,4 +1,14 @@
 {
+    "minecraft:jigsaw": {
+        "properties_added": {
+            "rotation": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
+        }
+    },
     "minecraft:pumpkin_stem": {
         "properties_added": {
             "facing_direction": [
@@ -13,6 +23,11 @@
     },
     "minecraft:cobblestone_wall": {
         "properties_added": {
+            "wall_connection_type_west": [
+                "\"none\"",
+                "\"short\"",
+                "\"tall\""
+            ],
             "wall_post_bit": [
                 "0b",
                 "1b"
@@ -31,11 +46,6 @@
                 "\"none\"",
                 "\"short\"",
                 "\"tall\""
-            ],
-            "wall_connection_type_west": [
-                "\"none\"",
-                "\"short\"",
-                "\"tall\""
             ]
         }
     },
@@ -48,16 +58,6 @@
                 "3",
                 "4",
                 "5"
-            ]
-        }
-    },
-    "minecraft:jigsaw": {
-        "properties_added": {
-            "rotation": [
-                "0",
-                "1",
-                "2",
-                "3"
             ]
         }
     },
