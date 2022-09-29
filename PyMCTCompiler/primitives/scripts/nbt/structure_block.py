@@ -77,7 +77,7 @@ universal = {
     "nbt_identifier": ["universal_minecraft", "structure_block"],
     "snbt": """{
         utags: {
-            isMovable: 1b
+            isMovable: 1b,
             metadata: "", 
             mirror: "NONE", 
             ignoreEntities: 1b, 
@@ -95,7 +95,7 @@ universal = {
             integrity: 1.0f, 
             showair: 0b, 
             name: "",
-            showboundingbox: 1b
+            showboundingbox: 1b,
             includePlayers: 0b, 
             removeBlocks: 0b,
             redstoneSaveMode: 0
