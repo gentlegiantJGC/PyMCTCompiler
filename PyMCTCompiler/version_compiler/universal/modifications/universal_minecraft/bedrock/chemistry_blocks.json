@@ -128,7 +128,8 @@
 			"defaults": {
 				"chemistry_table_type": "\"compound_creator\"",
 				"facing": "\"north\""
-			}
+			},
+			"unbt": "nbt.chemistry_table.universal"
 		},
 		"underwater_torch": {
 			"properties": {

@@ -305,7 +305,7 @@
 	"chemical_heat": "chemical_heat",
 	"colored_torch_rg": "colored_torch_rg",
 	"colored_torch_bp": "colored_torch_bp",
-	"chemistry_table": "chemistry_table",
+	"chemistry_table": [">nbt.chemistry_table.b113", "chemistry_table"],
 	"underwater_torch": "underwater_torch",
 	"hard_glass": "hard_glass",
 	"hard_stained_glass": "hard_stained_glass",

@@ -96,7 +96,7 @@
 
 	"respawn_anchor": "respawn_anchor",
 
-	"soul_campfire": "soul_campfire",
+	"soul_campfire": [">nbt.soul_campfire.b111", "soul_campfire"],
 	"gilded_blackstone": "gilded_blackstone",
 
 	"nether_gold_ore": "nether_gold_ore",

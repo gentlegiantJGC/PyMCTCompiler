@@ -27,6 +27,9 @@
 		"campfire": {
 			"unbt": "nbt.campfire.universal"
 		},
+		"soul_campfire": {
+			"unbt": "nbt.soul_campfire.universal"
+		},
 		"lectern": {
 			"unbt": "nbt.lectern.universal"
 		},
