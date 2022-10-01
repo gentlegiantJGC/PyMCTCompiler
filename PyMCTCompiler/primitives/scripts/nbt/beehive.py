@@ -6,10 +6,21 @@ universal = {
     "nbt_identifier": ["universal_minecraft", "beehive"],
     "snbt": """{
         utags: {
-            isMovable: 1b
+            isMovable: 1b,
+            ShouldSpawnBees: 1b
         }
     }"""
 }
+
+_B116 = NBTRemapHelper(
+    [
+        (
+            ("ShouldSpawnBees", "byte", []),
+            ("ShouldSpawnBees", "byte", [("utags", "compound")])
+        )
+    ],
+    "{ShouldSpawnBees: 1b}"
+)
 
 j115 = merge(
     [EmptyNBT('minecraft:beehive'), java_keep_packed],
@@ -28,5 +39,15 @@ b114 = merge(
 
 b114_nest = merge(
     [EmptyNBT(':Beehive'), bedrock_is_movable],
+    ['universal_minecraft:bee_nest']
+)
+
+b116 = merge(
+    [EmptyNBT(':Beehive'), _B116, bedrock_is_movable],
+    ['universal_minecraft:beehive']
+)
+
+b116_nest = merge(
+    [EmptyNBT(':Beehive'), _B116, bedrock_is_movable],
     ['universal_minecraft:bee_nest']
 )

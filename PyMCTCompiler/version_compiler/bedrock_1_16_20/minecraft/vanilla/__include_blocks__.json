@@ -1,6 +1,6 @@
 {
-	"beehive": "beehive_16_20",
-	"bee_nest": "bee_nest_16_20",
+	"beehive": ["beehive_16_20", ">nbt.beehive.b116"],
+    "bee_nest": ["bee_nest_16_20", ">nbt.beehive.b116_nest"],
 	"chain": "chain_16_20",
 	"unknown": "unknown"
 }
