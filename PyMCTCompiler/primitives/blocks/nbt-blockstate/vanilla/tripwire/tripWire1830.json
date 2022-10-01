@@ -1,0 +1,112 @@
+{
+    "specification": {
+        "properties": {
+            "attached_bit": [
+                "0b",
+                "1b"
+            ],
+            "disarmed_bit": [
+                "0b",
+                "1b"
+            ],
+            "powered_bit": [
+                "0b",
+                "1b"
+            ],
+            "suspended_bit": [
+                "0b",
+                "1b"
+            ]
+        },
+        "defaults": {
+            "attached_bit": "0b",
+            "disarmed_bit": "0b",
+            "powered_bit": "0b",
+            "suspended_bit": "0b"
+        }
+    },
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:tripwire"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "attached_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "attached": "\"false\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "attached": "\"true\""
+                            }
+                        }
+                    ]
+                },
+                "disarmed_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "disarmed": "\"false\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "disarmed": "\"true\""
+                            }
+                        }
+                    ]
+                },
+                "powered_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "powered": "\"false\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "powered": "\"true\""
+                            }
+                        }
+                    ]
+                },
+                "suspended_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "suspended": "\"false\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "suspended": "\"true\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {}
+}

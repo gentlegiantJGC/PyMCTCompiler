@@ -1,0 +1,9 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:sea_lantern"
+        }
+    ],
+    "from_universal": {}
+}
