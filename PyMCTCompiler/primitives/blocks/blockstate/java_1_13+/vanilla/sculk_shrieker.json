@@ -1,0 +1,58 @@
+{
+	"specification": {
+	    "properties": {
+	        "can_summon": [
+	            "\"true\"",
+	            "\"false\""
+	        ],
+	        "shrieking": [
+	            "\"true\"",
+	            "\"false\""
+	        ]
+	    },
+	    "defaults": {
+	        "can_summon": "\"false\"",
+	        "shrieking": "\"false\""
+	    }
+	},
+	"to_universal": [
+	    {
+	        "function": "new_block",
+	        "options": "universal_minecraft:sculk_shrieker"
+	    },
+	    {
+	        "function": "carry_properties",
+	        "options": {
+	            "can_summon": [
+	                "\"true\"",
+	                "\"false\""
+	            ],
+	            "shrieking": [
+	                "\"true\"",
+	                "\"false\""
+	            ]
+	        }
+	    }
+	],
+	"from_universal": {
+		"universal_minecraft:sculk_shrieker": [
+		    {
+		        "function": "new_block",
+		        "options": "minecraft:sculk_shrieker"
+		    },
+		    {
+		        "function": "carry_properties",
+		        "options": {
+		            "can_summon": [
+		                "\"true\"",
+		                "\"false\""
+		            ],
+		            "shrieking": [
+		                "\"true\"",
+		                "\"false\""
+		            ]
+		        }
+		    }
+		]
+	}
+}

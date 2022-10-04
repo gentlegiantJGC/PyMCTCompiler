@@ -1,0 +1,45 @@
+{
+	"specification": {
+	    "properties": {
+	        "bloom": [
+	            "\"true\"",
+	            "\"false\""
+	        ]
+	    },
+	    "defaults": {
+	        "bloom": "\"false\""
+	    }
+	},
+	"to_universal": [
+	    {
+	        "function": "new_block",
+	        "options": "universal_minecraft:sculk_catalyst"
+	    },
+	    {
+	        "function": "carry_properties",
+	        "options": {
+	            "bloom": [
+	                "\"true\"",
+	                "\"false\""
+	            ]
+	        }
+	    }
+	],
+	"from_universal": {
+		"universal_minecraft:sculk_catalyst": [
+		    {
+		        "function": "new_block",
+		        "options": "minecraft:sculk_catalyst"
+		    },
+		    {
+		        "function": "carry_properties",
+		        "options": {
+		            "bloom": [
+		                "\"true\"",
+		                "\"false\""
+		            ]
+		        }
+		    }
+		]
+	}
+}

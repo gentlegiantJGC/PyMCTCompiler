@@ -19,5 +19,8 @@
 	"mud_brick_slab": "mud_brick_slab",
 	"mud_brick_stairs": "mud_brick_stairs",
 	"mud_brick_wall": "mud_brick_wall_19",
-	"potted_mangrove_propagule": "potted_mangrove_propagule"
+	"potted_mangrove_propagule": "potted_mangrove_propagule",
+	"sculk_catalyst": ["sculk_catalyst", ">nbt.sculk_catalyst.j119"],
+	"sculk_sensor": ["sculk_sensor", ">nbt.sculk_sensor.j119"],
+	"sculk_shrieker": ["sculk_shrieker", ">nbt.sculk_shrieker.j119"]
 }
