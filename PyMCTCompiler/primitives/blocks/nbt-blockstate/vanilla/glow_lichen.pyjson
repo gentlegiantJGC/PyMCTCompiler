@@ -14,9 +14,9 @@
                             "options": {
                                 "down": "\"true\"" if b & 1 else "\"false\"",
                                 "up": "\"true\"" if b & 2 else "\"false\"",
-                                "north": "\"true\"" if b & 4 else "\"false\"",
-                                "south": "\"true\"" if b & 8 else "\"false\"",
-                                "west": "\"true\"" if b & 16 else "\"false\"",
+                                "south": "\"true\"" if b & 4 else "\"false\"",
+                                "west": "\"true\"" if b & 8 else "\"false\"",
+                                "north": "\"true\"" if b & 16 else "\"false\"",
                                 "east": "\"true\"" if b & 32 else "\"false\"",
                             }
                         }
@@ -39,18 +39,18 @@
                             {
                                 "function": "map_properties",
                                 "options": {
-                                    "west": {
-                                        west_state: [
+                                    "north": {
+                                        north_state: [
                                             {
                                                 "function": "map_properties",
                                                 "options": {
-                                                    "south": {
-                                                        south_state: [
+                                                    "west": {
+                                                        west_state: [
                                                             {
                                                                 "function": "map_properties",
                                                                 "options": {
-                                                                    "north": {
-                                                                        north_state: [
+                                                                    "south": {
+                                                                        south_state: [
                                                                             {
                                                                                 "function": "map_properties",
                                                                                 "options": {
@@ -75,15 +75,15 @@
                                                                                     }
                                                                                 }
                                                                             }
-                                                                        ] for north_state, data_4 in (("\"false\"", 0), ("\"true\"", 4))
+                                                                        ] for south_state, data_4 in (("\"false\"", 0), ("\"true\"", 4))
                                                                     }
                                                                 }
                                                             }
-                                                        ] for south_state, data_8 in (("\"false\"", 0), ("\"true\"", 8))
+                                                        ] for west_state, data_8 in (("\"false\"", 0), ("\"true\"", 8))
                                                     }
                                                 }
                                             }
-                                        ] for west_state, data_16 in (("\"false\"", 0), ("\"true\"", 16))
+                                        ] for north_state, data_16 in (("\"false\"", 0), ("\"true\"", 16))
                                     }
                                 }
                             }
