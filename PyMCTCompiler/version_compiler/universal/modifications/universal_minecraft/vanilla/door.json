@@ -9,7 +9,8 @@
 		"iron_door",
 		"crimson_door",
 		"warped_door",
-		"mangrove_door"
+		"mangrove_door",
+		"bamboo_door"
 	],
 	"add": {
 		"door": {
@@ -24,7 +25,8 @@
 					"\"mangrove\"",
 					"\"iron\"",
 					"\"crimson\"",
-					"\"warped\""
+					"\"warped\"",
+					"\"bamboo\""
 				],
 				"facing": [
 					"\"north\"",

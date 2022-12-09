@@ -1,11 +1,29 @@
 {
-    "minecraft:jigsaw": {
+    "minecraft:cobblestone_wall": {
         "properties_added": {
-            "rotation": [
-                "0",
-                "1",
-                "2",
-                "3"
+            "wall_connection_type_south": [
+                "\"none\"",
+                "\"short\"",
+                "\"tall\""
+            ],
+            "wall_post_bit": [
+                "0b",
+                "1b"
+            ],
+            "wall_connection_type_west": [
+                "\"none\"",
+                "\"short\"",
+                "\"tall\""
+            ],
+            "wall_connection_type_east": [
+                "\"none\"",
+                "\"short\"",
+                "\"tall\""
+            ],
+            "wall_connection_type_north": [
+                "\"none\"",
+                "\"short\"",
+                "\"tall\""
             ]
         }
     },
@@ -21,31 +39,13 @@
             ]
         }
     },
-    "minecraft:cobblestone_wall": {
+    "minecraft:jigsaw": {
         "properties_added": {
-            "wall_connection_type_west": [
-                "\"none\"",
-                "\"short\"",
-                "\"tall\""
-            ],
-            "wall_post_bit": [
-                "0b",
-                "1b"
-            ],
-            "wall_connection_type_south": [
-                "\"none\"",
-                "\"short\"",
-                "\"tall\""
-            ],
-            "wall_connection_type_north": [
-                "\"none\"",
-                "\"short\"",
-                "\"tall\""
-            ],
-            "wall_connection_type_east": [
-                "\"none\"",
-                "\"short\"",
-                "\"tall\""
+            "rotation": [
+                "0",
+                "1",
+                "2",
+                "3"
             ]
         }
     },

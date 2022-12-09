@@ -8,7 +8,8 @@
 		"dark_oak_wall_sign",
 		"crimson_wall_sign",
 		"warped_wall_sign",
-		"mangrove_wall_sign"
+		"mangrove_wall_sign",
+		"bamboo_wall_sign"
 	],
 	"add": {
 		"wall_sign": {
@@ -28,7 +29,8 @@
 					"\"dark_oak\"",
 					"\"mangrove\"",
 					"\"crimson\"",
-					"\"warped\""
+					"\"warped\"",
+					"\"bamboo\""
 				]
 			},
 			"defaults": {

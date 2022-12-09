@@ -53,7 +53,9 @@
 		"deepslate_tile_slab",
 		"deepslate_brick_slab",
 		"mangrove_slab",
-		"mud_brick_slab"
+		"mud_brick_slab",
+		"bamboo_slab",
+		"bamboo_mosaic_slab"
 	],
 	"add": {
 		"slab": {
@@ -112,7 +114,9 @@
 					"\"polished_deepslate\"",
 					"\"deepslate_tile\"",
 					"\"deepslate_brick\"",
-					"\"mud_brick\""
+					"\"mud_brick\"",
+					"\"bamboo\"",
+					"\"bamboo_mosaic\""
 				],
 				"type": [
 					"\"top\"",

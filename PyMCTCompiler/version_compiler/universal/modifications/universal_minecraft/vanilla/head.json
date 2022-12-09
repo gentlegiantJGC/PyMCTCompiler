@@ -5,7 +5,8 @@
 		"zombie_head",
 		"player_head",
 		"creeper_head",
-		"dragon_head"
+		"dragon_head",
+		"piglin_head"
 	],
 	"add": {
 		"head": {
@@ -16,7 +17,8 @@
 					"\"zombie\"",
 					"\"player\"",
 					"\"creeper\"",
-					"\"dragon\""
+					"\"dragon\"",
+					"\"piglin\""
 				],
 				"rotation": [
 					"\"0\"",

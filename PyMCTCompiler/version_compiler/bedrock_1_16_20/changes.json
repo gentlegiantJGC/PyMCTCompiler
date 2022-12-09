@@ -1,5 +1,13 @@
 {
-    "minecraft:beehive": {
+    "minecraft:bee_nest": {
+        "properties_added": {
+            "direction": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
+        },
         "properties_removed": {
             "facing_direction": [
                 "0",
@@ -8,18 +16,18 @@
                 "3",
                 "4",
                 "5"
-            ]
-        },
-        "properties_added": {
-            "direction": [
-                "0",
-                "1",
-                "2",
-                "3"
             ]
         }
     },
-    "minecraft:bee_nest": {
+    "minecraft:beehive": {
+        "properties_added": {
+            "direction": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
+        },
         "properties_removed": {
             "facing_direction": [
                 "0",
@@ -28,14 +36,6 @@
                 "3",
                 "4",
                 "5"
-            ]
-        },
-        "properties_added": {
-            "direction": [
-                "0",
-                "1",
-                "2",
-                "3"
             ]
         }
     },

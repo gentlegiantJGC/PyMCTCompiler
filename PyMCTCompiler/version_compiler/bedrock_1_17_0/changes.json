@@ -19,20 +19,10 @@
             ]
         }
     },
-    "minecraft:cauldron": {
+    "minecraft:lava_cauldron": {
         "values_added": {
             "cauldron_liquid": [
                 "\"powder_snow\""
-            ]
-        }
-    },
-    "minecraft:stripped_warped_hyphae": {
-        "properties_removed": {
-            "deprecated": [
-                "0",
-                "1",
-                "2",
-                "3"
             ]
         }
     },
@@ -46,7 +36,17 @@
             ]
         }
     },
-    "minecraft:lava_cauldron": {
+    "minecraft:stripped_warped_hyphae": {
+        "properties_removed": {
+            "deprecated": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
+        }
+    },
+    "minecraft:cauldron": {
         "values_added": {
             "cauldron_liquid": [
                 "\"powder_snow\""

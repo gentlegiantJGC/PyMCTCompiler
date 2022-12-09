@@ -9,7 +9,8 @@
 		"iron_trapdoor",
 		"crimson_trapdoor",
 		"warped_trapdoor",
-		"mangrove_trapdoor"
+		"mangrove_trapdoor",
+		"bamboo_trapdoor"
 	],
 	"add": {
 		"trapdoor": {
@@ -24,7 +25,8 @@
 					"\"mangrove\"",
 					"\"iron\"",
 					"\"crimson\"",
-					"\"warped\""
+					"\"warped\"",
+					"\"bamboo\""
 				],
 				"facing": [
 					"\"north\"",

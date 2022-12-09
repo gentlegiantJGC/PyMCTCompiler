@@ -8,7 +8,8 @@
 		"dark_oak_sign",
 		"crimson_sign",
 		"warped_sign",
-		"mangrove_sign"
+		"mangrove_sign",
+		"bamboo_sign"
 	],
 	"add": {
 		"sign": {
@@ -40,7 +41,8 @@
 					"\"dark_oak\"",
 					"\"mangrove\"",
 					"\"crimson\"",
-					"\"warped\""
+					"\"warped\"",
+					"\"bamboo\""
 				]
 			},
 			"defaults": {

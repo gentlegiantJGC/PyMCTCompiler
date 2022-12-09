@@ -10,7 +10,8 @@
 		"crimson_button",
 		"warped_button",
 		"polished_blackstone_button",
-		"mangrove_button"
+		"mangrove_button",
+		"bamboo_button"
 	],
 	"add": {
 		"button": {
@@ -26,7 +27,8 @@
 					"\"stone\"",
 					"\"crimson\"",
 					"\"warped\"",
-					"\"polished_blackstone\""
+					"\"polished_blackstone\"",
+					"\"bamboo\""
 				],
 				"face": [
 					"\"floor\"",

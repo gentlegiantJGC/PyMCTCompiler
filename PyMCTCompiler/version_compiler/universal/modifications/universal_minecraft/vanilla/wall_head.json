@@ -5,7 +5,8 @@
 		"zombie_wall_head",
 		"player_wall_head",
 		"creeper_wall_head",
-		"dragon_wall_head"
+		"dragon_wall_head",
+		"piglin_wall_head"
 	],
 	"add": {
 		"wall_head": {
@@ -16,7 +17,8 @@
 					"\"zombie\"",
 					"\"player\"",
 					"\"creeper\"",
-					"\"dragon\""
+					"\"dragon\"",
+					"\"piglin\""
 				],
 				"facing": [
 					"\"north\"",

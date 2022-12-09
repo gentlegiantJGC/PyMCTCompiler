@@ -49,7 +49,9 @@
 		"deepslate_tile_stairs",
 		"deepslate_brick_stairs",
 		"mangrove_stairs",
-		"mud_brick_stairs"
+		"mud_brick_stairs",
+		"bamboo_stairs",
+		"bamboo_mosaic_stairs"
 	],
 	"add": {
 		"stairs": {
@@ -104,7 +106,9 @@
 					"\"polished_deepslate\"",
 					"\"deepslate_tile\"",
 					"\"deepslate_brick\"",
-					"\"mud_brick\""
+					"\"mud_brick\"",
+					"\"bamboo\"",
+					"\"bamboo_mosaic\""
 				],
 				"facing": [
 					"\"north\"",
