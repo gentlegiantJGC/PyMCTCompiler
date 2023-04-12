@@ -1,64 +1,68 @@
 {
     "minecraft:allow": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:ancient_debris": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:basalt": {
         "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
             "properties": {
                 "pillar_axis": [
                     "\"y\"",
                     "\"x\"",
                     "\"z\""
                 ]
-            },
-            "defaults": {
-                "pillar_axis": "\"y\""
             }
         }
     },
     "minecraft:blackstone": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:blackstone_double_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:blackstone_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:blackstone_stairs": {
         "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
             "properties": {
                 "upside_down_bit": [
                     "0b",
@@ -70,15 +74,18 @@
                     "2",
                     "3"
                 ]
-            },
-            "defaults": {
-                "upside_down_bit": "0b",
-                "weirdo_direction": "0"
             }
         }
     },
     "minecraft:blackstone_wall": {
         "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
             "properties": {
                 "wall_connection_type_east": [
                     "\"none\"",
@@ -104,18 +111,18 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "wall_connection_type_east": "\"none\"",
-                "wall_connection_type_north": "\"none\"",
-                "wall_connection_type_south": "\"none\"",
-                "wall_connection_type_west": "\"none\"",
-                "wall_post_bit": "0b"
             }
         }
     },
     "minecraft:border_block": {
         "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
             "properties": {
                 "wall_connection_type_east": [
                     "\"none\"",
@@ -141,42 +148,35 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "wall_connection_type_east": "\"none\"",
-                "wall_connection_type_north": "\"none\"",
-                "wall_connection_type_south": "\"none\"",
-                "wall_connection_type_west": "\"none\"",
-                "wall_post_bit": "0b"
             }
         }
     },
     "minecraft:chain": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:chiseled_nether_bricks": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:chiseled_polished_blackstone": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:cobblestone_wall": {
         "properties_added": {
-            "wall_connection_type_north": [
+            "wall_connection_type_east": [
                 "\"none\"",
                 "\"short\"",
                 "\"tall\""
             ],
-            "wall_connection_type_west": [
+            "wall_connection_type_north": [
                 "\"none\"",
                 "\"short\"",
                 "\"tall\""
@@ -186,31 +186,35 @@
                 "\"short\"",
                 "\"tall\""
             ],
-            "wall_post_bit": [
-                "0b",
-                "1b"
-            ],
-            "wall_connection_type_east": [
+            "wall_connection_type_west": [
                 "\"none\"",
                 "\"short\"",
                 "\"tall\""
+            ],
+            "wall_post_bit": [
+                "0b",
+                "1b"
             ]
         }
     },
     "minecraft:cracked_nether_bricks": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:cracked_polished_blackstone_bricks": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:crimson_button": {
         "block_added": {
+            "defaults": {
+                "button_pressed_bit": "0b",
+                "facing_direction": "0"
+            },
             "properties": {
                 "button_pressed_bit": [
                     "0b",
@@ -224,15 +228,17 @@
                     "4",
                     "5"
                 ]
-            },
-            "defaults": {
-                "button_pressed_bit": "0b",
-                "facing_direction": "0"
             }
         }
     },
     "minecraft:crimson_door": {
         "block_added": {
+            "defaults": {
+                "direction": "0",
+                "door_hinge_bit": "0b",
+                "open_bit": "0b",
+                "upper_block_bit": "0b"
+            },
             "properties": {
                 "direction": [
                     "0",
@@ -252,36 +258,35 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "direction": "0",
-                "door_hinge_bit": "0b",
-                "open_bit": "0b",
-                "upper_block_bit": "0b"
             }
         }
     },
     "minecraft:crimson_double_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:crimson_fence": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:crimson_fence_gate": {
         "block_added": {
+            "defaults": {
+                "direction": "0",
+                "in_wall_bit": "0b",
+                "open_bit": "0b"
+            },
             "properties": {
                 "direction": [
                     "0",
@@ -297,48 +302,46 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "direction": "0",
-                "in_wall_bit": "0b",
-                "open_bit": "0b"
             }
         }
     },
     "minecraft:crimson_fungus": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:crimson_hyphae": {
         "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
             "properties": {
                 "pillar_axis": [
                     "\"y\"",
                     "\"x\"",
                     "\"z\""
                 ]
-            },
-            "defaults": {
-                "pillar_axis": "\"y\""
             }
         }
     },
     "minecraft:crimson_nylium": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:crimson_planks": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:crimson_pressure_plate": {
         "block_added": {
+            "defaults": {
+                "redstone_signal": "0"
+            },
             "properties": {
                 "redstone_signal": [
                     "0",
@@ -358,33 +361,34 @@
                     "14",
                     "15"
                 ]
-            },
-            "defaults": {
-                "redstone_signal": "0"
             }
         }
     },
     "minecraft:crimson_roots": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:crimson_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:crimson_stairs": {
         "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
             "properties": {
                 "upside_down_bit": [
                     "0b",
@@ -396,15 +400,14 @@
                     "2",
                     "3"
                 ]
-            },
-            "defaults": {
-                "upside_down_bit": "0b",
-                "weirdo_direction": "0"
             }
         }
     },
     "minecraft:crimson_standing_sign": {
         "block_added": {
+            "defaults": {
+                "ground_sign_direction": "0"
+            },
             "properties": {
                 "ground_sign_direction": [
                     "0",
@@ -424,28 +427,30 @@
                     "14",
                     "15"
                 ]
-            },
-            "defaults": {
-                "ground_sign_direction": "0"
             }
         }
     },
     "minecraft:crimson_stem": {
         "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
             "properties": {
                 "pillar_axis": [
                     "\"y\"",
                     "\"x\"",
                     "\"z\""
                 ]
-            },
-            "defaults": {
-                "pillar_axis": "\"y\""
             }
         }
     },
     "minecraft:crimson_trapdoor": {
         "block_added": {
+            "defaults": {
+                "direction": "0",
+                "open_bit": "0b",
+                "upside_down_bit": "0b"
+            },
             "properties": {
                 "direction": [
                     "0",
@@ -461,16 +466,14 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "direction": "0",
-                "open_bit": "0b",
-                "upside_down_bit": "0b"
             }
         }
     },
     "minecraft:crimson_wall_sign": {
         "block_added": {
+            "defaults": {
+                "facing_direction": "0"
+            },
             "properties": {
                 "facing_direction": [
                     "0",
@@ -480,28 +483,25 @@
                     "4",
                     "5"
                 ]
-            },
-            "defaults": {
-                "facing_direction": "0"
             }
         }
     },
     "minecraft:crying_obsidian": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:deny": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:gilded_blackstone": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:jigsaw": {
@@ -516,8 +516,8 @@
     },
     "minecraft:lodestone": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:melon_stem": {
@@ -534,70 +534,74 @@
     },
     "minecraft:nether_gold_ore": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:nether_sprouts": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:netherite_block": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:polished_basalt": {
         "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
             "properties": {
                 "pillar_axis": [
                     "\"y\"",
                     "\"x\"",
                     "\"z\""
                 ]
-            },
-            "defaults": {
-                "pillar_axis": "\"y\""
             }
         }
     },
     "minecraft:polished_blackstone": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:polished_blackstone_brick_double_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:polished_blackstone_brick_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:polished_blackstone_brick_stairs": {
         "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
             "properties": {
                 "upside_down_bit": [
                     "0b",
@@ -609,15 +613,18 @@
                     "2",
                     "3"
                 ]
-            },
-            "defaults": {
-                "upside_down_bit": "0b",
-                "weirdo_direction": "0"
             }
         }
     },
     "minecraft:polished_blackstone_brick_wall": {
         "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
             "properties": {
                 "wall_connection_type_east": [
                     "\"none\"",
@@ -643,24 +650,21 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "wall_connection_type_east": "\"none\"",
-                "wall_connection_type_north": "\"none\"",
-                "wall_connection_type_south": "\"none\"",
-                "wall_connection_type_west": "\"none\"",
-                "wall_post_bit": "0b"
             }
         }
     },
     "minecraft:polished_blackstone_bricks": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:polished_blackstone_button": {
         "block_added": {
+            "defaults": {
+                "button_pressed_bit": "0b",
+                "facing_direction": "0"
+            },
             "properties": {
                 "button_pressed_bit": [
                     "0b",
@@ -674,28 +678,27 @@
                     "4",
                     "5"
                 ]
-            },
-            "defaults": {
-                "button_pressed_bit": "0b",
-                "facing_direction": "0"
             }
         }
     },
     "minecraft:polished_blackstone_double_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:polished_blackstone_pressure_plate": {
         "block_added": {
+            "defaults": {
+                "redstone_signal": "0"
+            },
             "properties": {
                 "redstone_signal": [
                     "0",
@@ -715,27 +718,28 @@
                     "14",
                     "15"
                 ]
-            },
-            "defaults": {
-                "redstone_signal": "0"
             }
         }
     },
     "minecraft:polished_blackstone_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:polished_blackstone_stairs": {
         "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
             "properties": {
                 "upside_down_bit": [
                     "0b",
@@ -747,15 +751,18 @@
                     "2",
                     "3"
                 ]
-            },
-            "defaults": {
-                "upside_down_bit": "0b",
-                "weirdo_direction": "0"
             }
         }
     },
     "minecraft:polished_blackstone_wall": {
         "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
             "properties": {
                 "wall_connection_type_east": [
                     "\"none\"",
@@ -781,13 +788,6 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "wall_connection_type_east": "\"none\"",
-                "wall_connection_type_north": "\"none\"",
-                "wall_connection_type_south": "\"none\"",
-                "wall_connection_type_west": "\"none\"",
-                "wall_post_bit": "0b"
             }
         }
     },
@@ -805,12 +805,15 @@
     },
     "minecraft:quartz_bricks": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:respawn_anchor": {
         "block_added": {
+            "defaults": {
+                "respawn_anchor_charge": "0"
+            },
             "properties": {
                 "respawn_anchor_charge": [
                     "0",
@@ -819,20 +822,21 @@
                     "3",
                     "4"
                 ]
-            },
-            "defaults": {
-                "respawn_anchor_charge": "0"
             }
         }
     },
     "minecraft:shroomlight": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:soul_campfire": {
         "block_added": {
+            "defaults": {
+                "direction": "0",
+                "extinguished": "0b"
+            },
             "properties": {
                 "direction": [
                     "0",
@@ -844,15 +848,14 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "direction": "0",
-                "extinguished": "0b"
             }
         }
     },
     "minecraft:soul_fire": {
         "block_added": {
+            "defaults": {
+                "age": "0"
+            },
             "properties": {
                 "age": [
                     "0",
@@ -872,33 +875,33 @@
                     "14",
                     "15"
                 ]
-            },
-            "defaults": {
-                "age": "0"
             }
         }
     },
     "minecraft:soul_lantern": {
         "block_added": {
+            "defaults": {
+                "hanging": "0b"
+            },
             "properties": {
                 "hanging": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "hanging": "0b"
             }
         }
     },
     "minecraft:soul_soil": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:soul_torch": {
         "block_added": {
+            "defaults": {
+                "torch_facing_direction": "\"unknown\""
+            },
             "properties": {
                 "torch_facing_direction": [
                     "\"unknown\"",
@@ -908,14 +911,15 @@
                     "\"south\"",
                     "\"top\""
                 ]
-            },
-            "defaults": {
-                "torch_facing_direction": "\"unknown\""
             }
         }
     },
     "minecraft:stripped_crimson_hyphae": {
         "block_added": {
+            "defaults": {
+                "deprecated": "0",
+                "pillar_axis": "\"y\""
+            },
             "properties": {
                 "deprecated": [
                     "0",
@@ -928,15 +932,15 @@
                     "\"x\"",
                     "\"z\""
                 ]
-            },
-            "defaults": {
-                "deprecated": "0",
-                "pillar_axis": "\"y\""
             }
         }
     },
     "minecraft:stripped_crimson_stem": {
         "block_added": {
+            "defaults": {
+                "deprecated": "0",
+                "pillar_axis": "\"y\""
+            },
             "properties": {
                 "deprecated": [
                     "0",
@@ -949,15 +953,15 @@
                     "\"x\"",
                     "\"z\""
                 ]
-            },
-            "defaults": {
-                "deprecated": "0",
-                "pillar_axis": "\"y\""
             }
         }
     },
     "minecraft:stripped_warped_hyphae": {
         "block_added": {
+            "defaults": {
+                "deprecated": "0",
+                "pillar_axis": "\"y\""
+            },
             "properties": {
                 "deprecated": [
                     "0",
@@ -970,15 +974,15 @@
                     "\"x\"",
                     "\"z\""
                 ]
-            },
-            "defaults": {
-                "deprecated": "0",
-                "pillar_axis": "\"y\""
             }
         }
     },
     "minecraft:stripped_warped_stem": {
         "block_added": {
+            "defaults": {
+                "deprecated": "0",
+                "pillar_axis": "\"y\""
+            },
             "properties": {
                 "deprecated": [
                     "0",
@@ -991,21 +995,20 @@
                     "\"x\"",
                     "\"z\""
                 ]
-            },
-            "defaults": {
-                "deprecated": "0",
-                "pillar_axis": "\"y\""
             }
         }
     },
     "minecraft:target": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:twisting_vines": {
         "block_added": {
+            "defaults": {
+                "twisting_vines_age": "0"
+            },
             "properties": {
                 "twisting_vines_age": [
                     "0",
@@ -1035,14 +1038,15 @@
                     "24",
                     "25"
                 ]
-            },
-            "defaults": {
-                "twisting_vines_age": "0"
             }
         }
     },
     "minecraft:warped_button": {
         "block_added": {
+            "defaults": {
+                "button_pressed_bit": "0b",
+                "facing_direction": "0"
+            },
             "properties": {
                 "button_pressed_bit": [
                     "0b",
@@ -1056,15 +1060,17 @@
                     "4",
                     "5"
                 ]
-            },
-            "defaults": {
-                "button_pressed_bit": "0b",
-                "facing_direction": "0"
             }
         }
     },
     "minecraft:warped_door": {
         "block_added": {
+            "defaults": {
+                "direction": "0",
+                "door_hinge_bit": "0b",
+                "open_bit": "0b",
+                "upper_block_bit": "0b"
+            },
             "properties": {
                 "direction": [
                     "0",
@@ -1084,36 +1090,35 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "direction": "0",
-                "door_hinge_bit": "0b",
-                "open_bit": "0b",
-                "upper_block_bit": "0b"
             }
         }
     },
     "minecraft:warped_double_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:warped_fence": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:warped_fence_gate": {
         "block_added": {
+            "defaults": {
+                "direction": "0",
+                "in_wall_bit": "0b",
+                "open_bit": "0b"
+            },
             "properties": {
                 "direction": [
                     "0",
@@ -1129,48 +1134,46 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "direction": "0",
-                "in_wall_bit": "0b",
-                "open_bit": "0b"
             }
         }
     },
     "minecraft:warped_fungus": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:warped_hyphae": {
         "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
             "properties": {
                 "pillar_axis": [
                     "\"y\"",
                     "\"x\"",
                     "\"z\""
                 ]
-            },
-            "defaults": {
-                "pillar_axis": "\"y\""
             }
         }
     },
     "minecraft:warped_nylium": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:warped_planks": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:warped_pressure_plate": {
         "block_added": {
+            "defaults": {
+                "redstone_signal": "0"
+            },
             "properties": {
                 "redstone_signal": [
                     "0",
@@ -1190,33 +1193,34 @@
                     "14",
                     "15"
                 ]
-            },
-            "defaults": {
-                "redstone_signal": "0"
             }
         }
     },
     "minecraft:warped_roots": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:warped_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:warped_stairs": {
         "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
             "properties": {
                 "upside_down_bit": [
                     "0b",
@@ -1228,15 +1232,14 @@
                     "2",
                     "3"
                 ]
-            },
-            "defaults": {
-                "upside_down_bit": "0b",
-                "weirdo_direction": "0"
             }
         }
     },
     "minecraft:warped_standing_sign": {
         "block_added": {
+            "defaults": {
+                "ground_sign_direction": "0"
+            },
             "properties": {
                 "ground_sign_direction": [
                     "0",
@@ -1256,28 +1259,30 @@
                     "14",
                     "15"
                 ]
-            },
-            "defaults": {
-                "ground_sign_direction": "0"
             }
         }
     },
     "minecraft:warped_stem": {
         "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
             "properties": {
                 "pillar_axis": [
                     "\"y\"",
                     "\"x\"",
                     "\"z\""
                 ]
-            },
-            "defaults": {
-                "pillar_axis": "\"y\""
             }
         }
     },
     "minecraft:warped_trapdoor": {
         "block_added": {
+            "defaults": {
+                "direction": "0",
+                "open_bit": "0b",
+                "upside_down_bit": "0b"
+            },
             "properties": {
                 "direction": [
                     "0",
@@ -1293,16 +1298,14 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "direction": "0",
-                "open_bit": "0b",
-                "upside_down_bit": "0b"
             }
         }
     },
     "minecraft:warped_wall_sign": {
         "block_added": {
+            "defaults": {
+                "facing_direction": "0"
+            },
             "properties": {
                 "facing_direction": [
                     "0",
@@ -1312,20 +1315,20 @@
                     "4",
                     "5"
                 ]
-            },
-            "defaults": {
-                "facing_direction": "0"
             }
         }
     },
     "minecraft:warped_wart_block": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:weeping_vines": {
         "block_added": {
+            "defaults": {
+                "weeping_vines_age": "0"
+            },
             "properties": {
                 "weeping_vines_age": [
                     "0",
@@ -1355,9 +1358,6 @@
                     "24",
                     "25"
                 ]
-            },
-            "defaults": {
-                "weeping_vines_age": "0"
             }
         }
     }

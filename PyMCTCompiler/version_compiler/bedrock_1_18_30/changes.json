@@ -4,6 +4,9 @@
     },
     "minecraft:concrete_powder": {
         "block_added": {
+            "defaults": {
+                "color": "\"white\""
+            },
             "properties": {
                 "color": [
                     "\"white\"",
@@ -23,9 +26,6 @@
                     "\"red\"",
                     "\"black\""
                 ]
-            },
-            "defaults": {
-                "color": "\"white\""
             }
         }
     },
@@ -34,8 +34,8 @@
     },
     "minecraft:invisible_bedrock": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:movingBlock": {
@@ -43,8 +43,8 @@
     },
     "minecraft:moving_block": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:pistonArmCollision": {
@@ -52,6 +52,9 @@
     },
     "minecraft:piston_arm_collision": {
         "block_added": {
+            "defaults": {
+                "facing_direction": "0"
+            },
             "properties": {
                 "facing_direction": [
                     "0",
@@ -61,9 +64,6 @@
                     "4",
                     "5"
                 ]
-            },
-            "defaults": {
-                "facing_direction": "0"
             }
         }
     },
@@ -72,8 +72,8 @@
     },
     "minecraft:sea_lantern": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:skull": {
@@ -89,6 +89,9 @@
     },
     "minecraft:sticky_piston_arm_collision": {
         "block_added": {
+            "defaults": {
+                "facing_direction": "0"
+            },
             "properties": {
                 "facing_direction": [
                     "0",
@@ -98,9 +101,6 @@
                     "4",
                     "5"
                 ]
-            },
-            "defaults": {
-                "facing_direction": "0"
             }
         }
     },
@@ -109,6 +109,12 @@
     },
     "minecraft:trip_wire": {
         "block_added": {
+            "defaults": {
+                "attached_bit": "0b",
+                "disarmed_bit": "0b",
+                "powered_bit": "0b",
+                "suspended_bit": "0b"
+            },
             "properties": {
                 "attached_bit": [
                     "0b",
@@ -126,12 +132,6 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "attached_bit": "0b",
-                "disarmed_bit": "0b",
-                "powered_bit": "0b",
-                "suspended_bit": "0b"
             }
         }
     }

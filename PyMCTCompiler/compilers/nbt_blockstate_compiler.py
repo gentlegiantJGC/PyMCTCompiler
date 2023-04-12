@@ -5,7 +5,7 @@ import copy
 from .base_compiler import BaseCompiler
 from PyMCTCompiler import primitives
 from PyMCTCompiler.disk_buffer import disk_buffer
-from PyMCTCompiler.helpers import load_json_file
+from PyMCTCompiler.helpers import load_json_file, sort_dict
 
 Undefined = object()
 
@@ -138,7 +138,7 @@ class NBTBlockstateCompiler(BaseCompiler):
 		else:
 			with open(os.path.join(self._directory, 'changes.json'), 'w') as f:
 				json.dump(
-					dict(sorted(find_blocks_changes(parent_block_palette, block_palette).items())),
+					sort_dict(find_blocks_changes(parent_block_palette, block_palette)),
 					f,
 					indent=4
 				)

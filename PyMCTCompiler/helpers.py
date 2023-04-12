@@ -91,6 +91,18 @@ def unique_merge_lists(list_a: list, list_b: list) -> list:
 	return merged_list
 
 
+def sort_dict(d: dict) -> dict:
+	"""
+	Sort a dictionary recursively based on its keys
+	:param d: The dictionary to sort
+	:return: The sorted dictionary
+	"""
+	out = {}
+	for k, v in sorted(d.items(), key=lambda x: x[0]):
+		out[k] = sort_dict(v) if isinstance(v, dict) else v
+	return out
+
+
 def remove_list_duplicates(val: list):
 	# remove duplicates
 	i = 0

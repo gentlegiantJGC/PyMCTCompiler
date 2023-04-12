@@ -6,7 +6,7 @@ from .base_compiler import BaseCompiler
 import PyMCTCompiler
 from PyMCTCompiler import primitives
 from PyMCTCompiler.disk_buffer import disk_buffer
-from PyMCTCompiler.helpers import blocks_from_server, load_json_file
+from PyMCTCompiler.helpers import blocks_from_server, load_json_file, sort_dict
 from PyMCTCompiler.translation_functions.base_translation_function import FunctionList
 
 
@@ -104,7 +104,7 @@ class JavaBlockstateCompiler(BaseCompiler):
                 parent_blocks = load_json_file(parent_blocks_path)
                 with open(os.path.join(self._directory, 'changes.json'), 'w') as f:
                     json.dump(
-                        dict(sorted(find_blocks_changes(parent_blocks, blocks).items())),
+                        sort_dict(find_blocks_changes(parent_blocks, blocks)),
                         f,
                         indent=4
                     )

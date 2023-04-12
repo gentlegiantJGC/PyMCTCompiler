@@ -1,12 +1,15 @@
 {
     "minecraft:amethyst_block": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:amethyst_cluster": {
         "block_added": {
+            "defaults": {
+                "facing_direction": "0"
+            },
             "properties": {
                 "facing_direction": [
                     "0",
@@ -16,20 +19,21 @@
                     "4",
                     "5"
                 ]
-            },
-            "defaults": {
-                "facing_direction": "0"
             }
         }
     },
     "minecraft:azalea": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:azalea_leaves": {
         "block_added": {
+            "defaults": {
+                "persistent_bit": "0b",
+                "update_bit": "0b"
+            },
             "properties": {
                 "persistent_bit": [
                     "0b",
@@ -39,15 +43,15 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "persistent_bit": "0b",
-                "update_bit": "0b"
             }
         }
     },
     "minecraft:azalea_leaves_flowered": {
         "block_added": {
+            "defaults": {
+                "persistent_bit": "0b",
+                "update_bit": "0b"
+            },
             "properties": {
                 "persistent_bit": [
                     "0b",
@@ -57,15 +61,16 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "persistent_bit": "0b",
-                "update_bit": "0b"
             }
         }
     },
     "minecraft:big_dripleaf": {
         "block_added": {
+            "defaults": {
+                "big_dripleaf_head": "0b",
+                "big_dripleaf_tilt": "\"none\"",
+                "direction": "0"
+            },
             "properties": {
                 "big_dripleaf_head": [
                     "0b",
@@ -83,24 +88,19 @@
                     "2",
                     "3"
                 ]
-            },
-            "defaults": {
-                "big_dripleaf_head": "0b",
-                "big_dripleaf_tilt": "\"none\"",
-                "direction": "0"
             }
         }
     },
     "minecraft:budding_amethyst": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:calcite": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:cauldron": {
@@ -112,6 +112,9 @@
     },
     "minecraft:cave_vines": {
         "block_added": {
+            "defaults": {
+                "growing_plant_age": "0"
+            },
             "properties": {
                 "growing_plant_age": [
                     "0",
@@ -141,14 +144,14 @@
                     "24",
                     "25"
                 ]
-            },
-            "defaults": {
-                "growing_plant_age": "0"
             }
         }
     },
     "minecraft:cave_vines_body_with_berries": {
         "block_added": {
+            "defaults": {
+                "growing_plant_age": "0"
+            },
             "properties": {
                 "growing_plant_age": [
                     "0",
@@ -178,14 +181,14 @@
                     "24",
                     "25"
                 ]
-            },
-            "defaults": {
-                "growing_plant_age": "0"
             }
         }
     },
     "minecraft:cave_vines_head_with_berries": {
         "block_added": {
+            "defaults": {
+                "growing_plant_age": "0"
+            },
             "properties": {
                 "growing_plant_age": [
                     "0",
@@ -215,52 +218,53 @@
                     "24",
                     "25"
                 ]
-            },
-            "defaults": {
-                "growing_plant_age": "0"
             }
         }
     },
     "minecraft:chiseled_deepslate": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:cobbled_deepslate": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:cobbled_deepslate_double_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:cobbled_deepslate_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:cobbled_deepslate_stairs": {
         "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
             "properties": {
                 "upside_down_bit": [
                     "0b",
@@ -272,15 +276,18 @@
                     "2",
                     "3"
                 ]
-            },
-            "defaults": {
-                "upside_down_bit": "0b",
-                "weirdo_direction": "0"
             }
         }
     },
     "minecraft:cobbled_deepslate_wall": {
         "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
             "properties": {
                 "wall_connection_type_east": [
                     "\"none\"",
@@ -306,61 +313,58 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "wall_connection_type_east": "\"none\"",
-                "wall_connection_type_north": "\"none\"",
-                "wall_connection_type_south": "\"none\"",
-                "wall_connection_type_west": "\"none\"",
-                "wall_post_bit": "0b"
             }
         }
     },
     "minecraft:copper_block": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:copper_ore": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:cracked_deepslate_bricks": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:cracked_deepslate_tiles": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:cut_copper": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:cut_copper_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:cut_copper_stairs": {
         "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
             "properties": {
                 "upside_down_bit": [
                     "0b",
@@ -372,55 +376,55 @@
                     "2",
                     "3"
                 ]
-            },
-            "defaults": {
-                "upside_down_bit": "0b",
-                "weirdo_direction": "0"
             }
         }
     },
     "minecraft:deepslate": {
         "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
             "properties": {
                 "pillar_axis": [
                     "\"y\"",
                     "\"x\"",
                     "\"z\""
                 ]
-            },
-            "defaults": {
-                "pillar_axis": "\"y\""
             }
         }
     },
     "minecraft:deepslate_brick_double_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:deepslate_brick_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:deepslate_brick_stairs": {
         "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
             "properties": {
                 "upside_down_bit": [
                     "0b",
@@ -432,15 +436,18 @@
                     "2",
                     "3"
                 ]
-            },
-            "defaults": {
-                "upside_down_bit": "0b",
-                "weirdo_direction": "0"
             }
         }
     },
     "minecraft:deepslate_brick_wall": {
         "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
             "properties": {
                 "wall_connection_type_east": [
                     "\"none\"",
@@ -466,98 +473,95 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "wall_connection_type_east": "\"none\"",
-                "wall_connection_type_north": "\"none\"",
-                "wall_connection_type_south": "\"none\"",
-                "wall_connection_type_west": "\"none\"",
-                "wall_post_bit": "0b"
             }
         }
     },
     "minecraft:deepslate_bricks": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:deepslate_coal_ore": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:deepslate_copper_ore": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:deepslate_diamond_ore": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:deepslate_emerald_ore": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:deepslate_gold_ore": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:deepslate_iron_ore": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:deepslate_lapis_ore": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:deepslate_redstone_ore": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:deepslate_tile_double_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:deepslate_tile_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:deepslate_tile_stairs": {
         "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
             "properties": {
                 "upside_down_bit": [
                     "0b",
@@ -569,15 +573,18 @@
                     "2",
                     "3"
                 ]
-            },
-            "defaults": {
-                "upside_down_bit": "0b",
-                "weirdo_direction": "0"
             }
         }
     },
     "minecraft:deepslate_tile_wall": {
         "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
             "properties": {
                 "wall_connection_type_east": [
                     "\"none\"",
@@ -603,74 +610,71 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "wall_connection_type_east": "\"none\"",
-                "wall_connection_type_north": "\"none\"",
-                "wall_connection_type_south": "\"none\"",
-                "wall_connection_type_west": "\"none\"",
-                "wall_post_bit": "0b"
             }
         }
     },
     "minecraft:deepslate_tiles": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:dirt_with_roots": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:double_cut_copper_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:dripstone_block": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:exposed_copper": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:exposed_cut_copper": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:exposed_cut_copper_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:exposed_cut_copper_stairs": {
         "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
             "properties": {
                 "upside_down_bit": [
                     "0b",
@@ -682,34 +686,34 @@
                     "2",
                     "3"
                 ]
-            },
-            "defaults": {
-                "upside_down_bit": "0b",
-                "weirdo_direction": "0"
             }
         }
     },
     "minecraft:exposed_double_cut_copper_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:flowering_azalea": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:glow_frame": {
         "block_added": {
+            "defaults": {
+                "facing_direction": "0",
+                "item_frame_map_bit": "0b"
+            },
             "properties": {
                 "facing_direction": [
                     "0",
@@ -723,15 +727,14 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "facing_direction": "0",
-                "item_frame_map_bit": "0b"
             }
         }
     },
     "minecraft:glow_lichen": {
         "block_added": {
+            "defaults": {
+                "multi_face_direction_bits": "0"
+            },
             "properties": {
                 "multi_face_direction_bits": [
                     "0",
@@ -799,34 +802,34 @@
                     "62",
                     "63"
                 ]
-            },
-            "defaults": {
-                "multi_face_direction_bits": "0"
             }
         }
     },
     "minecraft:hanging_roots": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:infested_deepslate": {
         "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
             "properties": {
                 "pillar_axis": [
                     "\"y\"",
                     "\"x\"",
                     "\"z\""
                 ]
-            },
-            "defaults": {
-                "pillar_axis": "\"y\""
             }
         }
     },
     "minecraft:large_amethyst_bud": {
         "block_added": {
+            "defaults": {
+                "facing_direction": "0"
+            },
             "properties": {
                 "facing_direction": [
                     "0",
@@ -836,9 +839,6 @@
                     "4",
                     "5"
                 ]
-            },
-            "defaults": {
-                "facing_direction": "0"
             }
         }
     },
@@ -851,6 +851,9 @@
     },
     "minecraft:lightning_rod": {
         "block_added": {
+            "defaults": {
+                "facing_direction": "0"
+            },
             "properties": {
                 "facing_direction": [
                     "0",
@@ -860,20 +863,20 @@
                     "4",
                     "5"
                 ]
-            },
-            "defaults": {
-                "facing_direction": "0"
             }
         }
     },
     "minecraft:lit_deepslate_redstone_ore": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:medium_amethyst_bud": {
         "block_added": {
+            "defaults": {
+                "facing_direction": "0"
+            },
             "properties": {
                 "facing_direction": [
                     "0",
@@ -883,51 +886,52 @@
                     "4",
                     "5"
                 ]
-            },
-            "defaults": {
-                "facing_direction": "0"
             }
         }
     },
     "minecraft:moss_block": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:moss_carpet": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:oxidized_copper": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:oxidized_cut_copper": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:oxidized_cut_copper_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:oxidized_cut_copper_stairs": {
         "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
             "properties": {
                 "upside_down_bit": [
                     "0b",
@@ -939,28 +943,28 @@
                     "2",
                     "3"
                 ]
-            },
-            "defaults": {
-                "upside_down_bit": "0b",
-                "weirdo_direction": "0"
             }
         }
     },
     "minecraft:oxidized_double_cut_copper_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:pointed_dripstone": {
         "block_added": {
+            "defaults": {
+                "dripstone_thickness": "\"tip\"",
+                "hanging": "0b"
+            },
             "properties": {
                 "dripstone_thickness": [
                     "\"tip\"",
@@ -973,47 +977,47 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "dripstone_thickness": "\"tip\"",
-                "hanging": "0b"
             }
         }
     },
     "minecraft:polished_deepslate": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:polished_deepslate_double_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:polished_deepslate_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:polished_deepslate_stairs": {
         "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
             "properties": {
                 "upside_down_bit": [
                     "0b",
@@ -1025,15 +1029,18 @@
                     "2",
                     "3"
                 ]
-            },
-            "defaults": {
-                "upside_down_bit": "0b",
-                "weirdo_direction": "0"
             }
         }
     },
     "minecraft:polished_deepslate_wall": {
         "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
             "properties": {
                 "wall_connection_type_east": [
                     "\"none\"",
@@ -1059,42 +1066,38 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "wall_connection_type_east": "\"none\"",
-                "wall_connection_type_north": "\"none\"",
-                "wall_connection_type_south": "\"none\"",
-                "wall_connection_type_west": "\"none\"",
-                "wall_post_bit": "0b"
             }
         }
     },
     "minecraft:powder_snow": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:raw_copper_block": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:raw_gold_block": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:raw_iron_block": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:small_amethyst_bud": {
         "block_added": {
+            "defaults": {
+                "facing_direction": "0"
+            },
             "properties": {
                 "facing_direction": [
                     "0",
@@ -1104,14 +1107,15 @@
                     "4",
                     "5"
                 ]
-            },
-            "defaults": {
-                "facing_direction": "0"
             }
         }
     },
     "minecraft:small_dripleaf_block": {
         "block_added": {
+            "defaults": {
+                "direction": "0",
+                "upper_block_bit": "0b"
+            },
             "properties": {
                 "direction": [
                     "0",
@@ -1123,23 +1127,19 @@
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "direction": "0",
-                "upper_block_bit": "0b"
             }
         }
     },
     "minecraft:smooth_basalt": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:spore_blossom": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:stripped_crimson_hyphae": {
@@ -1184,43 +1184,47 @@
     },
     "minecraft:tinted_glass": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:tuff": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:waxed_copper": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:waxed_cut_copper": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:waxed_cut_copper_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:waxed_cut_copper_stairs": {
         "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
             "properties": {
                 "upside_down_bit": [
                     "0b",
@@ -1232,53 +1236,53 @@
                     "2",
                     "3"
                 ]
-            },
-            "defaults": {
-                "upside_down_bit": "0b",
-                "weirdo_direction": "0"
             }
         }
     },
     "minecraft:waxed_double_cut_copper_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:waxed_exposed_copper": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:waxed_exposed_cut_copper": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:waxed_exposed_cut_copper_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:waxed_exposed_cut_copper_stairs": {
         "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
             "properties": {
                 "upside_down_bit": [
                     "0b",
@@ -1290,53 +1294,53 @@
                     "2",
                     "3"
                 ]
-            },
-            "defaults": {
-                "upside_down_bit": "0b",
-                "weirdo_direction": "0"
             }
         }
     },
     "minecraft:waxed_exposed_double_cut_copper_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:waxed_oxidized_copper": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:waxed_oxidized_cut_copper": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:waxed_oxidized_cut_copper_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:waxed_oxidized_cut_copper_stairs": {
         "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
             "properties": {
                 "upside_down_bit": [
                     "0b",
@@ -1348,53 +1352,53 @@
                     "2",
                     "3"
                 ]
-            },
-            "defaults": {
-                "upside_down_bit": "0b",
-                "weirdo_direction": "0"
             }
         }
     },
     "minecraft:waxed_oxidized_double_cut_copper_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:waxed_weathered_copper": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:waxed_weathered_cut_copper": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:waxed_weathered_cut_copper_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:waxed_weathered_cut_copper_stairs": {
         "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
             "properties": {
                 "upside_down_bit": [
                     "0b",
@@ -1406,53 +1410,53 @@
                     "2",
                     "3"
                 ]
-            },
-            "defaults": {
-                "upside_down_bit": "0b",
-                "weirdo_direction": "0"
             }
         }
     },
     "minecraft:waxed_weathered_double_cut_copper_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:weathered_copper": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:weathered_cut_copper": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     },
     "minecraft:weathered_cut_copper_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     },
     "minecraft:weathered_cut_copper_stairs": {
         "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
             "properties": {
                 "upside_down_bit": [
                     "0b",
@@ -1464,23 +1468,19 @@
                     "2",
                     "3"
                 ]
-            },
-            "defaults": {
-                "upside_down_bit": "0b",
-                "weirdo_direction": "0"
             }
         }
     },
     "minecraft:weathered_double_cut_copper_slab": {
         "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
             "properties": {
                 "top_slot_bit": [
                     "0b",
                     "1b"
                 ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
             }
         }
     }

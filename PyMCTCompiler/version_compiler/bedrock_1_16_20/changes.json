@@ -50,8 +50,8 @@
     },
     "minecraft:unknown": {
         "block_added": {
-            "properties": {},
-            "defaults": {}
+            "defaults": {},
+            "properties": {}
         }
     }
 }
