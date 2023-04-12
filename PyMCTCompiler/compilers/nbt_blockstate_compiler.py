@@ -138,7 +138,7 @@ class NBTBlockstateCompiler(BaseCompiler):
 		else:
 			with open(os.path.join(self._directory, 'changes.json'), 'w') as f:
 				json.dump(
-					find_blocks_changes(parent_block_palette, block_palette),
+					dict(sorted(find_blocks_changes(parent_block_palette, block_palette).items())),
 					f,
 					indent=4
 				)

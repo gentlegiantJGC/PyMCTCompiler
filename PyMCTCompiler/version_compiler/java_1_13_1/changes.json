@@ -1,23 +1,26 @@
 {
-    "minecraft:tnt": {
+    "minecraft:brain_coral": {
         "properties_added": {
-            "unstable": [
+            "waterlogged": [
                 "true",
                 "false"
             ]
         }
     },
-    "minecraft:dead_tube_coral": {
-        "block_added": {
-            "properties": {
-                "waterlogged": [
-                    "true",
-                    "false"
-                ]
-            },
-            "defaults": {
-                "waterlogged": "true"
-            }
+    "minecraft:bubble_coral": {
+        "properties_added": {
+            "waterlogged": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:conduit": {
+        "properties_added": {
+            "waterlogged": [
+                "true",
+                "false"
+            ]
         }
     },
     "minecraft:dead_brain_coral": {
@@ -72,28 +75,17 @@
             }
         }
     },
-    "minecraft:tube_coral": {
-        "properties_added": {
-            "waterlogged": [
-                "true",
-                "false"
-            ]
-        }
-    },
-    "minecraft:brain_coral": {
-        "properties_added": {
-            "waterlogged": [
-                "true",
-                "false"
-            ]
-        }
-    },
-    "minecraft:bubble_coral": {
-        "properties_added": {
-            "waterlogged": [
-                "true",
-                "false"
-            ]
+    "minecraft:dead_tube_coral": {
+        "block_added": {
+            "properties": {
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "waterlogged": "true"
+            }
         }
     },
     "minecraft:fire_coral": {
@@ -112,7 +104,15 @@
             ]
         }
     },
-    "minecraft:conduit": {
+    "minecraft:tnt": {
+        "properties_added": {
+            "unstable": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:tube_coral": {
         "properties_added": {
             "waterlogged": [
                 "true",

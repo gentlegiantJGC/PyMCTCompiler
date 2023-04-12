@@ -1,31 +1,5 @@
 {
-    "minecraft:skull": {
-        "properties_removed": {
-            "no_drop_bit": [
-                "0b",
-                "1b"
-            ]
-        }
-    },
     "minecraft:concretePowder": {
-        "block_removed": true
-    },
-    "minecraft:invisibleBedrock": {
-        "block_removed": true
-    },
-    "minecraft:movingBlock": {
-        "block_removed": true
-    },
-    "minecraft:pistonArmCollision": {
-        "block_removed": true
-    },
-    "minecraft:seaLantern": {
-        "block_removed": true
-    },
-    "minecraft:stickyPistonArmCollision": {
-        "block_removed": true
-    },
-    "minecraft:tripWire": {
         "block_removed": true
     },
     "minecraft:concrete_powder": {
@@ -55,17 +29,26 @@
             }
         }
     },
+    "minecraft:invisibleBedrock": {
+        "block_removed": true
+    },
     "minecraft:invisible_bedrock": {
         "block_added": {
             "properties": {},
             "defaults": {}
         }
     },
+    "minecraft:movingBlock": {
+        "block_removed": true
+    },
     "minecraft:moving_block": {
         "block_added": {
             "properties": {},
             "defaults": {}
         }
+    },
+    "minecraft:pistonArmCollision": {
+        "block_removed": true
     },
     "minecraft:piston_arm_collision": {
         "block_added": {
@@ -84,11 +67,25 @@
             }
         }
     },
+    "minecraft:seaLantern": {
+        "block_removed": true
+    },
     "minecraft:sea_lantern": {
         "block_added": {
             "properties": {},
             "defaults": {}
         }
+    },
+    "minecraft:skull": {
+        "properties_removed": {
+            "no_drop_bit": [
+                "0b",
+                "1b"
+            ]
+        }
+    },
+    "minecraft:stickyPistonArmCollision": {
+        "block_removed": true
     },
     "minecraft:sticky_piston_arm_collision": {
         "block_added": {
@@ -106,6 +103,9 @@
                 "facing_direction": "0"
             }
         }
+    },
+    "minecraft:tripWire": {
+        "block_removed": true
     },
     "minecraft:trip_wire": {
         "block_added": {

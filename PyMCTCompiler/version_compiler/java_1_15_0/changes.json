@@ -1,12 +1,4 @@
 {
-    "minecraft:bell": {
-        "properties_added": {
-            "powered": [
-                "true",
-                "false"
-            ]
-        }
-    },
     "minecraft:bee_nest": {
         "block_added": {
             "properties": {
@@ -53,6 +45,14 @@
                 "facing": "north",
                 "honey_level": "0"
             }
+        }
+    },
+    "minecraft:bell": {
+        "properties_added": {
+            "powered": [
+                "true",
+                "false"
+            ]
         }
     },
     "minecraft:honey_block": {

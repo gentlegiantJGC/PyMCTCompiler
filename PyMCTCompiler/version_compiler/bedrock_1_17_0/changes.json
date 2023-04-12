@@ -1,58 +1,4 @@
 {
-    "minecraft:stripped_warped_stem": {
-        "properties_removed": {
-            "deprecated": [
-                "0",
-                "1",
-                "2",
-                "3"
-            ]
-        }
-    },
-    "minecraft:stripped_crimson_stem": {
-        "properties_removed": {
-            "deprecated": [
-                "0",
-                "1",
-                "2",
-                "3"
-            ]
-        }
-    },
-    "minecraft:lava_cauldron": {
-        "values_added": {
-            "cauldron_liquid": [
-                "\"powder_snow\""
-            ]
-        }
-    },
-    "minecraft:stripped_crimson_hyphae": {
-        "properties_removed": {
-            "deprecated": [
-                "0",
-                "1",
-                "2",
-                "3"
-            ]
-        }
-    },
-    "minecraft:stripped_warped_hyphae": {
-        "properties_removed": {
-            "deprecated": [
-                "0",
-                "1",
-                "2",
-                "3"
-            ]
-        }
-    },
-    "minecraft:cauldron": {
-        "values_added": {
-            "cauldron_liquid": [
-                "\"powder_snow\""
-            ]
-        }
-    },
     "minecraft:amethyst_block": {
         "block_added": {
             "properties": {},
@@ -155,6 +101,13 @@
         "block_added": {
             "properties": {},
             "defaults": {}
+        }
+    },
+    "minecraft:cauldron": {
+        "values_added": {
+            "cauldron_liquid": [
+                "\"powder_snow\""
+            ]
         }
     },
     "minecraft:cave_vines": {
@@ -889,6 +842,13 @@
             }
         }
     },
+    "minecraft:lava_cauldron": {
+        "values_added": {
+            "cauldron_liquid": [
+                "\"powder_snow\""
+            ]
+        }
+    },
     "minecraft:lightning_rod": {
         "block_added": {
             "properties": {
@@ -1180,6 +1140,46 @@
         "block_added": {
             "properties": {},
             "defaults": {}
+        }
+    },
+    "minecraft:stripped_crimson_hyphae": {
+        "properties_removed": {
+            "deprecated": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
+        }
+    },
+    "minecraft:stripped_crimson_stem": {
+        "properties_removed": {
+            "deprecated": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
+        }
+    },
+    "minecraft:stripped_warped_hyphae": {
+        "properties_removed": {
+            "deprecated": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
+        }
+    },
+    "minecraft:stripped_warped_stem": {
+        "properties_removed": {
+            "deprecated": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
         }
     },
     "minecraft:tinted_glass": {

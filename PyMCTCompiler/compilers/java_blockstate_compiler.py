@@ -104,7 +104,7 @@ class JavaBlockstateCompiler(BaseCompiler):
                 parent_blocks = load_json_file(parent_blocks_path)
                 with open(os.path.join(self._directory, 'changes.json'), 'w') as f:
                     json.dump(
-                        find_blocks_changes(parent_blocks, blocks),
+                        dict(sorted(find_blocks_changes(parent_blocks, blocks).items())),
                         f,
                         indent=4
                     )

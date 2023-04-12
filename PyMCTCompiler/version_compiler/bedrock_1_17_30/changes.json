@@ -1,5 +1,5 @@
 {
-    "minecraft:glow_frame": {
+    "minecraft:frame": {
         "properties_added": {
             "item_frame_photo_bit": [
                 "0b",
@@ -7,7 +7,7 @@
             ]
         }
     },
-    "minecraft:frame": {
+    "minecraft:glow_frame": {
         "properties_added": {
             "item_frame_photo_bit": [
                 "0b",

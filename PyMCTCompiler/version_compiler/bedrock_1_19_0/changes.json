@@ -1,258 +1,11 @@
 {
-    "minecraft:mud_brick_double_slab": {
-        "block_added": {
-            "properties": {
-                "top_slot_bit": [
-                    "0b",
-                    "1b"
-                ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
-            }
-        }
-    },
-    "minecraft:sculk_shrieker": {
-        "block_added": {
-            "properties": {
-                "active": [
-                    "0b",
-                    "1b"
-                ],
-                "can_summon": [
-                    "0b",
-                    "1b"
-                ]
-            },
-            "defaults": {
-                "active": "0b",
-                "can_summon": "0b"
-            }
-        }
-    },
-    "minecraft:packed_mud": {
+    "minecraft:client_request_placeholder_block": {
         "block_added": {
             "properties": {},
             "defaults": {}
         }
     },
-    "minecraft:muddy_mangrove_roots": {
-        "block_added": {
-            "properties": {},
-            "defaults": {}
-        }
-    },
-    "minecraft:mangrove_log": {
-        "block_added": {
-            "properties": {
-                "pillar_axis": [
-                    "\"y\"",
-                    "\"x\"",
-                    "\"z\""
-                ]
-            },
-            "defaults": {
-                "pillar_axis": "\"y\""
-            }
-        }
-    },
-    "minecraft:mangrove_double_slab": {
-        "block_added": {
-            "properties": {
-                "top_slot_bit": [
-                    "0b",
-                    "1b"
-                ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
-            }
-        }
-    },
-    "minecraft:mud_brick_wall": {
-        "block_added": {
-            "properties": {
-                "wall_connection_type_east": [
-                    "\"none\"",
-                    "\"short\"",
-                    "\"tall\""
-                ],
-                "wall_connection_type_north": [
-                    "\"none\"",
-                    "\"short\"",
-                    "\"tall\""
-                ],
-                "wall_connection_type_south": [
-                    "\"none\"",
-                    "\"short\"",
-                    "\"tall\""
-                ],
-                "wall_connection_type_west": [
-                    "\"none\"",
-                    "\"short\"",
-                    "\"tall\""
-                ],
-                "wall_post_bit": [
-                    "0b",
-                    "1b"
-                ]
-            },
-            "defaults": {
-                "wall_connection_type_east": "\"none\"",
-                "wall_connection_type_north": "\"none\"",
-                "wall_connection_type_south": "\"none\"",
-                "wall_connection_type_west": "\"none\"",
-                "wall_post_bit": "0b"
-            }
-        }
-    },
-    "minecraft:mangrove_planks": {
-        "block_added": {
-            "properties": {},
-            "defaults": {}
-        }
-    },
-    "minecraft:mangrove_slab": {
-        "block_added": {
-            "properties": {
-                "top_slot_bit": [
-                    "0b",
-                    "1b"
-                ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
-            }
-        }
-    },
-    "minecraft:ochre_froglight": {
-        "block_added": {
-            "properties": {
-                "pillar_axis": [
-                    "\"y\"",
-                    "\"x\"",
-                    "\"z\""
-                ]
-            },
-            "defaults": {
-                "pillar_axis": "\"y\""
-            }
-        }
-    },
-    "minecraft:sculk_catalyst": {
-        "block_added": {
-            "properties": {
-                "bloom": [
-                    "0b",
-                    "1b"
-                ]
-            },
-            "defaults": {
-                "bloom": "0b"
-            }
-        }
-    },
-    "minecraft:mangrove_pressure_plate": {
-        "block_added": {
-            "properties": {
-                "redstone_signal": [
-                    "0",
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5",
-                    "6",
-                    "7",
-                    "8",
-                    "9",
-                    "10",
-                    "11",
-                    "12",
-                    "13",
-                    "14",
-                    "15"
-                ]
-            },
-            "defaults": {
-                "redstone_signal": "0"
-            }
-        }
-    },
-    "minecraft:mud_brick_slab": {
-        "block_added": {
-            "properties": {
-                "top_slot_bit": [
-                    "0b",
-                    "1b"
-                ]
-            },
-            "defaults": {
-                "top_slot_bit": "0b"
-            }
-        }
-    },
-    "minecraft:mangrove_wood": {
-        "block_added": {
-            "properties": {
-                "pillar_axis": [
-                    "\"y\"",
-                    "\"x\"",
-                    "\"z\""
-                ],
-                "stripped_bit": [
-                    "0b",
-                    "1b"
-                ]
-            },
-            "defaults": {
-                "pillar_axis": "\"y\"",
-                "stripped_bit": "0b"
-            }
-        }
-    },
-    "minecraft:mangrove_standing_sign": {
-        "block_added": {
-            "properties": {
-                "ground_sign_direction": [
-                    "0",
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5",
-                    "6",
-                    "7",
-                    "8",
-                    "9",
-                    "10",
-                    "11",
-                    "12",
-                    "13",
-                    "14",
-                    "15"
-                ]
-            },
-            "defaults": {
-                "ground_sign_direction": "0"
-            }
-        }
-    },
-    "minecraft:stripped_mangrove_wood": {
-        "block_added": {
-            "properties": {
-                "pillar_axis": [
-                    "\"y\"",
-                    "\"x\"",
-                    "\"z\""
-                ]
-            },
-            "defaults": {
-                "pillar_axis": "\"y\""
-            }
-        }
-    },
-    "minecraft:stone_block_slab": {
+    "minecraft:double_stone_block_slab": {
         "block_added": {
             "properties": {
                 "stone_slab_type": [
@@ -273,263 +26,6 @@
             "defaults": {
                 "stone_slab_type": "\"smooth_stone\"",
                 "top_slot_bit": "0b"
-            }
-        }
-    },
-    "minecraft:client_request_placeholder_block": {
-        "block_added": {
-            "properties": {},
-            "defaults": {}
-        }
-    },
-    "minecraft:sculk_sensor": {
-        "block_added": {
-            "properties": {
-                "powered_bit": [
-                    "0b",
-                    "1b"
-                ]
-            },
-            "defaults": {
-                "powered_bit": "0b"
-            }
-        }
-    },
-    "minecraft:frog_spawn": {
-        "block_added": {
-            "properties": {},
-            "defaults": {}
-        }
-    },
-    "minecraft:mangrove_trapdoor": {
-        "block_added": {
-            "properties": {
-                "direction": [
-                    "0",
-                    "1",
-                    "2",
-                    "3"
-                ],
-                "open_bit": [
-                    "0b",
-                    "1b"
-                ],
-                "upside_down_bit": [
-                    "0b",
-                    "1b"
-                ]
-            },
-            "defaults": {
-                "direction": "0",
-                "open_bit": "0b",
-                "upside_down_bit": "0b"
-            }
-        }
-    },
-    "minecraft:mangrove_stairs": {
-        "block_added": {
-            "properties": {
-                "upside_down_bit": [
-                    "0b",
-                    "1b"
-                ],
-                "weirdo_direction": [
-                    "0",
-                    "1",
-                    "2",
-                    "3"
-                ]
-            },
-            "defaults": {
-                "upside_down_bit": "0b",
-                "weirdo_direction": "0"
-            }
-        }
-    },
-    "minecraft:mangrove_fence_gate": {
-        "block_added": {
-            "properties": {
-                "direction": [
-                    "0",
-                    "1",
-                    "2",
-                    "3"
-                ],
-                "in_wall_bit": [
-                    "0b",
-                    "1b"
-                ],
-                "open_bit": [
-                    "0b",
-                    "1b"
-                ]
-            },
-            "defaults": {
-                "direction": "0",
-                "in_wall_bit": "0b",
-                "open_bit": "0b"
-            }
-        }
-    },
-    "minecraft:mangrove_wall_sign": {
-        "block_added": {
-            "properties": {
-                "facing_direction": [
-                    "0",
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5"
-                ]
-            },
-            "defaults": {
-                "facing_direction": "0"
-            }
-        }
-    },
-    "minecraft:mud_brick_stairs": {
-        "block_added": {
-            "properties": {
-                "upside_down_bit": [
-                    "0b",
-                    "1b"
-                ],
-                "weirdo_direction": [
-                    "0",
-                    "1",
-                    "2",
-                    "3"
-                ]
-            },
-            "defaults": {
-                "upside_down_bit": "0b",
-                "weirdo_direction": "0"
-            }
-        }
-    },
-    "minecraft:stone_block_slab2": {
-        "block_added": {
-            "properties": {
-                "stone_slab_type_2": [
-                    "\"red_sandstone\"",
-                    "\"purpur\"",
-                    "\"prismarine_rough\"",
-                    "\"prismarine_dark\"",
-                    "\"prismarine_brick\"",
-                    "\"mossy_cobblestone\"",
-                    "\"smooth_sandstone\"",
-                    "\"red_nether_brick\""
-                ],
-                "top_slot_bit": [
-                    "0b",
-                    "1b"
-                ]
-            },
-            "defaults": {
-                "stone_slab_type_2": "\"red_sandstone\"",
-                "top_slot_bit": "0b"
-            }
-        }
-    },
-    "minecraft:stone_block_slab3": {
-        "block_added": {
-            "properties": {
-                "stone_slab_type_3": [
-                    "\"end_stone_brick\"",
-                    "\"smooth_red_sandstone\"",
-                    "\"polished_andesite\"",
-                    "\"andesite\"",
-                    "\"diorite\"",
-                    "\"polished_diorite\"",
-                    "\"granite\"",
-                    "\"polished_granite\""
-                ],
-                "top_slot_bit": [
-                    "0b",
-                    "1b"
-                ]
-            },
-            "defaults": {
-                "stone_slab_type_3": "\"end_stone_brick\"",
-                "top_slot_bit": "0b"
-            }
-        }
-    },
-    "minecraft:stone_block_slab4": {
-        "block_added": {
-            "properties": {
-                "stone_slab_type_4": [
-                    "\"mossy_stone_brick\"",
-                    "\"smooth_quartz\"",
-                    "\"stone\"",
-                    "\"cut_sandstone\"",
-                    "\"cut_red_sandstone\""
-                ],
-                "top_slot_bit": [
-                    "0b",
-                    "1b"
-                ]
-            },
-            "defaults": {
-                "stone_slab_type_4": "\"mossy_stone_brick\"",
-                "top_slot_bit": "0b"
-            }
-        }
-    },
-    "minecraft:reinforced_deepslate": {
-        "block_added": {
-            "properties": {},
-            "defaults": {}
-        }
-    },
-    "minecraft:mangrove_roots": {
-        "block_added": {
-            "properties": {},
-            "defaults": {}
-        }
-    },
-    "minecraft:mangrove_door": {
-        "block_added": {
-            "properties": {
-                "direction": [
-                    "0",
-                    "1",
-                    "2",
-                    "3"
-                ],
-                "door_hinge_bit": [
-                    "0b",
-                    "1b"
-                ],
-                "open_bit": [
-                    "0b",
-                    "1b"
-                ],
-                "upper_block_bit": [
-                    "0b",
-                    "1b"
-                ]
-            },
-            "defaults": {
-                "direction": "0",
-                "door_hinge_bit": "0b",
-                "open_bit": "0b",
-                "upper_block_bit": "0b"
-            }
-        }
-    },
-    "minecraft:pearlescent_froglight": {
-        "block_added": {
-            "properties": {
-                "pillar_axis": [
-                    "\"y\"",
-                    "\"x\"",
-                    "\"z\""
-                ]
-            },
-            "defaults": {
-                "pillar_axis": "\"y\""
             }
         }
     },
@@ -602,102 +98,7 @@
             }
         }
     },
-    "minecraft:verdant_froglight": {
-        "block_added": {
-            "properties": {
-                "pillar_axis": [
-                    "\"y\"",
-                    "\"x\"",
-                    "\"z\""
-                ]
-            },
-            "defaults": {
-                "pillar_axis": "\"y\""
-            }
-        }
-    },
-    "minecraft:double_stone_block_slab": {
-        "block_added": {
-            "properties": {
-                "stone_slab_type": [
-                    "\"smooth_stone\"",
-                    "\"sandstone\"",
-                    "\"wood\"",
-                    "\"cobblestone\"",
-                    "\"brick\"",
-                    "\"stone_brick\"",
-                    "\"quartz\"",
-                    "\"nether_brick\""
-                ],
-                "top_slot_bit": [
-                    "0b",
-                    "1b"
-                ]
-            },
-            "defaults": {
-                "stone_slab_type": "\"smooth_stone\"",
-                "top_slot_bit": "0b"
-            }
-        }
-    },
-    "minecraft:mangrove_fence": {
-        "block_added": {
-            "properties": {},
-            "defaults": {}
-        }
-    },
-    "minecraft:mangrove_leaves": {
-        "block_added": {
-            "properties": {
-                "persistent_bit": [
-                    "0b",
-                    "1b"
-                ],
-                "update_bit": [
-                    "0b",
-                    "1b"
-                ]
-            },
-            "defaults": {
-                "persistent_bit": "0b",
-                "update_bit": "0b"
-            }
-        }
-    },
-    "minecraft:mud": {
-        "block_added": {
-            "properties": {},
-            "defaults": {}
-        }
-    },
-    "minecraft:mud_bricks": {
-        "block_added": {
-            "properties": {},
-            "defaults": {}
-        }
-    },
-    "minecraft:mangrove_propagule": {
-        "block_added": {
-            "properties": {
-                "hanging": [
-                    "0b",
-                    "1b"
-                ],
-                "propagule_stage": [
-                    "0",
-                    "1",
-                    "2",
-                    "3",
-                    "4"
-                ]
-            },
-            "defaults": {
-                "hanging": "0b",
-                "propagule_stage": "0"
-            }
-        }
-    },
-    "minecraft:sculk": {
+    "minecraft:frog_spawn": {
         "block_added": {
             "properties": {},
             "defaults": {}
@@ -722,6 +123,484 @@
             "defaults": {
                 "button_pressed_bit": "0b",
                 "facing_direction": "0"
+            }
+        }
+    },
+    "minecraft:mangrove_door": {
+        "block_added": {
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "door_hinge_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upper_block_bit": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "direction": "0",
+                "door_hinge_bit": "0b",
+                "open_bit": "0b",
+                "upper_block_bit": "0b"
+            }
+        }
+    },
+    "minecraft:mangrove_double_slab": {
+        "block_added": {
+            "properties": {
+                "top_slot_bit": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "top_slot_bit": "0b"
+            }
+        }
+    },
+    "minecraft:mangrove_fence": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:mangrove_fence_gate": {
+        "block_added": {
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "in_wall_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "direction": "0",
+                "in_wall_bit": "0b",
+                "open_bit": "0b"
+            }
+        }
+    },
+    "minecraft:mangrove_leaves": {
+        "block_added": {
+            "properties": {
+                "persistent_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "update_bit": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "persistent_bit": "0b",
+                "update_bit": "0b"
+            }
+        }
+    },
+    "minecraft:mangrove_log": {
+        "block_added": {
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            },
+            "defaults": {
+                "pillar_axis": "\"y\""
+            }
+        }
+    },
+    "minecraft:mangrove_planks": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:mangrove_pressure_plate": {
+        "block_added": {
+            "properties": {
+                "redstone_signal": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
+                ]
+            },
+            "defaults": {
+                "redstone_signal": "0"
+            }
+        }
+    },
+    "minecraft:mangrove_propagule": {
+        "block_added": {
+            "properties": {
+                "hanging": [
+                    "0b",
+                    "1b"
+                ],
+                "propagule_stage": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ]
+            },
+            "defaults": {
+                "hanging": "0b",
+                "propagule_stage": "0"
+            }
+        }
+    },
+    "minecraft:mangrove_roots": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:mangrove_slab": {
+        "block_added": {
+            "properties": {
+                "top_slot_bit": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "top_slot_bit": "0b"
+            }
+        }
+    },
+    "minecraft:mangrove_stairs": {
+        "block_added": {
+            "properties": {
+                "upside_down_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "weirdo_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            },
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            }
+        }
+    },
+    "minecraft:mangrove_standing_sign": {
+        "block_added": {
+            "properties": {
+                "ground_sign_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
+                ]
+            },
+            "defaults": {
+                "ground_sign_direction": "0"
+            }
+        }
+    },
+    "minecraft:mangrove_trapdoor": {
+        "block_added": {
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upside_down_bit": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "direction": "0",
+                "open_bit": "0b",
+                "upside_down_bit": "0b"
+            }
+        }
+    },
+    "minecraft:mangrove_wall_sign": {
+        "block_added": {
+            "properties": {
+                "facing_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            },
+            "defaults": {
+                "facing_direction": "0"
+            }
+        }
+    },
+    "minecraft:mangrove_wood": {
+        "block_added": {
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ],
+                "stripped_bit": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "pillar_axis": "\"y\"",
+                "stripped_bit": "0b"
+            }
+        }
+    },
+    "minecraft:mud": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:mud_brick_double_slab": {
+        "block_added": {
+            "properties": {
+                "top_slot_bit": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "top_slot_bit": "0b"
+            }
+        }
+    },
+    "minecraft:mud_brick_slab": {
+        "block_added": {
+            "properties": {
+                "top_slot_bit": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "top_slot_bit": "0b"
+            }
+        }
+    },
+    "minecraft:mud_brick_stairs": {
+        "block_added": {
+            "properties": {
+                "upside_down_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "weirdo_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            },
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            }
+        }
+    },
+    "minecraft:mud_brick_wall": {
+        "block_added": {
+            "properties": {
+                "wall_connection_type_east": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_north": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_south": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_west": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_post_bit": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            }
+        }
+    },
+    "minecraft:mud_bricks": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:muddy_mangrove_roots": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:ochre_froglight": {
+        "block_added": {
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            },
+            "defaults": {
+                "pillar_axis": "\"y\""
+            }
+        }
+    },
+    "minecraft:packed_mud": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:pearlescent_froglight": {
+        "block_added": {
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            },
+            "defaults": {
+                "pillar_axis": "\"y\""
+            }
+        }
+    },
+    "minecraft:reinforced_deepslate": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:sculk": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:sculk_catalyst": {
+        "block_added": {
+            "properties": {
+                "bloom": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "bloom": "0b"
+            }
+        }
+    },
+    "minecraft:sculk_sensor": {
+        "block_added": {
+            "properties": {
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "powered_bit": "0b"
+            }
+        }
+    },
+    "minecraft:sculk_shrieker": {
+        "block_added": {
+            "properties": {
+                "active": [
+                    "0b",
+                    "1b"
+                ],
+                "can_summon": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "active": "0b",
+                "can_summon": "0b"
             }
         }
     },
@@ -800,7 +679,128 @@
             }
         }
     },
+    "minecraft:stone_block_slab": {
+        "block_added": {
+            "properties": {
+                "stone_slab_type": [
+                    "\"smooth_stone\"",
+                    "\"sandstone\"",
+                    "\"wood\"",
+                    "\"cobblestone\"",
+                    "\"brick\"",
+                    "\"stone_brick\"",
+                    "\"quartz\"",
+                    "\"nether_brick\""
+                ],
+                "top_slot_bit": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "stone_slab_type": "\"smooth_stone\"",
+                "top_slot_bit": "0b"
+            }
+        }
+    },
+    "minecraft:stone_block_slab2": {
+        "block_added": {
+            "properties": {
+                "stone_slab_type_2": [
+                    "\"red_sandstone\"",
+                    "\"purpur\"",
+                    "\"prismarine_rough\"",
+                    "\"prismarine_dark\"",
+                    "\"prismarine_brick\"",
+                    "\"mossy_cobblestone\"",
+                    "\"smooth_sandstone\"",
+                    "\"red_nether_brick\""
+                ],
+                "top_slot_bit": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "stone_slab_type_2": "\"red_sandstone\"",
+                "top_slot_bit": "0b"
+            }
+        }
+    },
+    "minecraft:stone_block_slab3": {
+        "block_added": {
+            "properties": {
+                "stone_slab_type_3": [
+                    "\"end_stone_brick\"",
+                    "\"smooth_red_sandstone\"",
+                    "\"polished_andesite\"",
+                    "\"andesite\"",
+                    "\"diorite\"",
+                    "\"polished_diorite\"",
+                    "\"granite\"",
+                    "\"polished_granite\""
+                ],
+                "top_slot_bit": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "stone_slab_type_3": "\"end_stone_brick\"",
+                "top_slot_bit": "0b"
+            }
+        }
+    },
+    "minecraft:stone_block_slab4": {
+        "block_added": {
+            "properties": {
+                "stone_slab_type_4": [
+                    "\"mossy_stone_brick\"",
+                    "\"smooth_quartz\"",
+                    "\"stone\"",
+                    "\"cut_sandstone\"",
+                    "\"cut_red_sandstone\""
+                ],
+                "top_slot_bit": [
+                    "0b",
+                    "1b"
+                ]
+            },
+            "defaults": {
+                "stone_slab_type_4": "\"mossy_stone_brick\"",
+                "top_slot_bit": "0b"
+            }
+        }
+    },
     "minecraft:stripped_mangrove_log": {
+        "block_added": {
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            },
+            "defaults": {
+                "pillar_axis": "\"y\""
+            }
+        }
+    },
+    "minecraft:stripped_mangrove_wood": {
+        "block_added": {
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            },
+            "defaults": {
+                "pillar_axis": "\"y\""
+            }
+        }
+    },
+    "minecraft:verdant_froglight": {
         "block_added": {
             "properties": {
                 "pillar_axis": [
