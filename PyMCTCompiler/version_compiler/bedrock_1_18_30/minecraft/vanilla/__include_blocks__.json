@@ -1,17 +1,17 @@
 {
 	"skull": ["skull_1_18_30", ">nbt.skull.b113"],
-	"concretePowder": "concretePowder1830",
+	"concretePowder": "concretePowderPatch",
 	"concrete_powder": "concrete_powder",
-	"invisibleBedrock": "invisibleBedrock1830",
+	"invisibleBedrock": "invisibleBedrockPatch",
 	"invisible_bedrock": "invisible_bedrock",
 	"movingBlock": [">nbt.moving_block.b113", "movingBlock1830"],
 	"moving_block": [">nbt.moving_block.b113", "moving_block"],
-	"pistonArmCollision": "pistonArmCollision1830",
+	"pistonArmCollision": "pistonArmCollisionPatch",
 	"piston_arm_collision": "piston_arm_collision",
-	"seaLantern": "seaLantern1830",
+	"seaLantern": "seaLanternPatch",
 	"sea_lantern": "sea_lantern",
-	"stickyPistonArmCollision": "stickyPistonArmCollision1830",
+	"stickyPistonArmCollision": "stickyPistonArmCollisionPatch",
 	"sticky_piston_arm_collision": "sticky_piston_arm_collision",
-	"tripWire": "tripWire1830",
+	"tripWire": "tripWirePatch",
 	"trip_wire": "trip_wire"
 }

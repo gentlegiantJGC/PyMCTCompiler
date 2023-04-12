@@ -112,5 +112,13 @@
 	"chiseled_polished_blackstone": "chiseled_polished_blackstone",
 	"polished_blackstone": "polished_blackstone",
 	"cracked_nether_bricks": "cracked_nether_bricks",
-	"quartz_bricks": "quartz_bricks"
+	"quartz_bricks": "quartz_bricks",
+
+	"concrete_powder": "concretePowderPatch",
+	"invisible_bedrock": "invisibleBedrockPatch",
+	"moving_block": [">nbt.moving_block.b113", "moving_block16"],
+	"piston_arm_collision": "pistonArmCollisionPatch",
+	"sea_lantern": "seaLanternPatch",
+	"sticky_piston_arm_collision": "stickyPistonArmCollisionPatch",
+	"trip_wire": "tripWirePatch"
 }
