@@ -9,7 +9,19 @@
 		"crimson_wall_sign",
 		"warped_wall_sign",
 		"mangrove_wall_sign",
-		"bamboo_wall_sign"
+		"bamboo_wall_sign",
+		"cherry_wall_sign",
+		"oak_wall_hanging_sign",
+		"spruce_wall_hanging_sign",
+		"birch_wall_hanging_sign",
+		"jungle_wall_hanging_sign",
+		"acacia_wall_hanging_sign",
+		"dark_oak_wall_hanging_sign",
+		"crimson_wall_hanging_sign",
+		"warped_wall_hanging_sign",
+		"mangrove_wall_hanging_sign",
+		"bamboo_wall_hanging_sign",
+		"cherry_wall_hanging_sign"
 	],
 	"add": {
 		"wall_sign": {
@@ -30,12 +42,18 @@
 					"\"mangrove\"",
 					"\"crimson\"",
 					"\"warped\"",
-					"\"bamboo\""
+					"\"bamboo\"",
+					"\"cherry\""
+				],
+				"hanging": [
+					"\"false\"",
+					"\"true\""
 				]
 			},
 			"defaults": {
 				"facing": "\"north\"",
-				"material": "\"oak\""
+				"material": "\"oak\"",
+				"hanging": "\"false\""
 			},
 			"unbt": "nbt.sign.universal"
 		}

@@ -9,7 +9,8 @@
 		"crimson_fence_gate",
 		"warped_fence_gate",
 		"mangrove_fence_gate",
-		"bamboo_fence_gate"
+		"bamboo_fence_gate",
+		"cherry_fence_gate"
 	],
 	"add": {
 		"fence_gate": {
@@ -24,7 +25,8 @@
 					"\"mangrove\"",
 					"\"crimson\"",
 					"\"warped\"",
-					"\"bamboo\""
+					"\"bamboo\"",
+					"\"cherry\""
 				],
 				"facing": [
 					"\"north\"",

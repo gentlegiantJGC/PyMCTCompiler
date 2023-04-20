@@ -1,0 +1,1 @@
+blockstate.sign193("minecraft", "warped_wall_hanging_sign", "\"warped\"", True, "universal_minecraft", "wall_sign", {"facing": ["\"north\"","\"south\"","\"west\"","\"east\""]}, default="minecraft:oak_wall_sign")

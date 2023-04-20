@@ -1,0 +1,1 @@
+blockstate.sign193("minecraft", "cherry_sign", "\"cherry\"", False, "universal_minecraft", "sign", {"rotation": ["\"0\"", "\"1\"", "\"2\"", "\"3\"", "\"4\"", "\"5\"", "\"6\"", "\"7\"", "\"8\"", "\"9\"", "\"10\"", "\"11\"", "\"12\"", "\"13\"", "\"14\"", "\"15\""]}, default="minecraft:oak_sign")

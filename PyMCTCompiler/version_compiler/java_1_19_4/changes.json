@@ -1,0 +1,527 @@
+{
+    "minecraft:cherry_button": {
+        "block_added": {
+            "properties": {
+                "face": [
+                    "floor",
+                    "wall",
+                    "ceiling"
+                ],
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "face": "wall",
+                "facing": "north",
+                "powered": "false"
+            }
+        }
+    },
+    "minecraft:cherry_door": {
+        "block_added": {
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "half": [
+                    "upper",
+                    "lower"
+                ],
+                "hinge": [
+                    "left",
+                    "right"
+                ],
+                "open": [
+                    "true",
+                    "false"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "facing": "north",
+                "half": "lower",
+                "hinge": "left",
+                "open": "false",
+                "powered": "false"
+            }
+        }
+    },
+    "minecraft:cherry_fence": {
+        "block_added": {
+            "properties": {
+                "east": [
+                    "true",
+                    "false"
+                ],
+                "north": [
+                    "true",
+                    "false"
+                ],
+                "south": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ],
+                "west": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "east": "false",
+                "north": "false",
+                "south": "false",
+                "waterlogged": "false",
+                "west": "false"
+            }
+        }
+    },
+    "minecraft:cherry_fence_gate": {
+        "block_added": {
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "in_wall": [
+                    "true",
+                    "false"
+                ],
+                "open": [
+                    "true",
+                    "false"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "facing": "north",
+                "in_wall": "false",
+                "open": "false",
+                "powered": "false"
+            }
+        }
+    },
+    "minecraft:cherry_hanging_sign": {
+        "block_added": {
+            "properties": {
+                "attached": [
+                    "true",
+                    "false"
+                ],
+                "rotation": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "attached": "false",
+                "rotation": "0",
+                "waterlogged": "false"
+            }
+        }
+    },
+    "minecraft:cherry_leaves": {
+        "block_added": {
+            "properties": {
+                "distance": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7"
+                ],
+                "persistent": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "distance": "7",
+                "persistent": "false",
+                "waterlogged": "false"
+            }
+        }
+    },
+    "minecraft:cherry_log": {
+        "block_added": {
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ]
+            },
+            "defaults": {
+                "axis": "y"
+            }
+        }
+    },
+    "minecraft:cherry_planks": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:cherry_pressure_plate": {
+        "block_added": {
+            "properties": {
+                "powered": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "powered": "false"
+            }
+        }
+    },
+    "minecraft:cherry_sapling": {
+        "block_added": {
+            "properties": {
+                "stage": [
+                    "0",
+                    "1"
+                ]
+            },
+            "defaults": {
+                "stage": "0"
+            }
+        }
+    },
+    "minecraft:cherry_sign": {
+        "block_added": {
+            "properties": {
+                "rotation": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "rotation": "0",
+                "waterlogged": "false"
+            }
+        }
+    },
+    "minecraft:cherry_slab": {
+        "block_added": {
+            "properties": {
+                "type": [
+                    "top",
+                    "bottom",
+                    "double"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "type": "bottom",
+                "waterlogged": "false"
+            }
+        }
+    },
+    "minecraft:cherry_stairs": {
+        "block_added": {
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "half": [
+                    "top",
+                    "bottom"
+                ],
+                "shape": [
+                    "straight",
+                    "inner_left",
+                    "inner_right",
+                    "outer_left",
+                    "outer_right"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "facing": "north",
+                "half": "bottom",
+                "shape": "straight",
+                "waterlogged": "false"
+            }
+        }
+    },
+    "minecraft:cherry_trapdoor": {
+        "block_added": {
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "half": [
+                    "top",
+                    "bottom"
+                ],
+                "open": [
+                    "true",
+                    "false"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "facing": "north",
+                "half": "bottom",
+                "open": "false",
+                "powered": "false",
+                "waterlogged": "false"
+            }
+        }
+    },
+    "minecraft:cherry_wall_hanging_sign": {
+        "block_added": {
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "facing": "north",
+                "waterlogged": "false"
+            }
+        }
+    },
+    "minecraft:cherry_wall_sign": {
+        "block_added": {
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "facing": "north",
+                "waterlogged": "false"
+            }
+        }
+    },
+    "minecraft:cherry_wood": {
+        "block_added": {
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ]
+            },
+            "defaults": {
+                "axis": "y"
+            }
+        }
+    },
+    "minecraft:decorated_pot": {
+        "block_added": {
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            },
+            "defaults": {
+                "facing": "north",
+                "waterlogged": "false"
+            }
+        }
+    },
+    "minecraft:pink_petals": {
+        "block_added": {
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "flower_amount": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ]
+            },
+            "defaults": {
+                "facing": "north",
+                "flower_amount": "1"
+            }
+        }
+    },
+    "minecraft:potted_cherry_sapling": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:potted_torchflower": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:stripped_cherry_log": {
+        "block_added": {
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ]
+            },
+            "defaults": {
+                "axis": "y"
+            }
+        }
+    },
+    "minecraft:stripped_cherry_wood": {
+        "block_added": {
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ]
+            },
+            "defaults": {
+                "axis": "y"
+            }
+        }
+    },
+    "minecraft:suspicious_sand": {
+        "block_added": {
+            "properties": {
+                "dusted": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            },
+            "defaults": {
+                "dusted": "0"
+            }
+        }
+    },
+    "minecraft:torchflower": {
+        "block_added": {
+            "properties": {},
+            "defaults": {}
+        }
+    },
+    "minecraft:torchflower_crop": {
+        "block_added": {
+            "properties": {
+                "age": [
+                    "0",
+                    "1",
+                    "2"
+                ]
+            },
+            "defaults": {
+                "age": "0"
+            }
+        }
+    }
+}

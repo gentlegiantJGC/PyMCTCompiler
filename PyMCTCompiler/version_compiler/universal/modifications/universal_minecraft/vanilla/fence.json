@@ -10,7 +10,8 @@
 		"crimson_fence",
 		"warped_fence",
 		"mangrove_fence",
-		"bamboo_fence"
+		"bamboo_fence",
+		"cherry_fence"
 	],
 	"add": {
         "fence": {
@@ -26,7 +27,8 @@
 					"\"nether_brick\"",
 					"\"crimson\"",
 					"\"warped\"",
-					"\"bamboo\""
+					"\"bamboo\"",
+					"\"cherry\""
 				],
                 "east": [
                     "\"true\"",

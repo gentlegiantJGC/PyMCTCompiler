@@ -9,7 +9,8 @@
 		"crimson_planks",
 		"warped_planks",
 		"mangrove_planks",
-		"bamboo_planks"
+		"bamboo_planks",
+		"cherry_planks"
 	],
 	"add": {
 		"planks": {
@@ -24,7 +25,7 @@
 					"\"mangrove\"",
 					"\"crimson\"",
 					"\"warped\"",
-					"\"bamboo\""
+					"\"cherry\""
 				]
 			},
 			"defaults": {

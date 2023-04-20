@@ -9,7 +9,19 @@
 		"crimson_sign",
 		"warped_sign",
 		"mangrove_sign",
-		"bamboo_sign"
+		"bamboo_sign",
+		"cherry_sign",
+		"oak_hanging_sign",
+		"spruce_hanging_sign",
+		"birch_hanging_sign",
+		"jungle_hanging_sign",
+		"acacia_hanging_sign",
+		"dark_oak_hanging_sign",
+		"crimson_hanging_sign",
+		"warped_hanging_sign",
+		"mangrove_hanging_sign",
+		"bamboo_hanging_sign",
+		"cherry_hanging_sign"
 	],
 	"add": {
 		"sign": {
@@ -42,12 +54,19 @@
 					"\"mangrove\"",
 					"\"crimson\"",
 					"\"warped\"",
-					"\"bamboo\""
+					"\"bamboo\"",
+					"\"cherry\""
+				],
+				"connection": [
+					"\"down\"",
+					"\"up\"",
+					"\"up_chain\""
 				]
 			},
 			"defaults": {
 				"rotation": "\"0\"",
-				"material": "\"oak\""
+				"material": "\"oak\"",
+				"connection": "\"down\""
 			},
 			"unbt": "nbt.sign.universal"
 		}
