@@ -1,0 +1,185 @@
+{
+    "minecraft:black_wool": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:blue_wool": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:brown_wool": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:cyan_wool": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:decorated_pot": {
+        "block_added": {
+            "defaults": {
+                "direction": "0"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:double_stone_slab": {
+        "block_removed": true
+    },
+    "minecraft:double_stone_slab2": {
+        "block_removed": true
+    },
+    "minecraft:double_stone_slab3": {
+        "block_removed": true
+    },
+    "minecraft:double_stone_slab4": {
+        "block_removed": true
+    },
+    "minecraft:gray_wool": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:green_wool": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_blue_wool": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_gray_wool": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:lime_wool": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:magenta_wool": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:orange_wool": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:pink_wool": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:purple_wool": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:red_wool": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:stone_slab": {
+        "block_removed": true
+    },
+    "minecraft:stone_slab2": {
+        "block_removed": true
+    },
+    "minecraft:stone_slab3": {
+        "block_removed": true
+    },
+    "minecraft:stone_slab4": {
+        "block_removed": true
+    },
+    "minecraft:suspicious_sand": {
+        "block_added": {
+            "defaults": {
+                "brushed_progress": "0",
+                "hanging": "0b"
+            },
+            "properties": {
+                "brushed_progress": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "hanging": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:torchflower": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:torchflower_crop": {
+        "block_added": {
+            "defaults": {
+                "growth": "0"
+            },
+            "properties": {
+                "growth": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7"
+                ]
+            }
+        }
+    },
+    "minecraft:white_wool": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:wool": {
+        "block_removed": true
+    },
+    "minecraft:yellow_wool": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+	"wool": null,
+	"black_wool": "black_wool",
+	"blue_wool": "blue_wool",
+	"brown_wool": "brown_wool",
+	"cyan_wool": "cyan_wool",
+	"gray_wool": "gray_wool",
+	"green_wool": "green_wool",
+	"light_blue_wool": "light_blue_wool",
+	"light_gray_wool": "light_gray_wool",
+	"lime_wool": "lime_wool",
+	"magenta_wool": "magenta_wool",
+	"orange_wool": "orange_wool",
+	"pink_wool": "pink_wool",
+	"purple_wool": "purple_wool",
+	"red_wool": "red_wool",
+	"white_wool": "white_wool",
+	"yellow_wool": "yellow_wool",
+
+	"stone_slab": null,
+	"stone_slab2": null,
+	"stone_slab3": null,
+	"stone_slab4": null,
+	"double_stone_slab": null,
+	"double_stone_slab2": null,
+	"double_stone_slab3": null,
+	"double_stone_slab4": null
+}
