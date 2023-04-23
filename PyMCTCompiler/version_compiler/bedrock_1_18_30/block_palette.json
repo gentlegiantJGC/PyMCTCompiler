@@ -185285,6 +185285,11 @@
 					"value": 5
 				}
 			]
+		},
+		{
+			"data": 0,
+			"name": "minecraft:client_request_placeholder_block",
+			"states": []
 		}
 	]
 }
