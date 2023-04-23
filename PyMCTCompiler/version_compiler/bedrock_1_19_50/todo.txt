@@ -2,8 +2,6 @@ The states for the following blocks are a mess.
 Come back to them when they are finalised.
 
 	"bamboo_hanging_sign": "bamboo_hanging_sign",
-	"bamboo_standing_sign": "bamboo_standing_sign",
-	"bamboo_wall_sign": "bamboo_wall_sign",
 	"acacia_hanging_sign": "acacia_hanging_sign",
 	"birch_hanging_sign": "birch_hanging_sign",
 	"crimson_hanging_sign": "crimson_hanging_sign",

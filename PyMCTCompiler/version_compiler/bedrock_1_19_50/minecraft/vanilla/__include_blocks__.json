@@ -13,5 +13,8 @@
 	"bamboo_mosaic": "bamboo_mosaic",
 	"bamboo_mosaic_double_slab": "bamboo_mosaic_double_slab",
 	"bamboo_mosaic_slab": "bamboo_mosaic_slab",
-	"bamboo_mosaic_stairs": "bamboo_mosaic_stairs"
+	"bamboo_mosaic_stairs": "bamboo_mosaic_stairs",
+
+	"bamboo_standing_sign": [">nbt.sign.b116", "bamboo_standing_sign"],
+	"bamboo_wall_sign": [">nbt.sign.wall_b116", "bamboo_wall_sign"],
 }
