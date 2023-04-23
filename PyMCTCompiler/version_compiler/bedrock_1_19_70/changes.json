@@ -23,21 +23,6 @@
             "properties": {}
         }
     },
-    "minecraft:decorated_pot": {
-        "block_added": {
-            "defaults": {
-                "direction": "0"
-            },
-            "properties": {
-                "direction": [
-                    "0",
-                    "1",
-                    "2",
-                    "3"
-                ]
-            }
-        }
-    },
     "minecraft:double_stone_slab": {
         "block_removed": true
     },
@@ -121,51 +106,6 @@
     },
     "minecraft:stone_slab4": {
         "block_removed": true
-    },
-    "minecraft:suspicious_sand": {
-        "block_added": {
-            "defaults": {
-                "brushed_progress": "0",
-                "hanging": "0b"
-            },
-            "properties": {
-                "brushed_progress": [
-                    "0",
-                    "1",
-                    "2",
-                    "3"
-                ],
-                "hanging": [
-                    "0b",
-                    "1b"
-                ]
-            }
-        }
-    },
-    "minecraft:torchflower": {
-        "block_added": {
-            "defaults": {},
-            "properties": {}
-        }
-    },
-    "minecraft:torchflower_crop": {
-        "block_added": {
-            "defaults": {
-                "growth": "0"
-            },
-            "properties": {
-                "growth": [
-                    "0",
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5",
-                    "6",
-                    "7"
-                ]
-            }
-        }
     },
     "minecraft:white_wool": {
         "block_added": {
