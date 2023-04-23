@@ -1,10 +1,4 @@
 {
-    "minecraft:client_request_placeholder_block": {
-        "block_added": {
-            "defaults": {},
-            "properties": {}
-        }
-    },
     "minecraft:double_stone_block_slab": {
         "block_added": {
             "defaults": {

@@ -1,0 +1,1 @@
+blockstate.wall_sign193("minecraft", "crimson_wall_sign", "\"crimson\"", False, "universal_minecraft", "wall_sign", {"facing": ["\"north\"","\"south\"","\"west\"","\"east\""]}, default="minecraft:oak_wall_sign")

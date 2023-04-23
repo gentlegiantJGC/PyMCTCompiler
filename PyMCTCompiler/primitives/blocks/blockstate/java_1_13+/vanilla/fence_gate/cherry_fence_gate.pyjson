@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "cherry_fence_gate", "\"cherry\"", "universal_minecraft", "fence_gate", {"facing": ["\"north\"","\"south\"","\"west\"","\"east\""],"in_wall": ["\"true\"","\"false\""],"open": ["\"true\"","\"false\""],"powered": ["\"true\"","\"false\""]}, default="minecraft:oak_fence_gate")

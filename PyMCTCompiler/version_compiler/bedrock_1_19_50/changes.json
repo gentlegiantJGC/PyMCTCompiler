@@ -1,0 +1,285 @@
+{
+    "minecraft:bamboo_button": {
+        "block_added": {
+            "defaults": {
+                "button_pressed_bit": "0b",
+                "facing_direction": "0"
+            },
+            "properties": {
+                "button_pressed_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "facing_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            }
+        }
+    },
+    "minecraft:bamboo_door": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "door_hinge_bit": "0b",
+                "open_bit": "0b",
+                "upper_block_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "door_hinge_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upper_block_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:bamboo_double_slab": {
+        "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
+            "properties": {
+                "top_slot_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:bamboo_fence": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:bamboo_fence_gate": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "in_wall_bit": "0b",
+                "open_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "in_wall_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:bamboo_mosaic": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:bamboo_mosaic_double_slab": {
+        "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
+            "properties": {
+                "top_slot_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:bamboo_mosaic_slab": {
+        "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
+            "properties": {
+                "top_slot_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:bamboo_mosaic_stairs": {
+        "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
+            "properties": {
+                "upside_down_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "weirdo_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:bamboo_planks": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:bamboo_pressure_plate": {
+        "block_added": {
+            "defaults": {
+                "redstone_signal": "0"
+            },
+            "properties": {
+                "redstone_signal": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
+                ]
+            }
+        }
+    },
+    "minecraft:bamboo_slab": {
+        "block_added": {
+            "defaults": {
+                "top_slot_bit": "0b"
+            },
+            "properties": {
+                "top_slot_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:bamboo_stairs": {
+        "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
+            "properties": {
+                "upside_down_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "weirdo_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:bamboo_standing_sign": {
+        "block_added": {
+            "defaults": {
+                "ground_sign_direction": "0"
+            },
+            "properties": {
+                "ground_sign_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
+                ]
+            }
+        }
+    },
+    "minecraft:bamboo_trapdoor": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "open_bit": "0b",
+                "upside_down_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upside_down_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:bamboo_wall_sign": {
+        "block_added": {
+            "defaults": {
+                "facing_direction": "0"
+            },
+            "properties": {
+                "facing_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            }
+        }
+    }
+}

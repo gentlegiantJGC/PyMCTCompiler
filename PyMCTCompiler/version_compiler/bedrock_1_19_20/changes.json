@@ -1,0 +1,11 @@
+{
+    "minecraft:muddy_mangrove_roots": {
+        "properties_added": {
+            "pillar_axis": [
+                "\"y\"",
+                "\"x\"",
+                "\"z\""
+            ]
+        }
+    }
+}

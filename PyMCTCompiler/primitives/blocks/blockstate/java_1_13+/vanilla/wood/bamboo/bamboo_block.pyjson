@@ -1,0 +1,1 @@
+blockstate.wood("minecraft", "bamboo_block", "\"bamboo\"", False, "universal_minecraft", "log", default="minecraft:oak_log")

@@ -1,1 +1,8 @@
-{}
+{
+    "minecraft:client_request_placeholder_block": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    }
+}

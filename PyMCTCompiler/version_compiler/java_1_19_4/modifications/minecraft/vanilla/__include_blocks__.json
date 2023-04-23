@@ -1,0 +1,25 @@
+{
+	"cherry_button": "cherry_button",
+	"cherry_door": "cherry_door",
+	"cherry_fence": "cherry_fence",
+	"cherry_fence_gate": "cherry_fence_gate",
+	"cherry_leaves": "cherry_leaves",
+	"cherry_log": "cherry_log",
+	"cherry_wood": "cherry_wood",
+	"stripped_cherry_log": "stripped_cherry_log",
+	"stripped_cherry_wood": "stripped_cherry_wood",
+	"cherry_planks": "cherry_planks",
+	"cherry_pressure_plate": "cherry_pressure_plate",
+	"cherry_sapling": "cherry_sapling",
+	"cherry_slab": "cherry_slab",
+	"cherry_stairs": "cherry_stairs",
+	"cherry_trapdoor": "cherry_trapdoor",
+
+	"potted_cherry_sapling": "potted_cherry_sapling",
+	"potted_torchflower": "potted_torchflower",
+
+	"cherry_sign": ["cherry_sign193", ">nbt.sign.j113"],
+	"cherry_wall_sign": ["cherry_wall_sign193", ">nbt.sign.wall_j113"],
+	"cherry_hanging_sign": ["cherry_hanging_sign193", ">nbt.sign.j113"],
+	"cherry_wall_hanging_sign": ["cherry_wall_hanging_sign193", ">nbt.sign.wall_j113"]
+}

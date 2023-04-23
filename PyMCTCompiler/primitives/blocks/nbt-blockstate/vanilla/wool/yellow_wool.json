@@ -1,0 +1,35 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:wool"
+        },
+        {
+			"function": "new_properties",
+			"options": {
+				"color": "\"yellow\""
+			}
+		}
+    ],
+    "from_universal": {
+        "universal_minecraft:wool": [
+            {
+                "function": "new_block",
+                "options": "minecraft:white_wool"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "color": {
+                        "\"yellow\"": [
+                            {
+								"function": "new_block",
+								"options": "minecraft:yellow_wool"
+							}
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -8,7 +8,8 @@
 		"dark_oak_leaves",
 		"azalea_leaves",
 		"flowering_azalea_leaves",
-		"mangrove_leaves"
+		"mangrove_leaves",
+		"cherry_leaves"
 	],
 	"add": {
 		"leaves": {
@@ -22,7 +23,8 @@
 					"\"dark_oak\"",
 					"\"mangrove\"",
 					"\"azalea\"",
-					"\"flowering_azalea\""
+					"\"flowering_azalea\"",
+					"\"cherry\""
 				],
 				"distance": [
 					"\"1\"",
