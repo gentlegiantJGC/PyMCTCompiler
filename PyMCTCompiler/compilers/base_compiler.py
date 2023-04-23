@@ -137,8 +137,12 @@ class BaseCompiler:
 
             for include_file in glob.iglob(os.path.join(self._modifications_prefix(), '*', '*', f'__include_{attr}__.json')):
                 namespace, sub_name = include_file.split(os.sep)[-3:-1]
-                with open(include_file) as f:
-                    include_file_data = json.load(f)
+                try:
+                    with open(include_file) as f:
+                        include_file_data = json.load(f)
+                except json.JSONDecodeError as e:
+                    print(f"Could not parse json file {include_file}.")
+                    raise e
                 assert isinstance(include_file_data, dict)
                 if (namespace, sub_name) in getattr(self, f'_{attr}'):
                     for block, primitive_names in include_file_data.items():
