@@ -2,7 +2,7 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:bamboo_sapling"
+            "options": "universal_minecraft:sapling"
         },
         {
             "function": "map_properties",
@@ -26,13 +26,19 @@
                     ]
                 }
             }
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "material": "\"bamboo\""
+            }
         }
     ],
     "from_universal": {
-        "universal_minecraft:bamboo_sapling": [
+        "universal_minecraft:sapling": [
             {
                 "function": "new_block",
-                "options": "minecraft:bamboo_sapling"
+                "options": "minecraft:sapling"
             },
             {
                 "function": "map_properties",
@@ -51,6 +57,16 @@
                                 "function": "new_properties",
                                 "options": {
                                     "age_bit": "1b"
+                                }
+                            }
+                        ]
+                    },
+                    "material": {
+                        "\"bamboo\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "sapling_type": "\"bamboo_sapling\""
                                 }
                             }
                         ]

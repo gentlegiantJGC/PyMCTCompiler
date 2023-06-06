@@ -1,0 +1,35 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:fence"
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "material": "\"jungle\""
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:fence": [
+            {
+                "function": "new_block",
+                "options": "minecraft:oak_fence"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "material": {
+                        "\"jungle\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:jungle_fence"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

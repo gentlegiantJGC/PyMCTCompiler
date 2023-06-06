@@ -1,0 +1,102 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:log"
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "stripped": "\"false\"",
+                "material": "\"oak\""
+            }
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "pillar_axis": {
+                    "\"y\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "axis": "\"y\""
+                            }
+                        }
+                    ],
+                    "\"x\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "axis": "\"x\""
+                            }
+                        }
+                    ],
+                    "\"z\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "axis": "\"z\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:log": [
+            {
+                "function": "new_block",
+                "options": "minecraft:oak_log"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "stripped": {
+                        "\"false\"": [
+                            {
+                                "function": "map_properties",
+                                "options": {
+                                    "material": {
+                                        "\"oak\"": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:oak_log"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "axis": {
+                        "\"y\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": "\"y\""
+                                }
+                            }
+                        ],
+                        "\"x\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": "\"x\""
+                                }
+                            }
+                        ],
+                        "\"z\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": "\"z\""
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
