@@ -420,6 +420,9 @@
             }
         }
     },
+    "minecraft:fence": {
+        "block_removed": true
+    },
     "minecraft:jungle_fence": {
         "block_added": {
             "defaults": {},
@@ -439,6 +442,12 @@
                 ]
             }
         }
+    },
+    "minecraft:log": {
+        "block_removed": true
+    },
+    "minecraft:log2": {
+        "block_removed": true
     },
     "minecraft:oak_fence": {
         "block_added": {

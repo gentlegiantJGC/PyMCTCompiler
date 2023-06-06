@@ -136,12 +136,14 @@ class NBTBlockstateCompiler(BaseCompiler):
 		except AttributeError:
 			pass
 		else:
-			with open(os.path.join(self._directory, 'changes.json'), 'w') as f:
-				json.dump(
-					sort_dict(find_blocks_changes(parent_block_palette, block_palette)),
-					f,
-					indent=4
-				)
+			changes_path = os.path.join(self._directory, 'changes.json')
+			if not os.path.isfile(changes_path):
+				with open(changes_path, 'w') as f:
+					json.dump(
+						sort_dict(find_blocks_changes(parent_block_palette, block_palette)),
+						f,
+						indent=4
+					)
 
 		for (namespace, base_name), spec in block_palette.items():
 			disk_buffer.add_specification(self.version_name, 'block', 'blockstate', namespace, 'vanilla', base_name, spec)
