@@ -111,16 +111,28 @@
 				"options": "minecraft:sapling"
 			},
 			{
+				"function": "map_properties",
+				"options": {
+					"material": {
+						material: [
+							{
+								"function": "new_block",
+								"options": "minecraft:bamboo_sapling"
+							}
+						] for material in [
+							"\"oak\"",
+							"\"spruce\"",
+							"\"birch\"",
+							"\"jungle\"",
+							"\"acacia\"",
+							"\"dark_oak\""
+						]
+					}
+				}
+			},
+			{
 				"function": "carry_properties",
 				"options": {
-					"material": [
-						"\"oak\"",
-						"\"spruce\"",
-						"\"birch\"",
-						"\"jungle\"",
-						"\"acacia\"",
-						"\"dark_oak\""
-					],
 					"stage": [
 						"\"0\"",
 						"\"1\""

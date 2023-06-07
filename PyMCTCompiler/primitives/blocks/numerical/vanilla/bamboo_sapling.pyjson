@@ -1,7 +1,131 @@
-numerical.bit_map(
-	"minecraft", "bamboo_sapling",
-	{
-		"stage": {0: "\"0\"", 1: "\"1\""}
+{
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:sapling"
+		},
+		{
+			"function": "new_properties",
+			"options": {
+				"material": "\"bamboo\""
+			}
+		},
+		{
+			"function": "map_properties",
+			"options": {
+				"block_data": {
+					str(data): [
+						{
+							"function": "new_block",
+							"options": "universal_minecraft:sapling"
+						},
+						{
+							"function": "new_properties",
+							"options": {
+								"stage": {0: "\"0\"", 1: "\"1\""}[data],
+							}
+						}
+					] for data in range(2)
+				}
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:sapling": [
+			{
+				"function": "new_block",
+				"options": "minecraft:sapling"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"stage": {
+						stage: [
+							{
+								"function": "map_properties",
+								"options": {
+									"material": {
+										"\"bamboo\"": [
+											{
+												"function": "new_block",
+												"options": "minecraft:bamboo_sapling"
+											},
+											{
+												"function": "new_properties",
+												"options": {
+													"block_data": str(data1)
+												}
+											}
+										]
+									}
+								}
+							}
+						] for data1, stage in {0: "\"0\"", 1: "\"1\""}.items()
+					}
+				}
+			}
+		]
 	},
-	"universal_minecraft", "bamboo_sapling"
-)
+	"blockstate_specification": {
+		"properties": {
+			"stage": [
+				"\"0\"",
+				"\"1\""
+			]
+		},
+		"defaults": {
+			"stage": "\"0\""
+		}
+	},
+	"blockstate_to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:sapling"
+		},
+		{
+			"function": "new_properties",
+			"options": {
+				"material": "\"bamboo\""
+			}
+		},
+		{
+			"function": "carry_properties",
+			"options": {
+				"stage": [
+					"\"0\"",
+					"\"1\""
+				]
+			}
+		}
+	],
+	"blockstate_from_universal": {
+		"universal_minecraft:sapling": [
+			{
+				"function": "new_block",
+				"options": "minecraft:sapling"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"material": {
+						"\"bamboo\"": [
+							{
+								"function": "new_block",
+								"options": "minecraft:bamboo_sapling"
+							}
+						]
+					}
+				}
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"stage": [
+						"\"0\"",
+						"\"1\""
+					]
+				}
+			}
+		]
+	}
+}
