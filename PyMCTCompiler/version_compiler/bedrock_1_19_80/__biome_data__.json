@@ -1,0 +1,12 @@
+{
+	"add": {
+		"biomes": {
+			"minecraft:cherry_grove": [
+				192,
+				"universal_minecraft:cherry_grove"
+			]
+		},
+		"universal_remap": {}
+	},
+	"remove": []
+}
