@@ -116,8 +116,10 @@
 					"material": {
 						material: [
 							{
-								"function": "new_block",
-								"options": "minecraft:bamboo_sapling"
+								"function": "new_properties",
+								"options": {
+									"material": material
+								}
 							}
 						] for material in [
 							"\"oak\"",
