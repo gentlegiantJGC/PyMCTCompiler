@@ -95,6 +95,9 @@
 		},
 		"spore_blossom": {
 			"unbt": "nbt.spore_blossom.universal"
+		},
+		"calibrated_sculk_sensor": {
+			"unbt": "nbt.calibrated_sculk_sensor.universal"
 		}
 	}
 }
