@@ -158,3 +158,8 @@ wall_b116 = merge(
     [EmptyNBT(':Sign'), _B17, _B116, _BText, bedrock_is_movable],
     ['universal_minecraft:wall_sign']
 )
+
+hanging_b120 = merge(
+    [EmptyNBT(':Sign'), _B17, _B116, _BText, bedrock_is_movable],
+    ['universal_minecraft:sign', 'universal_minecraft:wall_sign']
+)

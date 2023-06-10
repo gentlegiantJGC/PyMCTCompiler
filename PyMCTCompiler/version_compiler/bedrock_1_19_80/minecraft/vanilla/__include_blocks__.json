@@ -38,8 +38,6 @@
 	"warped_stem": "warped_stem_20",
 	"stripped_warped_stem": "stripped_warped_stem_20",
 
-	"calibrated_sculk_sensor": null,
-
 	"cherry_button": "cherry_button",
 	"cherry_door": "cherry_door",
 	"cherry_double_slab": "cherry_double_slab",
@@ -51,12 +49,13 @@
 	"cherry_slab": "cherry_slab",
 	"cherry_stairs": "cherry_stairs",
 	"cherry_trapdoor": "cherry_trapdoor",
-	"cherry_standing_sign": [">nbt.sign.b116", "cherry_standing_sign"],
-	"cherry_wall_sign": [">nbt.sign.wall_b116", "cherry_wall_sign"],
-	"cherry_hanging_sign": null,
+	"cherry_standing_sign": [">nbt.sign.b116", "cherry_standing_sign_20"],
+	"cherry_wall_sign": [">nbt.sign.wall_b116", "cherry_wall_sign_20"],
+	"cherry_hanging_sign": [">nbt.sign.hanging_b120", "cherry_hanging_sign_20"],
 	"cherry_wood": "cherry_wood",
 	"stripped_cherry_wood": "stripped_cherry_wood",
 
+	"calibrated_sculk_sensor": null,
 	"pink_petals": null,
 	"suspicious_gravel": null
 }
