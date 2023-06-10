@@ -1,0 +1,302 @@
+{
+    "minecraft:black_carpet": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:blue_carpet": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:brain_coral": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:brown_carpet": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:bubble_coral": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:calibrated_sculk_sensor": {
+        "properties_added": {
+            "sculk_sensor_phase": [
+                "0",
+                "1",
+                "2"
+            ]
+        },
+        "properties_removed": {
+            "powered_bit": [
+                "0b",
+                "1b"
+            ]
+        }
+    },
+    "minecraft:carpet": {
+        "block_removed": true
+    },
+    "minecraft:carved_pumpkin": {
+        "properties_added": {
+            "minecraft:cardinal_direction": [
+                "\"south\"",
+                "\"west\"",
+                "\"north\"",
+                "\"east\""
+            ]
+        },
+        "properties_removed": {
+            "direction": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
+        }
+    },
+    "minecraft:coral": {
+        "block_removed": true
+    },
+    "minecraft:cyan_carpet": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:dead_brain_coral": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:dead_bubble_coral": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:dead_fire_coral": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:dead_horn_coral": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:dead_tube_coral": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:fire_coral": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:gray_carpet": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:green_carpet": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:horn_coral": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:lava_cauldron": {
+        "block_removed": true
+    },
+    "minecraft:light_blue_carpet": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_gray_carpet": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:lime_carpet": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:lit_pumpkin": {
+        "properties_added": {
+            "minecraft:cardinal_direction": [
+                "\"south\"",
+                "\"west\"",
+                "\"north\"",
+                "\"east\""
+            ]
+        },
+        "properties_removed": {
+            "direction": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
+        }
+    },
+    "minecraft:magenta_carpet": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:orange_carpet": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:pink_carpet": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:pitcher_crop": {
+        "block_added": {
+            "defaults": {
+                "growth": "0",
+                "upper_block_bit": "0b"
+            },
+            "properties": {
+                "growth": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7"
+                ],
+                "upper_block_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:pitcher_plant": {
+        "block_added": {
+            "defaults": {
+                "upper_block_bit": "0b"
+            },
+            "properties": {
+                "upper_block_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:pumpkin": {
+        "properties_added": {
+            "minecraft:cardinal_direction": [
+                "\"south\"",
+                "\"west\"",
+                "\"north\"",
+                "\"east\""
+            ]
+        },
+        "properties_removed": {
+            "direction": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
+        }
+    },
+    "minecraft:purple_carpet": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:red_carpet": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:sculk_sensor": {
+        "properties_added": {
+            "sculk_sensor_phase": [
+                "0",
+                "1",
+                "2"
+            ]
+        },
+        "properties_removed": {
+            "powered_bit": [
+                "0b",
+                "1b"
+            ]
+        }
+    },
+    "minecraft:sniffer_egg": {
+        "block_added": {
+            "defaults": {
+                "cracked_state": "\"no_cracks\""
+            },
+            "properties": {
+                "cracked_state": [
+                    "\"no_cracks\"",
+                    "\"cracked\"",
+                    "\"max_cracked\""
+                ]
+            }
+        }
+    },
+    "minecraft:tube_coral": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:white_carpet": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:yellow_carpet": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    }
+}

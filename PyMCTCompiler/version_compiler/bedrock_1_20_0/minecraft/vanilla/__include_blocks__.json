@@ -1,0 +1,44 @@
+{
+	"minecraft:carpet": null,
+	"minecraft:black_carpet": null,
+	"minecraft:blue_carpet": null,
+	"minecraft:brown_carpet": null,
+	"minecraft:cyan_carpet": null,
+	"minecraft:gray_carpet": null,
+	"minecraft:green_carpet": null,
+	"minecraft:light_blue_carpet": null,
+	"minecraft:light_gray_carpet": null,
+	"minecraft:lime_carpet": null,
+	"minecraft:magenta_carpet": null,
+	"minecraft:orange_carpet": null,
+	"minecraft:pink_carpet": null,
+	"minecraft:purple_carpet": null,
+	"minecraft:red_carpet": null,
+	"minecraft:white_carpet": null,
+	"minecraft:yellow_carpet": null,
+
+	"minecraft:coral": null,
+	"minecraft:brain_coral": null,
+	"minecraft:bubble_coral": null,
+	"minecraft:dead_brain_coral": null,
+	"minecraft:dead_bubble_coral": null,
+	"minecraft:dead_fire_coral": null,
+	"minecraft:dead_horn_coral": null,
+	"minecraft:dead_tube_coral": null,
+	"minecraft:fire_coral": null,
+	"minecraft:horn_coral": null,
+	"minecraft:tube_coral": null,
+
+	"minecraft:pumpkin": null,
+	"minecraft:carved_pumpkin": null,
+	"minecraft:lit_pumpkin": null,
+
+	"minecraft:calibrated_sculk_sensor": null,
+
+	"minecraft:lava_cauldron": null,
+
+	"minecraft:pitcher_crop": null,
+	"minecraft:pitcher_plant": null,
+	"minecraft:sculk_sensor": null,
+	"minecraft:sniffer_egg": null
+}
