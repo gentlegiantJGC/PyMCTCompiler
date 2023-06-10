@@ -27,7 +27,7 @@
 	"double_stone_slab4": null,
 
 	"decorated_pot": null,
-	"suspicious_sand": null,
+	"suspicious_sand": "suspicious_sand",
 	"torchflower": null,
 	"torchflower_crop": null
 }

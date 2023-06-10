@@ -56,6 +56,6 @@
 	"stripped_cherry_wood": "stripped_cherry_wood",
 
 	"calibrated_sculk_sensor": null,
-	"pink_petals": null,
-	"suspicious_gravel": null
+	"pink_petals": "pink_petals",
+	"suspicious_gravel": "suspicious_gravel"
 }

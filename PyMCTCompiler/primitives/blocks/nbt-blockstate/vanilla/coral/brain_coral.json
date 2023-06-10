@@ -1,0 +1,45 @@
+{
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:coral"
+		},
+		{
+			"function": "new_properties",
+			"options": {
+				"coral_type": "\"brain\"",
+				"dead": "\"false\""
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:coral": [
+			{
+				"function": "new_block",
+				"options": "minecraft:tube_coral"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"coral_type": {
+						"\"brain\"": [
+							{
+								"function": "map_properties",
+								"options": {
+									"dead": {
+										"\"false\"": [
+											{
+												"function": "new_block",
+												"options": "minecraft:brain_coral"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			}
+		]
+	}
+}

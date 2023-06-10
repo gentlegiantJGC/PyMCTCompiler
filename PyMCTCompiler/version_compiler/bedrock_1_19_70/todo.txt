@@ -1,4 +1,3 @@
 	"decorated_pot": "decorated_pot",
-	"suspicious_sand": "suspicious_sand",
 	"torchflower": "torchflower",
 	"torchflower_crop": "torchflower_crop"

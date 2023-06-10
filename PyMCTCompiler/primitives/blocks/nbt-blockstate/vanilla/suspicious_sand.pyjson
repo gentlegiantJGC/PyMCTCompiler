@@ -1,0 +1,82 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:suspicious_sand"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "brushed_progress": {
+                    brushed_progress: [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "dusted": dusted
+                            }
+                        }
+                    ] for brushed_progress, dusted in {
+                        "0": "\"0\"",
+                        "1": "\"1\"",
+                        "2": "\"2\"",
+                        "3": "\"3\"",
+                    }.items()
+                },
+                "hanging": {
+                    hanging: [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "hanging": hanging_bool
+                            }
+                        }
+                    ] for hanging, hanging_bool in {
+                        "0b": "\"false\"",
+                        "1b": "\"true\"",
+                    }.items()
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:suspicious_sand": [
+            {
+                "function": "new_block",
+                "options": "minecraft:suspicious_sand"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "dusted": {
+                        dusted: [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "brushed_progress": brushed_progress
+                                }
+                            }
+                        ] for brushed_progress, dusted in {
+                            "0": "\"0\"",
+                            "1": "\"1\"",
+                            "2": "\"2\"",
+                            "3": "\"3\"",
+                        }.items()
+                    },
+                    "hanging": {
+                        hanging_bool: [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "hanging": hanging
+                                }
+                            }
+                        ] for hanging, hanging_bool in {
+                            "0b": "\"false\"",
+                            "1b": "\"true\"",
+                        }.items()
+                    }
+                }
+            }
+        ]
+    }
+}

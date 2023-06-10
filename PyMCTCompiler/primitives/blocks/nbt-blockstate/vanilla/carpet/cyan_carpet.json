@@ -1,0 +1,35 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:carpet"
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "color": "\"cyan\""
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:carpet": [
+            {
+                "function": "new_block",
+                "options": "minecraft:white_carpet"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "color": {
+                        "\"cyan\"": [
+                            {
+				                "function": "new_block",
+				                "options": "minecraft:cyan_carpet"
+				            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
