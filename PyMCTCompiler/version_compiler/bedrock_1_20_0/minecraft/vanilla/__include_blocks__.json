@@ -29,16 +29,17 @@
 	"horn_coral": "horn_coral",
 	"dead_horn_coral": "dead_horn_coral",
 
-	"pumpkin": null,
-	"carved_pumpkin": null,
-	"lit_pumpkin": null,
+	"pumpkin": "pumpkin_20",
+	"carved_pumpkin": "carved_pumpkin_20",
+	"lit_pumpkin": "lit_pumpkin_20",
 
-	"calibrated_sculk_sensor": null,
-
+	"cauldron": [">nbt.cauldron.b113", "cauldron", "cauldron_powder_snow", "cauldron_lava"],
 	"lava_cauldron": null,
 
-	"pitcher_crop": null,
-	"pitcher_plant": null,
+	"pitcher_crop": "pitcher_crop",
+	"pitcher_plant": "pitcher_plant",
+	"sniffer_egg": "sniffer_egg",
+
 	"sculk_sensor": null,
-	"sniffer_egg": null
+	"calibrated_sculk_sensor": null
 }

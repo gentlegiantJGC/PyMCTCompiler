@@ -1,0 +1,58 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:torchflower_crop"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "growth": {
+                    growth: [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "age": age
+                            }
+                        }
+                    ] for growth, age in {
+                        "0": "\"0\"",
+                        "1": "\"1\"",
+                        "2": "\"1\"",
+                        "3": "\"1\"",
+                        "4": "\"1\"",
+                        "5": "\"1\"",
+                        "6": "\"1\"",
+                        "7": "\"1\"",
+                    }.items()
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:torchflower_crop": [
+            {
+                "function": "new_block",
+                "options": "minecraft:torchflower_crop"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "age": {
+                        age: [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "growth": growth
+                                }
+                            }
+                        ] for growth, age in {
+                            "0": "\"0\"",
+                            "1": "\"1\"",
+                        }.items()
+                    }
+                }
+            }
+        ]
+    }
+}

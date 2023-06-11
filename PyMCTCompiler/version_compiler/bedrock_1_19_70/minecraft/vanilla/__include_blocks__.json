@@ -28,6 +28,6 @@
 
 	"decorated_pot": null,
 	"suspicious_sand": "suspicious_sand",
-	"torchflower": null,
-	"torchflower_crop": null
+	"torchflower": "torchflower",
+	"torchflower_crop": "torchflower_crop"
 }

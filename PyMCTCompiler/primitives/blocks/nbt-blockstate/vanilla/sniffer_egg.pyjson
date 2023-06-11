@@ -1,0 +1,54 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:sniffer_egg"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "cracked_state": {
+                    cracked_state: [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "hatch": hatch
+                            }
+                        }
+                    ] for cracked_state, hatch in (
+                        ("\"no_cracks\"", "\"0\""),
+                        ("\"cracked\"", "\"1\""),
+                        ("\"max_cracked\"", "\"2\"")
+                    )
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:sniffer_egg": [
+            {
+                "function": "new_block",
+                "options": "minecraft:sniffer_egg"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "hatch": {
+                        hatch: [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "cracked_state": cracked_state
+                                }
+                            }
+                        ] for cracked_state, hatch in (
+                            ("\"no_cracks\"", "\"0\""),
+                            ("\"cracked\"", "\"1\""),
+                            ("\"max_cracked\"", "\"2\"")
+                        )
+                    }
+                }
+            }
+        ]
+    }
+}

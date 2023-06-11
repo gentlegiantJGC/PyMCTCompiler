@@ -1,0 +1,82 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:pitcher_crop"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "upper_block_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "half": "\"lower\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "half": "\"upper\""
+                            }
+                        }
+                    ]
+                },
+                "growth": {
+                    str(growth): [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "age": f"\"{min(4, growth)}\""
+                            }
+                        }
+                    ] for growth in range(8)
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:pitcher_crop": [
+            {
+                "function": "new_block",
+                "options": "minecraft:pitcher_crop"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "half": {
+                        "\"lower\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "upper_block_bit": "0b"
+                                }
+                            }
+                        ],
+                        "\"upper\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "upper_block_bit": "1b"
+                                }
+                            }
+                        ]
+                    },
+                    "age": {
+                        f"\"{growth}\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "growth": str(growth)
+                                }
+                            }
+                        ] for growth in range(4)
+                    }
+                }
+            }
+        ]
+    }
+}
