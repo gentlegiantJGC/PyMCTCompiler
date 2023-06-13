@@ -55,5 +55,7 @@
 	"bamboo_sign": ["bamboo_sign193", ">nbt.sign.j113"],
 	"bamboo_wall_sign": ["bamboo_wall_sign193", ">nbt.sign.wall_j113"],
 	"bamboo_hanging_sign": ["bamboo_hanging_sign193", ">nbt.sign.j113"],
-	"bamboo_wall_hanging_sign": ["bamboo_wall_hanging_sign193", ">nbt.sign.wall_j113"]
+	"bamboo_wall_hanging_sign": ["bamboo_wall_hanging_sign193", ">nbt.sign.wall_j113"],
+
+	"chiseled_bookshelf": ["chiseled_bookshelf", ">nbt.chiseled_bookshelf.j120"]
 }

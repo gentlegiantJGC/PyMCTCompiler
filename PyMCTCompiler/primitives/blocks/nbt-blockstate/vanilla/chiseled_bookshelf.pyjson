@@ -1,0 +1,168 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:chiseled_bookshelf"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "books_stored": {
+                    str(books_stored): [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "slot_0_occupied": ["\"true\"", "\"false\""][bool(books_stored & 1)],
+                                "slot_1_occupied": ["\"true\"", "\"false\""][bool(books_stored & 2)],
+                                "slot_2_occupied": ["\"true\"", "\"false\""][bool(books_stored & 4)],
+                                "slot_3_occupied": ["\"true\"", "\"false\""][bool(books_stored & 8)],
+                                "slot_4_occupied": ["\"true\"", "\"false\""][bool(books_stored & 16)],
+                                "slot_5_occupied": ["\"true\"", "\"false\""][bool(books_stored & 32)],
+                            }
+                        }
+                    ] for books_stored in range(64)
+                },
+                "direction": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"north\""
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"east\""
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"south\""
+                            }
+                        }
+                    ],
+                    "3": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"west\""
+                            }
+                        }
+                    ]
+                },
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:chiseled_bookshelf": [
+            {
+                "function": "new_block",
+                "options": "minecraft:chiseled_bookshelf"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    **{
+                        "slot_5_occupied": {
+                            slot_5_occupied: [
+                                {
+                                    "function": "map_properties",
+                                    "options": {
+                                        "slot_4_occupied": {
+                                            slot_4_occupied: [
+                                                {
+                                                    "function": "map_properties",
+                                                    "options": {
+                                                        "slot_3_occupied": {
+                                                            slot_3_occupied: [
+                                                                {
+                                                                    "function": "map_properties",
+                                                                    "options": {
+                                                                        "slot_2_occupied": {
+                                                                            slot_2_occupied: [
+                                                                                {
+                                                                                    "function": "map_properties",
+                                                                                    "options": {
+                                                                                        "slot_1_occupied": {
+                                                                                            slot_1_occupied: [
+                                                                                                {
+                                                                                                    "function": "map_properties",
+                                                                                                    "options": {
+                                                                                                        "slot_0_occupied": {
+                                                                                                            slot_0_occupied: [
+                                                                                                                {
+                                                                                                                    "function": "new_properties",
+                                                                                                                    "options": {
+                                                                                                                        "books_stored": str(books_stored32 + books_stored16 + books_stored8 + books_stored4 + books_stored2 + books_stored1)
+                                                                                                                    }
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        } for slot_0_occupied, books_stored1 in (("\"false\"", 0), ("\"true\"", 1))
+                                                                                                    }
+                                                                                                }
+                                                                                            ]
+                                                                                        } for slot_1_occupied, books_stored2 in (("\"false\"", 0), ("\"true\"", 2))
+                                                                                    }
+                                                                                }
+                                                                            ]
+                                                                        } for slot_2_occupied, books_stored4 in (("\"false\"", 0), ("\"true\"", 4))
+                                                                    }
+                                                                }
+                                                            ]
+                                                        } for slot_3_occupied, books_stored8 in (("\"false\"", 0), ("\"true\"", 8))
+                                                    }
+                                                }
+                                            ]
+                                        } for slot_4_occupied, books_stored16 in (("\"false\"", 0), ("\"true\"", 16))
+                                    }
+                                }
+                            ]
+                        } for slot_5_occupied, books_stored32 in (("\"false\"", 0), ("\"true\"", 32))
+                    },
+                    **{
+                        "facing": {
+                            "\"north\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "direction": "0"
+                                    }
+                                }
+                            ],
+                            "\"east\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "direction": "1"
+                                    }
+                                }
+                            ],
+                            "\"south\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "direction": "2"
+                                    }
+                                }
+                            ],
+                            "\"west\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "direction": "3"
+                                    }
+                                }
+                            ]
+                        },
+                    }
+                }
+            }
+        ]
+    }
+}

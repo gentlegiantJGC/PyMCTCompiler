@@ -40,3 +40,8 @@ b119 = merge(
     [EmptyNBT(':SculkSensor'), _B_Base, bedrock_is_movable],
     ['universal_minecraft:sculk_sensor']
 )
+
+calibrated_b120 = merge(
+    [EmptyNBT(':CalibratedSculkSensor'), _B_Base, bedrock_is_movable],
+    ['universal_minecraft:calibrated_sculk_sensor']
+)

@@ -1,0 +1,81 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:sculk_sensor"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "sculk_sensor_phase": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "power": "\"0\"",
+                                "sculk_sensor_phase": "\"inactive\""
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "power": "\"1\"",
+                                "sculk_sensor_phase": "\"active\""
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "power": "\"1\"",
+                                "sculk_sensor_phase": "\"cooldown\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:sculk_sensor": [
+            {
+                "function": "new_block",
+                "options": "minecraft:sculk_sensor"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "sculk_sensor_phase": {
+                        "\"inactive\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "sculk_sensor_phase": "0"
+                                }
+                            }
+                        ],
+                        "\"active\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "sculk_sensor_phase": "1"
+                                }
+                            }
+                        ],
+                        "\"cooldown\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "sculk_sensor_phase": "2"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

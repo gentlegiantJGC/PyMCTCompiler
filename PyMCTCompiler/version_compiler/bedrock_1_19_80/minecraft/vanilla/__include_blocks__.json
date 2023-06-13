@@ -55,7 +55,7 @@
 	"cherry_wood": "cherry_wood",
 	"stripped_cherry_wood": "stripped_cherry_wood",
 
-	"calibrated_sculk_sensor": null,
+	"calibrated_sculk_sensor": [">nbt.sculk_sensor.calibrated_b120", "calibrated_sculk_sensor"],
 	"pink_petals": "pink_petals",
 	"suspicious_gravel": "suspicious_gravel"
 }

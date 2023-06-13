@@ -59,6 +59,14 @@ java_items_5 = NBTRemapHelper(
     "{Items: []}"
 )
 
+java_items_6 = NBTRemapHelper(
+    [(
+        ("Items", "list", []),
+        ("Items", "list", [("utags", "compound")])
+    )],
+    "{Items: []}"
+)
+
 java_items_9 = NBTRemapHelper(
     [(
         ("Items", "list", []),
@@ -158,6 +166,14 @@ bedrock_items_3 = NBTRemapHelper(
 )
 
 bedrock_items_5 = NBTRemapHelper(
+    [(
+        ("Items", "list", []),
+        ("Items", "list", [("utags", "compound")])
+    )],
+    "{Items: []}"
+)
+
+bedrock_items_6 = NBTRemapHelper(
     [(
         ("Items", "list", []),
         ("Items", "list", [("utags", "compound")])

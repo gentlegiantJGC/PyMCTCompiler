@@ -420,41 +420,6 @@
             }
         }
     },
-    "minecraft:chiseled_bookshelf": {
-        "block_added": {
-            "defaults": {
-                "books_stored": "0",
-                "direction": "0",
-                "last_interacted_slot": "0"
-            },
-            "properties": {
-                "books_stored": [
-                    "0",
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5",
-                    "6"
-                ],
-                "direction": [
-                    "0",
-                    "1",
-                    "2",
-                    "3"
-                ],
-                "last_interacted_slot": [
-                    "0",
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5",
-                    "6"
-                ]
-            }
-        }
-    },
     "minecraft:crimson_hanging_sign": {
         "block_added": {
             "defaults": {

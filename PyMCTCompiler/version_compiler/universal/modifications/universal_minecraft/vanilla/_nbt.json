@@ -98,6 +98,9 @@
 		},
 		"calibrated_sculk_sensor": {
 			"unbt": "nbt.calibrated_sculk_sensor.universal"
+		},
+		"chiseled_bookshelf": {
+			"unbt": "nbt.chiseled_bookshelf.universal"
 		}
 	}
 }

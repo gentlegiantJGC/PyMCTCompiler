@@ -40,6 +40,6 @@
 	"pitcher_plant": "pitcher_plant",
 	"sniffer_egg": "sniffer_egg",
 
-	"sculk_sensor": null,
-	"calibrated_sculk_sensor": null
+	"sculk_sensor": [">nbt.sculk_sensor.b119", "sculk_sensor_20"],
+	"calibrated_sculk_sensor": [">nbt.sculk_sensor.calibrated_b120", "calibrated_sculk_sensor_20"]
 }
