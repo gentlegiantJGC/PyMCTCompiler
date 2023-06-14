@@ -1,1 +1,0 @@
-blockstate.wall_sign193("minecraft", "bamboo_wall_hanging_sign", "\"bamboo\"", True, "universal_minecraft", "wall_sign", {"facing": ["\"north\"","\"south\"","\"west\"","\"east\""]}, default="minecraft:oak_wall_sign")

@@ -754,7 +754,7 @@ def candle_cake(colour: str):
         }
     }
 
-def standing_sign_120(src_block: str, material: str, default="standing_sign"):
+def standing_sign_120(src_block: str, material: str):
     return {
         "to_universal": [
             {
@@ -792,36 +792,23 @@ def standing_sign_120(src_block: str, material: str, default="standing_sign"):
                 {
                     "function": "map_properties",
                     "options": {
-                        "connection": {
-                            "\"down\"": [
+                        "material": {
+                            f"\"{material}\"": [
                                 {
                                     "function": "new_block",
-                                    "options": f"minecraft:{default}"
-                                },
-                                {
-                                    "function": "map_properties",
-                                    "options": {
-                                        "material": {
-                                            f"\"{material}\"": [
-                                                {
-                                                    "function": "new_block",
-                                                    "options": f"minecraft:{src_block}"
-                                                }
-                                            ]
-                                        },
-                                        "rotation": {
-                                            f"\"{rotation}\"": [
-                                                {
-                                                    "function": "new_properties",
-                                                    "options": {
-                                                        "ground_sign_direction": str(rotation)
-                                                    }
-                                                }
-                                            ] for rotation in range(16)
-                                        }
-                                    }
+                                    "options": f"minecraft:{src_block}"
                                 }
                             ]
+                        },
+                        "rotation": {
+                            f"\"{rotation}\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "ground_sign_direction": str(rotation)
+                                    }
+                                }
+                            ] for rotation in range(16)
                         }
                     }
                 }
@@ -829,7 +816,7 @@ def standing_sign_120(src_block: str, material: str, default="standing_sign"):
         }
     }
 
-def wall_sign_120(src_block: str, material: str, default="wall_sign"):
+def wall_sign_120(src_block: str, material: str):
     return {
         "to_universal": [
             {
@@ -874,57 +861,44 @@ def wall_sign_120(src_block: str, material: str, default="wall_sign"):
                 {
                     "function": "map_properties",
                     "options": {
-                        "hanging": {
-                            "\"false\"": [
+                        "material": {
+                            f"\"{material}\"": [
                                 {
                                     "function": "new_block",
-                                    "options": f"minecraft:{default}"
-                                },
+                                    "options": f"minecraft:{src_block}"
+                                }
+                            ]
+                        },
+                        "facing": {
+                            "\"north\"": [
                                 {
-                                    "function": "map_properties",
+                                    "function": "new_properties",
                                     "options": {
-                                        "material": {
-                                            f"\"{material}\"": [
-                                                {
-                                                    "function": "new_block",
-                                                    "options": f"minecraft:{src_block}"
-                                                }
-                                            ]
-                                        },
-                                        "facing": {
-                                            "\"north\"": [
-                                                {
-                                                    "function": "new_properties",
-                                                    "options": {
-                                                        "facing_direction": "2"
-                                                    }
-                                                }
-                                            ],
-                                            "\"south\"": [
-                                                {
-                                                    "function": "new_properties",
-                                                    "options": {
-                                                        "facing_direction": "3"
-                                                    }
-                                                }
-                                            ],
-                                            "\"west\"": [
-                                                {
-                                                    "function": "new_properties",
-                                                    "options": {
-                                                        "facing_direction": "4"
-                                                    }
-                                                }
-                                            ],
-                                            "\"east\"": [
-                                                {
-                                                    "function": "new_properties",
-                                                    "options": {
-                                                        "facing_direction": "5"
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "facing_direction": "2"
+                                    }
+                                }
+                            ],
+                            "\"south\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "facing_direction": "3"
+                                    }
+                                }
+                            ],
+                            "\"west\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "facing_direction": "4"
+                                    }
+                                }
+                            ],
+                            "\"east\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "facing_direction": "5"
                                     }
                                 }
                             ]
@@ -935,7 +909,7 @@ def wall_sign_120(src_block: str, material: str, default="wall_sign"):
         }
     }
 
-def hanging_sign_120(src_block: str, material: str, default="oak_hanging_sign"):
+def hanging_sign_120(src_block: str, material: str):
     return {
         "to_universal": [
             {
@@ -956,13 +930,7 @@ def hanging_sign_120(src_block: str, material: str, default="oak_hanging_sign"):
                                         "0b": [
                                             {
                                                 "function": "new_block",
-                                                "options": "universal_minecraft:wall_sign"
-                                            },
-                                            {
-                                                "function": "new_properties",
-                                                "options": {
-                                                    "hanging": "\"true\""
-                                                }
+                                                "options": "universal_minecraft:wall_hanging_sign"
                                             },
                                             {
                                                 "function": "map_properties",
@@ -990,7 +958,7 @@ def hanging_sign_120(src_block: str, material: str, default="oak_hanging_sign"):
                                         "1b": [
                                             {
                                                 "function": "new_block",
-                                                "options": "universal_minecraft:sign"
+                                                "options": "universal_minecraft:hanging_sign"
                                             },
                                             {
                                                 "function": "new_properties",
@@ -1028,7 +996,7 @@ def hanging_sign_120(src_block: str, material: str, default="oak_hanging_sign"):
                         "1b": [
                             {
                                 "function": "new_block",
-                                "options": "universal_minecraft:sign"
+                                "options": "universal_minecraft:hanging_sign"
                             },
                             {
                                 "function": "new_properties",
@@ -1057,20 +1025,16 @@ def hanging_sign_120(src_block: str, material: str, default="oak_hanging_sign"):
             }
         ],
         "from_universal": {
-            "universal_minecraft:sign": [
+            "universal_minecraft:hanging_sign": [
                 {
                     "function": "new_block",
-                    "options": "minecraft:standing_sign"
+                    "options": "minecraft:oak_hanging_sign"
                 },
                 {
                     "function": "map_properties",
                     "options": {
                         "connection": {
                             "\"up\"": [
-                                {
-                                    "function": "new_block",
-                                    "options": f"minecraft:{default}"
-                                },
                                 {
                                     "function": "new_properties",
                                     "options": {
@@ -1121,10 +1085,6 @@ def hanging_sign_120(src_block: str, material: str, default="oak_hanging_sign"):
                             ],
                             "\"up_chain\"": [
                                 {
-                                    "function": "new_block",
-                                    "options": f"minecraft:{default}"
-                                },
-                                {
                                     "function": "new_properties",
                                     "options": {
                                         "attached_bit": "1b",
@@ -1159,72 +1119,59 @@ def hanging_sign_120(src_block: str, material: str, default="oak_hanging_sign"):
                     }
                 }
             ],
-            "universal_minecraft:wall_sign": [
+            "universal_minecraft:wall_hanging_sign": [
                 {
                     "function": "new_block",
-                    "options": "minecraft:wall_sign"
+                    "options": "minecraft:oak_hanging_sign"
                 },
                 {
                     "function": "map_properties",
                     "options": {
-                        "hanging": {
-                            "\"true\"": [
+                        "material": {
+                            f"\"{material}\"": [
                                 {
                                     "function": "new_block",
-                                    "options": f"minecraft:{default}"
+                                    "options": f"minecraft:{src_block}"
                                 },
                                 {
-                                    "function": "map_properties",
+                                    "function": "new_properties",
                                     "options": {
-                                        "material": {
-                                            f"\"{material}\"": [
-                                                {
-                                                    "function": "new_block",
-                                                    "options": f"minecraft:{src_block}"
-                                                },
-                                                {
-                                                    "function": "new_properties",
-                                                    "options": {
-                                                        "attached_bit": "0b",
-                                                        "hanging": "0b",
-                                                    }
-                                                }
-                                            ]
-                                        },
-                                        "facing": {
-                                            "\"north\"": [
-                                                {
-                                                    "function": "new_properties",
-                                                    "options": {
-                                                        "facing_direction": "2"
-                                                    }
-                                                }
-                                            ],
-                                            "\"south\"": [
-                                                {
-                                                    "function": "new_properties",
-                                                    "options": {
-                                                        "facing_direction": "3"
-                                                    }
-                                                }
-                                            ],
-                                            "\"west\"": [
-                                                {
-                                                    "function": "new_properties",
-                                                    "options": {
-                                                        "facing_direction": "4"
-                                                    }
-                                                }
-                                            ],
-                                            "\"east\"": [
-                                                {
-                                                    "function": "new_properties",
-                                                    "options": {
-                                                        "facing_direction": "5"
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                        "attached_bit": "0b",
+                                        "hanging": "0b",
+                                    }
+                                }
+                            ]
+                        },
+                        "facing": {
+                            "\"north\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "facing_direction": "2"
+                                    }
+                                }
+                            ],
+                            "\"south\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "facing_direction": "3"
+                                    }
+                                }
+                            ],
+                            "\"west\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "facing_direction": "4"
+                                    }
+                                }
+                            ],
+                            "\"east\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "facing_direction": "5"
                                     }
                                 }
                             ]

@@ -16,8 +16,18 @@ B116?   {
 }
 """
 
+"""
+Hanging Sign
+{back_text: {has_glowing_text: 0b, color: "black", messages: ['{"text":""}', '{"text":""}', '{"text":""}', '{"text":""}']}, is_waxed: 0b, x: -12, y: 73, z: 11, id: "minecraft:hanging_sign", front_text: {has_glowing_text: 0b, color: "black", messages: ['{"text":""}', '{"text":""}', '{"text":""}', '{"text":""}']}}
+"""
+
 universal = {
     "nbt_identifier": ["universal_minecraft", "sign"],
+    "snbt": "{}"
+}
+
+hanging_universal = {
+    "nbt_identifier": ["universal_minecraft", "hanging_sign"],
     "snbt": "{}"
 }
 
@@ -127,6 +137,16 @@ wall_j113 = merge(
     ['universal_minecraft:wall_sign']
 )
 
+hanging_j120 = merge(
+    [EmptyNBT('minecraft:hanging_sign'), java_keep_packed],
+    ['universal_minecraft:hanging_sign']
+)
+
+wall_hanging_j120 = merge(
+    [EmptyNBT('minecraft:hanging_sign'), java_keep_packed],
+    ['universal_minecraft:wall_hanging_sign']
+)
+
 b17 = merge(
     [EmptyNBT(':Sign'), _B17, _BText, bedrock_is_movable],
     ['universal_minecraft:sign'],
@@ -161,5 +181,5 @@ wall_b116 = merge(
 
 hanging_b120 = merge(
     [EmptyNBT(':Sign'), _B17, _B116, _BText, bedrock_is_movable],
-    ['universal_minecraft:sign', 'universal_minecraft:wall_sign']
+    ['universal_minecraft:hanging_sign', 'universal_minecraft:wall_hanging_sign']
 )
