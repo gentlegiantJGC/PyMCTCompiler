@@ -1,0 +1,18 @@
+{
+	"remove": [
+		"bamboo_sapling"
+	],
+	"add": {
+		"bamboo_sapling": {
+			"properties": {
+				"stage": [
+					"\"0\"",
+					"\"1\""
+				]
+			},
+			"defaults": {
+				"stage": "\"0\""
+			}
+		}
+	}
+}

@@ -1,1 +1,0 @@
-blockstate.material_helper("minecraft", "bamboo_sapling", "\"bamboo\"", "universal_minecraft", "sapling", {"stage": ["\"0\"","\"1\""]}, default="minecraft:oak_sapling")

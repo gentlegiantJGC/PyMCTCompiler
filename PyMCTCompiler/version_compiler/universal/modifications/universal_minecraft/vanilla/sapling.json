@@ -6,7 +6,6 @@
 		"jungle_sapling",
 		"acacia_sapling",
 		"dark_oak_sapling",
-		"bamboo_sapling",
 		"cherry_sapling"
 	],
 	"add": {
@@ -19,7 +18,6 @@
 					"\"jungle\"",
 					"\"acacia\"",
 					"\"dark_oak\"",
-					"\"bamboo\"",
 					"\"cherry\""
 				],
 				"stage": [
