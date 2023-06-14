@@ -1,0 +1,19 @@
+{
+	"remove": [
+		"torchflower_crop"
+	],
+	"add": {
+		"torchflower_crop": {
+		    "properties": {
+		        "age": [
+		            "\"0\"",
+		            "\"1\"",
+		            "\"2\""
+		        ]
+		    },
+		    "defaults": {
+		        "age": "\"0\""
+		    }
+		}
+	}
+}
