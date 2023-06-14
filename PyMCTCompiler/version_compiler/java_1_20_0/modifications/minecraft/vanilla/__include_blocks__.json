@@ -1,3 +1,4 @@
 {
-	"calibrated_sculk_sensor": ["calibrated_sculk_sensor", ">nbt.calibrated_sculk_sensor.j120"]
+	"calibrated_sculk_sensor": ["calibrated_sculk_sensor", ">nbt.calibrated_sculk_sensor.j120"],
+	"decorated_pot": ["decorated_pot", ">nbt.decorated_pot.j120"]
 }

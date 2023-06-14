@@ -101,6 +101,9 @@
 		},
 		"chiseled_bookshelf": {
 			"unbt": "nbt.chiseled_bookshelf.universal"
+		},
+		"decorated_pot": {
+			"unbt": "nbt.decorated_pot.universal"
 		}
 	}
 }

@@ -1,0 +1,94 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:decorated_pot"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "direction": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"north\""
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"east\""
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"south\""
+                            }
+                        }
+                    ],
+                    "3": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"west\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:decorated_pot": [
+            {
+                "function": "new_block",
+                "options": "minecraft:decorated_pot"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "facing": {
+                        "\"north\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": "0"
+                                }
+                            }
+                        ],
+                        "\"east\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": "1"
+                                }
+                            }
+                        ],
+                        "\"south\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": "2"
+                                }
+                            }
+                        ],
+                        "\"west\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": "3"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
