@@ -1141,7 +1141,6 @@ def sign193(
 	input_namespace: str,
 	input_block_name: str,
 	material: str,
-	hanging: bool,
 	universal_namespace: str = None,
 	universal_block_name: str = None,
 	carry_properties: Dict[str, List[str]] = None,
@@ -1160,11 +1159,9 @@ def sign193(
 		{
 			"function": "new_properties",
 			"options": {
-				**{"material": material},
-				**({} if hanging else {"connection": "\"down\""})
+				"material": material
 			}
-		}
-	] + [
+		},
 		{
 			"function": "map_properties",
 			"options": {
@@ -1184,7 +1181,7 @@ def sign193(
 				}
 			}
 		}
-	] * hanging
+	]
 	fu = [
 		{
 			"function": "map_properties",
@@ -1217,13 +1214,6 @@ def sign193(
 											"options": {
 												"attached": "\"true\""
 											}
-										}
-									]
-								} if hanging else {
-									"\"down\"": [
-										{
-											"function": "new_block",
-											"options": f"{input_namespace}:{input_block_name}"
 										}
 									]
 								}
@@ -1263,7 +1253,6 @@ def wall_sign193(
 	input_namespace: str,
 	input_block_name: str,
 	material: str,
-	hanging: bool,
 	universal_namespace: str = None,
 	universal_block_name: str = None,
 	carry_properties: Dict[str, List[str]] = None,
@@ -1282,8 +1271,7 @@ def wall_sign193(
 		{
 			"function": "new_properties",
 			"options": {
-				"material": material,
-				"hanging": ["\"false\"", "\"true\""][hanging]
+				"material": material
 			}
 		}
 	]
@@ -1294,17 +1282,8 @@ def wall_sign193(
 				"material": {
 					material: [
 						{
-							"function": "map_properties",
-							"options": {
-								"hanging": {
-									"\"true\"" if hanging else "\"false\"": [
-										{
-											"function": "new_block",
-											"options": f"{input_namespace}:{input_block_name}"
-										}
-									]
-								}
-							}
+							"function": "new_block",
+							"options": f"{input_namespace}:{input_block_name}"
 						}
 					]
 				}

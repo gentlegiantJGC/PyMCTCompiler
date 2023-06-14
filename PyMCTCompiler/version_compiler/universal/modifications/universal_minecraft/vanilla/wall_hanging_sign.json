@@ -1,19 +1,19 @@
 {
 	"remove": [
-		"oak_wall_sign",
-		"spruce_wall_sign",
-		"birch_wall_sign",
-		"jungle_wall_sign",
-		"acacia_wall_sign",
-		"dark_oak_wall_sign",
-		"crimson_wall_sign",
-		"warped_wall_sign",
-		"mangrove_wall_sign",
-		"bamboo_wall_sign",
-		"cherry_wall_sign"
+		"oak_wall_hanging_sign",
+		"spruce_wall_hanging_sign",
+		"birch_wall_hanging_sign",
+		"jungle_wall_hanging_sign",
+		"acacia_wall_hanging_sign",
+		"dark_oak_wall_hanging_sign",
+		"crimson_wall_hanging_sign",
+		"warped_wall_hanging_sign",
+		"mangrove_wall_hanging_sign",
+		"bamboo_wall_hanging_sign",
+		"cherry_wall_hanging_sign"
 	],
 	"add": {
-		"wall_sign": {
+		"wall_hanging_sign": {
 			"properties": {
 				"facing": [
 					"\"north\"",
@@ -39,7 +39,7 @@
 				"facing": "\"north\"",
 				"material": "\"oak\""
 			},
-			"unbt": "nbt.sign.universal"
+			"unbt": "nbt.sign.hanging_universal"
 		}
 	}
 }
