@@ -1,7 +1,15 @@
 from PyMCTCompiler.primitives.scripts.nbt import EmptyNBT, merge
-from .common import java_items_3, java_custom_name, java_str_lock, \
-    java_keep_packed, java_furnace_base, bedrock_furnace_base, java_recipes_used_size, \
-    bedrock_items_3, bedrock_is_movable
+from .common import (
+    java_items_3,
+    java_custom_name,
+    java_str_lock,
+    java_keep_packed,
+    java_furnace_base,
+    bedrock_furnace_base,
+    java_recipes_used_size,
+    bedrock_items_3,
+    bedrock_is_movable,
+)
 
 """
 Default
@@ -26,28 +34,42 @@ universal = {
             RecipesUsedSize: 0s,
             Items: []
         }
-    }"""
+    }""",
 }
 
 j19 = merge(
-    [EmptyNBT('minecraft:furnace'), java_furnace_base, java_items_3, java_custom_name, java_str_lock],
-    ['universal_minecraft:furnace'],
-    abstract=True
+    [
+        EmptyNBT("minecraft:furnace"),
+        java_furnace_base,
+        java_items_3,
+        java_custom_name,
+        java_str_lock,
+    ],
+    ["universal_minecraft:furnace"],
+    abstract=True,
 )
 
 # TODO: sort out the variable keys
 j113 = merge(
-    [EmptyNBT('minecraft:furnace'), java_furnace_base, java_recipes_used_size, java_items_3, java_custom_name, java_str_lock, java_keep_packed],
-    ['universal_minecraft:furnace']
+    [
+        EmptyNBT("minecraft:furnace"),
+        java_furnace_base,
+        java_recipes_used_size,
+        java_items_3,
+        java_custom_name,
+        java_str_lock,
+        java_keep_packed,
+    ],
+    ["universal_minecraft:furnace"],
 )
 
 b17 = merge(
-    [EmptyNBT(':Furnace'), bedrock_furnace_base, bedrock_items_3, bedrock_is_movable],
-    ['universal_minecraft:furnace'],
-    abstract=True
+    [EmptyNBT(":Furnace"), bedrock_furnace_base, bedrock_items_3, bedrock_is_movable],
+    ["universal_minecraft:furnace"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':Furnace'), bedrock_furnace_base, bedrock_items_3, bedrock_is_movable],
-    ['universal_minecraft:furnace']
+    [EmptyNBT(":Furnace"), bedrock_furnace_base, bedrock_items_3, bedrock_is_movable],
+    ["universal_minecraft:furnace"],
 )

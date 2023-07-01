@@ -10,203 +10,234 @@ from PyMCTCompiler.translation_functions.base_translation_function import Functi
 
 
 def _load_file(path: str) -> dict:
-	with open(path) as f_:
-		if path.endswith('.json'):
-			return json.load(f_)
-		elif path.endswith('.pyjson'):
-			return eval(f_.read())
-		else:
-			print(f'Could not load {path}. Not a .json or .pyjson file')
+    with open(path) as f_:
+        if path.endswith(".json"):
+            return json.load(f_)
+        elif path.endswith(".pyjson"):
+            return eval(f_.read())
+        else:
+            print(f"Could not load {path}. Not a .json or .pyjson file")
 
 
 class Primitive:
-	def __init__(self, data: Dict[str, Union[dict, FunctionList, Dict[str, FunctionList]]]):
-		for key in ('to_universal', 'blockstate_to_universal'):
-			if key in data:
-				data[key] = FunctionList(data[key])
-		for key in ('from_universal', 'blockstate_from_universal'):
-			if key in data:
-				for key_ in data[key]:
-					data[key][key_] = FunctionList(data[key][key_])
-		self._data = data
+    def __init__(
+        self, data: Dict[str, Union[dict, FunctionList, Dict[str, FunctionList]]]
+    ):
+        for key in ("to_universal", "blockstate_to_universal"):
+            if key in data:
+                data[key] = FunctionList(data[key])
+        for key in ("from_universal", "blockstate_from_universal"):
+            if key in data:
+                for key_ in data[key]:
+                    data[key][key_] = FunctionList(data[key][key_])
+        self._data = data
 
-	def __contains__(self, item: str):
-		return item in self._data
+    def __contains__(self, item: str):
+        return item in self._data
 
-	def __getitem__(self, item: str):
-		return self._data[item]
+    def __getitem__(self, item: str):
+        return self._data[item]
 
-	def __setitem__(self, key: str, value):
-		self._data[key] = value
+    def __setitem__(self, key: str, value):
+        self._data[key] = value
 
-	def items(self):
-		return self._data.items()
+    def items(self):
+        return self._data.items()
 
-	def setdefault(self, key, default):
-		self._data.setdefault(key, default)
+    def setdefault(self, key, default):
+        self._data.setdefault(key, default)
 
-	def get(self, item, default):
-		return self._data.get(item, default)
+    def get(self, item, default):
+        return self._data.get(item, default)
 
-	def extend(self, other: 'Primitive'):
-		assert isinstance(other, Primitive)
-		for key, val in other.items():
-			if key not in self:
-				self[key] = val
-			elif key in ('to_universal', 'blockstate_to_universal'):
-				self[key].extend(other[key], [])
-			elif key in ('from_universal', 'blockstate_from_universal'):
-				for string_id, props in val.items():
-					if string_id not in self[key]:
-						self[key][string_id] = props
-					else:
-						self[key][string_id].extend(props, [])
-			elif key in ('specification', 'blockstate_specification'):
-				merge_primitive_specification(self[key], other[key])
+    def extend(self, other: "Primitive"):
+        assert isinstance(other, Primitive)
+        for key, val in other.items():
+            if key not in self:
+                self[key] = val
+            elif key in ("to_universal", "blockstate_to_universal"):
+                self[key].extend(other[key], [])
+            elif key in ("from_universal", "blockstate_from_universal"):
+                for string_id, props in val.items():
+                    if string_id not in self[key]:
+                        self[key][string_id] = props
+                    else:
+                        self[key][string_id].extend(props, [])
+            elif key in ("specification", "blockstate_specification"):
+                merge_primitive_specification(self[key], other[key])
 
-	def commit(self):
-		for key in ('to_universal', 'blockstate_to_universal'):
-			if key in self._data:
-				assert isinstance(self._data[key], FunctionList)
-				self._data[key].commit(None, [])
-		for key in ('from_universal', 'blockstate_from_universal'):
-			if key in self._data:
-				assert isinstance(self._data[key], dict)
-				for val in self._data[key].values():
-					val.commit(None, [])
+    def commit(self):
+        for key in ("to_universal", "blockstate_to_universal"):
+            if key in self._data:
+                assert isinstance(self._data[key], FunctionList)
+                self._data[key].commit(None, [])
+        for key in ("from_universal", "blockstate_from_universal"):
+            if key in self._data:
+                assert isinstance(self._data[key], dict)
+                for val in self._data[key].values():
+                    val.commit(None, [])
 
 
 def get_block(block_format: str, primitive_group: Union[str, List[str]]) -> Primitive:
-	assert block_format in blocks, f'"{block_format}" is not a known format'
-	if isinstance(primitive_group, str):
-		assert primitive_group in blocks[block_format], f'"{primitive_group}" is not present in the mappings for format "{block_format}"'
-		output = copy.deepcopy(blocks[block_format][primitive_group])
-		try:
-			output.commit()
-		except Exception as e:
-			traceback.print_exc()
-			print(block_format, primitive_group)
-			raise Exception
-		return output
-	elif isinstance(primitive_group, list) and len(primitive_group) >= 1:
-		output = Primitive({})
-		for primitive in primitive_group:
-			assert isinstance(primitive, str), f'Expected a list of strings. At least one entry was type {type(primitive)}'
-			if primitive.startswith('>'):
-				output.extend(copy.deepcopy(eval(primitive[1:])))
-			else:
-				assert primitive in blocks[block_format], f'"{primitive}" is not present in the mappings for format "{block_format}"'
-				output.extend(copy.deepcopy(blocks[block_format][primitive]))
-		try:
-			output.commit()
-		except Exception as e:
-			traceback.print_exc()
-			print(block_format, primitive_group)
-			raise Exception
-		return output
-	else:
-		raise Exception(f'Un-supported format: {type(primitive_group)}')
+    assert block_format in blocks, f'"{block_format}" is not a known format'
+    if isinstance(primitive_group, str):
+        assert (
+            primitive_group in blocks[block_format]
+        ), f'"{primitive_group}" is not present in the mappings for format "{block_format}"'
+        output = copy.deepcopy(blocks[block_format][primitive_group])
+        try:
+            output.commit()
+        except Exception as e:
+            traceback.print_exc()
+            print(block_format, primitive_group)
+            raise Exception
+        return output
+    elif isinstance(primitive_group, list) and len(primitive_group) >= 1:
+        output = Primitive({})
+        for primitive in primitive_group:
+            assert isinstance(
+                primitive, str
+            ), f"Expected a list of strings. At least one entry was type {type(primitive)}"
+            if primitive.startswith(">"):
+                output.extend(copy.deepcopy(eval(primitive[1:])))
+            else:
+                assert (
+                    primitive in blocks[block_format]
+                ), f'"{primitive}" is not present in the mappings for format "{block_format}"'
+                output.extend(copy.deepcopy(blocks[block_format][primitive]))
+        try:
+            output.commit()
+        except Exception as e:
+            traceback.print_exc()
+            print(block_format, primitive_group)
+            raise Exception
+        return output
+    else:
+        raise Exception(f"Un-supported format: {type(primitive_group)}")
 
 
 def get_entity(primitive_group: Union[str, List[str]]) -> Primitive:
-	if isinstance(primitive_group, str):
-		assert primitive_group in entities, f'"{primitive_group}" is not present in the entity mappings'
-		output = copy.deepcopy(entities[primitive_group])
-		output.commit()
-		return output
-	elif isinstance(primitive_group, list) and len(primitive_group) >= 1:
-		output = Primitive({})
-		for primitive in primitive_group:
-			assert isinstance(primitive, str), f'Expected a list of strings. At least one entry was type {type(primitive)}'
-			if primitive.startswith('>'):
-				output.extend(copy.deepcopy(eval(primitive[1:])))
-			else:
-				assert primitive in entities, f'"{primitive}" is not present in the entity mappings'
-				output.extend(copy.deepcopy(entities[primitive]))
-		output.commit()
-		return output
-	else:
-		raise Exception(f'Un-supported format: {type(primitive_group)}')
+    if isinstance(primitive_group, str):
+        assert (
+            primitive_group in entities
+        ), f'"{primitive_group}" is not present in the entity mappings'
+        output = copy.deepcopy(entities[primitive_group])
+        output.commit()
+        return output
+    elif isinstance(primitive_group, list) and len(primitive_group) >= 1:
+        output = Primitive({})
+        for primitive in primitive_group:
+            assert isinstance(
+                primitive, str
+            ), f"Expected a list of strings. At least one entry was type {type(primitive)}"
+            if primitive.startswith(">"):
+                output.extend(copy.deepcopy(eval(primitive[1:])))
+            else:
+                assert (
+                    primitive in entities
+                ), f'"{primitive}" is not present in the entity mappings'
+                output.extend(copy.deepcopy(entities[primitive]))
+        output.commit()
+        return output
+    else:
+        raise Exception(f"Un-supported format: {type(primitive_group)}")
 
 
 def merge_nbt(obj1, obj2):
-	assert isinstance(obj1, obj2.__class__), 'The data types must be the same'
-	if isinstance(obj1, TAG_Compound):
-		for key, val in obj2.items():
-			if key in obj1:
-				obj1[key] = merge_nbt(obj1[key], val)
-			else:
-				obj1[key] = val
+    assert isinstance(obj1, obj2.__class__), "The data types must be the same"
+    if isinstance(obj1, TAG_Compound):
+        for key, val in obj2.items():
+            if key in obj1:
+                obj1[key] = merge_nbt(obj1[key], val)
+            else:
+                obj1[key] = val
 
-	elif obj1 != obj2:
-		raise Exception(f'Data type was not compound and the data was different. Cannot merge this primitive data.\n{obj1}, {obj2}')
+    elif obj1 != obj2:
+        raise Exception(
+            f"Data type was not compound and the data was different. Cannot merge this primitive data.\n{obj1}, {obj2}"
+        )
 
-	return obj1
+    return obj1
 
 
 def merge_primitive_specification(obj1: dict, obj2: dict) -> dict:
-	assert isinstance(obj1, dict) and isinstance(obj2, dict)
-	# {
-	# 	"properties": {
-	# 		"prop": [
-	# 			"SNBT"
-	# 		]
-	# 	},
-	# 	"defaults": {
-	# 		"prop": "SNBT"
-	# 	},
-	# 	"snbt": "snbt_str",
-	# 	"nbt_identifier": ["namespace", "base_name"]
-	# }
-	if 'properties' in obj2:
-		obj1.setdefault("properties", {})
-		obj1.setdefault("defaults", {})
-		for prop, values in obj2['properties'].items():
-			obj1['properties'][prop] = obj1['properties'].get(prop, []) + [val for val in values if val not in obj1['properties'].get(prop, [])]
-			obj1['defaults'][prop] = obj2['defaults'][prop]
+    assert isinstance(obj1, dict) and isinstance(obj2, dict)
+    # {
+    # 	"properties": {
+    # 		"prop": [
+    # 			"SNBT"
+    # 		]
+    # 	},
+    # 	"defaults": {
+    # 		"prop": "SNBT"
+    # 	},
+    # 	"snbt": "snbt_str",
+    # 	"nbt_identifier": ["namespace", "base_name"]
+    # }
+    if "properties" in obj2:
+        obj1.setdefault("properties", {})
+        obj1.setdefault("defaults", {})
+        for prop, values in obj2["properties"].items():
+            obj1["properties"][prop] = obj1["properties"].get(prop, []) + [
+                val for val in values if val not in obj1["properties"].get(prop, [])
+            ]
+            obj1["defaults"][prop] = obj2["defaults"][prop]
 
-	if 'snbt' in obj2:
-		if 'snbt' in obj1:
-			obj1['snbt'] = merge_nbt(amulet_nbt.from_snbt(obj1['snbt']), amulet_nbt.from_snbt(obj2['snbt'])).to_snbt()
-		else:
-			obj1['snbt'] = obj2['snbt']
+    if "snbt" in obj2:
+        if "snbt" in obj1:
+            obj1["snbt"] = merge_nbt(
+                amulet_nbt.from_snbt(obj1["snbt"]), amulet_nbt.from_snbt(obj2["snbt"])
+            ).to_snbt()
+        else:
+            obj1["snbt"] = obj2["snbt"]
 
-	if 'nbt_identifier' in obj2:
-		if 'nbt_identifier' in obj1:
-			assert obj1['nbt_identifier'] == obj2['nbt_identifier'], f'nbt identifiers do not match {obj1["nbt_identifier"]}, {obj2["nbt_identifier"]}'
-		else:
-			obj1['nbt_identifier'] = obj2['nbt_identifier']
+    if "nbt_identifier" in obj2:
+        if "nbt_identifier" in obj1:
+            assert (
+                obj1["nbt_identifier"] == obj2["nbt_identifier"]
+            ), f'nbt identifiers do not match {obj1["nbt_identifier"]}, {obj2["nbt_identifier"]}'
+        else:
+            obj1["nbt_identifier"] = obj2["nbt_identifier"]
 
-	return obj1
+    return obj1
 
 
 from .scripts import *
-print('Loading Primitives ...')
-blocks: Dict[str, Dict[str, Primitive]] = {'numerical': {}, 'blockstate': {}, 'nbt-blockstate': {}}
+
+print("Loading Primitives ...")
+blocks: Dict[str, Dict[str, Primitive]] = {
+    "numerical": {},
+    "blockstate": {},
+    "nbt-blockstate": {},
+}
 entities: Dict[str, Primitive] = {}
 
 for start_folder in blocks:
-	for root, dirs, files in os.walk(f'{os.path.dirname(__file__)}/blocks/{start_folder}'):
-		for f in files:
-			if os.path.splitext(f)[0] in blocks[start_folder]:
-				print(f'Block name "{os.path.splitext(f)[0]}" is define twice')
-			if f.endswith('.json') or f.endswith('.pyjson'):
-				try:
-					blocks[start_folder][os.path.splitext(f)[0]] = Primitive(_load_file(f'{root}/{f}'))
-				except Exception as e:
-					print(f'Failed to load {root}/{f}\n{e}')
-					print(traceback.print_tb(e.__traceback__))
+    for root, dirs, files in os.walk(
+        f"{os.path.dirname(__file__)}/blocks/{start_folder}"
+    ):
+        for f in files:
+            if os.path.splitext(f)[0] in blocks[start_folder]:
+                print(f'Block name "{os.path.splitext(f)[0]}" is define twice')
+            if f.endswith(".json") or f.endswith(".pyjson"):
+                try:
+                    blocks[start_folder][os.path.splitext(f)[0]] = Primitive(
+                        _load_file(f"{root}/{f}")
+                    )
+                except Exception as e:
+                    print(f"Failed to load {root}/{f}\n{e}")
+                    print(traceback.print_tb(e.__traceback__))
 
-for root, dirs, files in os.walk(f'{os.path.dirname(__file__)}/entities'):
-	for f in files:
-		if os.path.splitext(f)[0] in entities:
-			print(f'Block name "{os.path.splitext(f)[0]}" is define twice')
-		try:
-			entities[os.path.splitext(f)[0]] = Primitive(_load_file(f'{root}/{f}'))
-		except Exception as e:
-			print(f'Failed to load {root}/{f}\n{e}')
-			print(traceback.print_tb(e.__traceback__))
+for root, dirs, files in os.walk(f"{os.path.dirname(__file__)}/entities"):
+    for f in files:
+        if os.path.splitext(f)[0] in entities:
+            print(f'Block name "{os.path.splitext(f)[0]}" is define twice')
+        try:
+            entities[os.path.splitext(f)[0]] = Primitive(_load_file(f"{root}/{f}"))
+        except Exception as e:
+            print(f"Failed to load {root}/{f}\n{e}")
+            print(traceback.print_tb(e.__traceback__))
 
-print('\tFinished Loading Primitives')
+print("\tFinished Loading Primitives")
 
 from PyMCTCompiler.primitives import nested

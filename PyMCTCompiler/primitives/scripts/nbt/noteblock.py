@@ -14,7 +14,7 @@ universal = {
         utags: {
             isMovable: 1b
         }
-    }"""
+    }""",
 }
 
 
@@ -32,18 +32,17 @@ _J19 = TranslationFile(
                                 "function": "map_nbt",
                                 "options": {
                                     "cases": {
-                                        f'{data}b': [
+                                        f"{data}b": [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "note": f"\"{data}\""
-                                                }
+                                                "options": {"note": f'"{data}"'},
                                             }
-                                        ] for data in range(25)
+                                        ]
+                                        for data in range(25)
                                     }
-                                }
+                                },
                             }
-                        ]
+                        ],
                     },
                     "powered": {
                         "type": "byte",
@@ -55,26 +54,22 @@ _J19 = TranslationFile(
                                         "0b": [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "powered": "\"false\""
-                                                }
+                                                "options": {"powered": '"false"'},
                                             }
                                         ],
                                         "1b": [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "powered": "\"true\""
-                                                }
+                                                "options": {"powered": '"true"'},
                                             }
-                                        ]
+                                        ],
                                     }
-                                }
+                                },
                             }
-                        ]
-                    }
-                }
-            }
+                        ],
+                    },
+                },
+            },
         }
     ],
     [
@@ -82,42 +77,32 @@ _J19 = TranslationFile(
             "function": "map_properties",
             "options": {
                 "note": {
-                    f"\"{data}\"": [
+                    f'"{data}"': [
                         {
                             "function": "new_nbt",
-                            "options": {
-                                "key": "note",
-                                "value": f"{data}b"
-                            }
-                        }
-                    ] for data in range(25)
-                },
-                "powered": {
-                    "\"false\"": [
-                        {
-                            "function": "new_nbt",
-                            "options": {
-                                "key": "powered",
-                                "value": "0b"
-                            }
-                        }
-                    ],
-                    "\"true\"": [
-                        {
-                            "function": "new_nbt",
-                            "options": {
-                                "key": "powered",
-                                "value": "1b"
-                            }
+                            "options": {"key": "note", "value": f"{data}b"},
                         }
                     ]
-                }
-            }
+                    for data in range(25)
+                },
+                "powered": {
+                    '"false"': [
+                        {
+                            "function": "new_nbt",
+                            "options": {"key": "powered", "value": "0b"},
+                        }
+                    ],
+                    '"true"': [
+                        {
+                            "function": "new_nbt",
+                            "options": {"key": "powered", "value": "1b"},
+                        }
+                    ],
+                },
+            },
         }
     ],
-    {
-        "snbt": "{note:0b,powered:0b}"
-    }
+    {"snbt": "{note:0b,powered:0b}"},
 )
 
 
@@ -135,21 +120,20 @@ _B17 = TranslationFile(
                                 "function": "map_nbt",
                                 "options": {
                                     "cases": {
-                                        f'{data}b': [
+                                        f"{data}b": [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "note": f"\"{data}\""
-                                                }
+                                                "options": {"note": f'"{data}"'},
                                             }
-                                        ] for data in range(25)
+                                        ]
+                                        for data in range(25)
                                     }
-                                }
+                                },
                             }
-                        ]
+                        ],
                     }
-                }
-            }
+                },
+            },
         }
     ],
     [
@@ -157,37 +141,32 @@ _B17 = TranslationFile(
             "function": "map_properties",
             "options": {
                 "note": {
-                    f"\"{data}\"": [
+                    f'"{data}"': [
                         {
                             "function": "new_nbt",
-                            "options": {
-                                "key": "note",
-                                "value": f"{data}b"
-                            }
+                            "options": {"key": "note", "value": f"{data}b"},
                         }
-                    ] for data in range(25)
+                    ]
+                    for data in range(25)
                 }
-            }
+            },
         }
     ],
-    {
-        "snbt": "{note:0b}"
-    }
+    {"snbt": "{note:0b}"},
 )
 
 j19 = merge(
-    [EmptyNBT('minecraft:noteblock'), _J19],
-    ['universal_minecraft:note_block'],
-    abstract=True
+    [EmptyNBT("minecraft:noteblock"), _J19],
+    ["universal_minecraft:note_block"],
+    abstract=True,
 )
 
 b17 = merge(
-    [EmptyNBT(':Music'), _B17, bedrock_is_movable],
-    ['universal_minecraft:note_block'],
-    abstract=True
+    [EmptyNBT(":Music"), _B17, bedrock_is_movable],
+    ["universal_minecraft:note_block"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':Music'), _B17, bedrock_is_movable],
-    ['universal_minecraft:note_block']
+    [EmptyNBT(":Music"), _B17, bedrock_is_movable], ["universal_minecraft:note_block"]
 )

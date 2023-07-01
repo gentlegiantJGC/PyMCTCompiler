@@ -16,7 +16,6 @@ redstone_connect_blocks = [  # blocks that redstone preferentially connects to
     "minecraft:unpowered_repeater",
     "minecraft:redstone_wire",
     "minecraft:lever",
-
     "minecraft:stone_pressure_plate",
     "minecraft:wooden_pressure_plate",
     "minecraft:spruce_pressure_plate",
@@ -29,7 +28,6 @@ redstone_connect_blocks = [  # blocks that redstone preferentially connects to
     "minecraft:light_weighted_pressure_plate",
     "minecraft:heavy_weighted_pressure_plate",
     "minecraft:polished_blackstone_pressure_plate",
-
     "minecraft:stone_button",
     "minecraft:wooden_button",
     "minecraft:spruce_button",

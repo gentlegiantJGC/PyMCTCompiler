@@ -7,11 +7,11 @@ universal = {
         utags: {
             isMovable: 1b
         }
-    }"""
+    }""",
 }
 
 
 b113 = merge(
-    [EmptyNBT(':ChemistryTable'), bedrock_is_movable],
-    ['universal_minecraft:chemistry_table']
+    [EmptyNBT(":ChemistryTable"), bedrock_is_movable],
+    ["universal_minecraft:chemistry_table"],
 )

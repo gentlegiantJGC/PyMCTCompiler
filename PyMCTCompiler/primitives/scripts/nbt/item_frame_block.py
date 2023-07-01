@@ -14,7 +14,7 @@ universal = {
         utags: {
             isMovable: 1b
         }
-    }"""
+    }""",
 }
 
 
@@ -22,14 +22,14 @@ _B17 = NBTRemapHelper(
     [
         (
             ("ItemDropChance", "float", []),
-            ("ItemDropChance", "float", [("utags", "compound")])
+            ("ItemDropChance", "float", [("utags", "compound")]),
         ),
         (  # TODO: convert this to an int 0-15 value
             ("ItemRotation", "byte", []),
-            ("ItemRotation", "float", [("utags", "compound")])
-        )
+            ("ItemRotation", "float", [("utags", "compound")]),
+        ),
     ],
-    "{}"
+    "{}",
 )
 
 
@@ -37,28 +37,28 @@ _B113 = NBTRemapHelper(
     [
         (
             ("ItemDropChance", "float", []),
-            ("ItemDropChance", "float", [("utags", "compound")])
+            ("ItemDropChance", "float", [("utags", "compound")]),
         ),
         (  # TODO: convert this to an int 0-15 value
             ("ItemRotation", "float", []),
-            ("ItemRotation", "float", [("utags", "compound")])
-        )
+            ("ItemRotation", "float", [("utags", "compound")]),
+        ),
     ],
-    "{}"
+    "{}",
 )
 
 b17 = merge(
-    [EmptyNBT(':ItemFrame'), _B113, bedrock_is_movable, bedrock_item_1],
-    ['universal_minecraft:item_frame_block'],
-    abstract=True
+    [EmptyNBT(":ItemFrame"), _B113, bedrock_is_movable, bedrock_item_1],
+    ["universal_minecraft:item_frame_block"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':ItemFrame'), _B113, bedrock_is_movable, bedrock_item_1],
-    ['universal_minecraft:item_frame_block']
+    [EmptyNBT(":ItemFrame"), _B113, bedrock_is_movable, bedrock_item_1],
+    ["universal_minecraft:item_frame_block"],
 )
 
 glow_b117 = merge(
-    [EmptyNBT(':GlowItemFrame'), _B113, bedrock_is_movable, bedrock_item_1],
-    ['universal_minecraft:item_frame_block']
+    [EmptyNBT(":GlowItemFrame"), _B113, bedrock_is_movable, bedrock_item_1],
+    ["universal_minecraft:item_frame_block"],
 )

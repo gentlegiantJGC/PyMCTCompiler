@@ -1,5 +1,13 @@
 from PyMCTCompiler.primitives.scripts.nbt import EmptyNBT, merge
-from .common import java_custom_name, java_str_lock, java_items_9, java_loot_table, bedrock_is_movable, bedrock_items_9, java_keep_packed
+from .common import (
+    java_custom_name,
+    java_str_lock,
+    java_items_9,
+    java_loot_table,
+    bedrock_is_movable,
+    bedrock_items_9,
+    java_keep_packed,
+)
 
 """
 Default
@@ -16,27 +24,40 @@ universal = {
             Items: [],
             Lock: ""
         }
-    }"""
+    }""",
 }
 
 j112 = merge(
-    [EmptyNBT('minecraft:dropper'), java_custom_name, java_str_lock, java_items_9, java_loot_table],
-    ['universal_minecraft:dropper'],
-    abstract=True
+    [
+        EmptyNBT("minecraft:dropper"),
+        java_custom_name,
+        java_str_lock,
+        java_items_9,
+        java_loot_table,
+    ],
+    ["universal_minecraft:dropper"],
+    abstract=True,
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:dropper'), java_custom_name, java_str_lock, java_items_9, java_loot_table, java_keep_packed],
-    ['universal_minecraft:dropper']
+    [
+        EmptyNBT("minecraft:dropper"),
+        java_custom_name,
+        java_str_lock,
+        java_items_9,
+        java_loot_table,
+        java_keep_packed,
+    ],
+    ["universal_minecraft:dropper"],
 )
 
 b17 = merge(
-    [EmptyNBT(':Dropper'), bedrock_items_9, bedrock_is_movable],
-    ['universal_minecraft:dropper'],
-    abstract=True
+    [EmptyNBT(":Dropper"), bedrock_items_9, bedrock_is_movable],
+    ["universal_minecraft:dropper"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':Dropper'), bedrock_items_9, bedrock_is_movable],
-    ['universal_minecraft:dropper']
+    [EmptyNBT(":Dropper"), bedrock_items_9, bedrock_is_movable],
+    ["universal_minecraft:dropper"],
 )

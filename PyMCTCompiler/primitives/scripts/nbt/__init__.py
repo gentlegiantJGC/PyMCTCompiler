@@ -5,7 +5,11 @@ from typing import List, Tuple, Union
 from PyMCTCompiler.primitives import Primitive
 
 
-def merge(translation_files: List['TranslationFile'], universal_blocks: List[str], abstract=False) -> Primitive:
+def merge(
+    translation_files: List["TranslationFile"],
+    universal_blocks: List[str],
+    abstract=False,
+) -> Primitive:
     prim = translation_files[0].bake(universal_blocks, abstract)
     for prim_ in translation_files[1:]:
         prim.extend(prim_.bake(universal_blocks, abstract))
@@ -13,7 +17,9 @@ def merge(translation_files: List['TranslationFile'], universal_blocks: List[str
 
 
 class TranslationFile:
-    def __init__(self, to_universal: list, from_universal: Union[list, dict], spec: dict = None):
+    def __init__(
+        self, to_universal: list, from_universal: Union[list, dict], spec: dict = None
+    ):
         if spec is None:
             self.spec = {}
         else:
@@ -29,20 +35,30 @@ class TranslationFile:
             blockstate_spec = copy.deepcopy(self.spec)
             blockstate_to_universal = copy.deepcopy(self.to_universal)
             blockstate_from_universal = copy.deepcopy(self.from_universal)
-            return Primitive({
-                "specification": spec,
-                "to_universal": to_universal,
-                "from_universal": self._gen_from_universal(from_universal, universal_blocks),
-                "blockstate_specification": blockstate_spec,
-                "blockstate_to_universal": blockstate_to_universal,
-                "blockstate_from_universal": self._gen_from_universal(blockstate_from_universal, universal_blocks)
-            })
+            return Primitive(
+                {
+                    "specification": spec,
+                    "to_universal": to_universal,
+                    "from_universal": self._gen_from_universal(
+                        from_universal, universal_blocks
+                    ),
+                    "blockstate_specification": blockstate_spec,
+                    "blockstate_to_universal": blockstate_to_universal,
+                    "blockstate_from_universal": self._gen_from_universal(
+                        blockstate_from_universal, universal_blocks
+                    ),
+                }
+            )
         else:
-            return Primitive({
-                "specification": spec,
-                "to_universal": to_universal,
-                "from_universal": self._gen_from_universal(from_universal, universal_blocks)
-            })
+            return Primitive(
+                {
+                    "specification": spec,
+                    "to_universal": to_universal,
+                    "from_universal": self._gen_from_universal(
+                        from_universal, universal_blocks
+                    ),
+                }
+            )
 
     @staticmethod
     def _gen_from_universal(from_universal, universal_blocks):
@@ -52,16 +68,16 @@ class TranslationFile:
                 for universal_block in universal_blocks
             }
         elif isinstance(from_universal, dict):
-            assert all(universal_block in from_universal for universal_block in universal_blocks)
+            assert all(
+                universal_block in from_universal
+                for universal_block in universal_blocks
+            )
             return from_universal
 
 
 class EmptyNBT(TranslationFile):
     def __init__(self, namespaced_identifier: str):
-        spec = {
-            "nbt_identifier": namespaced_identifier.split(':', 1),
-            "snbt": "{}"
-        }
+        spec = {"nbt_identifier": namespaced_identifier.split(":", 1), "snbt": "{}"}
         to_universal = [
             {
                 "function": "walk_input_nbt",
@@ -69,32 +85,22 @@ class EmptyNBT(TranslationFile):
                     "type": "compound",
                     "keys": {},
                     "self_default": [{"function": "carry_nbt", "options": {}}],
-                    "nested_default": [{"function": "carry_nbt", "options": {}}]
-                }
+                    "nested_default": [{"function": "carry_nbt", "options": {}}],
+                },
             }
         ]
         from_universal = [
-            {
-                "function": "walk_input_nbt",
-                "options": {
-                    "type": "compound",
-                    "keys": {}
-                }
-            },
+            {"function": "walk_input_nbt", "options": {"type": "compound", "keys": {}}},
             {
                 "custom_name": "copy_unknown",
                 "function": "walk_input_nbt",
                 "options": {
                     "type": "compound",
-                    "keys": {
-                        "utags": {
-                            "type": "compound"
-                        }
-                    },
+                    "keys": {"utags": {"type": "compound"}},
                     "self_default": [{"function": "carry_nbt", "options": {}}],
-                    "nested_default": [{"function": "carry_nbt", "options": {}}]
-                }
-            }
+                    "nested_default": [{"function": "carry_nbt", "options": {}}],
+                },
+            },
         ]
 
         super().__init__(to_universal, from_universal, spec)
@@ -102,20 +108,24 @@ class EmptyNBT(TranslationFile):
 
 class NBTRemapHelper(TranslationFile):
     def __init__(
-            self,
-            remaps: List[
-                Tuple[
-                    Union[Tuple[Union[str, int], str, List[Tuple[str, str]]], Tuple[None, None, None]],
-                    Union[Tuple[Union[str, int], str, List[Tuple[str, str]]], Tuple[None, None, None]],
-                ]
-            ],
-            nbt: str = None
+        self,
+        remaps: List[
+            Tuple[
+                Union[
+                    Tuple[Union[str, int], str, List[Tuple[str, str]]],
+                    Tuple[None, None, None],
+                ],
+                Union[
+                    Tuple[Union[str, int], str, List[Tuple[str, str]]],
+                    Tuple[None, None, None],
+                ],
+            ]
+        ],
+        nbt: str = None,
     ):
         if nbt is None:
             nbt = "{}"
-        spec = {
-            "snbt": nbt
-        }
+        spec = {"snbt": nbt}
         to_universal = [
             {
                 "function": "walk_input_nbt",
@@ -123,28 +133,28 @@ class NBTRemapHelper(TranslationFile):
                     "type": "compound",
                     "keys": {},
                     "self_default": [{"function": "carry_nbt", "options": {}}],
-                    "nested_default": [{"function": "carry_nbt", "options": {}}]
-                }
+                    "nested_default": [{"function": "carry_nbt", "options": {}}],
+                },
             }
         ]
         from_universal = [
-            {
-                "function": "walk_input_nbt",
-                "options": {
-                    "type": "compound",
-                    "keys": {}
-                }
-            }
+            {"function": "walk_input_nbt", "options": {"type": "compound", "keys": {}}}
         ]
 
         for remap in remaps:
-            (input_key, input_type, input_path), (output_key, output_type, output_path) = remap
+            (input_key, input_type, input_path), (
+                output_key,
+                output_type,
+                output_path,
+            ) = remap
             to_uni = self._extend_map(to_universal[0]["options"]["keys"], input_path)
-            from_uni = self._extend_map(from_universal[0]["options"]["keys"], output_path)
+            from_uni = self._extend_map(
+                from_universal[0]["options"]["keys"], output_path
+            )
 
             for obj, in_key, in_type, out_key, out_type, path in (
-                    (to_uni, input_key, input_type, output_key, output_type, output_path),
-                    (from_uni, output_key, output_type, input_key, input_type, input_path)
+                (to_uni, input_key, input_type, output_key, output_type, output_path),
+                (from_uni, output_key, output_type, input_key, input_type, input_path),
             ):
                 if obj is None:
                     continue
@@ -156,20 +166,15 @@ class NBTRemapHelper(TranslationFile):
                 else:
                     obj["type"] = in_type
 
-                if in_type in ['compound', 'list']:
+                if in_type in ["compound", "list"]:
                     obj.setdefault("nested_default", [])
                     obj.setdefault("self_default", [])
 
                 if out_key is None:
-                    obj['functions'] = []
+                    obj["functions"] = []
                     continue
 
-                obj["functions"] = [
-                    {
-                        "function": "carry_nbt",
-                        "options": {}
-                    }
-                ]
+                obj["functions"] = [{"function": "carry_nbt", "options": {}}]
 
                 if output_path != input_path:
                     obj["functions"][0]["options"]["path"] = [list(a) for a in path]
@@ -181,7 +186,9 @@ class NBTRemapHelper(TranslationFile):
         super().__init__(to_universal, from_universal, spec)
 
     @staticmethod
-    def _extend_map(obj: dict, path: Union[List[Tuple[str, str]], None]) -> Union[dict, None]:
+    def _extend_map(
+        obj: dict, path: Union[List[Tuple[str, str]], None]
+    ) -> Union[dict, None]:
         if path is None:
             return
         for sub_path in path:
@@ -194,36 +201,40 @@ class NBTRemapHelper(TranslationFile):
                 obj["type"] = nbt_type
             obj.setdefault("nested_default", [])
             obj.setdefault("self_default", [])
-            if nbt_type == 'compound':
-                obj = obj.setdefault('keys', {})
-            elif nbt_type == 'list':
-                obj = obj.setdefault('index', {})
+            if nbt_type == "compound":
+                obj = obj.setdefault("keys", {})
+            elif nbt_type == "list":
+                obj = obj.setdefault("index", {})
             else:
                 raise Exception(nbt_type)
         return obj
 
 
 colours_16 = [
-    "\"white\"",
-    "\"orange\"",
-    "\"magenta\"",
-    "\"light_blue\"",
-    "\"yellow\"",
-    "\"lime\"",
-    "\"pink\"",
-    "\"gray\"",
-    "\"light_gray\"",
-    "\"cyan\"",
-    "\"purple\"",
-    "\"blue\"",
-    "\"brown\"",
-    "\"green\"",
-    "\"red\"",
-    "\"black\""
+    '"white"',
+    '"orange"',
+    '"magenta"',
+    '"light_blue"',
+    '"yellow"',
+    '"lime"',
+    '"pink"',
+    '"gray"',
+    '"light_gray"',
+    '"cyan"',
+    '"purple"',
+    '"blue"',
+    '"brown"',
+    '"green"',
+    '"red"',
+    '"black"',
 ]
 
 colours_16_inverse = list(reversed(colours_16))
 
 
-__all__ = [f[:-3] for f in os.listdir(os.path.dirname(__file__)) if f.endswith('.py') and f != '__init__.py']
+__all__ = [
+    f[:-3]
+    for f in os.listdir(os.path.dirname(__file__))
+    if f.endswith(".py") and f != "__init__.py"
+]
 from PyMCTCompiler.primitives.scripts.nbt import *

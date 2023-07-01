@@ -8,7 +8,7 @@ universal = {
             isMovable: 1b,
             last_interacted_slot: -1
         }
-    }"""
+    }""",
 }
 
 """
@@ -25,10 +25,10 @@ _B120 = NBTRemapHelper(
     [
         (
             ("LastInteractedSlot", "int", []),
-            ("last_interacted_slot", "int", [("utags", "compound")])
+            ("last_interacted_slot", "int", [("utags", "compound")]),
         ),
     ],
-    "{}"
+    "{}",
 )
 
 
@@ -36,19 +36,19 @@ _J120 = NBTRemapHelper(
     [
         (
             ("last_interacted_slot", "int", []),
-            ("last_interacted_slot", "int", [("utags", "compound")])
+            ("last_interacted_slot", "int", [("utags", "compound")]),
         ),
     ],
-    "{}"
+    "{}",
 )
 
 
 j120 = merge(
-    [EmptyNBT('minecraft:chiseled_bookshelf'), java_items_6, _J120],
-    ['universal_minecraft:chiseled_bookshelf']
+    [EmptyNBT("minecraft:chiseled_bookshelf"), java_items_6, _J120],
+    ["universal_minecraft:chiseled_bookshelf"],
 )
 
 b120 = merge(
-    [EmptyNBT(':ChiseledBookshelf'), bedrock_items_6, _B120, bedrock_is_movable],
-    ['universal_minecraft:chiseled_bookshelf']
+    [EmptyNBT(":ChiseledBookshelf"), bedrock_items_6, _B120, bedrock_is_movable],
+    ["universal_minecraft:chiseled_bookshelf"],
 )

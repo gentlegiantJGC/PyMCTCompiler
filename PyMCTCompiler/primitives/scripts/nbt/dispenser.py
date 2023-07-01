@@ -1,6 +1,13 @@
 from PyMCTCompiler.primitives.scripts.nbt import EmptyNBT, merge
-from .common import java_custom_name, java_str_lock, java_items_9, java_loot_table, \
-    bedrock_is_movable, bedrock_items_9, java_keep_packed
+from .common import (
+    java_custom_name,
+    java_str_lock,
+    java_items_9,
+    java_loot_table,
+    bedrock_is_movable,
+    bedrock_items_9,
+    java_keep_packed,
+)
 
 """
 Default
@@ -17,27 +24,40 @@ universal = {
             Items: [],
             Lock: ""
         }
-    }"""
+    }""",
 }
 
 j112 = merge(
-    [EmptyNBT('minecraft:dispenser'), java_custom_name, java_str_lock, java_items_9, java_loot_table],
-    ['universal_minecraft:dispenser'],
-    abstract=True
+    [
+        EmptyNBT("minecraft:dispenser"),
+        java_custom_name,
+        java_str_lock,
+        java_items_9,
+        java_loot_table,
+    ],
+    ["universal_minecraft:dispenser"],
+    abstract=True,
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:dispenser'), java_custom_name, java_str_lock, java_items_9, java_loot_table, java_keep_packed],
-    ['universal_minecraft:dispenser']
+    [
+        EmptyNBT("minecraft:dispenser"),
+        java_custom_name,
+        java_str_lock,
+        java_items_9,
+        java_loot_table,
+        java_keep_packed,
+    ],
+    ["universal_minecraft:dispenser"],
 )
 
 b17 = merge(
-    [EmptyNBT(':Dispenser'), bedrock_items_9, bedrock_is_movable],
-    ['universal_minecraft:dispenser'],
-    abstract=True
+    [EmptyNBT(":Dispenser"), bedrock_items_9, bedrock_is_movable],
+    ["universal_minecraft:dispenser"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':Dispenser'), bedrock_items_9, bedrock_is_movable],
-    ['universal_minecraft:dispenser']
+    [EmptyNBT(":Dispenser"), bedrock_items_9, bedrock_is_movable],
+    ["universal_minecraft:dispenser"],
 )

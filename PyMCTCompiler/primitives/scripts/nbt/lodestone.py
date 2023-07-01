@@ -7,10 +7,9 @@ universal = {
         utags: {
             isMovable: 1b
         }
-    }"""
+    }""",
 }
 
 b116 = merge(
-    [EmptyNBT(':Lodestone'), bedrock_is_movable],
-    ['universal_minecraft:lodestone']
+    [EmptyNBT(":Lodestone"), bedrock_is_movable], ["universal_minecraft:lodestone"]
 )

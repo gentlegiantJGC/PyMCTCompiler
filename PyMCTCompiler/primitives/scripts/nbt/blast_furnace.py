@@ -1,7 +1,15 @@
 from PyMCTCompiler.primitives.scripts.nbt import EmptyNBT, merge
-from .common import java_items_3, java_custom_name, java_str_lock, \
-    java_keep_packed, java_furnace_base, bedrock_furnace_base, java_recipes_used_size, \
-    bedrock_items_3, bedrock_is_movable
+from .common import (
+    java_items_3,
+    java_custom_name,
+    java_str_lock,
+    java_keep_packed,
+    java_furnace_base,
+    bedrock_furnace_base,
+    java_recipes_used_size,
+    bedrock_items_3,
+    bedrock_is_movable,
+)
 
 universal = {
     "nbt_identifier": ["universal_minecraft", "blast_furnace"],
@@ -15,7 +23,7 @@ universal = {
             RecipesUsedSize: 0s,
             Items: []
         }
-    }"""
+    }""",
 }
 
 """
@@ -29,17 +37,35 @@ Java 1.13+
 
 # TODO: sort out the variable keys
 j114 = merge(
-    [EmptyNBT('minecraft:blast_furnace'), java_furnace_base, java_recipes_used_size, java_items_3, java_custom_name, java_str_lock, java_keep_packed],
-    ['universal_minecraft:blast_furnace']
+    [
+        EmptyNBT("minecraft:blast_furnace"),
+        java_furnace_base,
+        java_recipes_used_size,
+        java_items_3,
+        java_custom_name,
+        java_str_lock,
+        java_keep_packed,
+    ],
+    ["universal_minecraft:blast_furnace"],
 )
 
 b111 = merge(
-    [EmptyNBT(':BlastFurnace'), bedrock_furnace_base, bedrock_items_3, bedrock_is_movable],
-    ['universal_minecraft:blast_furnace'],
-    abstract=True
+    [
+        EmptyNBT(":BlastFurnace"),
+        bedrock_furnace_base,
+        bedrock_items_3,
+        bedrock_is_movable,
+    ],
+    ["universal_minecraft:blast_furnace"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':BlastFurnace'), bedrock_furnace_base, bedrock_items_3, bedrock_is_movable],
-    ['universal_minecraft:blast_furnace']
+    [
+        EmptyNBT(":BlastFurnace"),
+        bedrock_furnace_base,
+        bedrock_items_3,
+        bedrock_is_movable,
+    ],
+    ["universal_minecraft:blast_furnace"],
 )

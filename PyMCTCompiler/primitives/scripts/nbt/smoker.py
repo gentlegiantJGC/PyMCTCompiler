@@ -1,7 +1,15 @@
 from PyMCTCompiler.primitives.scripts.nbt import EmptyNBT, merge
-from .common import java_items_3, java_custom_name, java_str_lock, \
-    java_keep_packed, java_furnace_base, bedrock_furnace_base, java_recipes_used_size, \
-    bedrock_items_3, bedrock_is_movable
+from .common import (
+    java_items_3,
+    java_custom_name,
+    java_str_lock,
+    java_keep_packed,
+    java_furnace_base,
+    bedrock_furnace_base,
+    java_recipes_used_size,
+    bedrock_items_3,
+    bedrock_is_movable,
+)
 
 universal = {
     "nbt_identifier": ["universal_minecraft", "smoker"],
@@ -15,7 +23,7 @@ universal = {
             RecipesUsedSize: 0s,
             Items: []
         }
-    }"""
+    }""",
 }
 
 """
@@ -26,17 +34,25 @@ Bedrock
 
 # TODO: sort out the variable keys
 j114 = merge(
-    [EmptyNBT('minecraft:smoker'), java_furnace_base, java_recipes_used_size, java_items_3, java_custom_name, java_str_lock, java_keep_packed],
-    ['universal_minecraft:smoker']
+    [
+        EmptyNBT("minecraft:smoker"),
+        java_furnace_base,
+        java_recipes_used_size,
+        java_items_3,
+        java_custom_name,
+        java_str_lock,
+        java_keep_packed,
+    ],
+    ["universal_minecraft:smoker"],
 )
 
 b111 = merge(
-    [EmptyNBT(':Smoker'), bedrock_furnace_base, bedrock_items_3, bedrock_is_movable],
-    ['universal_minecraft:smoker'],
-    abstract=True
+    [EmptyNBT(":Smoker"), bedrock_furnace_base, bedrock_items_3, bedrock_is_movable],
+    ["universal_minecraft:smoker"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':Smoker'), bedrock_furnace_base, bedrock_items_3, bedrock_is_movable],
-    ['universal_minecraft:smoker']
+    [EmptyNBT(":Smoker"), bedrock_furnace_base, bedrock_items_3, bedrock_is_movable],
+    ["universal_minecraft:smoker"],
 )

@@ -1,4 +1,9 @@
-from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, TranslationFile, EmptyNBT, merge
+from PyMCTCompiler.primitives.scripts.nbt import (
+    NBTRemapHelper,
+    TranslationFile,
+    EmptyNBT,
+    merge,
+)
 from .common import bedrock_is_movable, java_keep_packed
 
 """
@@ -16,53 +21,36 @@ universal = {
             MouthMoving: 0b,
             MouthTickCount: 0
         }
-    }"""
+    }""",
 }
 
 _J19 = NBTRemapHelper(
-    [
-        (
-            ("Owner", "compound", []),
-            ("Owner", "compound", [("utags", "compound")])
-        )
-    ],
-    "{}"
+    [(("Owner", "compound", []), ("Owner", "compound", [("utags", "compound")]))], "{}"
 )
 
 _B17 = NBTRemapHelper(
     [
-        (
-            ("MouthMoving", "byte", []),
-            ("MouthMoving", "byte", [("utags", "compound")])
-        ),
+        (("MouthMoving", "byte", []), ("MouthMoving", "byte", [("utags", "compound")])),
         (
             ("MouthTickCount", "int", []),
-            ("MouthTickCount", "int", [("utags", "compound")])
+            ("MouthTickCount", "int", [("utags", "compound")]),
         ),
-        (
-            ("Rotation", "float", []),
-            (None, None, None)
-        )
+        (("Rotation", "float", []), (None, None, None)),
     ],
-    "{MouthMoving: 0b, MouthTickCount: 0, Rotation: 0.0f, SkullType: 0b}"
+    "{MouthMoving: 0b, MouthTickCount: 0, Rotation: 0.0f, SkullType: 0b}",
 )
 
 skull_types = [
-    "\"skeleton\"",
-    "\"wither_skeleton\"",
-    "\"zombie\"",
-    "\"player\"",
-    "\"creeper\"",
-    "\"dragon\""
+    '"skeleton"',
+    '"wither_skeleton"',
+    '"zombie"',
+    '"player"',
+    '"creeper"',
+    '"dragon"',
 ]
 
-bedrock_wall_directions = [
-    "\"north\"",
-    "\"south\"",
-    "\"west\"",
-    "\"east\""
-]
-no_drop_bits = ["\"false\"", "\"true\""]
+bedrock_wall_directions = ['"north"', '"south"', '"west"', '"east"']
+no_drop_bits = ['"false"', '"true"']
 
 _BExtra_17 = TranslationFile(
     [
@@ -81,18 +69,19 @@ _BExtra_17 = TranslationFile(
                                         f"{skull_num}b": [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "mob": skull_type
-                                                }
+                                                "options": {"mob": skull_type},
                                             }
-                                        ] for skull_num, skull_type in enumerate(skull_types)
+                                        ]
+                                        for skull_num, skull_type in enumerate(
+                                            skull_types
+                                        )
                                     }
-                                }
+                                },
                             }
-                        ]
+                        ],
                     }
-                }
-            }
+                },
+            },
         },
         {
             "function": "map_properties",
@@ -104,13 +93,14 @@ _BExtra_17 = TranslationFile(
                             "options": {
                                 "input": ["nbt"],
                                 "output": ["new_properties"],
-                                "function": "bedrock_skull_rotation_2u"
-                            }
+                                "function": "bedrock_skull_rotation_2u",
+                            },
                         }
-                    ] for data8, no_drop_bit in enumerate(no_drop_bits)
+                    ]
+                    for data8, no_drop_bit in enumerate(no_drop_bits)
                 }
-            }
-        }
+            },
+        },
     ],
     {
         "universal_minecraft:head": [
@@ -122,28 +112,27 @@ _BExtra_17 = TranslationFile(
                             {
                                 "function": "new_nbt",
                                 "options": [
-                                    {
-                                        "key": "SkullType",
-                                        "value": f"{skull_num}b"
-                                    }
-                                ]
+                                    {"key": "SkullType", "value": f"{skull_num}b"}
+                                ],
                             }
-                        ] for skull_num, skull_type in enumerate(skull_types)
+                        ]
+                        for skull_num, skull_type in enumerate(skull_types)
                     },
                     "rotation": {
-                        f"\"{rot}\"": [
+                        f'"{rot}"': [
                             {
                                 "function": "new_nbt",
                                 "options": [
                                     {
                                         "key": "Rotation",
-                                        "value": f"{rot * 22.5 - 360 * (rot > 8)}f"
+                                        "value": f"{rot * 22.5 - 360 * (rot > 8)}f",
                                     }
-                                ]
+                                ],
                             }
-                        ] for rot in range(16)
-                    }
-                }
+                        ]
+                        for rot in range(16)
+                    },
+                },
             }
         ],
         "universal_minecraft:wall_head": [
@@ -155,18 +144,16 @@ _BExtra_17 = TranslationFile(
                             {
                                 "function": "new_nbt",
                                 "options": [
-                                    {
-                                        "key": "SkullType",
-                                        "value": f"{skull_num}b"
-                                    }
-                                ]
+                                    {"key": "SkullType", "value": f"{skull_num}b"}
+                                ],
                             }
-                        ] for skull_num, skull_type in enumerate(skull_types)
+                        ]
+                        for skull_num, skull_type in enumerate(skull_types)
                     }
-                }
+                },
             }
-        ]
-    }
+        ],
+    },
 )
 
 _BExtra_113 = TranslationFile(
@@ -186,18 +173,19 @@ _BExtra_113 = TranslationFile(
                                         f"{skull_num}b": [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "mob": skull_type
-                                                }
+                                                "options": {"mob": skull_type},
                                             }
-                                        ] for skull_num, skull_type in enumerate(skull_types)
+                                        ]
+                                        for skull_num, skull_type in enumerate(
+                                            skull_types
+                                        )
                                     }
-                                }
+                                },
                             }
-                        ]
+                        ],
                     }
-                }
-            }
+                },
+            },
         },
         {
             "function": "map_properties",
@@ -209,13 +197,13 @@ _BExtra_113 = TranslationFile(
                             "options": {
                                 "input": ["nbt"],
                                 "output": ["new_properties"],
-                                "function": "bedrock_skull_rotation_2u"
-                            }
+                                "function": "bedrock_skull_rotation_2u",
+                            },
                         }
                     ]
                 }
-            }
-        }
+            },
+        },
     ],
     {
         "universal_minecraft:head": [
@@ -227,28 +215,27 @@ _BExtra_113 = TranslationFile(
                             {
                                 "function": "new_nbt",
                                 "options": [
-                                    {
-                                        "key": "SkullType",
-                                        "value": f"{skull_num}b"
-                                    }
-                                ]
+                                    {"key": "SkullType", "value": f"{skull_num}b"}
+                                ],
                             }
-                        ] for skull_num, skull_type in enumerate(skull_types)
+                        ]
+                        for skull_num, skull_type in enumerate(skull_types)
                     },
                     "rotation": {
-                        f"\"{rot}\"": [
+                        f'"{rot}"': [
                             {
                                 "function": "new_nbt",
                                 "options": [
                                     {
                                         "key": "Rotation",
-                                        "value": f"{rot * 22.5 - 360 * (rot > 8)}f"
+                                        "value": f"{rot * 22.5 - 360 * (rot > 8)}f",
                                     }
-                                ]
+                                ],
                             }
-                        ] for rot in range(16)
-                    }
-                }
+                        ]
+                        for rot in range(16)
+                    },
+                },
             }
         ],
         "universal_minecraft:wall_head": [
@@ -260,18 +247,16 @@ _BExtra_113 = TranslationFile(
                             {
                                 "function": "new_nbt",
                                 "options": [
-                                    {
-                                        "key": "SkullType",
-                                        "value": f"{skull_num}b"
-                                    }
-                                ]
+                                    {"key": "SkullType", "value": f"{skull_num}b"}
+                                ],
                             }
-                        ] for skull_num, skull_type in enumerate(skull_types)
+                        ]
+                        for skull_num, skull_type in enumerate(skull_types)
                     }
-                }
+                },
             }
-        ]
-    }
+        ],
+    },
 )
 
 _JExtra_19 = TranslationFile(
@@ -291,15 +276,16 @@ _JExtra_19 = TranslationFile(
                                         f"{skull_num}b": [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "mob": skull_type
-                                                }
+                                                "options": {"mob": skull_type},
                                             }
-                                        ] for skull_num, skull_type in enumerate(skull_types)
+                                        ]
+                                        for skull_num, skull_type in enumerate(
+                                            skull_types
+                                        )
                                     }
-                                }
+                                },
                             }
-                        ]
+                        ],
                     },
                     "Rot": {
                         "type": "byte",
@@ -317,21 +303,22 @@ _JExtra_19 = TranslationFile(
                                                             {
                                                                 "function": "new_properties",
                                                                 "options": {
-                                                                    "rotation": f"\"{rot}\""
-                                                                }
+                                                                    "rotation": f'"{rot}"'
+                                                                },
                                                             }
-                                                        ] for rot in range(16)
+                                                        ]
+                                                        for rot in range(16)
                                                     }
-                                                }
+                                                },
                                             }
                                         ]
                                     }
-                                }
+                                },
                             }
-                        ]
-                    }
-                }
-            }
+                        ],
+                    },
+                },
+            },
         }
     ],
     {
@@ -344,28 +331,22 @@ _JExtra_19 = TranslationFile(
                             {
                                 "function": "new_nbt",
                                 "options": [
-                                    {
-                                        "key": "SkullType",
-                                        "value": f"{skull_num}b"
-                                    }
-                                ]
+                                    {"key": "SkullType", "value": f"{skull_num}b"}
+                                ],
                             }
-                        ] for skull_num, skull_type in enumerate(skull_types)
+                        ]
+                        for skull_num, skull_type in enumerate(skull_types)
                     },
                     "rotation": {
-                        f"\"{rot}\"": [
+                        f'"{rot}"': [
                             {
                                 "function": "new_nbt",
-                                "options": [
-                                    {
-                                        "key": "Rotation",
-                                        "value": f"{rot}b"
-                                    }
-                                ]
+                                "options": [{"key": "Rotation", "value": f"{rot}b"}],
                             }
-                        ] for rot in range(16)
-                    }
-                }
+                        ]
+                        for rot in range(16)
+                    },
+                },
             }
         ],
         "universal_minecraft:wall_head": [
@@ -377,43 +358,40 @@ _JExtra_19 = TranslationFile(
                             {
                                 "function": "new_nbt",
                                 "options": [
-                                    {
-                                        "key": "SkullType",
-                                        "value": f"{skull_num}b"
-                                    }
-                                ]
+                                    {"key": "SkullType", "value": f"{skull_num}b"}
+                                ],
                             }
-                        ] for skull_num, skull_type in enumerate(skull_types)
+                        ]
+                        for skull_num, skull_type in enumerate(skull_types)
                     }
-                }
+                },
             }
-        ]
-    }
+        ],
+    },
 )
 
 j19 = merge(
-    [EmptyNBT('minecraft:skull'), _J19, _JExtra_19],
-    ['universal_minecraft:head', 'universal_minecraft:wall_head'],
-    abstract=True
+    [EmptyNBT("minecraft:skull"), _J19, _JExtra_19],
+    ["universal_minecraft:head", "universal_minecraft:wall_head"],
+    abstract=True,
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:skull'), _J19, java_keep_packed],
-    ['universal_minecraft:head']
+    [EmptyNBT("minecraft:skull"), _J19, java_keep_packed], ["universal_minecraft:head"]
 )
 
 wall_j113 = merge(
-    [EmptyNBT('minecraft:skull'), _J19, java_keep_packed],
-    ['universal_minecraft:wall_head']
+    [EmptyNBT("minecraft:skull"), _J19, java_keep_packed],
+    ["universal_minecraft:wall_head"],
 )
 
 b17 = merge(
-    [EmptyNBT(':Skull'), _B17, _BExtra_17, bedrock_is_movable],
-    ['universal_minecraft:head', 'universal_minecraft:wall_head'],
-    abstract=True
+    [EmptyNBT(":Skull"), _B17, _BExtra_17, bedrock_is_movable],
+    ["universal_minecraft:head", "universal_minecraft:wall_head"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':Skull'), _B17, _BExtra_113, bedrock_is_movable],
-    ['universal_minecraft:head', 'universal_minecraft:wall_head']
+    [EmptyNBT(":Skull"), _B17, _BExtra_113, bedrock_is_movable],
+    ["universal_minecraft:head", "universal_minecraft:wall_head"],
 )

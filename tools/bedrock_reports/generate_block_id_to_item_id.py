@@ -14,7 +14,9 @@ import amulet_nbt
 
 
 def main(path):
-    for dump_file_path in glob.glob(os.path.join(path, '**', 'blocks.txt'), recursive=True):
+    for dump_file_path in glob.glob(
+        os.path.join(path, "**", "blocks.txt"), recursive=True
+    ):
         print(dump_file_path)
         insane_map = {}
         insane_map_diff = {}
@@ -22,18 +24,26 @@ def main(path):
             for line in f.readlines():
                 line = line.strip()
                 block = amulet_nbt.from_snbt(line)
-                if 'Block' not in block:
+                if "Block" not in block:
                     continue
-                sane = block['Block']['name'].value
-                insane = block['Name'].value
+                sane = block["Block"]["name"].value
+                insane = block["Name"].value
                 insane_map[sane] = insane
                 if sane != insane:
                     insane_map_diff[sane] = insane
-        with open(os.path.join(os.path.dirname(dump_file_path), 'block_id_to_item_id.json'), 'w') as f:
-            json.dump(insane_map, f, indent='\t')
-        with open(os.path.join(os.path.dirname(dump_file_path), 'block_id_to_item_id_diff.json'), 'w') as f:
-            json.dump(insane_map_diff, f, indent='\t')
+        with open(
+            os.path.join(os.path.dirname(dump_file_path), "block_id_to_item_id.json"),
+            "w",
+        ) as f:
+            json.dump(insane_map, f, indent="\t")
+        with open(
+            os.path.join(
+                os.path.dirname(dump_file_path), "block_id_to_item_id_diff.json"
+            ),
+            "w",
+        ) as f:
+            json.dump(insane_map_diff, f, indent="\t")
 
 
-if __name__ == '__main__':
-    main('../../PyMCTCompiler/version_compiler')
+if __name__ == "__main__":
+    main("../../PyMCTCompiler/version_compiler")

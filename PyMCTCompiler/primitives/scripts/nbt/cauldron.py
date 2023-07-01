@@ -14,34 +14,27 @@ universal = {
             PotionId: -1s,
             PotionType: 0b
         }
-    }"""
+    }""",
 }
 
 _B110 = NBTRemapHelper(
     [
-        (
-            ("Items", "list", []),
-            ("Items", "list", [("utags", "compound")])
-        ),
-        (
-            ("PotionId", "short", []),
-            ("PotionId", "short", [("utags", "compound")])
-        ),
+        (("Items", "list", []), ("Items", "list", [("utags", "compound")])),
+        (("PotionId", "short", []), ("PotionId", "short", [("utags", "compound")])),
         (
             ("PotionType", "byte", []),  # this might be wrong for old versions
-            ("PotionType", "byte", [("utags", "compound")])
-        )
+            ("PotionType", "byte", [("utags", "compound")]),
+        ),
     ],
-    "{Items:[], PotionId: -1s, PotionType: 0b}"
+    "{Items:[], PotionId: -1s, PotionType: 0b}",
 )
 
 b110 = merge(
-    [EmptyNBT(':Cauldron'), _B110, bedrock_is_movable],
-    ['universal_minecraft:cauldron'],
-    abstract=True
+    [EmptyNBT(":Cauldron"), _B110, bedrock_is_movable],
+    ["universal_minecraft:cauldron"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':Cauldron'), _B110, bedrock_is_movable],
-    ['universal_minecraft:cauldron']
+    [EmptyNBT(":Cauldron"), _B110, bedrock_is_movable], ["universal_minecraft:cauldron"]
 )

@@ -9,5 +9,5 @@ compiler = NumericalCompiler(
     entity_format="namespace-str-id",
     entity_coord_format="Pos-list-float",
     platform="bedrock",
-    version=[1, 1, 0]
+    version=[1, 1, 0],
 )

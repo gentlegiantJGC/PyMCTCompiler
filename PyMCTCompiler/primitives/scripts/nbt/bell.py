@@ -10,7 +10,7 @@ universal = {
             Ringing: 0b, 
             Ticks: 0b
         }
-    }"""
+    }""",
 }
 
 """
@@ -23,34 +23,23 @@ Java 1.14
 
 _B111 = NBTRemapHelper(
     [
-        (
-            ("Direction", "int", []),
-            ("Direction", "int", [("utags", "compound")])
-        ),
-        (
-            ("Ringing", "byte", []),
-            ("Ringing", "byte", [("utags", "compound")])
-        ),
-        (
-            ("Ticks", "int", []),
-            ("Ticks", "int", [("utags", "compound")])
-        )
+        (("Direction", "int", []), ("Direction", "int", [("utags", "compound")])),
+        (("Ringing", "byte", []), ("Ringing", "byte", [("utags", "compound")])),
+        (("Ticks", "int", []), ("Ticks", "int", [("utags", "compound")])),
     ],
-    "{Direction: 0, Ringing: 0b, Ticks: 0}"
+    "{Direction: 0, Ringing: 0b, Ticks: 0}",
 )
 
 j114 = merge(
-    [EmptyNBT('minecraft:bell'), java_keep_packed],
-    ['universal_minecraft:bell']
+    [EmptyNBT("minecraft:bell"), java_keep_packed], ["universal_minecraft:bell"]
 )
 
 b111 = merge(
-    [EmptyNBT(':Bell'), _B111, bedrock_is_movable],
-    ['universal_minecraft:bell'],
-    abstract=True
+    [EmptyNBT(":Bell"), _B111, bedrock_is_movable],
+    ["universal_minecraft:bell"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':Bell'), _B111, bedrock_is_movable],
-    ['universal_minecraft:bell']
+    [EmptyNBT(":Bell"), _B111, bedrock_is_movable], ["universal_minecraft:bell"]
 )

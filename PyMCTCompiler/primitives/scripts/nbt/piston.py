@@ -1,4 +1,9 @@
-from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, TranslationFile, EmptyNBT, merge
+from PyMCTCompiler.primitives.scripts.nbt import (
+    NBTRemapHelper,
+    TranslationFile,
+    EmptyNBT,
+    merge,
+)
 from .common import bedrock_is_movable
 
 """
@@ -111,7 +116,7 @@ universal = {
             Progress: 0.0f, 
             State: 0b
         }
-    }"""
+    }""",
 }
 
 universal_sticky = {
@@ -126,41 +131,26 @@ universal_sticky = {
             Progress: 0.0f, 
             State: 0b
         }
-    }"""
+    }""",
 }
 
 _B17 = NBTRemapHelper(
     [
         (
             ("AttachedBlocks", "list", []),
-            ("AttachedBlocks", "list", [("utags", "compound")])
+            ("AttachedBlocks", "list", [("utags", "compound")]),
         ),
-        (
-            ("BreakBlocks", "list", []),
-            ("BreakBlocks", "list", [("utags", "compound")])
-        ),
+        (("BreakBlocks", "list", []), ("BreakBlocks", "list", [("utags", "compound")])),
         (
             ("LastProgress", "float", []),
-            ("LastProgress", "float", [("utags", "compound")])
+            ("LastProgress", "float", [("utags", "compound")]),
         ),
-        (
-            ("NewState", "byte", []),
-            ("NewState", "byte", [("utags", "compound")])
-        ),
-        (
-            ("Progress", "float", []),
-            ("Progress", "float", [("utags", "compound")])
-        ),
-        (
-            ("State", "byte", []),
-            ("State", "byte", [("utags", "compound")])
-        ),
-        (
-            ("Sticky", "byte", []),
-            (None, None, None)
-        )
+        (("NewState", "byte", []), ("NewState", "byte", [("utags", "compound")])),
+        (("Progress", "float", []), ("Progress", "float", [("utags", "compound")])),
+        (("State", "byte", []), ("State", "byte", [("utags", "compound")])),
+        (("Sticky", "byte", []), (None, None, None)),
     ],
-    "{AttachedBlocks: [], BreakBlocks: [], LastProgress: 0.0f, NewState: 0b, Progress: 0.0f, State: 0b}"
+    "{AttachedBlocks: [], BreakBlocks: [], LastProgress: 0.0f, NewState: 0b, Progress: 0.0f, State: 0b}",
 )
 
 _BedrockState = [
@@ -179,18 +169,17 @@ _BedrockState = [
                                     f"{num}b": [
                                         {
                                             "function": "new_properties",
-                                            "options": {
-                                                "extended": "\"true\""
-                                            }
+                                            "options": {"extended": '"true"'},
                                         }
-                                    ] for num in range(1, 4)
+                                    ]
+                                    for num in range(1, 4)
                                 }
-                            }
+                            },
                         }
-                    ]
+                    ],
                 }
-            }
-        }
+            },
+        },
     }
 ]
 
@@ -198,60 +187,40 @@ _BedrockNormal = TranslationFile(
     _BedrockState,
     {
         "universal_minecraft:piston": [
-            {
-                "function": "new_nbt",
-                "options": [
-                    {
-                        "key": "Sticky",
-                        "value": "0b"
-                    }
-                ]
-            }
+            {"function": "new_nbt", "options": [{"key": "Sticky", "value": "0b"}]}
         ]
     },
-    {
-        "snbt": "{Sticky: 0b}"
-    }
+    {"snbt": "{Sticky: 0b}"},
 )
 
 _BedrockSticky = TranslationFile(
     _BedrockState,
     {
         "universal_minecraft:sticky_piston": [
-            {
-                "function": "new_nbt",
-                "options": [
-                    {
-                        "key": "Sticky",
-                        "value": "1b"
-                    }
-                ]
-            }
+            {"function": "new_nbt", "options": [{"key": "Sticky", "value": "1b"}]}
         ]
     },
-    {
-        "snbt": "{Sticky: 1b}"
-    }
+    {"snbt": "{Sticky: 1b}"},
 )
 
 b17 = merge(
-    [EmptyNBT(':piston_block'), _B17, _BedrockNormal, bedrock_is_movable],
-    ['universal_minecraft:piston'],
-    abstract=True
+    [EmptyNBT(":piston_block"), _B17, _BedrockNormal, bedrock_is_movable],
+    ["universal_minecraft:piston"],
+    abstract=True,
 )
 
 b17_sticky = merge(
-    [EmptyNBT(':PistonArm'), _B17, _BedrockSticky, bedrock_is_movable],
-    ['universal_minecraft:sticky_piston'],
-    abstract=True
+    [EmptyNBT(":PistonArm"), _B17, _BedrockSticky, bedrock_is_movable],
+    ["universal_minecraft:sticky_piston"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':PistonArm'), _B17, _BedrockNormal, bedrock_is_movable],
-    ['universal_minecraft:piston'],
+    [EmptyNBT(":PistonArm"), _B17, _BedrockNormal, bedrock_is_movable],
+    ["universal_minecraft:piston"],
 )
 
 b113_sticky = merge(
-    [EmptyNBT(':PistonArm'), _B17, _BedrockSticky, bedrock_is_movable],
-    ['universal_minecraft:sticky_piston'],
+    [EmptyNBT(":PistonArm"), _B17, _BedrockSticky, bedrock_is_movable],
+    ["universal_minecraft:sticky_piston"],
 )

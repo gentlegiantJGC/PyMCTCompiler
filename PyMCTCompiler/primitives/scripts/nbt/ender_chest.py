@@ -1,5 +1,10 @@
 from PyMCTCompiler.primitives.scripts.nbt import EmptyNBT, merge
-from .common import bedrock_is_movable, bedrock_items_27, java_keep_packed, bedrock_findable
+from .common import (
+    bedrock_is_movable,
+    bedrock_items_27,
+    java_keep_packed,
+    bedrock_findable,
+)
 
 """
 Default
@@ -15,27 +20,27 @@ universal = {
             isMovable: 1b,
             Findable: 0b
         }
-    }"""
+    }""",
 }
 
 j112 = merge(
-    [EmptyNBT('minecraft:ender_chest')],
-    ['universal_minecraft:ender_chest'],
-    abstract=True
+    [EmptyNBT("minecraft:ender_chest")],
+    ["universal_minecraft:ender_chest"],
+    abstract=True,
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:ender_chest'), java_keep_packed],
-    ['universal_minecraft:ender_chest']
+    [EmptyNBT("minecraft:ender_chest"), java_keep_packed],
+    ["universal_minecraft:ender_chest"],
 )
 
 b17 = merge(
-    [EmptyNBT(':EnderChest'), bedrock_findable, bedrock_is_movable],
-    ['universal_minecraft:ender_chest'],
-    abstract=True
+    [EmptyNBT(":EnderChest"), bedrock_findable, bedrock_is_movable],
+    ["universal_minecraft:ender_chest"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':EnderChest'), bedrock_findable, bedrock_is_movable],
-    ['universal_minecraft:ender_chest']
+    [EmptyNBT(":EnderChest"), bedrock_findable, bedrock_is_movable],
+    ["universal_minecraft:ender_chest"],
 )

@@ -10,6 +10,7 @@ The ID field is probably also a 32bit int not a byte but all biomes are currentl
 import struct
 import re
 from minidump.minidumpfile import MinidumpFile
+
 id_chrs = re.compile(b"[a-z_]+")
 
 
@@ -27,16 +28,16 @@ def main():
     biomes = {}
     biome_data_locations = dmp_reader.search(b"\x68\x7F\xFF\x06")
     for index in biome_data_locations:
-        biome_name = get_string(dmp_reader.read(index+4, 64))
+        biome_name = get_string(dmp_reader.read(index + 4, 64))
         if id_chrs.fullmatch(biome_name) is None:
-            biome_name_index = struct.unpack("<I", dmp_reader.read(index+4, 4))[0]
+            biome_name_index = struct.unpack("<I", dmp_reader.read(index + 4, 4))[0]
             try:
                 data = dmp_reader.read(biome_name_index, 64)
             except Exception:
                 continue
             biome_name = get_string(data)
         biome_name = biome_name.decode("utf-8")
-        biome_id = dmp_reader.read(index+0x6C, 1)[0]
+        biome_id = dmp_reader.read(index + 0x6C, 1)[0]
         if biome_name in biomes:
             assert biome_id == biomes[biome_name]
         else:
@@ -45,5 +46,5 @@ def main():
         print(biome_id, biome_name)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

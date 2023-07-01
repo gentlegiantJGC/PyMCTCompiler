@@ -1,4 +1,9 @@
-from PyMCTCompiler.primitives.scripts.nbt import EmptyNBT, merge, TranslationFile, colours_16
+from PyMCTCompiler.primitives.scripts.nbt import (
+    EmptyNBT,
+    merge,
+    TranslationFile,
+    colours_16,
+)
 from .common import bedrock_is_movable, java_keep_packed
 
 """
@@ -20,7 +25,7 @@ universal = {
         utags: {
             isMovable: 1b
         }
-    }"""
+    }""",
 }
 
 _B17 = TranslationFile(
@@ -40,18 +45,17 @@ _B17 = TranslationFile(
                                         f"{num}b": [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "color": color
-                                                }
+                                                "options": {"color": color},
                                             }
-                                        ] for num, color in enumerate(colours_16)
+                                        ]
+                                        for num, color in enumerate(colours_16)
                                     }
-                                }
+                                },
                             }
-                        ]
+                        ],
                     }
-                }
-            }
+                },
+            },
         }
     ],
     [
@@ -62,19 +66,15 @@ _B17 = TranslationFile(
                     color: [
                         {
                             "function": "new_nbt",
-                            "options": {
-                                "key": "color",
-                                "value": f"{num}b"
-                            }
+                            "options": {"key": "color", "value": f"{num}b"},
                         }
-                    ] for num, color in enumerate(colours_16)
+                    ]
+                    for num, color in enumerate(colours_16)
                 }
-            }
+            },
         }
     ],
-    {
-        "snbt": "{color:14b}"
-    }
+    {"snbt": "{color:14b}"},
 )
 
 _J112 = TranslationFile(
@@ -94,18 +94,17 @@ _J112 = TranslationFile(
                                         str(num): [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "color": color
-                                                }
+                                                "options": {"color": color},
                                             }
-                                        ] for num, color in enumerate(colours_16)
+                                        ]
+                                        for num, color in enumerate(colours_16)
                                     }
-                                }
+                                },
                             }
-                        ]
+                        ],
                     }
-                }
-            }
+                },
+            },
         }
     ],
     [
@@ -116,39 +115,27 @@ _J112 = TranslationFile(
                     color: [
                         {
                             "function": "new_nbt",
-                            "options": {
-                                "key": "color",
-                                "value": f"{num}"
-                            }
+                            "options": {"key": "color", "value": f"{num}"},
                         }
-                    ] for num, color in enumerate(colours_16)
+                    ]
+                    for num, color in enumerate(colours_16)
                 }
-            }
+            },
         }
     ],
-    {
-        "snbt": "{color:14}"
-    }
+    {"snbt": "{color:14}"},
 )
 
 j112 = merge(
-    [EmptyNBT('minecraft:bed'), _J112],
-    ['universal_minecraft:bed'],
-    abstract=True
+    [EmptyNBT("minecraft:bed"), _J112], ["universal_minecraft:bed"], abstract=True
 )
 
-j113 = merge(
-    [EmptyNBT('minecraft:bed'), java_keep_packed],
-    ['universal_minecraft:bed']
-)
+j113 = merge([EmptyNBT("minecraft:bed"), java_keep_packed], ["universal_minecraft:bed"])
 
 b17 = merge(
-    [EmptyNBT(':Bed'), _B17, bedrock_is_movable],
-    ['universal_minecraft:bed'],
-    abstract=True
+    [EmptyNBT(":Bed"), _B17, bedrock_is_movable],
+    ["universal_minecraft:bed"],
+    abstract=True,
 )
 
-b113 = merge(
-    [EmptyNBT(':Bed'), _B17, bedrock_is_movable],
-    ['universal_minecraft:bed']
-)
+b113 = merge([EmptyNBT(":Bed"), _B17, bedrock_is_movable], ["universal_minecraft:bed"])

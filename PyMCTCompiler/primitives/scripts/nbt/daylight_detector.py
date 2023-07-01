@@ -14,27 +14,27 @@ universal = {
         utags: {
             isMovable: 1b
         }
-    }"""
+    }""",
 }
 
 j112 = merge(
-    [EmptyNBT('minecraft:daylight_detector')],
-    ['universal_minecraft:daylight_detector'],
-    abstract=True
+    [EmptyNBT("minecraft:daylight_detector")],
+    ["universal_minecraft:daylight_detector"],
+    abstract=True,
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:daylight_detector'), java_keep_packed],
-    ['universal_minecraft:daylight_detector']
+    [EmptyNBT("minecraft:daylight_detector"), java_keep_packed],
+    ["universal_minecraft:daylight_detector"],
 )
 
 b17 = merge(
-    [EmptyNBT(':DaylightDetector'), bedrock_is_movable],
-    ['universal_minecraft:daylight_detector'],
-    abstract=True
+    [EmptyNBT(":DaylightDetector"), bedrock_is_movable],
+    ["universal_minecraft:daylight_detector"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':DaylightDetector'), bedrock_is_movable],
-    ['universal_minecraft:daylight_detector']
+    [EmptyNBT(":DaylightDetector"), bedrock_is_movable],
+    ["universal_minecraft:daylight_detector"],
 )

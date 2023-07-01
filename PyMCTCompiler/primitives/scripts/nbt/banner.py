@@ -1,4 +1,10 @@
-from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, EmptyNBT, merge, TranslationFile, colours_16_inverse
+from PyMCTCompiler.primitives.scripts.nbt import (
+    NBTRemapHelper,
+    EmptyNBT,
+    merge,
+    TranslationFile,
+    colours_16_inverse,
+)
 from .common import java_custom_name, bedrock_is_movable, java_keep_packed
 
 """
@@ -40,21 +46,15 @@ universal = {
             Base: 0,
             Type: 0
         }
-    }"""
+    }""",
 }
 
 # TODO: convert Base into the color property and back
 
 _J112 = NBTRemapHelper(
     [
-        (
-            ("Patterns", "list", []),
-            ("Patterns", "list", [("utags", "compound")])
-        ),
-        (
-            ("Base", "int", []),
-            ("Base", "int", [("utags", "compound")])
-        )
+        (("Patterns", "list", []), ("Patterns", "list", [("utags", "compound")])),
+        (("Base", "int", []), ("Base", "int", [("utags", "compound")])),
     ]
 )
 
@@ -75,18 +75,19 @@ _Base2Color = TranslationFile(
                                         str(index): [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "color": colour
-                                                }
+                                                "options": {"color": colour},
                                             }
-                                        ] for index, colour in enumerate(colours_16_inverse)
+                                        ]
+                                        for index, colour in enumerate(
+                                            colours_16_inverse
+                                        )
                                     }
-                                }
+                                },
                             }
-                        ]
+                        ],
                     }
-                }
-            }
+                },
+            },
         }
     ],
     [
@@ -97,21 +98,15 @@ _Base2Color = TranslationFile(
                     colour: [
                         {
                             "function": "new_nbt",
-                            "options": [
-                                {
-                                    "key": "Base",
-                                    "value": str(index)
-                                }
-                            ]
+                            "options": [{"key": "Base", "value": str(index)}],
                         }
-                    ] for index, colour in enumerate(colours_16_inverse)
+                    ]
+                    for index, colour in enumerate(colours_16_inverse)
                 }
-            }
+            },
         }
     ],
-    {
-        "snbt": "{Base:0}"
-    }
+    {"snbt": "{Base:0}"},
 )
 
 _PaternColorFix = TranslationFile(
@@ -119,96 +114,88 @@ _PaternColorFix = TranslationFile(
         {
             "function": "code",
             "options": {
-                "input": [
-                    "nbt"
-                ],
-                "output": [
-                    "new_nbt"
-                ],
-                "function": "banner_pattern_2u"
-            }
+                "input": ["nbt"],
+                "output": ["new_nbt"],
+                "function": "banner_pattern_2u",
+            },
         }
     ],
     [
         {
             "function": "code",
             "options": {
-                "input": [
-                    "nbt"
-                ],
-                "output": [
-                    "new_nbt"
-                ],
-                "function": "banner_pattern_fu"
-            }
+                "input": ["nbt"],
+                "output": ["new_nbt"],
+                "function": "banner_pattern_fu",
+            },
         }
-    ]
+    ],
 )
 
 _J113 = NBTRemapHelper(
-    [
-        (
-            ("Patterns", "list", []),
-            ("Patterns", "list", [("utags", "compound")])
-        )
-    ],
-    "{}"
+    [(("Patterns", "list", []), ("Patterns", "list", [("utags", "compound")]))], "{}"
 )
 
 _B17 = NBTRemapHelper(
     [
-        (
-            ("Patterns", "list", []),
-            ("Patterns", "list", [("utags", "compound")])
-        ),
-        (
-            ("Type", "int", []),
-            ("Type", "int", [("utags", "compound")])
-        )
+        (("Patterns", "list", []), ("Patterns", "list", [("utags", "compound")])),
+        (("Type", "int", []), ("Type", "int", [("utags", "compound")])),
     ],
-    "{Type:0}"
+    "{Type:0}",
 )
 
 j112 = merge(
-    [EmptyNBT('minecraft:banner'), _J112, _Base2Color, _PaternColorFix, java_custom_name],
-    ['universal_minecraft:banner'],
-    abstract=True
+    [
+        EmptyNBT("minecraft:banner"),
+        _J112,
+        _Base2Color,
+        _PaternColorFix,
+        java_custom_name,
+    ],
+    ["universal_minecraft:banner"],
+    abstract=True,
 )
 
 wall_j112 = merge(
-    [EmptyNBT('minecraft:banner'), _J112, _Base2Color, _PaternColorFix, java_custom_name],
-    ['universal_minecraft:wall_banner'],
-    abstract=True
+    [
+        EmptyNBT("minecraft:banner"),
+        _J112,
+        _Base2Color,
+        _PaternColorFix,
+        java_custom_name,
+    ],
+    ["universal_minecraft:wall_banner"],
+    abstract=True,
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:banner'), _J113, java_custom_name, java_keep_packed],
-    ['universal_minecraft:banner']
+    [EmptyNBT("minecraft:banner"), _J113, java_custom_name, java_keep_packed],
+    ["universal_minecraft:banner"],
 )
 
 wall_j113 = merge(
-    [EmptyNBT('minecraft:banner'), _J113, java_custom_name, java_keep_packed],
-    ['universal_minecraft:wall_banner']
+    [EmptyNBT("minecraft:banner"), _J113, java_custom_name, java_keep_packed],
+    ["universal_minecraft:wall_banner"],
 )
 
 b17 = merge(
-    [EmptyNBT(':Banner'), _B17, _Base2Color, _PaternColorFix, bedrock_is_movable],
-    ['universal_minecraft:banner'],
-    abstract=True
+    [EmptyNBT(":Banner"), _B17, _Base2Color, _PaternColorFix, bedrock_is_movable],
+    ["universal_minecraft:banner"],
+    abstract=True,
 )
 
 wall_b17 = merge(
-    [EmptyNBT(':Banner'), _B17, _Base2Color, _PaternColorFix, bedrock_is_movable],
-    ['universal_minecraft:wall_banner'],
-    abstract=True
+    [EmptyNBT(":Banner"), _B17, _Base2Color, _PaternColorFix, bedrock_is_movable],
+    ["universal_minecraft:wall_banner"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':Banner'), _B17, _Base2Color, _PaternColorFix, bedrock_is_movable],
-    ['universal_minecraft:banner']
+    [EmptyNBT(":Banner"), _B17, _Base2Color, _PaternColorFix, bedrock_is_movable],
+    ["universal_minecraft:banner"],
 )
 
 wall_b113 = merge(
-    [EmptyNBT(':Banner'), _B17, _Base2Color, _PaternColorFix, bedrock_is_movable],
-    ['universal_minecraft:wall_banner']
+    [EmptyNBT(":Banner"), _B17, _Base2Color, _PaternColorFix, bedrock_is_movable],
+    ["universal_minecraft:wall_banner"],
 )

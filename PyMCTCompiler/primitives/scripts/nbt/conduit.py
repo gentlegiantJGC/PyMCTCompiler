@@ -15,45 +15,30 @@ universal = {
         utags: {
             isMovable: 1b
         }
-    }"""
+    }""",
 }
 
-_J113 = NBTRemapHelper(
-    [
-        (
-            ("target_uuid", "compound", []),
-            (None, None, None)
-        )
-    ],
-    "{}"
-)
+_J113 = NBTRemapHelper([(("target_uuid", "compound", []), (None, None, None))], "{}")
 
 _B113 = NBTRemapHelper(
     [
-        (
-            ("Target", "long", []),
-            (None, None, None)
-        ),
-        (
-            ("Active", "byte", []),
-            ("Active", "byte", [("utags", "compound")])
-        )
+        (("Target", "long", []), (None, None, None)),
+        (("Active", "byte", []), ("Active", "byte", [("utags", "compound")])),
     ],
-    "{Active: 0b}"
+    "{Active: 0b}",
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:conduit'), _J113, java_keep_packed],
-    ['universal_minecraft:conduit']
+    [EmptyNBT("minecraft:conduit"), _J113, java_keep_packed],
+    ["universal_minecraft:conduit"],
 )
 
 b17 = merge(
-    [EmptyNBT(':Conduit'), _B113, bedrock_is_movable],
-    ['universal_minecraft:conduit'],
-    abstract=True
+    [EmptyNBT(":Conduit"), _B113, bedrock_is_movable],
+    ["universal_minecraft:conduit"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':Conduit'), _B113, bedrock_is_movable],
-    ['universal_minecraft:conduit']
+    [EmptyNBT(":Conduit"), _B113, bedrock_is_movable], ["universal_minecraft:conduit"]
 )

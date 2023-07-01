@@ -14,27 +14,26 @@ universal = {
         utags: {
             isMovable: 1b
         }
-    }"""
+    }""",
 }
 
 j112 = merge(
-    [EmptyNBT('minecraft:end_portal')],
-    ['universal_minecraft:end_portal'],
-    abstract=True
+    [EmptyNBT("minecraft:end_portal")],
+    ["universal_minecraft:end_portal"],
+    abstract=True,
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:end_portal'), java_keep_packed],
-    ['universal_minecraft:end_portal']
+    [EmptyNBT("minecraft:end_portal"), java_keep_packed],
+    ["universal_minecraft:end_portal"],
 )
 
 b17 = merge(
-    [EmptyNBT(':EndPortal'), bedrock_is_movable],
-    ['universal_minecraft:end_portal'],
-    abstract=True
+    [EmptyNBT(":EndPortal"), bedrock_is_movable],
+    ["universal_minecraft:end_portal"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':EndPortal'), bedrock_is_movable],
-    ['universal_minecraft:end_portal']
+    [EmptyNBT(":EndPortal"), bedrock_is_movable], ["universal_minecraft:end_portal"]
 )

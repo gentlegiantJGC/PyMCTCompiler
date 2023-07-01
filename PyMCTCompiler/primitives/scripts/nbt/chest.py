@@ -1,6 +1,14 @@
 from PyMCTCompiler.primitives.scripts.nbt import EmptyNBT, merge, TranslationFile
-from .common import java_custom_name, java_items_27, java_str_lock, java_loot_table, \
-    bedrock_items_27, bedrock_is_movable, java_keep_packed, bedrock_findable
+from .common import (
+    java_custom_name,
+    java_items_27,
+    java_str_lock,
+    java_loot_table,
+    bedrock_items_27,
+    bedrock_is_movable,
+    java_keep_packed,
+    bedrock_findable,
+)
 
 """
 Default
@@ -23,7 +31,7 @@ universal = {
             Findable: 0b,
             Items: []
         }
-    }"""
+    }""",
 }
 
 universal_trapped = {
@@ -34,7 +42,7 @@ universal_trapped = {
             Findable: 0b,
             Items: []
         }
-    }"""
+    }""",
 }
 
 _BConnections = {
@@ -48,16 +56,16 @@ _BConnections = {
                         "pairlead": {"type": "byte"},
                         "pairx": {"type": "int"},
                         "pairz": {"type": "int"},
-                    }
-                }
+                    },
+                },
             },
             {
                 "function": "code",
                 "options": {
                     "input": ["nbt", "properties", "location"],
                     "output": ["new_properties"],
-                    "function": "bedrock_chest_connection_self"
-                }
+                    "function": "bedrock_chest_connection_self",
+                },
             },
             {
                 "function": "map_properties",
@@ -82,19 +90,25 @@ _BConnections = {
                                                                         {
                                                                             "function": "code",
                                                                             "options": {
-                                                                                "input": ["nbt", "properties", "location"],
-                                                                                "output": ["new_properties"],
-                                                                                "function": "bedrock_chest_connection_other_left"
-                                                                            }
+                                                                                "input": [
+                                                                                    "nbt",
+                                                                                    "properties",
+                                                                                    "location",
+                                                                                ],
+                                                                                "output": [
+                                                                                    "new_properties"
+                                                                                ],
+                                                                                "function": "bedrock_chest_connection_other_left",
+                                                                            },
                                                                         }
                                                                     ]
                                                                 }
-                                                            }
+                                                            },
                                                         }
                                                     ]
-                                                }
+                                                },
                                             }
-                                        ]
+                                        ],
                                     },
                                     {
                                         "coords": coord_right,
@@ -111,94 +125,140 @@ _BConnections = {
                                                                         {
                                                                             "function": "code",
                                                                             "options": {
-                                                                                "input": ["nbt", "properties", "location"],
-                                                                                "output": ["new_properties"],
-                                                                                "function": "bedrock_chest_connection_other_right"
-                                                                            }
+                                                                                "input": [
+                                                                                    "nbt",
+                                                                                    "properties",
+                                                                                    "location",
+                                                                                ],
+                                                                                "output": [
+                                                                                    "new_properties"
+                                                                                ],
+                                                                                "function": "bedrock_chest_connection_other_right",
+                                                                            },
                                                                         }
                                                                     ]
                                                                 }
-                                                            }
+                                                            },
                                                         }
                                                     ]
-                                                }
+                                                },
                                             }
-                                        ]
-                                    }
-                                ]
+                                        ],
+                                    },
+                                ],
                             }
-                        ] for direction, (coord_left, coord_right) in {
+                        ]
+                        for direction, (coord_left, coord_right) in {
                             2: ([1, 0, 0], [-1, 0, 0]),
                             3: ([-1, 0, 0], [1, 0, 0]),
                             4: ([0, 0, -1], [0, 0, 1]),
                             5: ([0, 0, 1], [0, 0, -1]),
                         }.items()
                     }
-                }
-            }
+                },
+            },
         ],
         [
             {
                 "function": "map_properties",
                 "options": {
                     "connection": {
-                        "\"right\"": [
+                        '"right"': [
                             {
                                 "function": "code",
                                 "options": {
                                     "input": ["properties", "location"],
                                     "output": ["new_nbt"],
-                                    "function": "bedrock_chest_fu"
-                                }
+                                    "function": "bedrock_chest_fu",
+                                },
                             }
                         ]
                     }
-                }
+                },
             }
-        ]
-    ) for block_id in ("chest", "trapped_chest")
+        ],
+    )
+    for block_id in ("chest", "trapped_chest")
 }
 
 j112 = merge(
-    [EmptyNBT('minecraft:chest'), java_custom_name, java_items_27, java_str_lock, java_loot_table],
-    ['universal_minecraft:chest'],
-    abstract=True
+    [
+        EmptyNBT("minecraft:chest"),
+        java_custom_name,
+        java_items_27,
+        java_str_lock,
+        java_loot_table,
+    ],
+    ["universal_minecraft:chest"],
+    abstract=True,
 )
 
 trapped_j112 = merge(
-    [EmptyNBT('minecraft:trapped_chest'), java_custom_name, java_items_27, java_str_lock, java_loot_table],
-    ['universal_minecraft:trapped_chest'],
-    abstract=True
+    [
+        EmptyNBT("minecraft:trapped_chest"),
+        java_custom_name,
+        java_items_27,
+        java_str_lock,
+        java_loot_table,
+    ],
+    ["universal_minecraft:trapped_chest"],
+    abstract=True,
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:chest'), java_custom_name, java_items_27, java_str_lock, java_loot_table, java_keep_packed],
-    ['universal_minecraft:chest']
+    [
+        EmptyNBT("minecraft:chest"),
+        java_custom_name,
+        java_items_27,
+        java_str_lock,
+        java_loot_table,
+        java_keep_packed,
+    ],
+    ["universal_minecraft:chest"],
 )
 
 trapped_j113 = merge(
-    [EmptyNBT('minecraft:trapped_chest'), java_custom_name, java_items_27, java_str_lock, java_loot_table, java_keep_packed],
-    ['universal_minecraft:trapped_chest']
+    [
+        EmptyNBT("minecraft:trapped_chest"),
+        java_custom_name,
+        java_items_27,
+        java_str_lock,
+        java_loot_table,
+        java_keep_packed,
+    ],
+    ["universal_minecraft:trapped_chest"],
 )
 
 b17 = merge(
-    [EmptyNBT(':Chest'), bedrock_findable, bedrock_items_27, bedrock_is_movable],
-    ['universal_minecraft:chest'],
-    abstract=True
+    [EmptyNBT(":Chest"), bedrock_findable, bedrock_items_27, bedrock_is_movable],
+    ["universal_minecraft:chest"],
+    abstract=True,
 )
 
 trapped_b17 = merge(
-    [EmptyNBT(':Chest'), bedrock_findable, bedrock_items_27, bedrock_is_movable],
-    ['universal_minecraft:trapped_chest'],
-    abstract=True
+    [EmptyNBT(":Chest"), bedrock_findable, bedrock_items_27, bedrock_is_movable],
+    ["universal_minecraft:trapped_chest"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':Chest'), bedrock_findable, bedrock_items_27, bedrock_is_movable, _BConnections["chest"]],
-    ['universal_minecraft:chest']
+    [
+        EmptyNBT(":Chest"),
+        bedrock_findable,
+        bedrock_items_27,
+        bedrock_is_movable,
+        _BConnections["chest"],
+    ],
+    ["universal_minecraft:chest"],
 )
 
 trapped_b113 = merge(
-    [EmptyNBT(':Chest'), bedrock_findable, bedrock_items_27, bedrock_is_movable, _BConnections["trapped_chest"]],
-    ['universal_minecraft:trapped_chest']
+    [
+        EmptyNBT(":Chest"),
+        bedrock_findable,
+        bedrock_items_27,
+        bedrock_is_movable,
+        _BConnections["trapped_chest"],
+    ],
+    ["universal_minecraft:trapped_chest"],
 )

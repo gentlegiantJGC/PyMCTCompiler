@@ -32,16 +32,9 @@ property_name_remap = {
     # 'attachment': ['attachment', {}],
     "bamboo_leaf_size": [
         "leaves",
-        {
-            "no_leaves": "none",
-            "small_leaves": "small",
-            "large_leaves": "large"
-        },
+        {"no_leaves": "none", "small_leaves": "small", "large_leaves": "large"},
     ],
-    "bamboo_stalk_thickness": ["age", {
-        "thin": "\"0\"",
-        "thick": "\"1\""
-    }],
+    "bamboo_stalk_thickness": ["age", {"thin": '"0"', "thick": '"1"'}],
     "bite_counter": ["bites", {}],
     "block_light_level": ["block_light_level", {}],
     "brewing_stand_slot_a_bit": ["has_bottle_0", bool_map],
@@ -51,7 +44,7 @@ property_name_remap = {
     "cauldron_liquid": ["cauldron_liquid", {}],
     "chemistry_table_type": ["chemistry_table_type", {}],
     "chisel_type": ["chisel_type", {}],
-    "cluster_count": ["pickles", {str(a): f"\"{a+1}\"" for a in range(4)}],
+    "cluster_count": ["pickles", {str(a): f'"{a+1}"' for a in range(4)}],
     "color": ["color", {"silver": "light_gray"}],
     "color_bit": ["color_bit", {}],
     "composter_fill_level": ["level", {}],
@@ -73,11 +66,10 @@ property_name_remap = {
     "coral_fan_direction": ["coral_fan_direction", {}],
     "coral_hang_type_bit": ["coral_hang_type_bit", {}],
     "covered_bit": ["covered_bit", {}],
-    "cracked_state": ["hatch", {
-        "no_cracks": "\"0\"",
-        "cracked": "\"1\"",
-        "max_cracked": "\"2\""
-    }],
+    "cracked_state": [
+        "hatch",
+        {"no_cracks": '"0"', "cracked": '"1"', "max_cracked": '"2"'},
+    ],
     "damage": [
         "damage",
         {
@@ -89,12 +81,7 @@ property_name_remap = {
     ],
     "dead_bit": ["dead", bool_map],
     "deprecated": ["deprecated", {}],
-    "direction": ["facing", {
-        "0": "south",
-        "1": "west",
-        "2": "north",
-        "3": "east"
-    }],
+    "direction": ["facing", {"0": "south", "1": "west", "2": "north", "3": "east"}],
     "dirt_type": ["dirt_type", {}],
     "disarmed_bit": ["disarmed", bool_map],
     "door_hinge_bit": ["hinge", {"0": "left", "1": "right"}],
@@ -129,14 +116,14 @@ property_name_remap = {
     "height": [
         "layers",
         {
-            "0": "\"1\"",
-            "1": "\"2\"",
-            "2": "\"3\"",
-            "3": "\"4\"",
-            "4": "\"5\"",
-            "5": "\"6\"",
-            "6": "\"7\"",
-            "7": "\"8\"",
+            "0": '"1"',
+            "1": '"2"',
+            "2": '"3"',
+            "3": '"4"',
+            "4": '"5"',
+            "5": '"6"',
+            "6": '"7"',
+            "7": '"8"',
         },
     ],
     "huge_mushroom_bits": ["huge_mushroom_bits", {}],
@@ -210,12 +197,7 @@ property_name_remap = {
     "triggered_bit": ["triggered", bool_map],
     "turtle_egg_count": [
         "turtle_egg_count",
-        {
-            "one_egg": "\"1\"",
-            "two_egg": "\"2\"",
-            "three_egg": "\"3\"",
-            "four_egg": "\"4\""
-        },
+        {"one_egg": '"1"', "two_egg": '"2"', "three_egg": '"3"', "four_egg": '"4"'},
     ],
     "update_bit": ["check_decay", bool_map],
     "upper_block_bit": ["half", {"0": "lower", "1": "upper"}],
@@ -227,17 +209,32 @@ property_name_remap = {
         {"0": "east", "1": "west", "2": "south", "3": "north"},
     ],
     "wood_type": ["material", {}],
-    "wall_connection_type_north": ["north", {"none": "none", "short": "low", "tall": "tall"}],
-    "wall_connection_type_east": ["east", {"none": "none", "short": "low", "tall": "tall"}],
-    "wall_connection_type_south": ["south", {"none": "none", "short": "low", "tall": "tall"}],
-    "wall_connection_type_west": ["west", {"none": "none", "short": "low", "tall": "tall"}],
-    "big_dripleaf_tilt": ["tilt", {
-        "none": "none",
-        "unstable": "unstable",
-        "partial_tilt": "partial",
-        "full_tilt": "full"
-    }],
-    "growing_plant_age": ["age", {str(n): f"\"{n}\"" for n in range(26)}]
+    "wall_connection_type_north": [
+        "north",
+        {"none": "none", "short": "low", "tall": "tall"},
+    ],
+    "wall_connection_type_east": [
+        "east",
+        {"none": "none", "short": "low", "tall": "tall"},
+    ],
+    "wall_connection_type_south": [
+        "south",
+        {"none": "none", "short": "low", "tall": "tall"},
+    ],
+    "wall_connection_type_west": [
+        "west",
+        {"none": "none", "short": "low", "tall": "tall"},
+    ],
+    "big_dripleaf_tilt": [
+        "tilt",
+        {
+            "none": "none",
+            "unstable": "unstable",
+            "partial_tilt": "partial",
+            "full_tilt": "full",
+        },
+    ],
+    "growing_plant_age": ["age", {str(n): f'"{n}"' for n in range(26)}],
 }
 
 with open("block_palette") as f:

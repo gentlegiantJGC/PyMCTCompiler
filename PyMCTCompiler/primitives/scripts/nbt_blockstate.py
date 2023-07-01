@@ -3,35 +3,42 @@ import itertools
 
 def mushroom_block(color: str) -> dict:
     directions = {  # up, down, north, east, south, west
-        f'universal_minecraft:{color}_mushroom_block': {
-            0: ["\"false\"", "\"false\"", "\"false\"", "\"false\"", "\"false\"", "\"false\""],
-            1: ["\"true\"", "\"false\"", "\"true\"", "\"false\"", "\"false\"", "\"true\""],
-            2: ["\"true\"", "\"false\"", "\"true\"", "\"false\"", "\"false\"", "\"false\""],
-            3: ["\"true\"", "\"false\"", "\"true\"", "\"true\"", "\"false\"", "\"false\""],
-            4: ["\"true\"", "\"false\"", "\"false\"", "\"false\"", "\"false\"", "\"true\""],
-            5: ["\"true\"", "\"false\"", "\"false\"", "\"false\"", "\"false\"", "\"false\""],
-            6: ["\"true\"", "\"false\"", "\"false\"", "\"true\"", "\"false\"", "\"false\""],
-            7: ["\"true\"", "\"false\"", "\"false\"", "\"false\"", "\"true\"", "\"true\""],
-            8: ["\"true\"", "\"false\"", "\"false\"", "\"false\"", "\"true\"", "\"false\""],
-            9: ["\"true\"", "\"false\"", "\"false\"", "\"true\"", "\"true\"", "\"false\""],
-            14: ["\"true\"", "\"true\"", "\"true\"", "\"true\"", "\"true\"", "\"true\""]
+        f"universal_minecraft:{color}_mushroom_block": {
+            0: ['"false"', '"false"', '"false"', '"false"', '"false"', '"false"'],
+            1: ['"true"', '"false"', '"true"', '"false"', '"false"', '"true"'],
+            2: ['"true"', '"false"', '"true"', '"false"', '"false"', '"false"'],
+            3: ['"true"', '"false"', '"true"', '"true"', '"false"', '"false"'],
+            4: ['"true"', '"false"', '"false"', '"false"', '"false"', '"true"'],
+            5: ['"true"', '"false"', '"false"', '"false"', '"false"', '"false"'],
+            6: ['"true"', '"false"', '"false"', '"true"', '"false"', '"false"'],
+            7: ['"true"', '"false"', '"false"', '"false"', '"true"', '"true"'],
+            8: ['"true"', '"false"', '"false"', '"false"', '"true"', '"false"'],
+            9: ['"true"', '"false"', '"false"', '"true"', '"true"', '"false"'],
+            14: ['"true"', '"true"', '"true"', '"true"', '"true"', '"true"'],
         },
-        'universal_minecraft:mushroom_stem': {
-            10: ["\"false\"", "\"false\"", "\"true\"", "\"true\"", "\"true\"", "\"true\""],
-            15: ["\"true\"", "\"true\"", "\"true\"", "\"true\"", "\"true\"", "\"true\""]
-        }
+        "universal_minecraft:mushroom_stem": {
+            10: ['"false"', '"false"', '"true"', '"true"', '"true"', '"true"'],
+            15: ['"true"', '"true"', '"true"', '"true"', '"true"', '"true"'],
+        },
     }
 
     nearest_map = {}
-    for dirs in list(itertools.product(["\"true\"", "\"false\""], repeat=6)):
+    for dirs in list(itertools.product(['"true"', '"false"'], repeat=6)):
         count = -1
         nearest = None
-        for data, dirs2 in directions[f'universal_minecraft:{color}_mushroom_block'].items():
+        for data, dirs2 in directions[
+            f"universal_minecraft:{color}_mushroom_block"
+        ].items():
             matching_faces = sum(d1 == d2 for d1, d2 in zip(dirs, dirs2))
             if matching_faces == 6:
                 nearest_map[dirs] = data
                 break
-            elif matching_faces > count and all([d2 == "\"true\"" if d1 == "\"true\"" else True for d1, d2 in zip(dirs, dirs2)]):
+            elif matching_faces > count and all(
+                [
+                    d2 == '"true"' if d1 == '"true"' else True
+                    for d1, d2 in zip(dirs, dirs2)
+                ]
+            ):
                 nearest = data
                 count = matching_faces
         else:
@@ -41,49 +48,48 @@ def mushroom_block(color: str) -> dict:
         "to_universal": [
             {
                 "function": "new_block",
-                "options": f'universal_minecraft:{color}_mushroom_block'
+                "options": f"universal_minecraft:{color}_mushroom_block",
             },
             {
                 "function": "map_properties",
                 "options": {
                     "huge_mushroom_bits": {
                         str(data): [
-                            {
-                                "function": "new_block",
-                                "options": block
-                            },
+                            {"function": "new_block", "options": block},
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    f'universal_minecraft:{color}_mushroom_block': {
-                                        "up": dirs[0],
-                                        "down": dirs[1],
-                                        "north": dirs[2],
-                                        "east": dirs[3],
-                                        "south": dirs[4],
-                                        "west": dirs[5]
-                                    },
-                                    'universal_minecraft:mushroom_stem': {
+                                    f"universal_minecraft:{color}_mushroom_block": {
                                         "up": dirs[0],
                                         "down": dirs[1],
                                         "north": dirs[2],
                                         "east": dirs[3],
                                         "south": dirs[4],
                                         "west": dirs[5],
-                                        "material": f"\"{color}\""
-                                    }
-                                }[block]
-                            }
-                        ] for block in directions.keys() for data, dirs in directions[block].items()
+                                    },
+                                    "universal_minecraft:mushroom_stem": {
+                                        "up": dirs[0],
+                                        "down": dirs[1],
+                                        "north": dirs[2],
+                                        "east": dirs[3],
+                                        "south": dirs[4],
+                                        "west": dirs[5],
+                                        "material": f'"{color}"',
+                                    },
+                                }[block],
+                            },
+                        ]
+                        for block in directions.keys()
+                        for data, dirs in directions[block].items()
                     }
-                }
-            }
+                },
+            },
         ],
         "from_universal": {
-            f'universal_minecraft:{color}_mushroom_block': [
+            f"universal_minecraft:{color}_mushroom_block": [
                 {
                     "function": "new_block",
-                    "options": f'minecraft:{color}_mushroom_block'
+                    "options": f"minecraft:{color}_mushroom_block",
                 },
                 {
                     "function": "map_properties",
@@ -118,131 +124,144 @@ def mushroom_block(color: str) -> dict:
                                                                                                                 {
                                                                                                                     "function": "new_properties",
                                                                                                                     "options": {
-                                                                                                                        "huge_mushroom_bits": str(nearest_map[(up, down, north, east, south, west)])
-                                                                                                                    }
+                                                                                                                        "huge_mushroom_bits": str(
+                                                                                                                            nearest_map[
+                                                                                                                                (
+                                                                                                                                    up,
+                                                                                                                                    down,
+                                                                                                                                    north,
+                                                                                                                                    east,
+                                                                                                                                    south,
+                                                                                                                                    west,
+                                                                                                                                )
+                                                                                                                            ]
+                                                                                                                        )
+                                                                                                                    },
                                                                                                                 }
-                                                                                                            ] for west in ("\"true\"", "\"false\"")
+                                                                                                            ]
+                                                                                                            for west in (
+                                                                                                                '"true"',
+                                                                                                                '"false"',
+                                                                                                            )
                                                                                                         }
-                                                                                                    }
+                                                                                                    },
                                                                                                 }
-                                                                                            ] for south in ("\"true\"", "\"false\"")
+                                                                                            ]
+                                                                                            for south in (
+                                                                                                '"true"',
+                                                                                                '"false"',
+                                                                                            )
                                                                                         }
-                                                                                    }
+                                                                                    },
                                                                                 }
-                                                                            ] for east in ("\"true\"", "\"false\"")
+                                                                            ]
+                                                                            for east in (
+                                                                                '"true"',
+                                                                                '"false"',
+                                                                            )
                                                                         }
-                                                                    }
+                                                                    },
                                                                 }
-                                                            ] for north in ("\"true\"", "\"false\"")
+                                                            ]
+                                                            for north in (
+                                                                '"true"',
+                                                                '"false"',
+                                                            )
                                                         }
-                                                    }
+                                                    },
                                                 }
-                                            ] for down in ("\"true\"", "\"false\"")
+                                            ]
+                                            for down in ('"true"', '"false"')
                                         }
-                                    }
+                                    },
                                 }
-                            ] for up in ("\"true\"", "\"false\"")
+                            ]
+                            for up in ('"true"', '"false"')
                         }
-                    }
-                }
+                    },
+                },
             ],
-            'universal_minecraft:mushroom_stem': [
-                {
-                    "function": "new_block",
-                    "options": 'minecraft:red_mushroom_block'
-                },
-                {
-                    "function": "new_properties",
-                    "options": {
-                        "huge_mushroom_bits": "15"
-                    }
-                },
+            "universal_minecraft:mushroom_stem": [
+                {"function": "new_block", "options": "minecraft:red_mushroom_block"},
+                {"function": "new_properties", "options": {"huge_mushroom_bits": "15"}},
                 {
                     "function": "map_properties",
                     "options": {
                         "up": {
-                            "\"false\"": [
+                            '"false"': [
                                 {
                                     "function": "map_properties",
                                     "options": {
                                         "down": {
-                                            "\"false\"": [
+                                            '"false"': [
                                                 {
                                                     "function": "map_properties",
                                                     "options": {
                                                         "north": {
-                                                            "\"true\"": [
+                                                            '"true"': [
                                                                 {
                                                                     "function": "map_properties",
                                                                     "options": {
                                                                         "east": {
-                                                                            "\"true\"": [
+                                                                            '"true"': [
                                                                                 {
                                                                                     "function": "map_properties",
                                                                                     "options": {
                                                                                         "south": {
-                                                                                            "\"true\"": [
+                                                                                            '"true"': [
                                                                                                 {
                                                                                                     "function": "map_properties",
                                                                                                     "options": {
                                                                                                         "west": {
-                                                                                                            "\"true\"": [
+                                                                                                            '"true"': [
                                                                                                                 {
                                                                                                                     "function": "new_properties",
                                                                                                                     "options": {
                                                                                                                         "huge_mushroom_bits": "10"
-                                                                                                                    }
+                                                                                                                    },
                                                                                                                 }
                                                                                                             ]
                                                                                                         }
-                                                                                                    }
+                                                                                                    },
                                                                                                 }
                                                                                             ]
                                                                                         }
-                                                                                    }
+                                                                                    },
                                                                                 }
                                                                             ]
                                                                         }
-                                                                    }
+                                                                    },
                                                                 }
                                                             ]
                                                         }
-                                                    }
+                                                    },
                                                 }
                                             ]
                                         }
-                                    }
+                                    },
                                 }
                             ]
                         },
                         "material": {
-                            f"\"{color}\"": [
+                            f'"{color}"': [
                                 {
                                     "function": "new_block",
-                                    "options": f'minecraft:{color}_mushroom_block'
+                                    "options": f"minecraft:{color}_mushroom_block",
                                 }
                             ]
-                        }
-                    }
-                }
-            ]
-        }
+                        },
+                    },
+                },
+            ],
+        },
     }
 
 
 def door(block_name: str, material: str) -> dict:
     return {
         "to_universal": [
-            {
-                "function": "new_block",
-                "options": "universal_minecraft:door"
-            },
-            {
-                "function": "new_properties",
-                "options": {
-                    "material": material
-                }
-            },
+            {"function": "new_block", "options": "universal_minecraft:door"},
+            {"function": "new_properties", "options": {"material": material}},
             {
                 "function": "map_properties",
                 "options": {
@@ -250,9 +269,7 @@ def door(block_name: str, material: str) -> dict:
                         "0b": [
                             {
                                 "function": "new_properties",
-                                "options": {
-                                    "half": "\"lower\""
-                                }
+                                "options": {"half": '"lower"'},
                             },
                             {
                                 "function": "map_properties",
@@ -261,65 +278,49 @@ def door(block_name: str, material: str) -> dict:
                                         "0": [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "facing": "\"east\""
-                                                }
+                                                "options": {"facing": '"east"'},
                                             }
                                         ],
                                         "1": [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "facing": "\"south\""
-                                                }
+                                                "options": {"facing": '"south"'},
                                             }
                                         ],
                                         "2": [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "facing": "\"west\""
-                                                }
+                                                "options": {"facing": '"west"'},
                                             }
                                         ],
                                         "3": [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "facing": "\"north\""
-                                                }
+                                                "options": {"facing": '"north"'},
                                             }
-                                        ]
+                                        ],
                                     },
                                     "open_bit": {
                                         "0b": [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "open": "\"false\""
-                                                }
+                                                "options": {"open": '"false"'},
                                             }
                                         ],
                                         "1b": [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "open": "\"true\""
-                                                }
+                                                "options": {"open": '"true"'},
                                             }
-                                        ]
-                                    }
-                                }
+                                        ],
+                                    },
+                                },
                             },
                             {
                                 "function": "multiblock",
                                 "options": [
                                     {
-                                        "coords": [
-                                            0,
-                                            1,
-                                            0
-                                        ],
+                                        "coords": [0, 1, 0],
                                         "functions": [
                                             {
                                                 "function": "map_properties",
@@ -329,32 +330,30 @@ def door(block_name: str, material: str) -> dict:
                                                             {
                                                                 "function": "new_properties",
                                                                 "options": {
-                                                                    "hinge": "\"left\""
-                                                                }
+                                                                    "hinge": '"left"'
+                                                                },
                                                             }
                                                         ],
                                                         "1b": [
                                                             {
                                                                 "function": "new_properties",
                                                                 "options": {
-                                                                    "hinge": "\"right\""
-                                                                }
+                                                                    "hinge": '"right"'
+                                                                },
                                                             }
-                                                        ]
+                                                        ],
                                                     }
-                                                }
+                                                },
                                             }
-                                        ]
+                                        ],
                                     }
-                                ]
-                            }
+                                ],
+                            },
                         ],
                         "1b": [
                             {
                                 "function": "new_properties",
-                                "options": {
-                                    "half": "\"upper\""
-                                }
+                                "options": {"half": '"upper"'},
                             },
                             {
                                 "function": "map_properties",
@@ -363,31 +362,23 @@ def door(block_name: str, material: str) -> dict:
                                         "0b": [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "hinge": "\"left\""
-                                                }
+                                                "options": {"hinge": '"left"'},
                                             }
                                         ],
                                         "1b": [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "hinge": "\"right\""
-                                                }
+                                                "options": {"hinge": '"right"'},
                                             }
-                                        ]
+                                        ],
                                     }
-                                }
+                                },
                             },
                             {
                                 "function": "multiblock",
                                 "options": [
                                     {
-                                        "coords": [
-                                            0,
-                                            -1,
-                                            0
-                                        ],
+                                        "coords": [0, -1, 0],
                                         "functions": [
                                             {
                                                 "function": "map_properties",
@@ -397,70 +388,67 @@ def door(block_name: str, material: str) -> dict:
                                                             {
                                                                 "function": "new_properties",
                                                                 "options": {
-                                                                    "facing": "\"east\""
-                                                                }
+                                                                    "facing": '"east"'
+                                                                },
                                                             }
                                                         ],
                                                         "1": [
                                                             {
                                                                 "function": "new_properties",
                                                                 "options": {
-                                                                    "facing": "\"south\""
-                                                                }
+                                                                    "facing": '"south"'
+                                                                },
                                                             }
                                                         ],
                                                         "2": [
                                                             {
                                                                 "function": "new_properties",
                                                                 "options": {
-                                                                    "facing": "\"west\""
-                                                                }
+                                                                    "facing": '"west"'
+                                                                },
                                                             }
                                                         ],
                                                         "3": [
                                                             {
                                                                 "function": "new_properties",
                                                                 "options": {
-                                                                    "facing": "\"north\""
-                                                                }
+                                                                    "facing": '"north"'
+                                                                },
                                                             }
-                                                        ]
+                                                        ],
                                                     },
                                                     "open_bit": {
                                                         "0b": [
                                                             {
                                                                 "function": "new_properties",
                                                                 "options": {
-                                                                    "open": "\"false\""
-                                                                }
+                                                                    "open": '"false"'
+                                                                },
                                                             }
                                                         ],
                                                         "1b": [
                                                             {
                                                                 "function": "new_properties",
                                                                 "options": {
-                                                                    "open": "\"true\""
-                                                                }
+                                                                    "open": '"true"'
+                                                                },
                                                             }
-                                                        ]
-                                                    }
-                                                }
+                                                        ],
+                                                    },
+                                                },
                                             }
-                                        ]
+                                        ],
                                     }
-                                ]
-                            }
-                        ]
+                                ],
+                            },
+                        ],
                     }
-                }
-            }
+                },
+            },
         ],
         "from_universal": {
             "universal_minecraft:door": [
-                {
-                    "function": "new_block",
-                    "options": "minecraft:wooden_door"
-                },
+                {"function": "new_block", "options": "minecraft:wooden_door"},
                 {
                     "function": "map_properties",
                     "options": {
@@ -468,127 +456,102 @@ def door(block_name: str, material: str) -> dict:
                             material: [
                                 {
                                     "function": "new_block",
-                                    "options": f"minecraft:{block_name}"
+                                    "options": f"minecraft:{block_name}",
                                 }
                             ]
                         },
                         "half": {
-                            "\"lower\"": [
+                            '"lower"': [
                                 {
                                     "function": "new_properties",
-                                    "options": {
-                                        "upper_block_bit": "0b"
-                                    }
+                                    "options": {"upper_block_bit": "0b"},
                                 },
                                 {
                                     "function": "map_properties",
                                     "options": {
                                         "facing": {
-                                            "\"east\"": [
+                                            '"east"': [
                                                 {
                                                     "function": "new_properties",
-                                                    "options": {
-                                                        "direction": "0"
-                                                    }
+                                                    "options": {"direction": "0"},
                                                 }
                                             ],
-                                            "\"south\"": [
+                                            '"south"': [
                                                 {
                                                     "function": "new_properties",
-                                                    "options": {
-                                                        "direction": "1"
-                                                    }
+                                                    "options": {"direction": "1"},
                                                 }
                                             ],
-                                            "\"west\"": [
+                                            '"west"': [
                                                 {
                                                     "function": "new_properties",
-                                                    "options": {
-                                                        "direction": "2"
-                                                    }
+                                                    "options": {"direction": "2"},
                                                 }
                                             ],
-                                            "\"north\"": [
+                                            '"north"': [
                                                 {
                                                     "function": "new_properties",
-                                                    "options": {
-                                                        "direction": "3"
-                                                    }
+                                                    "options": {"direction": "3"},
                                                 }
-                                            ]
+                                            ],
                                         },
                                         "open": {
-                                            "\"false\"": [
+                                            '"false"': [
                                                 {
                                                     "function": "new_properties",
-                                                    "options": {
-                                                        "open_bit": "0b"
-                                                    }
+                                                    "options": {"open_bit": "0b"},
                                                 }
                                             ],
-                                            "\"true\"": [
+                                            '"true"': [
                                                 {
                                                     "function": "new_properties",
-                                                    "options": {
-                                                        "open_bit": "1b"
-                                                    }
+                                                    "options": {"open_bit": "1b"},
                                                 }
-                                            ]
-                                        }
-                                    }
-                                }
+                                            ],
+                                        },
+                                    },
+                                },
                             ],
-                            "\"upper\"": [
+                            '"upper"': [
                                 {
                                     "function": "new_properties",
-                                    "options": {
-                                        "upper_block_bit": "1b"
-                                    }
+                                    "options": {"upper_block_bit": "1b"},
                                 },
                                 {
                                     "function": "map_properties",
                                     "options": {
                                         "hinge": {
-                                            "\"left\"": [
+                                            '"left"': [
                                                 {
                                                     "function": "new_properties",
-                                                    "options": {
-                                                        "door_hinge_bit": "0b"
-                                                    }
+                                                    "options": {"door_hinge_bit": "0b"},
                                                 }
                                             ],
-                                            "\"right\"": [
+                                            '"right"': [
                                                 {
                                                     "function": "new_properties",
-                                                    "options": {
-                                                        "door_hinge_bit": "1b"
-                                                    }
+                                                    "options": {"door_hinge_bit": "1b"},
                                                 }
-                                            ]
+                                            ],
                                         }
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                }
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                },
             ]
-        }
+        },
     }
 
 
 def candle(colour: str):
     return {
         "to_universal": [
-            {
-                "function": "new_block",
-                "options": "universal_minecraft:candle"
-            },
+            {"function": "new_block", "options": "universal_minecraft:candle"},
             {
                 "function": "new_properties",
-                "options": {
-                    "color": f"\"{colour}\"" if colour else "\"default\""
-                }
+                "options": {"color": f'"{colour}"' if colour else '"default"'},
             },
             {
                 "function": "map_properties",
@@ -597,97 +560,72 @@ def candle(colour: str):
                         f"{candles}": [
                             {
                                 "function": "new_properties",
-                                "options": {
-                                    "candles": f"\"{candles+1}\""
-                                }
+                                "options": {"candles": f'"{candles+1}"'},
                             }
-                        ] for candles in range(4)
+                        ]
+                        for candles in range(4)
                     },
                     "lit": {
                         "0b": [
                             {
                                 "function": "new_properties",
-                                "options": {
-                                    "lit": "\"false\""
-                                }
+                                "options": {"lit": '"false"'},
                             }
                         ],
                         "1b": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "lit": "\"true\""
-                                }
-                            }
-                        ]
-                    }
-                }
-            }
+                            {"function": "new_properties", "options": {"lit": '"true"'}}
+                        ],
+                    },
+                },
+            },
         ],
         "from_universal": {
             "universal_minecraft:candle": [
-                {
-                    "function": "new_block",
-                    "options": "minecraft:candle"
-                },
+                {"function": "new_block", "options": "minecraft:candle"},
                 {
                     "function": "map_properties",
                     "options": {
                         "candles": {
-                            f"\"{candles+1}\"": [
+                            f'"{candles+1}"': [
                                 {
                                     "function": "new_properties",
-                                    "options": {
-                                        "candles": f"{candles}"
-                                    }
+                                    "options": {"candles": f"{candles}"},
                                 }
-                            ] for candles in range(4)
+                            ]
+                            for candles in range(4)
                         },
                         "lit": {
-                            "\"false\"": [
-                                {
-                                    "function": "new_properties",
-                                    "options": {
-                                        "lit": "0b"
-                                    }
-                                }
+                            '"false"': [
+                                {"function": "new_properties", "options": {"lit": "0b"}}
                             ],
-                            "\"true\"": [
-                                {
-                                    "function": "new_properties",
-                                    "options": {
-                                        "lit": "1b"
-                                    }
-                                }
-                            ]
+                            '"true"': [
+                                {"function": "new_properties", "options": {"lit": "1b"}}
+                            ],
                         },
                         "color": {
-                            f"\"{colour}\"" if colour else "\"default\"": [
+                            f'"{colour}"'
+                            if colour
+                            else '"default"': [
                                 {
                                     "function": "new_block",
-                                    "options": f"minecraft:{colour + '_' if colour else ''}candle"
+                                    "options": f"minecraft:{colour + '_' if colour else ''}candle",
                                 },
                             ]
-                        }
-                    }
-                }
+                        },
+                    },
+                },
             ]
-        }
+        },
     }
 
 
 def candle_cake(colour: str):
     return {
         "to_universal": [
-            {
-                "function": "new_block",
-                "options": "universal_minecraft:candle_cake"
-            },
+            {"function": "new_block", "options": "universal_minecraft:candle_cake"},
             {
                 "function": "new_properties",
-                "options": {
-                    "color": f"\"{colour}\"" if colour else "\"default\""
-                }
+                "options": {"color": f'"{colour}"' if colour else '"default"'},
             },
             {
                 "function": "map_properties",
@@ -696,77 +634,52 @@ def candle_cake(colour: str):
                         "0b": [
                             {
                                 "function": "new_properties",
-                                "options": {
-                                    "lit": "\"false\""
-                                }
+                                "options": {"lit": '"false"'},
                             }
                         ],
                         "1b": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "lit": "\"true\""
-                                }
-                            }
-                        ]
+                            {"function": "new_properties", "options": {"lit": '"true"'}}
+                        ],
                     }
-                }
-            }
+                },
+            },
         ],
         "from_universal": {
             "universal_minecraft:candle_cake": [
-                {
-                    "function": "new_block",
-                    "options": "minecraft:candle_cake"
-                },
+                {"function": "new_block", "options": "minecraft:candle_cake"},
                 {
                     "function": "map_properties",
                     "options": {
                         "lit": {
-                            "\"false\"": [
-                                {
-                                    "function": "new_properties",
-                                    "options": {
-                                        "lit": "0b"
-                                    }
-                                }
+                            '"false"': [
+                                {"function": "new_properties", "options": {"lit": "0b"}}
                             ],
-                            "\"true\"": [
-                                {
-                                    "function": "new_properties",
-                                    "options": {
-                                        "lit": "1b"
-                                    }
-                                }
-                            ]
+                            '"true"': [
+                                {"function": "new_properties", "options": {"lit": "1b"}}
+                            ],
                         },
                         "color": {
-                            f"\"{colour}\"" if colour else "\"default\"": [
+                            f'"{colour}"'
+                            if colour
+                            else '"default"': [
                                 {
                                     "function": "new_block",
-                                    "options": f"minecraft:{colour + '_' if colour else ''}candle_cake"
+                                    "options": f"minecraft:{colour + '_' if colour else ''}candle_cake",
                                 },
                             ]
-                        }
-                    }
-                }
+                        },
+                    },
+                },
             ]
-        }
+        },
     }
+
 
 def standing_sign_120(src_block: str, material: str):
     return {
         "to_universal": [
-            {
-                "function": "new_block",
-                "options": "universal_minecraft:sign"
-            },
-            {
-                "function": "new_properties",
-                "options": {
-                    "material": f"\"{material}\""
-                }
-            },
+            {"function": "new_block", "options": "universal_minecraft:sign"},
+            {"function": "new_properties", "options": {"material": f'"{material}"'}},
             {
                 "function": "map_properties",
                 "options": {
@@ -774,61 +687,49 @@ def standing_sign_120(src_block: str, material: str):
                         str(rotation): [
                             {
                                 "function": "new_properties",
-                                "options": {
-                                    "rotation": f"\"{rotation}\""
-                                }
+                                "options": {"rotation": f'"{rotation}"'},
                             }
-                        ] for rotation in range(16)
+                        ]
+                        for rotation in range(16)
                     }
-                }
-            }
+                },
+            },
         ],
         "from_universal": {
             "universal_minecraft:sign": [
-                {
-                    "function": "new_block",
-                    "options": "minecraft:standing_sign"
-                },
+                {"function": "new_block", "options": "minecraft:standing_sign"},
                 {
                     "function": "map_properties",
                     "options": {
                         "material": {
-                            f"\"{material}\"": [
+                            f'"{material}"': [
                                 {
                                     "function": "new_block",
-                                    "options": f"minecraft:{src_block}"
+                                    "options": f"minecraft:{src_block}",
                                 }
                             ]
                         },
                         "rotation": {
-                            f"\"{rotation}\"": [
+                            f'"{rotation}"': [
                                 {
                                     "function": "new_properties",
-                                    "options": {
-                                        "ground_sign_direction": str(rotation)
-                                    }
+                                    "options": {"ground_sign_direction": str(rotation)},
                                 }
-                            ] for rotation in range(16)
-                        }
-                    }
-                }
+                            ]
+                            for rotation in range(16)
+                        },
+                    },
+                },
             ]
-        }
+        },
     }
+
 
 def wall_sign_120(src_block: str, material: str):
     return {
         "to_universal": [
-            {
-                "function": "new_block",
-                "options": "universal_minecraft:wall_sign"
-            },
-            {
-                "function": "new_properties",
-                "options": {
-                    "material": f"\"{material}\""
-                }
-            },
+            {"function": "new_block", "options": "universal_minecraft:wall_sign"},
+            {"function": "new_properties", "options": {"material": f'"{material}"'}},
             {
                 "function": "map_properties",
                 "options": {
@@ -836,88 +737,72 @@ def wall_sign_120(src_block: str, material: str):
                         facing_direction: [
                             {
                                 "function": "new_properties",
-                                "options": {
-                                    "facing": facing
-                                }
+                                "options": {"facing": facing},
                             }
-                        ] for facing_direction, facing in {
-                            "0": "\"north\"",
-                            "1": "\"north\"",
-                            "2": "\"north\"",
-                            "3": "\"south\"",
-                            "4": "\"west\"",
-                            "5": "\"east\"",
+                        ]
+                        for facing_direction, facing in {
+                            "0": '"north"',
+                            "1": '"north"',
+                            "2": '"north"',
+                            "3": '"south"',
+                            "4": '"west"',
+                            "5": '"east"',
                         }.items()
                     }
-                }
-            }
+                },
+            },
         ],
         "from_universal": {
             "universal_minecraft:wall_sign": [
-                {
-                    "function": "new_block",
-                    "options": "minecraft:wall_sign"
-                },
+                {"function": "new_block", "options": "minecraft:wall_sign"},
                 {
                     "function": "map_properties",
                     "options": {
                         "material": {
-                            f"\"{material}\"": [
+                            f'"{material}"': [
                                 {
                                     "function": "new_block",
-                                    "options": f"minecraft:{src_block}"
+                                    "options": f"minecraft:{src_block}",
                                 }
                             ]
                         },
                         "facing": {
-                            "\"north\"": [
+                            '"north"': [
                                 {
                                     "function": "new_properties",
-                                    "options": {
-                                        "facing_direction": "2"
-                                    }
+                                    "options": {"facing_direction": "2"},
                                 }
                             ],
-                            "\"south\"": [
+                            '"south"': [
                                 {
                                     "function": "new_properties",
-                                    "options": {
-                                        "facing_direction": "3"
-                                    }
+                                    "options": {"facing_direction": "3"},
                                 }
                             ],
-                            "\"west\"": [
+                            '"west"': [
                                 {
                                     "function": "new_properties",
-                                    "options": {
-                                        "facing_direction": "4"
-                                    }
+                                    "options": {"facing_direction": "4"},
                                 }
                             ],
-                            "\"east\"": [
+                            '"east"': [
                                 {
                                     "function": "new_properties",
-                                    "options": {
-                                        "facing_direction": "5"
-                                    }
+                                    "options": {"facing_direction": "5"},
                                 }
-                            ]
-                        }
-                    }
-                }
+                            ],
+                        },
+                    },
+                },
             ]
-        }
+        },
     }
+
 
 def hanging_sign_120(src_block: str, material: str):
     return {
         "to_universal": [
-            {
-                "function": "new_properties",
-                "options": {
-                    "material": f"\"{material}\""
-                }
-            },
+            {"function": "new_properties", "options": {"material": f'"{material}"'}},
             {
                 "function": "map_properties",
                 "options": {
@@ -930,7 +815,7 @@ def hanging_sign_120(src_block: str, material: str):
                                         "0b": [
                                             {
                                                 "function": "new_block",
-                                                "options": "universal_minecraft:wall_hanging_sign"
+                                                "options": "universal_minecraft:wall_hanging_sign",
                                             },
                                             {
                                                 "function": "map_properties",
@@ -941,30 +826,29 @@ def hanging_sign_120(src_block: str, material: str):
                                                                 "function": "new_properties",
                                                                 "options": {
                                                                     "facing": facing
-                                                                }
+                                                                },
                                                             }
-                                                        ] for facing_direction, facing in {
-                                                            "0": "\"north\"",
-                                                            "1": "\"north\"",
-                                                            "2": "\"north\"",
-                                                            "3": "\"south\"",
-                                                            "4": "\"west\"",
-                                                            "5": "\"east\"",
+                                                        ]
+                                                        for facing_direction, facing in {
+                                                            "0": '"north"',
+                                                            "1": '"north"',
+                                                            "2": '"north"',
+                                                            "3": '"south"',
+                                                            "4": '"west"',
+                                                            "5": '"east"',
                                                         }.items()
                                                     }
-                                                }
-                                            }
+                                                },
+                                            },
                                         ],
                                         "1b": [
                                             {
                                                 "function": "new_block",
-                                                "options": "universal_minecraft:hanging_sign"
+                                                "options": "universal_minecraft:hanging_sign",
                                             },
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "connection": "\"up\""
-                                                }
+                                                "options": {"connection": '"up"'},
                                             },
                                             {
                                                 "function": "map_properties",
@@ -975,34 +859,33 @@ def hanging_sign_120(src_block: str, material: str):
                                                                 "function": "new_properties",
                                                                 "options": {
                                                                     "rotation": rotation
-                                                                }
+                                                                },
                                                             }
-                                                        ] for facing_direction, rotation in {
-                                                            "0": "\"8\"",
-                                                            "1": "\"8\"",
-                                                            "2": "\"8\"",
-                                                            "3": "\"0\"",
-                                                            "4": "\"4\"",
-                                                            "5": "\"12\"",
+                                                        ]
+                                                        for facing_direction, rotation in {
+                                                            "0": '"8"',
+                                                            "1": '"8"',
+                                                            "2": '"8"',
+                                                            "3": '"0"',
+                                                            "4": '"4"',
+                                                            "5": '"12"',
                                                         }.items()
                                                     }
-                                                }
-                                            }
+                                                },
+                                            },
                                         ],
                                     }
-                                }
+                                },
                             }
                         ],
                         "1b": [
                             {
                                 "function": "new_block",
-                                "options": "universal_minecraft:hanging_sign"
+                                "options": "universal_minecraft:hanging_sign",
                             },
                             {
                                 "function": "new_properties",
-                                "options": {
-                                    "connection": "\"up_chain\""
-                                }
+                                "options": {"connection": '"up_chain"'},
                             },
                             {
                                 "function": "map_properties",
@@ -1012,44 +895,42 @@ def hanging_sign_120(src_block: str, material: str):
                                             {
                                                 "function": "new_properties",
                                                 "options": {
-                                                    "rotation": f"\"{rotation}\""
-                                                }
+                                                    "rotation": f'"{rotation}"'
+                                                },
                                             }
-                                        ] for rotation in range(16)
+                                        ]
+                                        for rotation in range(16)
                                     }
-                                }
-                            }
-                        ]
+                                },
+                            },
+                        ],
                     }
-                }
-            }
+                },
+            },
         ],
         "from_universal": {
             "universal_minecraft:hanging_sign": [
-                {
-                    "function": "new_block",
-                    "options": "minecraft:oak_hanging_sign"
-                },
+                {"function": "new_block", "options": "minecraft:oak_hanging_sign"},
                 {
                     "function": "map_properties",
                     "options": {
                         "connection": {
-                            "\"up\"": [
+                            '"up"': [
                                 {
                                     "function": "new_properties",
                                     "options": {
                                         "attached_bit": "0b",
                                         "hanging": "1b",
-                                    }
+                                    },
                                 },
                                 {
                                     "function": "map_properties",
                                     "options": {
                                         "material": {
-                                            f"\"{material}\"": [
+                                            f'"{material}"': [
                                                 {
                                                     "function": "new_block",
-                                                    "options": f"minecraft:{src_block}"
+                                                    "options": f"minecraft:{src_block}",
                                                 }
                                             ]
                                         },
@@ -1059,125 +940,118 @@ def hanging_sign_120(src_block: str, material: str):
                                                     "function": "new_properties",
                                                     "options": {
                                                         "facing_direction": facing_direction
-                                                    }
+                                                    },
                                                 }
-                                            ] for rotation, facing_direction in {
-                                                "\"0\"": "3",
-                                                "\"1\"": "3",
-                                                "\"2\"": "3",
-                                                "\"3\"": "4",
-                                                "\"4\"": "4",
-                                                "\"5\"": "4",
-                                                "\"6\"": "4",
-                                                "\"7\"": "2",
-                                                "\"8\"": "2",
-                                                "\"9\"": "2",
-                                                "\"10\"": "2",
-                                                "\"11\"": "5",
-                                                "\"12\"": "5",
-                                                "\"13\"": "5",
-                                                "\"14\"": "5",
-                                                "\"15\"": "3",
+                                            ]
+                                            for rotation, facing_direction in {
+                                                '"0"': "3",
+                                                '"1"': "3",
+                                                '"2"': "3",
+                                                '"3"': "4",
+                                                '"4"': "4",
+                                                '"5"': "4",
+                                                '"6"': "4",
+                                                '"7"': "2",
+                                                '"8"': "2",
+                                                '"9"': "2",
+                                                '"10"': "2",
+                                                '"11"': "5",
+                                                '"12"': "5",
+                                                '"13"': "5",
+                                                '"14"': "5",
+                                                '"15"': "3",
                                             }.items()
-                                        }
-                                    }
-                                }
+                                        },
+                                    },
+                                },
                             ],
-                            "\"up_chain\"": [
+                            '"up_chain"': [
                                 {
                                     "function": "new_properties",
                                     "options": {
                                         "attached_bit": "1b",
                                         "hanging": "1b",
-                                    }
+                                    },
                                 },
                                 {
                                     "function": "map_properties",
                                     "options": {
                                         "material": {
-                                            f"\"{material}\"": [
+                                            f'"{material}"': [
                                                 {
                                                     "function": "new_block",
-                                                    "options": f"minecraft:{src_block}"
+                                                    "options": f"minecraft:{src_block}",
                                                 }
                                             ]
                                         },
                                         "rotation": {
-                                            f"\"{rotation}\"": [
+                                            f'"{rotation}"': [
                                                 {
                                                     "function": "new_properties",
                                                     "options": {
-                                                        "ground_sign_direction": str(rotation)
-                                                    }
+                                                        "ground_sign_direction": str(
+                                                            rotation
+                                                        )
+                                                    },
                                                 }
-                                            ] for rotation in range(16)
-                                        }
-                                    }
-                                }
-                            ]
+                                            ]
+                                            for rotation in range(16)
+                                        },
+                                    },
+                                },
+                            ],
                         }
-                    }
-                }
+                    },
+                },
             ],
             "universal_minecraft:wall_hanging_sign": [
-                {
-                    "function": "new_block",
-                    "options": "minecraft:oak_hanging_sign"
-                },
+                {"function": "new_block", "options": "minecraft:oak_hanging_sign"},
                 {
                     "function": "map_properties",
                     "options": {
                         "material": {
-                            f"\"{material}\"": [
+                            f'"{material}"': [
                                 {
                                     "function": "new_block",
-                                    "options": f"minecraft:{src_block}"
+                                    "options": f"minecraft:{src_block}",
                                 },
                                 {
                                     "function": "new_properties",
                                     "options": {
                                         "attached_bit": "0b",
                                         "hanging": "0b",
-                                    }
-                                }
+                                    },
+                                },
                             ]
                         },
                         "facing": {
-                            "\"north\"": [
+                            '"north"': [
                                 {
                                     "function": "new_properties",
-                                    "options": {
-                                        "facing_direction": "2"
-                                    }
+                                    "options": {"facing_direction": "2"},
                                 }
                             ],
-                            "\"south\"": [
+                            '"south"': [
                                 {
                                     "function": "new_properties",
-                                    "options": {
-                                        "facing_direction": "3"
-                                    }
+                                    "options": {"facing_direction": "3"},
                                 }
                             ],
-                            "\"west\"": [
+                            '"west"': [
                                 {
                                     "function": "new_properties",
-                                    "options": {
-                                        "facing_direction": "4"
-                                    }
+                                    "options": {"facing_direction": "4"},
                                 }
                             ],
-                            "\"east\"": [
+                            '"east"': [
                                 {
                                     "function": "new_properties",
-                                    "options": {
-                                        "facing_direction": "5"
-                                    }
+                                    "options": {"facing_direction": "5"},
                                 }
-                            ]
-                        }
-                    }
-                }
-            ]
-        }
+                            ],
+                        },
+                    },
+                },
+            ],
+        },
     }

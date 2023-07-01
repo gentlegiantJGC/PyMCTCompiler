@@ -10,34 +10,28 @@ universal = {
             IsInitialized: 0b, 
             Progress: 0s
         }
-    }"""
+    }""",
 }
 
 _B_Base = NBTRemapHelper(
     [
-        (
-            ("HasFinished", "byte", []),
-            ("HasFinished", "byte", [("utags", "compound")])
-        ),
+        (("HasFinished", "byte", []), ("HasFinished", "byte", [("utags", "compound")])),
         (
             ("IsInitialized", "byte", []),
-            ("IsInitialized", "byte", [("utags", "compound")])
+            ("IsInitialized", "byte", [("utags", "compound")]),
         ),
-        (
-            ("Progress", "short", []),
-            ("Progress", "short", [("utags", "compound")])
-        )
+        (("Progress", "short", []), ("Progress", "short", [("utags", "compound")])),
     ],
-    '{HasFinished: 0b, IsInitialized: 0b, Progress: 0s}'
+    "{HasFinished: 0b, IsInitialized: 0b, Progress: 0s}",
 )
 
 b17 = merge(
-    [EmptyNBT(':NetherReactor'), _B_Base, bedrock_is_movable],
-    ['universal_minecraft:nether_reactor'],
-    abstract=True
+    [EmptyNBT(":NetherReactor"), _B_Base, bedrock_is_movable],
+    ["universal_minecraft:nether_reactor"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':NetherReactor'), _B_Base, bedrock_is_movable],
-    ['universal_minecraft:nether_reactor']
+    [EmptyNBT(":NetherReactor"), _B_Base, bedrock_is_movable],
+    ["universal_minecraft:nether_reactor"],
 )

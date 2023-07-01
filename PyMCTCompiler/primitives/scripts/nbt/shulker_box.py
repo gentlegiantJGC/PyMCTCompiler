@@ -1,6 +1,14 @@
 from PyMCTCompiler.primitives.scripts.nbt import TranslationFile, EmptyNBT, merge
-from .common import java_custom_name, java_str_lock, java_items_27, java_loot_table, \
-    bedrock_is_movable, bedrock_items_27, java_keep_packed, bedrock_findable
+from .common import (
+    java_custom_name,
+    java_str_lock,
+    java_items_27,
+    java_loot_table,
+    bedrock_is_movable,
+    bedrock_items_27,
+    java_keep_packed,
+    bedrock_findable,
+)
 
 """
 Default
@@ -20,7 +28,7 @@ universal = {
             Findable: 0b,
             Items: []
         }
-    }"""
+    }""",
 }
 
 _BedrockFacing = TranslationFile(
@@ -40,25 +48,26 @@ _BedrockFacing = TranslationFile(
                                         f"{facing}b": [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "facing": direction
-                                                }
+                                                "options": {"facing": direction},
                                             }
-                                        ] for facing, direction in enumerate([
-                                            "\"down\"",
-                                            "\"up\"",
-                                            "\"north\"",
-                                            "\"south\"",
-                                            "\"west\"",
-                                            "\"east\""
-                                        ])
+                                        ]
+                                        for facing, direction in enumerate(
+                                            [
+                                                '"down"',
+                                                '"up"',
+                                                '"north"',
+                                                '"south"',
+                                                '"west"',
+                                                '"east"',
+                                            ]
+                                        )
                                     }
-                                }
+                                },
                             }
-                        ]
+                        ],
                     }
-                }
-            }
+                },
+            },
         }
     ],
     [
@@ -69,48 +78,62 @@ _BedrockFacing = TranslationFile(
                     direction: [
                         {
                             "function": "new_nbt",
-                            "options": [
-                                {
-                                    "key": "facing",
-                                    "value": f"{facing}b"
-                                }
-                            ]
+                            "options": [{"key": "facing", "value": f"{facing}b"}],
                         }
-                    ] for facing, direction in enumerate([
-                        "\"down\"",
-                        "\"up\"",
-                        "\"north\"",
-                        "\"south\"",
-                        "\"west\"",
-                        "\"east\""
-                    ])
+                    ]
+                    for facing, direction in enumerate(
+                        ['"down"', '"up"', '"north"', '"south"', '"west"', '"east"']
+                    )
                 }
-            }
+            },
         }
     ],
-    {
-        "snbt": "{facing: 0b}"
-    }
+    {"snbt": "{facing: 0b}"},
 )
 
 j111 = merge(
-    [EmptyNBT('minecraft:shulker_box'), java_custom_name, java_str_lock, java_items_27, java_loot_table],
-    ['universal_minecraft:shulker_box'],
-    abstract=True
+    [
+        EmptyNBT("minecraft:shulker_box"),
+        java_custom_name,
+        java_str_lock,
+        java_items_27,
+        java_loot_table,
+    ],
+    ["universal_minecraft:shulker_box"],
+    abstract=True,
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:shulker_box'), java_custom_name, java_str_lock, java_items_27, java_loot_table, java_keep_packed],
-    ['universal_minecraft:shulker_box']
+    [
+        EmptyNBT("minecraft:shulker_box"),
+        java_custom_name,
+        java_str_lock,
+        java_items_27,
+        java_loot_table,
+        java_keep_packed,
+    ],
+    ["universal_minecraft:shulker_box"],
 )
 
 b17 = merge(
-    [EmptyNBT(':ShulkerBox'), bedrock_findable, bedrock_is_movable, bedrock_items_27, _BedrockFacing],
-    ['universal_minecraft:shulker_box'],
-    abstract=True
+    [
+        EmptyNBT(":ShulkerBox"),
+        bedrock_findable,
+        bedrock_is_movable,
+        bedrock_items_27,
+        _BedrockFacing,
+    ],
+    ["universal_minecraft:shulker_box"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':ShulkerBox'), bedrock_findable, bedrock_is_movable, bedrock_items_27, _BedrockFacing],
-    ['universal_minecraft:shulker_box']
+    [
+        EmptyNBT(":ShulkerBox"),
+        bedrock_findable,
+        bedrock_is_movable,
+        bedrock_items_27,
+        _BedrockFacing,
+    ],
+    ["universal_minecraft:shulker_box"],
 )

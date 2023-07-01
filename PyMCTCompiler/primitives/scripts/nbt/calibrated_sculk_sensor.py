@@ -1,4 +1,5 @@
 from PyMCTCompiler.primitives.scripts.nbt import EmptyNBT, merge, NBTRemapHelper
+
 # from .common import bedrock_is_movable
 
 """
@@ -12,7 +13,7 @@ universal = {
             isMovable: 1b,
             listener: {selector: {}}
         }
-    }"""
+    }""",
 }
 
 # _B_Base = NBTRemapHelper(
@@ -27,12 +28,12 @@ universal = {
 
 _J_Base = NBTRemapHelper(
     [],
-    '{last_vibration_frequency: 0, listener: {selector: {tick: -1L}, event_delay: 0}}'
+    "{last_vibration_frequency: 0, listener: {selector: {tick: -1L}, event_delay: 0}}",
 )
 
 j120 = merge(
-    [EmptyNBT('minecraft:calibrated_sculk_sensor'), _J_Base],
-    ['universal_minecraft:calibrated_sculk_sensor']
+    [EmptyNBT("minecraft:calibrated_sculk_sensor"), _J_Base],
+    ["universal_minecraft:calibrated_sculk_sensor"],
 )
 
 # b119 = merge(

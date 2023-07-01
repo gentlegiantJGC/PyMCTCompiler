@@ -14,15 +14,14 @@ universal = {
         utags: {
             isMovable: 1b
         }
-    }"""
+    }""",
 }
 
 j120 = merge(
-    [EmptyNBT('minecraft:decorated_pot')],
-    ['universal_minecraft:decorated_pot']
+    [EmptyNBT("minecraft:decorated_pot")], ["universal_minecraft:decorated_pot"]
 )
 
 b120 = merge(
-    [EmptyNBT(':DecoratedPot'), bedrock_is_movable],
-    ['universal_minecraft:decorated_pot']
+    [EmptyNBT(":DecoratedPot"), bedrock_is_movable],
+    ["universal_minecraft:decorated_pot"],
 )

@@ -1,4 +1,9 @@
-from PyMCTCompiler.primitives.scripts.nbt import NBTRemapHelper, TranslationFile, EmptyNBT, merge
+from PyMCTCompiler.primitives.scripts.nbt import (
+    NBTRemapHelper,
+    TranslationFile,
+    EmptyNBT,
+    merge,
+)
 from .common import bedrock_is_movable, java_keep_packed
 
 universal = {
@@ -7,7 +12,7 @@ universal = {
         utags: {
             isMovable: 1b
         }
-    }"""
+    }""",
 }
 
 """
@@ -36,34 +41,22 @@ Java
 # TODO: calculate total pages and store in universal NBT
 _J114 = NBTRemapHelper(
     [
-        (
-            ("Book", "compound", []),
-            ("Book", "compound", [("utags", "compound")])
-        ),
-        (
-            ("Page", "int", []),
-            ("Page", "int", [("utags", "compound")])
-        )
+        (("Book", "compound", []), ("Book", "compound", [("utags", "compound")])),
+        (("Page", "int", []), ("Page", "int", [("utags", "compound")])),
     ],
-    "{}"
+    "{}",
 )
 
 _B110 = NBTRemapHelper(
     [
         (  # TODO: handle conversion to a universal format
             ("book", "compound", []),
-            ("Book", "compound", [("utags", "compound")])
+            ("Book", "compound", [("utags", "compound")]),
         ),
-        (
-            ("page", "int", []),
-            ("Page", "int", [("utags", "compound")])
-        ),
-        (
-            ("totalPages", "int", []),
-            ("totalPages", "int", [("utags", "compound")])
-        ),
+        (("page", "int", []), ("Page", "int", [("utags", "compound")])),
+        (("totalPages", "int", []), ("totalPages", "int", [("utags", "compound")])),
     ],
-    "{}"
+    "{}",
 )
 
 _BedrockHasBook = TranslationFile(
@@ -83,26 +76,22 @@ _BedrockHasBook = TranslationFile(
                                         "0b": [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "has_book": "\"false\""
-                                                }
+                                                "options": {"has_book": '"false"'},
                                             }
                                         ],
                                         "1b": [
                                             {
                                                 "function": "new_properties",
-                                                "options": {
-                                                    "has_book": "\"true\""
-                                                }
+                                                "options": {"has_book": '"true"'},
                                             }
-                                        ]
+                                        ],
                                     }
-                                }
+                                },
                             }
-                        ]
+                        ],
                     }
-                }
-            }
+                },
+            },
         }
     ],
     [
@@ -110,36 +99,31 @@ _BedrockHasBook = TranslationFile(
             "function": "map_properties",
             "options": {
                 "has_book": {
-                    "\"false\"": [],
-                    "\"true\"": [
+                    '"false"': [],
+                    '"true"': [
                         {
                             "function": "new_nbt",
-                            "options": [
-                                {
-                                    "key": "hasBook",
-                                    "value": "1b"
-                                }
-                            ]
+                            "options": [{"key": "hasBook", "value": "1b"}],
                         }
-                    ]
+                    ],
                 }
-            }
+            },
         }
-    ]
+    ],
 )
 
 j114 = merge(
-    [EmptyNBT('minecraft:lectern'), _J114, java_keep_packed],
-    ['universal_minecraft:lectern']
+    [EmptyNBT("minecraft:lectern"), _J114, java_keep_packed],
+    ["universal_minecraft:lectern"],
 )
 
 b110 = merge(
-    [EmptyNBT(':Lectern'), _B110, _BedrockHasBook, bedrock_is_movable],
-    ['universal_minecraft:lectern'],
-    abstract=True
+    [EmptyNBT(":Lectern"), _B110, _BedrockHasBook, bedrock_is_movable],
+    ["universal_minecraft:lectern"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':Lectern'), _B110, _BedrockHasBook, bedrock_is_movable],
-    ['universal_minecraft:lectern']
+    [EmptyNBT(":Lectern"), _B110, _BedrockHasBook, bedrock_is_movable],
+    ["universal_minecraft:lectern"],
 )

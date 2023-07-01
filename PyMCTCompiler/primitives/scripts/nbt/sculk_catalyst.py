@@ -12,20 +12,17 @@ universal = {
         utags: {
             isMovable: 1b
         }
-    }"""
+    }""",
 }
 
-_J_Base = NBTRemapHelper(
-    [],
-    '{cursors: []}'
-)
+_J_Base = NBTRemapHelper([], "{cursors: []}")
 
 j119 = merge(
-    [EmptyNBT('minecraft:sculk_catalyst'), _J_Base],
-    ['universal_minecraft:sculk_catalyst']
+    [EmptyNBT("minecraft:sculk_catalyst"), _J_Base],
+    ["universal_minecraft:sculk_catalyst"],
 )
 
 b119 = merge(
-    [EmptyNBT(':SculkCatalyst'), bedrock_is_movable],
-    ['universal_minecraft:sculk_catalyst']
+    [EmptyNBT(":SculkCatalyst"), bedrock_is_movable],
+    ["universal_minecraft:sculk_catalyst"],
 )

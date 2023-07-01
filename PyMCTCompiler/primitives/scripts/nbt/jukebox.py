@@ -18,14 +18,14 @@ universal = {
         utags: {
             isMovable: 1b
         }
-    }"""
+    }""",
 }
 
 _J19 = NBTRemapHelper(
     [
         (
             ("RecordItem", "compound", []),
-            ("RecordItem", "compound", [("utags", "compound")])
+            ("RecordItem", "compound", [("utags", "compound")]),
         )
     ]
 )
@@ -34,29 +34,28 @@ _B17 = NBTRemapHelper(
     [
         (
             ("RecordItem", "compound", []),
-            ("RecordItem", "compound", [("utags", "compound")])
+            ("RecordItem", "compound", [("utags", "compound")]),
         )
     ]
 )
 
 j19 = merge(
-    [EmptyNBT('minecraft:jukebox'), _J19],
-    ['universal_minecraft:jukebox'],
-    abstract=True
+    [EmptyNBT("minecraft:jukebox"), _J19],
+    ["universal_minecraft:jukebox"],
+    abstract=True,
 )
 
 j113 = merge(
-    [EmptyNBT('minecraft:jukebox'), _J19, java_keep_packed],
-    ['universal_minecraft:jukebox']
+    [EmptyNBT("minecraft:jukebox"), _J19, java_keep_packed],
+    ["universal_minecraft:jukebox"],
 )
 
 b17 = merge(
-    [EmptyNBT(':Jukebox'), _B17, bedrock_is_movable],
-    ['universal_minecraft:jukebox'],
-    abstract=True
+    [EmptyNBT(":Jukebox"), _B17, bedrock_is_movable],
+    ["universal_minecraft:jukebox"],
+    abstract=True,
 )
 
 b113 = merge(
-    [EmptyNBT(':Jukebox'), _B17, bedrock_is_movable],
-    ['universal_minecraft:jukebox']
+    [EmptyNBT(":Jukebox"), _B17, bedrock_is_movable], ["universal_minecraft:jukebox"]
 )
