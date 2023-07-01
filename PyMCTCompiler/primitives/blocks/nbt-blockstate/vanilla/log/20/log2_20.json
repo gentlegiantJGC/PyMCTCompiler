@@ -1,4 +1,21 @@
 {
+    "specification": {
+        "properties": {
+            "new_log_type": [
+                "\"acacia\"",
+                "\"dark_oak\""
+            ],
+            "pillar_axis": [
+                "\"y\"",
+                "\"x\"",
+                "\"z\""
+            ]
+        },
+        "defaults": {
+            "new_log_type": "\"acacia\"",
+            "pillar_axis": "\"y\""
+        }
+    },
     "to_universal": [
         {
             "function": "new_block",

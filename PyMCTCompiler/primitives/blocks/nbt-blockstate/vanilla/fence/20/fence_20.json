@@ -1,4 +1,19 @@
 {
+    "specification": {
+        "properties": {
+            "wood_type": [
+                "\"oak\"",
+                "\"spruce\"",
+                "\"birch\"",
+                "\"jungle\"",
+                "\"acacia\"",
+                "\"dark_oak\""
+            ]
+        },
+        "defaults": {
+            "wood_type": "\"oak\""
+        }
+    },
     "to_universal": [
         {
             "function": "new_block",
