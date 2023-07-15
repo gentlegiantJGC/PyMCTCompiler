@@ -418,6 +418,16 @@ wall_j113 = merge(
     ["universal_minecraft:wall_sign"],
 )
 
+hanging_j119 = merge(
+    [EmptyNBT("minecraft:hanging_sign"), _J19, java_keep_packed],
+    ["universal_minecraft:hanging_sign"],
+)
+
+wall_hanging_j119 = merge(
+    [EmptyNBT("minecraft:hanging_sign"), _J19, java_keep_packed],
+    ["universal_minecraft:wall_hanging_sign"],
+)
+
 j120 = merge(
     [EmptyNBT("minecraft:sign"), _J120, java_keep_packed], ["universal_minecraft:sign"]
 )
@@ -433,7 +443,7 @@ hanging_j120 = merge(
 )
 
 wall_hanging_j120 = merge(
-    [EmptyNBT("minecraft:hanging_sign"), java_keep_packed],
+    [EmptyNBT("minecraft:hanging_sign"), _J120, java_keep_packed],
     ["universal_minecraft:wall_hanging_sign"],
 )
 
