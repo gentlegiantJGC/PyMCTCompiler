@@ -159,7 +159,7 @@ class NBTBlockstateCompiler(BaseCompiler):
                     namespace2,
                     base_name2,
                 )
-                raise Exception(e)
+                raise e
 
     @property
     def block_palette(self) -> dict:

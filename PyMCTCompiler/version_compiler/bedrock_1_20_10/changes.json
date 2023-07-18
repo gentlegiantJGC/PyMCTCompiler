@@ -1,0 +1,222 @@
+{
+    "minecraft:black_concrete": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:black_shulker_box": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:blue_concrete": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:blue_shulker_box": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:brown_concrete": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:brown_shulker_box": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:concrete": {
+        "block_removed": true
+    },
+    "minecraft:cyan_concrete": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:cyan_shulker_box": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:gray_concrete": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:gray_shulker_box": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:green_concrete": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:green_shulker_box": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_blue_concrete": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_blue_shulker_box": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_gray_concrete": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_gray_shulker_box": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:lime_concrete": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:lime_shulker_box": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:magenta_concrete": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:magenta_shulker_box": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:observer": {
+        "properties_added": {
+            "minecraft:facing_direction": [
+                "\"down\"",
+                "\"up\"",
+                "\"north\"",
+                "\"south\"",
+                "\"west\"",
+                "\"east\""
+            ]
+        },
+        "properties_removed": {
+            "facing_direction": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ]
+        }
+    },
+    "minecraft:orange_concrete": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:orange_shulker_box": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:pink_concrete": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:pink_shulker_box": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:purple_concrete": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:purple_shulker_box": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:red_concrete": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:red_shulker_box": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:shulker_box": {
+        "block_removed": true
+    },
+    "minecraft:white_concrete": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:white_shulker_box": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:yellow_concrete": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:yellow_shulker_box": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    }
+}
