@@ -1,0 +1,45 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:slab"
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "material": "\"bamboo\"",
+                "type": "\"double\""
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:slab": [
+            {
+                "function": "new_block",
+                "options": "minecraft:stone_block_slab"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "type": {
+                        "\"double\"": [
+                            {
+                                "function": "map_properties",
+                                "options": {
+                                    "material": {
+                                        "\"bamboo\"": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:bamboo_double_slab"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
