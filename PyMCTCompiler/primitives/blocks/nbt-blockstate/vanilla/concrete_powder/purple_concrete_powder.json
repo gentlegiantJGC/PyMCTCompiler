@@ -1,0 +1,35 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:concrete_powder"
+        },
+        {
+			"function": "new_properties",
+			"options": {
+				"color": "\"purple\""
+			}
+		}
+    ],
+    "from_universal": {
+        "universal_minecraft:concrete_powder": [
+            {
+                "function": "new_block",
+                "options": "minecraft:white_concrete_powder"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "color": {
+                        "\"purple\"": [
+                            {
+								"function": "new_block",
+								"options": "minecraft:purple_concrete_powder"
+							}
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
