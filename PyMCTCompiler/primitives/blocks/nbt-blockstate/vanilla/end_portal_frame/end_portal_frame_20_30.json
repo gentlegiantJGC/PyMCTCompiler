@@ -2,58 +2,13 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:calibrated_sculk_sensor"
+            "options": "universal_minecraft:end_portal_frame"
         },
         {
             "function": "map_properties",
             "options": {
-                "sculk_sensor_phase": {
-                    "0": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "power": "\"0\"",
-                                "sculk_sensor_phase": "\"inactive\""
-                            }
-                        }
-                    ],
-                    "1": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "power": "\"1\"",
-                                "sculk_sensor_phase": "\"active\""
-                            }
-                        }
-                    ],
-                    "2": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "power": "\"1\"",
-                                "sculk_sensor_phase": "\"cooldown\""
-                            }
-                        }
-                    ]
-                },
-                "direction": {
-                    "0": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "facing": "\"north\""
-                            }
-                        }
-                    ],
-                    "1": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "facing": "\"east\""
-                            }
-                        }
-                    ],
-                    "2": [
+                "minecraft:cardinal_direction": {
+                    "\"south\"": [
                         {
                             "function": "new_properties",
                             "options": {
@@ -61,11 +16,45 @@
                             }
                         }
                     ],
-                    "3": [
+                    "\"west\"": [
                         {
                             "function": "new_properties",
                             "options": {
                                 "facing": "\"west\""
+                            }
+                        }
+                    ],
+                    "\"north\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"north\""
+                            }
+                        }
+                    ],
+                    "\"east\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"east\""
+                            }
+                        }
+                    ]
+                },
+                "end_portal_eye_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "eye": "\"false\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "eye": "\"true\""
                             }
                         }
                     ]
@@ -74,62 +63,20 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:calibrated_sculk_sensor": [
+        "universal_minecraft:end_portal_frame": [
             {
                 "function": "new_block",
-                "options": "minecraft:calibrated_sculk_sensor"
+                "options": "minecraft:end_portal_frame"
             },
             {
                 "function": "map_properties",
                 "options": {
-                    "sculk_sensor_phase": {
-                        "\"inactive\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "sculk_sensor_phase": "0"
-                                }
-                            }
-                        ],
-                        "\"active\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "sculk_sensor_phase": "1"
-                                }
-                            }
-                        ],
-                        "\"cooldown\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "sculk_sensor_phase": "2"
-                                }
-                            }
-                        ]
-                    },
                     "facing": {
-                        "\"north\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "direction": "0"
-                                }
-                            }
-                        ],
-                        "\"east\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "direction": "1"
-                                }
-                            }
-                        ],
                         "\"south\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": "2"
+                                    "minecraft:cardinal_direction": "\"south\""
                                 }
                             }
                         ],
@@ -137,7 +84,41 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": "3"
+                                    "minecraft:cardinal_direction": "\"west\""
+                                }
+                            }
+                        ],
+                        "\"north\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"north\""
+                                }
+                            }
+                        ],
+                        "\"east\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"east\""
+                                }
+                            }
+                        ]
+                    },
+                    "eye": {
+                        "\"false\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "end_portal_eye_bit": "0b"
+                                }
+                            }
+                        ],
+                        "\"true\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "end_portal_eye_bit": "1b"
                                 }
                             }
                         ]

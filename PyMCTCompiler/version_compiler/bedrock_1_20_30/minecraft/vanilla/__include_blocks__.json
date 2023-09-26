@@ -147,25 +147,21 @@
     "small_dripleaf_block": "small_dripleaf_block_20_30",
     "big_dripleaf": "big_dripleaf_20_30",
 
-    "furnace": "furnace_20_30",
-    "lit_furnace": "lit_furnace_20_30",
-    "blast_furnace": "blast_furnace_20_30",
-    "lit_blast_furnace": "lit_blast_furnace_20_30",
-    "smoker": "smoker_20_30",
-    "lit_smoker": "lit_smoker_20_30",
+    "furnace": [">nbt.furnace.b113", "furnace_20_30"],
+    "lit_furnace": [">nbt.furnace.b113", "lit_furnace_20_30"],
+    "blast_furnace": [">nbt.blast_furnace.b113", "blast_furnace_20_30"],
+    "lit_blast_furnace": [">nbt.blast_furnace.b113", "lit_blast_furnace_20_30"],
+    "smoker": [">nbt.smoker.b113", "smoker_20_30"],
+    "lit_smoker": [">nbt.smoker.b113", "lit_smoker_20_30"],
 
-    "campfire": null,
-    "soul_campfire": null,
-
-    "calibrated_sculk_sensor": null,
-
-    "end_portal_frame": null,
-
-    "lectern": null,
-    "pink_petals": null,
-
-    "unpowered_comparator": null,
-    "powered_comparator": null,
-    "unpowered_repeater": null,
-    "powered_repeater": null
+    "campfire": [">nbt.campfire.b111", "campfire_20_30"],
+    "soul_campfire": [">nbt.soul_campfire.b111", "soul_campfire_20_30"],
+    "calibrated_sculk_sensor": [">nbt.sculk_sensor.calibrated_b120", "calibrated_sculk_sensor_20_30"],
+    "end_portal_frame": "end_portal_frame_20_30",
+    "lectern": [">nbt.lectern.b113", "lectern_20_30"],
+    "pink_petals": "pink_petals_20_30",
+    "unpowered_comparator": [">nbt.comparator.b113", "unpowered_comparator_20_30"],
+    "powered_comparator": [">nbt.comparator.b113", "powered_comparator_20_30"],
+    "unpowered_repeater": "unpowered_repeater_20_30",
+    "powered_repeater": "powered_repeater_20_30"
 }
