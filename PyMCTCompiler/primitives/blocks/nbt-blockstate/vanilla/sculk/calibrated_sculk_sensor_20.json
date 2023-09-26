@@ -35,6 +35,40 @@
                             }
                         }
                     ]
+                },
+                "direction": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"north\""
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"east\""
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"south\""
+                            }
+                        }
+                    ],
+                    "3": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"west\""
+                            }
+                        }
+                    ]
                 }
             }
         }
@@ -70,6 +104,40 @@
                                 "function": "new_properties",
                                 "options": {
                                     "sculk_sensor_phase": "2"
+                                }
+                            }
+                        ]
+                    },
+                    "facing": {
+                        "\"north\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": "0"
+                                }
+                            }
+                        ],
+                        "\"east\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": "1"
+                                }
+                            }
+                        ],
+                        "\"south\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": "2"
+                                }
+                            }
+                        ],
+                        "\"west\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "direction": "3"
                                 }
                             }
                         ]

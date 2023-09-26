@@ -1,0 +1,149 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:calibrated_sculk_sensor"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "sculk_sensor_phase": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "power": "\"0\"",
+                                "sculk_sensor_phase": "\"inactive\""
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "power": "\"1\"",
+                                "sculk_sensor_phase": "\"active\""
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "power": "\"1\"",
+                                "sculk_sensor_phase": "\"cooldown\""
+                            }
+                        }
+                    ]
+                },
+                "minecraft:cardinal_direction": {
+                    "\"north\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"north\""
+                            }
+                        }
+                    ],
+                    "\"east\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"east\""
+                            }
+                        }
+                    ],
+                    "\"south\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"south\""
+                            }
+                        }
+                    ],
+                    "\"west\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"west\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:calibrated_sculk_sensor": [
+            {
+                "function": "new_block",
+                "options": "minecraft:calibrated_sculk_sensor"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "sculk_sensor_phase": {
+                        "\"inactive\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "sculk_sensor_phase": "0"
+                                }
+                            }
+                        ],
+                        "\"active\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "sculk_sensor_phase": "1"
+                                }
+                            }
+                        ],
+                        "\"cooldown\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "sculk_sensor_phase": "2"
+                                }
+                            }
+                        ]
+                    },
+                    "facing": {
+                        "\"north\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"north\""
+                                }
+                            }
+                        ],
+                        "\"east\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"east\""
+                                }
+                            }
+                        ],
+                        "\"south\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"south\""
+                                }
+                            }
+                        ],
+                        "\"west\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"west\""
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

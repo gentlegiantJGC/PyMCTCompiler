@@ -1,0 +1,35 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:stained_terracotta"
+        },
+        {
+			"function": "new_properties",
+			"options": {
+				"color": "\"light_gray\""
+			}
+		}
+    ],
+    "from_universal": {
+        "universal_minecraft:stained_terracotta": [
+            {
+                "function": "new_block",
+                "options": "minecraft:white_terracotta"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "color": {
+                        "\"light_gray\"": [
+                            {
+								"function": "new_block",
+								"options": "minecraft:light_gray_terracotta"
+							}
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

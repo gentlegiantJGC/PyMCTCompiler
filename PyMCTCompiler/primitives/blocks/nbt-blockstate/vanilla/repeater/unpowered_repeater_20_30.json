@@ -1,0 +1,176 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:repeater"
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "powered": "\"false\""
+            }
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "minecraft:cardinal_direction": {
+                    "\"south\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"south\""
+                            }
+                        }
+                    ],
+                    "\"west\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"west\""
+                            }
+                        }
+                    ],
+                    "\"north\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"north\""
+                            }
+                        }
+                    ],
+                    "\"east\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"east\""
+                            }
+                        }
+                    ]
+                },
+                "repeater_delay": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "delay": "\"1\""
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "delay": "\"2\""
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "delay": "\"3\""
+                            }
+                        }
+                    ],
+                    "3": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "delay": "\"4\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:repeater": [
+            {
+                "function": "new_block",
+                "options": "minecraft:unpowered_repeater"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "powered": {
+                        "\"false\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:unpowered_repeater"
+                            }
+                        ]
+                    },
+                    "facing": {
+                        "\"south\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"south\""
+                                }
+                            }
+                        ],
+                        "\"west\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"west\""
+                                }
+                            }
+                        ],
+                        "\"north\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"north\""
+                                }
+                            }
+                        ],
+                        "\"east\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"east\""
+                                }
+                            }
+                        ]
+                    },
+                    "delay": {
+                        "\"1\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "repeater_delay": "0"
+                                }
+                            }
+                        ],
+                        "\"2\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "repeater_delay": "1"
+                                }
+                            }
+                        ],
+                        "\"3\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "repeater_delay": "2"
+                                }
+                            }
+                        ],
+                        "\"4\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "repeater_delay": "3"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,165 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:slab"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "wood_type": {
+                    "\"oak\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "material": "\"oak\""
+                            }
+                        }
+                    ],
+                    "\"spruce\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "material": "\"spruce\""
+                            }
+                        }
+                    ],
+                    "\"birch\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "material": "\"birch\""
+                            }
+                        }
+                    ],
+                    "\"jungle\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "material": "\"jungle\""
+                            }
+                        }
+                    ],
+                    "\"acacia\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "material": "\"acacia\""
+                            }
+                        }
+                    ],
+                    "\"dark_oak\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "material": "\"dark_oak\""
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "type": "\"double\""
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:slab": [
+            {
+                "function": "new_block",
+                "options": "minecraft:stone_block_slab"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "type": {
+                        "\"double\"": [
+                            {
+                                "function": "map_properties",
+                                "options": {
+                                    "material": {
+                                        "\"oak\"": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:double_wooden_slab"
+                                            },
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "wood_type": "\"oak\""
+                                                }
+                                            }
+                                        ],
+                                        "\"spruce\"": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:double_wooden_slab"
+                                            },
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "wood_type": "\"spruce\""
+                                                }
+                                            }
+                                        ],
+                                        "\"birch\"": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:double_wooden_slab"
+                                            },
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "wood_type": "\"birch\""
+                                                }
+                                            }
+                                        ],
+                                        "\"jungle\"": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:double_wooden_slab"
+                                            },
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "wood_type": "\"jungle\""
+                                                }
+                                            }
+                                        ],
+                                        "\"acacia\"": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:double_wooden_slab"
+                                            },
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "wood_type": "\"acacia\""
+                                                }
+                                            }
+                                        ],
+                                        "\"dark_oak\"": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:double_wooden_slab"
+                                            },
+                                            {
+                                                "function": "new_properties",
+                                                "options": {
+                                                    "wood_type": "\"dark_oak\""
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

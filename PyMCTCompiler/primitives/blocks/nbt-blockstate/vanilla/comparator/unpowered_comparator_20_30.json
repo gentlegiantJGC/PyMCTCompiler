@@ -1,0 +1,150 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:comparator"
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "powered": "\"false\""
+            }
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "minecraft:cardinal_direction": {
+                    "\"south\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"south\""
+                            }
+                        }
+                    ],
+                    "\"west\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"west\""
+                            }
+                        }
+                    ],
+                    "\"north\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"north\""
+                            }
+                        }
+                    ],
+                    "\"east\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"east\""
+                            }
+                        }
+                    ]
+                },
+                "output_subtract_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "mode": "\"compare\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "mode": "\"subtract\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:comparator": [
+            {
+                "function": "new_block",
+                "options": "minecraft:unpowered_comparator"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "facing": {
+                        "\"south\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"south\""
+                                }
+                            }
+                        ],
+                        "\"west\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"west\""
+                                }
+                            }
+                        ],
+                        "\"north\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"north\""
+                                }
+                            }
+                        ],
+                        "\"east\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"east\""
+                                }
+                            }
+                        ]
+                    },
+                    "powered": {
+                        "\"false\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:unpowered_comparator"
+                            },
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "output_lit_bit": "0b"
+                                }
+                            }
+                        ]
+                    },
+                    "mode": {
+                        "\"compare\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "output_subtract_bit": "0b"
+                                }
+                            }
+                        ],
+                        "\"subtract\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "output_subtract_bit": "1b"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
