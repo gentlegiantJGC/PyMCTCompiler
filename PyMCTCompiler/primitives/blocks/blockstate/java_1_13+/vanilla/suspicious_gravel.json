@@ -1,0 +1,51 @@
+{
+	"specification": {
+        "properties": {
+            "dusted": [
+                "\"0\"",
+                "\"1\"",
+                "\"2\"",
+                "\"3\""
+            ]
+        },
+        "defaults": {
+            "dusted": "\"0\""
+        }
+    },
+	"to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:suspicious_gravel"
+        },
+        {
+            "function": "carry_properties",
+            "options": {
+                "dusted": [
+                    "\"0\"",
+                    "\"1\"",
+                    "\"2\"",
+                    "\"3\""
+                ]
+            }
+        }
+    ],
+	"from_universal": {
+		"universal_minecraft:suspicious_gravel": [
+            {
+                "function": "new_block",
+                "options": "minecraft:suspicious_gravel"
+            },
+            {
+                "function": "carry_properties",
+                "options": {
+                    "dusted": [
+                        "\"0\"",
+                        "\"1\"",
+                        "\"2\"",
+                        "\"3\""
+                    ]
+                }
+            }
+        ]
+	}
+}

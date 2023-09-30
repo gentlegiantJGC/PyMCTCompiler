@@ -19,7 +19,8 @@
 		    "defaults": {
 		        "dusted": "\"0\"",
 		        "hanging": "\"false\""
-		    }
+		    },
+			"unbt": "nbt.brushable_block.universal"
 		}
 	}
 }
