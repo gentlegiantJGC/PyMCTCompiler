@@ -1,0 +1,6 @@
+{
+    "chest": [">nbt.chest.b120", "chest_120"],
+	"trapped_chest": [">nbt.chest.trapped_b120", "trapped_chest_120"],
+    "ender_chest": [">nbt.ender_chest.b113", "ender_chest_120"],
+    "stonecutter_block": "stonecutter_block_120"
+}

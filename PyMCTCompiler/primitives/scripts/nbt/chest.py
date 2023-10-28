@@ -45,8 +45,19 @@ universal_trapped = {
     }""",
 }
 
-_BConnections = {
-    block_id: TranslationFile(
+
+def _get_bedrock_connections(
+    block_id: str,
+    facing_property_name: str,
+    north_val: str,
+    east_val: str,
+    south_val: str,
+    west_val: str,
+    self_func: str,
+    left_func: str,
+    right_func: str,
+):
+    return TranslationFile(
         [
             {
                 "function": "walk_input_nbt",
@@ -64,19 +75,19 @@ _BConnections = {
                 "options": {
                     "input": ["nbt", "properties", "location"],
                     "output": ["new_properties"],
-                    "function": "bedrock_chest_connection_self",
+                    "function": self_func,
                 },
             },
             {
                 "function": "map_properties",
                 "options": {
-                    "facing_direction": {
-                        str(direction): [
+                    facing_property_name: {
+                        direction: [
                             {
                                 "function": "multiblock",
                                 "options": [
                                     {
-                                        "coords": coord_left,
+                                        "coords": coord,
                                         "functions": [
                                             {
                                                 "function": "map_block_name",
@@ -85,8 +96,8 @@ _BConnections = {
                                                         {
                                                             "function": "map_properties",
                                                             "options": {
-                                                                "facing_direction": {
-                                                                    str(direction): [
+                                                                facing_property_name: {
+                                                                    direction: [
                                                                         {
                                                                             "function": "code",
                                                                             "options": {
@@ -98,7 +109,7 @@ _BConnections = {
                                                                                 "output": [
                                                                                     "new_properties"
                                                                                 ],
-                                                                                "function": "bedrock_chest_connection_other_left",
+                                                                                "function": func,
                                                                             },
                                                                         }
                                                                     ]
@@ -109,50 +120,18 @@ _BConnections = {
                                                 },
                                             }
                                         ],
-                                    },
-                                    {
-                                        "coords": coord_right,
-                                        "functions": [
-                                            {
-                                                "function": "map_block_name",
-                                                "options": {
-                                                    f"minecraft:{block_id}": [
-                                                        {
-                                                            "function": "map_properties",
-                                                            "options": {
-                                                                "facing_direction": {
-                                                                    str(direction): [
-                                                                        {
-                                                                            "function": "code",
-                                                                            "options": {
-                                                                                "input": [
-                                                                                    "nbt",
-                                                                                    "properties",
-                                                                                    "location",
-                                                                                ],
-                                                                                "output": [
-                                                                                    "new_properties"
-                                                                                ],
-                                                                                "function": "bedrock_chest_connection_other_right",
-                                                                            },
-                                                                        }
-                                                                    ]
-                                                                }
-                                                            },
-                                                        }
-                                                    ]
-                                                },
-                                            }
-                                        ],
-                                    },
+                                    } for coord, func in (
+                                        (coord_left, left_func),
+                                        (coord_right, right_func),
+                                    )
                                 ],
                             }
                         ]
                         for direction, (coord_left, coord_right) in {
-                            2: ([1, 0, 0], [-1, 0, 0]),
-                            3: ([-1, 0, 0], [1, 0, 0]),
-                            4: ([0, 0, -1], [0, 0, 1]),
-                            5: ([0, 0, 1], [0, 0, -1]),
+                            north_val: ([1, 0, 0], [-1, 0, 0]),
+                            south_val: ([-1, 0, 0], [1, 0, 0]),
+                            west_val: ([0, 0, -1], [0, 0, 1]),
+                            east_val: ([0, 0, 1], [0, 0, -1]),
                         }.items()
                     }
                 },
@@ -178,8 +157,35 @@ _BConnections = {
             }
         ],
     )
-    for block_id in ("chest", "trapped_chest")
-}
+
+
+def _get_bedrock_113_connections(block_id: str):
+    return _get_bedrock_connections(
+        block_id,
+        "facing_direction",
+        "2",
+        "5",
+        "3",
+        "4",
+        "bedrock_chest_connection_self",
+        "bedrock_chest_connection_other_left",
+        "bedrock_chest_connection_other_right"
+    )
+
+
+def _get_bedrock_120_connections(block_id: str):
+    return _get_bedrock_connections(
+        block_id,
+        "minecraft:cardinal_direction",
+        "\"north\"",
+        "\"east\"",
+        "\"south\"",
+        "\"west\"",
+        "bedrock_chest_connection_self_120",
+        "bedrock_chest_connection_other_left_120",
+        "bedrock_chest_connection_other_right_120"
+    )
+
 
 j112 = merge(
     [
@@ -247,7 +253,7 @@ b113 = merge(
         bedrock_findable,
         bedrock_items_27,
         bedrock_is_movable,
-        _BConnections["chest"],
+        _get_bedrock_113_connections("chest"),
     ],
     ["universal_minecraft:chest"],
 )
@@ -258,7 +264,29 @@ trapped_b113 = merge(
         bedrock_findable,
         bedrock_items_27,
         bedrock_is_movable,
-        _BConnections["trapped_chest"],
+        _get_bedrock_113_connections("trapped_chest"),
+    ],
+    ["universal_minecraft:trapped_chest"],
+)
+
+b120 = merge(
+    [
+        EmptyNBT(":Chest"),
+        bedrock_findable,
+        bedrock_items_27,
+        bedrock_is_movable,
+        _get_bedrock_120_connections("chest"),
+    ],
+    ["universal_minecraft:chest"],
+)
+
+trapped_b120 = merge(
+    [
+        EmptyNBT(":Chest"),
+        bedrock_findable,
+        bedrock_items_27,
+        bedrock_is_movable,
+        _get_bedrock_120_connections("trapped_chest"),
     ],
     ["universal_minecraft:trapped_chest"],
 )

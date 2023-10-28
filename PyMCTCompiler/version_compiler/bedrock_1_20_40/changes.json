@@ -1,0 +1,82 @@
+{
+    "minecraft:chest": {
+        "properties_added": {
+            "minecraft:cardinal_direction": [
+                "\"south\"",
+                "\"west\"",
+                "\"north\"",
+                "\"east\""
+            ]
+        },
+        "properties_removed": {
+            "facing_direction": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ]
+        }
+    },
+    "minecraft:ender_chest": {
+        "properties_added": {
+            "minecraft:cardinal_direction": [
+                "\"south\"",
+                "\"west\"",
+                "\"north\"",
+                "\"east\""
+            ]
+        },
+        "properties_removed": {
+            "facing_direction": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ]
+        }
+    },
+    "minecraft:stonecutter_block": {
+        "properties_added": {
+            "minecraft:cardinal_direction": [
+                "\"south\"",
+                "\"west\"",
+                "\"north\"",
+                "\"east\""
+            ]
+        },
+        "properties_removed": {
+            "facing_direction": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ]
+        }
+    },
+    "minecraft:trapped_chest": {
+        "properties_added": {
+            "minecraft:cardinal_direction": [
+                "\"south\"",
+                "\"west\"",
+                "\"north\"",
+                "\"east\""
+            ]
+        },
+        "properties_removed": {
+            "facing_direction": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ]
+        }
+    }
+}
