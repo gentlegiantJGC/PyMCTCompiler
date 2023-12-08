@@ -1,0 +1,35 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:diorite"
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "polished": "\"true\""
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:diorite": [
+            {
+                "function": "new_block",
+                "options": "minecraft:diorite"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "polished": {
+                        "\"true\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:polished_diorite"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

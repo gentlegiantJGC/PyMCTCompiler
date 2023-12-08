@@ -1,0 +1,35 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:planks"
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "material": "\"spruce\""
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:planks": [
+            {
+                "function": "new_block",
+                "options": "minecraft:planks"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "material": {
+                        "\"spruce\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:spruce_planks"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

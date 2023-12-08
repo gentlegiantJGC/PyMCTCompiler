@@ -1,0 +1,35 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:granite"
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "polished": "\"false\""
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:granite": [
+            {
+                "function": "new_block",
+                "options": "minecraft:granite"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "polished": {
+                        "\"false\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:granite"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
