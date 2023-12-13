@@ -1,0 +1,16 @@
+{
+	"skeleton_skull": [">nbt.skull.j113", "skeleton_skull_1_20_2"],
+	"wither_skeleton_skull": [">nbt.skull.j113", "wither_skeleton_skull_1_20_2"],
+	"zombie_head": [">nbt.skull.j113", "zombie_head_1_20_2"],
+	"player_head": [">nbt.skull.j113", "player_head_1_20_2"],
+	"creeper_head": [">nbt.skull.j113", "creeper_head_1_20_2"],
+	"dragon_head": [">nbt.skull.j113", "dragon_head_1_20_2"],
+	"piglin_head": [">nbt.skull.j113", "piglin_head_1_20_2"],
+	"skeleton_wall_skull": [">nbt.skull.wall_j113", "skeleton_wall_skull_1_20_2"],
+	"wither_skeleton_wall_skull": [">nbt.skull.wall_j113", "wither_skeleton_wall_skull_1_20_2"],
+	"zombie_wall_head": [">nbt.skull.wall_j113", "zombie_wall_head_1_20_2"],
+	"player_wall_head": [">nbt.skull.wall_j113", "player_wall_head_1_20_2"],
+	"creeper_wall_head": [">nbt.skull.wall_j113", "creeper_wall_head_1_20_2"],
+	"dragon_wall_head": [">nbt.skull.wall_j113", "dragon_wall_head_1_20_2"],
+	"piglin_wall_head": [">nbt.skull.wall_j113", "piglin_wall_head_1_20_2"]
+}

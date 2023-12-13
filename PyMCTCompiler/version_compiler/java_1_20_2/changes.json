@@ -1,0 +1,122 @@
+{
+    "minecraft:barrier": {
+        "properties_added": {
+            "waterlogged": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:creeper_head": {
+        "properties_added": {
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:creeper_wall_head": {
+        "properties_added": {
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:dragon_head": {
+        "properties_added": {
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:dragon_wall_head": {
+        "properties_added": {
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:piglin_head": {
+        "properties_added": {
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:piglin_wall_head": {
+        "properties_added": {
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:player_head": {
+        "properties_added": {
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:player_wall_head": {
+        "properties_added": {
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:skeleton_skull": {
+        "properties_added": {
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:skeleton_wall_skull": {
+        "properties_added": {
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:wither_skeleton_skull": {
+        "properties_added": {
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:wither_skeleton_wall_skull": {
+        "properties_added": {
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:zombie_head": {
+        "properties_added": {
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:zombie_wall_head": {
+        "properties_added": {
+            "powered": [
+                "true",
+                "false"
+            ]
+        }
+    }
+}

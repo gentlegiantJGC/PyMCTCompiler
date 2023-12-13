@@ -29,12 +29,17 @@
 				"no_drop": [
 					"\"false\"",
 					"\"true\""
+				],
+				"powered": [
+					"\"true\"",
+					"\"false\""
 				]
 			},
 			"defaults": {
 				"mob": "\"skeleton\"",
 				"facing": "\"north\"",
-				"no_drop": "\"false\""
+				"no_drop": "\"false\"",
+				"powered": "\"false\""
 			},
 			"unbt": "nbt.skull.universal"
 		}
