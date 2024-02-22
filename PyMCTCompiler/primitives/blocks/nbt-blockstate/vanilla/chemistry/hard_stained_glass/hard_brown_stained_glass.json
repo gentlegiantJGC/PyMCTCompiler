@@ -1,0 +1,35 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:hard_stained_glass"
+        },
+        {
+			"function": "new_properties",
+			"options": {
+				"color": "\"brown\""
+			}
+		}
+    ],
+    "from_universal": {
+        "universal_minecraft:hard_stained_glass": [
+            {
+                "function": "new_block",
+                "options": "minecraft:hard_white_stained_glass"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "color": {
+                        "\"brown\"": [
+                            {
+								"function": "new_block",
+								"options": "minecraft:hard_brown_stained_glass"
+							}
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
