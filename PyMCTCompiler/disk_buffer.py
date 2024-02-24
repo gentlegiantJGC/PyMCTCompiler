@@ -2,6 +2,7 @@ import os
 import json
 from typing import Dict, Union, Tuple, Set, TYPE_CHECKING
 import hashlib
+import glob
 
 import PyMCTCompiler
 from PyMCTCompiler.helpers import log_to_file, check_specification_format
@@ -238,27 +239,36 @@ class DiskBuffer:
                     ("versions",) + path[:3] + (direction,) + path[3:], data.save([])
                 )  # add the file to the dictionary to be saved
 
+        json_path = os.path.realpath(os.path.join(PyMCTCompiler.compiled_dir, "json"))
         try:
             with open("cache/save_cache.json") as f:
                 old_save_cache = json.load(f)
         except:
             old_save_cache = {}
+            # build old save cache
+            for path in glob.glob(os.path.join(glob.escape(json_path), "**", "*.json"), recursive=True):
+                with open(path) as f:
+                    old_save_cache[os.path.relpath(path, json_path).lower()] = hashlib.sha1(
+                        f.read().encode("utf8")
+                    ).hexdigest()
         new_save_cache = {}
 
         for path, data in self.files_to_save.items():
-            path = os.path.join(PyMCTCompiler.compiled_dir, "json", *path) + ".json"
+            rel_path = os.path.join(*path) + ".json"
+            path = os.path.join(json_path, rel_path)
             data = json.dumps(data, indent=4)
-            h = new_save_cache[path.lower()] = hashlib.sha1(
+            h = new_save_cache[rel_path.lower()] = hashlib.sha1(
                 data.encode("utf8")
             ).hexdigest()
 
-            if path.lower() not in old_save_cache or old_save_cache[path.lower()] != h:
+            if rel_path.lower() not in old_save_cache or old_save_cache[rel_path.lower()] != h:
                 os.makedirs(os.path.dirname(path), exist_ok=True)
                 with open(path, "w") as f:
                     f.write(data)
 
-        for path in old_save_cache.keys():
-            if path not in new_save_cache and os.path.isfile(path):
+        for rel_path in old_save_cache.keys():
+            path = os.path.join(json_path, rel_path)
+            if rel_path not in new_save_cache and os.path.isfile(path):
                 os.remove(path)
 
         os.makedirs("cache", exist_ok=True)
