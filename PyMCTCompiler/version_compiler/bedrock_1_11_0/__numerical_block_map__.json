@@ -1,14 +1,14 @@
 {
-	"grindstone": 450,
-	"blast_furnace": 451,
-	"stonecutter_block": 452,
-	"smoker": 453,
-	"lit_smoker": 454,
-	"cartography_table": 455,
-	"smithing_table": 457,
-	"barrel": 458,
-	"bell": 461,
-	"campfire": 464,
-	"composter": 468,
-	"lit_blast_furnace": 469
+	"minecraft:grindstone": 450,
+	"minecraft:blast_furnace": 451,
+	"minecraft:stonecutter_block": 452,
+	"minecraft:smoker": 453,
+	"minecraft:lit_smoker": 454,
+	"minecraft:cartography_table": 455,
+	"minecraft:smithing_table": 457,
+	"minecraft:barrel": 458,
+	"minecraft:bell": 461,
+	"minecraft:campfire": 464,
+	"minecraft:composter": 468,
+	"minecraft:lit_blast_furnace": 469
 }
