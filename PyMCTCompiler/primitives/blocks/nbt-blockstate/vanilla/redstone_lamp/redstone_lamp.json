@@ -12,7 +12,7 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:lit_redstone_lamp": [
+        "universal_minecraft:redstone_lamp": [
             {
                 "function": "new_block",
                 "options": "minecraft:redstone_lamp"
