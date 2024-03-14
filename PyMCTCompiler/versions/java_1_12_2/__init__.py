@@ -10,5 +10,7 @@ compiler = NumericalCompiler(
     entity_coord_format="Pos-list-float",
     platform="java",
     version=[1, 12, 2],
+    version_max=[1, 13, -1],
     data_version=1343,
+    data_version_max=1518,
 )

@@ -28,7 +28,9 @@ class BaseCompiler:
         entity_coord_format=None,
         platform=None,
         version=None,
+        version_max=None,
         data_version: int = None,
+        data_version_max: int = None,
     ):
         self._directory = directory
 
@@ -39,7 +41,9 @@ class BaseCompiler:
         self._entity_coord_format = entity_coord_format  # "Pos-list-float",
         self._platform = platform  # "java", "bedrock", "universal"
         self._version = version
+        self._version_max = version_max
         self._data_version = data_version
+        self._data_version_max = data_version_max
         self._parent_name = parent_version
         self.version_name = None
 
@@ -62,6 +66,10 @@ class BaseCompiler:
     @property
     def data_version(self):
         return self._data_version
+
+    @property
+    def data_version_max(self):
+        return self._data_version_max
 
     @property
     def block_format(self) -> str:
@@ -99,6 +107,10 @@ class BaseCompiler:
     def version(self) -> List[int]:
         return self._version
 
+    @property
+    def version_max(self) -> List[int]:
+        return self._version_max
+
     def _load_property_from_parent(self, attr: str):
         if getattr(self, f"_{attr}") is None:
             return self._load_from_parent(attr)
@@ -125,9 +137,12 @@ class BaseCompiler:
             "entity_coord_format": self.entity_coord_format,
             "platform": self.platform,
             "version": self.version,
+            "version_max": self.version_max,
         }
         if self._data_version is not None:
+            assert self._data_version_max is not None
             init["data_version"] = self._data_version
+            init["data_version_max"] = self._data_version_max
         assert all(val is not None for val in init.values())
         return init
 
