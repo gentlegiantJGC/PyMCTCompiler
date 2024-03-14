@@ -67,4 +67,4 @@ def filter_matches(matched_strings):
 
 
 if __name__ == "__main__":
-    main("../../PyMCTCompiler/version_compiler")
+    main("../../PyMCTCompiler/versions")

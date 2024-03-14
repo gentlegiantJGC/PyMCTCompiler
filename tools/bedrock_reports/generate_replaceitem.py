@@ -67,4 +67,4 @@ def main(path):
 
 
 if __name__ == "__main__":
-    main("../../PyMCTCompiler/version_compiler")
+    main("../../PyMCTCompiler/versions")

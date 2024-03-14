@@ -6,6 +6,6 @@ The compiler takes the elemental mappings for each block and merges them based o
 
 The primitives directory is where the elemental mappings are held. This is a python package that can be imported and the mappings extracted easily. There is another readme in this directory since it is a little complicated in its own right.
 
-The version_compiler directory is again a python package. It holds data about the specific version and what data should be pulled from primitives for each block.
+The versions directory is again a python package. It holds data about the specific version and what data should be pulled from primitives for each block.
 
 Run compile.py to bake out the data in here into the JSON files found in the version directory found in the root.

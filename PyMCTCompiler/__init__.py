@@ -5,7 +5,7 @@ from PyMCTCompiler import code_functions
 
 from PyMCTCompiler.compilers.base_compiler import BaseCompiler
 
-from PyMCTCompiler import version_compiler
+from PyMCTCompiler import versions
 from PyMCTCompiler.helpers import log_to_file
 from PyMCTCompiler.disk_buffer import disk_buffer
 
@@ -20,18 +20,18 @@ def build(compiled_dir_):
     t2 = time.time()
 
     # sort versions into order by version number
-    versions: Dict[str, BaseCompiler] = {}
+    compilers: Dict[str, BaseCompiler] = {}
 
-    vc_dir = os.path.join(os.path.dirname(__file__), "version_compiler")
+    vc_dir = os.path.join(os.path.dirname(__file__), "versions")
     for version_name in os.listdir(vc_dir):
         if os.path.isdir(os.path.join(vc_dir, version_name)):
-            if hasattr(version_compiler, version_name) and hasattr(
-                getattr(version_compiler, version_name), "compiler"
+            if hasattr(versions, version_name) and hasattr(
+                getattr(versions, version_name), "compiler"
             ):
-                versions[version_name] = getattr(
-                    version_compiler, version_name
+                compilers[version_name] = getattr(
+                    versions, version_name
                 ).compiler
-                versions[version_name].version_name = version_name
+                compilers[version_name].version_name = version_name
             else:
                 log_to_file(
                     f"Could not find compiler for {version_name} This version has been skipped"
@@ -39,7 +39,7 @@ def build(compiled_dir_):
 
     # iterate through all versions in the uncompiled directory
     for version_name, compiler in sorted(
-        versions.items(),
+        compilers.items(),
         key=lambda x: (
             "" if x[1].platform == "universal" else x[1].platform,
             x[1].version,

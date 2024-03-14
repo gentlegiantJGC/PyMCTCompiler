@@ -9,7 +9,7 @@ https://github.com/gentlegiantJGC/PyMCTranslate
 
 # TLDR
 
-The summary of this repository is that versions are defined in compiler/version_compiler. One folder for each version defined.
+The summary of this repository is that versions are defined in compiler/versions. One folder for each version defined.
 
 Each contains an `__init__.py` file that points to a compiler and sets up some other values. The specifics vary from here onwards depending on which compiler is chosen but it is mostly the same.
 

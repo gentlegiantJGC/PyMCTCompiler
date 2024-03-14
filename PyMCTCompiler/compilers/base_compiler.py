@@ -55,7 +55,7 @@ class BaseCompiler:
             self._parent = (
                 None
                 if self._parent_name is None
-                else getattr(PyMCTCompiler.version_compiler, self._parent_name).compiler
+                else getattr(PyMCTCompiler.versions, self._parent_name).compiler
             )
         return self._parent
 
