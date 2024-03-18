@@ -9,6 +9,6 @@ compiler = UniversalCompiler(
     entity_format="namespace-str-id",
     entity_coord_format="Pos-list-float",
     platform="universal",
-    version=[1],
+    version=[1, 0, 0],
     version_max=[1],
 )
