@@ -184,12 +184,6 @@
             }
         }
     },
-    "minecraft:heavy_core": {
-        "block_added": {
-            "defaults": {},
-            "properties": {}
-        }
-    },
     "minecraft:horn_coral_fan": {
         "block_added": {
             "defaults": {
