@@ -1,0 +1,50 @@
+{
+    "minecraft:heavy_core": {
+        "block_added": {
+            "defaults": {
+                "waterlogged": "false"
+            },
+            "properties": {
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:trial_spawner": {
+        "properties_added": {
+            "ominous": [
+                "true",
+                "false"
+            ]
+        }
+    },
+    "minecraft:vault": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "ominous": "false",
+                "vault_state": "inactive"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "ominous": [
+                    "true",
+                    "false"
+                ],
+                "vault_state": [
+                    "inactive",
+                    "active",
+                    "unlocking",
+                    "ejecting"
+                ]
+            }
+        }
+    }
+}

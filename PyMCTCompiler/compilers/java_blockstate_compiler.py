@@ -158,6 +158,7 @@ class JavaBlockstateCompiler(BaseCompiler):
                         del states["properties"]["waterlogged"]
                         del states["defaults"]["waterlogged"]
                 del states["states"]
+                states.pop("definition", None)
                 disk_buffer.add_specification(
                     self.version_name,
                     "block",

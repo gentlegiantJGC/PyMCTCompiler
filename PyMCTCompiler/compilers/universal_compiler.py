@@ -87,6 +87,7 @@ class UniversalCompiler(BaseCompiler):
                     del states["properties"]["waterlogged"]
 
                 del states["states"]
+                states.pop("definition", None)
                 if not (namespace in remove and block_name in remove[namespace]):
                     # the block is not marked for removal
                     disk_buffer.add_specification(

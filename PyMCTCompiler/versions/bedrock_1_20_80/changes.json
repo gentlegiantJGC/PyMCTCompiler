@@ -1,0 +1,1985 @@
+{
+    "minecraft:acacia_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:acacia_leaves": {
+        "block_added": {
+            "defaults": {
+                "persistent_bit": "0b",
+                "update_bit": "0b"
+            },
+            "properties": {
+                "persistent_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "update_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:acacia_sapling": {
+        "block_added": {
+            "defaults": {
+                "age_bit": "0b"
+            },
+            "properties": {
+                "age_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:acacia_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:acacia_wood": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:allium": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:azure_bluet": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:bamboo_sapling": {
+        "properties_removed": {
+            "sapling_type": [
+                "\"oak\"",
+                "\"spruce\"",
+                "\"birch\"",
+                "\"jungle\"",
+                "\"acacia\"",
+                "\"dark_oak\""
+            ]
+        }
+    },
+    "minecraft:birch_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:birch_leaves": {
+        "block_added": {
+            "defaults": {
+                "persistent_bit": "0b",
+                "update_bit": "0b"
+            },
+            "properties": {
+                "persistent_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "update_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:birch_sapling": {
+        "block_added": {
+            "defaults": {
+                "age_bit": "0b"
+            },
+            "properties": {
+                "age_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:birch_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:birch_wood": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:blue_orchid": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:brain_coral_fan": {
+        "block_added": {
+            "defaults": {
+                "coral_fan_direction": "0"
+            },
+            "properties": {
+                "coral_fan_direction": [
+                    "0",
+                    "1"
+                ]
+            }
+        }
+    },
+    "minecraft:bubble_coral_fan": {
+        "block_added": {
+            "defaults": {
+                "coral_fan_direction": "0"
+            },
+            "properties": {
+                "coral_fan_direction": [
+                    "0",
+                    "1"
+                ]
+            }
+        }
+    },
+    "minecraft:chiseled_copper": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:chiseled_tuff": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:chiseled_tuff_bricks": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:copper_bulb": {
+        "block_added": {
+            "defaults": {
+                "lit": "0b",
+                "powered_bit": "0b"
+            },
+            "properties": {
+                "lit": [
+                    "0b",
+                    "1b"
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:copper_door": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "door_hinge_bit": "0b",
+                "open_bit": "0b",
+                "upper_block_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "door_hinge_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upper_block_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:copper_grate": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:copper_trapdoor": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "open_bit": "0b",
+                "upside_down_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upside_down_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:coral_fan": {
+        "block_removed": true
+    },
+    "minecraft:coral_fan_dead": {
+        "block_removed": true
+    },
+    "minecraft:cornflower": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:crafter": {
+        "block_added": {
+            "defaults": {
+                "crafting": "0b",
+                "orientation": "\"down_east\"",
+                "triggered_bit": "0b"
+            },
+            "properties": {
+                "crafting": [
+                    "0b",
+                    "1b"
+                ],
+                "orientation": [
+                    "\"down_east\"",
+                    "\"down_north\"",
+                    "\"down_south\"",
+                    "\"down_west\"",
+                    "\"up_east\"",
+                    "\"up_north\"",
+                    "\"up_south\"",
+                    "\"up_west\"",
+                    "\"west_up\"",
+                    "\"east_up\"",
+                    "\"north_up\"",
+                    "\"south_up\""
+                ],
+                "triggered_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:dark_oak_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:dark_oak_leaves": {
+        "block_added": {
+            "defaults": {
+                "persistent_bit": "0b",
+                "update_bit": "0b"
+            },
+            "properties": {
+                "persistent_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "update_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:dark_oak_sapling": {
+        "block_added": {
+            "defaults": {
+                "age_bit": "0b"
+            },
+            "properties": {
+                "age_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:dark_oak_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:dark_oak_wood": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:dead_brain_coral_fan": {
+        "block_added": {
+            "defaults": {
+                "coral_fan_direction": "0"
+            },
+            "properties": {
+                "coral_fan_direction": [
+                    "0",
+                    "1"
+                ]
+            }
+        }
+    },
+    "minecraft:dead_bubble_coral_fan": {
+        "block_added": {
+            "defaults": {
+                "coral_fan_direction": "0"
+            },
+            "properties": {
+                "coral_fan_direction": [
+                    "0",
+                    "1"
+                ]
+            }
+        }
+    },
+    "minecraft:dead_fire_coral_fan": {
+        "block_added": {
+            "defaults": {
+                "coral_fan_direction": "0"
+            },
+            "properties": {
+                "coral_fan_direction": [
+                    "0",
+                    "1"
+                ]
+            }
+        }
+    },
+    "minecraft:dead_horn_coral_fan": {
+        "block_added": {
+            "defaults": {
+                "coral_fan_direction": "0"
+            },
+            "properties": {
+                "coral_fan_direction": [
+                    "0",
+                    "1"
+                ]
+            }
+        }
+    },
+    "minecraft:dead_tube_coral_fan": {
+        "block_added": {
+            "defaults": {
+                "coral_fan_direction": "0"
+            },
+            "properties": {
+                "coral_fan_direction": [
+                    "0",
+                    "1"
+                ]
+            }
+        }
+    },
+    "minecraft:double_wooden_slab": {
+        "block_removed": true
+    },
+    "minecraft:exposed_chiseled_copper": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:exposed_copper_bulb": {
+        "block_added": {
+            "defaults": {
+                "lit": "0b",
+                "powered_bit": "0b"
+            },
+            "properties": {
+                "lit": [
+                    "0b",
+                    "1b"
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:exposed_copper_door": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "door_hinge_bit": "0b",
+                "open_bit": "0b",
+                "upper_block_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "door_hinge_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upper_block_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:exposed_copper_grate": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:exposed_copper_trapdoor": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "open_bit": "0b",
+                "upside_down_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upside_down_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:fire_coral_fan": {
+        "block_added": {
+            "defaults": {
+                "coral_fan_direction": "0"
+            },
+            "properties": {
+                "coral_fan_direction": [
+                    "0",
+                    "1"
+                ]
+            }
+        }
+    },
+    "minecraft:grass": {
+        "block_removed": true
+    },
+    "minecraft:grass_block": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_black_stained_glass": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_black_stained_glass_pane": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_blue_stained_glass": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_blue_stained_glass_pane": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_brown_stained_glass": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_brown_stained_glass_pane": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_cyan_stained_glass": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_cyan_stained_glass_pane": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_gray_stained_glass": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_gray_stained_glass_pane": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_green_stained_glass": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_green_stained_glass_pane": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_light_blue_stained_glass": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_light_blue_stained_glass_pane": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_light_gray_stained_glass": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_light_gray_stained_glass_pane": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_lime_stained_glass": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_lime_stained_glass_pane": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_magenta_stained_glass": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_magenta_stained_glass_pane": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_orange_stained_glass": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_orange_stained_glass_pane": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_pink_stained_glass": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_pink_stained_glass_pane": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_purple_stained_glass": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_purple_stained_glass_pane": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_red_stained_glass": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_red_stained_glass_pane": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_stained_glass": {
+        "block_removed": true
+    },
+    "minecraft:hard_stained_glass_pane": {
+        "block_removed": true
+    },
+    "minecraft:hard_white_stained_glass": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_white_stained_glass_pane": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_yellow_stained_glass": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:hard_yellow_stained_glass_pane": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:heavy_core": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:horn_coral_fan": {
+        "block_added": {
+            "defaults": {
+                "coral_fan_direction": "0"
+            },
+            "properties": {
+                "coral_fan_direction": [
+                    "0",
+                    "1"
+                ]
+            }
+        }
+    },
+    "minecraft:jungle_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:jungle_leaves": {
+        "block_added": {
+            "defaults": {
+                "persistent_bit": "0b",
+                "update_bit": "0b"
+            },
+            "properties": {
+                "persistent_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "update_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:jungle_sapling": {
+        "block_added": {
+            "defaults": {
+                "age_bit": "0b"
+            },
+            "properties": {
+                "age_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:jungle_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:jungle_wood": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:leaves": {
+        "block_removed": true
+    },
+    "minecraft:leaves2": {
+        "block_removed": true
+    },
+    "minecraft:lily_of_the_valley": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:oak_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:oak_leaves": {
+        "block_added": {
+            "defaults": {
+                "persistent_bit": "0b",
+                "update_bit": "0b"
+            },
+            "properties": {
+                "persistent_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "update_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:oak_sapling": {
+        "block_added": {
+            "defaults": {
+                "age_bit": "0b"
+            },
+            "properties": {
+                "age_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:oak_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:oak_wood": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:orange_tulip": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:oxeye_daisy": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:oxidized_chiseled_copper": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:oxidized_copper_bulb": {
+        "block_added": {
+            "defaults": {
+                "lit": "0b",
+                "powered_bit": "0b"
+            },
+            "properties": {
+                "lit": [
+                    "0b",
+                    "1b"
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:oxidized_copper_door": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "door_hinge_bit": "0b",
+                "open_bit": "0b",
+                "upper_block_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "door_hinge_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upper_block_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:oxidized_copper_grate": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:oxidized_copper_trapdoor": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "open_bit": "0b",
+                "upside_down_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upside_down_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:pink_tulip": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:polished_tuff": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:polished_tuff_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:polished_tuff_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:polished_tuff_stairs": {
+        "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
+            "properties": {
+                "upside_down_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "weirdo_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:polished_tuff_wall": {
+        "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
+            "properties": {
+                "wall_connection_type_east": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_north": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_south": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_west": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_post_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:poppy": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:red_flower": {
+        "block_removed": true
+    },
+    "minecraft:red_tulip": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:sapling": {
+        "block_removed": true
+    },
+    "minecraft:spruce_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:spruce_leaves": {
+        "block_added": {
+            "defaults": {
+                "persistent_bit": "0b",
+                "update_bit": "0b"
+            },
+            "properties": {
+                "persistent_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "update_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:spruce_sapling": {
+        "block_added": {
+            "defaults": {
+                "age_bit": "0b"
+            },
+            "properties": {
+                "age_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:spruce_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:spruce_wood": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:stripped_acacia_wood": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:stripped_birch_wood": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:stripped_dark_oak_wood": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:stripped_jungle_wood": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:stripped_oak_wood": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:stripped_spruce_wood": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:trial_spawner": {
+        "block_added": {
+            "defaults": {
+                "trial_spawner_state": "0"
+            },
+            "properties": {
+                "trial_spawner_state": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            }
+        }
+    },
+    "minecraft:tube_coral_fan": {
+        "block_added": {
+            "defaults": {
+                "coral_fan_direction": "0"
+            },
+            "properties": {
+                "coral_fan_direction": [
+                    "0",
+                    "1"
+                ]
+            }
+        }
+    },
+    "minecraft:tuff_brick_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:tuff_brick_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:tuff_brick_stairs": {
+        "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
+            "properties": {
+                "upside_down_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "weirdo_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:tuff_brick_wall": {
+        "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
+            "properties": {
+                "wall_connection_type_east": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_north": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_south": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_west": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_post_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:tuff_bricks": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:tuff_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:tuff_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:tuff_stairs": {
+        "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
+            "properties": {
+                "upside_down_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "weirdo_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:tuff_wall": {
+        "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
+            "properties": {
+                "wall_connection_type_east": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_north": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_south": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_west": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_post_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:vault": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\"",
+                "vault_state": "\"inactive\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ],
+                "vault_state": [
+                    "\"inactive\"",
+                    "\"active\"",
+                    "\"unlocking\"",
+                    "\"ejecting\""
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_chiseled_copper": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:waxed_copper_bulb": {
+        "block_added": {
+            "defaults": {
+                "lit": "0b",
+                "powered_bit": "0b"
+            },
+            "properties": {
+                "lit": [
+                    "0b",
+                    "1b"
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_copper_door": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "door_hinge_bit": "0b",
+                "open_bit": "0b",
+                "upper_block_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "door_hinge_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upper_block_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_copper_grate": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:waxed_copper_trapdoor": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "open_bit": "0b",
+                "upside_down_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upside_down_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_exposed_chiseled_copper": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:waxed_exposed_copper_bulb": {
+        "block_added": {
+            "defaults": {
+                "lit": "0b",
+                "powered_bit": "0b"
+            },
+            "properties": {
+                "lit": [
+                    "0b",
+                    "1b"
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_exposed_copper_door": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "door_hinge_bit": "0b",
+                "open_bit": "0b",
+                "upper_block_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "door_hinge_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upper_block_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_exposed_copper_grate": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:waxed_exposed_copper_trapdoor": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "open_bit": "0b",
+                "upside_down_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upside_down_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_oxidized_chiseled_copper": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:waxed_oxidized_copper_bulb": {
+        "block_added": {
+            "defaults": {
+                "lit": "0b",
+                "powered_bit": "0b"
+            },
+            "properties": {
+                "lit": [
+                    "0b",
+                    "1b"
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_oxidized_copper_door": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "door_hinge_bit": "0b",
+                "open_bit": "0b",
+                "upper_block_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "door_hinge_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upper_block_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_oxidized_copper_grate": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:waxed_oxidized_copper_trapdoor": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "open_bit": "0b",
+                "upside_down_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upside_down_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_weathered_chiseled_copper": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:waxed_weathered_copper_bulb": {
+        "block_added": {
+            "defaults": {
+                "lit": "0b",
+                "powered_bit": "0b"
+            },
+            "properties": {
+                "lit": [
+                    "0b",
+                    "1b"
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_weathered_copper_door": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "door_hinge_bit": "0b",
+                "open_bit": "0b",
+                "upper_block_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "door_hinge_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upper_block_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_weathered_copper_grate": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:waxed_weathered_copper_trapdoor": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "open_bit": "0b",
+                "upside_down_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upside_down_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:weathered_chiseled_copper": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:weathered_copper_bulb": {
+        "block_added": {
+            "defaults": {
+                "lit": "0b",
+                "powered_bit": "0b"
+            },
+            "properties": {
+                "lit": [
+                    "0b",
+                    "1b"
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:weathered_copper_door": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "door_hinge_bit": "0b",
+                "open_bit": "0b",
+                "upper_block_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "door_hinge_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upper_block_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:weathered_copper_grate": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:weathered_copper_trapdoor": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "open_bit": "0b",
+                "upside_down_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upside_down_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:white_tulip": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:wood": {
+        "block_removed": true
+    },
+    "minecraft:wooden_slab": {
+        "block_removed": true
+    }
+}
