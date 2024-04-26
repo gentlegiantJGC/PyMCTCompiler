@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "plant_type": "\"dandelion\""
+                "plant_type": "\"tulip_white\""
             }
         }
     ],
@@ -21,10 +21,10 @@
                 "function": "map_properties",
                 "options": {
                     "plant_type": {
-                        "\"dandelion\"": [
+                        "\"tulip_white\"": [
                             {
                                 "function": "new_block",
-                                "options": "minecraft:yellow_flower"
+                                "options": "minecraft:white_tulip"
                             }
                         ]
                     }

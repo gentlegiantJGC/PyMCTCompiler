@@ -104,7 +104,7 @@
         "universal_minecraft:plant": [
             {
                 "function": "new_block",
-                "options": "minecraft:red_flower"
+                "options": "minecraft:tallgrass"
             },
             {
                 "function": "map_properties",

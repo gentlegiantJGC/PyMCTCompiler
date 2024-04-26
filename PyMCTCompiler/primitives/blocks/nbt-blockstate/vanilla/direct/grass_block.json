@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:grass_block"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:grass_block": [
+            {
+                "function": "new_block",
+                "options": "minecraft:grass_block"
+            }
+        ]
+    }
+}

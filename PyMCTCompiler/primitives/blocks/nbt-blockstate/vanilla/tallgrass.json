@@ -1,4 +1,17 @@
 {
+    "specification": {
+        "properties": {
+            "tall_grass_type": [
+                "\"default\"",
+                "\"tall\"",
+                "\"fern\"",
+                "\"snow\""
+            ]
+        },
+        "defaults": {
+            "tall_grass_type": "\"tall\""
+        }
+    },
     "to_universal": [
         {
             "function": "new_block",
@@ -36,7 +49,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "plant_type": "\"grass\""
+                                "plant_type": "\"fern\""
                             }
                         }
                     ]
@@ -48,7 +61,7 @@
         "universal_minecraft:plant": [
             {
                 "function": "new_block",
-                "options": "minecraft:red_flower"
+                "options": "minecraft:tallgrass"
             },
             {
                 "function": "map_properties",
@@ -62,7 +75,7 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "tall_grass_type": "\"default\""
+                                    "tall_grass_type": "\"tall\""
                                 }
                             }
                         ],

@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "plant_type": "\"dandelion\""
+                "plant_type": "\"oxeye\""
             }
         }
     ],
@@ -21,10 +21,10 @@
                 "function": "map_properties",
                 "options": {
                     "plant_type": {
-                        "\"dandelion\"": [
+                        "\"oxeye\"": [
                             {
                                 "function": "new_block",
-                                "options": "minecraft:yellow_flower"
+                                "options": "minecraft:oxeye_daisy"
                             }
                         ]
                     }

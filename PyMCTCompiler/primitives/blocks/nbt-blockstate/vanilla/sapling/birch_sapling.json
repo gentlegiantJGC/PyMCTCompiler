@@ -1,0 +1,76 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:sapling"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "age_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stage": "\"0\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "stage": "\"1\""
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "material": "\"birch\""
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:sapling": [
+            {
+                "function": "new_block",
+                "options": "minecraft:oak_sapling"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "stage": {
+                        "\"0\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "age_bit": "0b"
+                                }
+                            }
+                        ],
+                        "\"1\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "age_bit": "1b"
+                                }
+                            }
+                        ]
+                    },
+                    "material": {
+                        "\"birch\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:birch_sapling"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
