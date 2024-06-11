@@ -87,10 +87,10 @@ def get_block(block_format: str, primitive_group: Union[str, List[str]]) -> Prim
         output = copy.deepcopy(blocks[block_format][primitive_group])
         try:
             output.commit()
-        except Exception as e:
+        except Exception:
             traceback.print_exc()
             print(block_format, primitive_group)
-            raise Exception
+            raise
         return output
     elif isinstance(primitive_group, list) and len(primitive_group) >= 1:
         output = Primitive({})
@@ -107,10 +107,10 @@ def get_block(block_format: str, primitive_group: Union[str, List[str]]) -> Prim
                 output.extend(copy.deepcopy(blocks[block_format][primitive]))
         try:
             output.commit()
-        except Exception as e:
+        except Exception:
             traceback.print_exc()
             print(block_format, primitive_group)
-            raise Exception
+            raise
         return output
     else:
         raise Exception(f"Un-supported format: {type(primitive_group)}")

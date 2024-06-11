@@ -313,7 +313,7 @@ class JavaBlockstateCompiler(BaseCompiler):
                                     base_name2,
                                     mapping,
                                 )
-                            except Exception as e:
+                            except Exception:
                                 print(
                                     self.version_name,
                                     namespace,
@@ -321,7 +321,7 @@ class JavaBlockstateCompiler(BaseCompiler):
                                     namespace2,
                                     base_name2,
                                 )
-                                raise Exception(e)
+                                raise
 
             disk_buffer.save_json_object(
                 ("versions", self.version_name, "__waterloggable__"), waterloggable

@@ -151,7 +151,7 @@ class NBTBlockstateCompiler(BaseCompiler):
                     base_name2,
                     block_data,
                 )
-            except Exception as e:
+            except Exception:
                 print(
                     self.version_name,
                     namespace,
@@ -159,7 +159,7 @@ class NBTBlockstateCompiler(BaseCompiler):
                     namespace2,
                     base_name2,
                 )
-                raise e
+                raise
 
     @property
     def block_palette(self) -> dict:
@@ -254,9 +254,9 @@ class NBTBlockstateCompiler(BaseCompiler):
                     block_primitive_file = primitives.get_block(
                         "nbt-blockstate", primitive_data
                     )
-                except Exception as e:
+                except Exception:
                     print(self.version_name, namespace, block_base_name)
-                    raise Exception(e) from e
+                    raise
 
                 assert (
                     "to_universal" in block_primitive_file

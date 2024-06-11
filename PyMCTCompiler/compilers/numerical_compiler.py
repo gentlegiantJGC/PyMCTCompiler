@@ -141,9 +141,9 @@ class NumericalCompiler(BaseCompiler):
                             block_base_name,
                             prefix,
                         )
-                except Exception as e:
+                except Exception:
                     print(f"Could not merge primitive file {primitive_data}")
-                    raise e
+                    raise
 
     def _build_entities(self):
         for (namespace, sub_name), entity_data in self.entities.items():
