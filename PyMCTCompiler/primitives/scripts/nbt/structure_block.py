@@ -156,7 +156,11 @@ _J113_complex = TranslationFile(
                                             {
                                                 "function": "new_nbt",
                                                 "options": [
-                                                    {"key": "mirror", "value": val_out}
+                                                    {
+                                                        "path": [["utags", "compound"]],
+                                                        "key": "mirror",
+                                                        "value": val_out
+                                                    }
                                                 ],
                                             }
                                         ]
@@ -195,6 +199,7 @@ _J113_complex = TranslationFile(
                                                         "function": "new_nbt",
                                                         "options": [
                                                             {
+                                                                "path": [],
                                                                 "key": "mirror",
                                                                 "value": val_out,
                                                             }
@@ -278,7 +283,11 @@ _B113_complex = TranslationFile(
                                             {
                                                 "function": "new_nbt",
                                                 "options": [
-                                                    {"key": "mirror", "value": val_out}
+                                                    {
+                                                        "path": [["utags", "compound"]],
+                                                        "key": "mirror",
+                                                        "value": val_out
+                                                    }
                                                 ],
                                             }
                                         ]
@@ -305,6 +314,7 @@ _B113_complex = TranslationFile(
                                                 "function": "new_nbt",
                                                 "options": [
                                                     {
+                                                        "path": [["utags", "compound"]],
                                                         "key": "rotation",
                                                         "value": val_out,
                                                     }
@@ -333,7 +343,11 @@ _B113_complex = TranslationFile(
                                             {
                                                 "function": "new_nbt",
                                                 "options": [
-                                                    {"key": "mode", "value": val_out}
+                                                    {
+                                                        "path": [["utags", "compound"]],
+                                                        "key": "mode",
+                                                        "value": val_out
+                                                    }
                                                 ],
                                             }
                                         ]
@@ -374,6 +388,7 @@ _B113_complex = TranslationFile(
                                                         "function": "new_nbt",
                                                         "options": [
                                                             {
+                                                                "path": [],
                                                                 "key": "mirror",
                                                                 "value": val_out,
                                                             }
@@ -403,6 +418,7 @@ _B113_complex = TranslationFile(
                                                         "function": "new_nbt",
                                                         "options": [
                                                             {
+                                                                "path": [],
                                                                 "key": "rotation",
                                                                 "value": val_out,
                                                             }
@@ -432,6 +448,7 @@ _B113_complex = TranslationFile(
                                                         "function": "new_nbt",
                                                         "options": [
                                                             {
+                                                                "path": [],
                                                                 "key": "data",
                                                                 "value": val_out,
                                                             }
