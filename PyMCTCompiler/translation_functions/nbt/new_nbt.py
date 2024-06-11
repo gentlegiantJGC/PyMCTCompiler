@@ -100,7 +100,7 @@ class NewNBT(BaseTranslationFunction):
 
             assert "key" in new_nbt, '"key" must be present in new_nbt'
             if isinstance(new_nbt["key"], str):
-                if "path" in new_nbt:
+                if "path" in new_nbt and new_nbt["path"]:
                     assert (
                         new_nbt["path"][-1][1] == "compound"
                     ), f'Expected the final data type in path to be "compound" got {new_nbt["path"][-1][1]}'
