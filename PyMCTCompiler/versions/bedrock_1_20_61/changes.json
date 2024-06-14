@@ -196,5 +196,22 @@
             "defaults": {},
             "properties": {}
         }
+    },
+    "minecraft:trial_spawner": {
+        "block_added": {
+            "defaults": {
+                "trial_spawner_state": "0"
+            },
+            "properties": {
+                "trial_spawner_state": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            }
+        }
     }
 }
