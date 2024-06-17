@@ -86,7 +86,7 @@
         "universal_minecraft:slab": [
             {
                 "function": "new_block",
-                "options": "minecraft:stone_block_slab"
+                "options": "minecraft:mangrove_slab"
             },
             {
                 "function": "map_properties",

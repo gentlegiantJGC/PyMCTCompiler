@@ -1,4 +1,34 @@
 {
 	"grass": null,
-	"short_grass": "short_grass"
+	"short_grass": "short_grass",
+
+    "copper_door": "copper_door",
+	"exposed_copper_door": "exposed_copper_door",
+	"oxidized_copper_door": "oxidized_copper_door",
+	"waxed_copper_door": "waxed_copper_door",
+	"waxed_exposed_copper_door": "waxed_exposed_copper_door",
+	"waxed_oxidized_copper_door": "waxed_oxidized_copper_door",
+	"waxed_weathered_copper_door": "waxed_weathered_copper_door",
+	"weathered_copper_door": "weathered_copper_door",
+
+	"copper_trapdoor": "copper_trapdoor",
+	"exposed_copper_trapdoor": "exposed_copper_trapdoor",
+	"oxidized_copper_trapdoor": "oxidized_copper_trapdoor",
+	"waxed_copper_trapdoor": "waxed_copper_trapdoor",
+	"waxed_exposed_copper_trapdoor": "waxed_exposed_copper_trapdoor",
+	"waxed_oxidized_copper_trapdoor": "waxed_oxidized_copper_trapdoor",
+	"waxed_weathered_copper_trapdoor": "waxed_weathered_copper_trapdoor",
+	"weathered_copper_trapdoor": "weathered_copper_trapdoor",
+
+	"tuff_slab": "tuff_slab",
+	"tuff_brick_slab": "tuff_brick_slab",
+	"polished_tuff_slab": "polished_tuff_slab",
+
+	"tuff_stairs": "tuff_stairs",
+	"tuff_brick_stairs": "tuff_brick_stairs",
+	"polished_tuff_stairs": "polished_tuff_stairs",
+
+	"tuff_wall": "tuff_wall",
+	"tuff_brick_wall": "tuff_brick_wall",
+	"polished_tuff_wall": "polished_tuff_wall"
 }

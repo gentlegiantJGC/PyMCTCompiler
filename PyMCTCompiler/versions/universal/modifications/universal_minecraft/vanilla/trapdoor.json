@@ -11,7 +11,15 @@
 		"warped_trapdoor",
 		"mangrove_trapdoor",
 		"bamboo_trapdoor",
-		"cherry_trapdoor"
+		"cherry_trapdoor",
+		"copper_trapdoor",
+		"exposed_copper_trapdoor",
+		"oxidized_copper_trapdoor",
+		"waxed_copper_trapdoor",
+		"waxed_exposed_copper_trapdoor",
+		"waxed_oxidized_copper_trapdoor",
+		"waxed_weathered_copper_trapdoor",
+		"weathered_copper_trapdoor"
 	],
 	"add": {
 		"trapdoor": {
@@ -28,7 +36,15 @@
 					"\"crimson\"",
 					"\"warped\"",
 					"\"bamboo\"",
-					"\"cherry\""
+					"\"cherry\"",
+					"\"copper\"",
+					"\"exposed_copper\"",
+					"\"oxidized_copper\"",
+					"\"waxed_copper\"",
+					"\"waxed_exposed_copper\"",
+					"\"waxed_oxidized_copper\"",
+					"\"waxed_weathered_copper\"",
+					"\"weathered_copper\""
 				],
 				"facing": [
 					"\"north\"",

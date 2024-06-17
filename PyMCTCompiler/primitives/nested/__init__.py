@@ -12,7 +12,7 @@ for root, _, files in os.walk(f"{os.path.dirname(__file__)}/data"):
     for f in files:
         primitive_name = os.path.splitext(f)[0]
         if primitive_name in nested_primitives:
-            print(f'nested primitive "{primitive_name}" is define twice')
+            print(f'nested primitive "{primitive_name}" is defined twice')
         try:
             nested_primitives[primitive_name] = FunctionList(_load_file(f"{root}/{f}"))
         except Exception as e:

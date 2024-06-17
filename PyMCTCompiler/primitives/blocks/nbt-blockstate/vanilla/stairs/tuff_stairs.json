@@ -1,0 +1,144 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:stairs"
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "material": "\"tuff\""
+            }
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "upside_down_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "half": "\"bottom\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "half": "\"top\""
+                            }
+                        }
+                    ]
+                },
+                "weirdo_direction": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"east\""
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"west\""
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"south\""
+                            }
+                        }
+                    ],
+                    "3": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"north\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:stairs": [
+            {
+                "function": "new_block",
+                "options": "minecraft:oak_stairs"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "material": {
+                        "\"tuff\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:tuff_stairs"
+                            }
+                        ]
+                    },
+                    "half": {
+                        "\"bottom\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "upside_down_bit": "0b"
+                                }
+                            }
+                        ],
+                        "\"top\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "upside_down_bit": "1b"
+                                }
+                            }
+                        ]
+                    },
+                    "facing": {
+                        "\"east\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "weirdo_direction": "0"
+                                }
+                            }
+                        ],
+                        "\"west\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "weirdo_direction": "1"
+                                }
+                            }
+                        ],
+                        "\"south\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "weirdo_direction": "2"
+                                }
+                            }
+                        ],
+                        "\"north\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "weirdo_direction": "3"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

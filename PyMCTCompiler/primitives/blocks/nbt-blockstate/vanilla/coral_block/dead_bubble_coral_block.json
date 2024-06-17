@@ -1,0 +1,45 @@
+{
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:coral_block"
+		},
+		{
+			"function": "new_properties",
+			"options": {
+				"coral_type": "\"bubble\"",
+				"dead": "\"true\""
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:coral_block": [
+			{
+				"function": "new_block",
+				"options": "minecraft:tube_coral_block"
+			},
+			{
+				"function": "map_properties",
+				"options": {
+					"coral_type": {
+						"\"bubble\"": [
+							{
+								"function": "map_properties",
+								"options": {
+									"dead": {
+										"\"true\"": [
+											{
+												"function": "new_block",
+												"options": "minecraft:dead_bubble_coral_block"
+											}
+										]
+									}
+								}
+							}
+						]
+					}
+				}
+			}
+		]
+	}
+}

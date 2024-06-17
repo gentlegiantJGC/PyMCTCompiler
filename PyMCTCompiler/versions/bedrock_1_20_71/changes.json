@@ -449,6 +449,28 @@
             }
         }
     },
+    "minecraft:vault": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\"",
+                "vault_state": "\"inactive\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ],
+                "vault_state": [
+                    "\"inactive\"",
+                    "\"active\"",
+                    "\"unlocking\"",
+                    "\"ejecting\""
+                ]
+            }
+        }
+    },
     "minecraft:wood": {
         "block_removed": true
     },

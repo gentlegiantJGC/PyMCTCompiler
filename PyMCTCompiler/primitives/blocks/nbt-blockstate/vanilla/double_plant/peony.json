@@ -1,0 +1,76 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:double_plant"
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "plant_type": "\"peony\""
+            }
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "upper_block_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "half": "\"lower\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "half": "\"upper\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:double_plant": [
+            {
+                "function": "new_block",
+                "options": "minecraft:tall_grass"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "plant_type": {
+                        "\"peony\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:peony"
+                            }
+                        ]
+                    },
+                    "half": {
+                        "\"lower\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "upper_block_bit": "0b"
+                                }
+                            }
+                        ],
+                        "\"upper\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "upper_block_bit": "1b"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

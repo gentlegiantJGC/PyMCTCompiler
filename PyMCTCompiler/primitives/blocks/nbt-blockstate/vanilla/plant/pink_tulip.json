@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "plant_type": "\"tulip_pink\""
+                "plant_type": "\"pink_tulip\""
             }
         }
     ],
@@ -21,7 +21,7 @@
                 "function": "map_properties",
                 "options": {
                     "plant_type": {
-                        "\"tulip_pink\"": [
+                        "\"pink_tulip\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:pink_tulip"

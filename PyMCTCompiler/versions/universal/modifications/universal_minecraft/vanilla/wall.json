@@ -21,7 +21,10 @@
 		"polished_deepslate_wall",
 		"deepslate_tile_wall",
 		"deepslate_brick_wall",
-		"mud_brick_wall"
+		"mud_brick_wall",
+		"tuff_wall",
+		"tuff_brick_wall",
+		"polished_tuff_wall"
 	],
 	"add": {
 		"wall": {
@@ -48,7 +51,10 @@
 					"\"polished_deepslate\"",
 					"\"deepslate_tile\"",
 					"\"deepslate_brick\"",
-					"\"mud_brick\""
+					"\"mud_brick\"",
+					"\"tuff\"",
+					"\"tuff_brick\"",
+					"\"polished_tuff\""
 				],
 				"east": [
 					"\"none\"",

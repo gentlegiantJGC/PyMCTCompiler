@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "plant_type": "\"oxeye\""
+                "plant_type": "\"oxeye_daisy\""
             }
         }
     ],
@@ -21,7 +21,7 @@
                 "function": "map_properties",
                 "options": {
                     "plant_type": {
-                        "\"oxeye\"": [
+                        "\"oxeye_daisy\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:oxeye_daisy"

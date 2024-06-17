@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "oxidized_copper_trapdoor", "\"oxidized_copper\"", "universal_minecraft", "trapdoor", {"facing": ["\"north\"","\"south\"","\"west\"","\"east\""],"half": ["\"top\"","\"bottom\""],"open": ["\"true\"","\"false\""],"powered": ["\"true\"","\"false\""]}, default="minecraft:oak_trapdoor")
