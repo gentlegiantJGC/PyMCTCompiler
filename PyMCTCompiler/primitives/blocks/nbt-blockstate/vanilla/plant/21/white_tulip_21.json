@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "plant_type": "\"tulip_white\""
+                "plant_type": "\"white_tulip\""
             }
         }
     ],
@@ -21,7 +21,7 @@
                 "function": "map_properties",
                 "options": {
                     "plant_type": {
-                        "\"tulip_white\"": [
+                        "\"white_tulip\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:white_tulip"

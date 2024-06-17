@@ -114,9 +114,9 @@
 					"\"bamboo\"",
 					"\"bamboo_mosaic\"",
 					"\"cherry\"",
-					"\"tuff_stairs\"",
-					"\"tuff_brick_stairs\"",
-					"\"polished_tuff_stairs\""
+					"\"tuff\"",
+					"\"tuff_brick\"",
+					"\"polished_tuff\""
 				],
 				"facing": [
 					"\"north\"",

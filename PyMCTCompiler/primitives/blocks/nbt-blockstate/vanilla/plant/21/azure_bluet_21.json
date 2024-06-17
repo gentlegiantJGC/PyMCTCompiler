@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "plant_type": "\"houstonia\""
+                "plant_type": "\"azure_bluet\""
             }
         }
     ],
@@ -21,7 +21,7 @@
                 "function": "map_properties",
                 "options": {
                     "plant_type": {
-                        "\"houstonia\"": [
+                        "\"azure_bluet\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:azure_bluet"

@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "plant_type": "\"tulip_orange\""
+                "plant_type": "\"orange_tulip\""
             }
         }
     ],
@@ -21,7 +21,7 @@
                 "function": "map_properties",
                 "options": {
                     "plant_type": {
-                        "\"tulip_orange\"": [
+                        "\"orange_tulip\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:orange_tulip"
