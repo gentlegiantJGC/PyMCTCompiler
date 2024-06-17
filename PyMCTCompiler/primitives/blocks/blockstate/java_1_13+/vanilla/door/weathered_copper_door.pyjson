@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "weathered_copper_door", "\"weathered_copper\"", "universal_minecraft", "door", {"facing": ["\"north\"","\"south\"","\"west\"","\"east\""],"half": ["\"upper\"","\"lower\""],"hinge": ["\"left\"","\"right\""],"open": ["\"true\"","\"false\""],"powered": ["\"true\"","\"false\""]}, default="minecraft:oak_door")

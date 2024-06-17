@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:polished_tuff"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:polished_tuff": [
+            {
+                "function": "new_block",
+                "options": "minecraft:polished_tuff"
+            }
+        ]
+    }
+}

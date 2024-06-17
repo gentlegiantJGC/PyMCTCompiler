@@ -1,0 +1,94 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:slab"
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "material": "\"sandstone\""
+            }
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "minecraft:vertical_half": {
+                    "\"bottom\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "type": "\"bottom\""
+                            }
+                        }
+                    ],
+                    "\"top\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "type": "\"top\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:slab": [
+            {
+                "function": "new_block",
+                "options": "minecraft:mangrove_slab"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "type": {
+                        "\"bottom\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:vertical_half": "\"bottom\""
+                                }
+                            },
+                            {
+                                "function": "map_properties",
+                                "options": {
+                                    "material": {
+                                        "\"sandstone\"": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:sandstone_slab"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "\"top\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:vertical_half": "\"top\""
+                                }
+                            },
+                            {
+                                "function": "map_properties",
+                                "options": {
+                                    "material": {
+                                        "\"sandstone\"": [
+                                            {
+                                                "function": "new_block",
+                                                "options": "minecraft:sandstone_slab"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

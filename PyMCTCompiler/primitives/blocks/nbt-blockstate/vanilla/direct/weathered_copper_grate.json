@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:weathered_copper_grate"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:weathered_copper_grate": [
+            {
+                "function": "new_block",
+                "options": "minecraft:weathered_copper_grate"
+            }
+        ]
+    }
+}

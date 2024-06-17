@@ -52,7 +52,10 @@
 		"mud_brick_stairs",
 		"bamboo_stairs",
 		"bamboo_mosaic_stairs",
-		"cherry_stairs"
+		"cherry_stairs",
+		"tuff_stairs",
+		"tuff_brick_stairs",
+		"polished_tuff_stairs"
 	],
 	"add": {
 		"stairs": {
@@ -110,7 +113,10 @@
 					"\"mud_brick\"",
 					"\"bamboo\"",
 					"\"bamboo_mosaic\"",
-					"\"cherry\""
+					"\"cherry\"",
+					"\"tuff_stairs\"",
+					"\"tuff_brick_stairs\"",
+					"\"polished_tuff_stairs\""
 				],
 				"facing": [
 					"\"north\"",

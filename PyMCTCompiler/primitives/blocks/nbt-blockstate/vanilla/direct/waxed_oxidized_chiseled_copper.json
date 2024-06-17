@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:waxed_oxidized_chiseled_copper"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:waxed_oxidized_chiseled_copper": [
+            {
+                "function": "new_block",
+                "options": "minecraft:waxed_oxidized_chiseled_copper"
+            }
+        ]
+    }
+}
