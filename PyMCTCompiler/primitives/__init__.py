@@ -218,7 +218,7 @@ for start_folder in blocks:
     ):
         for f in files:
             if os.path.splitext(f)[0] in blocks[start_folder]:
-                print(f'Block name "{os.path.splitext(f)[0]}" is define twice')
+                print(f'Block name "{os.path.splitext(f)[0]}" is defined twice')
             if f.endswith(".json") or f.endswith(".pyjson"):
                 try:
                     blocks[start_folder][os.path.splitext(f)[0]] = Primitive(
@@ -231,7 +231,7 @@ for start_folder in blocks:
 for root, dirs, files in os.walk(f"{os.path.dirname(__file__)}/entities"):
     for f in files:
         if os.path.splitext(f)[0] in entities:
-            print(f'Block name "{os.path.splitext(f)[0]}" is define twice')
+            print(f'Block name "{os.path.splitext(f)[0]}" is defined twice')
         try:
             entities[os.path.splitext(f)[0]] = Primitive(_load_file(f"{root}/{f}"))
         except Exception as e:
