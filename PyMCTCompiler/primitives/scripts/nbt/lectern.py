@@ -56,7 +56,8 @@ _B110 = NBTRemapHelper(
         (("page", "int", []), ("Page", "int", [("utags", "compound")])),
         (("totalPages", "int", []), ("totalPages", "int", [("utags", "compound")])),
     ],
-    "{}",
+    # https://github.com/Amulet-Team/Amulet-Map-Editor/issues/1046
+    "{book: {}}",
 )
 
 _BedrockHasBook = TranslationFile(
