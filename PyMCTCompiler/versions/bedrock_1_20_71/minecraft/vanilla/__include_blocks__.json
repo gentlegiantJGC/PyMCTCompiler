@@ -53,5 +53,5 @@
     "oak_double_slab": "oak_double_slab",
     "spruce_double_slab": "spruce_double_slab",
 
-    "vault": "vault_"
+    "vault": [">nbt.vault.b21", "vault_"]
 }

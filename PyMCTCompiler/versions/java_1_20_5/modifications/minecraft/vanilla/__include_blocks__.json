@@ -1,0 +1,4 @@
+{
+	"trial_spawner": [">nbt.trial_spawner.j21", "trial_spawner"],
+	"vault": [">nbt.vault.j21", "vault"]
+}

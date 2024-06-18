@@ -104,6 +104,15 @@
 		},
 		"decorated_pot": {
 			"unbt": "nbt.decorated_pot.universal"
+		},
+		"vault": {
+			"unbt": "nbt.vault.universal"
+		},
+		"trial_spawner": {
+			"unbt": "nbt.trial_spawner.universal"
+		},
+		"crafter": {
+			"unbt": "nbt.crafter.universal"
 		}
 	}
 }
