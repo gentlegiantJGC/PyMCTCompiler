@@ -80,5 +80,5 @@
     "tuff_brick_stairs": "tuff_brick_stairs",
     "polished_tuff_stairs": "polished_tuff_stairs",
 
-    "crafter": "crafter"
+    "crafter": [">nbt.crafter.b21", "crafter"]
 }

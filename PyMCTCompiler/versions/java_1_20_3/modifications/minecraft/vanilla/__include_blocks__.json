@@ -30,5 +30,8 @@
 
 	"tuff_wall": "tuff_wall",
 	"tuff_brick_wall": "tuff_brick_wall",
-	"polished_tuff_wall": "polished_tuff_wall"
+	"polished_tuff_wall": "polished_tuff_wall",
+
+	"crafter": [">nbt.crafter.j21", "crafter"],
+	"trial_spawner": [">nbt.trial_spawner.j21", "trial_spawner_"]
 }

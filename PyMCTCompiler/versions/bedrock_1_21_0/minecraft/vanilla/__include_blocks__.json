@@ -47,6 +47,6 @@
     "wither_rose": "wither_rose_21",
     "yellow_flower": "yellow_flower_21",
 
-    "trial_spawner": "trial_spawner",
-    "vault": "vault"
+    "trial_spawner": [">nbt.trial_spawner.b21", "trial_spawner"],
+    "vault": [">nbt.vault.b21", "vault"]
 }
