@@ -27,7 +27,7 @@ universal = {
     "nbt_identifier": ["universal_minecraft", "vault"],
     "snbt": """{
         utags: {
-            isMovable: 1b,
+            isMovable: 1b
         }
     }""",
 }

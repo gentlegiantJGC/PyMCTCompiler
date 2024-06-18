@@ -13,7 +13,7 @@ universal = {
     "nbt_identifier": ["universal_minecraft", "crafter"],
     "snbt": """{
         utags: {
-            isMovable: 1b,
+            isMovable: 1b
         }
     }""",
 }
