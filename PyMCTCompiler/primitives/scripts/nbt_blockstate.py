@@ -1055,3 +1055,248 @@ def hanging_sign_120(src_block: str, material: str):
             ],
         },
     }
+
+
+def wall_coral_fan(
+    material: str,
+    dead: str,
+    block_id: str
+):
+    return {
+        "to_universal": [
+            {
+                "function": "new_block",
+                "options": "universal_minecraft:coral_fan"
+            },
+            {
+                "function": "new_properties",
+                "options": {
+                    "coral_type": material,
+                    "dead": dead
+                }
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "coral_direction": {
+                        coral_direction: [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing": facing
+                                }
+                            }
+                        ]
+                        for coral_direction, facing in (
+                            ("0", "\"west\""),
+                            ("1", "\"east\""),
+                            ("2", "\"north\""),
+                            ("3", "\"south\""),
+                        )
+                    }
+                }
+            }
+        ],
+        "from_universal": {
+            "universal_minecraft:coral_fan": [
+                {
+                    "function": "new_block",
+                    "options": "minecraft:tube_coral_fan"
+                },
+                {
+                    "function": "map_properties",
+                    "options": {
+                        "facing": {
+                            facing: [
+                                {
+                                    "function": "map_properties",
+                                    "options": {
+                                        "dead": {
+                                            dead: [
+                                                {
+                                                    "function": "map_properties",
+                                                    "options": {
+                                                        "coral_type": {
+                                                            material: [
+                                                                {
+                                                                    "function": "new_block",
+                                                                    "options": block_id
+                                                                },
+                                                                {
+                                                                    "function": "new_properties",
+                                                                    "options": {
+                                                                        "coral_direction": coral_direction
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                            for coral_direction, facing in (
+                                ("0", "\"west\""),
+                                ("1", "\"east\""),
+                                ("2", "\"north\""),
+                                ("3", "\"south\""),
+                            )
+                        }
+                    }
+                }
+            ]
+        }
+    }
+
+
+def slab(
+    material: str,
+    block_id: str
+):
+    return {
+        "to_universal": [
+            {
+                "function": "new_block",
+                "options": "universal_minecraft:slab"
+            },
+            {
+                "function": "new_properties",
+                "options": {
+                    "material": material
+                }
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "minecraft:vertical_half": {
+                        "\"bottom\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "type": "\"bottom\""
+                                }
+                            }
+                        ],
+                        "\"top\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "type": "\"top\""
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "from_universal": {
+            "universal_minecraft:slab": [
+                {
+                    "function": "new_block",
+                    "options": "minecraft:mangrove_slab"
+                },
+                {
+                    "function": "map_properties",
+                    "options": {
+                        "type": {
+                            "\"bottom\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "minecraft:vertical_half": "\"bottom\""
+                                    }
+                                },
+                                {
+                                    "function": "map_properties",
+                                    "options": {
+                                        "material": {
+                                            material: [
+                                                {
+                                                    "function": "new_block",
+                                                    "options": block_id
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ],
+                            "\"top\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "minecraft:vertical_half": "\"top\""
+                                    }
+                                },
+                                {
+                                    "function": "map_properties",
+                                    "options": {
+                                        "material": {
+                                            material: [
+                                                {
+                                                    "function": "new_block",
+                                                    "options": block_id
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
+
+
+def double_slab(
+    material: str,
+    block_id: str
+):
+    return {
+        "to_universal": [
+            {
+                "function": "new_block",
+                "options": "universal_minecraft:slab"
+            },
+            {
+                "function": "new_properties",
+                "options": {
+                    "material": material,
+                    "type": "\"double\""
+                }
+            }
+        ],
+        "from_universal": {
+            "universal_minecraft:slab": [
+                {
+                    "function": "new_block",
+                    "options": "minecraft:mangrove_slab"
+                },
+                {
+                    "function": "map_properties",
+                    "options": {
+                        "type": {
+                            "\"double\"": [
+                                {
+                                    "function": "map_properties",
+                                    "options": {
+                                        "material": {
+                                            material: [
+                                                {
+                                                    "function": "new_block",
+                                                    "options": block_id
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }

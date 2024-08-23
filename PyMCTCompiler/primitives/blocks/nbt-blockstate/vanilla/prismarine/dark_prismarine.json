@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:dark_prismarine"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:dark_prismarine": [
+            {
+                "function": "new_block",
+                "options": "minecraft:dark_prismarine"
+            }
+        ]
+    }
+}
