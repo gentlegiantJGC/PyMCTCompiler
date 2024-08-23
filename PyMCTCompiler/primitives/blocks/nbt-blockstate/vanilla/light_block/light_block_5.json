@@ -15,7 +15,7 @@
         "universal_minecraft:light": [
             {
                 "function": "new_block",
-                "options": "minecraft:light_block"
+                "options": "minecraft:light_block_0"
             },
             {
                 "function": "map_properties",
@@ -23,10 +23,8 @@
                     "level": {
                         "\"5\"": [
                             {
-                                "function": "new_properties",
-                                "options": {
-                                    "block_light_level": "5"
-                                }
+                                "function": "new_block",
+                                "options": "minecraft:light_block_5"
                             }
                         ]
                     }
