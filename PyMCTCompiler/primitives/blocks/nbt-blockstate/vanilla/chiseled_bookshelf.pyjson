@@ -12,12 +12,12 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "slot_0_occupied": ["\"true\"", "\"false\""][bool(books_stored & 1)],
-                                "slot_1_occupied": ["\"true\"", "\"false\""][bool(books_stored & 2)],
-                                "slot_2_occupied": ["\"true\"", "\"false\""][bool(books_stored & 4)],
-                                "slot_3_occupied": ["\"true\"", "\"false\""][bool(books_stored & 8)],
-                                "slot_4_occupied": ["\"true\"", "\"false\""][bool(books_stored & 16)],
-                                "slot_5_occupied": ["\"true\"", "\"false\""][bool(books_stored & 32)],
+                                "slot_0_occupied": ["\"false\"", "\"true\""][bool(books_stored & 1)],
+                                "slot_1_occupied": ["\"false\"", "\"true\""][bool(books_stored & 2)],
+                                "slot_2_occupied": ["\"false\"", "\"true\""][bool(books_stored & 4)],
+                                "slot_3_occupied": ["\"false\"", "\"true\""][bool(books_stored & 8)],
+                                "slot_4_occupied": ["\"false\"", "\"true\""][bool(books_stored & 16)],
+                                "slot_5_occupied": ["\"false\"", "\"true\""][bool(books_stored & 32)],
                             }
                         }
                     ] for books_stored in range(64)
@@ -27,7 +27,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing": "\"north\""
+                                "facing": "\"south\""
                             }
                         }
                     ],
@@ -35,7 +35,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing": "\"east\""
+                                "facing": "\"west\""
                             }
                         }
                     ],
@@ -43,7 +43,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing": "\"south\""
+                                "facing": "\"north\""
                             }
                         }
                     ],
@@ -51,7 +51,7 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "facing": "\"west\""
+                                "facing": "\"east\""
                             }
                         }
                     ]
@@ -102,32 +102,32 @@
                                                                                                                         "books_stored": str(books_stored32 + books_stored16 + books_stored8 + books_stored4 + books_stored2 + books_stored1)
                                                                                                                     }
                                                                                                                 }
-                                                                                                            ]
-                                                                                                        } for slot_0_occupied, books_stored1 in (("\"false\"", 0), ("\"true\"", 1))
+                                                                                                            ] for slot_0_occupied, books_stored1 in (("\"false\"", 0), ("\"true\"", 1))
+                                                                                                        }
                                                                                                     }
                                                                                                 }
-                                                                                            ]
-                                                                                        } for slot_1_occupied, books_stored2 in (("\"false\"", 0), ("\"true\"", 2))
+                                                                                            ] for slot_1_occupied, books_stored2 in (("\"false\"", 0), ("\"true\"", 2))
+                                                                                        }
                                                                                     }
                                                                                 }
-                                                                            ]
-                                                                        } for slot_2_occupied, books_stored4 in (("\"false\"", 0), ("\"true\"", 4))
+                                                                            ] for slot_2_occupied, books_stored4 in (("\"false\"", 0), ("\"true\"", 4))
+                                                                        }
                                                                     }
                                                                 }
-                                                            ]
-                                                        } for slot_3_occupied, books_stored8 in (("\"false\"", 0), ("\"true\"", 8))
+                                                            ] for slot_3_occupied, books_stored8 in (("\"false\"", 0), ("\"true\"", 8))
+                                                        }
                                                     }
                                                 }
-                                            ]
-                                        } for slot_4_occupied, books_stored16 in (("\"false\"", 0), ("\"true\"", 16))
+                                            ] for slot_4_occupied, books_stored16 in (("\"false\"", 0), ("\"true\"", 16))
+                                        }
                                     }
                                 }
-                            ]
-                        } for slot_5_occupied, books_stored32 in (("\"false\"", 0), ("\"true\"", 32))
+                            ] for slot_5_occupied, books_stored32 in (("\"false\"", 0), ("\"true\"", 32))
+                        }
                     },
                     **{
                         "facing": {
-                            "\"north\"": [
+                            "\"south\"": [
                                 {
                                     "function": "new_properties",
                                     "options": {
@@ -135,7 +135,7 @@
                                     }
                                 }
                             ],
-                            "\"east\"": [
+                            "\"west\"": [
                                 {
                                     "function": "new_properties",
                                     "options": {
@@ -143,7 +143,7 @@
                                     }
                                 }
                             ],
-                            "\"south\"": [
+                            "\"north\"": [
                                 {
                                     "function": "new_properties",
                                     "options": {
@@ -151,7 +151,7 @@
                                     }
                                 }
                             ],
-                            "\"west\"": [
+                            "\"east\"": [
                                 {
                                     "function": "new_properties",
                                     "options": {
