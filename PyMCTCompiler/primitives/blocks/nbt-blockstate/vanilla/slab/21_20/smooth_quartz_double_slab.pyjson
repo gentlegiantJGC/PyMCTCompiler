@@ -1,1 +1,1 @@
-nbt_blockstate.double_slab("\"smooth_quartz\"", "smooth_quartz_double_slab")
+nbt_blockstate.double_slab("\"smooth_quartz\"", "minecraft:smooth_quartz_double_slab")

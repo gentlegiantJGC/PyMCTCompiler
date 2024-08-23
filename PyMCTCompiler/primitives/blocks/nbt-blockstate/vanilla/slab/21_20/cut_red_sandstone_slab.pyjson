@@ -1,1 +1,1 @@
-nbt_blockstate.slab("\"cut_red_sandstone\"", "cut_red_sandstone_slab")
+nbt_blockstate.slab("\"cut_red_sandstone\"", "minecraft:cut_red_sandstone_slab")

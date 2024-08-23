@@ -1,1 +1,1 @@
-nbt_blockstate.slab("\"red_nether_brick\"", "red_nether_brick_slab")
+nbt_blockstate.slab("\"red_nether_brick\"", "minecraft:red_nether_brick_slab")

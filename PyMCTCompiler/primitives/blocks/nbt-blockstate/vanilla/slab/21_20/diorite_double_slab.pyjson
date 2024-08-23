@@ -1,1 +1,1 @@
-nbt_blockstate.double_slab("\"diorite\"", "diorite_double_slab")
+nbt_blockstate.double_slab("\"diorite\"", "minecraft:diorite_double_slab")

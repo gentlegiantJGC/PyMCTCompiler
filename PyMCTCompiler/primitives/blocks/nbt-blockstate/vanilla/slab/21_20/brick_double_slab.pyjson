@@ -1,1 +1,1 @@
-nbt_blockstate.double_slab("\"brick\"", "brick_double_slab")
+nbt_blockstate.double_slab("\"brick\"", "minecraft:brick_double_slab")
