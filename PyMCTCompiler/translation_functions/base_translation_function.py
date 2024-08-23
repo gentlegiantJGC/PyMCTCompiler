@@ -6,16 +6,16 @@ from PyMCTCompiler import translation_functions
 class BaseTranslationObject:
     def extend(self, other: "FunctionList", parents: list):
         """Merge primitives or baked translations"""
-        raise NotImplemented
+        raise NotImplementedError
 
     def commit(self, feature_set: Union[Set[str], None], parents: list):
         """Mark the translation as merged and run validation"""
-        raise NotImplemented
+        raise NotImplementedError
 
     def save(self, parents: list) -> list:
         """Turn the data into a json serializable object.
         Also add nested translations to the disk buffer for further saving."""
-        raise NotImplemented
+        raise NotImplementedError
 
 
 class FunctionList(BaseTranslationObject):
@@ -152,13 +152,13 @@ class BaseTranslationFunction(BaseTranslationObject):
         """Used to merge two primitive files together.
         The formats do not need to be identical but close enough that the data can stack.
         """
-        raise NotImplemented
+        raise NotImplementedError
 
     def _compiled_extend(self, other: "BaseTranslationFunction", parents: list):
         """Used to merge two completed translations together.
         The formats must match in such a way that the two base translations do not interfere.
         """
-        raise NotImplemented
+        raise NotImplementedError
 
     def commit(self, feature_set: Set[str], parents: list):
         """Confirm that the function is complete and run the validation code."""
@@ -167,7 +167,7 @@ class BaseTranslationFunction(BaseTranslationObject):
         self._commit(feature_set, parents)
 
     def _commit(self, feature_set: Set[str], parents: list):
-        raise NotImplemented
+        raise NotImplementedError
 
     def save(self, parents: list) -> dict:
-        raise NotImplemented
+        raise NotImplementedError

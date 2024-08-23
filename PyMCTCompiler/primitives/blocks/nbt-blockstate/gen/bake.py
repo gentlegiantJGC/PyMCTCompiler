@@ -19,7 +19,7 @@ def to_snbt(nbt_type, value):
     elif nbt_type == "string":
         return f'"{value}"'
     else:
-        raise NotImplemented
+        raise NotImplementedError
 
 
 bool_map = {"0": "false", "1": "true"}

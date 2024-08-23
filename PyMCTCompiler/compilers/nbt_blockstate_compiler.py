@@ -32,7 +32,7 @@ def to_snbt(nbt_type, value):
     elif nbt_type == "string":
         return f'"{value}"'
     else:
-        raise NotImplemented
+        raise NotImplementedError
 
 
 def find_blocks_changes(old_blocks: dict, new_blocks: dict):
