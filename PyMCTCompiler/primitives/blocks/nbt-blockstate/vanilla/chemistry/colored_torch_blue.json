@@ -1,10 +1,6 @@
 {
     "specification": {
         "properties": {
-            "color_bit": [
-                "0b",
-                "1b"
-            ],
             "torch_facing_direction": [
                 "\"top\"",
                 "\"west\"",
@@ -15,26 +11,17 @@
             ]
         },
         "defaults": {
-            "color_bit": "0b",
             "torch_facing_direction": "\"top\""
         }
     },
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:colored_torch_red"
+            "options": "universal_minecraft:colored_torch_blue"
         },
         {
             "function": "map_properties",
             "options": {
-                "color_bit": {
-                    "1b": [
-                        {
-                            "function": "new_block",
-                            "options": "universal_minecraft:colored_torch_green"
-                        }
-                    ]
-                },
                 "torch_facing_direction": {
                     "\"unknown\"": [
                         {
@@ -89,75 +76,10 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:colored_torch_red": [
+        "universal_minecraft:colored_torch_blue": [
             {
                 "function": "new_block",
-                "options": "minecraft:colored_torch_rg"
-            },
-            {
-                "function": "new_properties",
-                "options": {
-                    "color_bit": "0b"
-                }
-            },
-            {
-                "function": "map_properties",
-                "options": {
-                    "facing": {
-                        "\"west\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "torch_facing_direction": "\"west\""
-                                }
-                            }
-                        ],
-                        "\"east\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "torch_facing_direction": "\"east\""
-                                }
-                            }
-                        ],
-                        "\"north\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "torch_facing_direction": "\"north\""
-                                }
-                            }
-                        ],
-                        "\"south\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "torch_facing_direction": "\"south\""
-                                }
-                            }
-                        ],
-                        "\"up\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "torch_facing_direction": "\"top\""
-                                }
-                            }
-                        ]
-                    }
-                }
-            }
-        ],
-        "universal_minecraft:colored_torch_green": [
-            {
-                "function": "new_block",
-                "options": "minecraft:colored_torch_rg"
-            },
-            {
-                "function": "new_properties",
-                "options": {
-                    "color_bit": "1b"
-                }
+                "options": "minecraft:colored_torch_blue"
             },
             {
                 "function": "map_properties",

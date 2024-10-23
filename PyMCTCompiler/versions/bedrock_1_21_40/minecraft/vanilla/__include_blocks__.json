@@ -39,4 +39,11 @@
     "material_reducer": "material_reducer",
     "element_constructor": "element_constructor",
     "lab_table": "lab_table",
+
+    "colored_torch_bp": null,
+    "colored_torch_rg": null,
+    "colored_torch_blue": "colored_torch_blue",
+    "colored_torch_green": "colored_torch_green",
+    "colored_torch_purple": "colored_torch_purple",
+    "colored_torch_red": "colored_torch_red"
 }
