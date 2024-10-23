@@ -32,5 +32,11 @@
     "underwater_tnt": "underwater_tnt_2140",
 
     "sponge": "sponge_2140",
-    "wet_sponge": "wet_sponge_2140"
+    "wet_sponge": "wet_sponge_2140",
+
+    "chemistry_table": null,
+    "compound_creator": "compound_creator",
+    "material_reducer": "material_reducer",
+    "element_constructor": "element_constructor",
+    "lab_table": "lab_table",
 }
