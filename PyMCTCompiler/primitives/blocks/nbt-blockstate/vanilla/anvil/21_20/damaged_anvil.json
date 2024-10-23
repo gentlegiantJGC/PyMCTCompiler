@@ -1,0 +1,108 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:anvil"
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "damage": "\"damaged\""
+            }
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "minecraft:cardinal_direction": {
+                    "\"south\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"south\""
+                            }
+                        }
+                    ],
+                    "\"west\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"west\""
+                            }
+                        }
+                    ],
+                    "\"north\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"north\""
+                            }
+                        }
+                    ],
+                    "\"east\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"east\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:anvil": [
+            {
+                "function": "new_block",
+                "options": "minecraft:anvil"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "damage": {
+                        "\"damaged\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:damaged_anvil"
+                            }
+                        ]
+                    },
+                    "facing": {
+                        "\"south\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"south\""
+                                }
+                            }
+                        ],
+                        "\"west\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"west\""
+                                }
+                            }
+                        ],
+                        "\"north\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"north\""
+                                }
+                            }
+                        ],
+                        "\"east\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"east\""
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

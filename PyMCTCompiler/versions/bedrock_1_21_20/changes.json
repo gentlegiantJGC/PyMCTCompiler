@@ -1,0 +1,1319 @@
+{
+    "minecraft:activator_rail": {
+        "values_added": {
+            "rail_direction": [
+                "6",
+                "7",
+                "9",
+                "8"
+            ]
+        }
+    },
+    "minecraft:andesite_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:andesite_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:anvil": {
+        "properties_removed": {
+            "damage": [
+                "\"undamaged\"",
+                "\"slightly_damaged\"",
+                "\"very_damaged\"",
+                "\"broken\""
+            ]
+        }
+    },
+    "minecraft:brain_coral_wall_fan": {
+        "block_added": {
+            "defaults": {
+                "coral_direction": "0"
+            },
+            "properties": {
+                "coral_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:brick_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:bubble_coral_wall_fan": {
+        "block_added": {
+            "defaults": {
+                "coral_direction": "0"
+            },
+            "properties": {
+                "coral_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:chipped_anvil": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ]
+            }
+        }
+    },
+    "minecraft:chiseled_quartz_block": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:chiseled_red_sandstone": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:chiseled_sandstone": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:chiseled_stone_bricks": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:chorus_flower": {
+        "values_added": {
+            "age": [
+                "12",
+                "13",
+                "14",
+                "8",
+                "11",
+                "6",
+                "10",
+                "7",
+                "9",
+                "15"
+            ]
+        }
+    },
+    "minecraft:coarse_dirt": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:cobblestone_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:cocoa": {
+        "values_added": {
+            "age": [
+                "12",
+                "13",
+                "4",
+                "8",
+                "11",
+                "6",
+                "3",
+                "9",
+                "7",
+                "5",
+                "15",
+                "14",
+                "10"
+            ]
+        }
+    },
+    "minecraft:coral_fan_hang": {
+        "block_removed": true
+    },
+    "minecraft:coral_fan_hang2": {
+        "block_removed": true
+    },
+    "minecraft:coral_fan_hang3": {
+        "block_removed": true
+    },
+    "minecraft:cracked_stone_bricks": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:cut_red_sandstone": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:cut_red_sandstone_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:cut_red_sandstone_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:cut_sandstone": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:cut_sandstone_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:cut_sandstone_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:damaged_anvil": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ]
+            }
+        }
+    },
+    "minecraft:dandelion": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:dark_prismarine": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:dark_prismarine_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:dark_prismarine_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:dead_brain_coral_wall_fan": {
+        "block_added": {
+            "defaults": {
+                "coral_direction": "0"
+            },
+            "properties": {
+                "coral_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:dead_bubble_coral_wall_fan": {
+        "block_added": {
+            "defaults": {
+                "coral_direction": "0"
+            },
+            "properties": {
+                "coral_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:dead_fire_coral_wall_fan": {
+        "block_added": {
+            "defaults": {
+                "coral_direction": "0"
+            },
+            "properties": {
+                "coral_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:dead_horn_coral_wall_fan": {
+        "block_added": {
+            "defaults": {
+                "coral_direction": "0"
+            },
+            "properties": {
+                "coral_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:dead_tube_coral_wall_fan": {
+        "block_added": {
+            "defaults": {
+                "coral_direction": "0"
+            },
+            "properties": {
+                "coral_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:deprecated_anvil": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ]
+            }
+        }
+    },
+    "minecraft:detector_rail": {
+        "values_added": {
+            "rail_direction": [
+                "6",
+                "7",
+                "9",
+                "8"
+            ]
+        }
+    },
+    "minecraft:diorite_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:diorite_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:dirt": {
+        "properties_removed": {
+            "dirt_type": [
+                "\"normal\"",
+                "\"coarse\""
+            ]
+        }
+    },
+    "minecraft:double_stone_block_slab": {
+        "block_removed": true
+    },
+    "minecraft:double_stone_block_slab2": {
+        "block_removed": true
+    },
+    "minecraft:double_stone_block_slab3": {
+        "block_removed": true
+    },
+    "minecraft:double_stone_block_slab4": {
+        "block_removed": true
+    },
+    "minecraft:end_stone_brick_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:end_stone_brick_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:fire_coral_wall_fan": {
+        "block_added": {
+            "defaults": {
+                "coral_direction": "0"
+            },
+            "properties": {
+                "coral_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:frosted_ice": {
+        "values_added": {
+            "age": [
+                "12",
+                "13",
+                "14",
+                "8",
+                "4",
+                "11",
+                "6",
+                "10",
+                "15",
+                "7",
+                "9",
+                "5"
+            ]
+        }
+    },
+    "minecraft:golden_rail": {
+        "values_added": {
+            "rail_direction": [
+                "6",
+                "7",
+                "9",
+                "8"
+            ]
+        }
+    },
+    "minecraft:granite_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:granite_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:horn_coral_wall_fan": {
+        "block_added": {
+            "defaults": {
+                "coral_direction": "0"
+            },
+            "properties": {
+                "coral_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:infested_chiseled_stone_bricks": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:infested_cobblestone": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:infested_cracked_stone_bricks": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:infested_mossy_stone_bricks": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:infested_stone": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:infested_stone_bricks": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_block": {
+        "block_removed": true
+    },
+    "minecraft:light_block_0": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_block_1": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_block_10": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_block_11": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_block_12": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_block_13": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_block_14": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_block_15": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_block_2": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_block_3": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_block_4": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_block_5": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_block_6": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_block_7": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_block_8": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:light_block_9": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:monster_egg": {
+        "block_removed": true
+    },
+    "minecraft:mossy_cobblestone_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:mossy_cobblestone_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:mossy_stone_brick_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:mossy_stone_brick_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:mossy_stone_bricks": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:nether_brick_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:nether_wart": {
+        "values_added": {
+            "age": [
+                "12",
+                "13",
+                "14",
+                "8",
+                "4",
+                "11",
+                "6",
+                "10",
+                "15",
+                "7",
+                "9",
+                "5"
+            ]
+        }
+    },
+    "minecraft:normal_stone_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:normal_stone_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:petrified_oak_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:polished_andesite_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:polished_andesite_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:polished_diorite_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:polished_diorite_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:polished_granite_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:polished_granite_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:prismarine": {
+        "properties_removed": {
+            "prismarine_block_type": [
+                "\"default\"",
+                "\"dark\"",
+                "\"bricks\""
+            ]
+        }
+    },
+    "minecraft:prismarine_brick_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:prismarine_brick_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:prismarine_bricks": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:prismarine_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:prismarine_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:purpur_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:purpur_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:quartz_block": {
+        "properties_removed": {
+            "chisel_type": [
+                "\"default\"",
+                "\"chiseled\"",
+                "\"lines\"",
+                "\"smooth\""
+            ]
+        }
+    },
+    "minecraft:quartz_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:quartz_pillar": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:red_nether_brick_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:red_nether_brick_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:red_sand": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:red_sandstone": {
+        "properties_removed": {
+            "sand_stone_type": [
+                "\"default\"",
+                "\"heiroglyphs\"",
+                "\"cut\"",
+                "\"smooth\""
+            ]
+        }
+    },
+    "minecraft:red_sandstone_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:red_sandstone_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:sand": {
+        "properties_removed": {
+            "sand_type": [
+                "\"normal\"",
+                "\"red\""
+            ]
+        }
+    },
+    "minecraft:sandstone": {
+        "properties_removed": {
+            "sand_stone_type": [
+                "\"default\"",
+                "\"heiroglyphs\"",
+                "\"cut\"",
+                "\"smooth\""
+            ]
+        }
+    },
+    "minecraft:sandstone_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:smooth_quartz": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:smooth_quartz_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:smooth_quartz_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:smooth_red_sandstone": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:smooth_red_sandstone_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:smooth_red_sandstone_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:smooth_sandstone": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:smooth_sandstone_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:smooth_sandstone_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:smooth_stone_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:stone_block_slab2": {
+        "block_removed": true
+    },
+    "minecraft:stone_block_slab3": {
+        "block_removed": true
+    },
+    "minecraft:stone_block_slab4": {
+        "block_removed": true
+    },
+    "minecraft:stone_brick_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:stone_bricks": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:stonebrick": {
+        "block_removed": true
+    },
+    "minecraft:tube_coral_wall_fan": {
+        "block_added": {
+            "defaults": {
+                "coral_direction": "0"
+            },
+            "properties": {
+                "coral_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:yellow_flower": {
+        "block_removed": true
+    }
+}

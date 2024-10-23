@@ -1,0 +1,28 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:infested_block"
+        },
+        {
+            "function": "new_properties",
+            "options": {
+                "material": "\"stone\""
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:infested_block": [
+            {
+                "function": "new_block",
+                "options": "minecraft:infested_stone"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "material": {}
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:prismarine_bricks"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:prismarine_bricks": [
+            {
+                "function": "new_block",
+                "options": "minecraft:prismarine_bricks"
+            }
+        ]
+    }
+}
