@@ -1,0 +1,16 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:structure_void"
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:structure_void": [
+            {
+                "function": "new_block",
+                "options": "minecraft:structure_void"
+            }
+        ]
+    }
+}
