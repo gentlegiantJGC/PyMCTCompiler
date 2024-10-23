@@ -135,27 +135,14 @@ def find_java() -> str:
     """Find the path to java vm."""
     global _JavaPath
     if _JavaPath is None:
-        try:
-            if not subprocess.call("java -version"):
-                # check if java is on the path
-                _JavaPath = "java"
-        except:
-            pass
-        if _JavaPath is None:
-            print(
-                "Java was not on the path. Trying to find the one packaged with Minecraft"
-            )
-            if os.path.isdir(r"C:\Program Files (x86)\Minecraft\runtime"):
-                path = r"C:\Program Files (x86)\Minecraft\runtime"
-            elif os.path.isdir(r"C:\Program Files\Minecraft\runtime"):
-                path = r"C:\Program Files\Minecraft\runtime"
-            else:
-                raise Exception("Could not find where the Minecraft launcher is saved")
-            paths = glob.glob(os.path.join(path, "**", "java.exe"), recursive=True)
-            if paths:
-                _JavaPath = paths[0]
-            else:
-                raise Exception("Could not find java")
+        path = r"C:\Program Files (x86)\Minecraft Launcher\runtime\java-runtime-delta\windows-x64\java-runtime-delta\bin"
+        if not os.path.isdir(path):
+            raise Exception("Could not find where the Minecraft launcher is saved")
+        paths = glob.glob(os.path.join(glob.escape(path), "**", "java.exe"), recursive=True)
+        if paths:
+            _JavaPath = paths[0]
+        else:
+            raise Exception("Could not find java")
     return _JavaPath
 
 
