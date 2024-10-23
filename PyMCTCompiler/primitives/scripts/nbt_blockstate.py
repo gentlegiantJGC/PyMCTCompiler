@@ -1,7 +1,7 @@
 import itertools
 
 
-def mushroom_block(color: str) -> dict:
+def mushroom_block(color: str, include_return_stem: bool = True) -> dict:
     directions = {  # up, down, north, east, south, west
         f"universal_minecraft:{color}_mushroom_block": {
             0: ['"false"', '"false"', '"false"', '"false"', '"false"', '"false"'],
@@ -181,8 +181,122 @@ def mushroom_block(color: str) -> dict:
                     },
                 },
             ],
+            **({
+                "universal_minecraft:mushroom_stem": [
+                    {"function": "new_block", "options": "minecraft:red_mushroom_block"},
+                    {"function": "new_properties", "options": {"huge_mushroom_bits": "15"}},
+                    {
+                        "function": "map_properties",
+                        "options": {
+                            "up": {
+                                '"false"': [
+                                    {
+                                        "function": "map_properties",
+                                        "options": {
+                                            "down": {
+                                                '"false"': [
+                                                    {
+                                                        "function": "map_properties",
+                                                        "options": {
+                                                            "north": {
+                                                                '"true"': [
+                                                                    {
+                                                                        "function": "map_properties",
+                                                                        "options": {
+                                                                            "east": {
+                                                                                '"true"': [
+                                                                                    {
+                                                                                        "function": "map_properties",
+                                                                                        "options": {
+                                                                                            "south": {
+                                                                                                '"true"': [
+                                                                                                    {
+                                                                                                        "function": "map_properties",
+                                                                                                        "options": {
+                                                                                                            "west": {
+                                                                                                                '"true"': [
+                                                                                                                    {
+                                                                                                                        "function": "new_properties",
+                                                                                                                        "options": {
+                                                                                                                            "huge_mushroom_bits": "10"
+                                                                                                                        },
+                                                                                                                    }
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        },
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        },
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                    }
+                                ]
+                            },
+                            "material": {
+                                f'"{color}"': [
+                                    {
+                                        "function": "new_block",
+                                        "options": f"minecraft:{color}_mushroom_block",
+                                    }
+                                ]
+                            },
+                        },
+                    },
+                ],
+            } if include_return_stem else {})
+        },
+    }
+
+
+def mushroom_stem() -> dict:
+    states = {  # up, down, north, east, south, west
+        10: ['"false"', '"false"', '"true"', '"true"', '"true"', '"true"'],
+        15: ['"true"', '"true"', '"true"', '"true"', '"true"', '"true"'],
+    }
+
+    return {
+        "to_universal": [
+            {
+                "function": "new_block",
+                "options": f"universal_minecraft:mushroom_stem",
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "huge_mushroom_bits": {
+                        str(data): [
+                            {"function": "new_block", "options": "universal_minecraft:mushroom_stem"},
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "up": dirs[0],
+                                    "down": dirs[1],
+                                    "north": dirs[2],
+                                    "east": dirs[3],
+                                    "south": dirs[4],
+                                    "west": dirs[5],
+                                },
+                            },
+                        ]
+                        for data, dirs in states.items()
+                    }
+                },
+            },
+        ],
+        "from_universal": {
             "universal_minecraft:mushroom_stem": [
-                {"function": "new_block", "options": "minecraft:red_mushroom_block"},
+                {"function": "new_block", "options": "minecraft:mushroom_stem"},
                 {"function": "new_properties", "options": {"huge_mushroom_bits": "15"}},
                 {
                     "function": "map_properties",
@@ -239,14 +353,6 @@ def mushroom_block(color: str) -> dict:
                                             ]
                                         }
                                     },
-                                }
-                            ]
-                        },
-                        "material": {
-                            f'"{color}"': [
-                                {
-                                    "function": "new_block",
-                                    "options": f"minecraft:{color}_mushroom_block",
                                 }
                             ]
                         },
