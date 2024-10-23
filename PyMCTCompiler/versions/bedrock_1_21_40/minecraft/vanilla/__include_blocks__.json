@@ -14,6 +14,9 @@
     "sandstone_wall": ["sandstone_wall", "wall_connections_16"],
     "stone_brick_wall": ["stone_brick_wall", "wall_connections_16"],
 
+    "cherry_wood": "cherry_wood_2071",
+    "mangrove_wood": "mangrove_wood_2071",
+
     "purpur_block": "purpur_block_2120",
     "purpur_pillar": "purpur_pillar",
     "deprecated_purpur_block_1": "deprecated_purpur_block_1",
