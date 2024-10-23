@@ -1,3 +1,17 @@
 {
+    "andesite_wall": ["andesite_wall", "wall_connections_16"],
+    "brick_wall": ["brick_wall", "wall_connections_16"],
+    "cobblestone_wall": ["cobblestone_wall_2140", "wall_connections_16"],
+    "diorite_wall": ["diorite_wall", "wall_connections_16"],
+    "end_stone_brick_wall": ["end_stone_brick_wall", "wall_connections_16"],
+    "granite_wall": ["granite_wall", "wall_connections_16"],
+    "mossy_cobblestone_wall": ["mossy_cobblestone_wall", "wall_connections_16"],
+    "mossy_stone_brick_wall": ["mossy_stone_brick_wall", "wall_connections_16"],
+    "nether_brick_wall": ["nether_brick_wall", "wall_connections_16"],
+    "prismarine_wall": ["prismarine_wall", "wall_connections_16"],
+    "red_nether_brick_wall": ["red_nether_brick_wall", "wall_connections_16"],
+    "red_sandstone_wall": ["red_sandstone_wall", "wall_connections_16"],
+    "sandstone_wall": ["sandstone_wall", "wall_connections_16"],
+    "stone_brick_wall": ["stone_brick_wall", "wall_connections_16"],
 
 }
