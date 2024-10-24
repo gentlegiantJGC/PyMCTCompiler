@@ -26,6 +26,15 @@
     "red_mushroom_block": "red_mushroom_block_2140",
     "mushroom_stem": "mushroom_stem",
 
+    "skull": null,
+    "creeper_head": ["creeper_head", ">nbt.skull.b12140"],
+    "dragon_head": ["dragon_head", ">nbt.skull.b12140"],
+    "piglin_head": ["piglin_head", ">nbt.skull.b12140"],
+    "player_head": ["player_head", ">nbt.skull.b12140"],
+    "skeleton_skull": ["skeleton_skull", ">nbt.skull.b12140"],
+    "wither_skeleton_skull": ["wither_skeleton_skull", ">nbt.skull.b12140"],
+    "zombie_head": ["zombie_head", ">nbt.skull.b12140"],
+
     "structure_void": "structure_void_2140",
 
     "tnt": "tnt_2140",

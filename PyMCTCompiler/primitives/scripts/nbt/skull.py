@@ -259,6 +259,52 @@ _BExtra_113 = TranslationFile(
     },
 )
 
+_BExtra_12140 = TranslationFile(
+    [
+        {
+            "function": "map_properties",
+            "options": {
+                "facing_direction": {
+                    "1": [
+                        {
+                            "function": "code",
+                            "options": {
+                                "input": ["nbt"],
+                                "output": ["new_properties"],
+                                "function": "bedrock_skull_rotation_2u",
+                            },
+                        }
+                    ]
+                }
+            },
+        },
+    ],
+    {
+        "universal_minecraft:head": [
+            {
+                "function": "map_properties",
+                "options": {
+                    "rotation": {
+                        f'"{rot}"': [
+                            {
+                                "function": "new_nbt",
+                                "options": [
+                                    {
+                                        "key": "Rotation",
+                                        "value": f"{rot * 22.5 - 360 * (rot > 8)}f",
+                                    }
+                                ],
+                            }
+                        ]
+                        for rot in range(16)
+                    },
+                },
+            }
+        ],
+        "universal_minecraft:wall_head": [],
+    },
+)
+
 _JExtra_19 = TranslationFile(
     [
         {
@@ -393,5 +439,10 @@ b17 = merge(
 
 b113 = merge(
     [EmptyNBT(":Skull"), _B17, _BExtra_113, bedrock_is_movable],
+    ["universal_minecraft:head", "universal_minecraft:wall_head"],
+)
+
+b12140 = merge(
+    [EmptyNBT(":Skull"), _B17, _BExtra_12140, bedrock_is_movable],
     ["universal_minecraft:head", "universal_minecraft:wall_head"],
 )
