@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "material": "\"dark_oak\""
+                "material": "\"jungle\""
             }
         }
     ],
@@ -15,16 +15,16 @@
         "universal_minecraft:planks": [
             {
                 "function": "new_block",
-                "options": "minecraft:planks"
+                "options": "minecraft:oak_planks"
             },
             {
                 "function": "map_properties",
                 "options": {
                     "material": {
-                        "\"dark_oak\"": [
+                        "\"jungle\"": [
                             {
                                 "function": "new_block",
-                                "options": "minecraft:dark_oak_planks"
+                                "options": "minecraft:jungle_planks"
                             }
                         ]
                     }

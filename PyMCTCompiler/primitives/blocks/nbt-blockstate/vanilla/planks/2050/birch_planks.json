@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "material": "\"oak\""
+                "material": "\"birch\""
             }
         }
     ],
@@ -15,16 +15,16 @@
         "universal_minecraft:planks": [
             {
                 "function": "new_block",
-                "options": "minecraft:planks"
+                "options": "minecraft:oak_planks"
             },
             {
                 "function": "map_properties",
                 "options": {
                     "material": {
-                        "\"oak\"": [
+                        "\"birch\"": [
                             {
                                 "function": "new_block",
-                                "options": "minecraft:oak_planks"
+                                "options": "minecraft:birch_planks"
                             }
                         ]
                     }

@@ -15,7 +15,7 @@
         "universal_minecraft:planks": [
             {
                 "function": "new_block",
-                "options": "minecraft:planks"
+                "options": "minecraft:oak_planks"
             },
             {
                 "function": "map_properties",
