@@ -11,7 +11,8 @@
 		"warped_fence",
 		"mangrove_fence",
 		"bamboo_fence",
-		"cherry_fence"
+		"cherry_fence",
+		"pale_oak_fence"
 	],
 	"add": {
         "fence": {
@@ -28,7 +29,8 @@
 					"\"crimson\"",
 					"\"warped\"",
 					"\"bamboo\"",
-					"\"cherry\""
+					"\"cherry\"",
+					"\"pale_oak\""
 				],
                 "east": [
                     "\"true\"",

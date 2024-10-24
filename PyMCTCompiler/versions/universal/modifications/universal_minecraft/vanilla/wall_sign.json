@@ -10,7 +10,8 @@
 		"warped_wall_sign",
 		"mangrove_wall_sign",
 		"bamboo_wall_sign",
-		"cherry_wall_sign"
+		"cherry_wall_sign",
+		"pale_oak_wall_sign"
 	],
 	"add": {
 		"wall_sign": {
@@ -32,7 +33,8 @@
 					"\"crimson\"",
 					"\"warped\"",
 					"\"bamboo\"",
-					"\"cherry\""
+					"\"cherry\"",
+					"\"pale_oak\""
 				]
 			},
 			"defaults": {

@@ -12,7 +12,8 @@
 		"polished_blackstone_pressure_plate",
 		"mangrove_pressure_plate",
 		"bamboo_pressure_plate",
-		"cherry_pressure_plate"
+		"cherry_pressure_plate",
+		"pale_oak_pressure_plate"
 	],
 	"add": {
 		"pressure_plate": {
@@ -30,7 +31,8 @@
 					"\"warped\"",
 					"\"polished_blackstone\"",
 					"\"bamboo\"",
-					"\"cherry\""
+					"\"cherry\"",
+					"\"pale_oak\""
 				],
 				"powered": [
 					"\"true\"",

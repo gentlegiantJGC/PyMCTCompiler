@@ -19,7 +19,9 @@
 		"mangrove_wood",
 		"stripped_mangrove_wood",
 		"cherry_wood",
-		"stripped_cherry_wood"
+		"stripped_cherry_wood",
+		"pale_oak_wood",
+		"stripped_pale_oak_wood"
 	],
 	"add": {
 		"wood": {
@@ -34,7 +36,8 @@
 					"\"mangrove\"",
 					"\"crimson\"",
 					"\"warped\"",
-					"\"cherry\""
+					"\"cherry\"",
+					"\"pale_oak\""
 				],
 				"axis": [
 					"\"x\"",

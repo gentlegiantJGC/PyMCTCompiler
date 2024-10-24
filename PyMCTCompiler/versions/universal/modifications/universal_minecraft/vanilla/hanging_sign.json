@@ -10,7 +10,8 @@
 		"warped_hanging_sign",
 		"mangrove_hanging_sign",
 		"bamboo_hanging_sign",
-		"cherry_hanging_sign"
+		"cherry_hanging_sign",
+		"pale_oak_hanging_sign"
 	],
 	"add": {
 		"hanging_sign": {
@@ -44,7 +45,8 @@
 					"\"crimson\"",
 					"\"warped\"",
 					"\"bamboo\"",
-					"\"cherry\""
+					"\"cherry\"",
+					"\"pale_oak\""
 				],
 				"connection": [
 					"\"up\"",

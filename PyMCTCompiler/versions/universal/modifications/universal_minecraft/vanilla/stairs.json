@@ -55,7 +55,8 @@
 		"cherry_stairs",
 		"tuff_stairs",
 		"tuff_brick_stairs",
-		"polished_tuff_stairs"
+		"polished_tuff_stairs",
+		"pale_oak_stairs"
 	],
 	"add": {
 		"stairs": {
@@ -116,7 +117,8 @@
 					"\"cherry\"",
 					"\"tuff\"",
 					"\"tuff_brick\"",
-					"\"polished_tuff\""
+					"\"polished_tuff\"",
+					"\"pale_oak\""
 				],
 				"facing": [
 					"\"north\"",
