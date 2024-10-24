@@ -19,7 +19,8 @@
 		"waxed_exposed_copper_door",
 		"waxed_oxidized_copper_door",
 		"waxed_weathered_copper_door",
-		"weathered_copper_door"
+		"weathered_copper_door",
+		"pale_oak_door"
 	],
 	"add": {
 		"door": {
@@ -44,7 +45,8 @@
 					"\"waxed_exposed_copper\"",
 					"\"waxed_oxidized_copper\"",
 					"\"waxed_weathered_copper\"",
-					"\"weathered_copper\""
+					"\"weathered_copper\"",
+					"\"pale_oak\""
 				],
 				"facing": [
 					"\"north\"",

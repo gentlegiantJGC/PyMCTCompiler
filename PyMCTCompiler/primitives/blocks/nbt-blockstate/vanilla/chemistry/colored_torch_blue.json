@@ -1,0 +1,133 @@
+{
+    "specification": {
+        "properties": {
+            "torch_facing_direction": [
+                "\"top\"",
+                "\"west\"",
+                "\"east\"",
+                "\"north\"",
+                "\"south\"",
+                "\"unknown\""
+            ]
+        },
+        "defaults": {
+            "torch_facing_direction": "\"top\""
+        }
+    },
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:colored_torch_blue"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "torch_facing_direction": {
+                    "\"unknown\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"up\""
+                            }
+                        }
+                    ],
+                    "\"west\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"west\""
+                            }
+                        }
+                    ],
+                    "\"east\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"east\""
+                            }
+                        }
+                    ],
+                    "\"north\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"north\""
+                            }
+                        }
+                    ],
+                    "\"south\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"south\""
+                            }
+                        }
+                    ],
+                    "\"top\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"up\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:colored_torch_blue": [
+            {
+                "function": "new_block",
+                "options": "minecraft:colored_torch_blue"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "facing": {
+                        "\"west\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": "\"west\""
+                                }
+                            }
+                        ],
+                        "\"east\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": "\"east\""
+                                }
+                            }
+                        ],
+                        "\"north\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": "\"north\""
+                                }
+                            }
+                        ],
+                        "\"south\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": "\"south\""
+                                }
+                            }
+                        ],
+                        "\"up\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": "\"top\""
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

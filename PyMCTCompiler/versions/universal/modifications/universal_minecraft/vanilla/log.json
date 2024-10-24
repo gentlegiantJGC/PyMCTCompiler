@@ -21,7 +21,9 @@
 		"bamboo_block",
 		"stripped_bamboo_block",
 		"cherry_log",
-		"stripped_cherry_log"
+		"stripped_cherry_log",
+		"pale_oak_log",
+		"stripped_pale_oak_log"
 	],
 	"add": {
 		"log": {
@@ -37,7 +39,8 @@
 					"\"crimson\"",
 					"\"warped\"",
 					"\"bamboo\"",
-					"\"cherry\""
+					"\"cherry\"",
+					"\"pale_oak\""
 				],
 				"axis": [
 					"\"x\"",

@@ -10,7 +10,8 @@
 		"warped_sign",
 		"mangrove_sign",
 		"bamboo_sign",
-		"cherry_sign"
+		"cherry_sign",
+		"pale_oak_sign"
 	],
 	"add": {
 		"sign": {
@@ -44,7 +45,8 @@
 					"\"crimson\"",
 					"\"warped\"",
 					"\"bamboo\"",
-					"\"cherry\""
+					"\"cherry\"",
+					"\"pale_oak\""
 				]
 			},
 			"defaults": {

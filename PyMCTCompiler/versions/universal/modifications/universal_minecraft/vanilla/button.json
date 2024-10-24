@@ -12,7 +12,8 @@
 		"polished_blackstone_button",
 		"mangrove_button",
 		"bamboo_button",
-		"cherry_button"
+		"cherry_button",
+		"pale_oak_button"
 	],
 	"add": {
 		"button": {
@@ -30,7 +31,8 @@
 					"\"warped\"",
 					"\"polished_blackstone\"",
 					"\"bamboo\"",
-					"\"cherry\""
+					"\"cherry\"",
+					"\"pale_oak\""
 				],
 				"face": [
 					"\"floor\"",

@@ -72,12 +72,8 @@
 			}
 		},
 		"chemical_heat": {},
-		"colored_torch_rg": {
+		"colored_torch_blue": {
 			"properties": {
-				"color": [
-					"\"0\"",
-					"\"1\""
-				],
 				"facing": [
 					"\"up\"",
 					"\"north\"",
@@ -87,16 +83,11 @@
 				]
 			},
 			"defaults": {
-				"color": "\"0\"",
 				"facing": "\"up\""
 			}
 		},
-		"colored_torch_bp": {
+		"colored_torch_green": {
 			"properties": {
-				"color": [
-					"\"0\"",
-					"\"1\""
-				],
 				"facing": [
 					"\"up\"",
 					"\"north\"",
@@ -106,7 +97,34 @@
 				]
 			},
 			"defaults": {
-				"color": "\"0\"",
+				"facing": "\"up\""
+			}
+		},
+		"colored_torch_purple": {
+			"properties": {
+				"facing": [
+					"\"up\"",
+					"\"north\"",
+					"\"south\"",
+					"\"west\"",
+					"\"east\""
+				]
+			},
+			"defaults": {
+				"facing": "\"up\""
+			}
+		},
+		"colored_torch_red": {
+			"properties": {
+				"facing": [
+					"\"up\"",
+					"\"north\"",
+					"\"south\"",
+					"\"west\"",
+					"\"east\""
+				]
+			},
+			"defaults": {
 				"facing": "\"up\""
 			}
 		},

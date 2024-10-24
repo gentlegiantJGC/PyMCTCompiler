@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "pale_oak_fence", "\"pale_oak\"", "universal_minecraft", "fence", {"east": ["\"true\"","\"false\""],"north": ["\"true\"","\"false\""],"south": ["\"true\"","\"false\""],"west": ["\"true\"","\"false\""]}, default="minecraft:oak_fence")

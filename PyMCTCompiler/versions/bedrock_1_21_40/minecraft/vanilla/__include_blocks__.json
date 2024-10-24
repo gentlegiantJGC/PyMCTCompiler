@@ -1,0 +1,58 @@
+{
+    "andesite_wall": ["andesite_wall", "wall_connections_16"],
+    "brick_wall": ["brick_wall", "wall_connections_16"],
+    "cobblestone_wall": ["cobblestone_wall_2140", "wall_connections_16"],
+    "diorite_wall": ["diorite_wall", "wall_connections_16"],
+    "end_stone_brick_wall": ["end_stone_brick_wall", "wall_connections_16"],
+    "granite_wall": ["granite_wall", "wall_connections_16"],
+    "mossy_cobblestone_wall": ["mossy_cobblestone_wall", "wall_connections_16"],
+    "mossy_stone_brick_wall": ["mossy_stone_brick_wall", "wall_connections_16"],
+    "nether_brick_wall": ["nether_brick_wall", "wall_connections_16"],
+    "prismarine_wall": ["prismarine_wall", "wall_connections_16"],
+    "red_nether_brick_wall": ["red_nether_brick_wall", "wall_connections_16"],
+    "red_sandstone_wall": ["red_sandstone_wall", "wall_connections_16"],
+    "sandstone_wall": ["sandstone_wall", "wall_connections_16"],
+    "stone_brick_wall": ["stone_brick_wall", "wall_connections_16"],
+
+    "cherry_wood": "cherry_wood_2071",
+    "mangrove_wood": "mangrove_wood_2071",
+
+    "purpur_block": "purpur_block_2140",
+    "purpur_pillar": "purpur_pillar",
+    "deprecated_purpur_block_1": "deprecated_purpur_block_1",
+    "deprecated_purpur_block_2": "deprecated_purpur_block_2",
+
+    "brown_mushroom_block": "brown_mushroom_block_2140",
+    "red_mushroom_block": "red_mushroom_block_2140",
+    "mushroom_stem": "mushroom_stem",
+
+    "skull": null,
+    "creeper_head": ["creeper_head", ">nbt.skull.b12140"],
+    "dragon_head": ["dragon_head", ">nbt.skull.b12140"],
+    "piglin_head": ["piglin_head", ">nbt.skull.b12140"],
+    "player_head": ["player_head", ">nbt.skull.b12140"],
+    "skeleton_skull": ["skeleton_skull", ">nbt.skull.b12140"],
+    "wither_skeleton_skull": ["wither_skeleton_skull", ">nbt.skull.b12140"],
+    "zombie_head": ["zombie_head", ">nbt.skull.b12140"],
+
+    "structure_void": "structure_void_2140",
+
+    "tnt": "tnt_2140",
+    "underwater_tnt": "underwater_tnt_2140",
+
+    "sponge": "sponge_2140",
+    "wet_sponge": "wet_sponge_2140",
+
+    "chemistry_table": null,
+    "compound_creator": "compound_creator",
+    "material_reducer": "material_reducer",
+    "element_constructor": "element_constructor",
+    "lab_table": "lab_table",
+
+    "colored_torch_bp": null,
+    "colored_torch_rg": null,
+    "colored_torch_blue": "colored_torch_blue",
+    "colored_torch_green": "colored_torch_green",
+    "colored_torch_purple": "colored_torch_purple",
+    "colored_torch_red": "colored_torch_red"
+}

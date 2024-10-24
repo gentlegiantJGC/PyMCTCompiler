@@ -1,0 +1,900 @@
+{
+    "minecraft:andesite_wall": {
+        "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
+            "properties": {
+                "wall_connection_type_east": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_north": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_south": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_west": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_post_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:brick_wall": {
+        "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
+            "properties": {
+                "wall_connection_type_east": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_north": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_south": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_west": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_post_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:chemistry_table": {
+        "block_removed": true
+    },
+    "minecraft:cherry_wood": {
+        "properties_removed": {
+            "stripped_bit": [
+                "0b",
+                "1b"
+            ]
+        }
+    },
+    "minecraft:cobblestone_wall": {
+        "properties_removed": {
+            "wall_block_type": [
+                "\"cobblestone\"",
+                "\"mossy_cobblestone\"",
+                "\"granite\"",
+                "\"diorite\"",
+                "\"andesite\"",
+                "\"sandstone\"",
+                "\"brick\"",
+                "\"stone_brick\"",
+                "\"mossy_stone_brick\"",
+                "\"nether_brick\"",
+                "\"end_brick\"",
+                "\"prismarine\"",
+                "\"red_sandstone\"",
+                "\"red_nether_brick\""
+            ]
+        }
+    },
+    "minecraft:colored_torch_blue": {
+        "block_added": {
+            "defaults": {
+                "torch_facing_direction": "\"unknown\""
+            },
+            "properties": {
+                "torch_facing_direction": [
+                    "\"unknown\"",
+                    "\"west\"",
+                    "\"east\"",
+                    "\"north\"",
+                    "\"south\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:colored_torch_bp": {
+        "block_removed": true
+    },
+    "minecraft:colored_torch_green": {
+        "block_added": {
+            "defaults": {
+                "torch_facing_direction": "\"unknown\""
+            },
+            "properties": {
+                "torch_facing_direction": [
+                    "\"unknown\"",
+                    "\"west\"",
+                    "\"east\"",
+                    "\"north\"",
+                    "\"south\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:colored_torch_purple": {
+        "block_added": {
+            "defaults": {
+                "torch_facing_direction": "\"unknown\""
+            },
+            "properties": {
+                "torch_facing_direction": [
+                    "\"unknown\"",
+                    "\"west\"",
+                    "\"east\"",
+                    "\"north\"",
+                    "\"south\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:colored_torch_red": {
+        "block_added": {
+            "defaults": {
+                "torch_facing_direction": "\"unknown\""
+            },
+            "properties": {
+                "torch_facing_direction": [
+                    "\"unknown\"",
+                    "\"west\"",
+                    "\"east\"",
+                    "\"north\"",
+                    "\"south\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:colored_torch_rg": {
+        "block_removed": true
+    },
+    "minecraft:compound_creator": {
+        "block_added": {
+            "defaults": {
+                "direction": "0"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:creeper_head": {
+        "block_added": {
+            "defaults": {
+                "facing_direction": "0"
+            },
+            "properties": {
+                "facing_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            }
+        }
+    },
+    "minecraft:deprecated_purpur_block_1": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:deprecated_purpur_block_2": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:diorite_wall": {
+        "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
+            "properties": {
+                "wall_connection_type_east": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_north": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_south": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_west": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_post_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:dragon_head": {
+        "block_added": {
+            "defaults": {
+                "facing_direction": "0"
+            },
+            "properties": {
+                "facing_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            }
+        }
+    },
+    "minecraft:element_constructor": {
+        "block_added": {
+            "defaults": {
+                "direction": "0"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:end_stone_brick_wall": {
+        "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
+            "properties": {
+                "wall_connection_type_east": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_north": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_south": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_west": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_post_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:granite_wall": {
+        "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
+            "properties": {
+                "wall_connection_type_east": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_north": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_south": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_west": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_post_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:lab_table": {
+        "block_added": {
+            "defaults": {
+                "direction": "0"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:mangrove_wood": {
+        "properties_removed": {
+            "stripped_bit": [
+                "0b",
+                "1b"
+            ]
+        }
+    },
+    "minecraft:material_reducer": {
+        "block_added": {
+            "defaults": {
+                "direction": "0"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:mossy_cobblestone_wall": {
+        "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
+            "properties": {
+                "wall_connection_type_east": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_north": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_south": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_west": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_post_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:mossy_stone_brick_wall": {
+        "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
+            "properties": {
+                "wall_connection_type_east": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_north": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_south": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_west": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_post_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:mushroom_stem": {
+        "block_added": {
+            "defaults": {
+                "huge_mushroom_bits": "0"
+            },
+            "properties": {
+                "huge_mushroom_bits": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
+                ]
+            }
+        }
+    },
+    "minecraft:nether_brick_wall": {
+        "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
+            "properties": {
+                "wall_connection_type_east": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_north": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_south": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_west": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_post_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:piglin_head": {
+        "block_added": {
+            "defaults": {
+                "facing_direction": "0"
+            },
+            "properties": {
+                "facing_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            }
+        }
+    },
+    "minecraft:player_head": {
+        "block_added": {
+            "defaults": {
+                "facing_direction": "0"
+            },
+            "properties": {
+                "facing_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            }
+        }
+    },
+    "minecraft:prismarine_wall": {
+        "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
+            "properties": {
+                "wall_connection_type_east": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_north": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_south": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_west": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_post_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:purpur_block": {
+        "properties_removed": {
+            "chisel_type": [
+                "\"default\"",
+                "\"chiseled\"",
+                "\"lines\"",
+                "\"smooth\""
+            ]
+        }
+    },
+    "minecraft:purpur_pillar": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:red_nether_brick_wall": {
+        "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
+            "properties": {
+                "wall_connection_type_east": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_north": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_south": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_west": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_post_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:red_sandstone_wall": {
+        "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
+            "properties": {
+                "wall_connection_type_east": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_north": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_south": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_west": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_post_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:sandstone_wall": {
+        "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
+            "properties": {
+                "wall_connection_type_east": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_north": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_south": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_west": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_post_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:skeleton_skull": {
+        "block_added": {
+            "defaults": {
+                "facing_direction": "0"
+            },
+            "properties": {
+                "facing_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            }
+        }
+    },
+    "minecraft:skull": {
+        "block_removed": true
+    },
+    "minecraft:sponge": {
+        "properties_removed": {
+            "sponge_type": [
+                "\"dry\"",
+                "\"wet\""
+            ]
+        }
+    },
+    "minecraft:stone_brick_wall": {
+        "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
+            "properties": {
+                "wall_connection_type_east": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_north": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_south": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_west": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_post_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:structure_void": {
+        "properties_removed": {
+            "structure_void_type": [
+                "\"void\"",
+                "\"air\""
+            ]
+        }
+    },
+    "minecraft:tnt": {
+        "properties_removed": {
+            "allow_underwater_bit": [
+                "0b",
+                "1b"
+            ]
+        }
+    },
+    "minecraft:underwater_tnt": {
+        "block_added": {
+            "defaults": {
+                "explode_bit": "0b"
+            },
+            "properties": {
+                "explode_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:wet_sponge": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:wither_skeleton_skull": {
+        "block_added": {
+            "defaults": {
+                "facing_direction": "0"
+            },
+            "properties": {
+                "facing_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            }
+        }
+    },
+    "minecraft:zombie_head": {
+        "block_added": {
+            "defaults": {
+                "facing_direction": "0"
+            },
+            "properties": {
+                "facing_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            }
+        }
+    }
+}

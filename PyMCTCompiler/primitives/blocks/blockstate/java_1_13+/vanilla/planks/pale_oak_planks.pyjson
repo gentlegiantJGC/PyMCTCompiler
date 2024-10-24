@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "pale_oak_planks", "\"pale_oak\"", "universal_minecraft", "planks", default="minecraft:oak_planks")

@@ -2,29 +2,29 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:planks"
+            "options": "universal_minecraft:sponge"
         },
         {
             "function": "new_properties",
             "options": {
-                "material": "\"birch\""
+                "wet": "\"true\""
             }
         }
     ],
     "from_universal": {
-        "universal_minecraft:planks": [
+        "universal_minecraft:sponge": [
             {
                 "function": "new_block",
-                "options": "minecraft:planks"
+                "options": "minecraft:sponge"
             },
             {
                 "function": "map_properties",
                 "options": {
-                    "material": {
-                        "\"birch\"": [
+                    "wet": {
+                        "\"true\"": [
                             {
                                 "function": "new_block",
-                                "options": "minecraft:birch_planks"
+                                "options": "minecraft:wet_sponge"
                             }
                         ]
                     }

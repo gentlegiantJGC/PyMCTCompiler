@@ -59,7 +59,8 @@
 		"cherry_slab",
 		"tuff_slab",
 		"tuff_brick_slab",
-		"polished_tuff_slab"
+		"polished_tuff_slab",
+		"pale_oak_slab"
 	],
 	"add": {
 		"slab": {
@@ -124,7 +125,8 @@
 					"\"cherry\"",
 					"\"tuff\"",
 					"\"tuff_brick\"",
-					"\"polished_tuff\""
+					"\"polished_tuff\"",
+					"\"pale_oak\""
 				],
 				"type": [
 					"\"top\"",

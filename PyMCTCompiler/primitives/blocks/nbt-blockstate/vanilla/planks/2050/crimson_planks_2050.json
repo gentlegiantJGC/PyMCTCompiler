@@ -7,7 +7,7 @@
         {
             "function": "new_properties",
             "options": {
-                "material": "\"jungle\""
+                "material": "\"crimson\""
             }
         }
     ],
@@ -15,16 +15,16 @@
         "universal_minecraft:planks": [
             {
                 "function": "new_block",
-                "options": "minecraft:planks"
+                "options": "minecraft:oak_planks"
             },
             {
                 "function": "map_properties",
                 "options": {
                     "material": {
-                        "\"jungle\"": [
+                        "\"crimson\"": [
                             {
                                 "function": "new_block",
-                                "options": "minecraft:jungle_planks"
+                                "options": "minecraft:crimson_planks"
                             }
                         ]
                     }

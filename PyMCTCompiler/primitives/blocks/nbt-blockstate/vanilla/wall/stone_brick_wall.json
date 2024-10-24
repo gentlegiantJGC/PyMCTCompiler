@@ -2,29 +2,29 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:planks"
+            "options": "universal_minecraft:wall"
         },
         {
             "function": "new_properties",
             "options": {
-                "material": "\"dark_oak\""
+                "material": "\"stone_brick\""
             }
         }
     ],
     "from_universal": {
-        "universal_minecraft:planks": [
+        "universal_minecraft:wall": [
             {
                 "function": "new_block",
-                "options": "minecraft:planks"
+                "options": "minecraft:cobblestone_wall"
             },
             {
                 "function": "map_properties",
                 "options": {
                     "material": {
-                        "\"dark_oak\"": [
+                        "\"stone_brick\"": [
                             {
                                 "function": "new_block",
-                                "options": "minecraft:dark_oak_planks"
+                                "options": "minecraft:stone_brick_wall"
                             }
                         ]
                     }

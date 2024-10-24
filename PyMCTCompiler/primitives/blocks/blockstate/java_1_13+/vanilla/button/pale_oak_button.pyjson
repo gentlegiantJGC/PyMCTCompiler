@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "pale_oak_button", "\"pale_oak\"", "universal_minecraft", "button", {"face": ["\"floor\"","\"wall\"","\"ceiling\""],"facing": ["\"north\"","\"south\"","\"west\"","\"east\""],"powered": ["\"true\"","\"false\""]}, default="minecraft:stone_button")
