@@ -54,7 +54,7 @@
         "universal_minecraft:chemistry_table": [
             {
                 "function": "new_block",
-                "options": "minecraft:chemistry_table"
+                "options": "minecraft:lab_table"
             },
             {
                 "function": "map_properties",
@@ -62,10 +62,8 @@
                     "chemistry_table_type": {
                         "\"lab_table\"": [
                             {
-                                "function": "new_properties",
-                                "options": {
-                                    "chemistry_table_type": "\"lab_table\""
-                                }
+                                "function": "new_block",
+                                "options": "minecraft:lab_table"
                             }
                         ]
                     },
