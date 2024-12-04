@@ -1,0 +1,673 @@
+{
+    "minecraft:chiseled_resin_bricks": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:client_request_placeholder_block": {
+        "block_removed": true
+    },
+    "minecraft:closed_eyeblossom": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:creaking_heart": {
+        "block_added": {
+            "defaults": {
+                "active": "0b",
+                "natural": "0b",
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "active": [
+                    "0b",
+                    "1b"
+                ],
+                "natural": [
+                    "0b",
+                    "1b"
+                ],
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:deprecated_anvil": {
+        "block_removed": true
+    },
+    "minecraft:deprecated_purpur_block_1": {
+        "block_removed": true
+    },
+    "minecraft:deprecated_purpur_block_2": {
+        "block_removed": true
+    },
+    "minecraft:end_gateway": {
+        "block_removed": true
+    },
+    "minecraft:glowingobsidian": {
+        "block_removed": true
+    },
+    "minecraft:info_update": {
+        "block_removed": true
+    },
+    "minecraft:info_update2": {
+        "block_removed": true
+    },
+    "minecraft:invisible_bedrock": {
+        "block_removed": true
+    },
+    "minecraft:moving_block": {
+        "block_removed": true
+    },
+    "minecraft:netherreactor": {
+        "block_removed": true
+    },
+    "minecraft:open_eyeblossom": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:pale_hanging_moss": {
+        "block_added": {
+            "defaults": {
+                "tip": "0b"
+            },
+            "properties": {
+                "tip": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:pale_moss_block": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:pale_moss_carpet": {
+        "block_added": {
+            "defaults": {
+                "pale_moss_carpet_side_east": "\"none\"",
+                "pale_moss_carpet_side_north": "\"none\"",
+                "pale_moss_carpet_side_south": "\"none\"",
+                "pale_moss_carpet_side_west": "\"none\"",
+                "upper_block_bit": "0b"
+            },
+            "properties": {
+                "pale_moss_carpet_side_east": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "pale_moss_carpet_side_north": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "pale_moss_carpet_side_south": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "pale_moss_carpet_side_west": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "upper_block_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:pale_oak_button": {
+        "block_added": {
+            "defaults": {
+                "button_pressed_bit": "0b",
+                "facing_direction": "0"
+            },
+            "properties": {
+                "button_pressed_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "facing_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            }
+        }
+    },
+    "minecraft:pale_oak_door": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "door_hinge_bit": "0b",
+                "open_bit": "0b",
+                "upper_block_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "door_hinge_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upper_block_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:pale_oak_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:pale_oak_fence": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:pale_oak_fence_gate": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "in_wall_bit": "0b",
+                "open_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "in_wall_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:pale_oak_hanging_sign": {
+        "block_added": {
+            "defaults": {
+                "attached_bit": "0b",
+                "facing_direction": "0",
+                "ground_sign_direction": "0",
+                "hanging": "0b"
+            },
+            "properties": {
+                "attached_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "facing_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "ground_sign_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
+                ],
+                "hanging": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:pale_oak_leaves": {
+        "block_added": {
+            "defaults": {
+                "persistent_bit": "0b",
+                "update_bit": "0b"
+            },
+            "properties": {
+                "persistent_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "update_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:pale_oak_log": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:pale_oak_planks": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:pale_oak_pressure_plate": {
+        "block_added": {
+            "defaults": {
+                "redstone_signal": "0"
+            },
+            "properties": {
+                "redstone_signal": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
+                ]
+            }
+        }
+    },
+    "minecraft:pale_oak_sapling": {
+        "block_added": {
+            "defaults": {
+                "age_bit": "0b"
+            },
+            "properties": {
+                "age_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:pale_oak_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:pale_oak_stairs": {
+        "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
+            "properties": {
+                "upside_down_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "weirdo_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:pale_oak_standing_sign": {
+        "block_added": {
+            "defaults": {
+                "ground_sign_direction": "0"
+            },
+            "properties": {
+                "ground_sign_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
+                ]
+            }
+        }
+    },
+    "minecraft:pale_oak_trapdoor": {
+        "block_added": {
+            "defaults": {
+                "direction": "0",
+                "open_bit": "0b",
+                "upside_down_bit": "0b"
+            },
+            "properties": {
+                "direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "open_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "upside_down_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:pale_oak_wall_sign": {
+        "block_added": {
+            "defaults": {
+                "facing_direction": "0"
+            },
+            "properties": {
+                "facing_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            }
+        }
+    },
+    "minecraft:pale_oak_wood": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:reserved6": {
+        "block_removed": true
+    },
+    "minecraft:resin_block": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:resin_brick_double_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:resin_brick_slab": {
+        "block_added": {
+            "defaults": {
+                "minecraft:vertical_half": "\"bottom\""
+            },
+            "properties": {
+                "minecraft:vertical_half": [
+                    "\"bottom\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:resin_brick_stairs": {
+        "block_added": {
+            "defaults": {
+                "upside_down_bit": "0b",
+                "weirdo_direction": "0"
+            },
+            "properties": {
+                "upside_down_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "weirdo_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:resin_brick_wall": {
+        "block_added": {
+            "defaults": {
+                "wall_connection_type_east": "\"none\"",
+                "wall_connection_type_north": "\"none\"",
+                "wall_connection_type_south": "\"none\"",
+                "wall_connection_type_west": "\"none\"",
+                "wall_post_bit": "0b"
+            },
+            "properties": {
+                "wall_connection_type_east": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_north": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_south": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_connection_type_west": [
+                    "\"none\"",
+                    "\"short\"",
+                    "\"tall\""
+                ],
+                "wall_post_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:resin_bricks": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:resin_clump": {
+        "block_added": {
+            "defaults": {
+                "multi_face_direction_bits": "0"
+            },
+            "properties": {
+                "multi_face_direction_bits": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "32",
+                    "33",
+                    "34",
+                    "35",
+                    "36",
+                    "37",
+                    "38",
+                    "39",
+                    "40",
+                    "41",
+                    "42",
+                    "43",
+                    "44",
+                    "45",
+                    "46",
+                    "47",
+                    "48",
+                    "49",
+                    "50",
+                    "51",
+                    "52",
+                    "53",
+                    "54",
+                    "55",
+                    "56",
+                    "57",
+                    "58",
+                    "59",
+                    "60",
+                    "61",
+                    "62",
+                    "63"
+                ]
+            }
+        }
+    },
+    "minecraft:stonecutter": {
+        "block_removed": true
+    },
+    "minecraft:stripped_pale_oak_log": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:stripped_pale_oak_wood": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    }
+}
