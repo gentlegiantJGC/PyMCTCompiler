@@ -15,7 +15,9 @@
 		"dead_bush",
 		"cornflower",
 		"wither_rose",
-		"lily_of_the_valley"
+		"lily_of_the_valley",
+		"closed_eyeblossom",
+		"open_eyeblossom"
 	],
 	"add": {
 		"plant": {
@@ -36,7 +38,9 @@
 					"\"dead_bush\"",
 					"\"cornflower\"",
 					"\"wither_rose\"",
-					"\"lily_of_the_valley\""
+					"\"lily_of_the_valley\"",
+					"\"closed_eyeblossom\"",
+					"\"open_eyeblossom\""
 				]
 			},
 			"defaults": {

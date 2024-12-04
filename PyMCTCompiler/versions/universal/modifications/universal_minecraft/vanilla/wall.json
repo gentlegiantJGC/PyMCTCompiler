@@ -24,7 +24,8 @@
 		"mud_brick_wall",
 		"tuff_wall",
 		"tuff_brick_wall",
-		"polished_tuff_wall"
+		"polished_tuff_wall",
+		"resin_brick_wall"
 	],
 	"add": {
 		"wall": {
@@ -54,7 +55,8 @@
 					"\"mud_brick\"",
 					"\"tuff\"",
 					"\"tuff_brick\"",
-					"\"polished_tuff\""
+					"\"polished_tuff\"",
+					"\"resin_brick\""
 				],
 				"east": [
 					"\"none\"",
