@@ -159,7 +159,7 @@ _J113_complex = TranslationFile(
                                                     {
                                                         "path": [["utags", "compound"]],
                                                         "key": "mirror",
-                                                        "value": val_out
+                                                        "value": val_out,
                                                     }
                                                 ],
                                             }
@@ -286,7 +286,7 @@ _B113_complex = TranslationFile(
                                                     {
                                                         "path": [["utags", "compound"]],
                                                         "key": "mirror",
-                                                        "value": val_out
+                                                        "value": val_out,
                                                     }
                                                 ],
                                             }
@@ -346,7 +346,7 @@ _B113_complex = TranslationFile(
                                                     {
                                                         "path": [["utags", "compound"]],
                                                         "key": "mode",
-                                                        "value": val_out
+                                                        "value": val_out,
                                                     }
                                                 ],
                                             }

@@ -18,12 +18,6 @@ universal = {
     }""",
 }
 
-j21 = merge(
-    [EmptyNBT("minecraft:crafter")],
-    ["universal_minecraft:crafter"]
-)
+j21 = merge([EmptyNBT("minecraft:crafter")], ["universal_minecraft:crafter"])
 
-b21 = merge(
-    [EmptyNBT(":Crafter")],
-    ["universal_minecraft:crafter"]
-)
+b21 = merge([EmptyNBT(":Crafter")], ["universal_minecraft:crafter"])

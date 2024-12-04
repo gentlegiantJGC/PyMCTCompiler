@@ -677,30 +677,34 @@ def log(input_namespace: str, input_block_name: str) -> dict:
                 "function": "map_properties",
                 "options": {
                     "block_data": {
-                        str(data): [
-                            {
-                                "function": "new_block",
-                                "options": "universal_minecraft:log",
-                            },
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "material": material_pallet[data & 3],
-                                    "axis": {0: '"y"', 4: '"x"', 8: '"z"'}[data & 12],
+                        str(data): (
+                            [
+                                {
+                                    "function": "new_block",
+                                    "options": "universal_minecraft:log",
                                 },
-                            },
-                        ]
-                        if data <= 11
-                        else [
-                            {
-                                "function": "new_block",
-                                "options": "universal_minecraft:wood",
-                            },
-                            {
-                                "function": "new_properties",
-                                "options": {"material": material_pallet[data & 3]},
-                            },
-                        ]
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "material": material_pallet[data & 3],
+                                        "axis": {0: '"y"', 4: '"x"', 8: '"z"'}[
+                                            data & 12
+                                        ],
+                                    },
+                                },
+                            ]
+                            if data <= 11
+                            else [
+                                {
+                                    "function": "new_block",
+                                    "options": "universal_minecraft:wood",
+                                },
+                                {
+                                    "function": "new_properties",
+                                    "options": {"material": material_pallet[data & 3]},
+                                },
+                            ]
+                        )
                         for data in range(16)
                         if data & 3 in material_pallet
                     }
@@ -878,30 +882,34 @@ def log_with_stripped(input_namespace: str, input_block_name: str) -> dict:
                 "function": "map_properties",
                 "options": {
                     "block_data": {
-                        str(data): [
-                            {
-                                "function": "new_block",
-                                "options": "universal_minecraft:log",
-                            },
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "material": material_pallet[data & 3],
-                                    "axis": {0: '"y"', 4: '"x"', 8: '"z"'}[data & 12],
+                        str(data): (
+                            [
+                                {
+                                    "function": "new_block",
+                                    "options": "universal_minecraft:log",
                                 },
-                            },
-                        ]
-                        if data <= 11
-                        else [
-                            {
-                                "function": "new_block",
-                                "options": "universal_minecraft:wood",
-                            },
-                            {
-                                "function": "new_properties",
-                                "options": {"material": material_pallet[data & 3]},
-                            },
-                        ]
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "material": material_pallet[data & 3],
+                                        "axis": {0: '"y"', 4: '"x"', 8: '"z"'}[
+                                            data & 12
+                                        ],
+                                    },
+                                },
+                            ]
+                            if data <= 11
+                            else [
+                                {
+                                    "function": "new_block",
+                                    "options": "universal_minecraft:wood",
+                                },
+                                {
+                                    "function": "new_properties",
+                                    "options": {"material": material_pallet[data & 3]},
+                                },
+                            ]
+                        )
                         for data in range(16)
                         if data & 3 in material_pallet
                     }
@@ -1122,30 +1130,32 @@ def stripped_log_bedrock(
                 "function": "map_properties",
                 "options": {
                     "block_data": {
-                        str(data): [
-                            {
-                                "function": "new_block",
-                                "options": "universal_minecraft:log",
-                            },
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "material": material,
-                                    "axis": {0: '"y"', 1: '"x"', 2: '"z"'}[data],
+                        str(data): (
+                            [
+                                {
+                                    "function": "new_block",
+                                    "options": "universal_minecraft:log",
                                 },
-                            },
-                        ]
-                        if data <= 2
-                        else [
-                            {
-                                "function": "new_block",
-                                "options": "universal_minecraft:wood",
-                            },
-                            {
-                                "function": "new_properties",
-                                "options": {"material": material},
-                            },
-                        ]
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "material": material,
+                                        "axis": {0: '"y"', 1: '"x"', 2: '"z"'}[data],
+                                    },
+                                },
+                            ]
+                            if data <= 2
+                            else [
+                                {
+                                    "function": "new_block",
+                                    "options": "universal_minecraft:wood",
+                                },
+                                {
+                                    "function": "new_properties",
+                                    "options": {"material": material},
+                                },
+                            ]
+                        )
                         for data in range(4)
                     }
                 },
@@ -3933,130 +3943,142 @@ def door(
                 "function": "map_properties",
                 "options": {
                     "block_data": {
-                        str(data): [
-                            # lower half
-                            {
-                                "function": "new_block",
-                                "options": "universal_minecraft:door",
-                            },
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "half": '"lower"',
-                                    "open": {0: '"false"', 4: '"true"'}[data & 4],
-                                    "facing": {
-                                        0: '"east"',
-                                        1: '"south"',
-                                        2: '"west"',
-                                        3: '"north"',
-                                    }[data & 3],
+                        str(data): (
+                            [
+                                # lower half
+                                {
+                                    "function": "new_block",
+                                    "options": "universal_minecraft:door",
                                 },
-                            },
-                            {
-                                "function": "multiblock",
-                                "options": {
-                                    "coords": [0, 1, 0],
-                                    "functions": [
-                                        {
-                                            "function": "map_block_name",
-                                            "options": {
-                                                f"{input_namespace}:{input_block_name}": [
-                                                    {
-                                                        "function": "map_properties",
-                                                        "options": {
-                                                            "block_data": {
-                                                                str(data_): [
-                                                                    # upper half
-                                                                    {
-                                                                        "function": "new_properties",
-                                                                        "options": {
-                                                                            "powered": {
-                                                                                0: '"false"',
-                                                                                2: '"true"',
-                                                                            }[
-                                                                                data_
-                                                                                & 2
-                                                                            ],
-                                                                            "hinge": {
-                                                                                0: '"left"',
-                                                                                1: '"right"',
-                                                                            }[
-                                                                                data_
-                                                                                & 1
-                                                                            ],
-                                                                        },
-                                                                    }
-                                                                ]
-                                                                for data_ in range(
-                                                                    8, 12
-                                                                )
-                                                            }
-                                                        },
-                                                    }
-                                                ]
-                                            },
-                                        }
-                                    ],
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "half": '"lower"',
+                                        "open": {0: '"false"', 4: '"true"'}[data & 4],
+                                        "facing": {
+                                            0: '"east"',
+                                            1: '"south"',
+                                            2: '"west"',
+                                            3: '"north"',
+                                        }[data & 3],
+                                    },
                                 },
-                            },
-                        ]
-                        if data & 8 == 0
-                        else [
-                            # upper half
-                            {
-                                "function": "new_block",
-                                "options": "universal_minecraft:door",
-                            },
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "half": '"upper"',
-                                    "powered": {0: '"false"', 2: '"true"'}[data & 2],
-                                    "hinge": {0: '"left"', 1: '"right"'}[data & 1],
+                                {
+                                    "function": "multiblock",
+                                    "options": {
+                                        "coords": [0, 1, 0],
+                                        "functions": [
+                                            {
+                                                "function": "map_block_name",
+                                                "options": {
+                                                    f"{input_namespace}:{input_block_name}": [
+                                                        {
+                                                            "function": "map_properties",
+                                                            "options": {
+                                                                "block_data": {
+                                                                    str(data_): [
+                                                                        # upper half
+                                                                        {
+                                                                            "function": "new_properties",
+                                                                            "options": {
+                                                                                "powered": {
+                                                                                    0: '"false"',
+                                                                                    2: '"true"',
+                                                                                }[
+                                                                                    data_
+                                                                                    & 2
+                                                                                ],
+                                                                                "hinge": {
+                                                                                    0: '"left"',
+                                                                                    1: '"right"',
+                                                                                }[
+                                                                                    data_
+                                                                                    & 1
+                                                                                ],
+                                                                            },
+                                                                        }
+                                                                    ]
+                                                                    for data_ in range(
+                                                                        8, 12
+                                                                    )
+                                                                }
+                                                            },
+                                                        }
+                                                    ]
+                                                },
+                                            }
+                                        ],
+                                    },
                                 },
-                            },
-                            {
-                                "function": "multiblock",
-                                "options": {
-                                    "coords": [0, -1, 0],
-                                    "functions": [
-                                        {
-                                            "function": "map_block_name",
-                                            "options": {
-                                                f"{input_namespace}:{input_block_name}": [
-                                                    {
-                                                        "function": "map_properties",
-                                                        "options": {
-                                                            "block_data": {
-                                                                str(data_): [
-                                                                    # lower half
-                                                                    {
-                                                                        "function": "new_properties",
-                                                                        "options": {
-                                                                            "open": {
-                                                                                0: '"false"',
-                                                                                4: '"true"',
-                                                                            }[data & 4],
-                                                                            "facing": {
-                                                                                0: '"east"',
-                                                                                1: '"south"',
-                                                                                2: '"west"',
-                                                                                3: '"north"',
-                                                                            }[data & 3],
-                                                                        },
-                                                                    }
-                                                                ]
-                                                                for data_ in range(8)
-                                                            }
-                                                        },
-                                                    }
-                                                ]
-                                            },
-                                        }
-                                    ],
+                            ]
+                            if data & 8 == 0
+                            else [
+                                # upper half
+                                {
+                                    "function": "new_block",
+                                    "options": "universal_minecraft:door",
                                 },
-                            },
-                        ]
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "half": '"upper"',
+                                        "powered": {0: '"false"', 2: '"true"'}[
+                                            data & 2
+                                        ],
+                                        "hinge": {0: '"left"', 1: '"right"'}[data & 1],
+                                    },
+                                },
+                                {
+                                    "function": "multiblock",
+                                    "options": {
+                                        "coords": [0, -1, 0],
+                                        "functions": [
+                                            {
+                                                "function": "map_block_name",
+                                                "options": {
+                                                    f"{input_namespace}:{input_block_name}": [
+                                                        {
+                                                            "function": "map_properties",
+                                                            "options": {
+                                                                "block_data": {
+                                                                    str(data_): [
+                                                                        # lower half
+                                                                        {
+                                                                            "function": "new_properties",
+                                                                            "options": {
+                                                                                "open": {
+                                                                                    0: '"false"',
+                                                                                    4: '"true"',
+                                                                                }[
+                                                                                    data
+                                                                                    & 4
+                                                                                ],
+                                                                                "facing": {
+                                                                                    0: '"east"',
+                                                                                    1: '"south"',
+                                                                                    2: '"west"',
+                                                                                    3: '"north"',
+                                                                                }[
+                                                                                    data
+                                                                                    & 3
+                                                                                ],
+                                                                            },
+                                                                        }
+                                                                    ]
+                                                                    for data_ in range(
+                                                                        8
+                                                                    )
+                                                                }
+                                                            },
+                                                        }
+                                                    ]
+                                                },
+                                            }
+                                        ],
+                                    },
+                                },
+                            ]
+                        )
                         for data in range(12)
                     }
                 },
@@ -4077,87 +4099,89 @@ def door(
                             ]
                         },
                         "half": {
-                            half: [
-                                # lower half
-                                {
-                                    "function": "map_properties",
-                                    "options": {
-                                        "open": {
-                                            door_open: [
-                                                {
-                                                    "function": "map_properties",
-                                                    "options": {
-                                                        "facing": {
-                                                            facing: [
-                                                                {
-                                                                    "function": "new_properties",
-                                                                    "options": {
-                                                                        "block_data": str(
-                                                                            data8
-                                                                            + data4
-                                                                            + data3
-                                                                        )
-                                                                    },
-                                                                }
-                                                            ]
-                                                            for data3, facing in {
-                                                                0: '"east"',
-                                                                1: '"south"',
-                                                                2: '"west"',
-                                                                3: '"north"',
-                                                            }.items()
-                                                        }
-                                                    },
-                                                }
-                                            ]
-                                            for data4, door_open in {
-                                                0: '"false"',
-                                                4: '"true"',
-                                            }.items()
-                                        }
-                                    },
-                                }
-                            ]
-                            if data8 == 0
-                            else [
-                                # upper half
-                                {
-                                    "function": "map_properties",
-                                    "options": {
-                                        "powered": {
-                                            powered: [
-                                                {
-                                                    "function": "map_properties",
-                                                    "options": {
-                                                        "hinge": {
-                                                            hinge: [
-                                                                {
-                                                                    "function": "new_properties",
-                                                                    "options": {
-                                                                        "block_data": str(
-                                                                            data8
-                                                                            + data2
-                                                                            + data1
-                                                                        )
-                                                                    },
-                                                                }
-                                                            ]
-                                                            for data1, hinge in {
-                                                                0: '"left"',
-                                                                1: '"right"',
-                                                            }.items()
-                                                        }
-                                                    },
-                                                }
-                                            ]
-                                            for data2, powered in {
-                                                0: '"false"',
-                                                2: '"true"',
-                                            }.items()
-                                        }
-                                    },
-                                }
-                            ]
+                            half: (
+                                [
+                                    # lower half
+                                    {
+                                        "function": "map_properties",
+                                        "options": {
+                                            "open": {
+                                                door_open: [
+                                                    {
+                                                        "function": "map_properties",
+                                                        "options": {
+                                                            "facing": {
+                                                                facing: [
+                                                                    {
+                                                                        "function": "new_properties",
+                                                                        "options": {
+                                                                            "block_data": str(
+                                                                                data8
+                                                                                + data4
+                                                                                + data3
+                                                                            )
+                                                                        },
+                                                                    }
+                                                                ]
+                                                                for data3, facing in {
+                                                                    0: '"east"',
+                                                                    1: '"south"',
+                                                                    2: '"west"',
+                                                                    3: '"north"',
+                                                                }.items()
+                                                            }
+                                                        },
+                                                    }
+                                                ]
+                                                for data4, door_open in {
+                                                    0: '"false"',
+                                                    4: '"true"',
+                                                }.items()
+                                            }
+                                        },
+                                    }
+                                ]
+                                if data8 == 0
+                                else [
+                                    # upper half
+                                    {
+                                        "function": "map_properties",
+                                        "options": {
+                                            "powered": {
+                                                powered: [
+                                                    {
+                                                        "function": "map_properties",
+                                                        "options": {
+                                                            "hinge": {
+                                                                hinge: [
+                                                                    {
+                                                                        "function": "new_properties",
+                                                                        "options": {
+                                                                            "block_data": str(
+                                                                                data8
+                                                                                + data2
+                                                                                + data1
+                                                                            )
+                                                                        },
+                                                                    }
+                                                                ]
+                                                                for data1, hinge in {
+                                                                    0: '"left"',
+                                                                    1: '"right"',
+                                                                }.items()
+                                                            }
+                                                        },
+                                                    }
+                                                ]
+                                                for data2, powered in {
+                                                    0: '"false"',
+                                                    2: '"true"',
+                                                }.items()
+                                            }
+                                        },
+                                    }
+                                ]
+                            )
                             for data8, half in {0: '"lower"', 8: '"upper"'}.items()
                         },
                     },

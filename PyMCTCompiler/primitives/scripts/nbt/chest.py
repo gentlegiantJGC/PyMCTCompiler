@@ -120,7 +120,8 @@ def _get_bedrock_connections(
                                                 },
                                             }
                                         ],
-                                    } for coord, func in (
+                                    }
+                                    for coord, func in (
                                         (coord_left, left_func),
                                         (coord_right, right_func),
                                     )
@@ -169,7 +170,7 @@ def _get_bedrock_113_connections(block_id: str):
         "4",
         "bedrock_chest_connection_self",
         "bedrock_chest_connection_other_left",
-        "bedrock_chest_connection_other_right"
+        "bedrock_chest_connection_other_right",
     )
 
 
@@ -177,13 +178,13 @@ def _get_bedrock_120_connections(block_id: str):
     return _get_bedrock_connections(
         block_id,
         "minecraft:cardinal_direction",
-        "\"north\"",
-        "\"east\"",
-        "\"south\"",
-        "\"west\"",
+        '"north"',
+        '"east"',
+        '"south"',
+        '"west"',
         "bedrock_chest_connection_self_120",
         "bedrock_chest_connection_other_left_120",
-        "bedrock_chest_connection_other_right_120"
+        "bedrock_chest_connection_other_right_120",
     )
 
 

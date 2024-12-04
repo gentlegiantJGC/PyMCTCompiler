@@ -32,12 +32,6 @@ universal = {
     }""",
 }
 
-j21 = merge(
-    [EmptyNBT("minecraft:vault")],
-    ["universal_minecraft:vault"]
-)
+j21 = merge([EmptyNBT("minecraft:vault")], ["universal_minecraft:vault"])
 
-b21 = merge(
-    [EmptyNBT(":Vault")],
-    ["universal_minecraft:vault"]
-)
+b21 = merge([EmptyNBT(":Vault")], ["universal_minecraft:vault"])

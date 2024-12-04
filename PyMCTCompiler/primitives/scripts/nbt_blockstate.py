@@ -181,80 +181,90 @@ def mushroom_block(color: str, include_return_stem: bool = True) -> dict:
                     },
                 },
             ],
-            **({
-                "universal_minecraft:mushroom_stem": [
-                    {"function": "new_block", "options": "minecraft:red_mushroom_block"},
-                    {"function": "new_properties", "options": {"huge_mushroom_bits": "15"}},
-                    {
-                        "function": "map_properties",
-                        "options": {
-                            "up": {
-                                '"false"': [
-                                    {
-                                        "function": "map_properties",
-                                        "options": {
-                                            "down": {
-                                                '"false"': [
-                                                    {
-                                                        "function": "map_properties",
-                                                        "options": {
-                                                            "north": {
-                                                                '"true"': [
-                                                                    {
-                                                                        "function": "map_properties",
-                                                                        "options": {
-                                                                            "east": {
-                                                                                '"true"': [
-                                                                                    {
-                                                                                        "function": "map_properties",
-                                                                                        "options": {
-                                                                                            "south": {
-                                                                                                '"true"': [
-                                                                                                    {
-                                                                                                        "function": "map_properties",
-                                                                                                        "options": {
-                                                                                                            "west": {
-                                                                                                                '"true"': [
-                                                                                                                    {
-                                                                                                                        "function": "new_properties",
-                                                                                                                        "options": {
-                                                                                                                            "huge_mushroom_bits": "10"
-                                                                                                                        },
-                                                                                                                    }
-                                                                                                                ]
-                                                                                                            }
-                                                                                                        },
-                                                                                                    }
-                                                                                                ]
-                                                                                            }
-                                                                                        },
-                                                                                    }
-                                                                                ]
-                                                                            }
-                                                                        },
-                                                                    }
-                                                                ]
-                                                            }
-                                                        },
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                    }
-                                ]
-                            },
-                            "material": {
-                                f'"{color}"': [
-                                    {
-                                        "function": "new_block",
-                                        "options": f"minecraft:{color}_mushroom_block",
-                                    }
-                                ]
+            **(
+                {
+                    "universal_minecraft:mushroom_stem": [
+                        {
+                            "function": "new_block",
+                            "options": "minecraft:red_mushroom_block",
+                        },
+                        {
+                            "function": "new_properties",
+                            "options": {"huge_mushroom_bits": "15"},
+                        },
+                        {
+                            "function": "map_properties",
+                            "options": {
+                                "up": {
+                                    '"false"': [
+                                        {
+                                            "function": "map_properties",
+                                            "options": {
+                                                "down": {
+                                                    '"false"': [
+                                                        {
+                                                            "function": "map_properties",
+                                                            "options": {
+                                                                "north": {
+                                                                    '"true"': [
+                                                                        {
+                                                                            "function": "map_properties",
+                                                                            "options": {
+                                                                                "east": {
+                                                                                    '"true"': [
+                                                                                        {
+                                                                                            "function": "map_properties",
+                                                                                            "options": {
+                                                                                                "south": {
+                                                                                                    '"true"': [
+                                                                                                        {
+                                                                                                            "function": "map_properties",
+                                                                                                            "options": {
+                                                                                                                "west": {
+                                                                                                                    '"true"': [
+                                                                                                                        {
+                                                                                                                            "function": "new_properties",
+                                                                                                                            "options": {
+                                                                                                                                "huge_mushroom_bits": "10"
+                                                                                                                            },
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            },
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            },
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            },
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                        }
+                                    ]
+                                },
+                                "material": {
+                                    f'"{color}"': [
+                                        {
+                                            "function": "new_block",
+                                            "options": f"minecraft:{color}_mushroom_block",
+                                        }
+                                    ]
+                                },
                             },
                         },
-                    },
-                ],
-            } if include_return_stem else {})
+                    ],
+                }
+                if include_return_stem
+                else {}
+            ),
         },
     }
 
@@ -276,7 +286,10 @@ def mushroom_stem() -> dict:
                 "options": {
                     "huge_mushroom_bits": {
                         str(data): [
-                            {"function": "new_block", "options": "universal_minecraft:mushroom_stem"},
+                            {
+                                "function": "new_block",
+                                "options": "universal_minecraft:mushroom_stem",
+                            },
                             {
                                 "function": "new_properties",
                                 "options": {
@@ -709,9 +722,7 @@ def candle(colour: str):
                             ],
                         },
                         "color": {
-                            f'"{colour}"'
-                            if colour
-                            else '"default"': [
+                            f'"{colour}"' if colour else '"default"': [
                                 {
                                     "function": "new_block",
                                     "options": f"minecraft:{colour + '_' if colour else ''}candle",
@@ -765,9 +776,7 @@ def candle_cake(colour: str):
                             ],
                         },
                         "color": {
-                            f'"{colour}"'
-                            if colour
-                            else '"default"': [
+                            f'"{colour}"' if colour else '"default"': [
                                 {
                                     "function": "new_block",
                                     "options": f"minecraft:{colour + '_' if colour else ''}candle_cake",
@@ -1163,23 +1172,13 @@ def hanging_sign_120(src_block: str, material: str):
     }
 
 
-def wall_coral_fan(
-    material: str,
-    dead: str,
-    block_id: str
-):
+def wall_coral_fan(material: str, dead: str, block_id: str):
     return {
         "to_universal": [
-            {
-                "function": "new_block",
-                "options": "universal_minecraft:coral_fan"
-            },
+            {"function": "new_block", "options": "universal_minecraft:coral_fan"},
             {
                 "function": "new_properties",
-                "options": {
-                    "coral_type": material,
-                    "dead": dead
-                }
+                "options": {"coral_type": material, "dead": dead},
             },
             {
                 "function": "map_properties",
@@ -1188,27 +1187,22 @@ def wall_coral_fan(
                         coral_direction: [
                             {
                                 "function": "new_properties",
-                                "options": {
-                                    "facing": facing
-                                }
+                                "options": {"facing": facing},
                             }
                         ]
                         for coral_direction, facing in (
-                            ("0", "\"west\""),
-                            ("1", "\"east\""),
-                            ("2", "\"north\""),
-                            ("3", "\"south\""),
+                            ("0", '"west"'),
+                            ("1", '"east"'),
+                            ("2", '"north"'),
+                            ("3", '"south"'),
                         )
                     }
-                }
-            }
+                },
+            },
         ],
         "from_universal": {
             "universal_minecraft:coral_fan": [
-                {
-                    "function": "new_block",
-                    "options": "minecraft:tube_coral_fan"
-                },
+                {"function": "new_block", "options": "minecraft:tube_coral_fan"},
                 {
                     "function": "map_properties",
                     "options": {
@@ -1226,93 +1220,70 @@ def wall_coral_fan(
                                                             material: [
                                                                 {
                                                                     "function": "new_block",
-                                                                    "options": block_id
+                                                                    "options": block_id,
                                                                 },
                                                                 {
                                                                     "function": "new_properties",
                                                                     "options": {
                                                                         "coral_direction": coral_direction
-                                                                    }
-                                                                }
+                                                                    },
+                                                                },
                                                             ]
                                                         }
-                                                    }
+                                                    },
                                                 }
                                             ]
                                         }
-                                    }
+                                    },
                                 }
                             ]
                             for coral_direction, facing in (
-                                ("0", "\"west\""),
-                                ("1", "\"east\""),
-                                ("2", "\"north\""),
-                                ("3", "\"south\""),
+                                ("0", '"west"'),
+                                ("1", '"east"'),
+                                ("2", '"north"'),
+                                ("3", '"south"'),
                             )
                         }
-                    }
-                }
+                    },
+                },
             ]
-        }
+        },
     }
 
 
-def slab(
-    material: str,
-    block_id: str
-):
+def slab(material: str, block_id: str):
     return {
         "to_universal": [
-            {
-                "function": "new_block",
-                "options": "universal_minecraft:slab"
-            },
-            {
-                "function": "new_properties",
-                "options": {
-                    "material": material
-                }
-            },
+            {"function": "new_block", "options": "universal_minecraft:slab"},
+            {"function": "new_properties", "options": {"material": material}},
             {
                 "function": "map_properties",
                 "options": {
                     "minecraft:vertical_half": {
-                        "\"bottom\"": [
+                        '"bottom"': [
                             {
                                 "function": "new_properties",
-                                "options": {
-                                    "type": "\"bottom\""
-                                }
+                                "options": {"type": '"bottom"'},
                             }
                         ],
-                        "\"top\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "type": "\"top\""
-                                }
-                            }
-                        ]
+                        '"top"': [
+                            {"function": "new_properties", "options": {"type": '"top"'}}
+                        ],
                     }
-                }
-            }
+                },
+            },
         ],
         "from_universal": {
             "universal_minecraft:slab": [
-                {
-                    "function": "new_block",
-                    "options": "minecraft:mangrove_slab"
-                },
+                {"function": "new_block", "options": "minecraft:mangrove_slab"},
                 {
                     "function": "map_properties",
                     "options": {
                         "type": {
-                            "\"bottom\"": [
+                            '"bottom"': [
                                 {
                                     "function": "new_properties",
-                                    "options": {
-                                        "minecraft:vertical_half": "\"bottom\""
-                                    }
+                                    "options": {"minecraft:vertical_half": '"bottom"'},
                                 },
                                 {
                                     "function": "map_properties",
@@ -1321,19 +1292,17 @@ def slab(
                                             material: [
                                                 {
                                                     "function": "new_block",
-                                                    "options": block_id
+                                                    "options": block_id,
                                                 }
                                             ]
                                         }
-                                    }
-                                }
+                                    },
+                                },
                             ],
-                            "\"top\"": [
+                            '"top"': [
                                 {
                                     "function": "new_properties",
-                                    "options": {
-                                        "minecraft:vertical_half": "\"top\""
-                                    }
+                                    "options": {"minecraft:vertical_half": '"top"'},
                                 },
                                 {
                                     "function": "map_properties",
@@ -1342,50 +1311,38 @@ def slab(
                                             material: [
                                                 {
                                                     "function": "new_block",
-                                                    "options": block_id
+                                                    "options": block_id,
                                                 }
                                             ]
                                         }
-                                    }
-                                }
-                            ]
+                                    },
+                                },
+                            ],
                         }
-                    }
-                }
+                    },
+                },
             ]
-        }
+        },
     }
 
 
-def double_slab(
-    material: str,
-    block_id: str
-):
+def double_slab(material: str, block_id: str):
     return {
         "to_universal": [
-            {
-                "function": "new_block",
-                "options": "universal_minecraft:slab"
-            },
+            {"function": "new_block", "options": "universal_minecraft:slab"},
             {
                 "function": "new_properties",
-                "options": {
-                    "material": material,
-                    "type": "\"double\""
-                }
-            }
+                "options": {"material": material, "type": '"double"'},
+            },
         ],
         "from_universal": {
             "universal_minecraft:slab": [
-                {
-                    "function": "new_block",
-                    "options": "minecraft:mangrove_slab"
-                },
+                {"function": "new_block", "options": "minecraft:mangrove_slab"},
                 {
                     "function": "map_properties",
                     "options": {
                         "type": {
-                            "\"double\"": [
+                            '"double"': [
                                 {
                                     "function": "map_properties",
                                     "options": {
@@ -1393,16 +1350,16 @@ def double_slab(
                                             material: [
                                                 {
                                                     "function": "new_block",
-                                                    "options": block_id
+                                                    "options": block_id,
                                                 }
                                             ]
                                         }
-                                    }
+                                    },
                                 }
                             ]
                         }
-                    }
-                }
+                    },
+                },
             ]
-        }
+        },
     }

@@ -28,9 +28,7 @@ def build(compiled_dir_):
             if hasattr(versions, version_name) and hasattr(
                 getattr(versions, version_name), "compiler"
             ):
-                compilers[version_name] = getattr(
-                    versions, version_name
-                ).compiler
+                compilers[version_name] = getattr(versions, version_name).compiler
                 compilers[version_name].version_name = version_name
             else:
                 log_to_file(

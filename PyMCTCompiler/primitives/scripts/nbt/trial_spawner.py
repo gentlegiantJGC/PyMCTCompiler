@@ -24,11 +24,7 @@ universal = {
 }
 
 j21 = merge(
-    [EmptyNBT("minecraft:trial_spawner")],
-    ["universal_minecraft:trial_spawner"]
+    [EmptyNBT("minecraft:trial_spawner")], ["universal_minecraft:trial_spawner"]
 )
 
-b21 = merge(
-    [EmptyNBT(":TrialSpawner")],
-    ["universal_minecraft:trial_spawner"]
-)
+b21 = merge([EmptyNBT(":TrialSpawner")], ["universal_minecraft:trial_spawner"])

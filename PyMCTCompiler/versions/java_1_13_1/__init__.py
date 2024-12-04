@@ -7,5 +7,5 @@ compiler = JavaBlockstateCompiler(
     version_max=[1, 13, 2, -1],
     parent_version="java_1_13_0",
     data_version=1628,
-    data_version_max=1630
+    data_version_max=1630,
 )

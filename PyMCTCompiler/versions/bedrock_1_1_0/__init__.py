@@ -10,5 +10,5 @@ compiler = NumericalCompiler(
     entity_coord_format="Pos-list-float",
     platform="bedrock",
     version=[1, 1, 0],
-    version_max=[1, 2, -1]
+    version_max=[1, 2, -1],
 )

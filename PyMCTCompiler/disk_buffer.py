@@ -246,11 +246,13 @@ class DiskBuffer:
         except:
             old_save_cache = {}
             # build old save cache
-            for path in glob.glob(os.path.join(glob.escape(json_path), "**", "*.json"), recursive=True):
+            for path in glob.glob(
+                os.path.join(glob.escape(json_path), "**", "*.json"), recursive=True
+            ):
                 with open(path) as f:
-                    old_save_cache[os.path.relpath(path, json_path).lower()] = hashlib.sha1(
-                        f.read().encode("utf8")
-                    ).hexdigest()
+                    old_save_cache[os.path.relpath(path, json_path).lower()] = (
+                        hashlib.sha1(f.read().encode("utf8")).hexdigest()
+                    )
         new_save_cache = {}
 
         for path, data in self.files_to_save.items():
@@ -261,7 +263,10 @@ class DiskBuffer:
                 data.encode("utf8")
             ).hexdigest()
 
-            if rel_path.lower() not in old_save_cache or old_save_cache[rel_path.lower()] != h:
+            if (
+                rel_path.lower() not in old_save_cache
+                or old_save_cache[rel_path.lower()] != h
+            ):
                 os.makedirs(os.path.dirname(path), exist_ok=True)
                 with open(path, "w") as f:
                     f.write(data)
