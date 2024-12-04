@@ -128,22 +128,12 @@ def remove_list_duplicates(val: list):
             i += 1
 
 
-_JavaPath = None
-
-
 def find_java() -> str:
     """Find the path to java vm."""
-    global _JavaPath
-    if _JavaPath is None:
-        path = r"C:\Program Files (x86)\Minecraft Launcher\runtime\java-runtime-delta\windows-x64\java-runtime-delta\bin"
-        if not os.path.isdir(path):
-            raise Exception("Could not find where the Minecraft launcher is saved")
-        paths = glob.glob(os.path.join(glob.escape(path), "**", "java.exe"), recursive=True)
-        if paths:
-            _JavaPath = paths[0]
-        else:
-            raise Exception("Could not find java")
-    return _JavaPath
+    path = os.environ.get("JAVA_PATH", "")
+    if not os.path.isfile(path):
+        raise Exception("Could not find java")
+    return path
 
 
 def blocks_from_server(version_path: str, version_str: List[str] = None):
