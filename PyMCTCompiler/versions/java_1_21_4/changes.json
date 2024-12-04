@@ -1,0 +1,196 @@
+{
+    "minecraft:chiseled_resin_bricks": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:closed_eyeblossom": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:creaking_heart": {
+        "properties_added": {
+            "active": [
+                "true",
+                "false"
+            ],
+            "natural": [
+                "true",
+                "false"
+            ]
+        },
+        "properties_removed": [
+            "creaking"
+        ]
+    },
+    "minecraft:open_eyeblossom": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:potted_closed_eyeblossom": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:potted_open_eyeblossom": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:resin_block": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:resin_brick_slab": {
+        "block_added": {
+            "defaults": {
+                "type": "bottom",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "type": [
+                    "top",
+                    "bottom",
+                    "double"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:resin_brick_stairs": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "half": "bottom",
+                "shape": "straight",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "half": [
+                    "top",
+                    "bottom"
+                ],
+                "shape": [
+                    "straight",
+                    "inner_left",
+                    "inner_right",
+                    "outer_left",
+                    "outer_right"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:resin_brick_wall": {
+        "block_added": {
+            "defaults": {
+                "east": "none",
+                "north": "none",
+                "south": "none",
+                "up": "true",
+                "waterlogged": "false",
+                "west": "none"
+            },
+            "properties": {
+                "east": [
+                    "none",
+                    "low",
+                    "tall"
+                ],
+                "north": [
+                    "none",
+                    "low",
+                    "tall"
+                ],
+                "south": [
+                    "none",
+                    "low",
+                    "tall"
+                ],
+                "up": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ],
+                "west": [
+                    "none",
+                    "low",
+                    "tall"
+                ]
+            }
+        }
+    },
+    "minecraft:resin_bricks": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:resin_clump": {
+        "block_added": {
+            "defaults": {
+                "down": "false",
+                "east": "false",
+                "north": "false",
+                "south": "false",
+                "up": "false",
+                "waterlogged": "false",
+                "west": "false"
+            },
+            "properties": {
+                "down": [
+                    "true",
+                    "false"
+                ],
+                "east": [
+                    "true",
+                    "false"
+                ],
+                "north": [
+                    "true",
+                    "false"
+                ],
+                "south": [
+                    "true",
+                    "false"
+                ],
+                "up": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ],
+                "west": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    }
+}
