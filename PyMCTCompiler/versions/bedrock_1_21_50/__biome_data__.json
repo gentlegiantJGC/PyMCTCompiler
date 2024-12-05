@@ -1,0 +1,12 @@
+{
+	"add": {
+		"biomes": {
+			"minecraft:pale_garden": [
+				193,
+				"universal_minecraft:pale_garden"
+			]
+		},
+		"universal_remap": {}
+	},
+	"remove": []
+}
