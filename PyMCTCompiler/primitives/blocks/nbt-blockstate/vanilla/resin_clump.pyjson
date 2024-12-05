@@ -1,0 +1,96 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:resin_clump"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "multi_face_direction_bits": {
+                    f"{b}": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "down": "\"true\"" if b & 1 else "\"false\"",
+                                "up": "\"true\"" if b & 2 else "\"false\"",
+                                "south": "\"true\"" if b & 4 else "\"false\"",
+                                "west": "\"true\"" if b & 8 else "\"false\"",
+                                "north": "\"true\"" if b & 16 else "\"false\"",
+                                "east": "\"true\"" if b & 32 else "\"false\"",
+                            }
+                        }
+                    ] for b in range(64)
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:resin_clump": [
+            {
+                "function": "new_block",
+                "options": "minecraft:resin_clump"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "east": {
+                        east_state: [
+                            {
+                                "function": "map_properties",
+                                "options": {
+                                    "north": {
+                                        north_state: [
+                                            {
+                                                "function": "map_properties",
+                                                "options": {
+                                                    "west": {
+                                                        west_state: [
+                                                            {
+                                                                "function": "map_properties",
+                                                                "options": {
+                                                                    "south": {
+                                                                        south_state: [
+                                                                            {
+                                                                                "function": "map_properties",
+                                                                                "options": {
+                                                                                    "up": {
+                                                                                        up_state: [
+                                                                                            {
+                                                                                                "function": "map_properties",
+                                                                                                "options": {
+                                                                                                    "down": {
+                                                                                                        down_state: [
+                                                                                                            {
+                                                                                                                "function": "new_properties",
+                                                                                                                "options": {
+                                                                                                                    "multi_face_direction_bits": str(data_32 + data_16 + data_8 + data_4 + data_2 + data_1)
+                                                                                                                }
+                                                                                                            }
+                                                                                                        ] for down_state, data_1 in (("\"false\"", 0), ("\"true\"", 1))
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        ] for up_state, data_2 in (("\"false\"", 0), ("\"true\"", 2))
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        ] for south_state, data_4 in (("\"false\"", 0), ("\"true\"", 4))
+                                                                    }
+                                                                }
+                                                            }
+                                                        ] for west_state, data_8 in (("\"false\"", 0), ("\"true\"", 8))
+                                                    }
+                                                }
+                                            }
+                                        ] for north_state, data_16 in (("\"false\"", 0), ("\"true\"", 16))
+                                    }
+                                }
+                            }
+                        ] for east_state, data_32 in (("\"false\"", 0), ("\"true\"", 32))
+                    }
+                }
+            }
+        ]
+    }
+}
