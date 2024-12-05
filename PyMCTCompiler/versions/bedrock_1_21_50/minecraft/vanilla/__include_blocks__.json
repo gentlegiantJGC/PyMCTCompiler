@@ -1,18 +1,4 @@
 {
-    "client_request_placeholder_block": null,
-    "deprecated_anvil": null,
-    "deprecated_purpur_block_1": null,
-    "deprecated_purpur_block_2": null,
-    "end_gateway": null,
-    "glowingobsidian": null,
-    "info_update": null,
-    "info_update2": null,
-    "invisible_bedrock": null,
-    "moving_block": null,
-    "netherreactor": null,
-    "reserved6": null,
-    "stonecutter": null,
-
     "resin_block": "resin_block",
     "resin_bricks": "resin_bricks",
     "chiseled_resin_bricks": "chiseled_resin_bricks",
