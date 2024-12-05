@@ -60,7 +60,8 @@
 		"tuff_slab",
 		"tuff_brick_slab",
 		"polished_tuff_slab",
-		"pale_oak_slab"
+		"pale_oak_slab",
+		"resin_brick_slab"
 	],
 	"add": {
 		"slab": {
@@ -126,7 +127,8 @@
 					"\"tuff\"",
 					"\"tuff_brick\"",
 					"\"polished_tuff\"",
-					"\"pale_oak\""
+					"\"pale_oak\"",
+					"\"resin_brick\""
 				],
 				"type": [
 					"\"top\"",
