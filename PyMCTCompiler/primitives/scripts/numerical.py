@@ -4050,7 +4050,7 @@ def door(
                                                                                     0: '"false"',
                                                                                     4: '"true"',
                                                                                 }[
-                                                                                    data
+                                                                                    data_
                                                                                     & 4
                                                                                 ],
                                                                                 "facing": {
@@ -4059,7 +4059,7 @@ def door(
                                                                                     2: '"west"',
                                                                                     3: '"north"',
                                                                                 }[
-                                                                                    data
+                                                                                    data_
                                                                                     & 3
                                                                                 ],
                                                                             },
