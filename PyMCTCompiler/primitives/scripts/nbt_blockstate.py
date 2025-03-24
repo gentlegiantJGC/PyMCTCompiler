@@ -376,7 +376,15 @@ def mushroom_stem() -> dict:
     }
 
 
-def door(block_name: str, material: str) -> dict:
+def _door(
+        block_name: str,
+        material: str,
+        direction_name: str,
+        north_direction: str,
+        east_direction: str,
+        south_direction: str,
+        west_direction: str,
+) -> dict:
     return {
         "to_universal": [
             {"function": "new_block", "options": "universal_minecraft:door"},
@@ -393,26 +401,26 @@ def door(block_name: str, material: str) -> dict:
                             {
                                 "function": "map_properties",
                                 "options": {
-                                    "direction": {
-                                        "0": [
+                                    direction_name: {
+                                        east_direction: [
                                             {
                                                 "function": "new_properties",
                                                 "options": {"facing": '"east"'},
                                             }
                                         ],
-                                        "1": [
+                                        south_direction: [
                                             {
                                                 "function": "new_properties",
                                                 "options": {"facing": '"south"'},
                                             }
                                         ],
-                                        "2": [
+                                        west_direction: [
                                             {
                                                 "function": "new_properties",
                                                 "options": {"facing": '"west"'},
                                             }
                                         ],
-                                        "3": [
+                                        north_direction: [
                                             {
                                                 "function": "new_properties",
                                                 "options": {"facing": '"north"'},
@@ -502,8 +510,8 @@ def door(block_name: str, material: str) -> dict:
                                             {
                                                 "function": "map_properties",
                                                 "options": {
-                                                    "direction": {
-                                                        "0": [
+                                                    direction_name: {
+                                                        east_direction: [
                                                             {
                                                                 "function": "new_properties",
                                                                 "options": {
@@ -511,7 +519,7 @@ def door(block_name: str, material: str) -> dict:
                                                                 },
                                                             }
                                                         ],
-                                                        "1": [
+                                                        south_direction: [
                                                             {
                                                                 "function": "new_properties",
                                                                 "options": {
@@ -519,7 +527,7 @@ def door(block_name: str, material: str) -> dict:
                                                                 },
                                                             }
                                                         ],
-                                                        "2": [
+                                                        west_direction: [
                                                             {
                                                                 "function": "new_properties",
                                                                 "options": {
@@ -527,7 +535,7 @@ def door(block_name: str, material: str) -> dict:
                                                                 },
                                                             }
                                                         ],
-                                                        "3": [
+                                                        north_direction: [
                                                             {
                                                                 "function": "new_properties",
                                                                 "options": {
@@ -592,25 +600,25 @@ def door(block_name: str, material: str) -> dict:
                                             '"east"': [
                                                 {
                                                     "function": "new_properties",
-                                                    "options": {"direction": "0"},
+                                                    "options": {direction_name: east_direction},
                                                 }
                                             ],
                                             '"south"': [
                                                 {
                                                     "function": "new_properties",
-                                                    "options": {"direction": "1"},
+                                                    "options": {direction_name: south_direction},
                                                 }
                                             ],
                                             '"west"': [
                                                 {
                                                     "function": "new_properties",
-                                                    "options": {"direction": "2"},
+                                                    "options": {direction_name: west_direction},
                                                 }
                                             ],
                                             '"north"': [
                                                 {
                                                     "function": "new_properties",
-                                                    "options": {"direction": "3"},
+                                                    "options": {direction_name: north_direction},
                                                 }
                                             ],
                                         },
@@ -662,6 +670,30 @@ def door(block_name: str, material: str) -> dict:
             ]
         },
     }
+
+
+def door(block_name: str, material: str) -> dict:
+    return _door(
+        block_name,
+        material,
+        "direction",
+        "3",
+        "0",
+        "1",
+        "2"
+    )
+
+
+def door_12160(block_name: str, material: str) -> dict:
+    return _door(
+        block_name,
+        material,
+        "minecraft:cardinal_direction",
+        "\"north\"",
+        "\"east\"",
+        "\"south\"",
+        "\"west\"",
+    )
 
 
 def candle(colour: str):
