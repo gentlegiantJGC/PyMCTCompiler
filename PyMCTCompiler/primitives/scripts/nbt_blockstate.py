@@ -696,6 +696,220 @@ def door_12160(block_name: str, material: str) -> dict:
     )
 
 
+def _fence_gate(
+        block_name: str,
+        material: str,
+        direction_name: str,
+        north_direction: str,
+        east_direction: str,
+        south_direction: str,
+        west_direction: str
+) -> dict:
+    return {
+        "to_universal": [
+            {
+                "function": "new_block",
+                "options": "universal_minecraft:fence_gate"
+            },
+            {
+                "function": "new_properties",
+                "options": {
+                    "material": material,
+                }
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    direction_name: {
+                        south_direction: [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing": "\"south\""
+                                }
+                            }
+                        ],
+                        west_direction: [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing": "\"west\""
+                                }
+                            }
+                        ],
+                        north_direction: [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing": "\"north\""
+                                }
+                            }
+                        ],
+                        east_direction: [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "facing": "\"east\""
+                                }
+                            }
+                        ]
+                    },
+                    "in_wall_bit": {
+                        "0b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "in_wall": "\"false\""
+                                }
+                            }
+                        ],
+                        "1b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "in_wall": "\"true\""
+                                }
+                            }
+                        ]
+                    },
+                    "open_bit": {
+                        "0b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "open": "\"false\""
+                                }
+                            }
+                        ],
+                        "1b": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "open": "\"true\""
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "from_universal": {
+            "universal_minecraft:fence_gate": [
+                {
+                    "function": "new_block",
+                    "options": "minecraft:fence_gate"
+                },
+                {
+                    "function": "map_properties",
+                    "options": {
+                        "material": {
+                            material: [
+                                {
+                                    "function": "new_block",
+                                    "options": f"minecraft:{block_name}",
+                                }
+                            ]
+                        },
+                        "facing": {
+                            "\"south\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        direction_name: south_direction
+                                    }
+                                }
+                            ],
+                            "\"west\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        direction_name: west_direction
+                                    }
+                                }
+                            ],
+                            "\"north\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        direction_name: north_direction
+                                    }
+                                }
+                            ],
+                            "\"east\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        direction_name: east_direction
+                                    }
+                                }
+                            ]
+                        },
+                        "in_wall": {
+                            "\"false\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "in_wall_bit": "0b"
+                                    }
+                                }
+                            ],
+                            "\"true\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "in_wall_bit": "1b"
+                                    }
+                                }
+                            ]
+                        },
+                        "open": {
+                            "\"false\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "open_bit": "0b"
+                                    }
+                                }
+                            ],
+                            "\"true\"": [
+                                {
+                                    "function": "new_properties",
+                                    "options": {
+                                        "open_bit": "1b"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
+
+
+def fence_gate(block_name: str, material: str) -> dict:
+    return _fence_gate(
+        block_name,
+        material,
+        "direction",
+        "2",
+        "3",
+        "0",
+        "1"
+    )
+
+def fence_gate_12160(block_name: str, material: str) -> dict:
+    return _fence_gate(
+        block_name,
+        material,
+        "minecraft:cardinal_direction",
+        "\"north\"",
+        "\"east\"",
+        "\"south\"",
+        "\"west\"",
+    )
+
+
 def candle(colour: str):
     return {
         "to_universal": [

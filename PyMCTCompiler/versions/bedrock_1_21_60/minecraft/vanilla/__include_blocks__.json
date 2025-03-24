@@ -19,5 +19,18 @@
     "waxed_oxidized_copper_door": "waxed_oxidized_copper_door_12160",
     "waxed_weathered_copper_door": "waxed_weathered_copper_door_12160",
     "weathered_copper_door": "weathered_copper_door_12160",
-    "wooden_door": "wooden_door_12160"
+    "wooden_door": "wooden_door_12160",
+
+    "acacia_fence_gate": "acacia_fence_gate_12160",
+    "bamboo_fence_gate": "bamboo_fence_gate_12160",
+    "birch_fence_gate": "birch_fence_gate_12160",
+    "cherry_fence_gate": "cherry_fence_gate_12160",
+    "crimson_fence_gate": "crimson_fence_gate_12160",
+    "dark_oak_fence_gate": "dark_oak_fence_gate_12160",
+    "fence_gate": "fence_gate_12160",
+    "jungle_fence_gate": "jungle_fence_gate_12160",
+    "mangrove_fence_gate": "mangrove_fence_gate_12160",
+    "pale_oak_fence_gate": "pale_oak_fence_gate_12160",
+    "spruce_fence_gate": "spruce_fence_gate_12160",
+    "warped_fence_gate": "warped_fence_gate_12160"
 }
