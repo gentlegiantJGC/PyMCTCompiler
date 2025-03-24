@@ -5,9 +5,6 @@
             "properties": {}
         }
     },
-    "minecraft:client_request_placeholder_block": {
-        "block_removed": true
-    },
     "minecraft:closed_eyeblossom": {
         "block_added": {
             "defaults": {},
@@ -37,36 +34,6 @@
                 ]
             }
         }
-    },
-    "minecraft:deprecated_anvil": {
-        "block_removed": true
-    },
-    "minecraft:deprecated_purpur_block_1": {
-        "block_removed": true
-    },
-    "minecraft:deprecated_purpur_block_2": {
-        "block_removed": true
-    },
-    "minecraft:end_gateway": {
-        "block_removed": true
-    },
-    "minecraft:glowingobsidian": {
-        "block_removed": true
-    },
-    "minecraft:info_update": {
-        "block_removed": true
-    },
-    "minecraft:info_update2": {
-        "block_removed": true
-    },
-    "minecraft:invisible_bedrock": {
-        "block_removed": true
-    },
-    "minecraft:moving_block": {
-        "block_removed": true
-    },
-    "minecraft:netherreactor": {
-        "block_removed": true
     },
     "minecraft:open_eyeblossom": {
         "block_added": {
@@ -466,9 +433,6 @@
             }
         }
     },
-    "minecraft:reserved6": {
-        "block_removed": true
-    },
     "minecraft:resin_block": {
         "block_added": {
             "defaults": {},
@@ -638,9 +602,6 @@
                 ]
             }
         }
-    },
-    "minecraft:stonecutter": {
-        "block_removed": true
     },
     "minecraft:stripped_pale_oak_log": {
         "block_added": {

@@ -143,9 +143,6 @@
             ]
         }
     },
-    "minecraft:client_request_placeholder_block": {
-        "block_removed": true
-    },
     "minecraft:copper_door": {
         "properties_added": {
             "minecraft:cardinal_direction": [
@@ -251,18 +248,6 @@
             ]
         }
     },
-    "minecraft:deprecated_anvil": {
-        "block_removed": true
-    },
-    "minecraft:deprecated_purpur_block_1": {
-        "block_removed": true
-    },
-    "minecraft:deprecated_purpur_block_2": {
-        "block_removed": true
-    },
-    "minecraft:end_gateway": {
-        "block_removed": true
-    },
     "minecraft:exposed_copper_door": {
         "properties_added": {
             "minecraft:cardinal_direction": [
@@ -298,18 +283,6 @@
                 "3"
             ]
         }
-    },
-    "minecraft:glowingobsidian": {
-        "block_removed": true
-    },
-    "minecraft:info_update": {
-        "block_removed": true
-    },
-    "minecraft:info_update2": {
-        "block_removed": true
-    },
-    "minecraft:invisible_bedrock": {
-        "block_removed": true
     },
     "minecraft:iron_door": {
         "properties_added": {
@@ -401,12 +374,6 @@
             ]
         }
     },
-    "minecraft:moving_block": {
-        "block_removed": true
-    },
-    "minecraft:netherreactor": {
-        "block_removed": true
-    },
     "minecraft:oxidized_copper_door": {
         "properties_added": {
             "minecraft:cardinal_direction": [
@@ -461,9 +428,6 @@
             ]
         }
     },
-    "minecraft:reserved6": {
-        "block_removed": true
-    },
     "minecraft:spruce_door": {
         "properties_added": {
             "minecraft:cardinal_direction": [
@@ -499,9 +463,6 @@
                 "3"
             ]
         }
-    },
-    "minecraft:stonecutter": {
-        "block_removed": true
     },
     "minecraft:warped_door": {
         "properties_added": {
