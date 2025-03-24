@@ -1,0 +1,109 @@
+{
+    "minecraft:bush": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:cactus_flower": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:creaking_heart": {
+        "properties_added": {
+            "creaking_heart_state": [
+                "uprooted",
+                "dormant",
+                "awake"
+            ]
+        },
+        "properties_removed": [
+            "active"
+        ]
+    },
+    "minecraft:firefly_bush": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:leaf_litter": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "segment_amount": "1"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "segment_amount": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ]
+            }
+        }
+    },
+    "minecraft:short_dry_grass": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:tall_dry_grass": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:test_block": {
+        "block_added": {
+            "defaults": {
+                "mode": "start"
+            },
+            "properties": {
+                "mode": [
+                    "start",
+                    "log",
+                    "fail",
+                    "accept"
+                ]
+            }
+        }
+    },
+    "minecraft:test_instance_block": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:wildflowers": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "flower_amount": "1"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "flower_amount": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ]
+            }
+        }
+    }
+}
