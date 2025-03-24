@@ -2,57 +2,17 @@
     "to_universal": [
         {
             "function": "new_block",
-            "options": "universal_minecraft:fence_gate"
-        },
-        {
-            "function": "new_properties",
-            "options": {
-                "material": "\"pale_oak\""
-            }
+            "options": "universal_minecraft:creaking_heart"
         },
         {
             "function": "map_properties",
             "options": {
-                "direction": {
-                    "0": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "facing": "\"south\""
-                            }
-                        }
-                    ],
-                    "1": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "facing": "\"west\""
-                            }
-                        }
-                    ],
-                    "2": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "facing": "\"north\""
-                            }
-                        }
-                    ],
-                    "3": [
-                        {
-                            "function": "new_properties",
-                            "options": {
-                                "facing": "\"east\""
-                            }
-                        }
-                    ]
-                },
-                "in_wall_bit": {
+                "active": {
                     "0b": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "in_wall": "\"false\""
+                                "creaking_heart_state": "\"dormant\""
                             }
                         }
                     ],
@@ -60,17 +20,17 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "in_wall": "\"true\""
+                                "creaking_heart_state": "\"awake\""
                             }
                         }
                     ]
                 },
-                "open_bit": {
+                "natural": {
                     "0b": [
                         {
                             "function": "new_properties",
                             "options": {
-                                "open": "\"false\""
+                                "natural": "\"false\""
                             }
                         }
                     ],
@@ -78,7 +38,33 @@
                         {
                             "function": "new_properties",
                             "options": {
-                                "open": "\"true\""
+                                "natural": "\"true\""
+                            }
+                        }
+                    ]
+                },
+                "pillar_axis": {
+                    "\"x\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "axis": "\"x\""
+                            }
+                        }
+                    ],
+                    "\"y\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "axis": "\"y\""
+                            }
+                        }
+                    ],
+                    "\"z\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "axis": "\"z\""
                             }
                         }
                     ]
@@ -87,62 +73,46 @@
         }
     ],
     "from_universal": {
-        "universal_minecraft:fence_gate": [
+        "universal_minecraft:creaking_heart": [
             {
                 "function": "new_block",
-                "options": "minecraft:fence_gate"
+                "options": "minecraft:creaking_heart"
             },
             {
                 "function": "map_properties",
                 "options": {
-                    "material": {
-                        "\"pale_oak\"": [
-                            {
-                                "function": "new_block",
-                                "options": "minecraft:pale_oak_fence_gate"
-                            }
-                        ]
-                    },
-                    "facing": {
-                        "\"south\"": [
+                    "creaking_heart_state": {
+                        "\"uprooted\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": "0"
+                                    "active": "0b"
                                 }
                             }
                         ],
-                        "\"west\"": [
+                        "\"dormant\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": "1"
+                                    "active": "0b"
                                 }
                             }
                         ],
-                        "\"north\"": [
+                        "\"awake\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "direction": "2"
-                                }
-                            }
-                        ],
-                        "\"east\"": [
-                            {
-                                "function": "new_properties",
-                                "options": {
-                                    "direction": "3"
+                                    "active": "1b"
                                 }
                             }
                         ]
                     },
-                    "in_wall": {
+                    "natural": {
                         "\"false\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "in_wall_bit": "0b"
+                                    "natural": "0b"
                                 }
                             }
                         ],
@@ -150,25 +120,33 @@
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "in_wall_bit": "1b"
+                                    "natural": "1b"
                                 }
                             }
                         ]
                     },
-                    "open": {
-                        "\"false\"": [
+                    "axis": {
+                        "\"x\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "open_bit": "0b"
+                                    "pillar_axis": "\"x\""
                                 }
                             }
                         ],
-                        "\"true\"": [
+                        "\"y\"": [
                             {
                                 "function": "new_properties",
                                 "options": {
-                                    "open_bit": "1b"
+                                    "pillar_axis": "\"y\""
+                                }
+                            }
+                        ],
+                        "\"z\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "pillar_axis": "\"z\""
                                 }
                             }
                         ]
