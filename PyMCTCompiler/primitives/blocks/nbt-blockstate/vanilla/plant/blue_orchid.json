@@ -21,7 +21,7 @@
                 "function": "map_properties",
                 "options": {
                     "plant_type": {
-                        "\"orchid\"": [
+                        "\"blue_orchid\"": [
                             {
                                 "function": "new_block",
                                 "options": "minecraft:blue_orchid"

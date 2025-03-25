@@ -16,7 +16,7 @@
 				"axis": "\"y\""
 			}
 		},
-		"chiseled_purpur_block": {
+		"purpur_chiseled": {
 			"properties": {
 				"axis": [
 					"\"x\"",
@@ -40,7 +40,7 @@
 				"axis": "\"y\""
 			}
 		},
-		"smooth_purpur": {
+		"purpur_smooth": {
 			"properties": {
 				"axis": [
 					"\"x\"",

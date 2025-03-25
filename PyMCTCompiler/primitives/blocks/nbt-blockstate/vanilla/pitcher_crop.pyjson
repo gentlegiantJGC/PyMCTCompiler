@@ -73,7 +73,7 @@
                                     "growth": str(growth)
                                 }
                             }
-                        ] for growth in range(4)
+                        ] for growth in range(5)
                     }
                 }
             }

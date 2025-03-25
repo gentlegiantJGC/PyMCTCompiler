@@ -12,7 +12,6 @@
 		"camera": {},
 		"allow": {},
 	    "deny": {},
-	    "border_block": {},
 	    "client_request_placeholder_block": {}
 	}
 }

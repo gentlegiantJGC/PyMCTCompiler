@@ -1,0 +1,270 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:border_block"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "wall_connection_type_north": {
+                    "\"none\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "north": "\"none\""
+                            }
+                        }
+                    ],
+                    "\"short\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "north": "\"low\""
+                            }
+                        }
+                    ],
+                    "\"tall\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "north": "\"tall\""
+                            }
+                        }
+                    ]
+                },
+                "wall_connection_type_east": {
+                    "\"none\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "east": "\"none\""
+                            }
+                        }
+                    ],
+                    "\"short\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "east": "\"low\""
+                            }
+                        }
+                    ],
+                    "\"tall\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "east": "\"tall\""
+                            }
+                        }
+                    ]
+                },
+                "wall_connection_type_south": {
+                    "\"none\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "south": "\"none\""
+                            }
+                        }
+                    ],
+                    "\"short\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "south": "\"low\""
+                            }
+                        }
+                    ],
+                    "\"tall\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "south": "\"tall\""
+                            }
+                        }
+                    ]
+                },
+                "wall_connection_type_west": {
+                    "\"none\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "west": "\"none\""
+                            }
+                        }
+                    ],
+                    "\"short\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "west": "\"low\""
+                            }
+                        }
+                    ],
+                    "\"tall\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "west": "\"tall\""
+                            }
+                        }
+                    ]
+                },
+                "wall_post_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "up": "\"false\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "up": "\"true\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:border_block": [
+            {
+                "function": "new_block",
+                "options": "minecraft:border_block"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "north": {
+                        "\"none\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "wall_connection_type_north": "\"none\""
+                                }
+                            }
+                        ],
+                        "\"low\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "wall_connection_type_north": "\"short\""
+                                }
+                            }
+                        ],
+                        "\"tall\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "wall_connection_type_north": "\"tall\""
+                                }
+                            }
+                        ]
+                    },
+                    "east": {
+                        "\"none\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "wall_connection_type_east": "\"none\""
+                                }
+                            }
+                        ],
+                        "\"low\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "wall_connection_type_east": "\"short\""
+                                }
+                            }
+                        ],
+                        "\"tall\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "wall_connection_type_east": "\"tall\""
+                                }
+                            }
+                        ]
+                    },
+                    "south": {
+                        "\"none\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "wall_connection_type_south": "\"none\""
+                                }
+                            }
+                        ],
+                        "\"low\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "wall_connection_type_south": "\"short\""
+                                }
+                            }
+                        ],
+                        "\"tall\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "wall_connection_type_south": "\"tall\""
+                                }
+                            }
+                        ]
+                    },
+                    "west": {
+                        "\"none\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "wall_connection_type_west": "\"none\""
+                                }
+                            }
+                        ],
+                        "\"low\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "wall_connection_type_west": "\"short\""
+                                }
+                            }
+                        ],
+                        "\"tall\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "wall_connection_type_west": "\"tall\""
+                                }
+                            }
+                        ]
+                    },
+                    "up": {
+                        "\"false\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "wall_post_bit": "0b"
+                                }
+                            }
+                        ],
+                        "\"true\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "wall_post_bit": "1b"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
