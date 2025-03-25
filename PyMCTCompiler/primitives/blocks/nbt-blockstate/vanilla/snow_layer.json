@@ -72,6 +72,24 @@
                             }
                         }
                     ]
+                },
+                "covered_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "covered": "\"false\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "covered": "\"true\""
+                            }
+                        }
+                    ]
                 }
             }
         }
@@ -147,6 +165,24 @@
                                 "function": "new_properties",
                                 "options": {
                                     "height": "7"
+                                }
+                            }
+                        ]
+                    },
+                    "covered": {
+                        "\"false\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "covered_bit": "0b"
+                                }
+                            }
+                        ],
+                        "\"true\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "covered_bit": "1b"
                                 }
                             }
                         ]
