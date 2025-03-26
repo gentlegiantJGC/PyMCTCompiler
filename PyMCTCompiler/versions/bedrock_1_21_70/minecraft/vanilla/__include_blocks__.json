@@ -3,5 +3,8 @@
     "cactus_flower": "cactus_flower",
     "firefly_bush":  "firefly_bush",
     "short_dry_grass":  "short_dry_grass",
-    "tall_dry_grass": "tall_dry_grass"
+    "tall_dry_grass": "tall_dry_grass",
+
+    "leaf_litter": "leaf_litter",
+    "wildflowers":  "wildflowers"
 }
