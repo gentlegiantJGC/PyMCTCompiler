@@ -1,10 +1,10 @@
 {
 	"remove": [
-		"torch",
-		"wall_torch"
+		"copper_torch",
+		"copper_wall_torch"
 	],
 	"add": {
-		"torch": {
+		"copper_torch": {
 			"properties": {
 				"facing": [
 					"\"up\"",
