@@ -1,0 +1,19 @@
+{
+    "from_universal": {
+        "universal_minecraft:chest": [
+            {
+                "function": "map_properties",
+                "options": {
+                    "material": {
+                        "\"waxed_oxidized_copper\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:waxed_oxidized_copper_chest"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

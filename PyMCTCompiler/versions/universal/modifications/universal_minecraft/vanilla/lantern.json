@@ -1,5 +1,6 @@
 {
 	"remove": [
+		"lantern",
 		"copper_lantern",
 		"exposed_copper_lantern",
 		"weathered_copper_lantern",
@@ -13,6 +14,7 @@
 		"lantern": {
 			"properties": {
 				"material": [
+					"\"iron\"",
 					"\"copper\"",
 					"\"exposed_copper\"",
 					"\"weathered_copper\"",
@@ -28,7 +30,7 @@
 				]
 			},
 			"defaults": {
-				"material": "\"copper\"",
+				"material": "\"iron\"",
 				"hanging": "\"false\""
 			}
 		}

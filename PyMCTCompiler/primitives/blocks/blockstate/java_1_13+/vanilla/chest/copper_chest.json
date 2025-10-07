@@ -1,0 +1,19 @@
+{
+    "from_universal": {
+        "universal_minecraft:chest": [
+            {
+                "function": "map_properties",
+                "options": {
+                    "material": {
+                        "\"copper\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:copper_chest"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

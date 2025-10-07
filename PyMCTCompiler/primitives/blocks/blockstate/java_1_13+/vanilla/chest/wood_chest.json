@@ -1,0 +1,19 @@
+{
+    "from_universal": {
+        "universal_minecraft:chest": [
+            {
+                "function": "map_properties",
+                "options": {
+                    "material": {
+                        "\"wood\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:chest"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

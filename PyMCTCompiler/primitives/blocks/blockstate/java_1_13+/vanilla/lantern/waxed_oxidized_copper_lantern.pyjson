@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "waxed_oxidized_copper_lantern", "\"waxed_oxidized_copper\"", "universal_minecraft", "lantern", {"hanging": ["\"true\"", "\"false\""]}, default="minecraft:lantern")

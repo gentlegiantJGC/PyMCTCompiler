@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "exposed_copper_chain", "\"exposed_copper\"", "universal_minecraft", "chain", {"axis": ["\"x\"", "\"y\"", "\"z\""]}, default="minecraft:iron_chain")
