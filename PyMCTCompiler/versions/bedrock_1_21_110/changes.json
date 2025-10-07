@@ -1,0 +1,903 @@
+{
+    "minecraft:acacia_shelf": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\"",
+                "powered_bit": "0b",
+                "powered_shelf_type": "0"
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "powered_shelf_type": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:bamboo_shelf": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\"",
+                "powered_bit": "0b",
+                "powered_shelf_type": "0"
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "powered_shelf_type": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:birch_shelf": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\"",
+                "powered_bit": "0b",
+                "powered_shelf_type": "0"
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "powered_shelf_type": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:cherry_shelf": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\"",
+                "powered_bit": "0b",
+                "powered_shelf_type": "0"
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "powered_shelf_type": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:copper_bars": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:copper_chain": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:copper_golem_statue": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ]
+            }
+        }
+    },
+    "minecraft:copper_lantern": {
+        "block_added": {
+            "defaults": {
+                "hanging": "0b"
+            },
+            "properties": {
+                "hanging": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:copper_torch": {
+        "block_added": {
+            "defaults": {
+                "torch_facing_direction": "\"unknown\""
+            },
+            "properties": {
+                "torch_facing_direction": [
+                    "\"unknown\"",
+                    "\"west\"",
+                    "\"east\"",
+                    "\"north\"",
+                    "\"south\"",
+                    "\"top\""
+                ]
+            }
+        }
+    },
+    "minecraft:crimson_shelf": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\"",
+                "powered_bit": "0b",
+                "powered_shelf_type": "0"
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "powered_shelf_type": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:dark_oak_shelf": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\"",
+                "powered_bit": "0b",
+                "powered_shelf_type": "0"
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "powered_shelf_type": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:exposed_copper_bars": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:exposed_copper_chain": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:exposed_copper_golem_statue": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ]
+            }
+        }
+    },
+    "minecraft:exposed_copper_lantern": {
+        "block_added": {
+            "defaults": {
+                "hanging": "0b"
+            },
+            "properties": {
+                "hanging": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:exposed_lightning_rod": {
+        "block_added": {
+            "defaults": {
+                "facing_direction": "0",
+                "powered_bit": "0b"
+            },
+            "properties": {
+                "facing_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:iron_chain": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:jungle_shelf": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\"",
+                "powered_bit": "0b",
+                "powered_shelf_type": "0"
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "powered_shelf_type": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:lightning_rod": {
+        "properties_added": {
+            "powered_bit": [
+                "0b",
+                "1b"
+            ]
+        }
+    },
+    "minecraft:mangrove_shelf": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\"",
+                "powered_bit": "0b",
+                "powered_shelf_type": "0"
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "powered_shelf_type": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:oak_shelf": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\"",
+                "powered_bit": "0b",
+                "powered_shelf_type": "0"
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "powered_shelf_type": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:oxidized_copper_bars": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:oxidized_copper_chain": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:oxidized_copper_golem_statue": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ]
+            }
+        }
+    },
+    "minecraft:oxidized_copper_lantern": {
+        "block_added": {
+            "defaults": {
+                "hanging": "0b"
+            },
+            "properties": {
+                "hanging": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:oxidized_lightning_rod": {
+        "block_added": {
+            "defaults": {
+                "facing_direction": "0",
+                "powered_bit": "0b"
+            },
+            "properties": {
+                "facing_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:pale_oak_shelf": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\"",
+                "powered_bit": "0b",
+                "powered_shelf_type": "0"
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "powered_shelf_type": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:spruce_shelf": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\"",
+                "powered_bit": "0b",
+                "powered_shelf_type": "0"
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "powered_shelf_type": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:warped_shelf": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\"",
+                "powered_bit": "0b",
+                "powered_shelf_type": "0"
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ],
+                "powered_shelf_type": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_copper_bars": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:waxed_copper_chain": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_copper_golem_statue": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_copper_lantern": {
+        "block_added": {
+            "defaults": {
+                "hanging": "0b"
+            },
+            "properties": {
+                "hanging": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_exposed_copper_bars": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:waxed_exposed_copper_chain": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_exposed_copper_golem_statue": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_exposed_copper_lantern": {
+        "block_added": {
+            "defaults": {
+                "hanging": "0b"
+            },
+            "properties": {
+                "hanging": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_exposed_lightning_rod": {
+        "block_added": {
+            "defaults": {
+                "facing_direction": "0",
+                "powered_bit": "0b"
+            },
+            "properties": {
+                "facing_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_lightning_rod": {
+        "block_added": {
+            "defaults": {
+                "facing_direction": "0",
+                "powered_bit": "0b"
+            },
+            "properties": {
+                "facing_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_oxidized_copper_bars": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:waxed_oxidized_copper_chain": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_oxidized_copper_golem_statue": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_oxidized_copper_lantern": {
+        "block_added": {
+            "defaults": {
+                "hanging": "0b"
+            },
+            "properties": {
+                "hanging": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_oxidized_lightning_rod": {
+        "block_added": {
+            "defaults": {
+                "facing_direction": "0",
+                "powered_bit": "0b"
+            },
+            "properties": {
+                "facing_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_weathered_copper_bars": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:waxed_weathered_copper_chain": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_weathered_copper_golem_statue": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_weathered_copper_lantern": {
+        "block_added": {
+            "defaults": {
+                "hanging": "0b"
+            },
+            "properties": {
+                "hanging": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_weathered_lightning_rod": {
+        "block_added": {
+            "defaults": {
+                "facing_direction": "0",
+                "powered_bit": "0b"
+            },
+            "properties": {
+                "facing_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:weathered_copper_bars": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:weathered_copper_chain": {
+        "block_added": {
+            "defaults": {
+                "pillar_axis": "\"y\""
+            },
+            "properties": {
+                "pillar_axis": [
+                    "\"y\"",
+                    "\"x\"",
+                    "\"z\""
+                ]
+            }
+        }
+    },
+    "minecraft:weathered_copper_golem_statue": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ]
+            }
+        }
+    },
+    "minecraft:weathered_copper_lantern": {
+        "block_added": {
+            "defaults": {
+                "hanging": "0b"
+            },
+            "properties": {
+                "hanging": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    },
+    "minecraft:weathered_lightning_rod": {
+        "block_added": {
+            "defaults": {
+                "facing_direction": "0",
+                "powered_bit": "0b"
+            },
+            "properties": {
+                "facing_direction": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "powered_bit": [
+                    "0b",
+                    "1b"
+                ]
+            }
+        }
+    }
+}

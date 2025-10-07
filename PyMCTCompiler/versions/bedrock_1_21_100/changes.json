@@ -1,0 +1,122 @@
+{
+    "minecraft:copper_chest": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ]
+            }
+        }
+    },
+    "minecraft:exposed_copper_chest": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ]
+            }
+        }
+    },
+    "minecraft:oxidized_copper_chest": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_copper_chest": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_exposed_copper_chest": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_oxidized_copper_chest": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_weathered_copper_chest": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ]
+            }
+        }
+    },
+    "minecraft:weathered_copper_chest": {
+        "block_added": {
+            "defaults": {
+                "minecraft:cardinal_direction": "\"south\""
+            },
+            "properties": {
+                "minecraft:cardinal_direction": [
+                    "\"south\"",
+                    "\"west\"",
+                    "\"north\"",
+                    "\"east\""
+                ]
+            }
+        }
+    }
+}
