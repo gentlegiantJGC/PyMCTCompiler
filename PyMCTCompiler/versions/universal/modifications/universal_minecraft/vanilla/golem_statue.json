@@ -1,0 +1,45 @@
+{
+	"remove": [
+		"copper_golem_statue",
+		"exposed_copper_golem_statue",
+		"weathered_copper_golem_statue",
+		"oxidized_copper_golem_statue",
+		"waxed_copper_golem_statue",
+		"waxed_exposed_copper_golem_statue",
+		"waxed_weathered_copper_golem_statue",
+		"waxed_oxidized_copper_golem_statue"
+	],
+	"add": {
+		"golem_statue": {
+			"properties": {
+				"material": [
+					"\"copper\"",
+					"\"exposed_copper\"",
+					"\"weathered_copper\"",
+					"\"oxidized_copper\"",
+					"\"waxed_copper\"",
+					"\"waxed_exposed_copper\"",
+					"\"waxed_weathered_copper\"",
+					"\"waxed_oxidized_copper\""
+				],
+				"copper_golem_pose": [
+					"\"standing\"",
+					"\"sitting\"",
+					"\"running\"",
+					"\"star\""
+				],
+				"facing": [
+					"\"north\"",
+					"\"south\"",
+					"\"west\"",
+					"\"east\""
+				]
+			},
+			"defaults": {
+				"material": "\"copper\"",
+				"copper_golem_pose": "\"standing\"",
+				"facing": "\"north\""
+			}
+		}
+	}
+}

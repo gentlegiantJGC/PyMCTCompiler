@@ -1,26 +1,46 @@
 {
 	"remove": [
-		"chest"
+		"chest",
+		"copper_chest",
+		"exposed_copper_chest",
+		"weathered_copper_chest",
+		"oxidized_copper_chest",
+		"waxed_copper_chest",
+		"waxed_exposed_copper_chest",
+		"waxed_weathered_copper_chest",
+		"waxed_oxidized_copper_chest"
 	],
 	"add": {
 		"chest": {
 			"properties": {
-		        "facing": [
-		            "\"north\"",
-		            "\"south\"",
-		            "\"west\"",
-		            "\"east\""
-		        ],
-		        "connection": [
-		            "\"none\"",
-		            "\"left\"",
-		            "\"right\""
-		        ]
-		    },
-		    "defaults": {
-		        "facing": "\"north\"",
-		        "connection": "\"none\""
-		    },
+				"material": [
+					"\"wood\"",
+					"\"copper\"",
+					"\"exposed_copper\"",
+					"\"weathered_copper\"",
+					"\"oxidized_copper\"",
+					"\"waxed_copper\"",
+					"\"waxed_exposed_copper\"",
+					"\"waxed_weathered_copper\"",
+					"\"waxed_oxidized_copper\""
+				],
+				"facing": [
+					"\"north\"",
+					"\"south\"",
+					"\"west\"",
+					"\"east\""
+				],
+				"connection": [
+					"\"none\"",
+					"\"left\"",
+					"\"right\""
+				]
+			},
+			"defaults": {
+				"material": "\"wood\"",
+				"facing": "\"north\"",
+				"connection": "\"none\""
+			},
 			"unbt": "nbt.chest.universal"
 		}
 	}

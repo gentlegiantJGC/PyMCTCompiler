@@ -1,11 +1,17 @@
 {
 	"remove": [
 		"torch",
-		"wall_torch"
+		"wall_torch",
+		"copper_torch",
+		"copper_wall_torch"
 	],
 	"add": {
 		"torch": {
 			"properties": {
+				"material": [
+					"\"normal\"",
+					"\"copper\""
+				],
 				"facing": [
 					"\"up\"",
 					"\"north\"",
@@ -15,6 +21,7 @@
 				]
 			},
 			"defaults": {
+				"material": "\"normal\"",
 				"facing": "\"up\""
 			}
 		}
