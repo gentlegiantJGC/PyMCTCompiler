@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "bamboo_shelf", "\"bamboo\"", "universal_minecraft", "shelf", {"facing": ["\"north\"", "\"south\"", "\"west\"", "\"east\""], "powered": ["\"true\"", "\"false\""], "side_chain": ["\"unconnected\"", "\"right\"", "\"center\"", "\"left\""]}, default="minecraft:shelf")
