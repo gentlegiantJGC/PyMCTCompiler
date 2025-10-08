@@ -1,0 +1,27 @@
+{
+    "to_universal": [
+        {
+            "function": "new_properties",
+            "options": {
+                "material": "\"spruce\""
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:shelf": [
+            {
+                "function": "map_properties",
+                "options": {
+                    "material": {
+                        "\"spruce\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:spruce_shelf"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

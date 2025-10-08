@@ -9,6 +9,7 @@ from .common import (
 
 """
 J121    "minecraft:shelf"   {components: {}, align_items_to_bottom: 0b, Items: []}
+B121    "Shelf"             {isMovable: 1b, Items: []}
 """
 
 universal = {
@@ -40,6 +41,15 @@ j121 = merge(
         java_components,
         java_align_items_to_bottom,
         java_items_3,
+    ],
+    ["universal_minecraft:shelf"],
+)
+
+b121 = merge(
+    [
+        EmptyNBT(":Shelf"),
+        bedrock_items_3,
+        bedrock_is_movable,
     ],
     ["universal_minecraft:shelf"],
 )

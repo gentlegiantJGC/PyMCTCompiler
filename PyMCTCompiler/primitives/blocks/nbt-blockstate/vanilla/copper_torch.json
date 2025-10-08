@@ -1,0 +1,133 @@
+{
+    "specification": {
+        "properties": {
+            "torch_facing_direction": [
+                "\"top\"",
+                "\"west\"",
+                "\"east\"",
+                "\"north\"",
+                "\"south\"",
+                "\"unknown\""
+            ]
+        },
+        "defaults": {
+            "torch_facing_direction": "\"top\""
+        }
+    },
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:copper_torch"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "torch_facing_direction": {
+                    "\"unknown\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"up\""
+                            }
+                        }
+                    ],
+                    "\"west\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"east\""
+                            }
+                        }
+                    ],
+                    "\"east\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"west\""
+                            }
+                        }
+                    ],
+                    "\"north\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"south\""
+                            }
+                        }
+                    ],
+                    "\"south\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"north\""
+                            }
+                        }
+                    ],
+                    "\"top\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"up\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:copper_torch": [
+            {
+                "function": "new_block",
+                "options": "minecraft:copper_torch"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "facing": {
+                        "\"west\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": "\"east\""
+                                }
+                            }
+                        ],
+                        "\"east\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": "\"west\""
+                                }
+                            }
+                        ],
+                        "\"north\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": "\"south\""
+                                }
+                            }
+                        ],
+                        "\"south\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": "\"north\""
+                                }
+                            }
+                        ],
+                        "\"up\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "torch_facing_direction": "\"top\""
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

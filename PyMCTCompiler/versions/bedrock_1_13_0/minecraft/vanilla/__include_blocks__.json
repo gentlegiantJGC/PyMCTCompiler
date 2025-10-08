@@ -92,7 +92,7 @@
 	"stonebrick": "stonebrick",
 	"brown_mushroom_block": "brown_mushroom_block",
 	"red_mushroom_block": "red_mushroom_block",
-	"iron_bars": ["iron_bars", "cardinal_connections"],
+	"iron_bars": ["bars", "cardinal_connections"],
 	"glass_pane": ["glass_pane", "cardinal_connections"],
 	"melon_block": "melon_block",
 	"pumpkin_stem": "pumpkin_stem",

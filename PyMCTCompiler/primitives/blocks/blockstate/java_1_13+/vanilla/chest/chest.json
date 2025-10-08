@@ -1,26 +1,40 @@
 {
-	"specification": {
-		"properties": {
-			"facing": ["\"north\"", "\"south\"", "\"west\"", "\"east\""],
-			"type": ["\"single\"", "\"left\"", "\"right\""]
-		},
-		"defaults": {
-			"facing": "\"north\"",
-			"type": "\"single\""
-		}
-	},
-	"to_universal": [
-		{
-			"function": "new_block",
-			"options": "universal_minecraft:chest"
-		},
-		{
-			"function": "carry_properties",
-			"options": {
-				"facing": ["\"north\"", "\"south\"", "\"west\"", "\"east\""]
-			}
-		},
-		{
+    "specification": {
+        "properties": {
+            "facing": [
+                "\"north\"",
+                "\"south\"",
+                "\"west\"",
+                "\"east\""
+            ],
+            "type": [
+                "\"single\"",
+                "\"left\"",
+                "\"right\""
+            ]
+        },
+        "defaults": {
+            "facing": "\"north\"",
+            "type": "\"single\""
+        }
+    },
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:chest"
+        },
+        {
+            "function": "carry_properties",
+            "options": {
+                "facing": [
+                    "\"north\"",
+                    "\"south\"",
+                    "\"west\"",
+                    "\"east\""
+                ]
+            }
+        },
+        {
             "function": "map_properties",
             "options": {
                 "type": {
@@ -51,50 +65,55 @@
                 }
             }
         }
-	],
-	"from_universal": {
-		"universal_minecraft:chest": [
-			{
-				"function": "new_block",
-				"options": "minecraft:chest"
-			},
-			{
-				"function": "carry_properties",
-				"options": {
-					"facing": ["\"north\"", "\"south\"", "\"west\"", "\"east\""]
-				}
-			},
-			{
-	            "function": "map_properties",
-	            "options": {
-	                "connection": {
-	                    "\"none\"": [
-	                        {
-	                            "function": "new_properties",
-	                            "options": {
-	                                "type": "\"single\""
-	                            }
-	                        }
-	                    ],
-	                    "\"left\"": [
-	                        {
-	                            "function": "new_properties",
-	                            "options": {
-	                                "type": "\"left\""
-	                            }
-	                        }
-	                    ],
-	                    "\"right\"": [
-	                        {
-	                            "function": "new_properties",
-	                            "options": {
-	                                "type": "\"right\""
-	                            }
-	                        }
-	                    ]
-	                }
-	            }
-	        }
-		]
-	}
+    ],
+    "from_universal": {
+        "universal_minecraft:chest": [
+            {
+                "function": "new_block",
+                "options": "minecraft:chest"
+            },
+            {
+                "function": "carry_properties",
+                "options": {
+                    "facing": [
+                        "\"north\"",
+                        "\"south\"",
+                        "\"west\"",
+                        "\"east\""
+                    ]
+                }
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "connection": {
+                        "\"none\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "type": "\"single\""
+                                }
+                            }
+                        ],
+                        "\"left\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "type": "\"left\""
+                                }
+                            }
+                        ],
+                        "\"right\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "type": "\"right\""
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
 }

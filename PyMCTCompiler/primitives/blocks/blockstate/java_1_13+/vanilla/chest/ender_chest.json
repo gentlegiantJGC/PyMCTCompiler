@@ -1,34 +1,51 @@
 {
-	"specification": {
-		"properties": {
-			"facing": ["\"north\"", "\"south\"", "\"west\"", "\"east\""]
-		},
-		"defaults": {
-			"facing": "\"north\""
-		}
-	},
-	"to_universal": [
-		{
-			"function": "new_block",
-			"options": "universal_minecraft:ender_chest"
-		}, {
-			"function": "carry_properties",
-			"options": {
-				"facing": ["\"north\"", "\"south\"", "\"west\"", "\"east\""]
-			}
-		}
-	],
-	"from_universal": {
-		"universal_minecraft:ender_chest": [
-			{
-				"function": "new_block",
-				"options": "minecraft:ender_chest"
-			}, {
-				"function": "carry_properties",
-				"options": {
-					"facing": ["\"north\"", "\"south\"", "\"west\"", "\"east\""]
-				}
-			}
-		]
-	}
+    "specification": {
+        "properties": {
+            "facing": [
+                "\"north\"",
+                "\"south\"",
+                "\"west\"",
+                "\"east\""
+            ]
+        },
+        "defaults": {
+            "facing": "\"north\""
+        }
+    },
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:ender_chest"
+        },
+        {
+            "function": "carry_properties",
+            "options": {
+                "facing": [
+                    "\"north\"",
+                    "\"south\"",
+                    "\"west\"",
+                    "\"east\""
+                ]
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:ender_chest": [
+            {
+                "function": "new_block",
+                "options": "minecraft:ender_chest"
+            },
+            {
+                "function": "carry_properties",
+                "options": {
+                    "facing": [
+                        "\"north\"",
+                        "\"south\"",
+                        "\"west\"",
+                        "\"east\""
+                    ]
+                }
+            }
+        ]
+    }
 }
