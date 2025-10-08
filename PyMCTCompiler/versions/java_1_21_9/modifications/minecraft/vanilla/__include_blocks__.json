@@ -22,7 +22,7 @@
 	"spruce_shelf": [">nbt.shelf.j121", "spruce_shelf"],
 	"warped_shelf": [">nbt.shelf.j121", "warped_shelf"],
 
-	"iron_bars": "iron_bars",
+	"iron_bars": "iron_bars_121",
 	"copper_bars": "copper_bars",
 	"exposed_copper_bars": "exposed_copper_bars",
 	"weathered_copper_bars": "weathered_copper_bars",

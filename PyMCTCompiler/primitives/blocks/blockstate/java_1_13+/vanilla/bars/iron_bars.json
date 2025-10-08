@@ -1,0 +1,58 @@
+{
+	"to_universal": [
+		{
+			"function": "new_block",
+			"options": "universal_minecraft:bars"
+		},
+		{
+			"function": "carry_properties",
+			"options": {
+				"east": [
+					"\"true\"",
+					"\"false\""
+				],
+				"north": [
+					"\"true\"",
+					"\"false\""
+				],
+				"south": [
+					"\"true\"",
+					"\"false\""
+				],
+				"west": [
+					"\"true\"",
+					"\"false\""
+				]
+			}
+		}
+	],
+	"from_universal": {
+		"universal_minecraft:bars": [
+			{
+				"function": "new_block",
+				"options": "minecraft:iron_bars"
+			},
+			{
+				"function": "carry_properties",
+				"options": {
+					"east": [
+						"\"true\"",
+						"\"false\""
+					],
+					"north": [
+						"\"true\"",
+						"\"false\""
+					],
+					"south": [
+						"\"true\"",
+						"\"false\""
+					],
+					"west": [
+						"\"true\"",
+						"\"false\""
+					]
+				}
+			}
+		]
+	}
+}
