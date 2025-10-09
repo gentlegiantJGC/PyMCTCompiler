@@ -35,14 +35,14 @@
 
 	"copper_torch": "copper_torch",
 
-	"lightning_rod": ["lightning_rod", "copper_lightning_rod"],
-	"exposed_lightning_rod": ["lightning_rod", "exposed_lightning_rod"],
-	"weathered_lightning_rod": ["lightning_rod", "weathered_lightning_rod"],
-	"oxidized_lightning_rod": ["lightning_rod", "oxidized_lightning_rod"],
-	"waxed_exposed_lightning_rod": ["lightning_rod", "waxed_exposed_lightning_rod"],
-	"waxed_lightning_rod": ["lightning_rod", "waxed_lightning_rod"],
-	"waxed_weathered_lightning_rod": ["lightning_rod", "waxed_weathered_lightning_rod"],
-	"waxed_oxidized_lightning_rod": ["lightning_rod", "waxed_oxidized_lightning_rod"],
+	"lightning_rod": ["lightning_rod_121", "copper_lightning_rod"],
+	"exposed_lightning_rod": ["lightning_rod_121", "exposed_lightning_rod"],
+	"weathered_lightning_rod": ["lightning_rod_121", "weathered_lightning_rod"],
+	"oxidized_lightning_rod": ["lightning_rod_121", "oxidized_lightning_rod"],
+	"waxed_exposed_lightning_rod": ["lightning_rod_121", "waxed_exposed_lightning_rod"],
+	"waxed_lightning_rod": ["lightning_rod_121", "waxed_lightning_rod"],
+	"waxed_weathered_lightning_rod": ["lightning_rod_121", "waxed_weathered_lightning_rod"],
+	"waxed_oxidized_lightning_rod": ["lightning_rod_121", "waxed_oxidized_lightning_rod"],
 
 	"copper_golem_statue": ["golem_statue", "copper_golem_statue"],
 	"exposed_copper_golem_statue": ["golem_statue", "exposed_copper_golem_statue"],
