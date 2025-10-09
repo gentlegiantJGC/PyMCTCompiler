@@ -1,0 +1,198 @@
+{
+    "to_universal": [
+        {
+            "function": "new_block",
+            "options": "universal_minecraft:shelf"
+        },
+        {
+            "function": "map_properties",
+            "options": {
+                "minecraft:cardinal_direction": {
+                    "\"north\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"north\""
+                            }
+                        }
+                    ],
+                    "\"east\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"east\""
+                            }
+                        }
+                    ],
+                    "\"south\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"south\""
+                            }
+                        }
+                    ],
+                    "\"west\"": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "facing": "\"west\""
+                            }
+                        }
+                    ]
+                },
+                "powered_bit": {
+                    "0b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "powered": "\"false\""
+                            }
+                        }
+                    ],
+                    "1b": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "powered": "\"true\""
+                            }
+                        }
+                    ]
+                },
+                "powered_shelf_type": {
+                    "0": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "side_chain": "\"unconnected\""
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "side_chain": "\"right\""
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "side_chain": "\"center\""
+                            }
+                        }
+                    ],
+                    "3": [
+                        {
+                            "function": "new_properties",
+                            "options": {
+                                "side_chain": "\"left\""
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:shelf": [
+            {
+                "function": "new_block",
+                "options": "minecraft:oak_shelf"
+            },
+            {
+                "function": "map_properties",
+                "options": {
+                    "facing": {
+                        "\"north\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"north\""
+                                }
+                            }
+                        ],
+                        "\"east\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"east\""
+                                }
+                            }
+                        ],
+                        "\"south\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"south\""
+                                }
+                            }
+                        ],
+                        "\"west\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "minecraft:cardinal_direction": "\"west\""
+                                }
+                            }
+                        ]
+                    },
+                    "powered": {
+                        "\"false\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "powered_bit": "0b"
+                                }
+                            }
+                        ],
+                        "\"true\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "powered_bit": "1b"
+                                }
+                            }
+                        ]
+                    },
+                    "side_chain": {
+                        "\"unconnected\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "powered_shelf_type": "0"
+                                }
+                            }
+                        ],
+                        "\"right\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "powered_shelf_type": "1"
+                                }
+                            }
+                        ],
+                        "\"center\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "powered_shelf_type": "2"
+                                }
+                            }
+                        ],
+                        "\"left\"": [
+                            {
+                                "function": "new_properties",
+                                "options": {
+                                    "powered_shelf_type": "3"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

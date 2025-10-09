@@ -1,0 +1,22 @@
+{
+	"remove": [
+		"copper_torch",
+		"copper_wall_torch"
+	],
+	"add": {
+		"copper_torch": {
+			"properties": {
+				"facing": [
+					"\"up\"",
+					"\"north\"",
+					"\"south\"",
+					"\"west\"",
+					"\"east\""
+				]
+			},
+			"defaults": {
+				"facing": "\"up\""
+			}
+		}
+	}
+}

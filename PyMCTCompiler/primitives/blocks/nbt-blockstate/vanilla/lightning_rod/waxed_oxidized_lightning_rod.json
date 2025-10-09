@@ -1,0 +1,27 @@
+{
+    "to_universal": [
+        {
+            "function": "new_properties",
+            "options": {
+                "material": "\"waxed_oxidized_copper\""
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:lightning_rod": [
+            {
+                "function": "map_properties",
+                "options": {
+                    "material": {
+                        "\"waxed_oxidized_copper\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:waxed_oxidized_lightning_rod"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

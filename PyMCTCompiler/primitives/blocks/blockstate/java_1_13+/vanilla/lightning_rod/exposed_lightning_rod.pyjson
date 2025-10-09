@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "exposed_lightning_rod", "\"exposed_copper\"", "universal_minecraft", "lightning_rod", {"facing": ["\"north\"", "\"east\"", "\"south\"", "\"west\"", "\"up\"", "\"down\""], "powered": ["\"true\"", "\"false\""]}, default="minecraft:lightning_rod")

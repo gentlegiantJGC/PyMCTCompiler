@@ -1,0 +1,1602 @@
+{
+    "minecraft:acacia_shelf": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "powered": "false",
+                "side_chain": "unconnected",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "side_chain": [
+                    "unconnected",
+                    "right",
+                    "center",
+                    "left"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:bamboo_shelf": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "powered": "false",
+                "side_chain": "unconnected",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "side_chain": [
+                    "unconnected",
+                    "right",
+                    "center",
+                    "left"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:birch_shelf": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "powered": "false",
+                "side_chain": "unconnected",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "side_chain": [
+                    "unconnected",
+                    "right",
+                    "center",
+                    "left"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:chain": {
+        "block_removed": true
+    },
+    "minecraft:cherry_shelf": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "powered": "false",
+                "side_chain": "unconnected",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "side_chain": [
+                    "unconnected",
+                    "right",
+                    "center",
+                    "left"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:copper_bars": {
+        "block_added": {
+            "defaults": {
+                "east": "false",
+                "north": "false",
+                "south": "false",
+                "waterlogged": "false",
+                "west": "false"
+            },
+            "properties": {
+                "east": [
+                    "true",
+                    "false"
+                ],
+                "north": [
+                    "true",
+                    "false"
+                ],
+                "south": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ],
+                "west": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:copper_chain": {
+        "block_added": {
+            "defaults": {
+                "axis": "y",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:copper_chest": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "type": "single",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "type": [
+                    "single",
+                    "left",
+                    "right"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:copper_golem_statue": {
+        "block_added": {
+            "defaults": {
+                "copper_golem_pose": "standing",
+                "facing": "north",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "copper_golem_pose": [
+                    "standing",
+                    "sitting",
+                    "running",
+                    "star"
+                ],
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:copper_lantern": {
+        "block_added": {
+            "defaults": {
+                "hanging": "false",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "hanging": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:copper_torch": {
+        "block_added": {
+            "defaults": {},
+            "properties": {}
+        }
+    },
+    "minecraft:copper_wall_torch": {
+        "block_added": {
+            "defaults": {
+                "facing": "north"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ]
+            }
+        }
+    },
+    "minecraft:crimson_shelf": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "powered": "false",
+                "side_chain": "unconnected",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "side_chain": [
+                    "unconnected",
+                    "right",
+                    "center",
+                    "left"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:dark_oak_shelf": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "powered": "false",
+                "side_chain": "unconnected",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "side_chain": [
+                    "unconnected",
+                    "right",
+                    "center",
+                    "left"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:exposed_copper_bars": {
+        "block_added": {
+            "defaults": {
+                "east": "false",
+                "north": "false",
+                "south": "false",
+                "waterlogged": "false",
+                "west": "false"
+            },
+            "properties": {
+                "east": [
+                    "true",
+                    "false"
+                ],
+                "north": [
+                    "true",
+                    "false"
+                ],
+                "south": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ],
+                "west": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:exposed_copper_chain": {
+        "block_added": {
+            "defaults": {
+                "axis": "y",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:exposed_copper_chest": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "type": "single",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "type": [
+                    "single",
+                    "left",
+                    "right"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:exposed_copper_golem_statue": {
+        "block_added": {
+            "defaults": {
+                "copper_golem_pose": "standing",
+                "facing": "north",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "copper_golem_pose": [
+                    "standing",
+                    "sitting",
+                    "running",
+                    "star"
+                ],
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:exposed_copper_lantern": {
+        "block_added": {
+            "defaults": {
+                "hanging": "false",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "hanging": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:exposed_lightning_rod": {
+        "block_added": {
+            "defaults": {
+                "facing": "up",
+                "powered": "false",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "east",
+                    "south",
+                    "west",
+                    "up",
+                    "down"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:iron_chain": {
+        "block_added": {
+            "defaults": {
+                "axis": "y",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:jungle_shelf": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "powered": "false",
+                "side_chain": "unconnected",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "side_chain": [
+                    "unconnected",
+                    "right",
+                    "center",
+                    "left"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:mangrove_shelf": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "powered": "false",
+                "side_chain": "unconnected",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "side_chain": [
+                    "unconnected",
+                    "right",
+                    "center",
+                    "left"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:oak_shelf": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "powered": "false",
+                "side_chain": "unconnected",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "side_chain": [
+                    "unconnected",
+                    "right",
+                    "center",
+                    "left"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:oxidized_copper_bars": {
+        "block_added": {
+            "defaults": {
+                "east": "false",
+                "north": "false",
+                "south": "false",
+                "waterlogged": "false",
+                "west": "false"
+            },
+            "properties": {
+                "east": [
+                    "true",
+                    "false"
+                ],
+                "north": [
+                    "true",
+                    "false"
+                ],
+                "south": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ],
+                "west": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:oxidized_copper_chain": {
+        "block_added": {
+            "defaults": {
+                "axis": "y",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:oxidized_copper_chest": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "type": "single",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "type": [
+                    "single",
+                    "left",
+                    "right"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:oxidized_copper_golem_statue": {
+        "block_added": {
+            "defaults": {
+                "copper_golem_pose": "standing",
+                "facing": "north",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "copper_golem_pose": [
+                    "standing",
+                    "sitting",
+                    "running",
+                    "star"
+                ],
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:oxidized_copper_lantern": {
+        "block_added": {
+            "defaults": {
+                "hanging": "false",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "hanging": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:oxidized_lightning_rod": {
+        "block_added": {
+            "defaults": {
+                "facing": "up",
+                "powered": "false",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "east",
+                    "south",
+                    "west",
+                    "up",
+                    "down"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:pale_oak_shelf": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "powered": "false",
+                "side_chain": "unconnected",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "side_chain": [
+                    "unconnected",
+                    "right",
+                    "center",
+                    "left"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:spruce_shelf": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "powered": "false",
+                "side_chain": "unconnected",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "side_chain": [
+                    "unconnected",
+                    "right",
+                    "center",
+                    "left"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:warped_shelf": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "powered": "false",
+                "side_chain": "unconnected",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "side_chain": [
+                    "unconnected",
+                    "right",
+                    "center",
+                    "left"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_copper_bars": {
+        "block_added": {
+            "defaults": {
+                "east": "false",
+                "north": "false",
+                "south": "false",
+                "waterlogged": "false",
+                "west": "false"
+            },
+            "properties": {
+                "east": [
+                    "true",
+                    "false"
+                ],
+                "north": [
+                    "true",
+                    "false"
+                ],
+                "south": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ],
+                "west": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_copper_chain": {
+        "block_added": {
+            "defaults": {
+                "axis": "y",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_copper_chest": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "type": "single",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "type": [
+                    "single",
+                    "left",
+                    "right"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_copper_golem_statue": {
+        "block_added": {
+            "defaults": {
+                "copper_golem_pose": "standing",
+                "facing": "north",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "copper_golem_pose": [
+                    "standing",
+                    "sitting",
+                    "running",
+                    "star"
+                ],
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_copper_lantern": {
+        "block_added": {
+            "defaults": {
+                "hanging": "false",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "hanging": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_exposed_copper_bars": {
+        "block_added": {
+            "defaults": {
+                "east": "false",
+                "north": "false",
+                "south": "false",
+                "waterlogged": "false",
+                "west": "false"
+            },
+            "properties": {
+                "east": [
+                    "true",
+                    "false"
+                ],
+                "north": [
+                    "true",
+                    "false"
+                ],
+                "south": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ],
+                "west": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_exposed_copper_chain": {
+        "block_added": {
+            "defaults": {
+                "axis": "y",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_exposed_copper_chest": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "type": "single",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "type": [
+                    "single",
+                    "left",
+                    "right"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_exposed_copper_golem_statue": {
+        "block_added": {
+            "defaults": {
+                "copper_golem_pose": "standing",
+                "facing": "north",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "copper_golem_pose": [
+                    "standing",
+                    "sitting",
+                    "running",
+                    "star"
+                ],
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_exposed_copper_lantern": {
+        "block_added": {
+            "defaults": {
+                "hanging": "false",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "hanging": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_exposed_lightning_rod": {
+        "block_added": {
+            "defaults": {
+                "facing": "up",
+                "powered": "false",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "east",
+                    "south",
+                    "west",
+                    "up",
+                    "down"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_lightning_rod": {
+        "block_added": {
+            "defaults": {
+                "facing": "up",
+                "powered": "false",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "east",
+                    "south",
+                    "west",
+                    "up",
+                    "down"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_oxidized_copper_bars": {
+        "block_added": {
+            "defaults": {
+                "east": "false",
+                "north": "false",
+                "south": "false",
+                "waterlogged": "false",
+                "west": "false"
+            },
+            "properties": {
+                "east": [
+                    "true",
+                    "false"
+                ],
+                "north": [
+                    "true",
+                    "false"
+                ],
+                "south": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ],
+                "west": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_oxidized_copper_chain": {
+        "block_added": {
+            "defaults": {
+                "axis": "y",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_oxidized_copper_chest": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "type": "single",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "type": [
+                    "single",
+                    "left",
+                    "right"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_oxidized_copper_golem_statue": {
+        "block_added": {
+            "defaults": {
+                "copper_golem_pose": "standing",
+                "facing": "north",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "copper_golem_pose": [
+                    "standing",
+                    "sitting",
+                    "running",
+                    "star"
+                ],
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_oxidized_copper_lantern": {
+        "block_added": {
+            "defaults": {
+                "hanging": "false",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "hanging": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_oxidized_lightning_rod": {
+        "block_added": {
+            "defaults": {
+                "facing": "up",
+                "powered": "false",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "east",
+                    "south",
+                    "west",
+                    "up",
+                    "down"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_weathered_copper_bars": {
+        "block_added": {
+            "defaults": {
+                "east": "false",
+                "north": "false",
+                "south": "false",
+                "waterlogged": "false",
+                "west": "false"
+            },
+            "properties": {
+                "east": [
+                    "true",
+                    "false"
+                ],
+                "north": [
+                    "true",
+                    "false"
+                ],
+                "south": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ],
+                "west": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_weathered_copper_chain": {
+        "block_added": {
+            "defaults": {
+                "axis": "y",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_weathered_copper_chest": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "type": "single",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "type": [
+                    "single",
+                    "left",
+                    "right"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_weathered_copper_golem_statue": {
+        "block_added": {
+            "defaults": {
+                "copper_golem_pose": "standing",
+                "facing": "north",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "copper_golem_pose": [
+                    "standing",
+                    "sitting",
+                    "running",
+                    "star"
+                ],
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_weathered_copper_lantern": {
+        "block_added": {
+            "defaults": {
+                "hanging": "false",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "hanging": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:waxed_weathered_lightning_rod": {
+        "block_added": {
+            "defaults": {
+                "facing": "up",
+                "powered": "false",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "east",
+                    "south",
+                    "west",
+                    "up",
+                    "down"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:weathered_copper_bars": {
+        "block_added": {
+            "defaults": {
+                "east": "false",
+                "north": "false",
+                "south": "false",
+                "waterlogged": "false",
+                "west": "false"
+            },
+            "properties": {
+                "east": [
+                    "true",
+                    "false"
+                ],
+                "north": [
+                    "true",
+                    "false"
+                ],
+                "south": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ],
+                "west": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:weathered_copper_chain": {
+        "block_added": {
+            "defaults": {
+                "axis": "y",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "axis": [
+                    "x",
+                    "y",
+                    "z"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:weathered_copper_chest": {
+        "block_added": {
+            "defaults": {
+                "facing": "north",
+                "type": "single",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "type": [
+                    "single",
+                    "left",
+                    "right"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:weathered_copper_golem_statue": {
+        "block_added": {
+            "defaults": {
+                "copper_golem_pose": "standing",
+                "facing": "north",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "copper_golem_pose": [
+                    "standing",
+                    "sitting",
+                    "running",
+                    "star"
+                ],
+                "facing": [
+                    "north",
+                    "south",
+                    "west",
+                    "east"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:weathered_copper_lantern": {
+        "block_added": {
+            "defaults": {
+                "hanging": "false",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "hanging": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    },
+    "minecraft:weathered_lightning_rod": {
+        "block_added": {
+            "defaults": {
+                "facing": "up",
+                "powered": "false",
+                "waterlogged": "false"
+            },
+            "properties": {
+                "facing": [
+                    "north",
+                    "east",
+                    "south",
+                    "west",
+                    "up",
+                    "down"
+                ],
+                "powered": [
+                    "true",
+                    "false"
+                ],
+                "waterlogged": [
+                    "true",
+                    "false"
+                ]
+            }
+        }
+    }
+}

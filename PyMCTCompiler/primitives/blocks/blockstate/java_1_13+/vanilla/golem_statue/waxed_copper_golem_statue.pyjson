@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "waxed_copper_golem_statue", "\"waxed_copper\"", "universal_minecraft", "golem_statue", {"copper_golem_pose": ["\"standing\"", "\"sitting\"", "\"running\"", "\"star\""], "facing": ["\"north\"", "\"south\"", "\"west\"", "\"east\""]}, default="minecraft:golem_statue")

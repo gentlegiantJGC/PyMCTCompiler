@@ -1,0 +1,38 @@
+{
+	"remove": [
+		"lantern",
+		"copper_lantern",
+		"exposed_copper_lantern",
+		"weathered_copper_lantern",
+		"oxidized_copper_lantern",
+		"waxed_copper_lantern",
+		"waxed_exposed_copper_lantern",
+		"waxed_weathered_copper_lantern",
+		"waxed_oxidized_copper_lantern"
+	],
+	"add": {
+		"lantern": {
+			"properties": {
+				"material": [
+					"\"iron\"",
+					"\"copper\"",
+					"\"exposed_copper\"",
+					"\"weathered_copper\"",
+					"\"oxidized_copper\"",
+					"\"waxed_copper\"",
+					"\"waxed_exposed_copper\"",
+					"\"waxed_weathered_copper\"",
+					"\"waxed_oxidized_copper\""
+				],
+				"hanging": [
+					"\"true\"",
+					"\"false\""
+				]
+			},
+			"defaults": {
+				"material": "\"iron\"",
+				"hanging": "\"false\""
+			}
+		}
+	}
+}

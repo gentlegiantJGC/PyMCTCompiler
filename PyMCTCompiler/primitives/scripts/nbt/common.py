@@ -69,6 +69,16 @@ java_recipes_used_size = NBTRemapHelper(
     "{RecipesUsedSize: 0s}",
 )
 
+java_components = NBTRemapHelper(
+    [
+        (
+            ("components", "compound", []),
+            ("components", "compound", [("utags", "compound")])
+        )
+    ],
+    "{components: {}}"
+)
+
 bedrock_furnace_base = NBTRemapHelper(
     [
         (("BurnTime", "short", []), ("BurnTime", "short", [("utags", "compound")])),

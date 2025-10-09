@@ -1,0 +1,53 @@
+{
+	"remove": [
+		"iron_bars",
+		"copper_bars",
+		"exposed_copper_bars",
+		"weathered_copper_bars",
+		"oxidized_copper_bars",
+		"waxed_copper_bars",
+		"waxed_exposed_copper_bars",
+		"waxed_weathered_copper_bars",
+		"waxed_oxidized_copper_bars"
+	],
+	"add": {
+		"bars": {
+			"properties": {
+				"material": [
+					"\"iron\"",
+					"\"copper\"",
+					"\"exposed_copper\"",
+					"\"weathered_copper\"",
+					"\"oxidized_copper\"",
+					"\"waxed_copper\"",
+					"\"waxed_exposed_copper\"",
+					"\"waxed_weathered_copper\"",
+					"\"waxed_oxidized_copper\""
+				],
+				"east": [
+					"\"true\"",
+					"\"false\""
+				],
+				"north": [
+					"\"true\"",
+					"\"false\""
+				],
+				"south": [
+					"\"true\"",
+					"\"false\""
+				],
+				"west": [
+					"\"true\"",
+					"\"false\""
+				]
+			},
+			"defaults": {
+				"material": "\"iron\"",
+				"east": "\"false\"",
+				"north": "\"false\"",
+				"south": "\"false\"",
+				"west": "\"false\""
+			}
+		}
+	}
+}

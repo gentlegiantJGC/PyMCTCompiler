@@ -1,0 +1,39 @@
+{
+	"remove": [
+		"iron_chain",
+		"copper_chain",
+		"exposed_copper_chain",
+		"weathered_copper_chain",
+		"oxidized_copper_chain",
+		"waxed_copper_chain",
+		"waxed_exposed_copper_chain",
+		"waxed_weathered_copper_chain",
+		"waxed_oxidized_copper_chain"
+	],
+	"add": {
+		"chain": {
+			"properties": {
+				"material": [
+					"\"iron\"",
+					"\"copper\"",
+					"\"exposed_copper\"",
+					"\"weathered_copper\"",
+					"\"oxidized_copper\"",
+					"\"waxed_copper\"",
+					"\"waxed_exposed_copper\"",
+					"\"waxed_weathered_copper\"",
+					"\"waxed_oxidized_copper\""
+				],
+				"axis": [
+					"\"x\"",
+					"\"y\"",
+					"\"z\""
+				]
+			},
+			"defaults": {
+				"material": "\"iron\"",
+				"axis": "\"y\""
+			}
+		}
+	}
+}

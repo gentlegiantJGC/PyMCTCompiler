@@ -1,0 +1,27 @@
+{
+    "to_universal": [
+        {
+            "function": "new_properties",
+            "options": {
+                "material": "\"dark_oak\""
+            }
+        }
+    ],
+    "from_universal": {
+        "universal_minecraft:shelf": [
+            {
+                "function": "map_properties",
+                "options": {
+                    "material": {
+                        "\"dark_oak\"": [
+                            {
+                                "function": "new_block",
+                                "options": "minecraft:dark_oak_shelf"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

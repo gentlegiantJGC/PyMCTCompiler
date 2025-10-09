@@ -1,0 +1,45 @@
+{
+	"remove": [
+		"lightning_rod",
+		"exposed_lightning_rod",
+		"weathered_lightning_rod",
+		"oxidized_lightning_rod",
+		"waxed_lightning_rod",
+		"waxed_exposed_lightning_rod",
+		"waxed_weathered_lightning_rod",
+		"waxed_oxidized_lightning_rod"
+	],
+	"add": {
+		"lightning_rod": {
+			"properties": {
+				"material": [
+					"\"copper\"",
+					"\"exposed_copper\"",
+					"\"weathered_copper\"",
+					"\"oxidized_copper\"",
+					"\"waxed_copper\"",
+					"\"waxed_exposed_copper\"",
+					"\"waxed_weathered_copper\"",
+					"\"waxed_oxidized_copper\""
+				],
+				"facing": [
+					"\"north\"",
+					"\"east\"",
+					"\"south\"",
+					"\"west\"",
+					"\"up\"",
+					"\"down\""
+				],
+				"powered": [
+					"\"true\"",
+					"\"false\""
+				]
+			},
+			"defaults": {
+				"material": "\"copper\"",
+				"facing": "\"up\"",
+				"powered": "\"false\""
+			}
+		}
+	}
+}

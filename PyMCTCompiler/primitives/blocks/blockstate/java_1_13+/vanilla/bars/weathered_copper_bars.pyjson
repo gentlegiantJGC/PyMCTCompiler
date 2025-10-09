@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "weathered_copper_bars", "\"weathered_copper\"", "universal_minecraft", "bars", {"east": ["\"true\"", "\"false\""], "north": ["\"true\"", "\"false\""], "south": ["\"true\"", "\"false\""], "west": ["\"true\"", "\"false\""]}, default="minecraft:iron_bars")

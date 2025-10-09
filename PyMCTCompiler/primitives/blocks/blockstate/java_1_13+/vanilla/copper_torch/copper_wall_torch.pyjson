@@ -1,0 +1,1 @@
+blockstate.torch("minecraft", "copper_wall_torch", True, "minecraft:copper_torch", "universal_minecraft", "copper_torch")

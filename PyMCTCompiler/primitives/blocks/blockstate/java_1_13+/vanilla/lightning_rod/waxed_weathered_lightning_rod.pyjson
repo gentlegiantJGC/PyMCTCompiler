@@ -1,0 +1,1 @@
+blockstate.material_helper("minecraft", "waxed_weathered_lightning_rod", "\"waxed_weathered_copper\"", "universal_minecraft", "lightning_rod", {"facing": ["\"north\"", "\"east\"", "\"south\"", "\"west\"", "\"up\"", "\"down\""], "powered": ["\"true\"", "\"false\""]}, default="minecraft:lightning_rod")
