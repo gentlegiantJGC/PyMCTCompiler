@@ -1,11 +1,11 @@
 {
-	"chest": [">nbt.chest.b120", "chest_120", "wood_chest"],
-	"copper_chest": [">nbt.chest.b120", "chest_120", "copper_chest"],
-	"exposed_copper_chest": [">nbt.chest.b120", "chest_120", "exposed_copper_chest"],
-	"oxidized_copper_chest": [">nbt.chest.b120", "chest_120", "oxidized_copper_chest"],
-	"waxed_copper_chest": [">nbt.chest.b120", "chest_120", "waxed_copper_chest"],
-	"waxed_exposed_copper_chest": [">nbt.chest.b120", "chest_120", "waxed_exposed_copper_chest"],
-	"waxed_oxidized_copper_chest": [">nbt.chest.b120", "chest_120", "waxed_oxidized_copper_chest"],
-	"waxed_weathered_copper_chest": [">nbt.chest.b120", "chest_120", "waxed_weathered_copper_chest"],
-	"weathered_copper_chest": [">nbt.chest.b120", "chest_120", "weathered_copper_chest"]
+	"chest": ["chest_120", ">nbt.chest.b120", "wood_chest"],
+	"copper_chest": ["chest_120", ">nbt.chest.b120", "copper_chest"],
+	"exposed_copper_chest": ["chest_120", ">nbt.chest.b120", "exposed_copper_chest"],
+	"oxidized_copper_chest": ["chest_120", ">nbt.chest.b120", "oxidized_copper_chest"],
+	"waxed_copper_chest": ["chest_120", ">nbt.chest.b120", "waxed_copper_chest"],
+	"waxed_exposed_copper_chest": ["chest_120", ">nbt.chest.b120", "waxed_exposed_copper_chest"],
+	"waxed_oxidized_copper_chest": ["chest_120", ">nbt.chest.b120", "waxed_oxidized_copper_chest"],
+	"waxed_weathered_copper_chest": ["chest_120", ">nbt.chest.b120", "waxed_weathered_copper_chest"],
+	"weathered_copper_chest": ["chest_120", ">nbt.chest.b120", "weathered_copper_chest"]
 }
