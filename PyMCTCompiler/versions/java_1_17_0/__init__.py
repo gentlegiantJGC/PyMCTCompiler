@@ -4,8 +4,10 @@ import os
 compiler = JavaBlockstateCompiler(
     os.path.dirname(__file__),
     version=[1, 17, 0],
+    version_max_known=[1, 17, 1],
     version_max=[1, 18, -1],
     parent_version="java_1_16_5",
     data_version=2724,
+    data_version_max_known=2730,
     data_version_max=2859,
 )
