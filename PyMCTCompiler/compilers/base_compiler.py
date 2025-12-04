@@ -150,6 +150,7 @@ class BaseCompiler:
             "entity_coord_format": self.entity_coord_format,
             "platform": self.platform,
             "version": self.version,
+            "version_max_known": self.version_max_known,
             "version_max": self.version_max,
         }
         if self.data_version is not None:
