@@ -8,9 +8,7 @@ from PyMCTCompiler.helpers import log_to_file
 
 
 class NumericalCompiler(BaseCompiler):
-    def __init__(self, *args, **kwargs):
-        BaseCompiler.__init__(self, *args, **kwargs)
-        self._numerical_block_map = None
+    _numerical_block_map = None
 
     def build(self):
         BaseCompiler.build(self)

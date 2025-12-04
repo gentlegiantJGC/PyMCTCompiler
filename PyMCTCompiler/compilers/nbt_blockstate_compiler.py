@@ -102,9 +102,7 @@ def find_blocks_changes(old_blocks: dict, new_blocks: dict):
 
 
 class NBTBlockstateCompiler(BaseCompiler):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self._block_palette = Undefined
+    _block_palette = Undefined
 
     def _save_data(
         self,

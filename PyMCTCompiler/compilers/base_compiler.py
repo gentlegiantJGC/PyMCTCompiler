@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Dict, Tuple, Union, List, Optional
+from typing import Dict, Tuple, Union, List, Optional, Literal, Any
 import os
 import glob
 import json
@@ -20,17 +20,20 @@ class BaseCompiler:
     def __init__(
         self,
         directory: str,
-        parent_version=None,
-        block_format=None,
-        block_entity_format=None,
-        block_entity_coord_format=None,
-        entity_format=None,
-        entity_coord_format=None,
-        platform=None,
-        version=None,
-        version_max=None,
-        data_version: int = None,
-        data_version_max: int = None,
+        *,
+        parent_version: str | None = None,
+        block_format: Literal["numerical", "blockstate", "pseudo-numerical", "nbt-blockstate"] | None = None,
+        block_entity_format: Literal["namespace-str-id", "str-id"] | None = None,
+        block_entity_coord_format: Literal["xyz-int"] | None = None,
+        entity_format: Literal["namespace-str-id", "str-id"] | None = None,
+        entity_coord_format: Literal["Pos-list-float"] | None = None,
+        platform: Literal["java", "bedrock", "universal"] | None = None,
+        version: list[int],
+        version_max_known: list[int],
+        version_max: list[int],
+        data_version: int | None = None,
+        data_version_max_known: int | None = None,
+        data_version_max: int | None = None,
     ):
         self._directory = directory
 
@@ -41,16 +44,18 @@ class BaseCompiler:
         self._entity_coord_format = entity_coord_format  # "Pos-list-float",
         self._platform = platform  # "java", "bedrock", "universal"
         self._version = version
+        self._version_max_known = version_max_known
         self._version_max = version_max
         self._data_version = data_version
+        self._data_version_max_known = data_version_max_known
         self._data_version_max = data_version_max
         self._parent_name = parent_version
         self.version_name = None
 
         self._parent: Union[BaseCompiler, None, Unloaded] = Unloaded
 
-        self._blocks: Dict[Tuple[str, str], Dict[str, List[str]]] = None
-        self._entities: Dict[Tuple[str, str], Dict[str, List[str]]] = None
+        self._blocks: Dict[Tuple[str, str], Dict[str, List[str]]] | None = None
+        self._entities: Dict[Tuple[str, str], Dict[str, List[str]]] | None = None
         self._biomes = None
 
     @property
@@ -64,11 +69,15 @@ class BaseCompiler:
         return self._parent
 
     @property
-    def data_version(self):
+    def data_version(self) -> int | None:
         return self._data_version
 
     @property
-    def data_version_max(self):
+    def data_version_max_known(self) -> int | None:
+        return self._data_version_max_known
+
+    @property
+    def data_version_max(self) -> int | None:
         return self._data_version_max
 
     @property
@@ -108,6 +117,10 @@ class BaseCompiler:
         return self._version
 
     @property
+    def version_max_known(self) -> List[int]:
+        return self._version_max_known
+
+    @property
     def version_max(self) -> List[int]:
         return self._version_max
 
@@ -129,7 +142,7 @@ class BaseCompiler:
 
     @property
     def _init(self) -> dict:
-        init = {
+        init: dict[str, Any] = {
             "block_format": self.block_format,
             "block_entity_format": self.block_entity_format,
             "block_entity_coord_format": self.block_entity_coord_format,
@@ -137,12 +150,15 @@ class BaseCompiler:
             "entity_coord_format": self.entity_coord_format,
             "platform": self.platform,
             "version": self.version,
+            "version_max_known": self.version_max_known,
             "version_max": self.version_max,
         }
-        if self._data_version is not None:
-            assert self._data_version_max is not None
-            init["data_version"] = self._data_version
-            init["data_version_max"] = self._data_version_max
+        if self.data_version is not None:
+            assert self.data_version_max_known is not None
+            assert self.data_version_max is not None
+            init["data_version"] = self.data_version
+            init["data_version_max_known"] = self.data_version_max_known
+            init["data_version_max"] = self.data_version_max
         assert all(val is not None for val in init.values())
         return init
 
@@ -198,6 +214,7 @@ class BaseCompiler:
     def biomes(self):
         if self._biomes is None:
             self._load_from_parent("biomes", {"biomes": {}, "universal_remap": {}})
+            assert self._biomes is not None
 
             biome_data_path = os.path.join(self._directory, "__biome_data__.json")
             if os.path.isfile(biome_data_path):
