@@ -10,5 +10,6 @@ compiler = UniversalCompiler(
     entity_coord_format="Pos-list-float",
     platform="universal",
     version=[1, 0, 0],
+    version_max_known=[1, 0, 0],
     version_max=[1],
 )
